@@ -277,51 +277,80 @@ body {
 @keyframes breathe { 0%, 100% { transform: scale(1) translateY(0); } 50% { transform: scale(1.02) translateY(-4px); } }
 @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
 .avatar-head {
-  width: 70px; height: 70px;
-  border-radius: 50%;
+  width: 72px; height: 78px;
+  border-radius: 50% 50% 45% 45%;
   z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 45px;
+  font-size: 42px;
   overflow: hidden;
   position: relative;
   border: 3px solid #000;
-  margin-bottom: -12px;
+  margin-bottom: -10px;
+  box-shadow: inset -8px -8px 16px rgba(0,0,0,0.15), inset 8px 8px 16px rgba(255,255,255,0.15);
+}
+.avatar-face {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+.avatar-eyes {
+  display: flex;
+  gap: 18px;
+  margin-top: 8px;
+}
+.avatar-eye {
+  width: 7px; height: 9px;
+  background: #1a1a1a;
+  border-radius: 50%;
+}
+.avatar-smile {
+  width: 18px; height: 8px;
+  border-bottom: 2px solid #1a1a1a;
+  border-radius: 0 0 18px 18px;
+  margin-top: 6px;
 }
 .avatar-hat {
   position: absolute;
-  top: -40px;
+  top: -36px;
   z-index: 4;
-  font-size: 50px;
+  font-size: 46px;
   filter: drop-shadow(0 4px 4px rgba(0,0,0,0.4));
 }
 .avatar-torso {
-  width: 80px; height: 100px;
+  width: 78px; height: 96px;
   z-index: 2;
-  border-radius: 12px 12px 5px 5px;
+  border-radius: 16px 16px 8px 8px;
   border: 3px solid #000;
-  margin-top: 8px;
+  margin-top: 6px;
+  box-shadow: inset -10px -10px 20px rgba(0,0,0,0.15), inset 10px 10px 20px rgba(255,255,255,0.1);
 }
 .avatar-arms {
   position: absolute;
-  top: 78px;
-  width: 115px;
+  top: 82px;
+  width: 112px;
   display: flex;
   justify-content: space-between;
   z-index: 1;
 }
 .avatar-arm {
-  width: 22px; height: 90px;
+  width: 22px; height: 86px;
   border: 3px solid #000;
-  border-radius: 12px;
+  border-radius: 14px;
   position: relative;
+  box-shadow: inset -4px -4px 8px rgba(0,0,0,0.15);
 }
 .avatar-tool {
   position: absolute;
-  right: -20px;
-  bottom: -8px;
-  font-size: 35px;
+  right: -18px;
+  bottom: -6px;
+  font-size: 34px;
   transform: rotate(-25deg);
   filter: drop-shadow(0 4px 4px rgba(0,0,0,0.4));
 }
@@ -329,12 +358,21 @@ body {
   display: flex;
   gap: 8px;
   z-index: 1;
-  margin-top: -3px;
+  margin-top: -4px;
 }
 .avatar-leg {
-  width: 32px; height: 80px;
-  border-radius: 5px 5px 10px 10px;
+  width: 30px; height: 78px;
+  border-radius: 6px 6px 12px 12px;
   border: 3px solid #000;
+  box-shadow: inset -4px -4px 8px rgba(0,0,0,0.15);
+}
+.avatar-foot {
+  width: 100%; height: 12px;
+  background: #1a1a1a;
+  border-radius: 0 0 10px 10px;
+  margin-top: -3px;
+  border: 3px solid #000;
+  border-top: none;
 }
 
 /* Mini avatar (for village cards) */
@@ -369,14 +407,16 @@ body {
   margin-bottom: 4px;
   animation: breathe 4s infinite ease-in-out;
 }
-.mini-avatar .avatar-head { width: 28px; height: 28px; font-size: 18px; margin-bottom: -4px; border-width: 2px; }
-.mini-avatar .avatar-hat { font-size: 22px; top: -16px; }
-.mini-avatar .avatar-torso { width: 32px; height: 38px; margin-top: 4px; border-width: 2px; }
-.mini-avatar .avatar-arms { top: 32px; width: 50px; }
-.mini-avatar .avatar-arm { width: 10px; height: 36px; border-width: 2px; }
-.mini-avatar .avatar-tool { font-size: 14px; right: -8px; bottom: 0; }
-.mini-avatar .avatar-legs { gap: 4px; }
-.mini-avatar .avatar-leg { width: 13px; height: 32px; border-width: 2px; }
+.mini-avatar .avatar-head { width: 28px; height: 30px; font-size: 16px; margin-bottom: -3px; border-width: 2px; }
+.mini-avatar .avatar-face { display: none; }
+.mini-avatar .avatar-hat { font-size: 20px; top: -14px; }
+.mini-avatar .avatar-torso { width: 30px; height: 36px; margin-top: 3px; border-width: 2px; border-radius: 10px 10px 4px 4px; }
+.mini-avatar .avatar-arms { top: 30px; width: 46px; }
+.mini-avatar .avatar-arm { width: 9px; height: 34px; border-width: 2px; border-radius: 8px; }
+.mini-avatar .avatar-tool { font-size: 13px; right: -7px; bottom: 0; }
+.mini-avatar .avatar-legs { gap: 3px; }
+.mini-avatar .avatar-leg { width: 12px; height: 30px; border-width: 2px; border-radius: 4px 4px 8px 8px; }
+.mini-avatar .avatar-foot { height: 5px; border-width: 2px; border-top: none; margin-top: -2px; }
 
 /* Studio controls */
 .studio-tabs {
@@ -743,22 +783,22 @@ details[open] summary::after { transform: rotate(180deg); }
 <div class="screen active" id="screen-intro">
   <div class="intro-box">
     <h2>Welcome, Family.</h2>
-    <p>You are about to embark on a journey that bridges the digital world with the dirt beneath your feet. This is not a game you play by staring at a screen; it is a game you play by living real life.</p>
+    <p>You are about to embark on a journey that bridges the digital world with the dirt beneath your feet. This is not a game you play by staring at a screen; it is a game you play by living real life. Anyone can do this, at any age. To rebuild culture, we sharpen our own skills and reconnect with nature, ourselves, and each other.</p>
 
     <h3>1. Competence, Not Just Points</h3>
     <p>In most games, you click a button and your character levels up. In <em>The Village RPG</em>, <strong>you</strong> are the character. To earn badges and upgrade your avatar, you must build real-world skills. The real-world reward is <em>competence</em>. The digital reward is watching your avatar evolve.</p>
 
     <h3>2. The Team Roster</h3>
-    <p>Every quest requires a team effort. When you complete a task, you assign roles. <strong>Multiple people can hold the same role!</strong> If three kids are all scrubbing dishes, they are all Trackers.</p>
+    <p>Every quest is a team effort. When you complete a task, you record who showed up and how. <strong>Multiple people can hold the same role, and one person can hold several roles.</strong> If three kids are scrubbing dishes, they are all Trackers. If the same child later takes photos and asks good questions, they are also a Witness. There is no forced picking — just honest recognition of who did what.</p>
     <ul>
       <li><strong>Tracker(s):</strong> The people doing the physical labor.</li>
       <li><strong>Witness(es):</strong> The people catching the story (photos, asking "What did you notice?").</li>
-      <li><strong>Hearth Tender(s):</strong> The people holding the space (making tea, prepping tools).</li>
-      <li><strong>Mentor(s):</strong> The parent or guide who asks coyote questions — never gives the answer directly.</li>
+      <li><strong>Hearth Tender(s):</strong> The people holding the space (making tea, prepping tools, keeping everyone fed).</li>
+      <li><strong>Mentor(s):</strong> Elders, parents, guides, or skilled friends who ask coyote questions — and never hand over the answer directly.</li>
     </ul>
 
     <h3>3. The Coyote Mentoring Rule</h3>
-    <p>Parents, do not give your kids the answers. If the quest asks, "Why does hot water melt fat?", do not hand them a textbook. Ask them, "I wonder why the cold water made the grease hard?" Let them sit with the question.</p>
+    <p>Mentors, do not give those you mentor the answers. If the quest asks, "Why does hot water melt fat?", do not hand them a textbook. Ask them, "I wonder why the cold water made the grease hard?" Let them sit with the question. Coyote mentoring works for the young, the middle-aged, and the elders — curiosity has no age limit.</p>
 
     <h3>4. The Otis Verification Protocol</h3>
     <p>To get officially certified on Permies.com, follow the Otis Protocol for photos:</p>
@@ -769,7 +809,10 @@ details[open] summary::after { transform: rotate(180deg); }
     </ul>
 
     <h3>5. Badge Progression</h3>
-    <p>Quests are organized into four tiers of increasing skill: <strong style="color:var(--accent-sand);">Sand</strong> (beginner) &rarr; <strong style="color:var(--accent-straw);">Straw</strong> &rarr; <strong style="color:#c8916a;">Wood</strong> &rarr; <strong style="color:var(--accent-iron);">Iron</strong> (master). Complete 50% of a tier's quests to unlock the next tier.</p>
+    <p>Quests are organized into four tiers of increasing skill: <strong style="color:var(--accent-sand);">Sand</strong> (beginner) &rarr; <strong style="color:var(--accent-straw);">Straw</strong> &rarr; <strong style="color:#c8916a;">Wood</strong> &rarr; <strong style="color:var(--accent-iron);">Iron</strong> (master). In Adventure Mode, complete 50% of a tier within one skill guild to unlock the next tier for that guild. In Free Roam Mode, every quest is open from the start.</p>
+
+    <h3>6. The Colorado Schoolhouse Tracker</h3>
+    <p>Parents, use the Schoolhouse tab to track attendance and hours toward Colorado's homeschool requirements (172 days, 688 hours across 11 subjects). Every quest you complete can also count toward real learning.</p>
 
     <button class="btn-success" style="margin-top: 1rem;" onclick="showScreen('setup')">Continue to Setup</button>
   </div>
@@ -790,7 +833,16 @@ details[open] summary::after { transform: rotate(180deg); }
   </div>
 
   <div class="setup-section">
-    <h3>2. Create Your Family Team</h3>
+    <h3>2. Choose Your Game Mode</h3>
+    <select id="mode-select" onchange="setGameMode(this.value)">
+      <option value="adventure">Adventure Mode — progress through tiers</option>
+      <option value="freeroam">Free Roam Mode — all quests unlocked from the start</option>
+    </select>
+    <p style="font-size:0.8em; color:var(--text-dim); margin-top:0.4rem;">Adventure Mode follows the intended path. Free Roam is like Minecraft creative mode — explore any quest in any order.</p>
+  </div>
+
+  <div class="setup-section">
+    <h3>3. Create Your Family Team</h3>
     <div id="player-list"></div>
     <button class="btn" style="width:100%; margin-top:0.5rem;" onclick="addPlayer()">+ Add Player (max 10)</button>
   </div>
@@ -964,12 +1016,14 @@ let players = safeGet('rpg_players', []);
 let completedQuests = safeGet('rpg_completed', []);
 let attendance = safeGet('rpg_attendance', { days: 0, hours: 0, customHours: {} });
 let biome = 'apartment';
+let freeRoam = false;
 let activeStudioPlayer = 0;
 let activeStudioTab = 'face';
 let rosterSelections = {};
 let questFilter = 'all';
 
 try { biome = localStorage.getItem('rpg_biome') || 'apartment'; } catch(e) {}
+try { freeRoam = localStorage.getItem('rpg_freeRoam') === 'true'; } catch(e) {}
 
 // ---- Data Loading ----
 let allAspects = [];
@@ -1092,9 +1146,11 @@ function showScreen(s) {
 
 // ---- Setup ----
 function setBiome(b) { biome = b; safeSet('rpg_biome', b); }
+function setGameMode(m) { freeRoam = (m === 'freeroam'); safeSet('rpg_freeRoam', freeRoam); }
 
 function renderSetup() {
   document.getElementById('biome-select').value = biome;
+  document.getElementById('mode-select').value = freeRoam ? 'freeroam' : 'adventure';
   const list = document.getElementById('player-list');
   list.innerHTML = '';
   if (players.length === 0) {
@@ -1143,6 +1199,7 @@ function saveVillage() {
     players.push(makeNewPlayer('Player 1', 'tracker'));
   }
   safeSet('rpg_players', players);
+  safeSet('rpg_freeRoam', freeRoam);
   showScreen('village');
 }
 
@@ -1151,17 +1208,18 @@ function getAvatarHTML(p, mini) {
   let cls = mini ? 'mini-avatar' : 'css-avatar';
   let hat = p.equipped.hat ? `<div class="avatar-hat">${p.equipped.hat}</div>` : '';
   let tool = p.equipped.tool ? `<div class="avatar-tool">${p.equipped.tool}</div>` : '';
+  let face = mini ? '' : `<div class="avatar-face"><div class="avatar-eyes"><div class="avatar-eye"></div><div class="avatar-eye"></div></div><div class="avatar-smile"></div></div>`;
   return `<div class="${cls}">
     ${hat}
-    <div class="avatar-head" style="background:${p.equipped.skin || '#f0c090'};">${p.equipped.face || '🧑'}</div>
+    <div class="avatar-head" style="background:${p.equipped.skin || '#f0c090'};">${p.equipped.face || '🧑'}${face}</div>
     <div class="avatar-arms">
       <div class="avatar-arm" style="background:${p.equipped.shirt};"></div>
       <div class="avatar-arm" style="background:${p.equipped.shirt};">${tool}</div>
     </div>
     <div class="avatar-torso" style="background:${p.equipped.shirt};"></div>
     <div class="avatar-legs">
-      <div class="avatar-leg" style="background:${p.equipped.pants};"></div>
-      <div class="avatar-leg" style="background:${p.equipped.pants};"></div>
+      <div class="avatar-leg" style="background:${p.equipped.pants};"><div class="avatar-foot"></div></div>
+      <div class="avatar-leg" style="background:${p.equipped.pants};"><div class="avatar-foot"></div></div>
     </div>
   </div>`;
 }
@@ -1229,13 +1287,23 @@ function getTierProgress() {
     });
   });
 
-  // Unlock logic: 50% of previous tier completed
+  // Global unlock logic: 50% of previous tier completed across all aspects
   tiers.sand.unlocked = true;
   tiers.straw.unlocked = tiers.sand.total > 0 && (tiers.sand.done / tiers.sand.total) >= 0.5;
   tiers.wood.unlocked = tiers.straw.total > 0 && tiers.straw.unlocked && (tiers.straw.done / tiers.straw.total) >= 0.5;
   tiers.iron.unlocked = tiers.wood.total > 0 && tiers.wood.unlocked && (tiers.wood.done / tiers.wood.total) >= 0.5;
 
   return tiers;
+}
+
+function isTierUnlocked(a, tier) {
+  if (freeRoam) return true;
+  if (tier === 'sand') return true;
+  let prev = { straw: 'sand', wood: 'straw', iron: 'wood' }[tier];
+  if (!prev || !a[prev] || a[prev].length === 0) return true;
+  let prevTotal = a[prev].length;
+  let prevDone = a[prev].filter(q => completedQuests.includes(makeQuestId(a.name, prev, q[0]))).length;
+  return (prevDone / prevTotal) >= 0.5;
 }
 
 function makeQuestId(aspectName, tier, questName) {
@@ -1350,6 +1418,7 @@ function renderQuests() {
 
   // Tier banner
   let banner = document.getElementById('tier-banner');
+  let modeLabel = freeRoam ? '<span style="color:var(--accent-green);">🎮 Free Roam — all quests unlocked</span>' : '<span style="color:var(--text-dim);">🛡️ Adventure Mode — complete 50% of a tier within one guild to unlock the next</span>';
   banner.innerHTML = `
     <div style="font-weight:bold; color:var(--accent-gold); margin-bottom:0.4rem;">Badge Progression</div>
     <div class="tier-progress">
@@ -1358,7 +1427,7 @@ function renderQuests() {
       <span class="tier-pill ${progress.wood.unlocked?'unlocked':'locked'}">🪵 Wood ${progress.wood.done}/${progress.wood.total} ${progress.wood.unlocked?'':'🔒'}</span>
       <span class="tier-pill ${progress.iron.unlocked?'unlocked':'locked'}">⚙️ Iron ${progress.iron.done}/${progress.iron.total} ${progress.iron.unlocked?'':'🔒'}</span>
     </div>
-    ${!progress.straw.unlocked ? `<p style="font-size:0.8em; color:var(--text-dim); margin-top:0.4rem;">Complete ${Math.ceil(progress.sand.total * 0.5)} Sand quests to unlock Straw</p>` : ''}
+    <p style="font-size:0.8em; color:var(--text-dim); margin-top:0.4rem;">${modeLabel}</p>
   `;
 
   const list = document.getElementById('quest-list');
@@ -1411,17 +1480,17 @@ function createGuildDetails(a, open, progress) {
     a.sand.forEach(q => { h += renderQuestCard(a, q, 'sand'); });
   }
   if (a.straw && a.straw.length > 0) {
-    let locked = !progress.straw.unlocked;
+    let locked = !isTierUnlocked(a, 'straw');
     h += `<div class="tier-header straw ${locked ? 'locked' : ''}"><strong>🟡 Straw Tier (Level 2)</strong> — ${countDone(a, 'straw')}/${a.straw.length} complete</div>`;
     a.straw.forEach(q => { h += renderQuestCard(a, q, 'straw', locked); });
   }
   if (a.wood && a.wood.length > 0) {
-    let locked = !progress.wood.unlocked;
+    let locked = !isTierUnlocked(a, 'wood');
     h += `<div class="tier-header wood ${locked ? 'locked' : ''}"><strong>🪵 Wood Tier (Level 3)</strong> — ${countDone(a, 'wood')}/${a.wood.length} complete</div>`;
     a.wood.forEach(q => { h += renderQuestCard(a, q, 'wood', locked); });
   }
   if (a.iron && a.iron.length > 0) {
-    let locked = !progress.iron.unlocked;
+    let locked = !isTierUnlocked(a, 'iron');
     h += `<div class="tier-header iron ${locked ? 'locked' : ''}"><strong>⚙️ Iron Tier (Level 4)</strong> — ${countDone(a, 'iron')}/${a.iron.length} complete</div>`;
     a.iron.forEach(q => { h += renderQuestCard(a, q, 'iron', locked); });
   }
@@ -1560,22 +1629,21 @@ function finalizeQuest(qId, icon) {
 
   renderQuests();
 
-  // Check for tier unlock
-  let progress = getTierProgress();
-  let unlockMsg = '';
-  if (progress.straw.unlocked && !completedQuests.includes('_straw_unlocked_')) {
-    completedQuests.push('_straw_unlocked_');
-    unlockMsg = '\n\n🎉 STRAW TIER UNLOCKED! New quests are now available.';
+  // Check for per-aspect tier unlock
+  let justUnlocked = [];
+  if (!freeRoam) {
+    allAspects.forEach(a => {
+      ['straw','wood','iron'].forEach(t => {
+        let marker = '_unlocked_' + a.name.replace(/\s/g,'_').toLowerCase() + '_' + t;
+        if (a[t] && a[t].length > 0 && isTierUnlocked(a, t) && !completedQuests.includes(marker)) {
+          completedQuests.push(marker);
+          justUnlocked.push(t.charAt(0).toUpperCase() + t.slice(1) + ' in ' + a.name);
+        }
+      });
+    });
+    if (justUnlocked.length) safeSet('rpg_completed', completedQuests);
   }
-  if (progress.wood.unlocked && !completedQuests.includes('_wood_unlocked_')) {
-    completedQuests.push('_wood_unlocked_');
-    unlockMsg += '\n\n🎉 WOOD TIER UNLOCKED! Advanced quests are now available.';
-  }
-  if (progress.iron.unlocked && !completedQuests.includes('_iron_unlocked_')) {
-    completedQuests.push('_iron_unlocked_');
-    unlockMsg += '\n\n🎉 IRON TIER UNLOCKED! Master-level quests are now available.';
-  }
-  if (unlockMsg) safeSet('rpg_completed', completedQuests);
+  let unlockMsg = justUnlocked.length ? '\n\n🎉 New tiers unlocked: ' + justUnlocked.join(', ') + '.' : '';
 
   alert('Quest Complete! Items added to participants\' wardrobes.' + unlockMsg);
 }
