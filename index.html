@@ -1191,6 +1191,71 @@ function getAspectResources(aspectName) {
   return all.filter(r => r.depth === 'adults');
 }
 
+// ---- Per-Quest Guided Learning Pathways ----
+// Each quest can have its own pathway: prep -> core -> stretch. Later this will be populated from Marble taxonomy mappings.
+const QUEST_PATHWAYS = {
+  "gardening_sand_build_a_hugelkultur_bed": {
+    prep: [
+      { title: "What is decomposition?", url: "https://www.youtube.com/results?search_query=decomposition+for+kids" },
+      { title: "How roots drink water", url: "https://www.youtube.com/results?search_query=how+plant+roots+absorb+water+kids" }
+    ],
+    core: [
+      { title: "Build your first hugelkultur", url: "https://permies.com/wiki/hugelkultur" }
+    ],
+    stretch: [
+      { title: "Design a whole garden system", url: "https://permies.com/wiki/food_forests" }
+    ]
+  },
+  "gardening_sand_chop_and_drop": {
+    prep: [
+      { title: "Plant life cycles", url: "https://www.youtube.com/results?search_query=plant+life+cycle+kids" }
+    ],
+    core: [
+      { title: "Chop-and-drop mulching", url: "https://permies.com/wiki/chop_and_drop" }
+    ],
+    stretch: [
+      { title: "Mulch science deep dive", url: "https://www.youtube.com/results?search_query=mulch+science+soil+health" }
+    ]
+  },
+  "gardening_straw_seed_saving": {
+    prep: [
+      { title: "Flower parts and pollination", url: "https://www.youtube.com/results?search_query=flower+parts+pollination+kids" }
+    ],
+    core: [
+      { title: "Seed saving basics", url: "https://www.seedsavers.org/learn" }
+    ],
+    stretch: [
+      { title: "Heirloom seed networks", url: "https://www.seedsavers.org/" }
+    ]
+  },
+  "natural_building_sand_make_12_adobe_bricks": {
+    prep: [
+      { title: "Soil types and clay", url: "https://www.youtube.com/results?search_query=soil+types+clay+sand+silt+kids" }
+    ],
+    core: [
+      { title: "Make mud bricks (cob)", url: "https://www.youtube.com/results?search_query=kids+make+cob+mud+bricks" }
+    ],
+    stretch: [
+      { title: "Cob building basics", url: "https://permies.com/wiki/cob" }
+    ]
+  },
+  "rocket_sand_build_a_rocket_stove": {
+    prep: [
+      { title: "How fire needs air", url: "https://www.youtube.com/results?search_query=fire+needs+oxygen+experiment+kids" }
+    ],
+    core: [
+      { title: "Rocket stove basics", url: "https://permies.com/wiki/rocket_stove" }
+    ],
+    stretch: [
+      { title: "Rocket mass heaters", url: "https://permies.com/wiki/rocket_mass_heater" }
+    ]
+  }
+};
+
+function getQuestPathway(qId) {
+  return QUEST_PATHWAYS[qId] || null;
+}
+
 // ---- Avatar Customization Options ----
 const faceOptions = [
   { id: "🧑", name: "Person" }, { id: "👧", name: "Girl" }, { id: "👦", name: "Boy" },
@@ -1671,15 +1736,43 @@ function toggleRoster(qId) {
 }
 
 function renderResourcesPanel(qId, aspectName) {
+  let pathway = getQuestPathway(qId);
   let resources = getAspectResources(aspectName);
-  if (resources.length === 0) return '';
+  if (!pathway && resources.length === 0) return '';
+
+  let pathHTML = '';
+  if (pathway) {
+    let step = (label, items) => {
+      if (!items || items.length === 0) return '';
+      let links = items.map(r => `<a href="${r.url}" target="_blank" class="lib-link" style="font-size:0.85em;"><strong>${r.title}</strong></a>`).join('');
+      return `<div style="margin-bottom:0.5rem;"><p style="font-size:0.8em; color:var(--accent-gold); margin-bottom:0.2rem;"><strong>${label}</strong></p>${links}</div>`;
+    };
+    pathHTML = `
+      <div style="background:var(--bg-input); border-radius:8px; padding:0.6rem; margin-bottom:0.6rem;">
+        <p style="font-size:0.85em; color:var(--accent-green); margin-bottom:0.4rem;"><strong>🛤️ Guided Path for this Quest</strong></p>
+        ${step('🌱 Prep', pathway.prep)}
+        ${step('🎯 Core', pathway.core)}
+        ${step('🚀 Stretch', pathway.stretch)}
+      </div>
+    `;
+  }
+
   let allLinks = resources.map(r => `<a href="${r.url}" target="_blank" class="lib-link" style="font-size:0.85em;"><strong>${r.title}</strong></a>`).join('');
+  let skillHTML = resources.length ? `
+    <div style="margin-bottom:0.6rem;">
+      <p style="font-size:0.8em; color:var(--text-dim); margin-bottom:0.3rem;"><strong>Skill-wide resources:</strong></p>
+      ${allLinks}
+    </div>
+  ` : '';
+
   return `<div class="roster-panel" id="resources_${qId}" style="background:rgba(74,222,128,0.05); border-left:3px solid var(--accent-green); display:none;">
-    <p style="font-size:0.85em; color:var(--accent-green); margin-bottom:0.4rem;"><strong>🎰 Surprise Find — spin for a resource:</strong></p>
-    <div id="slot_${qId}" style="min-height:2.5em; display:flex; align-items:center; justify-content:center; background:var(--bg-input); border-radius:6px; padding:0.5rem; margin-bottom:0.5rem; font-weight:bold; color:var(--text-bright);">?</div>
-    <button class="btn btn-small" style="margin-bottom:0.6rem;" onclick="spinResource('${qId}','${aspectName.replace(/'/g,"\\'")}')">🎲 Spin</button>
-    <p style="font-size:0.8em; color:var(--text-dim); margin-bottom:0.3rem;">All resources for this skill:</p>
-    ${allLinks}
+    ${pathHTML}
+    ${skillHTML}
+    <div style="border-top:1px dashed var(--border-subtle); padding-top:0.5rem;">
+      <p style="font-size:0.85em; color:var(--accent-gold); margin-bottom:0.3rem;"><strong>🎰 Feeling lucky? Spin for a surprise resource:</strong></p>
+      <div id="slot_${qId}" style="min-height:2.5em; display:flex; align-items:center; justify-content:center; background:var(--bg-input); border-radius:6px; padding:0.5rem; margin-bottom:0.4rem; font-weight:bold; color:var(--text-bright);">?</div>
+      <button class="btn btn-small" onclick="spinResource('${qId}','${aspectName.replace(/'/g,"\\'")}')">🎲 Spin</button>
+    </div>
   </div>`;
 }
 
