@@ -275,6 +275,7 @@ body {
   animation: breathe 4s infinite ease-in-out;
 }
 @keyframes breathe { 0%, 100% { transform: scale(1) translateY(0); } 50% { transform: scale(1.02) translateY(-4px); } }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
 .avatar-head {
   width: 70px; height: 70px;
   border-radius: 50%;
@@ -736,6 +737,7 @@ details[open] summary::after { transform: rotate(180deg); }
   <h1 class="title-main">The Village RPG</h1>
   <p class="title-sub">A permaculture homeschool adventure for families</p>
   <button class="title-cta" onclick="startGame()">Begin Your Journey</button>
+  <div style="margin-top:1.5rem; color:var(--text-dim); font-size:0.9rem; animation: bounce 2s infinite;">▼ Tap above to start ▼</div>
 </div>
 
 <!-- Intro Briefing -->
@@ -890,22 +892,37 @@ details[open] summary::after { transform: rotate(180deg); }
     </div>
 
     <div class="lib-category">
-      <h4>Colorado & Regional Learning</h4>
+      <h4>Colorado Homeschooling</h4>
+      <a href="https://ed.cde.state.co.us/choice/homeschool" target="_blank" class="lib-link"><strong>CO Dept of Education — Homeschool:</strong> Law, notification, record keeping, and FAQ.</a>
+      <a href="https://ed.cde.state.co.us/choice/homeschool-law" target="_blank" class="lib-link"><strong>Colorado Homeschool Law:</strong> Full statute C.R.S. 22-33-104.5.</a>
       <a href="https://cpw.state.co.us" target="_blank" class="lib-link"><strong>Colorado Parks & Wildlife:</strong> Wildlife, ecology, fishing, geology, and conservation.</a>
       <a href="https://extension.colostate.edu" target="_blank" class="lib-link"><strong>CSU Extension:</strong> 4-H, agriculture, gardening, and family resources.</a>
-      <a href="https://www.cde.state.co.us/onlinehomeschool" target="_blank" class="lib-link"><strong>CO Dept of Education:</strong> Homeschool law, testing, and requirements.</a>
     </div>
 
     <div class="lib-category">
-      <h4>Permies & Permaculture</h4>
+      <h4>Permies & PEP Badges</h4>
       <a href="https://permies.com/f/178" target="_blank" class="lib-link"><strong>Permies PEP Forum:</strong> Post your Otis-protocol evidence here for official badge certification.</a>
-      <a href="https://permies.com/wiki/61631/PEP-Badge-Requirements" target="_blank" class="lib-link"><strong>PEP Badge Requirements:</strong> Full list of all PEP badge tasks and tiers.</a>
+      <a href="https://permies.com/wiki/114855/Apply-PEP-Badge" target="_blank" class="lib-link"><strong>How to Apply for Your PEP Badge:</strong> Step-by-step guide to submitting badge evidence.</a>
+      <a href="https://permies.com/wiki/skip-pep-bb" target="_blank" class="lib-link"><strong>All 22 PEP Badges & BBs:</strong> Full list of badge aspects, badge bits, and program levels.</a>
+    </div>
+
+    <div class="lib-category">
+      <h4>Curriculum by Subject</h4>
+      <a href="https://www.gutenberg.org" target="_blank" class="lib-link"><strong>Reading & Writing:</strong> Project Gutenberg — 70,000+ free eBooks.</a>
+      <a href="https://www.khanacademy.org/math" target="_blank" class="lib-link"><strong>Math:</strong> Khan Academy — free math courses K-12 and beyond.</a>
+      <a href="https://www.khanacademy.org/science" target="_blank" class="lib-link"><strong>Science:</strong> Khan Academy — biology, chemistry, physics, and more.</a>
+      <a href="https://www.khanacademy.org/humanities" target="_blank" class="lib-link"><strong>History & Geography:</strong> Khan Academy — world history, art history, civics.</a>
+      <a href="https://www.congress.gov/resources/display/content/The+Constitution+of+the+United+States" target="_blank" class="lib-link"><strong>Constitution:</strong> The U.S. Constitution from Congress.gov.</a>
+      <a href="https://www.khanacademy.org/economics-finance-domain" target="_blank" class="lib-link"><strong>Economics:</strong> Khan Academy — micro, macro, and personal finance.</a>
+      <a href="https://www.youtube.com/results?search_query=taichi+qi+gong+five+animal+exercises" target="_blank" class="lib-link"><strong>PE & Health:</strong> Search YouTube for tai chi, qi gong, and Five Animal Exercises.</a>
+      <a href="https://www.khanacademy.org/humanities/art-history" target="_blank" class="lib-link"><strong>Art:</strong> Khan Academy Art History — free art lessons and movements.</a>
     </div>
 
     <div class="lib-category">
       <h4>Open Source & Offline Archive</h4>
-      <div class="lib-link" style="cursor:default;"><strong>Kiwix:</strong> Download all of Wikipedia, Project Gutenberg, and Stack Exchange for offline use.</div>
-      <div class="lib-link" style="cursor:default;"><strong>Internet Archive:</strong> Millions of free books, films, software, and audio.</div>
+      <a href="https://www.kiwix.org/en/" target="_blank" class="lib-link"><strong>Kiwix:</strong> Download Wikipedia, Project Gutenberg, and Stack Exchange for offline use.</a>
+      <a href="https://archive.org" target="_blank" class="lib-link"><strong>Internet Archive:</strong> Millions of free books, films, software, and audio.</a>
+      <a href="https://www.openculture.com/free_textbooks" target="_blank" class="lib-link"><strong>Open Culture:</strong> 200+ free textbooks and open educational resources.</a>
     </div>
   </div>
 </div>
@@ -921,16 +938,20 @@ details[open] summary::after { transform: rotate(180deg); }
     <h3>Bridge to Permies</h3>
     <p>Post your evidence to the <a href="https://permies.com/f/178/" target="_blank" style="color:var(--accent-green);">PEP Forum</a> to get officially certified by Paul Wheaton's team.</p>
     <p style="font-size:0.85em; color:var(--text-dim); margin-top:0.5rem;">Official PEP quests (marked with the shield icon) count toward Permies certification. RPG Add-on quests (marked with the sparkle icon) are custom to The Village RPG and do not count toward official PEP badges.</p>
+    <button class="btn btn-small" style="margin-top:0.5rem;" onclick="window.open('https://permies.com/f/178/','_blank')">Open PEP Forum</button>
+    <button class="btn btn-small" style="margin-top:0.5rem;" onclick="window.open('https://permies.com/wiki/114855/Apply-PEP-Badge','_blank')">How to Apply for a Badge</button>
   </div>
   <div class="commons-box">
     <h3>Optional: The Offline Archive</h3>
-    <p>For families wanting a complete offline civilizational backup drive:</p>
-    <div style="background: var(--bg-input); border: 1px solid var(--border-subtle); padding: 0.75rem; border-radius: 6px; margin-top: 0.5rem; font-family: monospace; font-size: 0.85em; color: var(--accent-green); line-height: 1.6;">
-      <strong>[Medicine]</strong> Medical Library, Military Medicine<br>
-      <strong>[Agriculture]</strong> FOSS Cooking, Gardening Q&A<br>
-      <strong>[DIY]</strong> Woodworking Q&A, iFixit Guides<br>
-      <strong>[Maps]</strong> Download your state's .pmtiles from Project Nomad Maps<br>
-      <strong>[Knowledge]</strong> Kiwix (Wikipedia, Gutenberg, Stack Exchange offline)
+    <p>For families wanting a complete offline backup drive, download these open-source collections to a local hard drive:</p>
+    <div style="margin-top:0.5rem; line-height:1.8;">
+      <a href="https://www.kiwix.org/en/" target="_blank" class="lib-link"><strong>[Knowledge]</strong> Kiwix — Wikipedia, Project Gutenberg, Stack Exchange offline</a>
+      <a href="https://archive.org" target="_blank" class="lib-link"><strong>[Media]</strong> Internet Archive — books, films, software, audio</a>
+      <a href="https://www.openculture.com/free_textbooks" target="_blank" class="lib-link"><strong>[Textbooks]</strong> Open Culture — 200+ free textbooks</a>
+      <a href="https://www.ifixit.com/Guide" target="_blank" class="lib-link"><strong>[DIY]</strong> iFixit Repair Guides — fix electronics, appliances, tools</a>
+      <div class="lib-link" style="cursor:default;"><strong>[Medicine]</strong> Medical Library, Military Medicine (add your own local copies)</div>
+      <div class="lib-link" style="cursor:default;"><strong>[Agriculture]</strong> FOSS Cooking, Gardening Q&A (add your own local copies)</div>
+      <div class="lib-link" style="cursor:default;"><strong>[Maps]</strong> Download your state's .pmtiles from Project Nomad Maps (add your own local copies)</div>
     </div>
   </div>
 </div>
@@ -966,6 +987,61 @@ if (typeof VILLAGE_QUESTS !== 'undefined') {
   ];
 }
 
+// ---- Per-Quest Learning Resources ----
+// Add links here to upgrade teaching for each aspect. Key = aspect name, value = array of {title, url}.
+const ASPECT_RESOURCES = {
+  "Gardening": [
+    { title: "Hugelkultur - Permies.com", url: "https://permies.com/wiki/hugelkultur" },
+    { title: "Seed Saving Basics", url: "https://www.seedsavers.org/learn" }
+  ],
+  "Natural Building": [
+    { title: "Cob Building Basics", url: "https://permies.com/wiki/cob" },
+    { title: "Wofati and Earth Shelters", url: "https://permies.com/wiki/wofati" }
+  ],
+  "Woodland Care": [
+    { title: "Coppicing and Pollarding", url: "https://permies.com/wiki/coppice" },
+    { title: "Firewood Stacking (Holz Hausen)", url: "https://permies.com/t/15453/firewood" }
+  ],
+  "Round Wood Woodworking": [
+    { title: "Spoon Carving for Beginners", url: "https://www.youtube.com/results?search_query=spoon+carving+beginners" },
+    { title: "Green Woodworking", url: "https://permies.com/wiki/greenwood" }
+  ],
+  "Tool Care": [
+    { title: "Sharpening Hand Tools", url: "https://www.youtube.com/results?search_query=sharpening+hand+tools" }
+  ],
+  "Food Prep": [
+    { title: "Food Preservation Methods", url: "https://nchfp.uga.edu/" },
+    { title: "Sourdough Bread Basics", url: "https://www.youtube.com/results?search_query=sourdough+bread+basics" }
+  ],
+  "Foraging": [
+    { title: "Eat the Weeds (Foraging Channel)", url: "https://www.youtube.com/c/EatTheWeeds" },
+    { title: "Wild Edible Plants", url: "https://www.wildedible.com/" }
+  ],
+  "Animal Care": [
+    { title: "Pollinator Habitat", url: "https://www.xerces.org/pollinator-conservation" }
+  ],
+  "Electricity": [
+    { title: "Basic Electrical Circuits", url: "https://www.khanacademy.org/science/electrical-engineering" }
+  ],
+  "Plumbing and Hot Water": [
+    { title: "Home Plumbing Basics", url: "https://www.familyhandyman.com/plumbing/" }
+  ],
+  "Metalworking": [
+    { title: "Blacksmithing for Beginners", url: "https://www.youtube.com/results?search_query=blacksmithing+beginners" }
+  ],
+  "Textiles": [
+    { title: "Hand Sewing Basics", url: "https://www.youtube.com/results?search_query=hand+sewing+basics" }
+  ],
+  "Vitality": [
+    { title: "Five Animal Exercises", url: "https://www.youtube.com/results?search_query=five+animal+exercises+qi+gong" },
+    { title: "Eight Pieces of Brocade", url: "https://www.youtube.com/results?search_query=eight+brocade+qi+gong" }
+  ]
+};
+
+function getAspectResources(aspectName) {
+  return ASPECT_RESOURCES[aspectName] || [];
+}
+
 // ---- Avatar Customization Options ----
 const faceOptions = [
   { id: "🧑", name: "Person" }, { id: "👧", name: "Girl" }, { id: "👦", name: "Boy" },
@@ -995,12 +1071,9 @@ const bgOptions = [
 
 // ---- Screen Management ----
 function startGame() {
-  if (players.length === 0) {
-    showScreen('intro');
-  } else {
-    document.getElementById('nav-bar').style.display = 'flex';
-    showScreen('village');
-  }
+  // Always show nav and advance to intro briefing
+  document.getElementById('nav-bar').style.display = 'flex';
+  showScreen('intro');
 }
 
 function showScreen(s) {
@@ -1376,10 +1449,14 @@ function renderQuestCard(a, q, tier, locked) {
   if (locked) {
     actionHTML = '<span style="color:var(--text-dim); font-size:0.8em;">🔒 Locked</span>';
   } else if (isDone) {
-    actionHTML = '<span style="color:var(--accent-green); font-weight:bold;">✓ Complete!</span>';
+    let postBtn = (a.type === 'PEP') ? `<button class="btn btn-small" style="display:block; margin-top:0.3rem;" onclick="postToPermies('${qId}','${q[0].replace(/'/g,'\\'')}')">Post to Permies</button>` : '';
+    actionHTML = `<span style="color:var(--accent-green); font-weight:bold;">✓ Complete!</span>${postBtn}`;
   } else {
     actionHTML = `<button class="btn btn-small" onclick="toggleRoster('${qId}')">Finalize</button>`;
   }
+
+  let resources = getAspectResources(a.name);
+  let learnMoreBtn = (resources.length > 0) ? `<button class="btn btn-small" style="margin-top:0.3rem;" onclick="toggleResources('${qId}')">Learn More</button>` : '';
 
   return `<div class="quest-card ${tier} ${isDone ? 'completed' : ''}">
     <div class="quest-info">
@@ -1387,9 +1464,11 @@ function renderQuestCard(a, q, tier, locked) {
       <small>${q[1]}</small>
       <div class="subject-tags">${subjects}</div>
       ${rewardIcon !== '📦' ? `<span class="quest-reward">Reward: ${rewardIcon}</span>` : ''}
+      ${learnMoreBtn}
     </div>
     <div class="quest-action">${actionHTML}</div>
     ${!locked && !isDone ? renderRosterPanel(qId, rewardIcon) : ''}
+    ${resources.length > 0 ? renderResourcesPanel(qId, a.name) : ''}
   </div>`;
 }
 
@@ -1420,6 +1499,21 @@ function renderRosterPanel(qId, icon) {
 
 function toggleRoster(qId) {
   let p = document.getElementById('roster_' + qId);
+  if (p) p.style.display = p.style.display === 'block' ? 'none' : 'block';
+}
+
+function renderResourcesPanel(qId, aspectName) {
+  let resources = getAspectResources(aspectName);
+  if (resources.length === 0) return '';
+  let links = resources.map(r => `<a href="${r.url}" target="_blank" class="lib-link" style="font-size:0.85em;"><strong>${r.title}</strong></a>`).join('');
+  return `<div class="roster-panel" id="resources_${qId}" style="background:rgba(74,222,128,0.05); border-left:3px solid var(--accent-green);">
+    <p style="font-size:0.85em; color:var(--accent-green); margin-bottom:0.4rem;"><strong>Go deeper on this skill:</strong></p>
+    ${links}
+  </div>`;
+}
+
+function toggleResources(qId) {
+  let p = document.getElementById('resources_' + qId);
   if (p) p.style.display = p.style.display === 'block' ? 'none' : 'block';
 }
 
@@ -1484,6 +1578,43 @@ function finalizeQuest(qId, icon) {
   if (unlockMsg) safeSet('rpg_completed', completedQuests);
 
   alert('Quest Complete! Items added to participants\' wardrobes.' + unlockMsg);
+}
+
+function postToPermies(qId, questTitle) {
+  // Try to find the aspect and tier for this quest
+  let aspectName = '';
+  let tier = '';
+  allAspects.forEach(a => {
+    ['sand','straw','wood','iron'].forEach(t => {
+      if (a[t]) {
+        a[t].forEach(q => {
+          if (makeQuestId(a.name, t, q[0]) === qId) {
+            aspectName = a.name;
+            tier = t;
+          }
+        });
+      }
+    });
+  });
+
+  let dateStr = new Date().toLocaleDateString();
+  let postText = `PEP Badge Bit Completed\n\nAspect: ${aspectName}\nTier: ${tier}\nTask: ${questTitle}\nDate: ${dateStr}\n\nBefore, During, and After photos attached per Otis Protocol.`;
+
+  // Open PEP forum in new tab
+  window.open('https://permies.com/f/178/', '_blank');
+
+  // Show copyable text
+  setTimeout(() => {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(postText).then(() => {
+        alert('PEP Forum opened in a new tab. The post text has been copied to your clipboard. Paste it into your new Permies thread.');
+      }).catch(() => {
+        alert('PEP Forum opened in a new tab. Here is text you can copy and paste:\n\n' + postText);
+      });
+    } else {
+      alert('PEP Forum opened in a new tab. Here is text you can copy and paste:\n\n' + postText);
+    }
+  }, 500);
 }
 
 // ---- Schoolhouse ----
