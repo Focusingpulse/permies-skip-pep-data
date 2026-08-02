@@ -268,8 +268,8 @@ body {
 .css-avatar {
   position: relative;
   z-index: 2;
-  width: 160px;
-  height: 220px;
+  width: 180px;
+  height: 252px;
   animation: breathe 4s infinite ease-in-out;
 }
 .css-avatar svg {
@@ -779,7 +779,9 @@ details[open] summary::after { transform: rotate(180deg); }
   </div>
   <div class="studio-tabs">
     <button class="studio-tab active" id="tab-class" onclick="switchStudioTab('class')">Class</button>
-    <button class="studio-tab" id="tab-colors" onclick="switchStudioTab('colors')">Colors</button>
+    <button class="studio-tab" id="tab-face" onclick="switchStudioTab('face')">Face</button>
+    <button class="studio-tab" id="tab-hair" onclick="switchStudioTab('hair')">Hair</button>
+    <button class="studio-tab" id="tab-outfit" onclick="switchStudioTab('outfit')">Outfit</button>
     <button class="studio-tab" id="tab-gear" onclick="switchStudioTab('gear')">Gear</button>
     <button class="studio-tab" id="tab-bg" onclick="switchStudioTab('bg')">Background</button>
     <button class="studio-tab" id="tab-wardrobe" onclick="switchStudioTab('wardrobe')">Wardrobe</button>
@@ -1152,35 +1154,201 @@ function getQuestPathway(qId) {
   return QUEST_PATHWAYS[qId] || null;
 }
 
-// ---- Avatar Character Classes ----
+// ---- Avatar System: Character Classes ----
 const CHARACTER_CLASSES = {
-  prince:    { name: "Prince",     gender: "boy",  icon: "🤴", desc: "A young noble ready to lead quests" },
-  princess:  { name: "Princess",   gender: "girl", icon: "👸", desc: "A young noble with a heart for adventure" },
-  king:      { name: "King",       gender: "boy",  icon: "🤴", desc: "A wise ruler guiding the village" },
-  queen:     { name: "Queen",      gender: "girl", icon: "👑", desc: "A gracious ruler nurturing the land" },
-  wizard:    { name: "Wizard",     gender: "boy",  icon: "🧙", desc: "A keeper of ancient knowledge and lore" },
-  witch:     { name: "Witch",      gender: "girl", icon: "🧙‍♀️", desc: "A keeper of ancient knowledge and lore" },
-  gardener:  { name: "Gardener",   gender: "boy",  icon: "🧑‍🌾", desc: "A tender of soil, seed, and season" },
-  gardenerf: { name: "Gardener",   gender: "girl", icon: "👩‍🌾", desc: "A tender of soil, seed, and season" }
+  prince:    { name: "Prince",     gender: "boy",  group: "royal",    icon: "🤴", desc: "A young noble ready to lead quests" },
+  princess:  { name: "Princess",   gender: "girl", group: "royal",    icon: "👸", desc: "A young noble with a heart for adventure" },
+  king:      { name: "King",       gender: "boy",  group: "royal",    icon: "🤴", desc: "A wise ruler guiding the village" },
+  queen:     { name: "Queen",      gender: "girl", group: "royal",    icon: "👑", desc: "A gracious ruler nurturing the land" },
+  wizard:    { name: "Wizard",     gender: "boy",  group: "magic",    icon: "🧙", desc: "A keeper of ancient knowledge and lore" },
+  witch:     { name: "Witch",      gender: "girl", group: "magic",    icon: "🧙‍♀️", desc: "A keeper of ancient knowledge and lore" },
+  gardener:  { name: "Gardener",   gender: "boy",  group: "gardener", icon: "🧑‍🌾", desc: "A tender of soil, seed, and season" },
+  gardenerf: { name: "Gardener",   gender: "girl", group: "gardener", icon: "👩‍🌾", desc: "A tender of soil, seed, and season" }
 };
 
+function getClassGroup(cc) {
+  let cls = CHARACTER_CLASSES[cc];
+  return cls ? cls.group : 'gardener';
+}
+
+// ---- Hair Styles (SVG path generators, head at cx=100 cy=70 rx=42 ry=48) ----
+const HAIR_STYLES = {
+  short: {
+    name: "Short",
+    back: null,
+    front: (c) => `<path d="M58 68 Q58 24 100 20 Q142 24 142 68 Q142 92 130 92 L70 92 Q58 92 58 68 Z" fill="${c}" stroke="#1a1a1a" stroke-width="1.5"/>`
+  },
+  long: {
+    name: "Long",
+    back: (c) => `<path d="M52 68 Q52 20 100 16 Q148 20 148 68 L148 175 Q143 180 136 175 L130 115 Q115 110 100 110 Q85 110 70 115 L64 175 Q57 180 52 175 Z" fill="${c}" stroke="#1a1a1a" stroke-width="1.5"/>`,
+    front: (c) => `<path d="M58 68 Q58 24 100 20 Q142 24 142 68 Q142 90 130 90 L118 90 L118 135 Q114 140 110 136 L110 94 L90 94 L90 136 Q86 140 82 136 L82 90 L70 90 Q58 90 58 68 Z" fill="${c}" stroke="#1a1a1a" stroke-width="1.5"/>`
+  },
+  curly: {
+    name: "Curly",
+    back: null,
+    front: (c) => `<path d="M56 68 Q56 48 60 36 Q56 30 64 24 Q68 16 76 20 Q84 14 88 20 Q96 14 100 18 Q104 14 112 20 Q120 16 124 24 Q132 30 128 36 Q140 48 144 68 Q144 92 130 92 L70 92 Q56 92 56 68 Z" fill="${c}" stroke="#1a1a1a" stroke-width="1.5"/>`
+  },
+  braid: {
+    name: "Braids",
+    back: (c) => `<rect x="50" y="84" width="14" height="72" rx="7" fill="${c}" stroke="#1a1a1a" stroke-width="1.5"/><rect x="136" y="84" width="14" height="72" rx="7" fill="${c}" stroke="#1a1a1a" stroke-width="1.5"/><line x1="52" y1="92" x2="62" y2="92" stroke="#1a1a1a" stroke-width="1" opacity="0.5"/><line x1="52" y1="104" x2="62" y2="104" stroke="#1a1a1a" stroke-width="1" opacity="0.5"/><line x1="52" y1="116" x2="62" y2="116" stroke="#1a1a1a" stroke-width="1" opacity="0.5"/><line x1="52" y1="128" x2="62" y2="128" stroke="#1a1a1a" stroke-width="1" opacity="0.5"/><line x1="52" y1="140" x2="62" y2="140" stroke="#1a1a1a" stroke-width="1" opacity="0.5"/><line x1="138" y1="92" x2="148" y2="92" stroke="#1a1a1a" stroke-width="1" opacity="0.5"/><line x1="138" y1="104" x2="148" y2="104" stroke="#1a1a1a" stroke-width="1" opacity="0.5"/><line x1="138" y1="116" x2="148" y2="116" stroke="#1a1a1a" stroke-width="1" opacity="0.5"/><line x1="138" y1="128" x2="148" y2="128" stroke="#1a1a1a" stroke-width="1" opacity="0.5"/><line x1="138" y1="140" x2="148" y2="140" stroke="#1a1a1a" stroke-width="1" opacity="0.5"/>`,
+    front: (c) => `<path d="M58 68 Q58 24 100 20 Q142 24 142 68 Q142 92 130 92 L70 92 Q58 92 58 68 Z" fill="${c}" stroke="#1a1a1a" stroke-width="1.5"/>`
+  },
+  bun: {
+    name: "Bun",
+    back: null,
+    front: (c) => `<circle cx="100" cy="8" r="20" fill="${c}" stroke="#1a1a1a" stroke-width="2"/><path d="M58 68 Q58 24 100 20 Q142 24 142 68 Q142 92 130 92 L70 92 Q58 92 58 68 Z" fill="${c}" stroke="#1a1a1a" stroke-width="1.5"/>`
+  },
+  ponytail: {
+    name: "Ponytail",
+    back: (c) => `<path d="M140 40 Q168 50 162 95 Q158 125 148 128 Q144 122 152 95 Q148 55 134 45 Z" fill="${c}" stroke="#1a1a1a" stroke-width="1.5"/>`,
+    front: (c) => `<path d="M58 68 Q58 24 100 20 Q142 24 142 68 Q142 92 130 92 L70 92 Q58 92 58 68 Z" fill="${c}" stroke="#1a1a1a" stroke-width="1.5"/>`
+  },
+  spiky: {
+    name: "Spiky",
+    back: null,
+    front: (c) => `<path d="M58 68 L64 36 L74 48 L84 18 L94 42 L100 16 L106 42 L116 18 L126 48 L136 36 L142 68 Q142 92 130 92 L70 92 Q58 92 58 68 Z" fill="${c}" stroke="#1a1a1a" stroke-width="1.5"/>`
+  },
+  wavy: {
+    name: "Wavy",
+    back: (c) => `<path d="M52 68 Q52 20 100 16 Q148 20 148 68 L148 170 Q142 175 137 168 Q132 162 127 168 Q122 175 117 168 Q112 162 107 168 Q102 175 97 168 Q92 162 87 168 Q82 175 77 168 Q72 162 67 168 Q62 175 52 170 Z" fill="${c}" stroke="#1a1a1a" stroke-width="1.5"/>`,
+    front: (c) => `<path d="M58 68 Q58 24 100 20 Q142 24 142 68 Q142 90 130 90 L118 90 L118 130 Q114 135 110 130 L110 92 L90 92 L90 130 Q86 135 82 130 L82 90 L70 90 Q58 90 58 68 Z" fill="${c}" stroke="#1a1a1a" stroke-width="1.5"/>`
+  },
+  buzz: {
+    name: "Buzz",
+    back: null,
+    front: (c) => `<path d="M58 58 Q58 24 100 20 Q142 24 142 58 Q142 62 130 62 L70 62 Q58 62 58 58 Z" fill="${c}" stroke="#1a1a1a" stroke-width="1" opacity="0.85"/>`
+  },
+  bald: {
+    name: "Bald",
+    back: null,
+    front: () => ``
+  }
+};
+
+// ---- Expressions (eyes at 88,65 and 112,65; eyebrows at y=52; mouth at y=85) ----
+const EXPRESSIONS = {
+  calm: {
+    name: "Calm",
+    draw: (ec, hc) => `
+      <path d="M82 54 Q88 52 94 54" stroke="${hc}" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M106 54 Q112 52 118 54" stroke="${hc}" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <circle cx="88" cy="65" r="5" fill="${ec}" stroke="#1a1a1a" stroke-width="1.5"/>
+      <circle cx="112" cy="65" r="5" fill="${ec}" stroke="#1a1a1a" stroke-width="1.5"/>
+      <circle cx="88" cy="65" r="2.5" fill="#1a1a1a"/>
+      <circle cx="112" cy="65" r="2.5" fill="#1a1a1a"/>
+      <circle cx="89" cy="64" r="1" fill="#fff"/>
+      <circle cx="113" cy="64" r="1" fill="#fff"/>
+      <path d="M90 85 Q100 89 110 85" stroke="#1a1a1a" stroke-width="2" fill="none" stroke-linecap="round"/>`
+  },
+  happy: {
+    name: "Happy",
+    draw: (ec, hc) => `
+      <path d="M82 52 Q88 49 94 52" stroke="${hc}" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M106 52 Q112 49 118 52" stroke="${hc}" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M83 66 Q88 60 93 66" stroke="#1a1a1a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="M107 66 Q112 60 117 66" stroke="#1a1a1a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="M85 83 Q100 96 115 83" stroke="#1a1a1a" stroke-width="2.5" fill="none" stroke-linecap="round"/>`
+  },
+  angry: {
+    name: "Angry",
+    draw: (ec, hc) => `
+      <path d="M80 50 L94 56" stroke="${hc}" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="M106 56 L120 50" stroke="${hc}" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="88" cy="66" r="5" fill="${ec}" stroke="#1a1a1a" stroke-width="1.5"/>
+      <circle cx="112" cy="66" r="5" fill="${ec}" stroke="#1a1a1a" stroke-width="1.5"/>
+      <circle cx="88" cy="66" r="2.5" fill="#1a1a1a"/>
+      <circle cx="112" cy="66" r="2.5" fill="#1a1a1a"/>
+      <path d="M90 88 Q100 82 110 88" stroke="#1a1a1a" stroke-width="2.5" fill="none" stroke-linecap="round"/>`
+  },
+  excited: {
+    name: "Excited",
+    draw: (ec, hc) => `
+      <path d="M82 48 Q88 45 94 48" stroke="${hc}" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M106 48 Q112 45 118 48" stroke="${hc}" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <circle cx="88" cy="64" r="6" fill="#fff" stroke="#1a1a1a" stroke-width="1.5"/>
+      <circle cx="112" cy="64" r="6" fill="#fff" stroke="#1a1a1a" stroke-width="1.5"/>
+      <circle cx="88" cy="64" r="3.5" fill="${ec}"/>
+      <circle cx="112" cy="64" r="3.5" fill="${ec}"/>
+      <circle cx="88" cy="64" r="2" fill="#1a1a1a"/>
+      <circle cx="112" cy="64" r="2" fill="#1a1a1a"/>
+      <circle cx="89" cy="63" r="1" fill="#fff"/>
+      <circle cx="113" cy="63" r="1" fill="#fff"/>
+      <path d="M84 82 Q100 100 116 82 Q100 90 84 82 Z" fill="#1a1a1a"/>
+      <path d="M88 84 Q100 94 112 84 L112 82 L88 82 Z" fill="#fff"/>`
+  },
+  surprised: {
+    name: "Surprised",
+    draw: (ec, hc) => `
+      <path d="M82 46 Q88 44 94 46" stroke="${hc}" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M106 46 Q112 44 118 46" stroke="${hc}" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <circle cx="88" cy="63" r="7" fill="#fff" stroke="#1a1a1a" stroke-width="1.5"/>
+      <circle cx="112" cy="63" r="7" fill="#fff" stroke="#1a1a1a" stroke-width="1.5"/>
+      <circle cx="88" cy="63" r="3" fill="${ec}"/>
+      <circle cx="112" cy="63" r="3" fill="${ec}"/>
+      <circle cx="88" cy="63" r="1.5" fill="#1a1a1a"/>
+      <circle cx="112" cy="63" r="1.5" fill="#1a1a1a"/>
+      <ellipse cx="100" cy="88" rx="5" ry="7" fill="#1a1a1a"/>`
+  }
+};
+
+// ---- Class-Specific Gear (SVG hats + emoji tools per class group) ----
+const CLASS_GEAR = {
+  royal: {
+    hats: [
+      { id: null, name: "None", icon: "❌" },
+      { id: "crown_gold", name: "Gold Crown", icon: "👑", draw: () => `<path d="M68 28 L75 12 L85 24 L92 8 L100 22 L108 8 L115 24 L125 12 L132 28 L132 34 L68 34 Z" fill="#d4a017" stroke="#1a1a1a" stroke-width="2"/><circle cx="75" cy="14" r="2.5" fill="#c0392b"/><circle cx="92" cy="10" r="2.5" fill="#2196f3"/><circle cx="108" cy="10" r="2.5" fill="#27ae60"/><circle cx="125" cy="14" r="2.5" fill="#e91e63"/>` },
+      { id: "crown_silver", name: "Silver Crown", icon: "👑", draw: () => `<path d="M68 28 L75 12 L85 24 L92 8 L100 22 L108 8 L115 24 L125 12 L132 28 L132 34 L68 34 Z" fill="#c0c0c0" stroke="#1a1a1a" stroke-width="2"/><circle cx="75" cy="14" r="2.5" fill="#2196f3"/><circle cx="92" cy="10" r="2.5" fill="#e91e63"/><circle cx="108" cy="10" r="2.5" fill="#27ae60"/><circle cx="125" cy="14" r="2.5" fill="#f44336"/>` },
+      { id: "tiara", name: "Tiara", icon: "👸", draw: () => `<path d="M74 30 L82 18 L91 26 L100 14 L109 26 L118 18 L126 30 L126 34 L74 34 Z" fill="#d4a017" stroke="#1a1a1a" stroke-width="1.5"/><circle cx="100" cy="18" r="3" fill="#e91e63" stroke="#d4a017" stroke-width="0.8"/>` },
+      { id: "royal_hood", name: "Royal Hood", icon: "🧣", draw: (op, os) => `<path d="M55 30 Q55 8 100 6 Q145 8 145 30 L145 70 Q145 75 140 75 L60 75 Q55 75 55 70 Z" fill="${os}" stroke="#1a1a1a" stroke-width="2" opacity="0.9"/><path d="M55 30 Q55 8 100 6 Q145 8 145 30" fill="none" stroke="${op}" stroke-width="3" opacity="0.6"/>` }
+    ],
+    tools: [
+      { id: null, name: "None", icon: "❌" },
+      { id: "📜", name: "Scroll", icon: "📜" },
+      { id: "⚔️", name: "Sword", icon: "⚔️" },
+      { id: "🛡️", name: "Shield", icon: "🛡️" },
+      { id: "💎", name: "Gem", icon: "💎" }
+    ]
+  },
+  magic: {
+    hats: [
+      { id: null, name: "None", icon: "❌" },
+      { id: "wizard_blue", name: "Wizard Hat", icon: "🧙", draw: () => `<path d="M58 36 L100 -10 L142 36 Z" fill="#2196f3" stroke="#1a1a1a" stroke-width="2.5"/><ellipse cx="100" cy="36" rx="44" ry="6" fill="#1565c0" stroke="#1a1a1a" stroke-width="2"/><text x="100" y="22" font-size="14" text-anchor="middle" fill="#d4a017">★</text>` },
+      { id: "wizard_purple", name: "Purple Hat", icon: "🧙", draw: () => `<path d="M58 36 L100 -10 L142 36 Z" fill="#9c27b0" stroke="#1a1a1a" stroke-width="2.5"/><ellipse cx="100" cy="36" rx="44" ry="6" fill="#6a1b9a" stroke="#1a1a1a" stroke-width="2"/><text x="100" y="22" font-size="14" text-anchor="middle" fill="#d4a017">★</text>` },
+      { id: "witch_black", name: "Witch Hat", icon: "🧙‍♀️", draw: () => `<path d="M52 40 L100 -5 L148 40 Z" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="2.5"/><ellipse cx="100" cy="40" rx="50" ry="8" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="2"/><text x="100" y="24" font-size="12" text-anchor="middle" fill="#d4a017">★</text>` },
+      { id: "pointed_red", name: "Crimson Hat", icon: "🎩", draw: () => `<path d="M58 36 L100 -10 L142 36 Z" fill="#f44336" stroke="#1a1a1a" stroke-width="2.5"/><ellipse cx="100" cy="36" rx="44" ry="6" fill="#c62828" stroke="#1a1a1a" stroke-width="2"/><text x="100" y="22" font-size="14" text-anchor="middle" fill="#d4a017">★</text>` }
+    ],
+    tools: [
+      { id: null, name: "None", icon: "❌" },
+      { id: "🪄", name: "Wand", icon: "🪄" },
+      { id: "🔮", name: "Crystal Orb", icon: "🔮" },
+      { id: "📖", name: "Spellbook", icon: "📖" },
+      { id: "✨", name: "Sparkle", icon: "✨" }
+    ]
+  },
+  gardener: {
+    hats: [
+      { id: null, name: "None", icon: "❌" },
+      { id: "straw_hat", name: "Straw Hat", icon: "🌾", draw: () => `<ellipse cx="100" cy="30" rx="50" ry="10" fill="#d4a850" stroke="#1a1a1a" stroke-width="2"/><ellipse cx="100" cy="22" rx="24" ry="16" fill="#c4a030" stroke="#1a1a1a" stroke-width="2"/><rect x="78" y="24" width="44" height="5" rx="2" fill="#8d6e63"/>` },
+      { id: "sun_hat", name: "Sun Hat", icon: "👒", draw: () => `<ellipse cx="100" cy="30" rx="54" ry="12" fill="#fff3e0" stroke="#1a1a1a" stroke-width="2"/><ellipse cx="100" cy="20" rx="26" ry="18" fill="#ffe0b2" stroke="#1a1a1a" stroke-width="2"/><path d="M74 28 Q100 32 126 28" stroke="#e91e63" stroke-width="3" fill="none"/>` },
+      { id: "bandana", name: "Bandana", icon: "🧢", draw: (op) => `<path d="M66 28 Q66 14 100 10 Q134 14 134 28 L128 38 L72 38 Z" fill="${op}" stroke="#1a1a1a" stroke-width="2"/><circle cx="130" cy="34" r="5" fill="${op}" stroke="#1a1a1a" stroke-width="1.5"/>` },
+      { id: "bucket_hat", name: "Bucket Hat", icon: "🪖", draw: () => `<path d="M72 34 Q72 14 100 14 Q128 14 128 34 L134 40 L66 40 Z" fill="#8d6e63" stroke="#1a1a1a" stroke-width="2"/><rect x="66" y="36" width="68" height="4" fill="#6d4c41"/>` }
+    ],
+    tools: [
+      { id: null, name: "None", icon: "❌" },
+      { id: "🌱", name: "Seedling", icon: "🌱" },
+      { id: "🪴", name: "Pot", icon: "🪴" },
+      { id: "✂️", name: "Shears", icon: "✂️" },
+      { id: "🧹", name: "Broom", icon: "🧹" }
+    ]
+  }
+};
+
+// ---- Color Palettes ----
 const skinTones = ["#f0c090", "#e6b88a", "#d4a373", "#c08552", "#8d5524", "#5c3a21"];
-const hairColors = ["#2d1810", "#4a3018", "#6b4423", "#8b6914", "#c0392b", "#a0522d", "#708090", "#d4a017"];
+const hairColors = ["#2d1810", "#4a3018", "#6b4423", "#8b6914", "#c0392b", "#a0522d", "#708090", "#d4a017", "#e0c0a0", "#1a1a1a"];
+const eyeColors = ["#4a3010", "#2196f3", "#27ae60", "#6b4423", "#1a1a1a", "#5d4037", "#1565c0", "#c0392b"];
 const outfitColors = ["#4caf50", "#2196f3", "#ff9800", "#9c27b0", "#f44336", "#795548", "#607d8b", "#e91e63", "#1a5276", "#148f77", "#7d3c98", "#b7950b"];
 
-const hatOptions = [
-  { id: null, name: "None", icon: "❌" }, { id: "🧢", name: "Cap", icon: "🧢" },
-  { id: "🎩", name: "Top Hat", icon: "🎩" }, { id: "👑", name: "Crown", icon: "👑" },
-  { id: "🪖", name: "Helmet", icon: "🪖" }, { id: "⛑️", name: "Hard Hat", icon: "⛑️" },
-  { id: "🧣", name: "Scarf", icon: "🧣" }, { id: "🎓", name: "Scholar", icon: "🎓" }
-];
-const toolOptions = [
-  { id: null, name: "None", icon: "❌" }, { id: "🪓", name: "Axe", icon: "🪓" },
-  { id: "🔨", name: "Hammer", icon: "🔨" }, { id: "🌿", name: "Herb", icon: "🌿" },
-  { id: "📷", name: "Camera", icon: "📷" }, { id: "🍳", name: "Pan", icon: "🍳" },
-  { id: "📚", name: "Books", icon: "📚" }, { id: "⚒️", name: "Tools", icon: "⚒️" },
-  { id: "🪚", name: "Saw", icon: "🪚" }, { id: "🌱", name: "Seedling", icon: "🌱" }
-];
 const bgOptions = [
   { id: "🌳", name: "Forest" }, { id: "🏡", name: "House" },
   { id: "🏢", name: "City" }, { id: "⛰️", name: "Mountains" },
@@ -1250,7 +1418,8 @@ function makeNewPlayer(name, role) {
     wardrobe: [],
     equipped: {
       characterClass: "gardener",
-      skin: "#f0c090", hair: "#4a3018",
+      skin: "#f0c090", hairStyle: "short", hairColor: "#4a3018",
+      eyeColor: "#4a3010", expression: "calm",
       outfitPrimary: "#4caf50", outfitSecondary: "#2d5a27",
       hat: null, bg: "🌳", tool: null
     }
@@ -1273,7 +1442,7 @@ function saveVillage() {
   showScreen('village');
 }
 
-// ---- Avatar SVG Renderer ----
+// ---- Avatar SVG Renderer (viewBox 200x280) ----
 function getAvatarHTML(p, mini) {
   let cls = mini ? 'mini-avatar' : 'css-avatar';
   let e = p.equipped;
@@ -1281,128 +1450,99 @@ function getAvatarHTML(p, mini) {
   if (!e.characterClass) e.characterClass = 'gardener';
   if (!e.outfitPrimary && e.shirt) e.outfitPrimary = e.shirt;
   if (!e.outfitSecondary && e.pants) e.outfitSecondary = e.pants;
-  if (!e.hair) e.hair = '#4a3018';
+  if (!e.hairColor && e.hair) e.hairColor = e.hair;
+  if (!e.hairStyle) e.hairStyle = (e.characterClass === 'princess' || e.characterClass === 'queen' || e.characterClass === 'witch' || e.characterClass === 'gardenerf') ? 'long' : 'short';
+  if (!e.eyeColor) e.eyeColor = '#4a3010';
+  if (!e.expression) e.expression = 'calm';
+
   let cc = e.characterClass;
   let skin = e.skin || '#f0c090';
-  let hair = e.hair || '#4a3018';
+  let hc = e.hairColor || '#4a3018';
+  let hs = HAIR_STYLES[e.hairStyle] || HAIR_STYLES.short;
+  let ec = e.eyeColor || '#4a3010';
+  let expr = EXPRESSIONS[e.expression] || EXPRESSIONS.calm;
   let op = e.outfitPrimary || '#4caf50';
   let os = e.outfitSecondary || '#2d5a27';
-  let hat = e.hat || '';
-  let tool = e.tool || '';
-  let isRoyal = cc === 'prince' || cc === 'princess' || cc === 'king' || cc === 'queen';
-  let isMagic = cc === 'wizard' || cc === 'witch';
-  let isGardener = cc === 'gardener' || cc === 'gardenerf';
-  let isGirl = cc === 'princess' || cc === 'queen' || cc === 'witch' || cc === 'gardenerf';
+  let group = getClassGroup(cc);
+  let gear = CLASS_GEAR[group] || CLASS_GEAR.gardener;
+  let isRoyal = group === 'royal';
+  let isMagic = group === 'magic';
 
-  // SVG viewBox 160x220
-  let svg = `<svg viewBox="0 0 160 220" xmlns="http://www.w3.org/2000/svg">`;
+  let svg = `<svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">`;
+
+  // Back hair (behind body)
+  if (hs.back) svg += hs.back(hc);
 
   // Shadow
-  svg += `<ellipse cx="80" cy="212" rx="42" ry="6" fill="rgba(0,0,0,0.35)"/>`;
+  svg += `<ellipse cx="100" cy="270" rx="50" ry="7" fill="rgba(0,0,0,0.3)"/>`;
 
   // Legs
-  svg += `<rect x="58" y="160" width="18" height="42" rx="6" fill="${os}" stroke="#1a1a1a" stroke-width="2"/>`;
-  svg += `<rect x="84" y="160" width="18" height="42" rx="6" fill="${os}" stroke="#1a1a1a" stroke-width="2"/>`;
+  svg += `<rect x="80" y="215" width="16" height="45" rx="6" fill="${os}" stroke="#1a1a1a" stroke-width="2"/>`;
+  svg += `<rect x="104" y="215" width="16" height="45" rx="6" fill="${os}" stroke="#1a1a1a" stroke-width="2"/>`;
   // Feet
-  svg += `<ellipse cx="67" cy="204" rx="13" ry="6" fill="#2a1a0a" stroke="#1a1a1a" stroke-width="1.5"/>`;
-  svg += `<ellipse cx="93" cy="204" rx="13" ry="6" fill="#2a1a0a" stroke="#1a1a1a" stroke-width="1.5"/>`;
+  svg += `<ellipse cx="88" cy="262" rx="14" ry="6" fill="#2a1a0a" stroke="#1a1a1a" stroke-width="1.5"/>`;
+  svg += `<ellipse cx="112" cy="262" rx="14" ry="6" fill="#2a1a0a" stroke="#1a1a1a" stroke-width="1.5"/>`;
 
-  // Torso (outfit)
-  svg += `<path d="M48 88 Q48 78 58 76 L102 76 Q112 78 112 88 L112 162 L48 162 Z" fill="${op}" stroke="#1a1a1a" stroke-width="2.5"/>`;
-  // Outfit shading
-  svg += `<path d="M80 78 L80 162" stroke="${os}" stroke-width="2" opacity="0.5"/>`;
-  // Collar / chest detail
+  // Torso
+  svg += `<path d="M68 132 Q68 124 78 122 L122 122 Q132 124 132 132 L132 215 L68 215 Z" fill="${op}" stroke="#1a1a1a" stroke-width="2.5"/>`;
+  // Outfit shading line
+  svg += `<path d="M100 124 L100 215" stroke="${os}" stroke-width="2" opacity="0.4"/>`;
+
+  // Class-specific chest detail
   if (isRoyal) {
-    svg += `<path d="M64 78 L80 92 L96 78" fill="none" stroke="${os}" stroke-width="2.5"/>`;
-    svg += `<circle cx="80" cy="100" r="4" fill="${os}" stroke="#d4a017" stroke-width="1"/>`;
+    svg += `<path d="M82 122 L100 138 L118 122" fill="none" stroke="${os}" stroke-width="2.5"/>`;
+    svg += `<circle cx="100" cy="148" r="5" fill="${os}" stroke="#d4a017" stroke-width="1.5"/>`;
+    svg += `<circle cx="100" cy="148" r="2" fill="#d4a017"/>`;
   } else if (isMagic) {
-    svg += `<path d="M64 78 L72 96 L80 88 L88 96 L96 78" fill="none" stroke="${os}" stroke-width="2"/>`;
-    // Stars on robe
-    svg += `<text x="68" y="120" font-size="10" fill="#d4a017">★</text>`;
-    svg += `<text x="86" y="135" font-size="8" fill="#d4a017">✦</text>`;
+    svg += `<path d="M82 122 L90 142 L100 132 L110 142 L118 122" fill="none" stroke="${os}" stroke-width="2"/>`;
+    svg += `<text x="86" y="170" font-size="12" fill="#d4a017">★</text>`;
+    svg += `<text x="104" y="185" font-size="9" fill="#d4a017">✦</text>`;
+    svg += `<text x="82" y="195" font-size="8" fill="#d4a017">✧</text>`;
   } else {
-    // Gardener overalls straps
-    svg += `<rect x="64" y="76" width="6" height="86" fill="${os}" opacity="0.7"/>`;
-    svg += `<rect x="90" y="76" width="6" height="86" fill="${os}" opacity="0.7"/>`;
+    // Gardener overalls
+    svg += `<rect x="82" y="122" width="7" height="93" fill="${os}" opacity="0.7"/>`;
+    svg += `<rect x="111" y="122" width="7" height="93" fill="${os}" opacity="0.7"/>`;
+    svg += `<rect x="78" y="180" width="44" height="6" rx="2" fill="${os}" opacity="0.5"/>`;
   }
 
   // Arms
-  svg += `<rect x="34" y="82" width="18" height="72" rx="9" fill="${op}" stroke="#1a1a1a" stroke-width="2"/>`;
-  svg += `<rect x="108" y="82" width="18" height="72" rx="9" fill="${op}" stroke="#1a1a1a" stroke-width="2"/>`;
+  svg += `<rect x="48" y="140" width="18" height="62" rx="9" fill="${op}" stroke="#1a1a1a" stroke-width="2"/>`;
+  svg += `<rect x="134" y="140" width="18" height="62" rx="9" fill="${op}" stroke="#1a1a1a" stroke-width="2"/>`;
   // Hands
-  svg += `<circle cx="43" cy="158" r="9" fill="${skin}" stroke="#1a1a1a" stroke-width="2"/>`;
-  svg += `<circle cx="117" cy="158" r="9" fill="${skin}" stroke="#1a1a1a" stroke-width="2"/>`;
+  svg += `<circle cx="57" cy="204" r="9" fill="${skin}" stroke="#1a1a1a" stroke-width="2"/>`;
+  svg += `<circle cx="143" cy="204" r="9" fill="${skin}" stroke="#1a1a1a" stroke-width="2"/>`;
 
   // Tool in right hand
-  if (tool) {
-    svg += `<text x="117" y="165" font-size="22" text-anchor="middle" transform="rotate(-20 117 158)">${tool}</text>`;
+  if (e.tool) {
+    svg += `<text x="143" y="212" font-size="24" text-anchor="middle" transform="rotate(-20 143 204)">${e.tool}</text>`;
   }
 
   // Neck
-  svg += `<rect x="72" y="66" width="16" height="14" fill="${skin}" stroke="#1a1a1a" stroke-width="1.5"/>`;
+  svg += `<rect x="92" y="114" width="16" height="16" fill="${skin}" stroke="#1a1a1a" stroke-width="1.5"/>`;
 
   // Head
-  svg += `<ellipse cx="80" cy="48" rx="30" ry="32" fill="${skin}" stroke="#1a1a1a" stroke-width="2.5"/>`;
+  svg += `<ellipse cx="100" cy="70" rx="42" ry="48" fill="${skin}" stroke="#1a1a1a" stroke-width="2.5"/>`;
 
-  // Hair
-  if (isGirl) {
-    // Longer hair
-    svg += `<path d="M50 48 Q50 28 80 22 Q110 28 110 48 L110 68 Q110 72 104 70 L96 60 Q92 56 88 58 L80 52 Q72 56 64 58 L56 70 Q50 72 50 68 Z" fill="${hair}" stroke="#1a1a1a" stroke-width="1.5"/>`;
-  } else {
-    // Shorter hair
-    svg += `<path d="M50 44 Q50 22 80 18 Q110 22 110 44 L108 50 Q100 38 80 38 Q60 38 52 50 Z" fill="${hair}" stroke="#1a1a1a" stroke-width="1.5"/>`;
-  }
-
-  // Eyes
-  svg += `<ellipse cx="69" cy="50" rx="3.5" ry="4.5" fill="#1a1a1a"/>`;
-  svg += `<ellipse cx="91" cy="50" rx="3.5" ry="4.5" fill="#1a1a1a"/>`;
-  svg += `<circle cx="70" cy="49" r="1.2" fill="#fff"/>`;
-  svg += `<circle cx="92" cy="49" r="1.2" fill="#fff"/>`;
-
-  // Smile
-  svg += `<path d="M72 60 Q80 66 88 60" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>`;
+  // Ears
+  svg += `<ellipse cx="58" cy="72" rx="6" ry="8" fill="${skin}" stroke="#1a1a1a" stroke-width="1.5"/>`;
+  svg += `<ellipse cx="142" cy="72" rx="6" ry="8" fill="${skin}" stroke="#1a1a1a" stroke-width="1.5"/>`;
 
   // Cheeks
-  svg += `<circle cx="62" cy="58" r="4" fill="#ff9999" opacity="0.4"/>`;
-  svg += `<circle cx="98" cy="58" r="4" fill="#ff9999" opacity="0.4"/>`;
+  svg += `<circle cx="76" cy="78" r="6" fill="#ff9999" opacity="0.3"/>`;
+  svg += `<circle cx="124" cy="78" r="6" fill="#ff9999" opacity="0.3"/>`;
 
-  // Class-specific headwear
-  if (isRoyal && cc === 'king') {
-    // King crown
-    svg += `<path d="M56 24 L64 12 L72 22 L80 8 L88 22 L96 12 L104 24 L104 30 L56 30 Z" fill="#d4a017" stroke="#1a1a1a" stroke-width="2"/>`;
-    svg += `<circle cx="64" cy="14" r="2.5" fill="#c0392b"/>`;
-    svg += `<circle cx="80" cy="10" r="2.5" fill="#2196f3"/>`;
-    svg += `<circle cx="96" cy="14" r="2.5" fill="#27ae60"/>`;
-  } else if (isRoyal && cc === 'queen') {
-    // Queen tiara
-    svg += `<path d="M58 26 L64 16 L72 24 L80 14 L88 24 L96 16 L102 26 L102 30 L58 30 Z" fill="#d4a017" stroke="#1a1a1a" stroke-width="2"/>`;
-    svg += `<circle cx="80" cy="16" r="3" fill="#c0392b" stroke="#d4a017" stroke-width="1"/>`;
-  } else if (isRoyal && cc === 'prince') {
-    // Prince small crown
-    svg += `<path d="M62 24 L68 16 L76 22 L80 14 L84 22 L92 16 L98 24 L98 28 L62 28 Z" fill="#d4a017" stroke="#1a1a1a" stroke-width="1.5"/>`;
-  } else if (isRoyal && cc === 'princess') {
-    // Princess tiara
-    svg += `<path d="M64 26 L72 18 L80 24 L88 18 L96 26 L96 28 L64 28 Z" fill="#d4a017" stroke="#1a1a1a" stroke-width="1.5"/>`;
-    svg += `<circle cx="80" cy="20" r="2" fill="#e91e63"/>`;
-  } else if (isMagic) {
-    // Wizard/witch hat
-    svg += `<path d="M48 30 L80 -8 L112 30 Z" fill="${op}" stroke="#1a1a1a" stroke-width="2.5"/>`;
-    svg += `<ellipse cx="80" cy="30" rx="36" ry="6" fill="${os}" stroke="#1a1a1a" stroke-width="2"/>`;
-    // Hat star
-    svg += `<text x="80" y="18" font-size="14" text-anchor="middle" fill="#d4a017">★</text>`;
-    if (cc === 'witch') {
-      // Witch brim
-      svg += `<ellipse cx="80" cy="32" rx="40" ry="7" fill="${os}" stroke="#1a1a1a" stroke-width="2"/>`;
+  // Expression (eyes, eyebrows, mouth)
+  svg += expr.draw(ec, hc);
+
+  // Front hair
+  if (hs.front) svg += hs.front(hc);
+
+  // Hat (SVG-drawn, class-specific)
+  if (e.hat) {
+    let hatItem = gear.hats.find(h => h.id === e.hat);
+    if (hatItem && hatItem.draw) {
+      svg += hatItem.draw(op, os);
     }
-  } else if (isGardener) {
-    // Gardener straw hat
-    svg += `<ellipse cx="80" cy="24" rx="38" ry="8" fill="#d4a850" stroke="#1a1a1a" stroke-width="2"/>`;
-    svg += `<ellipse cx="80" cy="20" rx="18" ry="10" fill="#c4a030" stroke="#1a1a1a" stroke-width="2"/>`;
-  }
-
-  // Extra hat emoji (overlay)
-  if (hat) {
-    svg += `<text x="80" y="14" font-size="28" text-anchor="middle">${hat}</text>`;
   }
 
   svg += `</svg>`;
@@ -1517,6 +1657,8 @@ function renderStudioOptions() {
   let a = document.getElementById('studio-options-area');
   a.innerHTML = '';
   let e = p.equipped;
+  let group = getClassGroup(e.characterClass);
+  let gear = CLASS_GEAR[group] || CLASS_GEAR.gardener;
 
   if (activeStudioTab === 'class') {
     a.innerHTML = '<div class="wardrobe-grid"></div>';
@@ -1525,40 +1667,68 @@ function renderStudioOptions() {
       let selected = e.characterClass === id;
       g.innerHTML += `<div class="wardrobe-slot ${selected?'equipped':''}" onclick="equipItem('characterClass','${id}')"><span class="slot-icon" style="font-size:2em;">${cls.icon}</span><span class="slot-name">${cls.name}</span><span style="font-size:0.65em; color:var(--text-dim); display:block;">${cls.gender}</span></div>`;
     });
-  } else if (activeStudioTab === 'colors') {
+  } else if (activeStudioTab === 'face') {
     a.innerHTML = `
+      <div class="studio-label">Expression</div>
+      <div class="wardrobe-grid" id="expr-grid"></div>
+      <div class="studio-label">Eye Color</div>
+      <div class="color-palette" id="eye-palette"></div>
       <div class="studio-label">Skin Tone</div>
       <div class="color-palette" id="skin-palette"></div>
+    `;
+    let eg = a.querySelector('#expr-grid');
+    Object.entries(EXPRESSIONS).forEach(([id, ex]) => {
+      let selected = e.expression === id;
+      let exprIcons = { calm: '😐', happy: '😄', angry: '😠', excited: '🤩', surprised: '😲' };
+      eg.innerHTML += `<div class="wardrobe-slot ${selected?'equipped':''}" onclick="equipItem('expression','${id}')"><span class="slot-icon" style="font-size:1.8em;">${exprIcons[id]||'😐'}</span><span class="slot-name">${ex.name}</span></div>`;
+    });
+    let ep = a.querySelector('#eye-palette');
+    eyeColors.forEach(c => {
+      ep.innerHTML += `<div class="color-swatch ${e.eyeColor===c?'selected':''}" style="background:${c}" onclick="equipItem('eyeColor','${c}')"></div>`;
+    });
+    let sp = a.querySelector('#skin-palette');
+    skinTones.forEach(c => {
+      sp.innerHTML += `<div class="color-swatch ${e.skin===c?'selected':''}" style="background:${c}" onclick="equipItem('skin','${c}')"></div>`;
+    });
+  } else if (activeStudioTab === 'hair') {
+    a.innerHTML = `
+      <div class="studio-label">Hair Style</div>
+      <div class="wardrobe-grid" id="hair-grid"></div>
       <div class="studio-label">Hair Color</div>
       <div class="color-palette" id="hair-palette"></div>
+    `;
+    let hg = a.querySelector('#hair-grid');
+    Object.entries(HAIR_STYLES).forEach(([id, style]) => {
+      let selected = e.hairStyle === id;
+      let styleIcons = { short: '💇', long: '👩', curly: '🦱', braid: '👩‍🦰', bun: '👧', ponytail: '💇‍♀️', spiky: '🧑', wavy: '🌊', buzz: '🧔', bald: '🧑‍🦲' };
+      hg.innerHTML += `<div class="wardrobe-slot ${selected?'equipped':''}" onclick="equipItem('hairStyle','${id}')"><span class="slot-icon" style="font-size:1.8em;">${styleIcons[id]||'💇'}</span><span class="slot-name">${style.name}</span></div>`;
+    });
+    let hp = a.querySelector('#hair-palette');
+    hairColors.forEach(c => {
+      hp.innerHTML += `<div class="color-swatch ${e.hairColor===c?'selected':''}" style="background:${c}" onclick="equipItem('hairColor','${c}')"></div>`;
+    });
+  } else if (activeStudioTab === 'outfit') {
+    a.innerHTML = `
       <div class="studio-label">Outfit Primary</div>
       <div class="color-palette" id="op-palette"></div>
       <div class="studio-label">Outfit Secondary</div>
       <div class="color-palette" id="os-palette"></div>
     `;
-    let sp = a.querySelector('#skin-palette');
-    let hp = a.querySelector('#hair-palette');
     let opp = a.querySelector('#op-palette');
     let osp = a.querySelector('#os-palette');
-    skinTones.forEach(c => {
-      sp.innerHTML += `<div class="color-swatch ${e.skin===c?'selected':''}" style="background:${c}" onclick="equipItem('skin','${c}')"></div>`;
-    });
-    hairColors.forEach(c => {
-      hp.innerHTML += `<div class="color-swatch ${e.hair===c?'selected':''}" style="background:${c}" onclick="equipItem('hair','${c}')"></div>`;
-    });
     outfitColors.forEach(c => {
       opp.innerHTML += `<div class="color-swatch ${e.outfitPrimary===c?'selected':''}" style="background:${c}" onclick="equipItem('outfitPrimary','${c}')"></div>`;
       osp.innerHTML += `<div class="color-swatch ${e.outfitSecondary===c?'selected':''}" style="background:${c}" onclick="equipItem('outfitSecondary','${c}')"></div>`;
     });
   } else if (activeStudioTab === 'gear') {
-    a.innerHTML = '<div class="studio-label">Hats</div><div class="wardrobe-grid" id="hat-grid"></div><div class="studio-label">Tools</div><div class="wardrobe-grid" id="tool-grid"></div>';
+    a.innerHTML = `<div class="studio-label">${group.charAt(0).toUpperCase()+group.slice(1)} Hats</div><div class="wardrobe-grid" id="hat-grid"></div><div class="studio-label">${group.charAt(0).toUpperCase()+group.slice(1)} Tools</div><div class="wardrobe-grid" id="tool-grid"></div>`;
     let hg = a.querySelector('#hat-grid');
     let tg = a.querySelector('#tool-grid');
-    hatOptions.forEach(i => {
+    gear.hats.forEach(i => {
       let equipped = (e.hat || null) === i.id;
       hg.innerHTML += `<div class="wardrobe-slot ${equipped?'equipped':''}" onclick="equipItem('hat',${i.id===null?'null':`'${i.id}'`})"><span class="slot-icon">${i.icon}</span><span class="slot-name">${i.name}</span></div>`;
     });
-    toolOptions.forEach(i => {
+    gear.tools.forEach(i => {
       let equipped = (e.tool || null) === i.id;
       tg.innerHTML += `<div class="wardrobe-slot ${equipped?'equipped':''}" onclick="equipItem('tool',${i.id===null?'null':`'${i.id}'`})"><span class="slot-icon">${i.icon}</span><span class="slot-name">${i.name}</span></div>`;
     });
@@ -1570,7 +1740,7 @@ function renderStudioOptions() {
     });
   } else if (activeStudioTab === 'wardrobe') {
     if (p.wardrobe.length === 0) {
-      a.innerHTML = '<div style="text-align:center; color:var(--text-dim); font-style:italic; padding:1rem;">Your wardrobe is empty. Complete quests to earn hats and tools!</div>';
+      a.innerHTML = '<div style="text-align:center; color:var(--text-dim); font-style:italic; padding:1rem;">Your wardrobe is empty. Complete quests to earn gear!</div>';
       return;
     }
     a.innerHTML = '<div class="wardrobe-grid"></div>';
@@ -1590,10 +1760,13 @@ function equipItem(type, id) {
 
 function equipWardrobeItem(icon) {
   let p = players[activeStudioPlayer];
-  let hats = hatOptions.map(h => h.id).filter(h => h !== null);
-  if (hats.includes(icon)) {
+  let group = getClassGroup(p.equipped.characterClass);
+  let gear = CLASS_GEAR[group] || CLASS_GEAR.gardener;
+  let allHats = gear.hats.map(h => h.id).filter(h => h !== null);
+  let allTools = gear.tools.map(t => t.id).filter(t => t !== null);
+  if (allHats.includes(icon)) {
     p.equipped.hat = (p.equipped.hat === icon ? null : icon);
-  } else {
+  } else if (allTools.includes(icon)) {
     p.equipped.tool = (p.equipped.tool === icon ? null : icon);
   }
   safeSet('rpg_players', players);
