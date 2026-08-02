@@ -10,8 +10,10 @@
   --bg-dark: #1a1a2e;
   --bg-panel: #16213e;
   --bg-card: #0f3460;
+  --bg-input: #0a0a1a;
   --accent-gold: #e9c46a;
   --accent-green: #4ade80;
+  --accent-green-dark: #2d6a4f;
   --accent-orange: #f97316;
   --accent-sand: #f4d35e;
   --accent-straw: #e6c79c;
@@ -37,922 +39,1539 @@ body {
 }
 
 /* ---- Screen System ---- */
-.screen { display: none; min-height: 100vh; }
+.screen { display: none; min-height: 100vh; padding: 1rem; max-width: 900px; margin: 0 auto; }
 .screen.active { display: block; }
 
+/* ---- Navigation ---- */
+.nav-bar {
+  display: none;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  background: rgba(10, 10, 26, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border-subtle);
+  max-width: 900px;
+  margin: 0 auto;
+}
+.nav-btn {
+  background: var(--bg-panel);
+  color: var(--text-light);
+  border: 1px solid var(--border-subtle);
+  padding: 0.5rem 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+.nav-btn:hover { background: var(--bg-card); border-color: var(--accent-green); }
+.nav-btn.active { background: var(--accent-green-dark); color: var(--text-bright); border-color: var(--accent-green); }
+
+/* ---- Buttons ---- */
+.btn {
+  background: var(--bg-panel);
+  color: var(--text-light);
+  border: 1px solid var(--border-subtle);
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+.btn:hover { background: var(--bg-card); border-color: var(--accent-green); }
+.btn-success {
+  background: var(--accent-green-dark);
+  color: var(--text-bright);
+  border: none;
+  font-weight: bold;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+.btn-success:hover { background: var(--accent-green); color: #000; }
+.btn-danger { background: #c0392b; border: none; padding: 0.4rem 0.6rem; border-radius: 4px; color: #fff; cursor: pointer; font-family: inherit; font-size: 0.8rem; }
+.btn-small { padding: 0.35rem 0.7rem; font-size: 0.8rem; width: auto; }
+
 /* ---- Title Screen ---- */
-#title-screen {
+#screen-title {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 2rem;
+  min-height: 100vh;
 }
-
-#title-screen h1 {
+.title-main {
   font-size: 3.5rem;
   color: var(--accent-gold);
   text-shadow: 0 0 30px rgba(233, 196, 106, 0.3);
   margin-bottom: 0.5rem;
   letter-spacing: 2px;
 }
-
-#title-screen .subtitle {
-  font-size: 1.2rem;
-  color: var(--text-dim);
-  font-style: italic;
-  margin-bottom: 2rem;
-}
-
-.title-art {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-  filter: drop-shadow(0 0 10px rgba(74, 222, 128, 0.3));
-}
-
-.btn-primary {
-  background: var(--bg-card);
-  color: var(--accent-gold);
-  border: 2px solid var(--accent-gold);
-  padding: 0.8rem 2rem;
+.title-sub {
   font-size: 1.1rem;
-  font-family: inherit;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: all 0.2s;
-  margin: 0.5rem;
-}
-
-.btn-primary:hover {
-  background: var(--accent-gold);
-  color: var(--bg-dark);
-  box-shadow: var(--shadow-glow);
-}
-
-.btn-secondary {
-  background: transparent;
   color: var(--text-dim);
-  border: 1px solid var(--border-subtle);
-  padding: 0.5rem 1.2rem;
-  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+.title-art { font-size: 5rem; margin-bottom: 1rem; }
+.title-cta {
+  background: linear-gradient(135deg, var(--accent-green-dark), var(--accent-green));
+  color: var(--text-bright);
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
   font-family: inherit;
+  font-weight: bold;
   cursor: pointer;
-  border-radius: 4px;
-  transition: all 0.2s;
-  margin: 0.3rem;
+  box-shadow: 0 4px 20px rgba(74, 222, 128, 0.3);
+  transition: all 0.3s;
 }
+.title-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(74, 222, 128, 0.5); }
 
-.btn-secondary:hover {
-  color: var(--text-light);
-  border-color: var(--text-dim);
+/* ---- Intro Briefing ---- */
+.intro-box {
+  background: var(--bg-panel);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  border: 1px solid var(--border-subtle);
 }
+.intro-box h2 { text-align: center; color: var(--accent-gold); margin-bottom: 1rem; }
+.intro-box h3 { color: var(--accent-green); margin-top: 1.2rem; margin-bottom: 0.4rem; }
+.intro-box p { margin-bottom: 0.6rem; }
+.intro-box ul { margin-left: 1.5rem; margin-bottom: 0.6rem; }
+.intro-box strong { color: var(--text-bright); }
+.intro-box em { color: var(--accent-gold); }
 
 /* ---- Setup Screen ---- */
-#setup-screen {
-  padding: 2rem;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-#setup-screen h2 {
-  color: var(--accent-gold);
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
 .setup-section {
   background: var(--bg-panel);
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border: 1px solid var(--border-subtle);
-}
-
-.setup-section h3 {
-  color: var(--accent-green);
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
-
-.biome-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-
-.biome-card {
-  background: var(--bg-card);
-  border: 2px solid var(--border-subtle);
-  border-radius: 8px;
-  padding: 1rem;
-  cursor: pointer;
-  text-align: center;
-  transition: all 0.2s;
-}
-
-.biome-card:hover {
-  border-color: var(--accent-green);
-  transform: translateY(-2px);
-}
-
-.biome-card.selected {
-  border-color: var(--accent-gold);
-  background: rgba(233, 196, 106, 0.1);
-}
-
-.biome-card .icon { font-size: 2.5rem; }
-.biome-card .name { font-size: 1rem; margin-top: 0.5rem; color: var(--text-bright); }
-.biome-card .desc { font-size: 0.8rem; color: var(--text-dim); margin-top: 0.3rem; }
-
-.role-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-
-.role-card {
-  background: var(--bg-card);
-  border: 2px solid var(--border-subtle);
-  border-radius: 8px;
-  padding: 1rem;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.role-card:hover { border-color: var(--accent-green); transform: translateY(-2px); }
-.role-card.selected { border-color: var(--accent-gold); background: rgba(233, 196, 106, 0.1); }
-.role-card .icon { font-size: 2rem; }
-.role-card .name { font-size: 1rem; margin-top: 0.5rem; color: var(--text-bright); }
-.role-card .desc { font-size: 0.8rem; color: var(--text-dim); margin-top: 0.3rem; }
-
-.name-input {
-  width: 100%;
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 4px;
-  padding: 0.8rem;
-  color: var(--text-bright);
-  font-size: 1rem;
-  font-family: inherit;
-}
-
-.name-input:focus { outline: none; border-color: var(--accent-gold); }
-
-.setup-actions {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-/* ---- Game Screen ---- */
-#game-screen { display: none; }
-#game-screen.active { display: flex; flex-direction: column; min-height: 100vh; }
-
-/* Top Bar */
-.top-bar {
-  background: var(--bg-panel);
-  border-bottom: 1px solid var(--border-subtle);
-  padding: 0.8rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.top-bar .player-info {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.top-bar .player-name {
-  color: var(--accent-gold);
-  font-size: 1.1rem;
-}
-
-.top-bar .player-role {
-  color: var(--text-dim);
-  font-size: 0.85rem;
-}
-
-.top-bar .biome-badge {
-  background: var(--bg-card);
-  padding: 0.3rem 0.8rem;
-  border-radius: 12px;
-  font-size: 0.8rem;
-  color: var(--accent-green);
-}
-
-.top-bar .xp-display {
-  color: var(--accent-gold);
-  font-size: 0.9rem;
-}
-
-/* Badge Progress Bar */
-.badge-progress-bar {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  padding: 0 1.5rem;
-  background: var(--bg-panel);
-  border-bottom: 1px solid var(--border-subtle);
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.badge-node {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  cursor: pointer;
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  transition: all 0.2s;
-}
-
-.badge-node:hover { background: rgba(255,255,255,0.05); }
-.badge-node.active { background: rgba(233, 196, 106, 0.15); }
-
-.badge-node .badge-icon {
-  font-size: 1.2rem;
-  filter: grayscale(80%);
-  opacity: 0.5;
-}
-
-.badge-node.unlocked .badge-icon { filter: none; opacity: 1; }
-.badge-node.active .badge-icon { filter: none; opacity: 1; }
-
-.badge-node .badge-label {
-  font-size: 0.8rem;
-  color: var(--text-dim);
-}
-
-.badge-node.unlocked .badge-label { color: var(--text-bright); }
-.badge-node.active .badge-label { color: var(--accent-gold); }
-
-.badge-connector {
-  flex: 1;
-  height: 2px;
-  background: var(--border-subtle);
-  min-width: 20px;
-}
-
-.badge-connector.unlocked { background: var(--accent-green); }
-
-/* Quest Area */
-.quest-area {
-  flex: 1;
-  padding: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.quest-category-title {
-  color: var(--accent-gold);
-  font-size: 1.5rem;
-  margin-bottom: 0.3rem;
-}
-
-.quest-category-desc {
-  color: var(--text-dim);
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
-  font-style: italic;
-}
-
-.quest-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1rem;
-}
-
-.quest-card {
-  background: var(--bg-panel);
-  border: 1px solid var(--border-subtle);
-  border-radius: 8px;
-  padding: 1.2rem;
-  transition: all 0.2s;
-  position: relative;
-  overflow: hidden;
-}
-
-.quest-card:hover {
-  border-color: var(--accent-green);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
-
-.quest-card.completed {
-  border-color: var(--accent-green);
-  background: rgba(74, 222, 128, 0.05);
-}
-
-.quest-card.completed::after {
-  content: '✓';
-  position: absolute;
-  top: 0.8rem;
-  right: 0.8rem;
-  color: var(--accent-green);
-  font-size: 1.2rem;
-}
-
-.quest-card .quest-header {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.8rem;
-  margin-bottom: 0.8rem;
-}
-
-.quest-card .quest-icon { font-size: 1.8rem; }
-
-.quest-card .quest-name {
-  font-size: 1rem;
-  color: var(--text-bright);
-  line-height: 1.3;
-}
-
-.quest-card .quest-desc {
-  font-size: 0.85rem;
-  color: var(--text-dim);
-  line-height: 1.5;
-  margin-bottom: 0.8rem;
-}
-
-.quest-card .quest-tags {
-  display: flex;
-  gap: 0.4rem;
-  flex-wrap: wrap;
-  margin-bottom: 0.8rem;
-}
-
-.quest-tag {
-  background: var(--bg-card);
-  padding: 0.2rem 0.6rem;
+  padding: 1.25rem;
   border-radius: 10px;
-  font-size: 0.7rem;
-  color: var(--text-dim);
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-subtle);
 }
-
-.quest-card .quest-actions {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.btn-quest {
-  background: var(--bg-card);
+.setup-section h3 { color: var(--accent-green); margin-bottom: 0.75rem; }
+.setup-section select {
+  background: var(--bg-input);
   color: var(--text-light);
   border: 1px solid var(--border-subtle);
-  padding: 0.4rem 1rem;
-  font-size: 0.85rem;
+  padding: 0.6rem;
+  border-radius: 6px;
+  width: 100%;
   font-family: inherit;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: all 0.2s;
+  font-size: 0.95rem;
 }
-
-.btn-quest:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
-
-.btn-quest.complete {
-  background: rgba(74, 222, 128, 0.1);
-  border-color: var(--accent-green);
-  color: var(--accent-green);
-}
-
-.btn-quest.complete:hover { background: var(--accent-green); color: var(--bg-dark); }
-
-/* Category List Sidebar */
-.category-list {
+.player-row {
+  background: var(--bg-card);
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
   display: flex;
   gap: 0.5rem;
+  align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--border-subtle);
 }
-
-.category-chip {
-  background: var(--bg-panel);
+.player-row input, .player-row select {
+  background: var(--bg-input);
+  color: var(--text-light);
   border: 1px solid var(--border-subtle);
-  padding: 0.4rem 0.9rem;
-  border-radius: 16px;
-  font-size: 0.85rem;
-  color: var(--text-dim);
+  padding: 0.4rem;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+.player-row input { flex: 1; min-width: 120px; }
+.player-row select { min-width: 130px; }
+
+/* ---- Village Hub ---- */
+.village-header { text-align: center; margin-bottom: 1rem; }
+.village-header h2 { color: var(--accent-gold); }
+.village-header p { color: var(--text-dim); font-size: 0.85rem; }
+.player-card {
+  background: var(--bg-panel);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+  border-left: 4px solid var(--accent-green);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
   cursor: pointer;
   transition: all 0.2s;
-  white-space: nowrap;
 }
-
-.category-chip:hover { color: var(--text-light); border-color: var(--text-dim); }
-.category-chip.active {
+.player-card:hover { background: var(--bg-card); transform: translateX(4px); }
+.player-card-info { flex: 1; min-width: 150px; }
+.player-card-info strong { font-size: 1.15rem; color: var(--text-bright); }
+.player-card-info .role { color: var(--accent-green); font-size: 0.85rem; }
+.player-card-info .stats { color: var(--text-dim); font-size: 0.8rem; margin-top: 0.3rem; }
+.progress-overview {
+  background: var(--bg-panel);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  text-align: center;
+  border: 1px solid var(--border-subtle);
+}
+.badge-bar {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+.badge-chip {
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  border: 1px solid var(--border-subtle);
   background: var(--bg-card);
-  border-color: var(--accent-gold);
-  color: var(--accent-gold);
 }
+.badge-chip.unlocked { border-color: var(--accent-gold); background: rgba(233, 196, 106, 0.1); color: var(--accent-gold); }
+.badge-chip.locked { opacity: 0.4; }
 
-.category-chip .chip-count {
-  font-size: 0.7rem;
-  opacity: 0.7;
-  margin-left: 0.3rem;
+/* ---- Avatar Studio ---- */
+.studio-stage {
+  width: 100%;
+  min-height: 400px;
+  background: var(--bg-input);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border: 3px solid var(--border-subtle);
+  margin-bottom: 1rem;
 }
-
-/* Modal */
-.modal-overlay {
-  display: none;
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.7);
-  z-index: 100;
+.studio-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  font-size: 200px;
+  opacity: 0.5;
+  filter: saturate(0.8);
+}
+.css-avatar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  animation: breathe 4s infinite ease-in-out;
+}
+@keyframes breathe { 0%, 100% { transform: scale(1) translateY(0); } 50% { transform: scale(1.02) translateY(-4px); } }
+.avatar-head {
+  width: 70px; height: 70px;
+  border-radius: 50%;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  overflow: hidden;
+  position: relative;
+  border: 3px solid #000;
+  margin-bottom: -12px;
+}
+.avatar-hat {
+  position: absolute;
+  top: -40px;
+  z-index: 4;
+  font-size: 50px;
+  filter: drop-shadow(0 4px 4px rgba(0,0,0,0.4));
+}
+.avatar-torso {
+  width: 80px; height: 100px;
+  z-index: 2;
+  border-radius: 12px 12px 5px 5px;
+  border: 3px solid #000;
+  margin-top: 8px;
+}
+.avatar-arms {
+  position: absolute;
+  top: 78px;
+  width: 115px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+.avatar-arm {
+  width: 22px; height: 90px;
+  border: 3px solid #000;
+  border-radius: 12px;
+  position: relative;
+}
+.avatar-tool {
+  position: absolute;
+  right: -20px;
+  bottom: -8px;
+  font-size: 35px;
+  transform: rotate(-25deg);
+  filter: drop-shadow(0 4px 4px rgba(0,0,0,0.4));
+}
+.avatar-legs {
+  display: flex;
+  gap: 8px;
+  z-index: 1;
+  margin-top: -3px;
+}
+.avatar-leg {
+  width: 32px; height: 80px;
+  border-radius: 5px 5px 10px 10px;
+  border: 3px solid #000;
 }
 
-.modal-overlay.active { display: flex; }
+/* Mini avatar (for village cards) */
+.mini-stage {
+  width: 70px; height: 105px;
+  background: var(--bg-input);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border: 2px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+.mini-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  opacity: 0.5;
+}
+.mini-avatar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4px;
+  animation: breathe 4s infinite ease-in-out;
+}
+.mini-avatar .avatar-head { width: 28px; height: 28px; font-size: 18px; margin-bottom: -4px; border-width: 2px; }
+.mini-avatar .avatar-hat { font-size: 22px; top: -16px; }
+.mini-avatar .avatar-torso { width: 32px; height: 38px; margin-top: 4px; border-width: 2px; }
+.mini-avatar .avatar-arms { top: 32px; width: 50px; }
+.mini-avatar .avatar-arm { width: 10px; height: 36px; border-width: 2px; }
+.mini-avatar .avatar-tool { font-size: 14px; right: -8px; bottom: 0; }
+.mini-avatar .avatar-legs { gap: 4px; }
+.mini-avatar .avatar-leg { width: 13px; height: 32px; border-width: 2px; }
 
-.modal {
+/* Studio controls */
+.studio-tabs {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+.studio-tab {
+  background: var(--bg-card);
+  color: var(--text-dim);
+  border: 1px solid var(--border-subtle);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+.studio-tab.active { background: var(--accent-green-dark); color: var(--text-bright); border-color: var(--accent-green); }
+.studio-options { min-height: 120px; }
+.wardrobe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.wardrobe-slot {
+  background: var(--bg-card);
+  border: 2px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.wardrobe-slot:hover { border-color: var(--accent-green); }
+.wardrobe-slot.equipped { border-color: var(--accent-green); background: rgba(74, 222, 128, 0.1); }
+.slot-icon { font-size: 1.8em; display: block; margin-bottom: 0.2rem; }
+.slot-name { font-size: 0.7em; color: var(--text-dim); }
+.color-palette { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem; }
+.color-swatch {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid var(--border-subtle);
+  transition: all 0.2s;
+}
+.color-swatch.selected { border-color: var(--text-bright); transform: scale(1.1); }
+.studio-label { color: var(--accent-green); font-size: 0.9rem; margin-top: 0.75rem; margin-bottom: 0.3rem; }
+
+/* ---- Quest Board ---- */
+.data-warning {
+  background: rgba(249, 115, 22, 0.1);
+  border: 1px solid var(--accent-orange);
+  color: var(--accent-orange);
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: bold;
+  display: none;
+}
+.level-banner {
   background: var(--bg-panel);
   border: 1px solid var(--border-subtle);
-  border-radius: 12px;
-  padding: 2rem;
-  max-width: 500px;
-  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
   text-align: center;
 }
-
-.modal h2 { color: var(--accent-gold); margin-bottom: 1rem; }
-.modal p { color: var(--text-dim); line-height: 1.6; margin-bottom: 1.5rem; }
-
-.modal .modal-art { font-size: 3rem; margin-bottom: 1rem; }
-
-/* Responsive */
-@media (max-width: 600px) {
-  #title-screen h1 { font-size: 2.2rem; }
-  .biome-grid { grid-template-columns: 1fr; }
-  .role-grid { grid-template-columns: 1fr; }
-  .quest-grid { grid-template-columns: 1fr; }
-  .badge-node .badge-label { display: none; }
+.tier-progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
 }
+.tier-pill {
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.tier-pill.unlocked { border-color: var(--accent-gold); background: rgba(233, 196, 106, 0.1); }
+.tier-pill.locked { opacity: 0.4; }
+.tier-pill .progress-text { font-size: 0.7rem; color: var(--text-dim); }
 
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 1rem;
+.quest-filters {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.quest-section-header {
+  font-size: 1.3rem;
+  color: var(--accent-green);
+  border-bottom: 2px solid var(--border-subtle);
+  padding-bottom: 0.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+.quest-section-header.rpg { color: var(--accent-orange); }
+.quest-section-note { font-size: 0.8em; color: var(--text-dim); font-weight: normal; margin-top: 0.3rem; }
+
+/* Accordion guilds */
+details {
+  background: var(--bg-panel);
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+summary {
+  font-size: 1.1rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  user-select: none;
+}
+summary::-webkit-details-marker { display: none; }
+summary::after { content: '▼'; font-size: 0.7em; color: var(--text-dim); transition: transform 0.2s; }
+details[open] summary::after { transform: rotate(180deg); }
+.guild-content { padding: 0 1rem 1rem 1rem; }
+.guild-desc {
+  background: rgba(74, 222, 128, 0.05);
+  border-left: 3px solid var(--accent-green);
+  padding: 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+  font-size: 0.9em;
   color: var(--text-dim);
-  font-size: 0.75rem;
-  border-top: 1px solid var(--border-subtle);
+  line-height: 1.5;
 }
-.footer a { color: var(--accent-green); text-decoration: none; }
+.tier-header {
+  margin-top: 0.75rem;
+  margin-bottom: 0.4rem;
+  font-size: 1em;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+}
+.tier-header.sand { background: rgba(244, 211, 94, 0.1); color: var(--accent-sand); }
+.tier-header.straw { background: rgba(230, 199, 156, 0.1); color: var(--accent-straw); }
+.tier-header.wood { background: rgba(160, 82, 45, 0.15); color: #c8916a; }
+.tier-header.iron { background: rgba(113, 121, 126, 0.15); color: var(--accent-iron); }
+.tier-header.locked { opacity: 0.4; }
+.tier-header.locked::after { content: ' 🔒'; }
+
+.quest-card {
+  background: var(--bg-card);
+  padding: 0.6rem;
+  margin: 0.4rem 0;
+  border-radius: 5px;
+  border-left: 4px solid var(--accent-wood);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+.quest-card.straw { border-left-color: var(--accent-straw); }
+.quest-card.wood { border-left-color: #4a7c3a; }
+.quest-card.iron { border-left-color: var(--accent-iron); }
+.quest-card.completed { opacity: 0.5; }
+.quest-info { flex: 1; }
+.quest-info strong { color: var(--text-bright); }
+.quest-info small { color: var(--text-dim); display: block; margin-top: 0.2rem; }
+.subject-tags { margin-top: 0.3rem; }
+.subject-tags span {
+  background: var(--bg-input);
+  color: var(--accent-green);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.7em;
+  display: inline-block;
+  margin: 1px 2px;
+}
+.quest-reward { color: var(--accent-gold); font-size: 0.8em; display: block; margin-top: 0.2rem; }
+.quest-action { text-align: right; flex-shrink: 0; }
+
+/* Roster panel */
+.roster-panel {
+  background: var(--bg-input);
+  padding: 0.75rem;
+  border-radius: 5px;
+  margin-top: 0.4rem;
+  display: none;
+}
+.otis-warning {
+  background: rgba(249, 115, 22, 0.1);
+  border: 1px solid var(--accent-orange);
+  color: var(--accent-orange);
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  font-size: 0.8em;
+  line-height: 1.4;
+}
+.roster-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+  flex-wrap: wrap;
+}
+.roster-row label {
+  width: 90px;
+  font-size: 0.85em;
+  color: var(--accent-green);
+  flex-shrink: 0;
+}
+.roster-player-btn {
+  background: var(--bg-card);
+  padding: 3px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75em;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-light);
+  font-family: inherit;
+  transition: all 0.15s;
+}
+.roster-player-btn.selected { background: var(--accent-green-dark); color: var(--text-bright); border-color: var(--accent-green); }
+
+/* ---- Schoolhouse ---- */
+.schoolhouse-box {
+  background: var(--bg-panel);
+  padding: 1.25rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-subtle);
+}
+.schoolhouse-box h3 { color: var(--accent-green); margin-bottom: 0.75rem; }
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.progress-bar {
+  width: 50%;
+  min-width: 100px;
+  height: 10px;
+  background: var(--bg-input);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: var(--accent-green);
+  width: 0%;
+  transition: width 0.3s;
+}
+.custom-hours-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.custom-hours-form select, .custom-hours-form input {
+  background: var(--bg-input);
+  color: var(--text-light);
+  border: 1px solid var(--border-subtle);
+  padding: 0.4rem;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+/* ---- Library ---- */
+.library-box {
+  background: var(--bg-panel);
+  padding: 1.25rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-subtle);
+}
+.lib-category { margin-bottom: 1rem; }
+.lib-category h4 { text-align: left; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.3rem; color: var(--accent-green); }
+.lib-link {
+  display: block;
+  background: var(--bg-card);
+  padding: 0.6rem;
+  border-radius: 5px;
+  margin-bottom: 0.3rem;
+  text-decoration: none;
+  color: var(--text-dim);
+  transition: all 0.2s;
+}
+.lib-link:hover { background: var(--bg-input); color: var(--accent-green); }
+.lib-link strong { color: var(--text-bright); }
+
+/* ---- Commons ---- */
+.commons-box {
+  background: var(--bg-panel);
+  padding: 1.25rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-subtle);
+}
+.commons-box h3 { color: var(--accent-green); margin-bottom: 0.5rem; }
+.family-achievements {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+.achievement-card {
+  background: var(--bg-card);
+  padding: 0.6rem;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px solid var(--border-subtle);
+}
+.achievement-card .icon { font-size: 2em; }
+.achievement-card .label { font-size: 0.8em; color: var(--text-dim); margin-top: 0.2rem; }
+.achievement-card .value { font-size: 1.2em; color: var(--accent-gold); font-weight: bold; }
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .title-main { font-size: 2.2rem; }
+  .studio-bg { font-size: 120px; }
+  .nav-btn { font-size: 0.75rem; padding: 0.4rem 0.6rem; }
+  .quest-card { flex-direction: column; align-items: flex-start; }
+  .quest-action { align-self: flex-end; }
+}
 </style>
 </head>
 <body>
 
-<!-- TITLE SCREEN -->
-<div id="title-screen" class="screen active">
-  <div class="title-art">🌳🏡🌲</div>
-  <h1>The Village RPG</h1>
-  <p class="subtitle">A permaculture adventure for families</p>
-  <div>
-    <button class="btn-primary" onclick="startNewGame()">Begin Your Journey</button>
-    <button class="btn-secondary" id="continue-btn" style="display:none" onclick="continueGame()">Continue</button>
-  </div>
-  <p style="margin-top:2rem; color:var(--text-dim); font-size:0.8rem; max-width:400px;">
-    Based on the Permies PEP/SKIP badge system. Learn real skills, earn badges, build a village.
-  </p>
+<!-- Navigation -->
+<div class="nav-bar" id="nav-bar">
+  <button class="nav-btn" id="nav-setup" onclick="showScreen('setup')">Setup</button>
+  <button class="nav-btn" id="nav-village" onclick="showScreen('village')">Village</button>
+  <button class="nav-btn" id="nav-studio" onclick="showScreen('studio')">Studio</button>
+  <button class="nav-btn" id="nav-quests" onclick="showScreen('quests')">Quests</button>
+  <button class="nav-btn" id="nav-school" onclick="showScreen('school')">Schoolhouse</button>
+  <button class="nav-btn" id="nav-library" onclick="showScreen('library')">Library</button>
+  <button class="nav-btn" id="nav-commons" onclick="showScreen('commons')">Commons</button>
 </div>
 
-<!-- SETUP SCREEN -->
-<div id="setup-screen" class="screen">
-  <h2>Begin Your Journey</h2>
+<!-- Title Screen -->
+<div class="screen active" id="screen-title">
+  <div class="title-art">🌾</div>
+  <h1 class="title-main">The Village RPG</h1>
+  <p class="title-sub">A permaculture homeschool adventure for families</p>
+  <button class="title-cta" onclick="startGame()">Begin Your Journey</button>
+</div>
 
-  <div class="setup-section">
-    <h3>What is your name?</h3>
-    <input type="text" class="name-input" id="player-name-input" placeholder="Enter your name" maxlength="20">
-  </div>
+<!-- Intro Briefing -->
+<div class="screen" id="screen-intro">
+  <div class="intro-box">
+    <h2>Welcome, Family.</h2>
+    <p>You are about to embark on a journey that bridges the digital world with the dirt beneath your feet. This is not a game you play by staring at a screen; it is a game you play by living real life.</p>
 
-  <div class="setup-section">
-    <h3>Choose your biome</h3>
-    <div class="biome-grid">
-      <div class="biome-card" data-biome="apartment" onclick="selectBiome('apartment')">
-        <div class="icon">🏢</div>
-        <div class="name">Apartment</div>
-        <div class="desc">PEA — small space, big heart</div>
-      </div>
-      <div class="biome-card" data-biome="suburb" onclick="selectBiome('suburb')">
-        <div class="icon">🏡</div>
-        <div class="name">Suburban</div>
-        <div class="desc">PEP — yard, garden, neighborhood</div>
-      </div>
-      <div class="biome-card" data-biome="rural" onclick="selectBiome('rural')">
-        <div class="icon">🚜</div>
-        <div class="name">Rural</div>
-        <div class="desc">PEP — land, forest, freedom</div>
-      </div>
-    </div>
-  </div>
+    <h3>1. Competence, Not Just Points</h3>
+    <p>In most games, you click a button and your character levels up. In <em>The Village RPG</em>, <strong>you</strong> are the character. To earn badges and upgrade your avatar, you must build real-world skills. The real-world reward is <em>competence</em>. The digital reward is watching your avatar evolve.</p>
 
-  <div class="setup-section">
-    <h3>Choose your role</h3>
-    <div class="role-grid">
-      <div class="role-card" data-role="tracker" onclick="selectRole('tracker')">
-        <div class="icon">🪓</div>
-        <div class="name">Tracker</div>
-        <div class="desc">Does the physical work. Builds, plants, harvests.</div>
-      </div>
-      <div class="role-card" data-role="witness" onclick="selectRole('witness')">
-        <div class="icon">📷</div>
-        <div class="name">Witness</div>
-        <div class="desc">Catches the story. Takes photos, documents progress.</div>
-      </div>
-      <div class="role-card" data-role="hearth" onclick="selectRole('hearth')">
-        <div class="icon">🔥</div>
-        <div class="name">Hearth Tender</div>
-        <div class="desc">Holds the space. Keeps the family moving and fed.</div>
-      </div>
-      <div class="role-card" data-role="mentor" onclick="selectRole('mentor')">
-        <div class="icon">🦉</div>
-        <div class="name">Mentor</div>
-        <div class="desc">Guides the journey. Asks the right questions.</div>
-      </div>
-    </div>
-  </div>
+    <h3>2. The Team Roster</h3>
+    <p>Every quest requires a team effort. When you complete a task, you assign roles. <strong>Multiple people can hold the same role!</strong> If three kids are all scrubbing dishes, they are all Trackers.</p>
+    <ul>
+      <li><strong>Tracker(s):</strong> The people doing the physical labor.</li>
+      <li><strong>Witness(es):</strong> The people catching the story (photos, asking "What did you notice?").</li>
+      <li><strong>Hearth Tender(s):</strong> The people holding the space (making tea, prepping tools).</li>
+      <li><strong>Mentor(s):</strong> The parent or guide who asks coyote questions — never gives the answer directly.</li>
+    </ul>
 
-  <div class="setup-actions">
-    <button class="btn-secondary" onclick="showScreen('title-screen')">Back</button>
-    <button class="btn-primary" onclick="confirmSetup()">Enter the Village</button>
+    <h3>3. The Coyote Mentoring Rule</h3>
+    <p>Parents, do not give your kids the answers. If the quest asks, "Why does hot water melt fat?", do not hand them a textbook. Ask them, "I wonder why the cold water made the grease hard?" Let them sit with the question.</p>
+
+    <h3>4. The Otis Verification Protocol</h3>
+    <p>To get officially certified on Permies.com, follow the Otis Protocol for photos:</p>
+    <ul>
+      <li><strong>Before:</strong> Raw materials / site.</li>
+      <li><strong>During:</strong> You in the act of working.</li>
+      <li><strong>After:</strong> Finished product WITH a physical sign showing your name and date.</li>
+    </ul>
+
+    <h3>5. Badge Progression</h3>
+    <p>Quests are organized into four tiers of increasing skill: <strong style="color:var(--accent-sand);">Sand</strong> (beginner) &rarr; <strong style="color:var(--accent-straw);">Straw</strong> &rarr; <strong style="color:#c8916a;">Wood</strong> &rarr; <strong style="color:var(--accent-iron);">Iron</strong> (master). Complete 50% of a tier's quests to unlock the next tier.</p>
+
+    <button class="btn-success" style="margin-top: 1rem;" onclick="showScreen('setup')">Continue to Setup</button>
   </div>
 </div>
 
-<!-- GAME SCREEN -->
-<div id="game-screen" class="screen">
-  <!-- Top Bar -->
-  <div class="top-bar">
-    <div class="player-info">
-      <span class="player-name" id="display-name">—</span>
-      <span class="player-role" id="display-role">—</span>
-      <span class="biome-badge" id="display-biome">—</span>
-    </div>
-    <div style="display:flex; align-items:center; gap:1rem;">
-      <span class="xp-display" id="display-xp">0 XP</span>
-      <button class="btn-secondary" onclick="resetGame()">Reset</button>
-    </div>
+<!-- Setup Screen -->
+<div class="screen" id="screen-setup">
+  <h2 style="text-align:center; color:var(--accent-gold); margin-bottom:1rem;">Create Your Village</h2>
+
+  <div class="setup-section">
+    <h3>1. Choose Your Biome</h3>
+    <select id="biome-select" onchange="setBiome(this.value)">
+      <option value="apartment">Apartment (PEA Path - limited quests)</option>
+      <option value="suburb">Suburban Home (PEP Path - most quests)</option>
+      <option value="rural">Rural / Acreage (PEP Path - all quests)</option>
+    </select>
+    <p style="font-size:0.8em; color:var(--text-dim); margin-top:0.4rem;">Your biome determines which quests are available. Rural families get the full PEP curriculum.</p>
   </div>
 
-  <!-- Badge Progress -->
-  <div class="badge-progress-bar" id="badge-progress-bar">
-    <!-- Generated dynamically -->
+  <div class="setup-section">
+    <h3>2. Create Your Family Team</h3>
+    <div id="player-list"></div>
+    <button class="btn" style="width:100%; margin-top:0.5rem;" onclick="addPlayer()">+ Add Player (max 10)</button>
   </div>
 
-  <!-- Quest Area -->
-  <div class="quest-area">
-    <div class="category-list" id="category-list">
-      <!-- Generated dynamically -->
+  <button class="btn-success" onclick="saveVillage()">Save & Enter Village</button>
+</div>
+
+<!-- Village Hub -->
+<div class="screen" id="screen-village">
+  <div class="village-header">
+    <h2>Your Family Guild</h2>
+    <p>Click a character to open the Avatar Studio</p>
+  </div>
+  <div class="progress-overview" id="village-progress"></div>
+  <div id="village-list"></div>
+  <button class="btn-success" style="margin-top:1rem;" onclick="showScreen('quests')">Start Questing</button>
+</div>
+
+<!-- Avatar Studio -->
+<div class="screen" id="screen-studio">
+  <h2 style="text-align:center; color:var(--accent-gold);">Avatar Studio</h2>
+  <p style="text-align:center; color:var(--text-dim); margin-bottom:0.5rem;" id="studio-player-name"></p>
+  <div class="studio-stage" id="studio-stage">
+    <div class="studio-bg" id="studio-bg-display"></div>
+    <div id="studio-avatar-display"></div>
+  </div>
+  <div class="studio-tabs">
+    <button class="studio-tab active" id="tab-face" onclick="switchStudioTab('face')">Face</button>
+    <button class="studio-tab" id="tab-skin" onclick="switchStudioTab('skin')">Skin</button>
+    <button class="studio-tab" id="tab-clothes" onclick="switchStudioTab('clothes')">Clothes</button>
+    <button class="studio-tab" id="tab-hat" onclick="switchStudioTab('hat')">Hat</button>
+    <button class="studio-tab" id="tab-tool" onclick="switchStudioTab('tool')">Tool</button>
+    <button class="studio-tab" id="tab-bg" onclick="switchStudioTab('bg')">Background</button>
+    <button class="studio-tab" id="tab-wardrobe" onclick="switchStudioTab('wardrobe')">Wardrobe</button>
+  </div>
+  <div class="studio-options" id="studio-options-area"></div>
+  <button class="btn-success" style="margin-top:1rem;" onclick="showScreen('village')">Save & Exit to Village</button>
+</div>
+
+<!-- Quest Board -->
+<div class="screen" id="screen-quests">
+  <h2 style="text-align:center; color:var(--accent-gold);">The Quest Board</h2>
+  <div class="data-warning" id="data-warning">Data.js not found or failed to load. Using fallback data.</div>
+  <div class="level-banner" id="tier-banner"></div>
+  <div class="quest-filters">
+    <button class="nav-btn active" id="filter-all" onclick="setQuestFilter('all')">All Quests</button>
+    <button class="nav-btn" id="filter-biome" onclick="setQuestFilter('biome')">My Biome Only</button>
+  </div>
+  <div id="quest-list"></div>
+</div>
+
+<!-- Schoolhouse -->
+<div class="screen" id="screen-school">
+  <h2 style="text-align:center; color:var(--accent-gold); margin-bottom:1rem;">The Colorado Schoolhouse</h2>
+  <div class="schoolhouse-box">
+    <h3>Attendance Tracker (CO Law: 172 Days)</h3>
+    <div class="stat-row">
+      <span><strong>Days Completed:</strong> <span id="att-days">0</span> / 172</span>
+      <div class="progress-bar"><div class="progress-fill" id="att-bar"></div></div>
     </div>
-    <div id="quest-container">
-      <!-- Generated dynamically -->
+    <div class="stat-row">
+      <span><strong>Hours Logged:</strong> <span id="att-hours">0</span> hrs / 688 hrs</span>
+      <div class="progress-bar"><div class="progress-fill" id="att-hours-bar"></div></div>
+    </div>
+    <div style="display:flex; gap:0.5rem; margin-top:0.5rem; flex-wrap:wrap;">
+      <button class="btn btn-small" onclick="logDay(4)">Log 4-Hour School Day</button>
+      <button class="btn btn-small" onclick="logDay(1)">Log 1-Hour Day</button>
     </div>
   </div>
-
-  <div class="footer">
-    The Village RPG — built on <a href="https://permies.com" target="_blank">Permies PEP/SKIP</a> badge bits.
+  <div class="schoolhouse-box">
+    <h3>Academic Transcript (CO Required Subjects)</h3>
+    <p style="font-size:0.85em; color:var(--text-dim); margin-bottom:0.5rem;">Hours are logged from completed quests (2 hrs each) plus any custom hours below.</p>
+    <div id="transcript-list"></div>
+    <h4 style="margin-top:1rem; color:var(--accent-green);">Log Custom Academic Hours</h4>
+    <div class="custom-hours-form">
+      <select id="custom-subj">
+        <option>Reading</option><option>Writing</option><option>Math</option>
+        <option>Science</option><option>History</option><option>Geography</option>
+        <option>Constitution</option><option>Economics</option>
+        <option>PE</option><option>Health</option><option>Art</option>
+      </select>
+      <input type="number" id="custom-hrs" placeholder="Hrs" min="1" max="8" style="width:60px;">
+      <button class="btn btn-small" onclick="addCustomHours()">Add Hours</button>
+    </div>
   </div>
 </div>
 
-<!-- Completion Modal -->
-<div class="modal-overlay" id="completion-modal">
-  <div class="modal">
-    <div class="modal-art" id="modal-art">🎉</div>
-    <h2 id="modal-title">Quest Complete!</h2>
-    <p id="modal-text">Well done!</p>
-    <button class="btn-primary" onclick="closeModal()">Continue</button>
+<!-- Library -->
+<div class="screen" id="screen-library">
+  <h2 style="text-align:center; color:var(--accent-gold); margin-bottom:1rem;">The Village Library</h2>
+  <div class="library-box">
+    <p style="text-align:center; font-size:0.85em; color:var(--text-dim); margin-bottom:1rem;">A curated knowledge graph of free, public domain, and government resources for holistic homeschooling.</p>
+
+    <div class="lib-category">
+      <h4>Educational Philosophy & Nature Connection</h4>
+      <a href="https://rsarchive.org" target="_blank" class="lib-link"><strong>Rudolf Steiner Archive:</strong> Hundreds of lectures on Waldorf education and human development.</a>
+      <a href="https://waldorflibrary.org" target="_blank" class="lib-link"><strong>Waldorf Library:</strong> Curriculum ideas, festivals, and classroom resources.</a>
+    </div>
+
+    <div class="lib-category">
+      <h4>Colorado & Regional Learning</h4>
+      <a href="https://cpw.state.co.us" target="_blank" class="lib-link"><strong>Colorado Parks & Wildlife:</strong> Wildlife, ecology, fishing, geology, and conservation.</a>
+      <a href="https://extension.colostate.edu" target="_blank" class="lib-link"><strong>CSU Extension:</strong> 4-H, agriculture, gardening, and family resources.</a>
+      <a href="https://www.cde.state.co.us/onlinehomeschool" target="_blank" class="lib-link"><strong>CO Dept of Education:</strong> Homeschool law, testing, and requirements.</a>
+    </div>
+
+    <div class="lib-category">
+      <h4>Permies & Permaculture</h4>
+      <a href="https://permies.com/f/178" target="_blank" class="lib-link"><strong>Permies PEP Forum:</strong> Post your Otis-protocol evidence here for official badge certification.</a>
+      <a href="https://permies.com/wiki/61631/PEP-Badge-Requirements" target="_blank" class="lib-link"><strong>PEP Badge Requirements:</strong> Full list of all PEP badge tasks and tiers.</a>
+    </div>
+
+    <div class="lib-category">
+      <h4>Open Source & Offline Archive</h4>
+      <div class="lib-link" style="cursor:default;"><strong>Kiwix:</strong> Download all of Wikipedia, Project Gutenberg, and Stack Exchange for offline use.</div>
+      <div class="lib-link" style="cursor:default;"><strong>Internet Archive:</strong> Millions of free books, films, software, and audio.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Commons -->
+<div class="screen" id="screen-commons">
+  <h2 style="text-align:center; color:var(--accent-gold); margin-bottom:1rem;">The Village Commons</h2>
+  <div class="commons-box">
+    <h3>Family Achievements</h3>
+    <div class="family-achievements" id="commons-achievements"></div>
+  </div>
+  <div class="commons-box">
+    <h3>Bridge to Permies</h3>
+    <p>Post your evidence to the <a href="https://permies.com/f/178/" target="_blank" style="color:var(--accent-green);">PEP Forum</a> to get officially certified by Paul Wheaton's team.</p>
+    <p style="font-size:0.85em; color:var(--text-dim); margin-top:0.5rem;">Official PEP quests (marked with the shield icon) count toward Permies certification. RPG Add-on quests (marked with the sparkle icon) are custom to The Village RPG and do not count toward official PEP badges.</p>
+  </div>
+  <div class="commons-box">
+    <h3>Optional: The Offline Archive</h3>
+    <p>For families wanting a complete offline civilizational backup drive:</p>
+    <div style="background: var(--bg-input); border: 1px solid var(--border-subtle); padding: 0.75rem; border-radius: 6px; margin-top: 0.5rem; font-family: monospace; font-size: 0.85em; color: var(--accent-green); line-height: 1.6;">
+      <strong>[Medicine]</strong> Medical Library, Military Medicine<br>
+      <strong>[Agriculture]</strong> FOSS Cooking, Gardening Q&A<br>
+      <strong>[DIY]</strong> Woodworking Q&A, iFixit Guides<br>
+      <strong>[Maps]</strong> Download your state's .pmtiles from Project Nomad Maps<br>
+      <strong>[Knowledge]</strong> Kiwix (Wikipedia, Gutenberg, Stack Exchange offline)
+    </div>
   </div>
 </div>
 
 <script>
-// ---- State ----
-let state = {
-  name: '',
-  biome: '',
-  role: '',
-  currentBadge: 'sand',
-  completedQuests: {},
-  activeCategory: null
-};
+// ---- State Management ----
+function safeGet(k, f) { try { let d = localStorage.getItem(k); return d ? JSON.parse(d) : f; } catch(e) { return f; } }
+function safeSet(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch(e) {} }
 
-const BADGES = [
-  { id: 'sand',  label: 'Sand',  icon: '🟡', color: 'var(--accent-sand)' },
-  { id: 'straw', label: 'Straw', icon: '🌾', color: 'var(--accent-straw)' },
-  { id: 'wood',  label: 'Wood',  icon: '🪵', color: 'var(--accent-wood)' },
-  { id: 'iron',  label: 'Iron',  icon: '⚙️', color: 'var(--accent-iron)' }
+let players = safeGet('rpg_players', []);
+let completedQuests = safeGet('rpg_completed', []);
+let attendance = safeGet('rpg_attendance', { days: 0, hours: 0, customHours: {} });
+let biome = 'apartment';
+let activeStudioPlayer = 0;
+let activeStudioTab = 'face';
+let rosterSelections = {};
+let questFilter = 'all';
+
+try { biome = localStorage.getItem('rpg_biome') || 'apartment'; } catch(e) {}
+
+// ---- Data Loading ----
+let allAspects = [];
+if (typeof VILLAGE_QUESTS !== 'undefined') {
+  allAspects = VILLAGE_QUESTS;
+} else {
+  document.getElementById('data-warning').style.display = 'block';
+  // Fallback data
+  allAspects = [
+    { type: "PEP", biomes: ["apartment","suburb","rural"], name: "Nest", desc: "Daily homestead maintenance.", sand: [["Wash dishes by hand","Manual cleaning.",["Science","Math"],"🧤"]] },
+    { type: "PEP", biomes: ["suburb","rural"], name: "Gardening", desc: "Soil health and permaculture.", sand: [["Build a Hugelkultur","7x7x6 ft.",["Science","Math"],"🧢"]] },
+    { type: "PEP", biomes: ["suburb","rural"], name: "Natural Building", desc: "Building with natural materials.", sand: [["Make 12 Adobe Bricks","12x6x3 in.",["Science","Math"],"🧱"]] },
+    { type: "RPG", biomes: ["apartment","suburb","rural"], name: "Vitality", desc: "Taoist Internal Exercises.", sand: [["Five Animal Exercises","Perform forms.",["PE","Health"],"🦅"]] }
+  ];
+}
+
+// ---- Avatar Customization Options ----
+const faceOptions = [
+  { id: "🧑", name: "Person" }, { id: "👧", name: "Girl" }, { id: "👦", name: "Boy" },
+  { id: "🧑‍🦱", name: "Curly" }, { id: "🧓", name: "Elder" }, { id: "👶", name: "Child" },
+  { id: "🧑‍🦰", name: "Redhead" }, { id: "🧑‍🦳", name: "Silver" }, { id: "🦉", name: "Owl" }
+];
+const skinTones = ["#f0c090", "#e6b88a", "#d4a373", "#c08552", "#8d5524", "#5c3a21"];
+const colorPalette = ["#4caf50","#2196f3","#ff9800","#9c27b0","#f44336","#795548","#607d8b","#e91e63"];
+const hatOptions = [
+  { id: null, name: "None", icon: "❌" }, { id: "🧢", name: "Cap", icon: "🧢" },
+  { id: "🎩", name: "Top Hat", icon: "🎩" }, { id: "👑", name: "Crown", icon: "👑" },
+  { id: "🪖", name: "Helmet", icon: "🪖" }, { id: "⛑️", name: "Hard Hat", icon: "⛑️" },
+  { id: "🧣", name: "Scarf", icon: "🧣" }, { id: "🎓", name: "Scholar", icon: "🎓" }
+];
+const toolOptions = [
+  { id: null, name: "None", icon: "❌" }, { id: "🪓", name: "Axe", icon: "🪓" },
+  { id: "🔨", name: "Hammer", icon: "🔨" }, { id: "🌿", name: "Herb", icon: "🌿" },
+  { id: "📷", name: "Camera", icon: "📷" }, { id: "🍳", name: "Pan", icon: "🍳" },
+  { id: "📚", name: "Books", icon: "📚" }, { id: "⚒️", name: "Tools", icon: "⚒️" },
+  { id: "🪚", name: "Saw", icon: "🪚" }, { id: "🌱", name: "Seedling", icon: "🌱" }
+];
+const bgOptions = [
+  { id: "🌳", name: "Forest" }, { id: "🏡", name: "House" },
+  { id: "🏢", name: "City" }, { id: "⛰️", name: "Mountains" },
+  { id: "🧘", name: "Studio" }, { id: "🌻", name: "Garden" }
 ];
 
-const ROLE_ICONS = {
-  tracker: '🪓', witness: '📷', hearth: '🔥', mentor: '🦉'
-};
-
-const ROLE_NAMES = {
-  tracker: 'Tracker', witness: 'Witness', hearth: 'Hearth Tender', mentor: 'Mentor'
-};
-
-const BIOME_ICONS = {
-  apartment: '🏢', suburb: '🏡', rural: '🚜'
-};
-
-// ---- Persistence ----
-const SAVE_KEY = 'village_rpg_save';
-
-function saveState() {
-  localStorage.setItem(SAVE_KEY, JSON.stringify(state));
-}
-
-function loadState() {
-  const raw = localStorage.getItem(SAVE_KEY);
-  if (raw) {
-    try { return JSON.parse(raw); } catch(e) { return null; }
-  }
-  return null;
-}
-
-function hasSave() {
-  return localStorage.getItem(SAVE_KEY) !== null;
-}
-
 // ---- Screen Management ----
-function showScreen(id) {
-  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-}
-
-// ---- Title Screen ----
-function initTitle() {
-  if (hasSave()) {
-    document.getElementById('continue-btn').style.display = 'inline-block';
+function startGame() {
+  if (players.length === 0) {
+    showScreen('intro');
+  } else {
+    document.getElementById('nav-bar').style.display = 'flex';
+    showScreen('village');
   }
 }
 
-function startNewGame() {
-  state = { name: '', biome: '', role: '', currentBadge: 'sand', completedQuests: {}, activeCategory: null };
-  document.querySelectorAll('.biome-card').forEach(c => c.classList.remove('selected'));
-  document.querySelectorAll('.role-card').forEach(c => c.classList.remove('selected'));
-  document.getElementById('player-name-input').value = '';
-  showScreen('setup-screen');
+function showScreen(s) {
+  document.querySelectorAll('.screen').forEach(el => el.classList.remove('active'));
+  document.getElementById('screen-' + s).classList.add('active');
+  document.querySelectorAll('.nav-btn[id^="nav-"]').forEach(b => b.classList.remove('active'));
+  let navBtn = document.getElementById('nav-' + s);
+  if (navBtn) navBtn.classList.add('active');
+  if (players.length > 0) document.getElementById('nav-bar').style.display = 'flex';
+  if (s === 'setup') renderSetup();
+  if (s === 'village') renderVillage();
+  if (s === 'studio') renderStudio();
+  if (s === 'quests') renderQuests();
+  if (s === 'school') renderSchoolhouse();
+  if (s === 'commons') renderCommons();
 }
 
-function continueGame() {
-  const saved = loadState();
-  if (saved) {
-    state = saved;
-    enterGame();
-  }
-}
+// ---- Setup ----
+function setBiome(b) { biome = b; safeSet('rpg_biome', b); }
 
-// ---- Setup Screen ----
-function selectBiome(biome) {
-  state.biome = biome;
-  document.querySelectorAll('.biome-card').forEach(c => c.classList.remove('selected'));
-  document.querySelector(`[data-biome="${biome}"]`).classList.add('selected');
-}
-
-function selectRole(role) {
-  state.role = role;
-  document.querySelectorAll('.role-card').forEach(c => c.classList.remove('selected'));
-  document.querySelector(`[data-role="${role}"]`).classList.add('selected');
-}
-
-function confirmSetup() {
-  const name = document.getElementById('player-name-input').value.trim();
-  if (!name) { alert('Please enter your name.'); return; }
-  if (!state.biome) { alert('Please choose a biome.'); return; }
-  if (!state.role) { alert('Please choose a role.'); return; }
-  state.name = name;
-  saveState();
-  enterGame();
-}
-
-// ---- Game Screen ----
-function enterGame() {
-  showScreen('game-screen');
-  renderTopBar();
-  renderBadgeBar();
-  renderCategories();
-  renderQuests();
-}
-
-function renderTopBar() {
-  document.getElementById('display-name').textContent = state.name;
-  document.getElementById('display-role').textContent = `${ROLE_ICONS[state.role]} ${ROLE_NAMES[state.role]}`;
-  document.getElementById('display-biome').textContent = `${BIOME_ICONS[state.biome]} ${state.biome}`;
-  document.getElementById('display-xp').textContent = `${getTotalXP()} XP`;
-}
-
-function getTotalXP() {
-  return Object.keys(state.completedQuests).length * 10;
-}
-
-function renderBadgeBar() {
-  const bar = document.getElementById('badge-progress-bar');
-  bar.innerHTML = '';
-
-  BADGES.forEach((badge, i) => {
-    const unlocked = isBadgeUnlocked(badge.id);
-    const isActive = state.currentBadge === badge.id;
-
-    const node = document.createElement('div');
-    node.className = `badge-node ${unlocked ? 'unlocked' : ''} ${isActive ? 'active' : ''}`;
-    node.onclick = () => switchBadge(badge.id);
-    node.innerHTML = `
-      <span class="badge-icon">${badge.icon}</span>
-      <span class="badge-label">${badge.label}</span>
-    `;
-    bar.appendChild(node);
-
-    if (i < BADGES.length - 1) {
-      const connector = document.createElement('div');
-      connector.className = `badge-connector ${unlocked ? 'unlocked' : ''}`;
-      bar.appendChild(connector);
-    }
-  });
-}
-
-function isBadgeUnlocked(badgeId) {
-  // Sand is always unlocked
-  if (badgeId === 'sand') return true;
-
-  // Unlock next badge when 50% of current badge quests are done across all categories
-  const idx = BADGES.findIndex(b => b.id === badgeId);
-  const prevBadge = BADGES[idx - 1];
-  if (!prevBadge) return false;
-
-  let totalQuests = 0;
-  let completed = 0;
-  VILLAGE_QUESTS.forEach(cat => {
-    const quests = cat[prevBadge.id] || [];
-    if (quests.length > 0 && cat.biomes.includes(state.biome)) {
-      totalQuests += quests.length;
-      quests.forEach((q, qi) => {
-        const key = `${cat.name}_${prevBadge.id}_${qi}`;
-        if (state.completedQuests[key]) completed++;
-      });
-    }
-  });
-
-  return totalQuests > 0 && completed >= Math.ceil(totalQuests * 0.5);
-}
-
-function switchBadge(badgeId) {
-  if (!isBadgeUnlocked(badgeId)) {
-    const badge = BADGES.find(b => b.id === badgeId);
-    alert(`Complete more ${BADGES[BADGES.findIndex(b => b.id === badgeId) - 1]?.label} quests to unlock ${badge.label}!`);
-    return;
-  }
-  state.currentBadge = badgeId;
-  state.activeCategory = null;
-  saveState();
-  renderBadgeBar();
-  renderCategories();
-  renderQuests();
-}
-
-function getAvailableCategories() {
-  return VILLAGE_QUESTS.filter(cat => cat.biomes.includes(state.biome));
-}
-
-function renderCategories() {
-  const list = document.getElementById('category-list');
+function renderSetup() {
+  document.getElementById('biome-select').value = biome;
+  const list = document.getElementById('player-list');
   list.innerHTML = '';
-
-  const categories = getAvailableCategories();
-  const totalCompleted = Object.keys(state.completedQuests).length;
-
-  // "All" chip
-  const allChip = document.createElement('div');
-  allChip.className = `category-chip ${!state.activeCategory ? 'active' : ''}`;
-  allChip.onclick = () => { state.activeCategory = null; saveState(); renderCategories(); renderQuests(); };
-  allChip.innerHTML = `All <span class="chip-count">(${totalCompleted})</span>`;
-  list.appendChild(allChip);
-
-  categories.forEach(cat => {
-    const quests = cat[state.currentBadge] || [];
-    if (quests.length === 0) return;
-
-    let completed = 0;
-    quests.forEach((q, qi) => {
-      if (state.completedQuests[`${cat.name}_${state.currentBadge}_${qi}`]) completed++;
-    });
-
-    const chip = document.createElement('div');
-    chip.className = `category-chip ${state.activeCategory === cat.name ? 'active' : ''}`;
-    chip.onclick = () => { state.activeCategory = cat.name; saveState(); renderCategories(); renderQuests(); };
-    chip.innerHTML = `${cat.name} <span class="chip-count">(${completed}/${quests.length})</span>`;
-    list.appendChild(chip);
+  if (players.length === 0) {
+    players.push(makeNewPlayer('Player 1', 'tracker'));
+  }
+  players.forEach((p, i) => {
+    const d = document.createElement('div');
+    d.className = 'player-row';
+    d.innerHTML = `
+      <input type="text" placeholder="Player Name" value="${p.name}" onchange="players[${i}].name=this.value">
+      <select onchange="players[${i}].role=this.value">
+        <option value="tracker" ${p.role==='tracker'?'selected':''}>Tracker</option>
+        <option value="witness" ${p.role==='witness'?'selected':''}>Witness</option>
+        <option value="hearth" ${p.role==='hearth'?'selected':''}>Hearth Tender</option>
+        <option value="mentor" ${p.role==='mentor'?'selected':''}>Mentor</option>
+      </select>
+      <button class="btn-danger" onclick="players.splice(${i},1); renderSetup();">X</button>
+    `;
+    list.appendChild(d);
   });
+  // Disable add button if at max
+  const addBtn = list.parentElement.querySelector('button[onclick="addPlayer()"]');
+  if (addBtn) addBtn.disabled = players.length >= 10;
+}
+
+function makeNewPlayer(name, role) {
+  return {
+    name: name, role: role,
+    stats: { tracker: 0, witness: 0, hearth: 0, mentor: 0 },
+    wardrobe: [],
+    equipped: {
+      face: "🧑", skin: "#f0c090", shirt: "#4caf50", pants: "#333333",
+      hat: null, bg: "🌳", tool: null
+    }
+  };
+}
+
+function addPlayer() {
+  if (players.length >= 10) return;
+  players.push(makeNewPlayer('Player ' + (players.length + 1), 'tracker'));
+  renderSetup();
+}
+
+function saveVillage() {
+  if (players.length === 0) {
+    players.push(makeNewPlayer('Player 1', 'tracker'));
+  }
+  safeSet('rpg_players', players);
+  showScreen('village');
+}
+
+// ---- Avatar HTML ----
+function getAvatarHTML(p, mini) {
+  let cls = mini ? 'mini-avatar' : 'css-avatar';
+  let hat = p.equipped.hat ? `<div class="avatar-hat">${p.equipped.hat}</div>` : '';
+  let tool = p.equipped.tool ? `<div class="avatar-tool">${p.equipped.tool}</div>` : '';
+  return `<div class="${cls}">
+    ${hat}
+    <div class="avatar-head" style="background:${p.equipped.skin || '#f0c090'};">${p.equipped.face || '🧑'}</div>
+    <div class="avatar-arms">
+      <div class="avatar-arm" style="background:${p.equipped.shirt};"></div>
+      <div class="avatar-arm" style="background:${p.equipped.shirt};">${tool}</div>
+    </div>
+    <div class="avatar-torso" style="background:${p.equipped.shirt};"></div>
+    <div class="avatar-legs">
+      <div class="avatar-leg" style="background:${p.equipped.pants};"></div>
+      <div class="avatar-leg" style="background:${p.equipped.pants};"></div>
+    </div>
+  </div>`;
+}
+
+// ---- Village Hub ----
+function renderVillage() {
+  const list = document.getElementById('village-list');
+  list.innerHTML = '';
+  players.forEach((p, i) => {
+    let card = document.createElement('div');
+    card.className = 'player-card';
+    let roleIcons = { tracker: '🏃', witness: '📷', hearth: '🔥', mentor: '🧑‍🏫' };
+    card.innerHTML = `
+      <div class="mini-stage">
+        <div class="mini-bg">${p.equipped.bg || '🌳'}</div>
+        ${getAvatarHTML(p, true)}
+      </div>
+      <div class="player-card-info">
+        <strong>${p.name}</strong><br>
+        <span class="role">${roleIcons[p.role] || ''} ${p.role}</span>
+        <div class="stats">Quests: ${getPlayerQuestCount(p.name)} | Wardrobe: ${p.wardrobe.length} items</div>
+      </div>
+    `;
+    card.onclick = () => { activeStudioPlayer = i; showScreen('studio'); };
+    list.appendChild(card);
+  });
+
+  // Progress overview
+  let progress = getTierProgress();
+  document.getElementById('village-progress').innerHTML = `
+    <strong style="color:var(--accent-gold);">Family Progress</strong><br>
+    <span style="font-size:0.85em; color:var(--text-dim);">${completedQuests.length} quests completed</span>
+    <div class="badge-bar">
+      <span class="badge-chip ${progress.sand.unlocked?'unlocked':'locked'}">🟤 Sand ${progress.sand.done}/${progress.sand.total}</span>
+      <span class="badge-chip ${progress.straw.unlocked?'unlocked':'locked'}">🌾 Straw ${progress.straw.done}/${progress.straw.total}</span>
+      <span class="badge-chip ${progress.wood.unlocked?'unlocked':'locked'}">🪵 Wood ${progress.wood.done}/${progress.wood.total}</span>
+      <span class="badge-chip ${progress.iron.unlocked?'unlocked':'locked'}">⚙️ Iron ${progress.iron.done}/${progress.iron.total}</span>
+    </div>
+  `;
+}
+
+function getPlayerQuestCount(name) {
+  // Count quests where this player participated
+  return completedQuests.filter(qId => {
+    let sel = rosterSelections[qId];
+    if (!sel) return false;
+    return [...(sel.trackers||[]), ...(sel.witnesses||[]), ...(sel.hearth||[]), ...(sel.mentor||[])].includes(name);
+  }).length;
+}
+
+// ---- Tier Progression ----
+function getTierProgress() {
+  let aspects = questFilter === 'biome' ? allAspects.filter(a => a.biomes.includes(biome)) : allAspects;
+  let tiers = { sand: { done: 0, total: 0 }, straw: { done: 0, total: 0 }, wood: { done: 0, total: 0 }, iron: { done: 0, total: 0 } };
+
+  aspects.forEach(a => {
+    ['sand', 'straw', 'wood', 'iron'].forEach(t => {
+      if (a[t] && a[t].length > 0) {
+        tiers[t].total += a[t].length;
+        a[t].forEach(q => {
+          let qId = makeQuestId(a.name, t, q[0]);
+          if (completedQuests.includes(qId)) tiers[t].done++;
+        });
+      }
+    });
+  });
+
+  // Unlock logic: 50% of previous tier completed
+  tiers.sand.unlocked = true;
+  tiers.straw.unlocked = tiers.sand.total > 0 && (tiers.sand.done / tiers.sand.total) >= 0.5;
+  tiers.wood.unlocked = tiers.straw.total > 0 && tiers.straw.unlocked && (tiers.straw.done / tiers.straw.total) >= 0.5;
+  tiers.iron.unlocked = tiers.wood.total > 0 && tiers.wood.unlocked && (tiers.wood.done / tiers.wood.total) >= 0.5;
+
+  return tiers;
+}
+
+function makeQuestId(aspectName, tier, questName) {
+  return aspectName.replace(/\s/g, '_').toLowerCase() + "_" + tier + "_" + questName.replace(/\s/g, '_').toLowerCase();
+}
+
+// ---- Avatar Studio ----
+function renderStudio() {
+  let p = players[activeStudioPlayer];
+  if (!p) return;
+  document.getElementById('studio-player-name').innerText = 'Customizing: ' + p.name;
+  document.getElementById('studio-bg-display').innerText = p.equipped.bg || '🌳';
+  document.getElementById('studio-avatar-display').innerHTML = getAvatarHTML(p, false);
+  renderStudioOptions();
+}
+
+function switchStudioTab(t) {
+  activeStudioTab = t;
+  document.querySelectorAll('.studio-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + t).classList.add('active');
+  renderStudioOptions();
+}
+
+function renderStudioOptions() {
+  let p = players[activeStudioPlayer];
+  let a = document.getElementById('studio-options-area');
+  a.innerHTML = '';
+
+  if (activeStudioTab === 'face') {
+    a.innerHTML = '<div class="wardrobe-grid"></div>';
+    let g = a.querySelector('.wardrobe-grid');
+    faceOptions.forEach(i => {
+      g.innerHTML += `<div class="wardrobe-slot ${p.equipped.face===i.id?'equipped':''}" onclick="equipItem('face','${i.id}')"><span class="slot-icon">${i.id}</span><span class="slot-name">${i.name}</span></div>`;
+    });
+  } else if (activeStudioTab === 'skin') {
+    a.innerHTML = '<div class="color-palette" id="skin-palette"></div><p style="font-size:0.8em; color:var(--text-dim); margin-top:0.5rem;">Skin tone affects the head circle behind the face emoji.</p>';
+    let sp = document.getElementById('skin-palette');
+    skinTones.forEach(c => {
+      sp.innerHTML += `<div class="color-swatch ${p.equipped.skin===c?'selected':''}" style="background:${c}" onclick="equipItem('skin','${c}')"></div>`;
+    });
+  } else if (activeStudioTab === 'clothes') {
+    a.innerHTML = '<div class="studio-label">Shirt Color</div><div class="color-palette" id="shirt-palette"></div><div class="studio-label">Pants Color</div><div class="color-palette" id="pants-palette"></div>';
+    let sp = document.getElementById('shirt-palette');
+    let pp = document.getElementById('pants-palette');
+    colorPalette.forEach(c => {
+      sp.innerHTML += `<div class="color-swatch ${p.equipped.shirt===c?'selected':''}" style="background:${c}" onclick="equipItem('shirt','${c}')"></div>`;
+      pp.innerHTML += `<div class="color-swatch ${p.equipped.pants===c?'selected':''}" style="background:${c}" onclick="equipItem('pants','${c}')"></div>`;
+    });
+  } else if (activeStudioTab === 'hat') {
+    a.innerHTML = '<div class="wardrobe-grid"></div>';
+    let g = a.querySelector('.wardrobe-grid');
+    hatOptions.forEach(i => {
+      let equipped = (p.equipped.hat || null) === i.id;
+      g.innerHTML += `<div class="wardrobe-slot ${equipped?'equipped':''}" onclick="equipItem('hat',${i.id===null?'null':`'${i.id}'`})"><span class="slot-icon">${i.icon}</span><span class="slot-name">${i.name}</span></div>`;
+    });
+  } else if (activeStudioTab === 'tool') {
+    a.innerHTML = '<div class="wardrobe-grid"></div>';
+    let g = a.querySelector('.wardrobe-grid');
+    toolOptions.forEach(i => {
+      let equipped = (p.equipped.tool || null) === i.id;
+      g.innerHTML += `<div class="wardrobe-slot ${equipped?'equipped':''}" onclick="equipItem('tool',${i.id===null?'null':`'${i.id}'`})"><span class="slot-icon">${i.icon}</span><span class="slot-name">${i.name}</span></div>`;
+    });
+  } else if (activeStudioTab === 'bg') {
+    a.innerHTML = '<div class="wardrobe-grid"></div>';
+    let g = a.querySelector('.wardrobe-grid');
+    bgOptions.forEach(i => {
+      g.innerHTML += `<div class="wardrobe-slot ${p.equipped.bg===i.id?'equipped':''}" onclick="equipItem('bg','${i.id}')"><span class="slot-icon">${i.id}</span><span class="slot-name">${i.name}</span></div>`;
+    });
+  } else if (activeStudioTab === 'wardrobe') {
+    if (p.wardrobe.length === 0) {
+      a.innerHTML = '<div style="text-align:center; color:var(--text-dim); font-style:italic; padding:1rem;">Your wardrobe is empty. Complete quests to earn hats and tools!</div>';
+      return;
+    }
+    a.innerHTML = '<div class="wardrobe-grid"></div>';
+    let g = a.querySelector('.wardrobe-grid');
+    p.wardrobe.forEach(w => {
+      g.innerHTML += `<div class="wardrobe-slot" onclick="equipWardrobeItem('${w.icon}')"><span class="slot-icon">${w.icon}</span><span class="slot-name">${w.prefix || 'Quest'} ${w.level || ''}</span></div>`;
+    });
+  }
+}
+
+function equipItem(type, id) {
+  let p = players[activeStudioPlayer];
+  p.equipped[type] = id;
+  safeSet('rpg_players', players);
+  renderStudio();
+}
+
+function equipWardrobeItem(icon) {
+  let p = players[activeStudioPlayer];
+  let hats = hatOptions.map(h => h.id).filter(h => h !== null);
+  if (hats.includes(icon)) {
+    p.equipped.hat = (p.equipped.hat === icon ? null : icon);
+  } else {
+    p.equipped.tool = (p.equipped.tool === icon ? null : icon);
+  }
+  safeSet('rpg_players', players);
+  renderStudio();
+}
+
+// ---- Quest Board ----
+function setQuestFilter(f) {
+  questFilter = f;
+  document.getElementById('filter-all').classList.remove('active');
+  document.getElementById('filter-biome').classList.remove('active');
+  document.getElementById('filter-' + f).classList.add('active');
+  renderQuests();
 }
 
 function renderQuests() {
-  const container = document.getElementById('quest-container');
-  container.innerHTML = '';
+  let progress = getTierProgress();
 
-  const categories = getAvailableCategories();
-  const visibleCategories = state.activeCategory
-    ? categories.filter(c => c.name === state.activeCategory)
-    : categories;
+  // Tier banner
+  let banner = document.getElementById('tier-banner');
+  banner.innerHTML = `
+    <div style="font-weight:bold; color:var(--accent-gold); margin-bottom:0.4rem;">Badge Progression</div>
+    <div class="tier-progress">
+      <span class="tier-pill ${progress.sand.unlocked?'unlocked':'locked'}">🟤 Sand ${progress.sand.done}/${progress.sand.total}</span>
+      <span class="tier-pill ${progress.straw.unlocked?'unlocked':'locked'}">🌾 Straw ${progress.straw.done}/${progress.straw.total} ${progress.straw.unlocked?'':'🔒'}</span>
+      <span class="tier-pill ${progress.wood.unlocked?'unlocked':'locked'}">🪵 Wood ${progress.wood.done}/${progress.wood.total} ${progress.wood.unlocked?'':'🔒'}</span>
+      <span class="tier-pill ${progress.iron.unlocked?'unlocked':'locked'}">⚙️ Iron ${progress.iron.done}/${progress.iron.total} ${progress.iron.unlocked?'':'🔒'}</span>
+    </div>
+    ${!progress.straw.unlocked ? `<p style="font-size:0.8em; color:var(--text-dim); margin-top:0.4rem;">Complete ${Math.ceil(progress.sand.total * 0.5)} Sand quests to unlock Straw</p>` : ''}
+  `;
 
-  let anyQuests = false;
+  const list = document.getElementById('quest-list');
+  list.innerHTML = '';
 
-  visibleCategories.forEach(cat => {
-    const quests = cat[state.currentBadge] || [];
-    if (quests.length === 0) return;
+  let pep = allAspects.filter(a => a.type === "PEP");
+  let rpg = allAspects.filter(a => a.type === "RPG");
 
-    anyQuests = true;
+  if (questFilter === 'biome') {
+    pep = pep.filter(a => a.biomes.includes(biome));
+    rpg = rpg.filter(a => a.biomes.includes(biome));
+  }
 
-    const header = document.createElement('div');
-    header.innerHTML = `
-      <h3 class="quest-category-title">${cat.name}</h3>
-      <p class="quest-category-desc">${cat.desc}</p>
-    `;
-    container.appendChild(header);
+  // PEP section
+  let pepHeader = document.createElement('div');
+  pepHeader.className = 'quest-section-header';
+  pepHeader.innerHTML = '🛡️ Official Permies PEP Quests<div class="quest-section-note">Submit evidence to their forum for official certification.</div>';
+  list.appendChild(pepHeader);
 
-    const grid = document.createElement('div');
-    grid.className = 'quest-grid';
-
-    quests.forEach((quest, qi) => {
-      const [name, desc, tags, icon] = quest;
-      const key = `${cat.name}_${state.currentBadge}_${qi}`;
-      const isCompleted = !!state.completedQuests[key];
-
-      const card = document.createElement('div');
-      card.className = `quest-card ${isCompleted ? 'completed' : ''}`;
-      card.innerHTML = `
-        <div class="quest-header">
-          <span class="quest-icon">${icon}</span>
-          <span class="quest-name">${name}</span>
-        </div>
-        <p class="quest-desc">${desc}</p>
-        <div class="quest-tags">
-          ${tags.map(t => `<span class="quest-tag">${t}</span>`).join('')}
-        </div>
-        <div class="quest-actions">
-          <button class="btn-quest ${isCompleted ? 'complete' : ''}" onclick="toggleQuest('${key}', '${name}', '${icon}')">
-            ${isCompleted ? '✓ Completed' : 'Mark Complete'}
-          </button>
-        </div>
-      `;
-      grid.appendChild(card);
-    });
-
-    container.appendChild(grid);
+  pep.forEach((a, i) => {
+    list.appendChild(createGuildDetails(a, i === 0, progress));
   });
 
-  if (!anyQuests) {
-    container.innerHTML = `
-      <p style="color:var(--text-dim); text-align:center; padding:3rem; font-style:italic;">
-        No quests at this badge level for your biome yet.
-        ${!isBadgeUnlocked(BADGES[BADGES.findIndex(b => b.id === state.currentBadge) + 1]?.id) ? '' : 'Try a different badge level!'}
-      </p>
-    `;
+  // RPG section
+  if (rpg.length > 0) {
+    let rpgHeader = document.createElement('div');
+    rpgHeader.className = 'quest-section-header rpg';
+    rpgHeader.innerHTML = '✨ Holistic RPG Add-on Guilds<div class="quest-section-note">Custom to The Village RPG. Do not count toward official Permies PEP certification.</div>';
+    list.appendChild(rpgHeader);
+
+    rpg.forEach(a => {
+      list.appendChild(createGuildDetails(a, false, progress));
+    });
   }
 }
 
-function toggleQuest(key, name, icon) {
-  if (state.completedQuests[key]) {
-    delete state.completedQuests[key];
+function createGuildDetails(a, open, progress) {
+  const d = document.createElement('details');
+  if (open) d.open = true;
+  const s = document.createElement('summary');
+  s.innerHTML = `${a.type === 'RPG' ? '✨' : '🛡️'} ${a.name} Guild`;
+  d.appendChild(s);
+  const c = document.createElement('div');
+  c.className = 'guild-content';
+
+  let h = `<div class="guild-desc">${a.desc || 'No description available.'}</div>`;
+
+  if (a.sand && a.sand.length > 0) {
+    h += `<div class="tier-header sand"><strong>🟤 Sand Tier (Level 1)</strong> — ${countDone(a, 'sand')}/${a.sand.length} complete</div>`;
+    a.sand.forEach(q => { h += renderQuestCard(a, q, 'sand'); });
+  }
+  if (a.straw && a.straw.length > 0) {
+    let locked = !progress.straw.unlocked;
+    h += `<div class="tier-header straw ${locked ? 'locked' : ''}"><strong>🟡 Straw Tier (Level 2)</strong> — ${countDone(a, 'straw')}/${a.straw.length} complete</div>`;
+    a.straw.forEach(q => { h += renderQuestCard(a, q, 'straw', locked); });
+  }
+  if (a.wood && a.wood.length > 0) {
+    let locked = !progress.wood.unlocked;
+    h += `<div class="tier-header wood ${locked ? 'locked' : ''}"><strong>🪵 Wood Tier (Level 3)</strong> — ${countDone(a, 'wood')}/${a.wood.length} complete</div>`;
+    a.wood.forEach(q => { h += renderQuestCard(a, q, 'wood', locked); });
+  }
+  if (a.iron && a.iron.length > 0) {
+    let locked = !progress.iron.unlocked;
+    h += `<div class="tier-header iron ${locked ? 'locked' : ''}"><strong>⚙️ Iron Tier (Level 4)</strong> — ${countDone(a, 'iron')}/${a.iron.length} complete</div>`;
+    a.iron.forEach(q => { h += renderQuestCard(a, q, 'iron', locked); });
+  }
+
+  c.innerHTML = h;
+  d.appendChild(c);
+  return d;
+}
+
+function countDone(a, tier) {
+  if (!a[tier]) return 0;
+  return a[tier].filter(q => completedQuests.includes(makeQuestId(a.name, tier, q[0]))).length;
+}
+
+function renderQuestCard(a, q, tier, locked) {
+  let qId = makeQuestId(a.name, tier, q[0]);
+  let isDone = completedQuests.includes(qId);
+  let subjects = q[2].map(s => `<span>${s}</span>`).join('');
+  let rewardIcon = q[3] || "📦";
+
+  if (!rosterSelections[qId]) rosterSelections[qId] = { trackers: [], witnesses: [], hearth: [], mentor: [] };
+
+  let actionHTML;
+  if (locked) {
+    actionHTML = '<span style="color:var(--text-dim); font-size:0.8em;">🔒 Locked</span>';
+  } else if (isDone) {
+    actionHTML = '<span style="color:var(--accent-green); font-weight:bold;">✓ Complete!</span>';
   } else {
-    state.completedQuests[key] = true;
-    showCompletionModal(name, icon);
+    actionHTML = `<button class="btn btn-small" onclick="toggleRoster('${qId}')">Finalize</button>`;
   }
-  saveState();
-  renderTopBar();
-  renderBadgeBar();
-  renderCategories();
+
+  return `<div class="quest-card ${tier} ${isDone ? 'completed' : ''}">
+    <div class="quest-info">
+      <strong>${q[0]}</strong> ${isDone ? '✓' : ''}<br>
+      <small>${q[1]}</small>
+      <div class="subject-tags">${subjects}</div>
+      ${rewardIcon !== '📦' ? `<span class="quest-reward">Reward: ${rewardIcon}</span>` : ''}
+    </div>
+    <div class="quest-action">${actionHTML}</div>
+    ${!locked && !isDone ? renderRosterPanel(qId, rewardIcon) : ''}
+  </div>`;
+}
+
+function renderRosterPanel(qId, icon) {
+  let sel = rosterSelections[qId];
+  let roleLabels = [
+    ['trackers', '🏃 Trackers'],
+    ['witnesses', '📷 Witnesses'],
+    ['hearth', '🔥 Hearth'],
+    ['mentor', '🧑‍🏫 Mentor']
+  ];
+
+  let rows = roleLabels.map(([key, label]) => {
+    let btns = players.map(p => `<button class="roster-player-btn ${sel[key].includes(p.name) ? 'selected' : ''}" onclick="toggleRosterSel('${qId}','${key}','${p.name}')">${p.name}</button>`).join(' ');
+    return `<div class="roster-row"><label>${label}</label><div>${btns}</div></div>`;
+  }).join('');
+
+  return `<div class="roster-panel" id="roster_${qId}">
+    <div class="otis-warning"><strong>Otis Verification Protocol:</strong><br>
+    1. <strong>Before</strong> photo of materials/site.<br>
+    2. <strong>During</strong> photo of you working.<br>
+    3. <strong>After</strong> photo of finished product WITH a sign showing your name and date.</div>
+    <p style="font-size:0.8em; color:var(--text-dim); margin-bottom:0.4rem;">Select who participated. Multiple people can hold the same role!</p>
+    ${rows}
+    <button class="btn btn-small" style="background:var(--accent-green-dark); color:var(--text-bright); margin-top:0.4rem;" onclick="finalizeQuest('${qId}','${icon}')">Confirm & Complete Quest</button>
+  </div>`;
+}
+
+function toggleRoster(qId) {
+  let p = document.getElementById('roster_' + qId);
+  if (p) p.style.display = p.style.display === 'block' ? 'none' : 'block';
+}
+
+function toggleRosterSel(qId, role, name) {
+  let arr = rosterSelections[qId][role];
+  if (arr.includes(name)) {
+    rosterSelections[qId][role] = arr.filter(n => n !== name);
+  } else {
+    arr.push(name);
+  }
   renderQuests();
+  // Reopen the roster panel for this quest
+  let p = document.getElementById('roster_' + qId);
+  if (p) p.style.display = 'block';
 }
 
-function showCompletionModal(name, icon) {
-  document.getElementById('modal-art').textContent = icon;
-  document.getElementById('modal-title').textContent = 'Quest Complete!';
-  document.getElementById('modal-text').textContent = `${name} — +10 XP. Keep building your village.`;
-  document.getElementById('completion-modal').classList.add('active');
-}
-
-function closeModal() {
-  document.getElementById('completion-modal').classList.remove('active');
-}
-
-function resetGame() {
-  if (confirm('Reset your village? All progress will be lost.')) {
-    localStorage.removeItem(SAVE_KEY);
-    state = { name: '', biome: '', role: '', currentBadge: 'sand', completedQuests: {}, activeCategory: null };
-    showScreen('title-screen');
-    initTitle();
+function finalizeQuest(qId, icon) {
+  let sel = rosterSelections[qId];
+  let hasParticipants = [...sel.trackers, ...sel.witnesses, ...sel.hearth, ...sel.mentor].length > 0;
+  if (!hasParticipants) {
+    alert('Please assign at least one person to a role.');
+    return;
   }
+
+  completedQuests.push(qId);
+
+  // Update player stats and wardrobe
+  let all = [...new Set([...sel.trackers, ...sel.witnesses, ...sel.hearth, ...sel.mentor])];
+  all.forEach(n => {
+    let p = players.find(pl => pl.name === n);
+    if (p) {
+      if (sel.trackers.includes(n)) p.stats.tracker++;
+      if (sel.witnesses.includes(n)) p.stats.witness = (p.stats.witness || 0) + 1;
+      if (sel.hearth.includes(n)) p.stats.hearth = (p.stats.hearth || 0) + 1;
+      if (sel.mentor.includes(n)) p.stats.mentor = (p.stats.mentor || 0) + 1;
+      if (icon && icon !== '📦' && !p.wardrobe.some(w => w.icon === icon)) {
+        p.wardrobe.push({ id: qId, icon: icon, level: 1, prefix: 'Basic' });
+      }
+    }
+  });
+
+  safeSet('rpg_players', players);
+  safeSet('rpg_completed', completedQuests);
+
+  renderQuests();
+
+  // Check for tier unlock
+  let progress = getTierProgress();
+  let unlockMsg = '';
+  if (progress.straw.unlocked && !completedQuests.includes('_straw_unlocked_')) {
+    completedQuests.push('_straw_unlocked_');
+    unlockMsg = '\n\n🎉 STRAW TIER UNLOCKED! New quests are now available.';
+  }
+  if (progress.wood.unlocked && !completedQuests.includes('_wood_unlocked_')) {
+    completedQuests.push('_wood_unlocked_');
+    unlockMsg += '\n\n🎉 WOOD TIER UNLOCKED! Advanced quests are now available.';
+  }
+  if (progress.iron.unlocked && !completedQuests.includes('_iron_unlocked_')) {
+    completedQuests.push('_iron_unlocked_');
+    unlockMsg += '\n\n🎉 IRON TIER UNLOCKED! Master-level quests are now available.';
+  }
+  if (unlockMsg) safeSet('rpg_completed', completedQuests);
+
+  alert('Quest Complete! Items added to participants\' wardrobes.' + unlockMsg);
+}
+
+// ---- Schoolhouse ----
+function logDay(h) {
+  h = h || 4;
+  attendance.days += 1;
+  attendance.hours += h;
+  safeSet('rpg_attendance', attendance);
+  renderSchoolhouse();
+}
+
+function addCustomHours() {
+  let s = document.getElementById('custom-subj').value;
+  let h = parseInt(document.getElementById('custom-hrs').value);
+  if (!h || h < 1) return alert('Enter a valid number of hours.');
+  if (!attendance.customHours) attendance.customHours = {};
+  attendance.customHours[s] = (attendance.customHours[s] || 0) + h;
+  attendance.hours += h;
+  safeSet('rpg_attendance', attendance);
+  renderSchoolhouse();
+  document.getElementById('custom-hrs').value = '';
+}
+
+function renderSchoolhouse() {
+  document.getElementById('att-days').innerText = attendance.days;
+  document.getElementById('att-hours').innerText = attendance.hours;
+  document.getElementById('att-bar').style.width = Math.min(attendance.days / 172 * 100, 100) + '%';
+  document.getElementById('att-hours-bar').style.width = Math.min(attendance.hours / 688 * 100, 100) + '%';
+
+  let tr = { "Reading":0, "Writing":0, "Math":0, "Science":0, "History":0, "Geography":0, "Constitution":0, "Economics":0, "PE":0, "Health":0, "Art":0 };
+
+  completedQuests.forEach(qId => {
+    if (qId.startsWith('_')) return; // skip unlock markers
+    allAspects.forEach(a => {
+      ['sand','straw','wood','iron'].forEach(t => {
+        if (a[t]) {
+          a[t].forEach(q => {
+            let cId = makeQuestId(a.name, t, q[0]);
+            if (qId === cId) {
+              q[2].forEach(s => { if (tr[s] !== undefined) tr[s] += 2; });
+            }
+          });
+        }
+      });
+    });
+  });
+
+  if (attendance.customHours) {
+    Object.keys(attendance.customHours).forEach(s => {
+      if (tr[s] !== undefined) tr[s] += attendance.customHours[s];
+    });
+  }
+
+  let l = document.getElementById('transcript-list');
+  l.innerHTML = '';
+  Object.keys(tr).forEach(s => {
+    l.innerHTML += `<div class="stat-row">
+      <span><strong>${s}:</strong> ${tr[s]} Hours</span>
+      <div class="progress-bar"><div class="progress-fill" style="width:${Math.min(tr[s]/50*100,100)}%"></div></div>
+    </div>`;
+  });
+}
+
+// ---- Commons ----
+function renderCommons() {
+  let progress = getTierProgress();
+  let totalQuests = progress.sand.total + progress.straw.total + progress.wood.total + progress.iron.total;
+  let totalDone = progress.sand.done + progress.straw.done + progress.wood.done + progress.iron.done;
+  let totalWardrobe = players.reduce((sum, p) => sum + p.wardrobe.length, 0);
+
+  let achievements = document.getElementById('commons-achievements');
+  achievements.innerHTML = `
+    <div class="achievement-card"><div class="icon">📜</div><div class="value">${totalDone}</div><div class="label">Quests Done</div></div>
+    <div class="achievement-card"><div class="icon">📦</div><div class="value">${totalWardrobe}</div><div class="label">Wardrobe Items</div></div>
+    <div class="achievement-card"><div class="icon">🟤</div><div class="value">${progress.sand.done}/${progress.sand.total}</div><div class="label">Sand Badges</div></div>
+    <div class="achievement-card"><div class="icon">🌾</div><div class="value">${progress.straw.done}/${progress.straw.total}</div><div class="label">Straw Badges</div></div>
+    <div class="achievement-card"><div class="icon">🪵</div><div class="value">${progress.wood.done}/${progress.wood.total}</div><div class="label">Wood Badges</div></div>
+    <div class="achievement-card"><div class="icon">⚙️</div><div class="value">${progress.iron.done}/${progress.iron.total}</div><div class="label">Iron Badges</div></div>
+    <div class="achievement-card"><div class="icon">👥</div><div class="value">${players.length}</div><div class="label">Family Members</div></div>
+    <div class="achievement-card"><div class="icon">🏫</div><div class="value">${attendance.days}</div><div class="label">School Days</div></div>
+  `;
 }
 
 // ---- Init ----
-initTitle();
+// If returning player, go straight to village
+if (players.length > 0) {
+  document.getElementById('nav-bar').style.display = 'flex';
+}
 </script>
 </body>
 </html>
