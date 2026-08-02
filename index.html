@@ -1449,7 +1449,8 @@ function renderQuestCard(a, q, tier, locked) {
   if (locked) {
     actionHTML = '<span style="color:var(--text-dim); font-size:0.8em;">🔒 Locked</span>';
   } else if (isDone) {
-    let postBtn = (a.type === 'PEP') ? `<button class="btn btn-small" style="display:block; margin-top:0.3rem;" onclick="postToPermies('${qId}','${q[0].replace(/'/g,'\\'')}')">Post to Permies</button>` : '';
+    let safeTitle = q[0].replace(/'/g, "\\'");
+    let postBtn = (a.type === 'PEP') ? `<button class="btn btn-small" style="display:block; margin-top:0.3rem;" onclick="postToPermies('${qId}','${safeTitle}')">Post to Permies</button>` : '';
     actionHTML = `<span style="color:var(--accent-green); font-weight:bold;">✓ Complete!</span>${postBtn}`;
   } else {
     actionHTML = `<button class="btn btn-small" onclick="toggleRoster('${qId}')">Finalize</button>`;
