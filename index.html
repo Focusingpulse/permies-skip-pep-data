@@ -44,7 +44,7 @@ body {
 
 /* ---- Navigation ---- */
 .nav-bar {
-  display: none;
+  display: flex;
   justify-content: center;
   gap: 0.5rem;
   flex-wrap: wrap;
@@ -731,17 +731,16 @@ details[open] summary::after { transform: rotate(180deg); }
   <button class="nav-btn" id="nav-commons" onclick="showScreen('commons')">Commons</button>
 </div>
 
-<!-- Title Screen -->
+<!-- Title + Intro Screen (one scrollable page) -->
 <div class="screen active" id="screen-title">
   <div class="title-art">🌾</div>
-  <h1 class="title-main">The Village RPG</h1>
-  <p class="title-sub">A permaculture homeschool adventure for families</p>
-  <button class="title-cta" onclick="startGame()">Begin Your Journey</button>
-  <div style="margin-top:1.5rem; color:var(--text-dim); font-size:0.9rem; animation: bounce 2s infinite;">▼ Tap above to start ▼</div>
+  <h1 class="title-main">WELCOME</h1>
+  <p class="title-sub">The Village RPG — A permaculture homeschool adventure for families</p>
+  <div style="margin-top:1.5rem; color:var(--text-dim); font-size:0.9rem; animation: bounce 2s infinite;">▼ Scroll down ▼</div>
 </div>
 
 <!-- Intro Briefing -->
-<div class="screen" id="screen-intro">
+<div class="screen active" id="screen-intro">
   <div class="intro-box">
     <h2>Welcome, Family.</h2>
     <p>You are about to embark on a journey that bridges the digital world with the dirt beneath your feet. This is not a game you play by staring at a screen; it is a game you play by living real life.</p>
