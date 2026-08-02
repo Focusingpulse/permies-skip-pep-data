@@ -842,7 +842,17 @@ details[open] summary::after { transform: rotate(180deg); }
   </div>
 
   <div class="setup-section">
-    <h3>3. Create Your Family Team</h3>
+    <h3>3. Choose Your Learning Depth</h3>
+    <select id="depth-select" onchange="setLearnDepth(this.value)">
+      <option value="kids">Kids — playful, visual, hands-on</option>
+      <option value="adults">Adults — practical how-tos and deeper context</option>
+      <option value="elders">Elders — philosophy, mastery, and teaching others</option>
+    </select>
+    <p style="font-size:0.8em; color:var(--text-dim); margin-top:0.4rem;">This filters the "Learn More" resources on each quest. You can change it anytime in setup.</p>
+  </div>
+
+  <div class="setup-section">
+    <h3>4. Create Your Family Team</h3>
     <div id="player-list"></div>
     <button class="btn" style="width:100%; margin-top:0.5rem;" onclick="addPlayer()">+ Add Player (max 10)</button>
   </div>
@@ -1017,6 +1027,7 @@ let completedQuests = safeGet('rpg_completed', []);
 let attendance = safeGet('rpg_attendance', { days: 0, hours: 0, customHours: {} });
 let biome = 'apartment';
 let freeRoam = false;
+let learnDepth = 'adults';
 let activeStudioPlayer = 0;
 let activeStudioTab = 'face';
 let rosterSelections = {};
@@ -1024,6 +1035,7 @@ let questFilter = 'all';
 
 try { biome = localStorage.getItem('rpg_biome') || 'apartment'; } catch(e) {}
 try { freeRoam = localStorage.getItem('rpg_freeRoam') === 'true'; } catch(e) {}
+try { learnDepth = localStorage.getItem('rpg_learnDepth') || 'adults'; } catch(e) {}
 
 // ---- Data Loading ----
 let allAspects = [];
@@ -1041,58 +1053,142 @@ if (typeof VILLAGE_QUESTS !== 'undefined') {
 }
 
 // ---- Per-Quest Learning Resources ----
-// Add links here to upgrade teaching for each aspect. Key = aspect name, value = array of {title, url}.
+// Each skill has its own unique resources. depth = kids | adults | elders.
 const ASPECT_RESOURCES = {
   "Gardening": [
-    { title: "Hugelkultur - Permies.com", url: "https://permies.com/wiki/hugelkultur" },
-    { title: "Seed Saving Basics", url: "https://www.seedsavers.org/learn" }
+    { title: "Kids: Start a mini hugelkultur in a bucket", url: "https://www.youtube.com/results?search_query=kids+hugelkultur+bucket+garden", depth: "kids" },
+    { title: "Adults: Hugelkultur deep dive", url: "https://permies.com/wiki/hugelkultur", depth: "adults" },
+    { title: "Elders: Seed saving as cultural memory", url: "https://www.seedsavers.org/learn", depth: "elders" },
+    { title: "Adults: Chop-and-drop mulching", url: "https://permies.com/wiki/chop_and_drop", depth: "adults" },
+    { title: "Kids: Plant a pizza garden", url: "https://www.youtube.com/results?search_query=plant+a+pizza+garden+kids", depth: "kids" }
   ],
   "Natural Building": [
-    { title: "Cob Building Basics", url: "https://permies.com/wiki/cob" },
-    { title: "Wofati and Earth Shelters", url: "https://permies.com/wiki/wofati" }
+    { title: "Kids: Make mud bricks (cob)", url: "https://www.youtube.com/results?search_query=kids+make+cob+mud+bricks", depth: "kids" },
+    { title: "Adults: Cob building basics", url: "https://permies.com/wiki/cob", depth: "adults" },
+    { title: "Elders: Wofati, earth shelter wisdom", url: "https://permies.com/wiki/wofati", depth: "elders" },
+    { title: "Adults: Natural plasters and finishes", url: "https://permies.com/wiki/natural_plaster", depth: "adults" }
   ],
   "Woodland Care": [
-    { title: "Coppicing and Pollarding", url: "https://permies.com/wiki/coppice" },
-    { title: "Firewood Stacking (Holz Hausen)", url: "https://permies.com/t/15453/firewood" }
+    { title: "Kids: Tree identification scavenger hunt", url: "https://www.youtube.com/results?search_query=tree+identification+scavenger+hunt+kids", depth: "kids" },
+    { title: "Adults: Coppicing and pollarding", url: "https://permies.com/wiki/coppice", depth: "adults" },
+    { title: "Elders: Managing a woodlot for generations", url: "https://permies.com/t/15453/firewood", depth: "elders" },
+    { title: "Adults: Firewood stacking and drying", url: "https://permies.com/t/15453/firewood", depth: "adults" }
   ],
   "Round Wood Woodworking": [
-    { title: "Spoon Carving for Beginners", url: "https://www.youtube.com/results?search_query=spoon+carving+beginners" },
-    { title: "Green Woodworking", url: "https://permies.com/wiki/greenwood" }
+    { title: "Kids: Whittle a butter spreader", url: "https://www.youtube.com/results?search_query=kids+whittling+butter+spreader", depth: "kids" },
+    { title: "Adults: Spoon carving for beginners", url: "https://www.youtube.com/results?search_query=spoon+carving+beginners", depth: "adults" },
+    { title: "Elders: Green woodworking tradition", url: "https://permies.com/wiki/greenwood", depth: "elders" },
+    { title: "Adults: Axe and knife safety", url: "https://www.youtube.com/results?search_query=bushcraft+axe+knife+safety", depth: "adults" }
   ],
   "Tool Care": [
-    { title: "Sharpening Hand Tools", url: "https://www.youtube.com/results?search_query=sharpening+hand+tools" }
+    { title: "Kids: Tool safety pledge", url: "https://www.youtube.com/results?search_query=tool+safety+for+kids", depth: "kids" },
+    { title: "Adults: Sharpening hand tools", url: "https://www.youtube.com/results?search_query=sharpening+hand+tools", depth: "adults" },
+    { title: "Elders: Restoring vintage tools", url: "https://www.youtube.com/results?search_query=restoring+vintage+hand+tools", depth: "elders" }
+  ],
+  "Earthworks": [
+    { title: "Kids: Build a tiny swale in sand", url: "https://www.youtube.com/results?search_query=swale+water+lesson+kids", depth: "kids" },
+    { title: "Adults: Swales and keyline design", url: "https://permies.com/wiki/swale", depth: "adults" },
+    { title: "Elders: Reading the land's water story", url: "https://permies.com/wiki/keyline_design", depth: "elders" }
+  ],
+  "Dimensional Lumber Woodworking": [
+    { title: "Kids: Build a birdhouse", url: "https://www.youtube.com/results?search_query=kids+build+birdhouse+woodworking", depth: "kids" },
+    { title: "Adults: Basic carpentry joints", url: "https://www.youtube.com/results?search_query=basic+carpentry+joints", depth: "adults" },
+    { title: "Elders: Teaching joinery and patience", url: "https://permies.com/t/woodworking", depth: "elders" }
+  ],
+  "Rocket": [
+    { title: "Kids: How a rocket stove works (animation)", url: "https://www.youtube.com/results?search_query=rocket+stove+how+it+works+kids", depth: "kids" },
+    { title: "Adults: Rocket stove mass heater plans", url: "https://permies.com/wiki/rocket_stove", depth: "adults" },
+    { title: "Elders: Fire, fuel, and thermal mass wisdom", url: "https://permies.com/wiki/rocket_mass_heater", depth: "elders" }
   ],
   "Food Prep": [
-    { title: "Food Preservation Methods", url: "https://nchfp.uga.edu/" },
-    { title: "Sourdough Bread Basics", url: "https://www.youtube.com/results?search_query=sourdough+bread+basics" }
-  ],
-  "Foraging": [
-    { title: "Eat the Weeds (Foraging Channel)", url: "https://www.youtube.com/c/EatTheWeeds" },
-    { title: "Wild Edible Plants", url: "https://www.wildedible.com/" }
+    { title: "Kids: Make fermented soda", url: "https://www.youtube.com/results?search_query=kids+fermented+soda+recipe", depth: "kids" },
+    { title: "Adults: Food preservation methods", url: "https://nchfp.uga.edu/", depth: "adults" },
+    { title: "Elders: Sourdough as living culture", url: "https://www.youtube.com/results?search_query=sourdough+bread+basics", depth: "elders" },
+    { title: "Adults: Pressure canning 101", url: "https://nchfp.uga.edu/publications/publications_nchfp.html", depth: "adults" }
   ],
   "Animal Care": [
-    { title: "Pollinator Habitat", url: "https://www.xerces.org/pollinator-conservation" }
+    { title: "Kids: Pollinator hotel craft", url: "https://www.youtube.com/results?search_query=kids+pollinator+hotel+DIY", depth: "kids" },
+    { title: "Adults: Pollinator habitat design", url: "https://www.xerces.org/pollinator-conservation", depth: "adults" },
+    { title: "Elders: Observing animal patterns", url: "https://permies.com/wiki/animal_systems", depth: "elders" }
   ],
-  "Electricity": [
-    { title: "Basic Electrical Circuits", url: "https://www.khanacademy.org/science/electrical-engineering" }
+  "Foraging": [
+    { title: "Kids: Find five safe plants in your yard", url: "https://www.youtube.com/results?search_query=kids+foraging+backyard+plants", depth: "kids" },
+    { title: "Adults: Eat the Weeds channel", url: "https://www.youtube.com/c/EatTheWeeds", depth: "adults" },
+    { title: "Elders: Wild edible plants database", url: "https://www.wildedible.com/", depth: "elders" }
   ],
-  "Plumbing and Hot Water": [
-    { title: "Home Plumbing Basics", url: "https://www.familyhandyman.com/plumbing/" }
-  ],
-  "Metalworking": [
-    { title: "Blacksmithing for Beginners", url: "https://www.youtube.com/results?search_query=blacksmithing+beginners" }
+  "Community Living": [
+    { title: "Kids: Community helper interview", url: "https://www.youtube.com/results?search_query=kids+interview+community+helper", depth: "kids" },
+    { title: "Adults: Intentional community patterns", url: "https://permies.com/t/community", depth: "adults" },
+    { title: "Elders: Holding conflict and ceremony", url: "https://permies.com/t/community", depth: "elders" }
   ],
   "Textiles": [
-    { title: "Hand Sewing Basics", url: "https://www.youtube.com/results?search_query=hand+sewing+basics" }
+    { title: "Kids: Finger knitting", url: "https://www.youtube.com/results?search_query=finger+knitting+kids", depth: "kids" },
+    { title: "Adults: Hand sewing basics", url: "https://www.youtube.com/results?search_query=hand+sewing+basics", depth: "adults" },
+    { title: "Elders: Natural dyes and fiber history", url: "https://www.youtube.com/results?search_query=natural+dyes+wool+history", depth: "elders" }
+  ],
+  "Greywater and Willow Feeders": [
+    { title: "Kids: Where does sink water go?", url: "https://www.youtube.com/results?search_query=greywater+for+kids+animation", depth: "kids" },
+    { title: "Adults: Greywater systems 101", url: "https://permies.com/wiki/greywater", depth: "adults" },
+    { title: "Elders: Willow feeders and living machines", url: "https://permies.com/t/greywater", depth: "elders" }
+  ],
+  "Metalworking": [
+    { title: "Kids: Wire sculpture animals", url: "https://www.youtube.com/results?search_query=kids+wire+sculpture+animals", depth: "kids" },
+    { title: "Adults: Blacksmithing for beginners", url: "https://www.youtube.com/results?search_query=blacksmithing+beginners", depth: "adults" },
+    { title: "Elders: Forge craft and tool making", url: "https://www.youtube.com/results?search_query=traditional+blacksmith+tool+making", depth: "elders" }
+  ],
+  "Plumbing and Hot Water": [
+    { title: "Kids: Water cycle in your home", url: "https://www.youtube.com/results?search_query=home+plumbing+water+cycle+kids", depth: "kids" },
+    { title: "Adults: Home plumbing basics", url: "https://www.familyhandyman.com/plumbing/", depth: "adults" },
+    { title: "Elders: Solar hot water and conservation", url: "https://www.youtube.com/results?search_query=solar+hot+water+DIY+homestead", depth: "elders" }
+  ],
+  "Electricity": [
+    { title: "Kids: Squishy circuits", url: "https://www.youtube.com/results?search_query=squishy+circuits+kids", depth: "kids" },
+    { title: "Adults: Basic electrical circuits", url: "https://www.khanacademy.org/science/electrical-engineering", depth: "adults" },
+    { title: "Elders: Off-grid solar design", url: "https://www.youtube.com/results?search_query=off+grid+solar+system+design+basics", depth: "elders" }
+  ],
+  "Commerce": [
+    { title: "Kids: Lemonade stand economics", url: "https://www.youtube.com/results?search_query=kids+lemonade+stand+business+lesson", depth: "kids" },
+    { title: "Adults: Permaculture economics", url: "https://permies.com/t/permaculture+economics", depth: "adults" },
+    { title: "Elders: Gift economy and right livelihood", url: "https://permies.com/t/gift+economy", depth: "elders" }
+  ],
+  "Natural Medicine": [
+    { title: "Kids: Make a calendula salve", url: "https://www.youtube.com/results?search_query=kids+make+calendula+salve", depth: "kids" },
+    { title: "Adults: Herbal first aid basics", url: "https://www.youtube.com/results?search_query=herbal+first+aid+basics", depth: "adults" },
+    { title: "Elders: Growing a home apothecary", url: "https://www.youtube.com/results?search_query=home+apothecary+garden+herbs", depth: "elders" }
+  ],
+  "Nest": [
+    { title: "Kids: Tidy-up race with a timer", url: "https://www.youtube.com/results?search_query=kids+tidying+up+game", depth: "kids" },
+    { title: "Adults: Home systems maintenance checklist", url: "https://www.familyhandyman.com/smart-homeowner/diy-home-inspection/", depth: "adults" },
+    { title: "Elders: The nest as the heart of the village", url: "https://permies.com/t/homesteading", depth: "elders" }
+  ],
+  "Homesteading": [
+    { title: "Kids: Morning animal chores chart", url: "https://www.youtube.com/results?search_query=kids+homestead+chores+routine", depth: "kids" },
+    { title: "Adults: Daily homestead rhythms", url: "https://permies.com/t/homesteading", depth: "adults" },
+    { title: "Elders: Passing down the homestead", url: "https://permies.com/t/homesteading", depth: "elders" }
+  ],
+  "Oddball": [
+    { title: "Kids: Invent a silly useful gadget", url: "https://www.youtube.com/results?search_query=kids+invention+challenge+DIY+gadget", depth: "kids" },
+    { title: "Adults: Permaculture experiments that failed forward", url: "https://permies.com/t/experiments", depth: "adults" },
+    { title: "Elders: The value of the weird and unexpected", url: "https://permies.com/t/experiments", depth: "elders" }
   ],
   "Vitality": [
-    { title: "Five Animal Exercises", url: "https://www.youtube.com/results?search_query=five+animal+exercises+qi+gong" },
-    { title: "Eight Pieces of Brocade", url: "https://www.youtube.com/results?search_query=eight+brocade+qi+gong" }
+    { title: "Kids: Five Animal Frolics follow-along", url: "https://www.youtube.com/results?search_query=five+animal+exercises+qi+gong+kids", depth: "kids" },
+    { title: "Adults: Eight Pieces of Brocade", url: "https://www.youtube.com/results?search_query=eight+brocade+qi+gong", depth: "adults" },
+    { title: "Elders: Qi Gong for longevity and teaching", url: "https://www.youtube.com/results?search_query=qi+gong+elders+longevity", depth: "elders" }
+  ],
+  "Community": [
+    { title: "Kids: Neighborhood kindness challenge", url: "https://www.youtube.com/results?search_query=kids+community+kindness+challenge", depth: "kids" },
+    { title: "Adults: Building local resilience", url: "https://permies.com/t/community", depth: "adults" },
+    { title: "Elders: Storytelling and community memory", url: "https://www.youtube.com/results?search_query=storytelling+community+memory+elders", depth: "elders" }
   ]
 };
 
 function getAspectResources(aspectName) {
-  return ASPECT_RESOURCES[aspectName] || [];
+  let all = ASPECT_RESOURCES[aspectName] || [];
+  // In kids mode, include kids + adults (so kids can grow). Elders see elders + adults. Adults see adults only by default, but can switch.
+  if (learnDepth === 'kids') return all.filter(r => r.depth === 'kids' || r.depth === 'adults');
+  if (learnDepth === 'elders') return all.filter(r => r.depth === 'elders' || r.depth === 'adults');
+  return all.filter(r => r.depth === 'adults');
 }
 
 // ---- Avatar Customization Options ----
@@ -1147,10 +1243,12 @@ function showScreen(s) {
 // ---- Setup ----
 function setBiome(b) { biome = b; safeSet('rpg_biome', b); }
 function setGameMode(m) { freeRoam = (m === 'freeroam'); safeSet('rpg_freeRoam', freeRoam); }
+function setLearnDepth(d) { learnDepth = d; safeSet('rpg_learnDepth', d); }
 
 function renderSetup() {
   document.getElementById('biome-select').value = biome;
   document.getElementById('mode-select').value = freeRoam ? 'freeroam' : 'adventure';
+  document.getElementById('depth-select').value = learnDepth;
   const list = document.getElementById('player-list');
   list.innerHTML = '';
   if (players.length === 0) {
@@ -1200,6 +1298,7 @@ function saveVillage() {
   }
   safeSet('rpg_players', players);
   safeSet('rpg_freeRoam', freeRoam);
+  safeSet('rpg_learnDepth', learnDepth);
   showScreen('village');
 }
 
@@ -1574,16 +1673,38 @@ function toggleRoster(qId) {
 function renderResourcesPanel(qId, aspectName) {
   let resources = getAspectResources(aspectName);
   if (resources.length === 0) return '';
-  let links = resources.map(r => `<a href="${r.url}" target="_blank" class="lib-link" style="font-size:0.85em;"><strong>${r.title}</strong></a>`).join('');
-  return `<div class="roster-panel" id="resources_${qId}" style="background:rgba(74,222,128,0.05); border-left:3px solid var(--accent-green);">
-    <p style="font-size:0.85em; color:var(--accent-green); margin-bottom:0.4rem;"><strong>Go deeper on this skill:</strong></p>
-    ${links}
+  let allLinks = resources.map(r => `<a href="${r.url}" target="_blank" class="lib-link" style="font-size:0.85em;"><strong>${r.title}</strong></a>`).join('');
+  return `<div class="roster-panel" id="resources_${qId}" style="background:rgba(74,222,128,0.05); border-left:3px solid var(--accent-green); display:none;">
+    <p style="font-size:0.85em; color:var(--accent-green); margin-bottom:0.4rem;"><strong>🎰 Surprise Find — spin for a resource:</strong></p>
+    <div id="slot_${qId}" style="min-height:2.5em; display:flex; align-items:center; justify-content:center; background:var(--bg-input); border-radius:6px; padding:0.5rem; margin-bottom:0.5rem; font-weight:bold; color:var(--text-bright);">?</div>
+    <button class="btn btn-small" style="margin-bottom:0.6rem;" onclick="spinResource('${qId}','${aspectName.replace(/'/g,"\\'")}')">🎲 Spin</button>
+    <p style="font-size:0.8em; color:var(--text-dim); margin-bottom:0.3rem;">All resources for this skill:</p>
+    ${allLinks}
   </div>`;
 }
 
 function toggleResources(qId) {
   let p = document.getElementById('resources_' + qId);
   if (p) p.style.display = p.style.display === 'block' ? 'none' : 'block';
+}
+
+function spinResource(qId, aspectName) {
+  let resources = getAspectResources(aspectName);
+  if (resources.length === 0) return;
+  let slot = document.getElementById('slot_' + qId);
+  if (!slot) return;
+  let cycles = 12;
+  let i = 0;
+  let interval = setInterval(() => {
+    let r = resources[i % resources.length];
+    slot.innerText = r.title;
+    i++;
+    if (i >= cycles) {
+      clearInterval(interval);
+      let pick = resources[Math.floor(Math.random() * resources.length)];
+      slot.innerHTML = `<a href="${pick.url}" target="_blank" style="color:var(--accent-green);">${pick.title}</a>`;
+    }
+  }, 80);
 }
 
 function toggleRosterSel(qId, role, name) {
