@@ -261,15 +261,34 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 200px;
-  opacity: 0.5;
-  filter: saturate(0.8);
+  font-size: 320px;
+  opacity: 0.55;
+  filter: saturate(0.85);
+  z-index: 0;
+}
+.bg-time-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.bg-time-day { background: linear-gradient(to bottom, rgba(135,206,235,0.15), rgba(255,255,255,0) 70%); }
+.bg-time-sunset { background: linear-gradient(to bottom, rgba(255,140,0,0.25), rgba(255,69,0,0.1) 70%); }
+.bg-time-night { background: linear-gradient(to bottom, rgba(25,25,112,0.35), rgba(0,0,0,0.2) 70%); }
+.bg-tint {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: overlay;
 }
 .css-avatar {
   position: relative;
   z-index: 2;
-  width: 180px;
-  height: 252px;
+  width: 130px;
+  height: 182px;
   animation: breathe 4s infinite ease-in-out;
 }
 .css-avatar svg {
@@ -300,14 +319,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 40px;
-  opacity: 0.5;
+  font-size: 60px;
+  opacity: 0.55;
+  z-index: 0;
 }
 .mini-avatar {
   position: relative;
   z-index: 2;
-  width: 55px;
-  height: 75px;
+  width: 45px;
+  height: 62px;
   animation: breathe 4s infinite ease-in-out;
 }
 .mini-avatar svg {
@@ -873,8 +893,23 @@ details[open] summary::after { transform: rotate(180deg); }
       <a href="https://www.khanacademy.org/humanities" target="_blank" class="lib-link"><strong>History & Geography:</strong> Khan Academy — world history, art history, civics.</a>
       <a href="https://www.congress.gov/resources/display/content/The+Constitution+of+the+United+States" target="_blank" class="lib-link"><strong>Constitution:</strong> The U.S. Constitution from Congress.gov.</a>
       <a href="https://www.khanacademy.org/economics-finance-domain" target="_blank" class="lib-link"><strong>Economics:</strong> Khan Academy — micro, macro, and personal finance.</a>
-      <a href="https://www.youtube.com/results?search_query=taichi+qi+gong+five+animal+exercises" target="_blank" class="lib-link"><strong>PE & Health:</strong> Search YouTube for tai chi, qi gong, and Five Animal Exercises.</a>
       <a href="https://www.khanacademy.org/humanities/art-history" target="_blank" class="lib-link"><strong>Art:</strong> Khan Academy Art History — free art lessons and movements.</a>
+    </div>
+
+    <div class="lib-category">
+      <h4>PE & Movement</h4>
+      <a href="https://www.youtube.com/results?search_query=five+animal+qigong+for+kids" target="_blank" class="lib-link"><strong>Five Animal Qigong:</strong> Movement patterns based on tiger, deer, bear, monkey, and crane.</a>
+      <a href="https://www.youtube.com/results?search_query=cosmic+kids+yoga" target="_blank" class="lib-link"><strong>Cosmic Kids Yoga:</strong> Story-based yoga and movement for younger kids.</a>
+      <a href="https://www.gonoodle.com" target="_blank" class="lib-link"><strong>GoNoodle:</strong> Short movement breaks and dance-along videos.</a>
+      <a href="https://www.nhs.uk/healthier-families/activities/" target="_blank" class="lib-link"><strong>NHS Healthier Families:</strong> Free indoor and outdoor activity ideas.</a>
+      <a href="https://www.activelivingresearch.org/physical-literacy" target="_blank" class="lib-link"><strong>Physical Literacy:</strong> Why balance, coordination, and play build lifelong fitness.</a>
+      <a href="https://www.youtube.com/results?search_query=nature+hikes+for+families" target="_blank" class="lib-link"><strong>Family Hikes:</strong> Search for local trail guides and nature walk ideas.</a>
+    </div>
+
+    <div class="lib-category">
+      <h4>AI Tutors & Study Assistants</h4>
+      <a href="https://github.com/HKUDS/DeepTutor" target="_blank" class="lib-link"><strong>DeepTutor:</strong> Open-source lifelong personalized tutoring system. Good for building custom study companions.</a>
+      <a href="https://deptutor.info" target="_blank" class="lib-link"><strong>DeepTutor Website:</strong> Live demo and documentation for the DeepTutor project.</a>
     </div>
 
     <div class="lib-category">
@@ -1351,8 +1386,27 @@ const outfitColors = ["#4caf50", "#2196f3", "#ff9800", "#9c27b0", "#f44336", "#7
 
 const bgOptions = [
   { id: "🌳", name: "Forest" }, { id: "🏡", name: "House" },
-  { id: "🏢", name: "City" }, { id: "⛰️", name: "Mountains" },
-  { id: "🧘", name: "Studio" }, { id: "🌻", name: "Garden" }
+  { id: "🏰", name: "Castle" }, { id: "🛏️", name: "Bedroom" },
+  { id: "🏘️", name: "Village" }, { id: "🚜", name: "Farm" },
+  { id: "🏖️", name: "Beach" }, { id: "🌌", name: "Space" },
+  { id: "⛰️", name: "Mountains" }, { id: "🧘", name: "Studio" },
+  { id: "🌻", name: "Garden" }, { id: "🏢", name: "City" }
+];
+
+const bgTimeOptions = [
+  { id: "day", name: "Day", icon: "☀️" },
+  { id: "sunset", name: "Sunset", icon: "🌇" },
+  { id: "night", name: "Night", icon: "🌙" }
+];
+
+const bgTintOptions = [
+  { id: null, name: "None", color: "transparent" },
+  { id: "rgba(255,200,200,0.15)", name: "Warm", color: "rgba(255,200,200,0.15)" },
+  { id: "rgba(200,220,255,0.15)", name: "Cool", color: "rgba(200,220,255,0.15)" },
+  { id: "rgba(200,255,200,0.15)", name: "Fresh", color: "rgba(200,255,200,0.15)" },
+  { id: "rgba(255,255,200,0.15)", name: "Sunny", color: "rgba(255,255,200,0.15)" },
+  { id: "rgba(220,200,255,0.15)", name: "Dreamy", color: "rgba(220,200,255,0.15)" },
+  { id: "rgba(255,230,180,0.15)", name: "Cozy", color: "rgba(255,230,180,0.15)" }
 ];
 
 // ---- Screen Management ----
@@ -1421,7 +1475,7 @@ function makeNewPlayer(name, role) {
       skin: "#f0c090", hairStyle: "short", hairColor: "#4a3018",
       eyeColor: "#4a3010", expression: "calm",
       outfitPrimary: "#4caf50", outfitSecondary: "#2d5a27",
-      hat: null, bg: "🌳", tool: null
+      hat: null, bg: "🌳", bgTime: "day", bgTint: null, tool: null
     }
   };
 }
@@ -1560,6 +1614,8 @@ function renderVillage() {
     card.innerHTML = `
       <div class="mini-stage">
         <div class="mini-bg">${p.equipped.bg || '🌳'}</div>
+        <div class="bg-time-overlay bg-time-${p.equipped.bgTime || 'day'}"></div>
+        <div class="bg-tint" style="background:${p.equipped.bgTint || 'transparent'}"></div>
         ${getAvatarHTML(p, true)}
       </div>
       <div class="player-card-info">
@@ -1640,8 +1696,13 @@ function renderStudio() {
   let p = players[activeStudioPlayer];
   if (!p) return;
   document.getElementById('studio-player-name').innerText = 'Customizing: ' + p.name;
-  document.getElementById('studio-bg-display').innerText = p.equipped.bg || '🌳';
-  document.getElementById('studio-avatar-display').innerHTML = getAvatarHTML(p, false);
+  let stage = document.getElementById('studio-stage');
+  stage.innerHTML = `
+    <div class="studio-bg">${p.equipped.bg || '🌳'}</div>
+    <div class="bg-time-overlay bg-time-${p.equipped.bgTime || 'day'}"></div>
+    <div class="bg-tint" style="background:${p.equipped.bgTint || 'transparent'}"></div>
+    <div id="studio-avatar-display">${getAvatarHTML(p, false)}</div>
+  `;
   renderStudioOptions();
 }
 
@@ -1733,10 +1794,23 @@ function renderStudioOptions() {
       tg.innerHTML += `<div class="wardrobe-slot ${equipped?'equipped':''}" onclick="equipItem('tool',${i.id===null?'null':`'${i.id}'`})"><span class="slot-icon">${i.icon}</span><span class="slot-name">${i.name}</span></div>`;
     });
   } else if (activeStudioTab === 'bg') {
-    a.innerHTML = '<div class="wardrobe-grid"></div>';
-    let g = a.querySelector('.wardrobe-grid');
+    a.innerHTML = `
+      <div class="studio-label">Scene</div><div class="wardrobe-grid" id="bg-scene-grid"></div>
+      <div class="studio-label">Time of Day</div><div class="wardrobe-grid" id="bg-time-grid"></div>
+      <div class="studio-label">Atmosphere Tint</div><div class="wardrobe-grid" id="bg-tint-grid"></div>
+    `;
+    let sg = a.querySelector('#bg-scene-grid');
+    let tg = a.querySelector('#bg-time-grid');
+    let ttg = a.querySelector('#bg-tint-grid');
     bgOptions.forEach(i => {
-      g.innerHTML += `<div class="wardrobe-slot ${e.bg===i.id?'equipped':''}" onclick="equipItem('bg','${i.id}')"><span class="slot-icon">${i.id}</span><span class="slot-name">${i.name}</span></div>`;
+      sg.innerHTML += `<div class="wardrobe-slot ${e.bg===i.id?'equipped':''}" onclick="equipItem('bg','${i.id}')"><span class="slot-icon">${i.id}</span><span class="slot-name">${i.name}</span></div>`;
+    });
+    bgTimeOptions.forEach(i => {
+      tg.innerHTML += `<div class="wardrobe-slot ${e.bgTime===i.id?'equipped':''}" onclick="equipItem('bgTime','${i.id}')"><span class="slot-icon">${i.icon}</span><span class="slot-name">${i.name}</span></div>`;
+    });
+    bgTintOptions.forEach(i => {
+      let selected = (e.bgTint === i.id) || (!e.bgTint && i.id === null);
+      ttg.innerHTML += `<div class="wardrobe-slot ${selected?'equipped':''}" onclick="equipItem('bgTint',${i.id===null?'null':`'${i.id}'`})"><span class="slot-icon" style="background:${i.color};border-radius:50%;width:24px;height:24px;display:inline-block;border:1px solid rgba(255,255,255,0.3);"></span><span class="slot-name">${i.name}</span></div>`;
     });
   } else if (activeStudioTab === 'wardrobe') {
     if (p.wardrobe.length === 0) {
