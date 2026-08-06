@@ -775,6 +775,19 @@ details[open] summary::after { transform: rotate(180deg); }
     <button class="btn" style="width:100%; margin-top:0.5rem;" onclick="addPlayer()">+ Add Player (max 10)</button>
   </div>
 
+  <div class="setup-section">
+    <h3>5. Optional: Crystal Skull (Letta AI) Webhook</h3>
+    <p style="font-size:0.8em; color:var(--text-dim); margin-bottom:0.4rem;">If you set up a Letta AI agent (the Village Elder), paste your Make.com or Letta webhook URL here. The game will send quest stories to your private Elder.</p>
+    <input type="text" id="webhook-input" placeholder="https://letta.com/api/..." style="width:100%; background:var(--bg-input); color:var(--text-light); border:1px solid var(--border-subtle); padding:0.6rem; border-radius:6px;">
+  </div>
+
+  <div class="setup-section">
+    <h3>6. Load an Existing Village</h3>
+    <p style="font-size:0.8em; color:var(--text-dim); margin-bottom:0.4rem;">If you have a saved <code>village_save.json</code> file from another device or browser, load it here.</p>
+    <button class="btn" onclick="document.getElementById('import-file').click()">📂 Load Saved Village</button>
+    <input type="file" id="import-file" accept=".json" style="display:none;" onchange="importVillage(event)">
+  </div>
+
   <button class="btn-success" onclick="saveVillage()">Save & Enter Village</button>
 </div>
 
@@ -783,6 +796,11 @@ details[open] summary::after { transform: rotate(180deg); }
   <div class="village-header">
     <h2>Your Family Guild</h2>
     <p>Click a character to open the Avatar Studio</p>
+  </div>
+  <div style="display:flex; gap:0.5rem; justify-content:center; margin-bottom:1rem; flex-wrap:wrap;">
+    <button class="btn btn-small" onclick="exportVillage()">💾 Save Village (Download File)</button>
+    <button class="btn btn-small" onclick="document.getElementById('village-import-file').click()">📂 Load Saved Village</button>
+    <input type="file" id="village-import-file" accept=".json" style="display:none;" onchange="importVillage(event)">
   </div>
   <div class="progress-overview" id="village-progress"></div>
   <div id="village-list"></div>
@@ -913,6 +931,21 @@ details[open] summary::after { transform: rotate(180deg); }
     </div>
 
     <div class="lib-category">
+      <h4>Marble OS Curriculum Taxonomy</h4>
+      <p style="font-size:0.8em; color:var(--text-dim); margin-bottom:0.5rem;">A K-8 subject bridge for the PEP/RPG skills. Every quest card links to the topics for its skill.</p>
+      <a href="https://en.wikipedia.org/wiki/Botany" target="_blank" class="lib-link"><strong>Gardening:</strong> Botany, Photosynthesis, Soil Science, Ecology, Permaculture</a>
+      <a href="https://en.wikipedia.org/wiki/Civil_engineering" target="_blank" class="lib-link"><strong>Natural Building:</strong> Civil Engineering, Materials Science, Thermal Mass, Sustainable Architecture</a>
+      <a href="https://en.wikipedia.org/wiki/Forestry" target="_blank" class="lib-link"><strong>Woodland Care:</strong> Forestry, Coppicing, Firewood, Forest Ecology</a>
+      <a href="https://en.wikipedia.org/wiki/Fermentation" target="_blank" class="lib-link"><strong>Food Prep:</strong> Fermentation, Food Preservation, Nutrition, Microbiology</a>
+      <a href="https://en.wikipedia.org/wiki/Hydrology" target="_blank" class="lib-link"><strong>Earthworks:</strong> Hydrology, Erosion Control, Swales, Keyline Design</a>
+      <a href="https://en.wikipedia.org/wiki/Economics" target="_blank" class="lib-link"><strong>Commerce:</strong> Economics, Entrepreneurship, Barter, Accounting</a>
+      <a href="https://en.wikipedia.org/wiki/Electricity" target="_blank" class="lib-link"><strong>Electricity:</strong> Electricity, Circuits, Solar Power, Ohm's Law</a>
+      <a href="https://en.wikipedia.org/wiki/Herbalism" target="_blank" class="lib-link"><strong>Natural Medicine:</strong> Herbalism, First Aid, Phytochemistry</a>
+      <a href="https://en.wikipedia.org/wiki/Qigong" target="_blank" class="lib-link"><strong>Vitality:</strong> Qi Gong, Tai Chi, Five Animals, Mind-Body Exercise</a>
+      <a href="https://en.wikipedia.org/wiki/Community_building" target="_blank" class="lib-link"><strong>Community:</strong> Community Building, Storytelling, Oral Tradition</a>
+    </div>
+
+    <div class="lib-category">
       <h4>Open Source & Offline Archive</h4>
       <a href="https://www.kiwix.org/en/" target="_blank" class="lib-link"><strong>Kiwix:</strong> Download Wikipedia, Project Gutenberg, and Stack Exchange for offline use.</a>
       <a href="https://archive.org" target="_blank" class="lib-link"><strong>Internet Archive:</strong> Millions of free books, films, software, and audio.</a>
@@ -965,6 +998,7 @@ let activeStudioPlayer = 0;
 let activeStudioTab = 'class';
 let rosterSelections = {};
 let questFilter = 'all';
+let webhookUrl = safeGet('rpg_webhook', '');
 
 try { biome = localStorage.getItem('rpg_biome') || 'apartment'; } catch(e) {}
 try { freeRoam = localStorage.getItem('rpg_freeRoam') === 'true'; } catch(e) {}
@@ -1122,6 +1156,239 @@ function getAspectResources(aspectName) {
   if (learnDepth === 'kids') return all.filter(r => r.depth === 'kids' || r.depth === 'adults');
   if (learnDepth === 'elders') return all.filter(r => r.depth === 'elders' || r.depth === 'adults');
   return all.filter(r => r.depth === 'adults');
+}
+
+// ---- Marble OS Taxonomy Mapping ----
+// A curated K-8 curriculum bridge: each PEP/RPG skill maps to academic subjects and micro-topics.
+// In a future update this can be replaced with the full Marble OS 1,590-topic dataset.
+const MARBLE_TAXONOMY = {
+  "Gardening": {
+    category: "Life Science / Agriculture",
+    topics: [
+      { name: "Botany", url: "https://en.wikipedia.org/wiki/Botany" },
+      { name: "Photosynthesis", url: "https://en.wikipedia.org/wiki/Photosynthesis" },
+      { name: "Soil Science", url: "https://en.wikipedia.org/wiki/Soil_science" },
+      { name: "Seed Biology", url: "https://en.wikipedia.org/wiki/Seed" },
+      { name: "Ecology", url: "https://en.wikipedia.org/wiki/Ecology" },
+      { name: "Permaculture", url: "https://en.wikipedia.org/wiki/Permaculture" }
+    ]
+  },
+  "Natural Building": {
+    category: "Engineering / Materials Science",
+    topics: [
+      { name: "Civil Engineering", url: "https://en.wikipedia.org/wiki/Civil_engineering" },
+      { name: "Materials Science", url: "https://en.wikipedia.org/wiki/Materials_science" },
+      { name: "Thermal Mass", url: "https://en.wikipedia.org/wiki/Thermal_mass" },
+      { name: "Sustainable Architecture", url: "https://en.wikipedia.org/wiki/Sustainable_architecture" },
+      { name: "Cob (material)", url: "https://en.wikipedia.org/wiki/Cob_(material)" }
+    ]
+  },
+  "Woodland Care": {
+    category: "Environmental Science / Forestry",
+    topics: [
+      { name: "Forestry", url: "https://en.wikipedia.org/wiki/Forestry" },
+      { name: "Coppicing", url: "https://en.wikipedia.org/wiki/Coppicing" },
+      { name: "Firewood", url: "https://en.wikipedia.org/wiki/Firewood" },
+      { name: "Tree Felling", url: "https://en.wikipedia.org/wiki/Felling" },
+      { name: "Forest Ecology", url: "https://en.wikipedia.org/wiki/Forest_ecology" }
+    ]
+  },
+  "Round Wood Woodworking": {
+    category: "Craft / Design",
+    topics: [
+      { name: "Green Woodworking", url: "https://en.wikipedia.org/wiki/Green_woodworking" },
+      { name: "Wood Carving", url: "https://en.wikipedia.org/wiki/Wood_carving" },
+      { name: "Bushcraft", url: "https://en.wikipedia.org/wiki/Bushcraft" },
+      { name: "Wood Grain", url: "https://en.wikipedia.org/wiki/Wood_grain" }
+    ]
+  },
+  "Tool Care": {
+    category: "Applied Technology / Safety",
+    topics: [
+      { name: "Hand Tools", url: "https://en.wikipedia.org/wiki/Hand_tool" },
+      { name: "Sharpening", url: "https://en.wikipedia.org/wiki/Sharpening" },
+      { name: "Metalworking", url: "https://en.wikipedia.org/wiki/Metalworking" },
+      { name: "Workshop Safety", url: "https://en.wikipedia.org/wiki/Safety_engineering" }
+    ]
+  },
+  "Earthworks": {
+    category: "Earth Science / Hydrology",
+    topics: [
+      { name: "Hydrology", url: "https://en.wikipedia.org/wiki/Hydrology" },
+      { name: "Erosion Control", url: "https://en.wikipedia.org/wiki/Erosion_control" },
+      { name: "Swale", url: "https://en.wikipedia.org/wiki/Swale_(landform)" },
+      { name: "Keyline Design", url: "https://en.wikipedia.org/wiki/Keyline_design" },
+      { name: "Topography", url: "https://en.wikipedia.org/wiki/Topography" }
+    ]
+  },
+  "Dimensional Lumber Woodworking": {
+    category: "Mathematics / Construction",
+    topics: [
+      { name: "Carpentry", url: "https://en.wikipedia.org/wiki/Carpentry" },
+      { name: "Joinery", url: "https://en.wikipedia.org/wiki/Joinery" },
+      { name: "Measurement", url: "https://en.wikipedia.org/wiki/Measurement" },
+      { name: "Structural Engineering", url: "https://en.wikipedia.org/wiki/Structural_engineering" }
+    ]
+  },
+  "Rocket": {
+    category: "Physics / Energy",
+    topics: [
+      { name: "Rocket Stove", url: "https://en.wikipedia.org/wiki/Rocket_stove" },
+      { name: "Thermal Mass", url: "https://en.wikipedia.org/wiki/Thermal_mass" },
+      { name: "Combustion", url: "https://en.wikipedia.org/wiki/Combustion" },
+      { name: "Heat Transfer", url: "https://en.wikipedia.org/wiki/Heat_transfer" }
+    ]
+  },
+  "Food Prep": {
+    category: "Chemistry / Health",
+    topics: [
+      { name: "Fermentation", url: "https://en.wikipedia.org/wiki/Fermentation" },
+      { name: "Food Preservation", url: "https://en.wikipedia.org/wiki/Food_preservation" },
+      { name: "Food Safety", url: "https://en.wikipedia.org/wiki/Food_safety" },
+      { name: "Nutrition", url: "https://en.wikipedia.org/wiki/Nutrition" },
+      { name: "Microbiology", url: "https://en.wikipedia.org/wiki/Microbiology" }
+    ]
+  },
+  "Animal Care": {
+    category: "Life Science / Agriculture",
+    topics: [
+      { name: "Animal Husbandry", url: "https://en.wikipedia.org/wiki/Animal_husbandry" },
+      { name: "Ethology", url: "https://en.wikipedia.org/wiki/Ethology" },
+      { name: "Pollinators", url: "https://en.wikipedia.org/wiki/Pollinator" },
+      { name: "Veterinary Care", url: "https://en.wikipedia.org/wiki/Veterinary_medicine" }
+    ]
+  },
+  "Foraging": {
+    category: "Biology / Ecology",
+    topics: [
+      { name: "Wild Edibles", url: "https://en.wikipedia.org/wiki/Foraging" },
+      { name: "Plant Identification", url: "https://en.wikipedia.org/wiki/Plant_identification" },
+      { name: "Mycology", url: "https://en.wikipedia.org/wiki/Mycology" },
+      { name: "Ethnobotany", url: "https://en.wikipedia.org/wiki/Ethnobotany" }
+    ]
+  },
+  "Community Living": {
+    category: "Social Studies / Civics",
+    topics: [
+      { name: "Intentional Community", url: "https://en.wikipedia.org/wiki/Intentional_community" },
+      { name: "Conflict Resolution", url: "https://en.wikipedia.org/wiki/Conflict_resolution" },
+      { name: "Civics", url: "https://en.wikipedia.org/wiki/Civics" },
+      { name: "Gift Economy", url: "https://en.wikipedia.org/wiki/Gift_economy" }
+    ]
+  },
+  "Textiles": {
+    category: "Art / History",
+    topics: [
+      { name: "Textile Arts", url: "https://en.wikipedia.org/wiki/Textile_arts" },
+      { name: "Natural Dyes", url: "https://en.wikipedia.org/wiki/Natural_dye" },
+      { name: "Spinning", url: "https://en.wikipedia.org/wiki/Spinning_(textiles)" },
+      { name: "Fiber", url: "https://en.wikipedia.org/wiki/Fiber" }
+    ]
+  },
+  "Greywater and Willow Feeders": {
+    category: "Environmental Science / Engineering",
+    topics: [
+      { name: "Greywater", url: "https://en.wikipedia.org/wiki/Greywater" },
+      { name: "Wastewater Treatment", url: "https://en.wikipedia.org/wiki/Wastewater_treatment" },
+      { name: "Constructed Wetland", url: "https://en.wikipedia.org/wiki/Constructed_wetland" },
+      { name: "Water Cycle", url: "https://en.wikipedia.org/wiki/Water_cycle" }
+    ]
+  },
+  "Metalworking": {
+    category: "Physical Science / Craft",
+    topics: [
+      { name: "Blacksmithing", url: "https://en.wikipedia.org/wiki/Blacksmith" },
+      { name: "Forge", url: "https://en.wikipedia.org/wiki/Forge" },
+      { name: "Metallurgy", url: "https://en.wikipedia.org/wiki/Metallurgy" },
+      { name: "Heat Treatment", url: "https://en.wikipedia.org/wiki/Heat_treating" }
+    ]
+  },
+  "Plumbing and Hot Water": {
+    category: "Applied Science / Engineering",
+    topics: [
+      { name: "Plumbing", url: "https://en.wikipedia.org/wiki/Plumbing" },
+      { name: "Solar Water Heating", url: "https://en.wikipedia.org/wiki/Solar_water_heating" },
+      { name: "Water Pressure", url: "https://en.wikipedia.org/wiki/Pressure" },
+      { name: "Pipe Fitting", url: "https://en.wikipedia.org/wiki/Piping_and_plumbing_fitting" }
+    ]
+  },
+  "Electricity": {
+    category: "Physics / Engineering",
+    topics: [
+      { name: "Electricity", url: "https://en.wikipedia.org/wiki/Electricity" },
+      { name: "Electrical Circuit", url: "https://en.wikipedia.org/wiki/Electrical_network" },
+      { name: "Solar Power", url: "https://en.wikipedia.org/wiki/Solar_power" },
+      { name: "Ohm's Law", url: "https://en.wikipedia.org/wiki/Ohm%27s_law" }
+    ]
+  },
+  "Commerce": {
+    category: "Economics / Math",
+    topics: [
+      { name: "Economics", url: "https://en.wikipedia.org/wiki/Economics" },
+      { name: "Entrepreneurship", url: "https://en.wikipedia.org/wiki/Entrepreneurship" },
+      { name: "Barter", url: "https://en.wikipedia.org/wiki/Barter" },
+      { name: "Accounting", url: "https://en.wikipedia.org/wiki/Accounting" }
+    ]
+  },
+  "Natural Medicine": {
+    category: "Health / Biology",
+    topics: [
+      { name: "Herbalism", url: "https://en.wikipedia.org/wiki/Herbalism" },
+      { name: "Apothecary", url: "https://en.wikipedia.org/wiki/Apothecary" },
+      { name: "First Aid", url: "https://en.wikipedia.org/wiki/First_aid" },
+      { name: "Phytochemistry", url: "https://en.wikipedia.org/wiki/Phytochemistry" }
+    ]
+  },
+  "Nest": {
+    category: "Home Economics / Chemistry",
+    topics: [
+      { name: "Surfactant", url: "https://en.wikipedia.org/wiki/Surfactant" },
+      { name: "Soap", url: "https://en.wikipedia.org/wiki/Soap" },
+      { name: "Home Maintenance", url: "https://en.wikipedia.org/wiki/Home_repair" },
+      { name: "Microbiology", url: "https://en.wikipedia.org/wiki/Microbiology" }
+    ]
+  },
+  "Homesteading": {
+    category: "Interdisciplinary / Life Skills",
+    topics: [
+      { name: "Homesteading", url: "https://en.wikipedia.org/wiki/Homesteading" },
+      { name: "Self-Sufficiency", url: "https://en.wikipedia.org/wiki/Self-sustainability" },
+      { name: "Time Management", url: "https://en.wikipedia.org/wiki/Time_management" },
+      { name: "Animal Husbandry", url: "https://en.wikipedia.org/wiki/Animal_husbandry" }
+    ]
+  },
+  "Oddball": {
+    category: "Critical Thinking / Invention",
+    topics: [
+      { name: "Invention", url: "https://en.wikipedia.org/wiki/Invention" },
+      { name: "Problem Solving", url: "https://en.wikipedia.org/wiki/Problem_solving" },
+      { name: "Experiment", url: "https://en.wikipedia.org/wiki/Experiment" },
+      { name: "Design Thinking", url: "https://en.wikipedia.org/wiki/Design_thinking" }
+    ]
+  },
+  "Vitality": {
+    category: "Health / Physical Education",
+    topics: [
+      { name: "Qi Gong", url: "https://en.wikipedia.org/wiki/Qigong" },
+      { name: "Tai Chi", url: "https://en.wikipedia.org/wiki/Tai_chi" },
+      { name: "Five Animals", url: "https://en.wikipedia.org/wiki/Five_Animals" },
+      { name: "Traditional Chinese Medicine", url: "https://en.wikipedia.org/wiki/Traditional_Chinese_medicine" },
+      { name: "Mind-Body Exercise", url: "https://en.wikipedia.org/wiki/Mind%E2%80%93body_exercise" }
+    ]
+  },
+  "Community": {
+    category: "Social Studies / Communication",
+    topics: [
+      { name: "Community Building", url: "https://en.wikipedia.org/wiki/Community_building" },
+      { name: "Storytelling", url: "https://en.wikipedia.org/wiki/Storytelling" },
+      { name: "Oral Tradition", url: "https://en.wikipedia.org/wiki/Oral_tradition" },
+      { name: "Intergenerational Learning", url: "https://en.wikipedia.org/wiki/Intergenerationality" }
+    ]
+  }
+};
+
+function getMarbleTopics(aspectName) {
+  return MARBLE_TAXONOMY[aspectName] || null;
 }
 
 // ---- Per-Quest Guided Learning Pathways ----
@@ -1440,6 +1707,7 @@ function renderSetup() {
   document.getElementById('biome-select').value = biome;
   document.getElementById('mode-select').value = freeRoam ? 'freeroam' : 'adventure';
   document.getElementById('depth-select').value = learnDepth;
+  document.getElementById('webhook-input').value = webhookUrl || '';
   const list = document.getElementById('player-list');
   list.innerHTML = '';
   if (players.length === 0) {
@@ -1490,10 +1758,74 @@ function saveVillage() {
   if (players.length === 0) {
     players.push(makeNewPlayer('Player 1', 'tracker'));
   }
+  webhookUrl = document.getElementById('webhook-input').value.trim();
+  safeSet('rpg_webhook', webhookUrl);
   safeSet('rpg_players', players);
   safeSet('rpg_freeRoam', freeRoam);
   safeSet('rpg_learnDepth', learnDepth);
   showScreen('village');
+}
+
+function exportVillage() {
+  const saveData = {
+    version: 1,
+    players: players,
+    completedQuests: completedQuests,
+    attendance: attendance,
+    biome: biome,
+    freeRoam: freeRoam,
+    learnDepth: learnDepth,
+    webhookUrl: webhookUrl
+  };
+  const blob = new Blob([JSON.stringify(saveData, null, 2)], { type: "application/json" });
+  const a = document.createElement("a");
+  const url = URL.createObjectURL(blob);
+  a.href = url;
+  a.download = "village_save.json";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  alert("Village saved! Keep this file safe. Load it anytime from the Setup or Village screen.");
+}
+
+function importVillage(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const data = JSON.parse(e.target.result);
+      players = data.players || [];
+      completedQuests = data.completedQuests || [];
+      attendance = data.attendance || { days: 0, hours: 0, customHours: {} };
+      biome = data.biome || 'apartment';
+      freeRoam = !!data.freeRoam;
+      learnDepth = data.learnDepth || 'adults';
+      webhookUrl = data.webhookUrl || '';
+
+      safeSet('rpg_players', players);
+      safeSet('rpg_completed', completedQuests);
+      safeSet('rpg_attendance', attendance);
+      safeSet('rpg_biome', biome);
+      safeSet('rpg_freeRoam', freeRoam);
+      safeSet('rpg_learnDepth', learnDepth);
+      safeSet('rpg_webhook', webhookUrl);
+
+      document.getElementById('biome-select').value = biome;
+      document.getElementById('mode-select').value = freeRoam ? 'freeroam' : 'adventure';
+      document.getElementById('depth-select').value = learnDepth;
+      document.getElementById('webhook-input').value = webhookUrl;
+
+      alert("Village loaded successfully!");
+      showScreen('village');
+    } catch (err) {
+      console.error(err);
+      alert("Error loading file. Make sure it is a valid village_save.json file.");
+    }
+  };
+  reader.readAsText(file);
+  event.target.value = '';
 }
 
 // ---- Avatar SVG Renderer (viewBox 200x280) ----
@@ -1689,6 +2021,20 @@ function isTierUnlocked(a, tier) {
 
 function makeQuestId(aspectName, tier, questName) {
   return aspectName.replace(/\s/g, '_').toLowerCase() + "_" + tier + "_" + questName.replace(/\s/g, '_').toLowerCase();
+}
+
+function questTitleFromId(qId) {
+  // Try to find the matching quest title from allAspects
+  for (let a of allAspects) {
+    for (let t of ['sand', 'straw', 'wood', 'iron']) {
+      if (a[t]) {
+        for (let q of a[t]) {
+          if (makeQuestId(a.name, t, q[0]) === qId) return q[0];
+        }
+      }
+    }
+  }
+  return qId;
 }
 
 // ---- Avatar Studio ----
@@ -2017,7 +2363,8 @@ function toggleRoster(qId) {
 function renderResourcesPanel(qId, aspectName) {
   let pathway = getQuestPathway(qId);
   let resources = getAspectResources(aspectName);
-  if (!pathway && resources.length === 0) return '';
+  let marble = getMarbleTopics(aspectName);
+  if (!pathway && resources.length === 0 && !marble) return '';
 
   let pathHTML = '';
   if (pathway) {
@@ -2036,6 +2383,18 @@ function renderResourcesPanel(qId, aspectName) {
     `;
   }
 
+  let marbleHTML = '';
+  if (marble) {
+    let topics = marble.topics.map(t => `<a href="${t.url}" target="_blank" class="lib-link" style="font-size:0.85em;"><strong>${t.name}</strong></a>`).join('');
+    marbleHTML = `
+      <div style="background:var(--bg-input); border-radius:8px; padding:0.6rem; margin-bottom:0.6rem; border-left:3px solid var(--accent-orange);">
+        <p style="font-size:0.85em; color:var(--accent-orange); margin-bottom:0.3rem;"><strong>🧠 Marble OS: ${marble.category}</strong></p>
+        <p style="font-size:0.75em; color:var(--text-dim); margin-bottom:0.4rem;">Curriculum topics connected to this skill:</p>
+        ${topics}
+      </div>
+    `;
+  }
+
   let allLinks = resources.map(r => `<a href="${r.url}" target="_blank" class="lib-link" style="font-size:0.85em;"><strong>${r.title}</strong></a>`).join('');
   let skillHTML = resources.length ? `
     <div style="margin-bottom:0.6rem;">
@@ -2046,6 +2405,7 @@ function renderResourcesPanel(qId, aspectName) {
 
   return `<div class="roster-panel" id="resources_${qId}" style="background:rgba(74,222,128,0.05); border-left:3px solid var(--accent-green); display:none;">
     ${pathHTML}
+    ${marbleHTML}
     ${skillHTML}
     <div style="border-top:1px dashed var(--border-subtle); padding-top:0.5rem;">
       <p style="font-size:0.85em; color:var(--accent-gold); margin-bottom:0.3rem;"><strong>🎰 Feeling lucky? Spin for a surprise resource:</strong></p>
@@ -2092,6 +2452,18 @@ function toggleRosterSel(qId, role, name) {
   if (p) p.style.display = 'block';
 }
 
+// --- Crystal Skull (Letta AI) Webhook ---
+function sendToSkull(payload) {
+  if (!webhookUrl || webhookUrl === '') return;
+  fetch(webhookUrl, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  }).then(() => console.log("Story sent to Crystal Skull."))
+    .catch(e => console.error("Skull connection failed:", e));
+}
+
 function finalizeQuest(qId, icon) {
   let sel = rosterSelections[qId];
   let hasParticipants = [...sel.trackers, ...sel.witnesses, ...sel.hearth, ...sel.mentor].length > 0;
@@ -2119,6 +2491,19 @@ function finalizeQuest(qId, icon) {
 
   safeSet('rpg_players', players);
   safeSet('rpg_completed', completedQuests);
+
+  // Send the story to the Crystal Skull (Letta AI Elder), if configured
+  sendToSkull({
+    event: "quest_completed",
+    questId: qId,
+    quest: questTitleFromId(qId),
+    trackers: sel.trackers,
+    witnesses: sel.witnesses,
+    hearth: sel.hearth,
+    mentor: sel.mentor,
+    biome: biome,
+    timestamp: new Date().toISOString()
+  });
 
   renderQuests();
 
