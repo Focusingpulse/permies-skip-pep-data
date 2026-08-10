@@ -686,6 +686,7 @@ details[open] summary::after { transform: rotate(180deg); }
   <button class="nav-btn" id="nav-quests" onclick="showScreen('quests')">Quests</button>
   <button class="nav-btn" id="nav-school" onclick="showScreen('school')">Schoolhouse</button>
   <button class="nav-btn" id="nav-library" onclick="showScreen('library')">Library</button>
+  <button class="nav-btn" id="nav-circle" onclick="showScreen('circle')">Mentor's Circle</button>
   <button class="nav-btn" id="nav-commons" onclick="showScreen('commons')">Commons</button>
 </div>
 
@@ -774,6 +775,7 @@ details[open] summary::after { transform: rotate(180deg); }
       <li><strong>📜 The Quest Board</strong> — Browse quests organized by skill guild (Gardening, Woodworking, Food Prep, etc.) and tier (Sand → Straw → Wood → Iron). Each quest card shows what to do, what subjects it covers, and who participated. Tap "Learn More" for guided learning resources tied to that quest.</li>
       <li><strong>📚 The Library</strong> — A living, evolving collection of learning resources: educational philosophy, Colorado homeschooling info, Permies &amp; PEP badge guides, curriculum by subject (Marble OS taxonomy), PE &amp; movement, AI tutors, and offline archives. This grows over time — check back for new resources.</li>
       <li><strong>🏫 The Schoolhouse</strong> — Track your homeschool attendance and hours. Log school days, see progress toward Colorado's 172-day / 688-hour requirement, and view which subjects you've covered through questing.</li>
+      <li><strong>🔮 The Mentor's Circle</strong> — The 64 cultural elements of deep nature connection from Jon Young's 512 Project. Eight rings of life development × eight shields of natural archetypes. This is the connection layer — the invisible fabric of community that makes permaculture skills sustainable across generations.</li>
       <li><strong>🏛️ The Commons</strong> — Family achievements, the bridge to Permies.com for official certification, and the offline archive guide for families who want a complete backup of human knowledge on a local drive.</li>
     </ul>
 
@@ -1033,6 +1035,16 @@ details[open] summary::after { transform: rotate(180deg); }
       <div class="lib-link" style="cursor:default;"><strong>[Maps]</strong> Download your state's .pmtiles from Project Nomad Maps (add your own local copies)</div>
     </div>
   </div>
+</div>
+
+<!-- Mentor's Circle -->
+<div class="screen" id="screen-circle">
+  <h2 style="text-align:center; color:var(--accent-gold); margin-bottom:0.5rem;">The Mentor's Circle</h2>
+  <p style="text-align:center; color:var(--text-dim); font-size:0.9em; margin-bottom:1rem; max-width:600px; margin-left:auto; margin-right:auto;">
+    The 64 cultural elements of deep nature connection — from Jon Young's 512 Project and the 8 Shields framework.
+    These practices weave the invisible fabric of community that makes permaculture skills sustainable across generations.
+  </p>
+  <div id="circle-rings"></div>
 </div>
 
 <script>
@@ -1508,6 +1520,117 @@ function getQuestPathway(qId) {
   return QUEST_PATHWAYS[qId] || null;
 }
 
+// ---- 512 Connection Ring: 8 Rings × 8 Shields = 64 Cultural Elements ----
+const SHIELD_NAMES = {
+  1: { dir: 'East',      name: 'Welcoming',      icon: '🌅' },
+  2: { dir: 'Southeast', name: 'Vitality',       icon: '🌿' },
+  3: { dir: 'South',     name: 'Focus',          icon: '🔍' },
+  4: { dir: 'Southwest', name: 'Empathy',        icon: '🤝' },
+  5: { dir: 'West',      name: 'Gift & Service',  icon: '🎁' },
+  6: { dir: 'Northwest', name: 'Heritage',       icon: '📜' },
+  7: { dir: 'North',     name: 'Wisdom',         icon: '🦉' },
+  8: { dir: 'Northeast', name: 'Quiet Mind',     icon: '🌌' }
+};
+
+const CONNECTION_RING = [
+  { ring: 1, title: 'The Spirit of Welcoming', age: 'Birth – Age 9', attribute: 'Happiness', color: '#f4a261',
+    elements: [
+      { shield: 1, name: 'Greeting Customs', concept: 'Establishes a container of emotional and spiritual safety. Creates space for people to share what is on their heart upon arrival.', practice: 'Even 5-10 minutes of greeting creates deep belonging and vulnerability. The greeting is a physiological necessity — a system input that signals safety to the nervous system.', vocab: ['Wiping off the road dust', 'Crux of the elbow technique'] },
+      { shield: 2, name: 'Errands', concept: 'Using purposeful solo tasks or missions to build self-reliance, awareness, and sensory focus in young people.', practice: 'Sending youth on errands without direct supervision forces them to pay attention to their surroundings and rely on internal tracking and body radar.', vocab: ['Vitality', 'Motivation', 'Quail-like wander'] },
+      { shield: 3, name: 'Peer Bonding & Support', concept: 'Cultivating deeply spiritually bonded peer relationships that allow for unconditional storytelling without judgment.', practice: 'Unstructured downtime and shared adventures in nature create lasting peer bonds that prevent emotional isolation throughout life.', vocab: ['Unconditional Listening', 'Synchrony', 'RDA of listening'] },
+      { shield: 4, name: 'Sitspot', concept: 'Developing two-way empathetic ropes of connection with a single place in nature through regular quiet presence.', practice: 'Sitting in one spot repeatedly transforms simple awareness into reciprocal empathy with plants, animals, and the natural elements.', vocab: ['Ropes of Connection', 'Body Radar'] },
+      { shield: 5, name: 'Culture of Allowance', concept: 'Accepting individuals unconditionally without expectations, rigid developmental timelines, or societal shaming.', practice: 'In healthy indigenous cultures, individuals unfold at their own pace, freeing them from anxiety and speech/behavioral blocks.', vocab: [] },
+      { shield: 6, name: 'Wiping Off the Road Dust', concept: 'Comforting travelers and community members by acknowledging the grief, fatigue, and burdens carried from the outside world.', practice: 'Provides a comforting balm for the spirit where open hearts catch stories unconditionally, allowing people to relax deeply into their bodies.', vocab: [] },
+      { shield: 7, name: 'Sensitive Conduct & Agreements', concept: 'Establishing agreements of respect, careful speech, and emotional safety anchored by elder wisdom.', practice: 'Mindful conduct creates a protective container that allows deep sensitivity and connection to flourish without fear of harm.', vocab: ['Three Codes of the Peacemaker', '7th Generation Filter'] },
+      { shield: 8, name: 'Bird Language & Senses', concept: 'Using bird and animal language as a gateway to full sensory integration and multi-sensory storytelling.', practice: 'Practicing 10 minutes a day of bird language activates ancient neurological pathways and regulates the nervous system into quiet mind.', vocab: ['Pied Babbler', 'Reliving'] }
+    ]
+  },
+  { ring: 2, title: 'Childhood Vigor', age: 'Age 9 – Teens', attribute: 'Vitality', color: '#e9c46a',
+    elements: [
+      { shield: 1, name: 'Regalia', concept: 'Wearing visible symbols, clothing, or items that align with identity and serve as living memories of connection.', practice: 'Regalia builds pride and shared identity within a mentoring community, sparking stories and rekindling personal connection.', vocab: ['Trackers\' baseball caps', 'Bushmen ostrich eggshell beads', 'Martial Artists\' colored belts'] },
+      { shield: 2, name: 'Children\'s Universal Passions', concept: 'Leveraging innate childhood drives — play, mystery, camouflage, adventure — to stoke vitality.', practice: 'Engaging adults and youth in universal childhood passions reawakens dormant vitality, humor, and curiosity.', vocab: ['Southeast batteries', 'Mirror neurons'] },
+      { shield: 3, name: 'The Art of Questioning', concept: 'Mentoring through curiosity-driven questions that engage all senses rather than providing direct answers.', practice: 'Asking sensory-rich questions ("What did it sound like?") etches deep, lifelong neural pathways and expands awareness.', vocab: ['The Poker Face', 'Regeneration Logic'] },
+      { shield: 4, name: 'Timeless Wandering', concept: 'Allowing unscheduled, aimless exploration guided by internal body radar and curiosity rather than clocks.', practice: 'Timeless wandering cures over-scheduling and restores the natural neurological flow of immersion in nature.', vocab: ['Monday Sickness', 'Criminalization of Free Play'] },
+      { shield: 5, name: 'Facilitating Individuality', concept: 'Pulling out the unique inner genius of each person rather than imposing external expectations or adult expertise.', practice: 'Mentors facilitate individual potential by creating space, safety, and basic conduct agreements, allowing authentic leadership to emerge.', vocab: ['No chiefs', 'Naming Commitment', 'Kicking Out tradition'] },
+      { shield: 6, name: 'Aunties and Uncles', concept: 'Restoring an alloparenting network of trusted non-parental adults who mentor youth without parental vibrational conflicts.', practice: 'Aunties and uncles act as non-judgmental listening ears, building a broader safety net for youth and relieving pressure on nuclear parents.', vocab: ['Allo-parenting', 'Spiritual friends'] },
+      { shield: 7, name: 'Connection to Place', concept: 'A mapped rite of passage in ecological literacy, local hazards, and deep relationship with local species.', practice: 'Building deep connections with local plants and animals heals the spirit and delivers knowledge intended for human beings.', vocab: [] },
+      { shield: 8, name: 'Humor & Lightness', concept: 'Using playfulness, competitive teasing, and self-deprecating humor to break tension and foster connection.', practice: 'Humor prevents individuals from becoming hypnotized with their own importance and keeps community energy vibrant and resilient.', vocab: [] }
+    ]
+  },
+  { ring: 3, title: 'Adolescence / Rites of Passage', age: 'Teens – Young Adult', attribute: 'Focus', color: '#a8dadc',
+    elements: [
+      { shield: 1, name: 'Gratitude', concept: 'Expressing thanksgiving across all levels of creation using spoken words, body movement, song, and dance.', practice: 'Gratitude practices acknowledge our reliance on life, shift mindset, and align individuals from the earth up to the stars.', vocab: ['Thanksgiving'] },
+      { shield: 2, name: 'Moieties & Subgroups', concept: 'Organizing large groups into smaller functional teams (moieties) bound by simple conduct agreements.', practice: 'Breakout groups create dynamic interaction, allow peer-to-peer leadership, and balance community energy.', vocab: ['Moieties'] },
+      { shield: 3, name: 'Unconditional Listening', concept: 'Offering complete, non-judgmental presence so individuals can hear themselves speak and self-correct.', practice: 'Unconditional listening allies prevent downward emotional spirals and create the peaks of happiness in human life.', vocab: [] },
+      { shield: 4, name: 'Mapping', concept: 'Internalizing geographical, ecological, and storied landscapes in the mind without relying on digital navigation tools.', practice: 'Spatial mapping activates ancient brain regions and turns individual journeys into shared communal resource intelligence.', vocab: [] },
+      { shield: 5, name: 'Finding People\'s Gifts', concept: 'Using evening fire circles and storytelling to draw out and validate the emergent genius and gifts of community members.', practice: 'A healthy village actively listens for and nurtures each person\'s unique contribution to ensure collective survival and growth.', vocab: ['Fire circles'] },
+      { shield: 6, name: 'Inner Tracking', concept: 'Monitoring one\'s internal state, self-awareness, and the impact of one\'s words and actions on others.', practice: 'Inner tracking helps youth transition to adulthood with poise, dignity, and acute awareness of social conduct.', vocab: [] },
+      { shield: 7, name: 'Honoring Commitments', concept: 'Recognizing the creative power of one\'s word as a binding social contract that weaves the fabric of community culture.', practice: 'Learning through trial, error, and accountability to hold spoken commitments builds trust and social stability.', vocab: [] },
+      { shield: 8, name: 'Story of the Day', concept: 'Routine debriefing of nature experiences where listeners ask expanding questions to deepen sensory integration and quiet mind.', practice: 'Sharing daily experiences around the circle trains minds to notice detail, cultivate inner silence, and communicate powerfully.', vocab: [] }
+    ]
+  },
+  { ring: 4, title: 'Young Adult / Hero\'s Journey', age: 'Young Adult', attribute: 'Empathy', color: '#457b9d',
+    elements: [
+      { shield: 1, name: 'Honoring Empathy', concept: 'Protecting and celebrating the innate emotional sensitivity and connection with all living things.', practice: 'Empathy is an essential survival tool; modern society often suppresses it, requiring intentional community validation.', vocab: [] },
+      { shield: 2, name: 'Creative Movement', concept: 'Expressing inner vitality and animal behaviors through physical movement, dance, and body awareness.', practice: 'Body-based expression grounds individuals, tunes internal guidance systems, and connects them to natural rhythms.', vocab: [] },
+      { shield: 3, name: 'Animal Tracking', concept: 'Developing acute pattern recognition, sign identification, and empathetic connection with wildlife.', practice: 'Tracking requires setting aside ego, risking being wrong in dialectic with peers, and deeply understanding animal behaviors.', vocab: [] },
+      { shield: 4, name: 'Natural Law', concept: 'Living in intuitive harmony with natural boundaries and spontaneous mutual helpfulness without forced external control.', practice: 'Aligning with natural law cures modern vitamin N deficiency and restores innate human balance and generosity.', vocab: ['Vitamin N deficiency'] },
+      { shield: 5, name: 'Fire Skill & Centrality', concept: 'Mastering fire friction and understanding the hearth fire as a mirror of internal emotional states and community unity.', practice: 'Fire transforms grief into light and warmth, serving as the central gathering beacon for returning questers.', vocab: [] },
+      { shield: 6, name: 'Honoring Lineage', concept: 'Acknowledging mentor lineages, traditions, and intergenerational knowledge transfer that guide current practices.', practice: 'Holding an upright mind within a lineage allows leaders to transform ancient teachings to meet modern challenges.', vocab: ['Upright mind'] },
+      { shield: 7, name: 'Honoring Ancestors', concept: 'Connecting spiritually and historically with family and human ancestors to awaken love for life.', practice: 'Communicating with ancestors reminds us of life\'s sacred brevity and grounds our purpose in historical continuity.', vocab: [] },
+      { shield: 8, name: 'Intuitive Connection with Nature', concept: 'Experiencing direct communication, visionary inspiration, art, and music generated through solo nature immersion.', practice: 'Solitary time in nature expands individual sensory antennas, tapping into universal creative energy and vision.', vocab: ['Song catchers'] }
+    ]
+  },
+  { ring: 5, title: 'Adult Service / Gift Manifestation', age: 'Adult', attribute: 'Love', color: '#e76f51',
+    elements: [
+      { shield: 1, name: 'Improvisation', concept: 'Embracing spontaneous creativity, flexibility, and playfulness when facilitating groups or navigating challenges.', practice: 'Throwing people off edges without detailed instructions forces creative problem-solving and brings forth child-like joy.', vocab: [] },
+      { shield: 2, name: 'Modeling Helpfulness', concept: 'Demonstrating proactive service and labor in front of youth without nagging, scolding, or demanding compliance.', practice: 'Youth mirror the positive actions of respected mentors naturally through mirror neurons when service is modeled rather than ordered.', vocab: ['Mirror neurons'] },
+      { shield: 3, name: 'Healthy Deliberation & Dialectic', concept: 'Engaging in vigorous, respectful debate and dialogue to refine observations and achieve true group consensus.', practice: 'Safe containers for gentle argument allow individuals to express views freely, integrate sensory data, and build unity.', vocab: [] },
+      { shield: 4, name: 'Sense of Home', concept: 'Building long-term, routine-based relationships with a specific geographic landscape and community over time.', practice: 'A true sense of home requires sustained routine and shared community presence, moving beyond one-off experiences.', vocab: [] },
+      { shield: 5, name: 'Being in Service', concept: 'Offering one\'s unique sensitivity and gifts to meet community needs, often unravelling personal wounds in the process.', practice: 'True purpose is realized when individual genius is given unconditionally to support and uplift the collective village.', vocab: [] },
+      { shield: 6, name: 'Grieving Customs', concept: 'Creating communal rituals to process loss, tragedy, and pain so that death strengthens rather than fractures unity.', practice: 'Healthy cultures maintain grieving customs so that loss deepens social bonds, whereas unexpressed grief creates chaos and confusion.', vocab: [] },
+      { shield: 7, name: 'Conduct of Honor & Unity', concept: 'Combing community energy for complete unity and ensuring every voice is heard and respected in decision-making.', practice: 'Living in gratitude and seeking total consensus builds a safe, resilient container for deep human sensitivity.', vocab: [] },
+      { shield: 8, name: 'Sensory Imagination', concept: 'Synthesizing all physical senses into a holographic, internal imagination scape to perceive ecological dynamics.', practice: 'Deep sensory integration connects gut feelings, sights, and sounds into a unified perception of landscape intelligence.', vocab: [] }
+    ]
+  },
+  { ring: 6, title: 'Leadership & Role Modeling', age: '40s – 50s', attribute: 'Presence', color: '#2a9d8f',
+    elements: [
+      { shield: 1, name: 'Heritage Knowledge', concept: 'Understanding key indicator species, ecological history, and stewardship practices handed down across generations.', practice: 'Heritage species teach humans how to be proper caretakers of place; this knowledge must be experienced, not just read.', vocab: ['Indicator species'] },
+      { shield: 2, name: 'Celebrating Sacredness of Life', concept: 'Modeling authentic authority and deep reverence for the preciousness of life and time.', practice: 'Leaders demonstrate Obliha (being fully alive) to inspire younger generations to live without squandering moments.', vocab: ['Obliha'] },
+      { shield: 3, name: 'Tracking Traditions', concept: 'Passing down ancient observation systems that produce master trackers and deeply connected human beings.', practice: 'Tracking traditions represent a complete cultural map (the 512 matrix) for cultivating hyper-awareness and connection.', vocab: ['512 matrix'] },
+      { shield: 4, name: 'Tending the Wild', concept: 'Actively managing and regenerating ecosystems to increase biodiversity, biomass, and long-term landscape health.', practice: 'Human connection coupled with traditional ecological management turns survival into regenerative landscape stewardship.', vocab: [] },
+      { shield: 5, name: 'Leadership & Role Modeling', concept: 'Leading exclusively by example — never instructing or commanding others to do what you do not model yourself.', practice: 'Role modeling is the fourth pillar of connection; youth learn by watching authentic, consistent behavior over time.', vocab: ['Fourth pillar of connection'] },
+      { shield: 6, name: 'Condolence & Clearing Blocks', concept: 'Identifying and clearing unspoken emotional blocks, trauma, and grief that scare connections away.', practice: 'Condolence practices reopen closed emotional pathways, reducing social isolation and fostering community healing.', vocab: [] },
+      { shield: 7, name: 'Corrective Processes', concept: 'Replacing punitive crime-and-punishment models with supportive, restorative processes that hold individuals in love.', practice: 'Mistakes are viewed as burdens requiring community support rather than guilt requiring punishment, taking time to heal.', vocab: [] },
+      { shield: 8, name: 'One-Liners', concept: 'Deploying concentrated, memorable phrases (mentor viruses) that make people pause, pay attention, and reflect.', practice: 'A well-placed one-liner lodges in consciousness, interrupting automated thought patterns and provoking deep self-awareness.', vocab: ['Mentor viruses'] }
+    ]
+  },
+  { ring: 7, title: 'Elder Wisdom', age: 'Intergenerational', attribute: 'Visionary Ethic', color: '#6d597a',
+    elements: [
+      { shield: 1, name: 'Regenerative Design', concept: 'Structuring programs, landscapes, and social dynamics so knowledge and passion flow seamlessly across generations.', practice: 'True regenerative design focuses on the soft part — the culture itself — using apprentice pools to pass wisdom forward.', vocab: ['Soft part', 'Apprentice pools'] },
+      { shield: 2, name: 'Elder Anchoring', concept: 'Connecting youth and adults with grounded elders to provide stability, perspective, and non-reactive listening.', practice: 'Anchoring with elders stabilizes fast-paced lives, helping individuals mature rapidly and stay aligned with their purpose.', vocab: [] },
+      { shield: 3, name: 'Treaties & Agreements', concept: 'Negotiating breathing, adaptable agreements between groups and species that evolve over time for mutual well-being.', practice: 'Treaties force ongoing dialogue between elders and communities, generating innovative, peaceful co-existence.', vocab: [] },
+      { shield: 4, name: 'Storied Landscape', concept: 'Naming landscape features through vivid, humorous, or memorable stories so topographical knowledge is never forgotten.', practice: 'A storied landscape embeds cultural ethics, humor, and ecological navigation directly into the physical terrain.', vocab: [] },
+      { shield: 5, name: 'Ceremony & Ritual', concept: 'Gathering community in unified expression, music, and dance where individual egos step back for collective harmony.', practice: 'Ceremony allows people to attune simultaneously to a larger energetic field, rehearsing how to be human together.', vocab: [] },
+      { shield: 6, name: 'Intergenerational Ethics & Practices', concept: 'Transmitting land stewardship, ethics, and practices across generations so projects do not dissolve when founders pass.', practice: 'Without embedding nature connection alongside permaculture, physical land projects fail to survive intergenerationally.', vocab: [] },
+      { shield: 7, name: 'Oral Tradition', concept: 'Using spoken storytelling as the primary mechanism for governance, cultural continuity, and wisdom transmission.', practice: 'A strong oral tradition welcomes every person\'s story, inspiring self-regulation, good conduct, and collective memory.', vocab: [] },
+      { shield: 8, name: 'Renewal Routines', concept: 'Establishing annual cycles and gatherings to pause, evaluate connection metrics, and refresh community vitality.', practice: 'Elders oversee annual renewal routines to ensure the community remains loving, empathetic, helpful, and vibrant.', vocab: [] }
+    ]
+  },
+  { ring: 8, title: 'Spiritual Foundation & Lineage', age: 'Universal', attribute: 'Aliveness & Gratitude', color: '#355070',
+    elements: [
+      { shield: 1, name: 'Modeling Love', concept: 'Embodying unconditional love, warmth, and spiritual safety that overrides fear, trauma, and mental chatter.', practice: 'Elders who master love provide an unshakeable foundation for the entire community, allowing youth to reach their highest potential.', vocab: [] },
+      { shield: 2, name: 'Spiritual Elders Holding Space', concept: 'Elders catching the exuberant energy of youth returning from solo quests/errands, nourishing both generations.', practice: 'Elders act as non-reactive, joyful story catchers who validate life experiences and help integrate deep revelations.', vocab: ['Story catchers'] },
+      { shield: 3, name: 'Asking Permission & Offerings', concept: 'Approaching nature, resources, and human interactions with humility, seeking permission, and offering gratitude.', practice: 'Living with permission and offerings creates a pervasive attitude of respect and sacred reciprocity with all life.', vocab: ['Sacred reciprocity'] },
+      { shield: 4, name: 'Ancestors Speaking Through Land', concept: 'Perceiving creative insights, songs, and art as direct communications from the land and ancestral heritage.', practice: 'Building deep ropes of connection with place turns human minds into receptors (song catchers) for ancestral wisdom.', vocab: ['Song catchers'] },
+      { shield: 5, name: 'Totems & Affiliations', concept: 'Developing lifelong relationships with animal or plant familiars/keystones as guides and social contracts.', practice: 'Totemic affiliations foster empathy, ecological stewardship, and social alignment within human organizations.', vocab: ['Keystone species'] },
+      { shield: 6, name: 'Intergenerational Transfer & Epigenetics', concept: 'Recognizing that both deep wisdom and historical trauma transfer epigenetically across generations.', practice: 'Active connection work stops the transfer of historical trauma (divide and conquer ends here), passing down healing instead.', vocab: ['Epigenetic transfer'] },
+      { shield: 7, name: 'Specialist Guilds', concept: 'Forming balanced groups around specific crafts (trackers, herbalists, builders, healers) embedded in connection modeling.', practice: 'Guild skills transfer most powerfully through organic role modeling and curiosity rather than vocational instruction.', vocab: ['Connection modeling'] },
+      { shield: 8, name: 'Sacred & Connective Law', concept: 'Recognizing that human beings are hardwired for connective law, which restores wholeness in a disconnected world.', practice: 'Connective law provides the language and frameworks needed to rebuild human culture, peacemaking, and environmental harmony.', vocab: ['Connective law'] }
+    ]
+  }
+];
+
 // ---- Avatar System: Character Classes ----
 const CHARACTER_CLASSES = {
   prince:    { name: "Prince",     gender: "boy",  group: "royal",    icon: "🤴", desc: "A young noble ready to lead quests" },
@@ -1748,6 +1871,7 @@ function showScreen(s) {
   if (s === 'quests') renderQuests();
   if (s === 'school') renderSchoolhouse();
   if (s === 'commons') renderCommons();
+  if (s === 'circle') renderCircle();
 }
 
 // ---- Setup ----
@@ -2694,6 +2818,61 @@ function renderCommons() {
     <div class="achievement-card"><div class="icon">👥</div><div class="value">${players.length}</div><div class="label">Family Members</div></div>
     <div class="achievement-card"><div class="icon">🏫</div><div class="value">${attendance.days}</div><div class="label">School Days</div></div>
   `;
+}
+
+function renderCircle() {
+  let container = document.getElementById('circle-rings');
+  if (!container) return;
+  let html = '';
+  for (let ring of CONNECTION_RING) {
+    let ringId = 'ring-' + ring.ring;
+    html += `<div style="margin-bottom:1.5rem;">`;
+    html += `<div style="cursor:pointer; padding:0.8rem 1rem; border-radius:10px; background:${ring.color}; color:#fff; display:flex; justify-content:space-between; align-items:center;" onclick="toggleRing('${ringId}')">`;
+    html += `<div><strong>Ring ${ring.ring}: ${ring.title}</strong><span style="opacity:0.85; font-size:0.85em; margin-left:0.6rem;">${ring.age} &middot; ${ring.attribute}</span></div>`;
+    html += `<span style="font-size:1.2rem;" id="${ringId}-arrow">▼</span>`;
+    html += `</div>`;
+    html += `<div id="${ringId}" style="display:none; padding-top:0.5rem;">`;
+    for (let el of ring.elements) {
+      let shield = SHIELD_NAMES[el.shield];
+      html += `<div style="margin:0.5rem 0; padding:0.8rem; border-radius:8px; background:var(--bg-card); border:1px solid var(--border);">`;
+      html += `<div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.4rem;">`;
+      html += `<span style="font-size:1.3rem;">${shield.icon}</span>`;
+      html += `<strong style="color:${ring.color};">${el.name}</strong>`;
+      html += `<span style="font-size:0.75em; color:var(--text-dim); margin-left:auto;">${shield.dir} &middot; ${shield.name}</span>`;
+      html += `</div>`;
+      html += `<p style="font-size:0.88em; color:var(--text); margin:0.3rem 0;">${el.concept}</p>`;
+      html += `<p style="font-size:0.82em; color:var(--text-dim); margin:0.3rem 0; padding-left:0.5rem; border-left:2px solid ${ring.color};"><em>Practice:</em> ${el.practice}</p>`;
+      if (el.vocab && el.vocab.length > 0) {
+        html += `<div style="margin-top:0.3rem;">`;
+        for (let v of el.vocab) {
+          html += `<span style="display:inline-block; font-size:0.75em; padding:0.15rem 0.5rem; margin:0.15rem 0.3rem 0.15rem 0; border-radius:12px; background:var(--bg); border:1px solid var(--border); color:var(--text-dim);">${v}</span>`;
+        }
+        html += `</div>`;
+      }
+      html += `</div>`;
+    }
+    html += `</div></div>`;
+  }
+  // Footer with source attribution
+  html += `<div style="text-align:center; margin-top:1.5rem; padding-top:1rem; border-top:1px solid var(--border);">`;
+  html += `<p style="font-size:0.8em; color:var(--text-dim);">Source: Jon Young's 512 Project &middot; <a href="https://8shields.org" target="_blank" style="color:var(--accent-green);">8 Shields Institute</a> &middot; <a href="https://www.jonyoung.org" target="_blank" style="color:var(--accent-green);">Jon Young</a> &middot; <a href="https://www.amazon.com/Coyotes-Guide-Connecting-Nature-Young/dp/1579940250" target="_blank" style="color:var(--accent-green);">Coyote's Guide to Connecting with Nature</a></p>`;
+  html += `</div>`;
+  container.innerHTML = html;
+  // Auto-expand Ring 1
+  toggleRing('ring-1');
+}
+
+function toggleRing(ringId) {
+  let el = document.getElementById(ringId);
+  let arrow = document.getElementById(ringId + '-arrow');
+  if (!el) return;
+  if (el.style.display === 'none') {
+    el.style.display = 'block';
+    if (arrow) arrow.textContent = '▲';
+  } else {
+    el.style.display = 'none';
+    if (arrow) arrow.textContent = '▼';
+  }
 }
 
 // ---- Init ----
