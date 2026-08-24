@@ -1,3 +1,11 @@
+
+## 2026-08-24 maintenance pass
+-   fixed 1 × double trailing slash
+-   fixed 2 × trailing punct
+-   master_quests.json: 3 URL fixes applied
+-   added resource: Seed Savers Exchange — Learn
+-   added resource: National Center for Home Food Preservation
+
 # Village Link Report — 2026-08-24
 
 Checked **606** URLs: **572** OK, **27** HTTP errors, **0** redirects, **7** unreachable/timeouts.
