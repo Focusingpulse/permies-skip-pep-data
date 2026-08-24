@@ -1,5 +1,10 @@
 
 ## 2026-08-24 maintenance pass
+-   added resource: OpenStax Physics
+-   added resource: Cornell Lab — All About Birds
+
+
+## 2026-08-24 maintenance pass
 -   fixed 1 × double trailing slash
 -   fixed 2 × trailing punct
 -   master_quests.json: 3 URL fixes applied
