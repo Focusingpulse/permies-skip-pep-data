@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Village — A Role-Building Game</title>
+<title>The Village — A Roll Making Game (RMG)</title>
 <script src="data.js"></script>
 <style>
 :root {
@@ -666,6 +666,51 @@ details[open] summary::after { transform: rotate(180deg); }
 .achievement-card .label { font-size: 0.8em; color: var(--text-dim); margin-top: 0.2rem; }
 .achievement-card .value { font-size: 1.2em; color: var(--accent-gold); font-weight: bold; }
 
+/* ---- Gold Nugget / Money Lab ---- */
+.badge-chip.gold {
+  background: linear-gradient(135deg, rgba(233,196,106,0.3), rgba(212,175,23,0.15));
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  box-shadow: 0 0 14px rgba(233,196,106,0.5);
+  animation: goldPulse 2s infinite;
+}
+.tier-pill.gold {
+  background: linear-gradient(135deg, rgba(233,196,106,0.3), rgba(212,175,23,0.15));
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  box-shadow: 0 0 14px rgba(233,196,106,0.5);
+  animation: goldPulse 2s infinite;
+}
+@keyframes goldPulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(233,196,106,0.3); }
+  50% { box-shadow: 0 0 20px rgba(233,196,106,0.8); }
+}
+.gold-modal-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(10,10,26,0.85);
+  display: none; align-items: center; justify-content: center;
+  z-index: 2000; padding: 1rem;
+}
+.gold-modal {
+  background: var(--bg-panel);
+  max-width: 420px; width: 100%;
+  border: 2px solid var(--accent-gold);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(233,196,106,0.4);
+  animation: popIn 0.4s;
+}
+@keyframes popIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.gold-nugget-emoji { font-size: 4rem; display: block; margin-bottom: 0.5rem; animation: goldFloat 3s infinite; }
+@keyframes goldFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+.gold-btn {
+  background: linear-gradient(135deg, var(--accent-gold), #b8860b);
+  color: #1a1a2e; border: none;
+  padding: 0.6rem 1.4rem; border-radius: 30px;
+  font-weight: bold; cursor: pointer; font-family: inherit; font-size: 0.95rem;
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 600px) {
   .title-main { font-size: 2.2rem; }
@@ -694,8 +739,8 @@ details[open] summary::after { transform: rotate(180deg); }
 <div class="screen active" id="screen-title">
   <div class="title-art">🌾</div>
   <h1 class="title-main">WELCOME</h1>
-  <p class="title-sub">The Village — A Role-Building Game for families</p>
-  <p class="title-sub" style="font-size:0.8em; margin-top:0.3rem; color:var(--text-dim);">Build real skills, develop real attributes, grow real knowledge — not just points.</p>
+  <p class="title-sub">The Village — A Roll Making Game (RMG) for families</p>
+  <p class="title-sub" style="font-size:0.8em; margin-top:0.3rem; color:var(--text-dim);">A real-life skill-building journey \u2014 not a digital game you play on a screen. Build real skills, grow real attributes, earn real badges in the real world.</p>
   <div style="margin-top:1.5rem; color:var(--text-dim); font-size:0.9rem; animation: bounce 2s infinite;">▼ Scroll down ▼</div>
 </div>
 
@@ -705,8 +750,9 @@ details[open] summary::after { transform: rotate(180deg); }
     <h2>Welcome, Family.</h2>
     <p>You are about to embark on a journey that bridges the digital world with the dirt beneath your feet. This is not a game you play by staring at a screen; it is a game you play by living real life. Anyone can do this, at any age. To rebuild culture, we sharpen our own skills and reconnect with nature, ourselves, and each other.</p>
 
-    <h3>0. A Role-Building Game, Not a Role-Playing Game</h3>
-    <p>Most RPGs ask you to <em>play</em> a role — a fictional character in a fictional world. <strong>The Village</strong> asks you to <em>build</em> a role — your real self, in the real world. The "role" is not a mask you wear. It is the collection of attributes, skills, and practiced knowledge you actually develop. Your avatar doesn't level up because you clicked a button. It evolves because <em>you</em> did.</p>
+    <h3>0. A Roll Making Game — Not a Digital Game</h3>
+    <p>Most games ask you to <em>play</em> a role — a fictional character in a fictional world. <strong>The Village</strong> is a <strong>Roll Making Game (RMG)</strong> — it asks you to <em>build</em> your real self in the real world. The "roll" is not a mask you wear; it is the collection of real attributes, skills, and practiced knowledge you actually develop. Your avatar doesn't level up because you clicked a button — it evolves because <em>you</em> did. You'll put the screen down and go outside, into the kitchen, the garden, the workshop, and the marketplace. This is a real-life skill-building journey, not a digital one.</p>
+    <p style="font-size:0.9em; color:var(--text-dim);">New in this version: the <strong style="color:var(--accent-gold);">Money Lab</strong> — a family financial literacy track in the Library, and the <strong style="color:var(--accent-gold);">Gold Nugget</strong> — a special economic badge earned by working through the Commerce guild. No real money needed: you'll learn how dollars, euros, and francs actually move, and how a family can trade and grow value on its own terms.</p>
 
     <h3>1. Competence, Not Just Points</h3>
     <p>In most games, you click a button and your character levels up. In <strong>The Village</strong>, <strong>you</strong> are the character. To earn badges and upgrade your avatar, you must build real-world skills. The real-world reward is <em>competence</em>. The digital reward is watching your avatar evolve.</p>
@@ -777,7 +823,7 @@ details[open] summary::after { transform: rotate(180deg); }
       <li><strong>🏘️ The Village Hub</strong> — Your family guild screen. See everyone's avatars, check progress, and jump into questing. Click any character to open the Avatar Studio.</li>
       <li><strong>🎨 The Avatar Studio</strong> — Customize each family member's character: class, face, hair, outfit, gear, and background. As you complete quests, new items appear in the Wardrobe tab. Your avatar grows with your skills.</li>
       <li><strong>📜 The Quest Board</strong> — Browse quests organized by skill guild (Gardening, Woodworking, Food Prep, etc.) and tier (Sand → Straw → Wood → Iron). Each quest card shows what to do, what subjects it covers, and who participated. Tap "Learn More" for guided learning resources tied to that quest.</li>
-      <li><strong>📚 The Library</strong> — A living, evolving collection of learning resources: educational philosophy, Colorado homeschooling info, Permies &amp; PEP badge guides, curriculum by subject (Marble OS taxonomy), PE &amp; movement, AI tutors, and offline archives. This grows over time — check back for new resources.</li>
+      <li><strong>📚 The Library</strong> — A living, evolving collection of learning resources: educational philosophy, Colorado homeschooling info, Permies &amp; PEP badge guides, curriculum by subject (Marble OS taxonomy), the <strong style="color:var(--accent-gold);">💰 Money Lab</strong> (family financial literacy &amp; foreign exchange), PE &amp; movement, AI tutors, and offline archives. This grows over time — check back for new resources.</li>
       <li><strong>🏫 The Schoolhouse</strong> — Track your homeschool attendance and hours. Log school days, see progress toward Colorado's 172-day / 688-hour requirement, and view which subjects you've covered through questing.</li>
       <li><strong>🔮 The Mentor's Circle</strong> — The 64 cultural elements of deep nature connection from Jon Young's 512 Project. Eight rings of life development × eight shields of natural archetypes. This is the connection layer — the invisible fabric of community that makes permaculture skills sustainable across generations.</li>
       <li><strong>🏛️ The Commons</strong> — Family achievements, the bridge to Permies.com for official certification, and the offline archive guide for families who want a complete backup of human knowledge on a local drive.</li>
@@ -1022,6 +1068,44 @@ details[open] summary::after { transform: rotate(180deg); }
       <a href="https://www.congress.gov/resources/display/content/The+Constitution+of+the+United+States" target="_blank" class="lib-link"><strong>Constitution:</strong> The U.S. Constitution from Congress.gov.</a>
       <a href="https://www.khanacademy.org/economics-finance-domain" target="_blank" class="lib-link"><strong>Economics:</strong> Khan Academy — micro, macro, and personal finance.</a>
       <a href="https://www.khanacademy.org/humanities/art-history" target="_blank" class="lib-link"><strong>Art:</strong> Khan Academy Art History — free art lessons and movements.</a>
+    </div>
+
+    <div class="lib-category">
+      <h4 style="color:var(--accent-gold);">💰 The Money Lab — Financial Literacy &amp; Foreign Exchange</h4>
+      <p style="font-size:0.8em; color:var(--text-dim); margin-bottom:0.5rem;">The Village's family financial track. Learn how money, currencies, charts, risk, and patience actually work — through coloring, play, and <strong>simulated</strong> trading only. No real money needed, and we never hand kids real currency. The rule is simple: protect the money you have first, learn second, trade third. Families that want to "get off the dollar" a little at a time can grow this habit safely.</p>
+
+      <p style="font-size:0.85em; color:var(--accent-green); margin-top:0.4rem;"><strong>🖍️ The 15-Sheet Coloring Curriculum</strong> — print each page, color it in, and talk about it after.</p>
+      <div style="line-height:1.7; font-size:0.85em; color:var(--text-dim);">
+        1. What Is Money? · 2. What Is a Currency? · 3. Currency Pairs · 4. The Currency Exchange Shop · 5. Up or Down? · 6. Candlesticks · 7. Bull vs. Bear · 8. Support &amp; Resistance (the castle) · 9. Stop Loss = Safety Net · 10. Risk vs. Reward · 11. Patience Pays · 12. The Trading Detective · 13. Paper Trading Day · 14. Trading Journal · 15. The Golden Rule of Trading
+      </div>
+
+      <p style="font-size:0.85em; color:var(--accent-green); margin-top:0.4rem;"><strong>🕹️ Free Simulators — all browser, no signup</strong></p>
+      <a href="https://marginpad.io/forex-trading-simulator" target="_blank" class="lib-link"><strong>MarginPad:</strong> Live rates, real candlestick charts, real leverage &amp; liquidation mechanics. Long/short, stop-losses, live P&amp;L. Best for feeling what a real trade feels like without a cent.</a>
+      <a href="https://chartmini.com/forex-trading-simulator" target="_blank" class="lib-link"><strong>ChartMini:</strong> Historical chart replay that hides future candles — you guess the direction. Builds chart-reading skill without hindsight bias.</a>
+      <a href="https://tradingview.com" target="_blank" class="lib-link"><strong>TradingView:</strong> Excellent free charting. Watch CHF/USD and EUR/USD in real time — see how currencies move.</a>
+      <a href="https://tradesim.co" target="_blank" class="lib-link"><strong>Trade Sim:</strong> Game-style practice with daily leaderboards, achievements, and teams. Great for the kids. Compress a whole market day into 15 minutes.</a>
+      <a href="https://forex.mobile/academy/simulator" target="_blank" class="lib-link"><strong>forex.mobile Academy:</strong> $10,000 virtual balance, real leverage math and liquidation risk. Focused on EUR/USD — the most important pair.</a>
+      <a href="https://fxfoundations.com/simulator" target="_blank" class="lib-link"><strong>FX Foundations:</strong> $10K virtual money, real history, real spreads. One free session per day — a gentle daily habit.</a>
+
+      <p style="font-size:0.85em; color:var(--accent-green); margin-top:0.4rem;"><strong>🎮 Five Family Missions</strong> (turn simulation into play):</p>
+      <div style="line-height:1.6; font-size:0.85em; color:var(--text-dim);">
+        <strong>Mission 1 — Currency Detective:</strong> Find one pair. Is the chart moving mostly UP, DOWN, or SIDEWAYS?<br>
+        <strong>Mission 2 — Candle Detective:</strong> Find three candles. Which had the biggest move?<br>
+        <strong>Mission 3 — Prediction Challenge:</strong> Everyone predicts the next candle, then reveal it.<br>
+        <strong>Mission 4 — Risk Challenge:</strong> You have $10,000 pretend money. You may NOT risk it all on one idea.<br>
+        <strong>Mission 5 — Patience Challenge:</strong> Only ONE simulated trade today — and you must explain why you chose it.<br>
+        <em>Mission 5 matters most: doing nothing can be the best decision.</em>
+      </div>
+
+      <p style="font-size:0.85em; color:var(--accent-green); margin-top:0.4rem;"><strong>📚 Learn for parent and child together</strong> (the smart order):</p>
+      <div style="line-height:1.6; font-size:0.85em; color:var(--text-dim);">
+        <strong>Little learners:</strong> coloring · money recognition · currency matching · up/down games · simple stories<br>
+        <strong>Elementary:</strong> currency pairs · charts · candlesticks · supply &amp; demand · profit &amp; loss · simple percentages<br>
+        <strong>Older children:</strong> risk management · position sizing · leverage · economic news · interest rates · central banks · trading psychology · journaling &amp; strategy testing<br>
+        <strong>Adults / parents:</strong> When real-world practice matters, a free <a href="https://wise.com" target="_blank" style="color:var(--accent-green);">Wise</a> account lets you split a few dollars into CHF / EUR and see exchange in action. Keep it tiny — the habit and the learning are the point.
+      </div>
+
+      <p style="font-size:0.85em; color:var(--accent-gold); margin-top:0.5rem;">🏅 <strong>Earn the Gold Nugget</strong> — complete the 16 Commerce quests on the Quest Board (budgets, currency exchange, paper trading, a family forex night, and the Financial Freedom Plan) to unlock the economic Gold Nugget badge, shown across your Village.</p>
     </div>
 
     <div class="lib-category">
@@ -2236,6 +2320,16 @@ function getAvatarHTML(p, mini) {
     }
   }
 
+  // Gold Nugget — the carried treasure from the Money Lab (equip it in the Wardrobe)
+  if (e.wear === 'gold_nugget') {
+    svg += `<g transform="rotate(15 57 206)">`;
+    svg += `<ellipse cx="57" cy="208" rx="9" ry="7" fill="#e9c46a" stroke="#b8860b" stroke-width="1.5"/>`;
+    svg += `<path d="M50 206 q7 -9 14 0 Z" fill="#f4d35e" stroke="#b8860b" stroke-width="1.5"/>`;
+    svg += `<circle cx="53" cy="207" r="1.6" fill="#b8860b"/>`;
+    svg += `<path d="M56 200 l2 -4 2 3" fill="none" stroke="#fff" stroke-width="1.3" opacity="0.85"/>`;
+    svg += `</g>`;
+  }
+
   svg += `</svg>`;
   return `<div class="${cls}">${svg}</div>`;
 }
@@ -2267,6 +2361,7 @@ function renderVillage() {
 
   // Progress overview
   let progress = getTierProgress();
+  let eco = getCommerceStatus();
   document.getElementById('village-progress').innerHTML = `
     <strong style="color:var(--accent-gold);">Family Progress</strong><br>
     <span style="font-size:0.85em; color:var(--text-dim);">${completedQuests.length} quests completed</span>
@@ -2275,6 +2370,7 @@ function renderVillage() {
       <span class="badge-chip ${progress.straw.unlocked?'unlocked':'locked'}">🌾 Straw ${progress.straw.done}/${progress.straw.total}</span>
       <span class="badge-chip ${progress.wood.unlocked?'unlocked':'locked'}">🪵 Wood ${progress.wood.done}/${progress.wood.total}</span>
       <span class="badge-chip ${progress.iron.unlocked?'unlocked':'locked'}">⚙️ Iron ${progress.iron.done}/${progress.iron.total}</span>
+      <span class="badge-chip ${eco.earned ? 'gold' : 'locked'}">⛏️ Gold Nugget ${eco.done}/${eco.total}${eco.earned ? ' ✨' : ''}</span>
     </div>
   `;
 }
@@ -2471,7 +2567,11 @@ function renderStudioOptions() {
     a.innerHTML = '<div class="wardrobe-grid"></div>';
     let g = a.querySelector('.wardrobe-grid');
     p.wardrobe.forEach(w => {
-      g.innerHTML += `<div class="wardrobe-slot" onclick="equipWardrobeItem('${w.icon}')"><span class="slot-icon">${w.icon}</span><span class="slot-name">${w.prefix || 'Quest'} ${w.level || ''}</span></div>`;
+      let name = w.name || `${w.prefix || 'Quest'} ${w.level || ''}`.trim();
+      let equipped = (w.id === 'gold_nugget' && p.equipped.wear === 'gold_nugget');
+      let sid = String(w.id || '').replace(/'/g, "\\'");
+      let sic = String(w.icon || '').replace(/'/g, "\\'");
+      g.innerHTML += `<div class="wardrobe-slot ${equipped ? 'equipped' : ''}" onclick="equipWardrobeItem('${sid}','${sic}')"><span class="slot-icon">${w.icon}</span><span class="slot-name">${name}</span></div>`;
     });
   }
 }
@@ -2483,16 +2583,20 @@ function equipItem(type, id) {
   renderStudio();
 }
 
-function equipWardrobeItem(icon) {
+function equipWardrobeItem(id, icon) {
   let p = players[activeStudioPlayer];
-  let group = getClassGroup(p.equipped.characterClass);
-  let gear = CLASS_GEAR[group] || CLASS_GEAR.gardener;
-  let allHats = gear.hats.map(h => h.id).filter(h => h !== null);
-  let allTools = gear.tools.map(t => t.id).filter(t => t !== null);
-  if (allHats.includes(icon)) {
-    p.equipped.hat = (p.equipped.hat === icon ? null : icon);
-  } else if (allTools.includes(icon)) {
-    p.equipped.tool = (p.equipped.tool === icon ? null : icon);
+  if (id === 'gold_nugget') {
+    p.equipped.wear = (p.equipped.wear === 'gold_nugget' ? null : 'gold_nugget');
+  } else {
+    let group = getClassGroup(p.equipped.characterClass);
+    let gear = CLASS_GEAR[group] || CLASS_GEAR.gardener;
+    let allHats = gear.hats.map(h => h.id).filter(h => h !== null);
+    let allTools = gear.tools.map(t => t.id).filter(t => t !== null);
+    if (allHats.includes(icon)) {
+      p.equipped.hat = (p.equipped.hat === icon ? null : icon);
+    } else if (allTools.includes(icon)) {
+      p.equipped.tool = (p.equipped.tool === icon ? null : icon);
+    }
   }
   safeSet('rpg_players', players);
   renderStudio();
@@ -2512,6 +2616,7 @@ function renderQuests() {
 
   // Tier banner
   let banner = document.getElementById('tier-banner');
+  let eco = getCommerceStatus();
   let modeLabel = freeRoam ? '<span style="color:var(--accent-green);">🎮 Free Roam — all quests unlocked</span>' : '<span style="color:var(--text-dim);">🛡️ Adventure Mode — complete 50% of a tier within one guild to unlock the next</span>';
   banner.innerHTML = `
     <div style="font-weight:bold; color:var(--accent-gold); margin-bottom:0.4rem;">Badge Progression</div>
@@ -2520,6 +2625,7 @@ function renderQuests() {
       <span class="tier-pill ${progress.straw.unlocked?'unlocked':'locked'}">🌾 Straw ${progress.straw.done}/${progress.straw.total} ${progress.straw.unlocked?'':'🔒'}</span>
       <span class="tier-pill ${progress.wood.unlocked?'unlocked':'locked'}">🪵 Wood ${progress.wood.done}/${progress.wood.total} ${progress.wood.unlocked?'':'🔒'}</span>
       <span class="tier-pill ${progress.iron.unlocked?'unlocked':'locked'}">⚙️ Iron ${progress.iron.done}/${progress.iron.total} ${progress.iron.unlocked?'':'🔒'}</span>
+      <span class="tier-pill ${eco.earned ? 'gold' : 'locked'}">⛏️ Gold Nugget ${eco.done}/${eco.total}${eco.earned ? ' ✨' : ''}</span>
     </div>
     <p style="font-size:0.8em; color:var(--text-dim); margin-top:0.4rem;">${modeLabel}</p>
   `;
@@ -2828,6 +2934,24 @@ function finalizeQuest(qId, icon) {
   }
   let unlockMsg = justUnlocked.length ? '\n\n🎉 New tiers unlocked: ' + justUnlocked.join(', ') + '.' : '';
 
+  // Gold Nugget: finish the whole Commerce guild to earn the economic badge
+  if (isCommerceQuest(qId) && !completedQuests.includes('commerce_gold_nugget')) {
+    let eco = getCommerceStatus();
+    if (eco.done >= eco.total && eco.total > 0) {
+      completedQuests.push('commerce_gold_nugget');
+      // Every family member gets to carry the nugget in their wardrobe
+      players.forEach(p => {
+        if (!p.wardrobe.some(w => w.id === 'gold_nugget')) {
+          p.wardrobe.push({ id: 'gold_nugget', icon: '⛏️', name: 'Gold Nugget', level: 1, prefix: 'Gold' });
+        }
+      });
+      safeSet('rpg_completed', completedQuests);
+      safeSet('rpg_gold_nugget', true);
+      safeSet('rpg_players', players);
+      setTimeout(() => celebrateGold(true), 350);
+    }
+  }
+
   alert('Quest Complete! Items added to participants\' wardrobes.' + unlockMsg);
 }
 
@@ -2956,6 +3080,7 @@ function renderSchoolhouse() {
 // ---- Commons ----
 function renderCommons() {
   let progress = getTierProgress();
+  let eco = getCommerceStatus();
   let totalQuests = progress.sand.total + progress.straw.total + progress.wood.total + progress.iron.total;
   let totalDone = progress.sand.done + progress.straw.done + progress.wood.done + progress.iron.done;
   let totalWardrobe = players.reduce((sum, p) => sum + p.wardrobe.length, 0);
@@ -2968,6 +3093,7 @@ function renderCommons() {
     <div class="achievement-card"><div class="icon">🌾</div><div class="value">${progress.straw.done}/${progress.straw.total}</div><div class="label">Straw Badges</div></div>
     <div class="achievement-card"><div class="icon">🪵</div><div class="value">${progress.wood.done}/${progress.wood.total}</div><div class="label">Wood Badges</div></div>
     <div class="achievement-card"><div class="icon">⚙️</div><div class="value">${progress.iron.done}/${progress.iron.total}</div><div class="label">Iron Badges</div></div>
+    <div class="achievement-card" style="${eco.earned ? 'border-color:var(--accent-gold); box-shadow:0 0 14px rgba(233,196,106,0.4);' : ''}"><div class="icon">⛏️</div><div class="value">${eco.earned ? '✦ Earned' : '—'}</div><div class="label">Gold Nugget (${eco.done}/${eco.total})</div></div>
     <div class="achievement-card"><div class="icon">👥</div><div class="value">${players.length}</div><div class="label">Family Members</div></div>
     <div class="achievement-card"><div class="icon">🏫</div><div class="value">${attendance.days}</div><div class="label">School Days</div></div>
   `;
@@ -3028,11 +3154,48 @@ function toggleRing(ringId) {
   }
 }
 
+// ---- Money Lab / Gold Nugget ----
+function isCommerceQuest(qId) {
+  return qId.indexOf('commerce_') === 0 && qId !== 'commerce_gold_nugget';
+}
+function getCommerceStatus() {
+  let a = allAspects.find(x => x.name === 'Commerce');
+  if (!a) return { done: 0, total: 0, earned: false };
+  let total = 0, done = 0;
+  ['sand','straw','wood','iron'].forEach(t => {
+    (a[t] || []).forEach(q => {
+      total++;
+      if (completedQuests.includes(makeQuestId('Commerce', t, q[0]))) done++;
+    });
+  });
+  return { done, total, earned: !!safeGet('rpg_gold_nugget', false) };
+}
+function celebrateGold(show) {
+  let ov = document.getElementById('gold-modal-overlay');
+  if (!ov) return;
+  ov.style.display = show ? 'flex' : 'none';
+}
+function dismissGold() { celebrateGold(false); }
+
 // ---- Init ----
 // If returning player, go straight to village
 if (players.length > 0) {
   document.getElementById('nav-bar').style.display = 'flex';
 }
 </script>
+
+<!-- Gold Nugget celebration -->
+<div class="gold-modal-overlay" id="gold-modal-overlay">
+  <div class="gold-modal" id="gold-modal">
+    <span class="gold-nugget-emoji">⛏️</span>
+    <h2 style="color:var(--accent-gold); text-align:center;">Gold Nugget Earned!</h2>
+    <p style="color:var(--text-light); text-align:center;">You worked the entire Commerce guild — budgets, currency exchange, paper trading, even a family forex night. That's real financial skill, earned in the real world.</p>
+    <p style="color:var(--text-dim); font-size:0.9em; text-align:center; margin-top:0.4rem;">The Gold Nugget is now part of your family's story. No real money was moved — only understanding.</p>
+    <div style="margin-top:1rem; text-align:center;">
+      <button class="gold-btn" onclick="dismissGold()">Glow on ✨</button>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>

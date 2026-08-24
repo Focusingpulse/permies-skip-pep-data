@@ -325,16 +325,31 @@ const VILLAGE_QUESTS = [
     type: "PEP",
     biomes: ["apartment","suburb","rural"],
     name: "Commerce",
-    desc: "Earn money, trade value, and keep simple records for real-world work.",
+    desc: "Earn money, trade value, keep records, and learn how currencies move \u2014 from pocket change to the Gold Nugget vault.",
     sand: [
-      ["Sell or Barter a Homemade Item","Make something and trade or sell it to someone else.",["Economics","Art"],"💰"],
+      ["Sell or Trade Something Homemade","Make something and trade or sell it to someone else.",["Economics","Art"],"💰"],
       ["Track a Simple Budget","Write down income and expenses for a week.",["Math","Writing"],"📒"],
       ["Offer a Service and Track the Earnings","Do a paid or traded job and record what you earned.",["Economics","Math"],"🪙"],
-      ["Create a Mini Online Listing","Write a simple listing for something you made or offer.",["Writing","Economics"],"🖥️"]
+      ["Create a Mini Online Listing","Write a simple listing for something you made or offer.",["Writing","Economics"],"🖥️"],
+      ["Meet a Foreign Currency","Discover one currency, its symbol, and the countries that use it.",["Geography","Economics"],"🌍"]
     ],
-    straw: [],
-    wood: [],
-    iron: []
+    straw: [
+      ["Run a Family Currency Exchange","Trade a little pretend money between two currencies and find the total together.",["Math","Economics"],"🔄"],
+      ["Start a Paper-Trading Journal","Write down one pretend trade: what you expected vs what actually happened.",["Writing","Math"],"📓"],
+      ["Compare Buying Power","Ask what one common item costs in dollars, euros, and francs.",["Math","Economics"],"⚖️"],
+      ["Save Toward a Tiny Goal","Tuck a little pocket money toward one small goal for a month and track it.",["Math","Economics"],"🐢"]
+    ],
+    wood: [
+      ["Track Exchange Rates for a Week","Watch one currency pair for a week and note up, down, or sideways.",["Math","Economics"],"📈"],
+      ["Run a Simulated Trade","Use a free simulator: place one paper trade with a stop-loss and log the outcome.",["Economics","Math"],"🎮"],
+      ["Plan a Get-Off-the-Dollar Experiment","Design one small way your family could trade value beyond the dollar.",["Economics","Writing"],"♻️"],
+      ["Host the Family Forex Game Night","Bring the family to a free simulator and run a mission night.",["Economics","Math"],"🎲"]
+    ],
+    iron: [
+      ["Present a Family Financial Freedom Plan","Lay out the family plan for saving, exchanging, and growing value your way.",["Writing","Economics"],"🗺️"],
+      ["Run a Simulated Season","Track a pretend multi-currency portfolio for a full season and log every choice.",["Economics","Math"],"📓"],
+      ["Keep the Golden Rule Alive","Teach a friend or sibling: protect money first, learn second, trade third.",["Economics","Writing"],"🏅"]
+    ]
   },
   {
     type: "PEP",
