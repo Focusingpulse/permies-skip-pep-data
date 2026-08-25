@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+
+# one-off build/check scripts (generators are tracked)
+_count.py
+_list.py
+_manifest.json
+_build_manifest.py
+_ordered.py
+_ordered_quests.txt
+_pairs.txt
+_check_keys.py
+_smoke.py
+_diag.py
+_diag.txt
+_fix_unicode.py
+_fix_moneylab.py
+_tag_static.py
+_tag2.py
+_validate_js.py

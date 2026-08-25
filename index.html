@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Village — A Roll Making Game (RMG)</title>
 <script src="data.js"></script>
+<script src="translations.js"></script>
 <style>
 :root {
   --bg-dark: #1a1a2e;
@@ -725,23 +726,27 @@ details[open] summary::after { transform: rotate(180deg); }
 
 <!-- Navigation -->
 <div class="nav-bar" id="nav-bar">
-  <button class="nav-btn" id="nav-setup" onclick="showScreen('setup')">Setup</button>
-  <button class="nav-btn" id="nav-village" onclick="showScreen('village')">Village</button>
-  <button class="nav-btn" id="nav-studio" onclick="showScreen('studio')">Studio</button>
-  <button class="nav-btn" id="nav-quests" onclick="showScreen('quests')">Quests</button>
-  <button class="nav-btn" id="nav-school" onclick="showScreen('school')">Schoolhouse</button>
-  <button class="nav-btn" id="nav-library" onclick="showScreen('library')">Library</button>
-  <button class="nav-btn" id="nav-circle" onclick="showScreen('circle')">Mentor's Circle</button>
-  <button class="nav-btn" id="nav-commons" onclick="showScreen('commons')">Commons</button>
+  <button class="nav-btn" id="nav-setup" onclick="showScreen('setup')" data-i18n="Setup">Setup</button>
+  <button class="nav-btn" id="nav-village" onclick="showScreen('village')" data-i18n="Village">Village</button>
+  <button class="nav-btn" id="nav-studio" onclick="showScreen('studio')" data-i18n="Studio">Studio</button>
+  <button class="nav-btn" id="nav-quests" onclick="showScreen('quests')" data-i18n="Quests">Quests</button>
+  <button class="nav-btn" id="nav-school" onclick="showScreen('school')" data-i18n="Schoolhouse">Schoolhouse</button>
+  <button class="nav-btn" id="nav-library" onclick="showScreen('library')" data-i18n="Library">Library</button>
+  <button class="nav-btn" id="nav-circle" onclick="showScreen('circle')" data-i18n="Mentor's Circle">Mentor's Circle</button>
+  <button class="nav-btn" id="nav-commons" onclick="showScreen('commons')" data-i18n="Commons">Commons</button>
+  <select id="lang-select" onchange="setLang(this.value)" title="Language / Idioma" style="background:var(--bg-panel); color:var(--text-light); border:1px solid var(--border-subtle); border-radius:6px; padding:0.35rem 0.5rem; font-size:0.8rem;">
+    <option value="en">English</option>
+    <option value="es">Español</option>
+  </select>
 </div>
 
 <!-- Title + Intro Screen (one scrollable page) -->
 <div class="screen active" id="screen-title">
   <div class="title-art">🌾</div>
-  <h1 class="title-main">WELCOME</h1>
-  <p class="title-sub">The Village — A Roll Making Game (RMG) for families</p>
-  <p class="title-sub" style="font-size:0.8em; margin-top:0.3rem; color:var(--text-dim);">A real-life skill-building journey \u2014 not a digital game you play on a screen. Build real skills, grow real attributes, earn real badges in the real world.</p>
-  <div style="margin-top:1.5rem; color:var(--text-dim); font-size:0.9rem; animation: bounce 2s infinite;">▼ Scroll down ▼</div>
+  <h1 class="title-main" data-i18n="WELCOME">WELCOME</h1>
+  <p class="title-sub" data-i18n="The Village — A Roll Making Game (RMG) for families">The Village — A Roll Making Game (RMG) for families</p>
+  <p class="title-sub" style="font-size:0.8em; margin-top:0.3rem; color:var(--text-dim);" data-i18n="A real-life skill-building journey — not a digital game you play on a screen. Build real skills, grow real attributes, earn real badges in the real world.">A real-life skill-building journey — not a digital game you play on a screen. Build real skills, grow real attributes, earn real badges in the real world.</p>
+  <div style="margin-top:1.5rem; color:var(--text-dim); font-size:0.9rem; animation: bounce 2s infinite;" data-i18n="▼ Scroll down ▼">▼ Scroll down ▼</div>
 </div>
 
 <!-- Intro Briefing -->
@@ -915,127 +920,127 @@ details[open] summary::after { transform: rotate(180deg); }
   </div>
 
   <div class="setup-section">
-    <h3>8. Start Over / Reset</h3>
+    <h3 data-i18n="8. Start Over / Reset">8. Start Over / Reset</h3>
     <p style="font-size:0.8em; color:var(--text-dim); margin-bottom:0.4rem;">Wipe all progress, quests, attendance, and player data from this browser and start fresh. <strong>Cannot be undone.</strong></p>
     <button class="btn" style="border-color:var(--accent-orange); color:var(--accent-orange);" onclick="resetVillage()">🔄 Reset Village</button>
   </div>
 
-  <button class="btn-success" onclick="saveVillage()">Save & Enter Village</button>
+  <button class="btn-success" onclick="saveVillage()" data-i18n="Save & Enter Village">Save & Enter Village</button>
 </div>
 
 <!-- Village Hub -->
 <div class="screen" id="screen-village">
   <div class="village-header">
-    <h2>Your Family Guild</h2>
-    <p>Click a character to open the Avatar Studio</p>
+    <h2 data-i18n="Your Family Guild">Your Family Guild</h2>
+    <p data-i18n="Click a character to open the Avatar Studio">Click a character to open the Avatar Studio</p>
   </div>
   <div style="display:flex; gap:0.5rem; justify-content:center; margin-bottom:1rem; flex-wrap:wrap;">
-    <button class="btn btn-small" onclick="exportVillage()">💾 Save Village (Download File)</button>
-    <button class="btn btn-small" onclick="document.getElementById('village-import-file').click()">📂 Load Saved Village</button>
-    <button class="btn btn-small" style="border-color:var(--accent-orange); color:var(--accent-orange);" onclick="resetVillage()">🔄 Reset</button>
+    <button class="btn btn-small" onclick="exportVillage()" data-i18n="Save Village (Download File)">💾 Save Village (Download File)</button>
+    <button class="btn btn-small" onclick="document.getElementById('village-import-file').click()" data-i18n="Load Saved Village">📂 Load Saved Village</button>
+    <button class="btn btn-small" style="border-color:var(--accent-orange); color:var(--accent-orange);" onclick="resetVillage()" data-i18n="🔄 Reset">🔄 Reset</button>
     <input type="file" id="village-import-file" accept=".json" style="display:none;" onchange="importVillage(event)">
   </div>
   <div class="progress-overview" id="village-progress"></div>
   <div id="village-list"></div>
-  <button class="btn-success" style="margin-top:1rem;" onclick="showScreen('quests')">Start Questing</button>
+  <button class="btn-success" style="margin-top:1rem;" onclick="showScreen('quests')" data-i18n="Start Questing">Start Questing</button>
 </div>
 
 <!-- Avatar Studio -->
 <div class="screen" id="screen-studio">
-  <h2 style="text-align:center; color:var(--accent-gold);">Avatar Studio</h2>
+  <h2 style="text-align:center; color:var(--accent-gold);" data-i18n="Avatar Studio">Avatar Studio</h2>
   <p style="text-align:center; color:var(--text-dim); margin-bottom:0.5rem;" id="studio-player-name"></p>
   <div class="studio-stage" id="studio-stage">
     <div class="studio-bg" id="studio-bg-display"></div>
     <div id="studio-avatar-display"></div>
   </div>
   <div class="studio-tabs">
-    <button class="studio-tab active" id="tab-class" onclick="switchStudioTab('class')">Class</button>
-    <button class="studio-tab" id="tab-face" onclick="switchStudioTab('face')">Face</button>
-    <button class="studio-tab" id="tab-hair" onclick="switchStudioTab('hair')">Hair</button>
-    <button class="studio-tab" id="tab-outfit" onclick="switchStudioTab('outfit')">Outfit</button>
-    <button class="studio-tab" id="tab-gear" onclick="switchStudioTab('gear')">Gear</button>
-    <button class="studio-tab" id="tab-bg" onclick="switchStudioTab('bg')">Background</button>
-    <button class="studio-tab" id="tab-wardrobe" onclick="switchStudioTab('wardrobe')">Wardrobe</button>
+    <button class="studio-tab active" id="tab-class" onclick="switchStudioTab('class')" data-i18n="Class">Class</button>
+    <button class="studio-tab" id="tab-face" onclick="switchStudioTab('face')" data-i18n="Face">Face</button>
+    <button class="studio-tab" id="tab-hair" onclick="switchStudioTab('hair')" data-i18n="Hair">Hair</button>
+    <button class="studio-tab" id="tab-outfit" onclick="switchStudioTab('outfit')" data-i18n="Outfit">Outfit</button>
+    <button class="studio-tab" id="tab-gear" onclick="switchStudioTab('gear')" data-i18n="Gear">Gear</button>
+    <button class="studio-tab" id="tab-bg" onclick="switchStudioTab('bg')" data-i18n="Background">Background</button>
+    <button class="studio-tab" id="tab-wardrobe" onclick="switchStudioTab('wardrobe')" data-i18n="Wardrobe">Wardrobe</button>
   </div>
   <div class="studio-options" id="studio-options-area"></div>
-  <button class="btn-success" style="margin-top:1rem;" onclick="showScreen('village')">Save & Exit to Village</button>
+  <button class="btn-success" style="margin-top:1rem;" onclick="showScreen('village')" data-i18n="Save & Exit to Village">Save & Exit to Village</button>
 </div>
 
 <!-- Quest Board -->
 <div class="screen" id="screen-quests">
-  <h2 style="text-align:center; color:var(--accent-gold);">The Quest Board</h2>
-  <div class="data-warning" id="data-warning">Data.js not found or failed to load. Using fallback data.</div>
+  <h2 style="text-align:center; color:var(--accent-gold);" data-i18n="The Quest Board">The Quest Board</h2>
+  <div class="data-warning" id="data-warning" data-i18n="Data.js not found or failed to load. Using fallback data.">Data.js not found or failed to load. Using fallback data.</div>
   <div class="level-banner" id="tier-banner"></div>
   <div class="quest-filters">
-    <button class="nav-btn active" id="filter-all" onclick="setQuestFilter('all')">All Quests</button>
-    <button class="nav-btn" id="filter-biome" onclick="setQuestFilter('biome')">My Biome Only</button>
+    <button class="nav-btn active" id="filter-all" onclick="setQuestFilter('all')" data-i18n="All Quests">All Quests</button>
+    <button class="nav-btn" id="filter-biome" onclick="setQuestFilter('biome')" data-i18n="My Biome Only">My Biome Only</button>
   </div>
   <div id="quest-list"></div>
 </div>
 
 <!-- Schoolhouse -->
 <div class="screen" id="screen-school">
-  <h2 style="text-align:center; color:var(--accent-gold); margin-bottom:1rem;">The Colorado Schoolhouse</h2>
+  <h2 style="text-align:center; color:var(--accent-gold); margin-bottom:1rem;" data-i18n="The Colorado Schoolhouse">The Colorado Schoolhouse</h2>
   <div class="schoolhouse-box">
-    <h3>Attendance Tracker (CO Law: 172 Days)</h3>
+    <h3 data-i18n="Attendance Tracker (CO Law: 172 Days)">Attendance Tracker (CO Law: 172 Days)</h3>
     <div class="stat-row">
-      <span><strong>Days Completed:</strong> <span id="att-days">0</span> / 172</span>
+      <span><strong data-i18n="Days Completed:">Days Completed:</strong> <span id="att-days">0</span> / 172</span>
       <div class="progress-bar"><div class="progress-fill" id="att-bar"></div></div>
     </div>
     <div class="stat-row">
-      <span><strong>Hours Logged:</strong> <span id="att-hours">0</span> hrs / 688 hrs</span>
+      <span><strong data-i18n="Hours Logged:">Hours Logged:</strong> <span id="att-hours">0</span> hrs / 688 hrs</span>
       <div class="progress-bar"><div class="progress-fill" id="att-hours-bar"></div></div>
     </div>
     <div style="display:flex; gap:0.5rem; margin-top:0.5rem; flex-wrap:wrap;">
-      <button class="btn btn-small" onclick="logDay(4)">Log 4-Hour School Day</button>
-      <button class="btn btn-small" onclick="logDay(1)">Log 1-Hour Day</button>
+      <button class="btn btn-small" onclick="logDay(4)" data-i18n="Log 4-Hour School Day">Log 4-Hour School Day</button>
+      <button class="btn btn-small" onclick="logDay(1)" data-i18n="Log 1-Hour Day">Log 1-Hour Day</button>
     </div>
   </div>
   <div class="schoolhouse-box">
-    <h3>Academic Transcript (CO Required Subjects)</h3>
-    <p style="font-size:0.85em; color:var(--text-dim); margin-bottom:0.5rem;">Hours are logged from completed quests (2 hrs each) plus any custom hours below.</p>
+    <h3 data-i18n="Academic Transcript (CO Required Subjects)">Academic Transcript (CO Required Subjects)</h3>
+    <p style="font-size:0.85em; color:var(--text-dim); margin-bottom:0.5rem;" data-i18n="Hours are logged from completed quests (2 hrs each) plus any custom hours below.">Hours are logged from completed quests (2 hrs each) plus any custom hours below.</p>
     <div id="transcript-list"></div>
-    <h4 style="margin-top:1rem; color:var(--accent-green);">Log Custom Academic Hours</h4>
+    <h4 style="margin-top:1rem; color:var(--accent-green);" data-i18n="Log Custom Academic Hours">Log Custom Academic Hours</h4>
     <div class="custom-hours-form">
       <select id="custom-subj">
-        <option>Reading</option><option>Writing</option><option>Math</option>
-        <option>Science</option><option>History</option><option>Geography</option>
-        <option>Constitution</option><option>Economics</option>
-        <option>PE</option><option>Health</option><option>Art</option>
+        <option data-i18n="Reading">Reading</option><option data-i18n="Writing">Writing</option><option data-i18n="Math">Math</option>
+        <option data-i18n="Science">Science</option><option data-i18n="History">History</option><option data-i18n="Geography">Geography</option>
+        <option data-i18n="Constitution">Constitution</option><option data-i18n="Economics">Economics</option>
+        <option data-i18n="PE">PE</option><option data-i18n="Health">Health</option><option data-i18n="Art">Art</option>
       </select>
       <input type="number" id="custom-hrs" placeholder="Hrs" min="1" max="8" style="width:60px;">
-      <button class="btn btn-small" onclick="addCustomHours()">Add Hours</button>
+      <button class="btn btn-small" onclick="addCustomHours()" data-i18n="Add Hours">Add Hours</button>
     </div>
   </div>
   <div class="schoolhouse-box">
-    <h3>Bring Your History</h3>
-    <p style="font-size:0.85em; color:var(--text-dim); margin-bottom:0.6rem;">Already partway through your school year with another curriculum? Add your prior days and hours here so the tracker reflects where you actually are.</p>
+    <h3 data-i18n="Bring Your History">Bring Your History</h3>
+    <p style="font-size:0.85em; color:var(--text-dim); margin-bottom:0.6rem;" data-i18n="Already partway through your school year with another curriculum? Add your prior days and hours here so the tracker reflects where you actually are.">Already partway through your school year with another curriculum? Add your prior days and hours here so the tracker reflects where you actually are.</p>
     <div style="display:flex; flex-direction:column; gap:0.5rem; max-width:400px;">
       <div>
-        <label style="font-size:0.85em;">School days already completed</label>
+        <label style="font-size:0.85em;" data-i18n="School days already completed">School days already completed</label>
         <input type="number" id="school-history-days" placeholder="0" min="0" max="172" style="width:100%; background:var(--bg-input); color:var(--text-light); border:1px solid var(--border-subtle); padding:0.5rem; border-radius:6px; margin-top:0.2rem;">
       </div>
       <div>
-        <label style="font-size:0.85em;">Total hours already logged</label>
+        <label style="font-size:0.85em;" data-i18n="Total hours already logged">Total hours already logged</label>
         <input type="number" id="school-history-hours" placeholder="0" min="0" max="688" style="width:100%; background:var(--bg-input); color:var(--text-light); border:1px solid var(--border-subtle); padding:0.5rem; border-radius:6px; margin-top:0.2rem;">
       </div>
       <div>
-        <label style="font-size:0.85em;">Current curriculum (optional)</label>
+        <label style="font-size:0.85em;" data-i18n="Current curriculum (optional)">Current curriculum (optional)</label>
         <input type="text" id="school-history-curriculum" placeholder="e.g. Oak Meadow, DIY, Moving Beyond the Page..." style="width:100%; background:var(--bg-input); color:var(--text-light); border:1px solid var(--border-subtle); padding:0.5rem; border-radius:6px; margin-top:0.2rem;">
       </div>
-      <button class="btn btn-small" style="margin-top:0.3rem; align-self:flex-start;" onclick="applySchoolHistory()">Add History to Tracker</button>
+      <button class="btn btn-small" style="margin-top:0.3rem; align-self:flex-start;" onclick="applySchoolHistory()" data-i18n="Add History to Tracker">Add History to Tracker</button>
     </div>
   </div>
 </div>
 
 <!-- Library -->
 <div class="screen" id="screen-library">
-  <h2 style="text-align:center; color:var(--accent-gold); margin-bottom:1rem;">The Village Library</h2>
+  <h2 style="text-align:center; color:var(--accent-gold); margin-bottom:1rem;" data-i18n="The Village Library">The Village Library</h2>
   <div class="library-box">
-    <p style="text-align:center; font-size:0.85em; color:var(--text-dim); margin-bottom:1rem;">A curated knowledge graph of free, public domain, and government resources for holistic homeschooling.</p>
+    <p style="text-align:center; font-size:0.85em; color:var(--text-dim); margin-bottom:1rem;" data-i18n="A curated knowledge graph of free, public domain, and government resources for holistic homeschooling.">A curated knowledge graph of free, public domain, and government resources for holistic homeschooling.</p>
 
     <div class="lib-category">
-      <h4>Educational Philosophy & Nature Connection</h4>
+      <h4 data-i18n="Educational Philosophy & Nature Connection">Educational Philosophy & Nature Connection</h4>
       <a href="https://www.amazon.com/Coyotes-Guide-Connecting-Nature-Young/dp/1579940250" target="_blank" class="lib-link"><strong>Coyote's Guide to Connecting with Nature:</strong> The essential manual for coyote mentoring — storytelling, sit spots, bird language, tracking, the errand principle, and the 8 Shields model. By Jon Young, Ellen Haas, and Evan McGown.</a>
       <a href="https://8shields.org" target="_blank" class="lib-link"><strong>8 Shields Institute:</strong> The nature-based framework behind coyote mentoring — principles, practices, and design principles for deep nature connection.</a>
       <a href="https://www.jonyoung.org" target="_blank" class="lib-link"><strong>Jon Young — 512 Natural Pathways:</strong> Jon Young's personal site. The 512 Project, the Natural Mind Journey, and decades of research on connection mentoring.</a>
@@ -1045,7 +1050,7 @@ details[open] summary::after { transform: rotate(180deg); }
     </div>
 
     <div class="lib-category">
-      <h4>Colorado Homeschooling</h4>
+      <h4 data-i18n="Colorado Homeschooling">Colorado Homeschooling</h4>
       <a href="https://ed.cde.state.co.us/choice/homeschool" target="_blank" class="lib-link"><strong>CO Dept of Education — Homeschool:</strong> Law, notification, record keeping, and FAQ.</a>
       <a href="https://ed.cde.state.co.us/choice/homeschool-law" target="_blank" class="lib-link"><strong>Colorado Homeschool Law:</strong> Full statute C.R.S. 22-33-104.5.</a>
       <a href="https://cpw.state.co.us" target="_blank" class="lib-link"><strong>Colorado Parks & Wildlife:</strong> Wildlife, ecology, fishing, geology, and conservation.</a>
@@ -1053,14 +1058,14 @@ details[open] summary::after { transform: rotate(180deg); }
     </div>
 
     <div class="lib-category">
-      <h4>Permies & PEP Badges</h4>
+      <h4 data-i18n="Permies & PEP Badges">Permies & PEP Badges</h4>
       <a href="https://permies.com/f/178" target="_blank" class="lib-link"><strong>Permies PEP Forum:</strong> Post your Otis-protocol evidence here for official badge certification.</a>
       <a href="https://permies.com/wiki/114855/Apply-PEP-Badge" target="_blank" class="lib-link"><strong>How to Apply for Your PEP Badge:</strong> Step-by-step guide to submitting badge evidence.</a>
       <a href="https://permies.com/wiki/skip-pep-bb" target="_blank" class="lib-link"><strong>All 22 PEP Badges & BBs:</strong> Full list of badge aspects, badge bits, and program levels.</a>
     </div>
 
     <div class="lib-category">
-      <h4>Curriculum by Subject</h4>
+      <h4 data-i18n="Curriculum by Subject">Curriculum by Subject</h4>
       <a href="https://www.gutenberg.org" target="_blank" class="lib-link"><strong>Reading & Writing:</strong> Project Gutenberg — 70,000+ free eBooks.</a>
       <a href="https://www.khanacademy.org/math" target="_blank" class="lib-link"><strong>Math:</strong> Khan Academy — free math courses K-12 and beyond.</a>
       <a href="https://www.khanacademy.org/science" target="_blank" class="lib-link"><strong>Science:</strong> Khan Academy — biology, chemistry, physics, and more.</a>
@@ -1071,12 +1076,29 @@ details[open] summary::after { transform: rotate(180deg); }
     </div>
 
     <div class="lib-category">
-      <h4 style="color:var(--accent-gold);">💰 The Money Lab — Financial Literacy &amp; Foreign Exchange</h4>
+      <h4 style="color:var(--accent-gold);" data-i18n="The Money Lab — Financial Literacy & Foreign Exchange">💰 The Money Lab — Financial Literacy &amp; Foreign Exchange</h4>
       <p style="font-size:0.8em; color:var(--text-dim); margin-bottom:0.5rem;">The Village's family financial track. Learn how money, currencies, charts, risk, and patience actually work — through coloring, play, and <strong>simulated</strong> trading only. No real money needed, and we never hand kids real currency. The rule is simple: protect the money you have first, learn second, trade third. Families that want to "get off the dollar" a little at a time can grow this habit safely.</p>
 
       <p style="font-size:0.85em; color:var(--accent-green); margin-top:0.4rem;"><strong>🖍️ The 15-Sheet Coloring Curriculum</strong> — print each page, color it in, and talk about it after.</p>
-      <div style="line-height:1.7; font-size:0.85em; color:var(--text-dim);">
-        1. What Is Money? · 2. What Is a Currency? · 3. Currency Pairs · 4. The Currency Exchange Shop · 5. Up or Down? · 6. Candlesticks · 7. Bull vs. Bear · 8. Support &amp; Resistance (the castle) · 9. Stop Loss = Safety Net · 10. Risk vs. Reward · 11. Patience Pays · 12. The Trading Detective · 13. Paper Trading Day · 14. Trading Journal · 15. The Golden Rule of Trading
+      <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin:0.5rem 0;">
+        <a href="money-lab/print-all.html" target="_blank" class="lib-link" style="display:inline-block; background:var(--accent-green-dark); color:var(--text-bright); padding:0.5rem 1rem; border-radius:8px; font-weight:bold; font-size:0.9em;" data-i18n="Print All 15 Sheets">🖨️ Print All 15 Sheets</a>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:0.25rem 0.75rem; font-size:0.82em; line-height:1.5;">
+        <a href="money-lab/sheet-01.html" target="_blank" class="lib-link">1. What Is Money?</a>
+        <a href="money-lab/sheet-02.html" target="_blank" class="lib-link">2. What Is a Currency?</a>
+        <a href="money-lab/sheet-03.html" target="_blank" class="lib-link">3. Currency Pairs</a>
+        <a href="money-lab/sheet-04.html" target="_blank" class="lib-link">4. The Currency Exchange Shop</a>
+        <a href="money-lab/sheet-05.html" target="_blank" class="lib-link">5. Up or Down?</a>
+        <a href="money-lab/sheet-06.html" target="_blank" class="lib-link">6. Candlesticks</a>
+        <a href="money-lab/sheet-07.html" target="_blank" class="lib-link">7. Bull vs. Bear</a>
+        <a href="money-lab/sheet-08.html" target="_blank" class="lib-link">8. Support &amp; Resistance (the Castle)</a>
+        <a href="money-lab/sheet-09.html" target="_blank" class="lib-link">9. Stop Loss = Safety Net</a>
+        <a href="money-lab/sheet-10.html" target="_blank" class="lib-link">10. Risk vs. Reward</a>
+        <a href="money-lab/sheet-11.html" target="_blank" class="lib-link">11. Patience Pays</a>
+        <a href="money-lab/sheet-12.html" target="_blank" class="lib-link">12. The Trading Detective</a>
+        <a href="money-lab/sheet-13.html" target="_blank" class="lib-link">13. Paper Trading Day</a>
+        <a href="money-lab/sheet-14.html" target="_blank" class="lib-link">14. Trading Journal</a>
+        <a href="money-lab/sheet-15.html" target="_blank" class="lib-link">15. The Golden Rule of Trading</a>
       </div>
 
       <p style="font-size:0.85em; color:var(--accent-green); margin-top:0.4rem;"><strong>🕹️ Free Simulators — all browser, no signup</strong></p>
@@ -1150,20 +1172,20 @@ details[open] summary::after { transform: rotate(180deg); }
 
 <!-- Commons -->
 <div class="screen" id="screen-commons">
-  <h2 style="text-align:center; color:var(--accent-gold); margin-bottom:1rem;">The Village Commons</h2>
+  <h2 style="text-align:center; color:var(--accent-gold); margin-bottom:1rem;" data-i18n="The Village Commons">The Village Commons</h2>
   <div class="commons-box">
-    <h3>Family Achievements</h3>
+    <h3 data-i18n="Family Achievements">Family Achievements</h3>
     <div class="family-achievements" id="commons-achievements"></div>
   </div>
   <div class="commons-box">
-    <h3>Bridge to Permies</h3>
+    <h3 data-i18n="Bridge to Permies">Bridge to Permies</h3>
     <p>Post your evidence to the <a href="https://permies.com/f/178/" target="_blank" style="color:var(--accent-green);">PEP Forum</a> to get officially certified by Paul Wheaton's team.</p>
     <p style="font-size:0.85em; color:var(--text-dim); margin-top:0.5rem;">Official PEP quests (marked with the shield icon) count toward Permies certification. RPG Add-on quests (marked with the sparkle icon) are custom to The Village and do not count toward official PEP badges.</p>
     <button class="btn btn-small" style="margin-top:0.5rem;" onclick="window.open('https://permies.com/f/178/','_blank')">Open PEP Forum</button>
     <button class="btn btn-small" style="margin-top:0.5rem;" onclick="window.open('https://permies.com/wiki/114855/Apply-PEP-Badge','_blank')">How to Apply for a Badge</button>
   </div>
   <div class="commons-box">
-    <h3>Optional: The Offline Archive</h3>
+    <h3 data-i18n="Optional: The Offline Archive">Optional: The Offline Archive</h3>
     <p>For families wanting a complete offline backup drive, download these open-source collections to a local hard drive:</p>
     <div style="margin-top:0.5rem; line-height:1.8;">
       <a href="https://www.kiwix.org/en/" target="_blank" class="lib-link"><strong>[Knowledge]</strong> Kiwix — Wikipedia, Project Gutenberg, Stack Exchange offline</a>
@@ -1183,8 +1205,8 @@ details[open] summary::after { transform: rotate(180deg); }
 
 <!-- Mentor's Circle -->
 <div class="screen" id="screen-circle">
-  <h2 style="text-align:center; color:var(--accent-gold); margin-bottom:0.5rem;">The Mentor's Circle</h2>
-  <p style="text-align:center; color:var(--text-dim); font-size:0.9em; margin-bottom:1rem; max-width:600px; margin-left:auto; margin-right:auto;">
+  <h2 style="text-align:center; color:var(--accent-gold); margin-bottom:0.5rem;" data-i18n="Mentor's Circle">The Mentor's Circle</h2>
+  <p style="text-align:center; color:var(--text-dim); font-size:0.9em; margin-bottom:1rem; max-width:600px; margin-left:auto; margin-right:auto;" data-i18n="The 64 cultural elements of deep nature connection — from Jon Young's 512 Project and the 8 Shields framework. These practices weave the invisible fabric of community that makes permaculture skills sustainable across generations.">
     The 64 cultural elements of deep nature connection — from Jon Young's 512 Project and the 8 Shields framework.
     These practices weave the invisible fabric of community that makes permaculture skills sustainable across generations.
   </p>
@@ -1192,6 +1214,59 @@ details[open] summary::after { transform: rotate(180deg); }
 </div>
 
 <script>
+// ---- i18n (translation engine) ----
+let lang = 'en';
+try { lang = localStorage.getItem('rpg_lang') || 'en'; } catch(e) {}
+function curL() { return (typeof LANG !== 'undefined' && LANG[lang]) ? LANG[lang] : null; }
+function t(s) {
+  if (lang === 'en') return s;
+  const L = curL(); if (!L) return s;
+  if (L.ui && L.ui[s] !== undefined) return L.ui[s];
+  if (L.subjects && L.subjects[s] !== undefined) return L.subjects[s];
+  if (L.roles && L.roles[s] !== undefined) return L.roles[s];
+  if (L.tiers && L.tiers[s] !== undefined) return L.tiers[s];
+  if (L.quests && L.quests[s] && L.quests[s].title) return L.quests[s].title;
+  if (L.guilds && L.guilds[s] && L.guilds[s].name) return L.guilds[s].name;
+  return s;
+}
+function td(s) {
+  if (lang === 'en') return s;
+  const L = curL(); if (!L) return s;
+  if (L.quests && L.quests[s] && L.quests[s].desc) return L.quests[s].desc;
+  if (L.guilds && L.guilds[s] && L.guilds[s].desc) return L.guilds[s].desc;
+  if (L.ui && L.ui[s] !== undefined) return L.ui[s];
+  return s;
+}
+function RoleLabel(r) {
+  return { tracker: 'Tracker', witness: 'Witness', hearth: 'Hearth Tender', mentor: 'Mentor' }[r] || r;
+}
+function setLang(l) {
+  lang = l;
+  try { localStorage.setItem('rpg_lang', l); } catch(e) {}
+  const sel = document.getElementById('lang-select'); if (sel) sel.value = l;
+  try { document.documentElement.lang = lang; } catch(e) {}
+  try { document.title = t('The Village — A Roll Making Game (RMG)'); } catch(e) {}
+  translateStatic();
+  const cur = document.querySelector('.screen.active');
+  if (cur) {
+    const s = cur.id.replace('screen-', '');
+    if (s === 'setup') renderSetup();
+    else if (s === 'village') renderVillage();
+    else if (s === 'studio') renderStudio();
+    else if (s === 'quests') renderQuests();
+    else if (s === 'school') renderSchoolhouse();
+    else if (s === 'commons') renderCommons();
+    else if (s === 'circle') renderCircle();
+  }
+}
+function translateStatic() {
+  if (lang === 'en') return;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.getAttribute('data-i18n');
+    const v = t(k);
+    if (v !== k) el.textContent = v;
+  });
+}
 // ---- State Management ----
 function safeGet(k, f) { try { let d = localStorage.getItem(k); return d ? JSON.parse(d) : f; } catch(e) { return f; } }
 function safeSet(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch(e) {} }
@@ -2037,12 +2112,12 @@ function renderSetup() {
     const d = document.createElement('div');
     d.className = 'player-row';
     d.innerHTML = `
-      <input type="text" placeholder="Player Name" value="${p.name}" onchange="players[${i}].name=this.value">
+      <input type="text" placeholder="${t('Player Name')}" value="${p.name}" onchange="players[${i}].name=this.value">
       <select onchange="players[${i}].role=this.value">
-        <option value="tracker" ${p.role==='tracker'?'selected':''}>Tracker</option>
-        <option value="witness" ${p.role==='witness'?'selected':''}>Witness</option>
-        <option value="hearth" ${p.role==='hearth'?'selected':''}>Hearth Tender</option>
-        <option value="mentor" ${p.role==='mentor'?'selected':''}>Mentor</option>
+        <option value="tracker" ${p.role==='tracker'?'selected':''}>${t('Tracker')}</option>
+        <option value="witness" ${p.role==='witness'?'selected':''}>${t('Witness')}</option>
+        <option value="hearth" ${p.role==='hearth'?'selected':''}>${t('Hearth Tender')}</option>
+        <option value="mentor" ${p.role==='mentor'?'selected':''}>${t('Mentor')}</option>
       </select>
       <button class="btn-danger" onclick="players.splice(${i},1); renderSetup();">X</button>
     `;
@@ -2355,8 +2430,8 @@ function renderVillage() {
       </div>
       <div class="player-card-info">
         <strong>${p.name}</strong><br>
-        <span class="role">${roleIcons[p.role] || ''} ${p.role}</span>
-        <div class="stats">Quests: ${getPlayerQuestCount(p.name)} | Wardrobe: ${p.wardrobe.length} items</div>
+        <span class="role">${roleIcons[p.role] || ''} ${t(RoleLabel(p.role))}</span>
+        <div class="stats">${t('Quests:')} ${getPlayerQuestCount(p.name)} | ${t('Wardrobe:')} ${p.wardrobe.length} ${t('items')}</div>
       </div>
     `;
     card.onclick = () => { activeStudioPlayer = i; showScreen('studio'); };
@@ -2367,14 +2442,14 @@ function renderVillage() {
   let progress = getTierProgress();
   let eco = getCommerceStatus();
   document.getElementById('village-progress').innerHTML = `
-    <strong style="color:var(--accent-gold);">Family Progress</strong><br>
-    <span style="font-size:0.85em; color:var(--text-dim);">${completedQuests.length} quests completed</span>
+    <strong style="color:var(--accent-gold);">${t('Family Progress')}</strong><br>
+    <span style="font-size:0.85em; color:var(--text-dim);">${completedQuests.length} ${t('quests completed')}</span>
     <div class="badge-bar">
-      <span class="badge-chip ${progress.sand.unlocked?'unlocked':'locked'}">🟤 Sand ${progress.sand.done}/${progress.sand.total}</span>
-      <span class="badge-chip ${progress.straw.unlocked?'unlocked':'locked'}">🌾 Straw ${progress.straw.done}/${progress.straw.total}</span>
-      <span class="badge-chip ${progress.wood.unlocked?'unlocked':'locked'}">🪵 Wood ${progress.wood.done}/${progress.wood.total}</span>
-      <span class="badge-chip ${progress.iron.unlocked?'unlocked':'locked'}">⚙️ Iron ${progress.iron.done}/${progress.iron.total}</span>
-      <span class="badge-chip ${eco.earned ? 'gold' : 'locked'}">⛏️ Gold Nugget ${eco.done}/${eco.total}${eco.earned ? ' ✨' : ''}</span>
+      <span class="badge-chip ${progress.sand.unlocked?'unlocked':'locked'}">🟤 ${t('Sand')} ${progress.sand.done}/${progress.sand.total}</span>
+      <span class="badge-chip ${progress.straw.unlocked?'unlocked':'locked'}">🌾 ${t('Straw')} ${progress.straw.done}/${progress.straw.total}</span>
+      <span class="badge-chip ${progress.wood.unlocked?'unlocked':'locked'}">🪵 ${t('Wood')} ${progress.wood.done}/${progress.wood.total}</span>
+      <span class="badge-chip ${progress.iron.unlocked?'unlocked':'locked'}">⚙️ ${t('Iron')} ${progress.iron.done}/${progress.iron.total}</span>
+      <span class="badge-chip ${eco.earned ? 'gold' : 'locked'}">⛏️ ${t('Gold Nugget')} ${eco.done}/${eco.total}${eco.earned ? ' ✨' : ''}</span>
     </div>
   `;
 }
@@ -2621,15 +2696,15 @@ function renderQuests() {
   // Tier banner
   let banner = document.getElementById('tier-banner');
   let eco = getCommerceStatus();
-  let modeLabel = freeRoam ? '<span style="color:var(--accent-green);">🎮 Free Roam — all quests unlocked</span>' : '<span style="color:var(--text-dim);">🛡️ Adventure Mode — complete 50% of a tier within one guild to unlock the next</span>';
+  let modeLabel = freeRoam ? '<span style="color:var(--accent-green);">🎮 ' + t('Free Roam — all quests unlocked') + '</span>' : '<span style="color:var(--text-dim);">🛡️ ' + t('Adventure Mode — complete 50% of a tier within one guild to unlock the next') + '</span>';
   banner.innerHTML = `
-    <div style="font-weight:bold; color:var(--accent-gold); margin-bottom:0.4rem;">Badge Progression</div>
+    <div style="font-weight:bold; color:var(--accent-gold); margin-bottom:0.4rem;">${t('Badge Progression')}</div>
     <div class="tier-progress">
-      <span class="tier-pill ${progress.sand.unlocked?'unlocked':'locked'}">🟤 Sand ${progress.sand.done}/${progress.sand.total}</span>
-      <span class="tier-pill ${progress.straw.unlocked?'unlocked':'locked'}">🌾 Straw ${progress.straw.done}/${progress.straw.total} ${progress.straw.unlocked?'':'🔒'}</span>
-      <span class="tier-pill ${progress.wood.unlocked?'unlocked':'locked'}">🪵 Wood ${progress.wood.done}/${progress.wood.total} ${progress.wood.unlocked?'':'🔒'}</span>
-      <span class="tier-pill ${progress.iron.unlocked?'unlocked':'locked'}">⚙️ Iron ${progress.iron.done}/${progress.iron.total} ${progress.iron.unlocked?'':'🔒'}</span>
-      <span class="tier-pill ${eco.earned ? 'gold' : 'locked'}">⛏️ Gold Nugget ${eco.done}/${eco.total}${eco.earned ? ' ✨' : ''}</span>
+      <span class="tier-pill ${progress.sand.unlocked?'unlocked':'locked'}">🟤 ${t('Sand')} ${progress.sand.done}/${progress.sand.total}</span>
+      <span class="tier-pill ${progress.straw.unlocked?'unlocked':'locked'}">🌾 ${t('Straw')} ${progress.straw.done}/${progress.straw.total} ${progress.straw.unlocked?'':'🔒'}</span>
+      <span class="tier-pill ${progress.wood.unlocked?'unlocked':'locked'}">🪵 ${t('Wood')} ${progress.wood.done}/${progress.wood.total} ${progress.wood.unlocked?'':'🔒'}</span>
+      <span class="tier-pill ${progress.iron.unlocked?'unlocked':'locked'}">⚙️ ${t('Iron')} ${progress.iron.done}/${progress.iron.total} ${progress.iron.unlocked?'':'🔒'}</span>
+      <span class="tier-pill ${eco.earned ? 'gold' : 'locked'}">⛏️ ${t('Gold Nugget')} ${eco.done}/${eco.total}${eco.earned ? ' ✨' : ''}</span>
     </div>
     <p style="font-size:0.8em; color:var(--text-dim); margin-top:0.4rem;">${modeLabel}</p>
   `;
@@ -2672,30 +2747,33 @@ function createGuildDetails(a, open, progress) {
   const d = document.createElement('details');
   if (open) d.open = true;
   const s = document.createElement('summary');
-  s.innerHTML = `${a.type === 'RPG' ? '✨' : '🛡️'} ${a.name} Guild`;
+  const gname = t(a.name);
+  s.innerHTML = (lang === 'en')
+    ? `${a.type === 'RPG' ? '✨' : '🛡️'} ${a.name} Guild`
+    : `${a.type === 'RPG' ? '✨' : '🛡️'} ${t('Guild of')} ${gname}`;
   d.appendChild(s);
   const c = document.createElement('div');
   c.className = 'guild-content';
 
-  let h = `<div class="guild-desc">${a.desc || 'No description available.'}</div>`;
+  let h = `<div class="guild-desc">${td(a.desc) || t('No description available.')}</div>`;
 
   if (a.sand && a.sand.length > 0) {
-    h += `<div class="tier-header sand"><strong>🟤 Sand Tier (Level 1)</strong> — ${countDone(a, 'sand')}/${a.sand.length} complete</div>`;
+    h += `<div class="tier-header sand"><strong>🟤 ${t('Sand')} ${t('Tier')} (${t('Level')} 1)</strong> — ${countDone(a, 'sand')}/${a.sand.length} ${t('complete')}</div>`;
     a.sand.forEach(q => { h += renderQuestCard(a, q, 'sand'); });
   }
   if (a.straw && a.straw.length > 0) {
     let locked = !isTierUnlocked(a, 'straw');
-    h += `<div class="tier-header straw ${locked ? 'locked' : ''}"><strong>🟡 Straw Tier (Level 2)</strong> — ${countDone(a, 'straw')}/${a.straw.length} complete</div>`;
+    h += `<div class="tier-header straw ${locked ? 'locked' : ''}"><strong>🟡 ${t('Straw')} ${t('Tier')} (${t('Level')} 2)</strong> — ${countDone(a, 'straw')}/${a.straw.length} ${t('complete')}</div>`;
     a.straw.forEach(q => { h += renderQuestCard(a, q, 'straw', locked); });
   }
   if (a.wood && a.wood.length > 0) {
     let locked = !isTierUnlocked(a, 'wood');
-    h += `<div class="tier-header wood ${locked ? 'locked' : ''}"><strong>🪵 Wood Tier (Level 3)</strong> — ${countDone(a, 'wood')}/${a.wood.length} complete</div>`;
+    h += `<div class="tier-header wood ${locked ? 'locked' : ''}"><strong>🪵 ${t('Wood')} ${t('Tier')} (${t('Level')} 3)</strong> — ${countDone(a, 'wood')}/${a.wood.length} ${t('complete')}</div>`;
     a.wood.forEach(q => { h += renderQuestCard(a, q, 'wood', locked); });
   }
   if (a.iron && a.iron.length > 0) {
     let locked = !isTierUnlocked(a, 'iron');
-    h += `<div class="tier-header iron ${locked ? 'locked' : ''}"><strong>⚙️ Iron Tier (Level 4)</strong> — ${countDone(a, 'iron')}/${a.iron.length} complete</div>`;
+    h += `<div class="tier-header iron ${locked ? 'locked' : ''}"><strong>⚙️ ${t('Iron')} ${t('Tier')} (${t('Level')} 4)</strong> — ${countDone(a, 'iron')}/${a.iron.length} ${t('complete')}</div>`;
     a.iron.forEach(q => { h += renderQuestCard(a, q, 'iron', locked); });
   }
 
@@ -2712,31 +2790,31 @@ function countDone(a, tier) {
 function renderQuestCard(a, q, tier, locked) {
   let qId = makeQuestId(a.name, tier, q[0]);
   let isDone = completedQuests.includes(qId);
-  let subjects = q[2].map(s => `<span>${s}</span>`).join('');
+  let subjects = q[2].map(s => `<span>${t(s)}</span>`).join('');
   let rewardIcon = q[3] || "📦";
 
   if (!rosterSelections[qId]) rosterSelections[qId] = { trackers: [], witnesses: [], hearth: [], mentor: [] };
 
   let actionHTML;
   if (locked) {
-    actionHTML = '<span style="color:var(--text-dim); font-size:0.8em;">🔒 Locked</span>';
+    actionHTML = `<span style="color:var(--text-dim); font-size:0.8em;">🔒 ${t('Locked')}</span>`;
   } else if (isDone) {
     let safeTitle = q[0].replace(/'/g, "\\'");
-    let postBtn = (a.type === 'PEP') ? `<button class="btn btn-small" style="display:block; margin-top:0.3rem;" onclick="postToPermies('${qId}','${safeTitle}')">Post to Permies</button>` : '';
-    actionHTML = `<span style="color:var(--accent-green); font-weight:bold;">✓ Complete!</span>${postBtn}`;
+    let postBtn = (a.type === 'PEP') ? `<button class="btn btn-small" style="display:block; margin-top:0.3rem;" onclick="postToPermies('${qId}','${safeTitle}')">${t('Post to Permies')}</button>` : '';
+    actionHTML = `<span style="color:var(--accent-green); font-weight:bold;">✓ ${t('Complete!')}</span>${postBtn}`;
   } else {
-    actionHTML = `<button class="btn btn-small" onclick="toggleRoster('${qId}')">Finalize</button>`;
+    actionHTML = `<button class="btn btn-small" onclick="toggleRoster('${qId}')">${t('Finalize')}</button>`;
   }
 
   let resources = getAspectResources(a.name);
-  let learnMoreBtn = (resources.length > 0) ? `<button class="btn btn-small" style="margin-top:0.3rem;" onclick="toggleResources('${qId}')">Learn More</button>` : '';
+  let learnMoreBtn = (resources.length > 0) ? `<button class="btn btn-small" style="margin-top:0.3rem;" onclick="toggleResources('${qId}')">${t('Learn More')}</button>` : '';
 
   return `<div class="quest-card ${tier} ${isDone ? 'completed' : ''}">
     <div class="quest-info">
-      <strong>${q[0]}</strong> ${isDone ? '✓' : ''}<br>
-      <small>${q[1]}</small>
+      <strong>${t(q[0])}</strong> ${isDone ? '✓' : ''}<br>
+      <small>${td(q[1])}</small>
       <div class="subject-tags">${subjects}</div>
-      ${rewardIcon !== '📦' ? `<span class="quest-reward">Reward: ${rewardIcon}</span>` : ''}
+      ${rewardIcon !== '📦' ? `<span class="quest-reward">${t('Reward:')} ${rewardIcon}</span>` : ''}
       ${learnMoreBtn}
     </div>
     <div class="quest-action">${actionHTML}</div>
@@ -2748,10 +2826,10 @@ function renderQuestCard(a, q, tier, locked) {
 function renderRosterPanel(qId, icon) {
   let sel = rosterSelections[qId];
   let roleLabels = [
-    ['trackers', '🏃 Trackers'],
-    ['witnesses', '📷 Witnesses'],
-    ['hearth', '🔥 Hearth'],
-    ['mentor', '🧑‍🏫 Mentor']
+    ['trackers', '🏃 ' + t('Trackers')],
+    ['witnesses', '📷 ' + t('Witnesses')],
+    ['hearth', '🔥 ' + t('Hearth')],
+    ['mentor', '🧑‍🏫 ' + t('Mentor')]
   ];
 
   let rows = roleLabels.map(([key, label]) => {
@@ -2760,13 +2838,13 @@ function renderRosterPanel(qId, icon) {
   }).join('');
 
   return `<div class="roster-panel" id="roster_${qId}">
-    <div class="otis-warning"><strong>Otis Verification Protocol:</strong><br>
-    1. <strong>Before</strong> photo of materials/site.<br>
-    2. <strong>During</strong> photo of you working.<br>
-    3. <strong>After</strong> photo of finished product WITH a sign showing your name and date.</div>
-    <p style="font-size:0.8em; color:var(--text-dim); margin-bottom:0.4rem;">Select who participated. Multiple people can hold the same role!</p>
+    <div class="otis-warning"><strong>${t('Otis Verification Protocol:')}</strong><br>
+    1. <strong>${t('Before')}</strong> ${t('photo of materials/site')}.<br>
+    2. <strong>${t('During')}</strong> ${t('photo of you working')}.<br>
+    3. <strong>${t('After')}</strong> ${t('photo of finished product WITH a sign showing your name and date')}.</div>
+    <p style="font-size:0.8em; color:var(--text-dim); margin-bottom:0.4rem;">${t('Select who participated. Multiple people can hold the same role!')}</p>
     ${rows}
-    <button class="btn btn-small" style="background:var(--accent-green-dark); color:var(--text-bright); margin-top:0.4rem;" onclick="finalizeQuest('${qId}','${icon}')">Confirm & Complete Quest</button>
+    <button class="btn btn-small" style="background:var(--accent-green-dark); color:var(--text-bright); margin-top:0.4rem;" onclick="finalizeQuest('${qId}','${icon}')">${t('Confirm & Complete Quest')}</button>
   </div>`;
 }
 
@@ -2790,10 +2868,10 @@ function renderResourcesPanel(qId, aspectName) {
     };
     pathHTML = `
       <div style="background:var(--bg-input); border-radius:8px; padding:0.6rem; margin-bottom:0.6rem;">
-        <p style="font-size:0.85em; color:var(--accent-green); margin-bottom:0.4rem;"><strong>🛤️ Guided Path for this Quest</strong></p>
-        ${step('🌱 Prep', pathway.prep)}
-        ${step('🎯 Core', pathway.core)}
-        ${step('🚀 Stretch', pathway.stretch)}
+        <p style="font-size:0.85em; color:var(--accent-green); margin-bottom:0.4rem;"><strong>🛤️ ${t('Guided Path for this Quest')}</strong></p>
+        ${step('🌱 ' + t('Prep'), pathway.prep)}
+        ${step('🎯 ' + t('Core'), pathway.core)}
+        ${step('🚀 ' + t('Stretch'), pathway.stretch)}
       </div>
     `;
   }
@@ -2803,8 +2881,8 @@ function renderResourcesPanel(qId, aspectName) {
     let topics = marble.topics.map(t => `<a href="${t.url}" target="_blank" class="lib-link" style="font-size:0.85em;"><strong>${t.name}</strong></a>`).join('');
     marbleHTML = `
       <div style="background:var(--bg-input); border-radius:8px; padding:0.6rem; margin-bottom:0.6rem; border-left:3px solid var(--accent-orange);">
-        <p style="font-size:0.85em; color:var(--accent-orange); margin-bottom:0.3rem;"><strong>🧠 Marble OS: ${marble.category}</strong></p>
-        <p style="font-size:0.75em; color:var(--text-dim); margin-bottom:0.4rem;">Curriculum topics connected to this skill:</p>
+        <p style="font-size:0.85em; color:var(--accent-orange); margin-bottom:0.3rem;"><strong>🧠 Marble OS: ${t(marble.category)}</strong></p>
+        <p style="font-size:0.75em; color:var(--text-dim); margin-bottom:0.4rem;">${t('Curriculum topics connected to this skill:')}</p>
         ${topics}
       </div>
     `;
@@ -2813,7 +2891,7 @@ function renderResourcesPanel(qId, aspectName) {
   let allLinks = resources.map(r => `<a href="${r.url}" target="_blank" class="lib-link" style="font-size:0.85em;"><strong>${r.title}</strong></a>`).join('');
   let skillHTML = resources.length ? `
     <div style="margin-bottom:0.6rem;">
-      <p style="font-size:0.8em; color:var(--text-dim); margin-bottom:0.3rem;"><strong>Skill-wide resources:</strong></p>
+      <p style="font-size:0.8em; color:var(--text-dim); margin-bottom:0.3rem;"><strong>${t('Skill-wide resources:')}</strong></p>
       ${allLinks}
     </div>
   ` : '';
@@ -2823,9 +2901,9 @@ function renderResourcesPanel(qId, aspectName) {
     ${marbleHTML}
     ${skillHTML}
     <div style="border-top:1px dashed var(--border-subtle); padding-top:0.5rem;">
-      <p style="font-size:0.85em; color:var(--accent-gold); margin-bottom:0.3rem;"><strong>🎰 Feeling lucky? Spin for a surprise resource:</strong></p>
+      <p style="font-size:0.85em; color:var(--accent-gold); margin-bottom:0.3rem;"><strong>🎰 ${t('Feeling lucky? Spin for a surprise resource:')}</strong></p>
       <div id="slot_${qId}" style="min-height:2.5em; display:flex; align-items:center; justify-content:center; background:var(--bg-input); border-radius:6px; padding:0.5rem; margin-bottom:0.4rem; font-weight:bold; color:var(--text-bright);">?</div>
-      <button class="btn btn-small" onclick="spinResource('${qId}','${aspectName.replace(/'/g,"\\'")}')">🎲 Spin</button>
+      <button class="btn btn-small" onclick="spinResource('${qId}','${aspectName.replace(/'/g,"\\'")}')">🎲 ${t('Spin')}</button>
     </div>
   </div>`;
 }
@@ -3075,7 +3153,7 @@ function renderSchoolhouse() {
   l.innerHTML = '';
   Object.keys(tr).forEach(s => {
     l.innerHTML += `<div class="stat-row">
-      <span><strong>${s}:</strong> ${tr[s]} Hours</span>
+      <span><strong>${t(s)}:</strong> ${tr[s]} ${t('Hours')}</span>
       <div class="progress-bar"><div class="progress-fill" style="width:${Math.min(tr[s]/50*100,100)}%"></div></div>
     </div>`;
   });
@@ -3091,15 +3169,15 @@ function renderCommons() {
 
   let achievements = document.getElementById('commons-achievements');
   achievements.innerHTML = `
-    <div class="achievement-card"><div class="icon">📜</div><div class="value">${totalDone}</div><div class="label">Quests Done</div></div>
-    <div class="achievement-card"><div class="icon">📦</div><div class="value">${totalWardrobe}</div><div class="label">Wardrobe Items</div></div>
-    <div class="achievement-card"><div class="icon">🟤</div><div class="value">${progress.sand.done}/${progress.sand.total}</div><div class="label">Sand Badges</div></div>
-    <div class="achievement-card"><div class="icon">🌾</div><div class="value">${progress.straw.done}/${progress.straw.total}</div><div class="label">Straw Badges</div></div>
-    <div class="achievement-card"><div class="icon">🪵</div><div class="value">${progress.wood.done}/${progress.wood.total}</div><div class="label">Wood Badges</div></div>
+    <div class="achievement-card"><div class="icon">📜</div><div class="value">${totalDone}</div><div class="label">${t('Quests Done')}</div></div>
+    <div class="achievement-card"><div class="icon">📦</div><div class="value">${totalWardrobe}</div><div class="label">${t('Wardrobe Items')}</div></div>
+    <div class="achievement-card"><div class="icon">🟤</div><div class="value">${progress.sand.done}/${progress.sand.total}</div><div class="label">${t('Sand Badges')}</div></div>
+    <div class="achievement-card"><div class="icon">🌾</div><div class="value">${progress.straw.done}/${progress.straw.total}</div><div class="label">${t('Straw Badges')}</div></div>
+    <div class="achievement-card"><div class="icon">🪵</div><div class="value">${progress.wood.done}/${progress.wood.total}</div><div class="label">${t('Wood Badges')}</div></div>
     <div class="achievement-card"><div class="icon">⚙️</div><div class="value">${progress.iron.done}/${progress.iron.total}</div><div class="label">Iron Badges</div></div>
-    <div class="achievement-card" style="${eco.earned ? 'border-color:var(--accent-gold); box-shadow:0 0 14px rgba(233,196,106,0.4);' : ''}"><div class="icon">⛏️</div><div class="value">${eco.earned ? '✦ Earned' : '—'}</div><div class="label">Gold Nugget (${eco.done}/${eco.total})</div></div>
-    <div class="achievement-card"><div class="icon">👥</div><div class="value">${players.length}</div><div class="label">Family Members</div></div>
-    <div class="achievement-card"><div class="icon">🏫</div><div class="value">${attendance.days}</div><div class="label">School Days</div></div>
+    <div class="achievement-card" style="${eco.earned ? 'border-color:var(--accent-gold); box-shadow:0 0 14px rgba(233,196,106,0.4);' : ''}"><div class="icon">⛏️</div><div class="value">${eco.earned ? t('Earned') + ' ✦' : '—'}</div><div class="label">${t('Gold Nugget')} (${eco.done}/${eco.total})</div></div>
+    <div class="achievement-card"><div class="icon">👥</div><div class="value">${players.length}</div><div class="label">${t('Family Members')}</div></div>
+    <div class="achievement-card"><div class="icon">🏫</div><div class="value">${attendance.days}</div><div class="label">${t('School Days')}</div></div>
   `;
 }
 
@@ -3186,17 +3264,26 @@ function dismissGold() { celebrateGold(false); }
 if (players.length > 0) {
   document.getElementById('nav-bar').style.display = 'flex';
 }
+
+// ---- Apply saved language ----
+if (lang !== 'en') {
+  const sel = document.getElementById('lang-select');
+  if (sel) sel.value = lang;
+  try { document.documentElement.lang = lang; } catch(e) {}
+  try { document.title = t('The Village — A Roll Making Game (RMG)'); } catch(e) {}
+  translateStatic();
+}
 </script>
 
 <!-- Gold Nugget celebration -->
 <div class="gold-modal-overlay" id="gold-modal-overlay">
   <div class="gold-modal" id="gold-modal">
     <span class="gold-nugget-emoji">⛏️</span>
-    <h2 style="color:var(--accent-gold); text-align:center;">Gold Nugget Earned!</h2>
-    <p style="color:var(--text-light); text-align:center;">You worked the entire Commerce guild — budgets, currency exchange, paper trading, even a family forex night. That's real financial skill, earned in the real world.</p>
-    <p style="color:var(--text-dim); font-size:0.9em; text-align:center; margin-top:0.4rem;">The Gold Nugget is now part of your family's story. No real money was moved — only understanding.</p>
+    <h2 style="color:var(--accent-gold); text-align:center;" data-i18n="Gold Nugget Earned!">Gold Nugget Earned!</h2>
+    <p style="color:var(--text-light); text-align:center;" data-i18n="You worked the entire Commerce guild — budgets, currency exchange, paper trading, even a family forex night. That's real financial skill, earned in the real world.">You worked the entire Commerce guild — budgets, currency exchange, paper trading, even a family forex night. That's real financial skill, earned in the real world.</p>
+    <p style="color:var(--text-dim); font-size:0.9em; text-align:center; margin-top:0.4rem;" data-i18n="The Gold Nugget is now part of your family's story. No real money was moved — only understanding.">The Gold Nugget is now part of your family's story. No real money was moved — only understanding.</p>
     <div style="margin-top:1rem; text-align:center;">
-      <button class="gold-btn" onclick="dismissGold()">Glow on ✨</button>
+      <button class="gold-btn" onclick="dismissGold()" data-i18n="Glow on ✨">Glow on ✨</button>
     </div>
   </div>
 </div>
