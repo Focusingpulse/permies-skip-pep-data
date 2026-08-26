@@ -1,19 +1,10 @@
 
-## 2026-08-24 maintenance pass
--   added resource: OpenStax Physics
--   added resource: Cornell Lab — All About Birds
+## 2026-08-26 maintenance pass
+-   added resource: Permies.com — PEP forums
 
+# Village Link Report — 2026-08-26
 
-## 2026-08-24 maintenance pass
--   fixed 1 × double trailing slash
--   fixed 2 × trailing punct
--   master_quests.json: 3 URL fixes applied
--   added resource: Seed Savers Exchange — Learn
--   added resource: National Center for Home Food Preservation
-
-# Village Link Report — 2026-08-24
-
-Checked **606** URLs: **572** OK, **27** HTTP errors, **0** redirects, **7** unreachable/timeouts.
+Checked **608** URLs: **573** OK, **28** HTTP errors, **0** redirects, **7** unreachable/timeouts.
 
 ## Unreachable / timeout (7)
 
@@ -25,13 +16,13 @@ Checked **606** URLs: **572** OK, **27** HTTP errors, **0** redirects, **7** unr
 - `https://deptutor.info`  (error: URLError)
 - `https://mountainherbs.net/grown`  (error: URLError)
 
-## HTTP errors (27)
+## HTTP errors (28)
 
 - [`http://byjillb.com`](http://byjillb.com)  (HTTP 404)
 - [`http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img`](http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img)  (HTTP 404)
 - [`http://innoperma.weebly.com/old`](http://innoperma.weebly.com/old)  (HTTP 404)
 - [`http://onceuponeayarden.blogspot.com/`](http://onceuponeayarden.blogspot.com/)  (HTTP 404)
-- [`http://organicfoodbliss.com/my-clear-cut-garden//`](http://organicfoodbliss.com/my-clear-cut-garden//)  (HTTP 500)
+- [`http://organicfoodbliss.com/my-clear-cut-garden/`](http://organicfoodbliss.com/my-clear-cut-garden/)  (HTTP 500)
 - [`http://paypal.me/lazykatorhttp://www.buymeacoffee.com/dzenifrRead`](http://paypal.me/lazykatorhttp://www.buymeacoffee.com/dzenifrRead)  (HTTP 404)
 - [`http://www.fws.gov/whitenosesyndrome/`](http://www.fws.gov/whitenosesyndrome/)  (HTTP 403)
 - [`http://www.my10acres.info`](http://www.my10acres.info)  (HTTP 500)
@@ -46,13 +37,14 @@ Checked **606** URLs: **572** OK, **27** HTTP errors, **0** redirects, **7** unr
 - [`https://wise.com`](https://wise.com)  (HTTP 403)
 - [`https://www.activelivingresearch.org/physical-literacy`](https://www.activelivingresearch.org/physical-literacy)  (HTTP 403)
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
+- [`https://www.allaboutbirds.org/guide/`](https://www.allaboutbirds.org/guide/)  (HTTP 403)
 - [`https://www.amazon.com/Jill-b/e/B00OJKS5G8?ref=sr_ntt_srch_lnk_3&qid=1578855737&sr=8-3`](https://www.amazon.com/Jill-b/e/B00OJKS5G8?ref=sr_ntt_srch_lnk_3&qid=1578855737&sr=8-3)  (HTTP 405)
 - [`https://www.congress.gov/resources/display/content/The+Constitution+of+the+United+States`](https://www.congress.gov/resources/display/content/The+Constitution+of+the+United+States)  (HTTP 403)
 - [`https://www.familyhandyman.com/plumbing/`](https://www.familyhandyman.com/plumbing/)  (HTTP 404)
 - [`https://www.familyhandyman.com/smart-homeowner/diy-home-inspection/`](https://www.familyhandyman.com/smart-homeowner/diy-home-inspection/)  (HTTP 404)
 - [`https://www.instagram.com/wizard.mountainman/`](https://www.instagram.com/wizard.mountainman/)  (HTTP 429)
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
-- [`https://www.pinterest.ca/joelbc/homestead-methods-tools-equipment/https://www.pinterest.ca/joelbc/mixed-shops/`](https://www.pinterest.ca/joelbc/homestead-methods-tools-equipment/https://www.pinterest.ca/joelbc/mixed-shops/)  (HTTP 403)
+- [`https://www.pinterest.ca/joelbc/homestead-methods-tools-equipment/https://www.pinterest.ca/joelbc/mixed-shops/`](https://www.pinterest.ca/joelbc/homestead-methods-tools-equipment/https://www.pinterest.ca/joelbc/mixed-shops/)  (HTTP 404)
 - [`https://www.youtube.com/c/EatTheWeeds`](https://www.youtube.com/c/EatTheWeeds)  (HTTP 404)
 
 _Generated automatically. Review then delete broken links or replace with live alternatives._
