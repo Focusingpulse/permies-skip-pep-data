@@ -8,19 +8,21 @@ Cheap by design: pure stdlib, no LLM calls. Runs headless in the cron.
 """
 import json, re, os, urllib.request, urllib.error, concurrent.futures, time, datetime
 
-REPO = "/root/workspace/village"
+REPO = os.path.dirname(os.path.abspath(__file__))
 os.chdir(REPO)
 
 URL_RE = re.compile(r'https?://[^\s"\'<>)\]}]+')
 
 def collect_urls():
     urls = set()
-    for p in ["master_quests.json", "index.html", "data.js"]:
+    files = ["master_quests.json", "index.html", "data.js", "translations.js"] + \
+        [f"money-lab/{f}" for f in os.listdir("money-lab") if f.endswith(".html")]
+    for p in files:
         if os.path.exists(p):
             raw = open(p, encoding="utf-8").read()
             for m in URL_RE.findall(raw):
                 urls.add(m.rstrip('.,;:!?'))
-    noise = ("letta.com/api", "example.com", "w3.org", "localhost", "schema.org")
+    noise = ("letta.com/api", "example.com", "w3.org", "localhost", "schema.org", "focusingpulse.github.io/permies-skip-pep-data")
     return [u for u in urls if not any(n in u for n in noise)]
 
 def check(u):

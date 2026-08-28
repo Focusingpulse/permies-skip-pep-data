@@ -14,7 +14,7 @@ Cheap: pure stdlib, zero LLM calls.
 """
 import json, re, os, sys, datetime, subprocess
 
-REPO = "/root/workspace/village"
+REPO = os.path.dirname(os.path.abspath(__file__))
 os.chdir(REPO)
 
 # --- Trivial fix patterns: (regex, replacement, what-it-fixes) ---
@@ -53,9 +53,18 @@ RESOURCE_POOL = [
 # --- Bounded resource addition: how many new resources per run ---
 RESOURCES_PER_RUN = 2
 
-# Family ledger integration (coordinated crons)
-FAMILY_DIR = "/root/workspace/cron-coordination"
-sys.path.insert(0, FAMILY_DIR)
+# Family ledger integration (coordinated crons) — path-independent
+FAMILY_DIR = ""
+for cand in (
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), "cron-coordination"),
+    os.path.expanduser("~/.letta/agents/agent-b73ac550-5671-471e-b3e1-721f948ea063/cron-coordination"),
+    "/root/workspace/cron-coordination",
+):
+    if os.path.isfile(os.path.join(cand, "family.py")):
+        FAMILY_DIR = cand
+        break
+if FAMILY_DIR:
+    sys.path.insert(0, FAMILY_DIR)
 try:
     import family as family_ledger
     FAMILY_OK = True
