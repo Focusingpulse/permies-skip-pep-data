@@ -1,10 +1,6 @@
+# Village Link Report — 2026-08-28
 
-## 2026-08-26 maintenance pass
--   added resource: Permies.com — PEP forums
-
-# Village Link Report — 2026-08-26
-
-Checked **608** URLs: **573** OK, **28** HTTP errors, **0** redirects, **7** unreachable/timeouts.
+Checked **609** URLs: **574** OK, **28** HTTP errors, **0** redirects, **7** unreachable/timeouts.
 
 ## Unreachable / timeout (7)
 
@@ -28,6 +24,7 @@ Checked **608** URLs: **573** OK, **28** HTTP errors, **0** redirects, **7** unr
 - [`http://www.my10acres.info`](http://www.my10acres.info)  (HTTP 500)
 - [`http://www.northwestpermaculture.org/-`](http://www.northwestpermaculture.org/-)  (HTTP 404)
 - [`https://allmylinks.com/xdrfirefly`](https://allmylinks.com/xdrfirefly)  (HTTP 403)
+- [`https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20|`](https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20|)  (HTTP 404)
 - [`https://en.wikipedia.org/wiki/Cob_(material`](https://en.wikipedia.org/wiki/Cob_(material)  (HTTP 404)
 - [`https://en.wikipedia.org/wiki/Spinning_(textiles`](https://en.wikipedia.org/wiki/Spinning_(textiles)  (HTTP 404)
 - [`https://en.wikipedia.org/wiki/Swale_(landform`](https://en.wikipedia.org/wiki/Swale_(landform)  (HTTP 404)
@@ -38,7 +35,6 @@ Checked **608** URLs: **573** OK, **28** HTTP errors, **0** redirects, **7** unr
 - [`https://www.activelivingresearch.org/physical-literacy`](https://www.activelivingresearch.org/physical-literacy)  (HTTP 403)
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
 - [`https://www.allaboutbirds.org/guide/`](https://www.allaboutbirds.org/guide/)  (HTTP 403)
-- [`https://www.amazon.com/Jill-b/e/B00OJKS5G8?ref=sr_ntt_srch_lnk_3&qid=1578855737&sr=8-3`](https://www.amazon.com/Jill-b/e/B00OJKS5G8?ref=sr_ntt_srch_lnk_3&qid=1578855737&sr=8-3)  (HTTP 405)
 - [`https://www.congress.gov/resources/display/content/The+Constitution+of+the+United+States`](https://www.congress.gov/resources/display/content/The+Constitution+of+the+United+States)  (HTTP 403)
 - [`https://www.familyhandyman.com/plumbing/`](https://www.familyhandyman.com/plumbing/)  (HTTP 404)
 - [`https://www.familyhandyman.com/smart-homeowner/diy-home-inspection/`](https://www.familyhandyman.com/smart-homeowner/diy-home-inspection/)  (HTTP 404)
