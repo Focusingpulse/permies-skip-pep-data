@@ -1259,6 +1259,8 @@ details[open] summary::after { transform: rotate(180deg); }
   <div class="ll-tabs" id="ll-tabs"></div>
   <div class="ll-wrap">
     <div class="ll-panel active" id="panel-gallery"></div>
+    <div class="ll-panel" id="panel-modes"></div>
+    <div class="ll-panel" id="panel-practices"></div>
     <div class="ll-panel" id="panel-science"></div>
     <div class="ll-panel" id="panel-map"></div>
     <div class="ll-panel" id="panel-math"></div>
@@ -2181,6 +2183,7 @@ let learningBlueprint = null;
 try { const lb = localStorage.getItem('rpg_blueprint'); if (lb) learningBlueprint = JSON.parse(lb); } catch(e) {}
 
 function les(obj, en, es) { return (lang === 'es' && obj && obj.es) ? obj.es : en; } // lang-aware pick
+function esc(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 function llIsEs() { return lang === 'es'; }
 
 function renderLearning() {
@@ -2191,6 +2194,8 @@ function renderLearning() {
 function renderLLTabs() {
   const tabs = [
     { id:'gallery', label: llIsEs() ? 'Galería de Currículos' : 'Curriculum Gallery' },
+    { id:'modes', label: llIsEs() ? 'Modos y Estados' : 'Modes & States' },
+    { id:'practices', label: llIsEs() ? 'Prácticas del Corazón y la Mente' : 'Heart & Mind Practices' },
     { id:'science', label: llIsEs() ? 'Ciencia del Aprendizaje' : 'Learning Science' },
     { id:'map', label: llIsEs() ? 'El Gran Mapa' : 'The Grand Map' },
     { id:'math', label: llIsEs() ? 'Matemática Eterna' : 'Timeless Math' },
@@ -2206,6 +2211,8 @@ function renderLLPanel(id) {
   const panel = document.getElementById('panel-' + id);
   if (panel) panel.classList.add('active');
   if (id === 'gallery') renderGallery();
+  if (id === 'modes') renderModes();
+  if (id === 'practices') renderPractices();
   if (id === 'science') renderScience();
   if (id === 'map') renderMap();
   if (id === 'math') renderMath();
@@ -2229,18 +2236,34 @@ function renderGallery() {
   filterGallery(null, 'all');
 }
 let galleryTag = 'all';
+let learnMode = null;
+try { learnMode = localStorage.getItem('rpg_learnMode') || null; } catch(e) {}
+function setLearnMode(id) {
+  learnMode = id;
+  try { if (id) localStorage.setItem('rpg_learnMode', id); else localStorage.removeItem('rpg_learnMode'); } catch(e) {}
+  document.querySelectorAll('#panel-gallery .ll-chip[data-mode]').forEach(c => c.classList.toggle('active', c.dataset.mode === id));
+  filterGallery(null, galleryTag);
+}
 function filterGallery(btn, tag) {
   galleryTag = tag;
-  document.querySelectorAll('#panel-gallery .ll-chip').forEach(c => c.classList.toggle('active', c.dataset.tag === tag));
+  document.querySelectorAll('#panel-gallery .ll-chip[data-tag]').forEach(c => c.classList.toggle('active', c.dataset.tag === tag));
   const list = document.getElementById('gallery-list');
   const items = CURRICULA.filter(c => tag === 'all' || c.tag === tag);
-  list.innerHTML = items.map(c => {
+  const modeRow = `<div class="ll-cat" style="margin-top:0.3rem;">` + LEARN_MODES.map(m =>
+    `<button class="ll-chip ${m.id===learnMode?'active':''}" data-mode="${m.id}" onclick="setLearnMode('${m.id}')">${m.icon} ${llIsEs()?m.esName:m.name}</button>`).join('') +
+    `<button class="ll-chip ${learnMode===null?'active':''}" data-mode="" onclick="setLearnMode('')">${llIsEs()?'Todo':'All mediums'}</button></div>`;
+  list.innerHTML = modeRow + items.map(c => {
     const core = llIsEs() && c.esCore ? c.esCore : c.core;
+    const media = CURRICULUM_MODES[c.id] || {};
+    const modeLinks = learnMode && media[learnMode] && media[learnMode].length
+      ? `<div class="modes-row">${media[learnMode].map(r => `<a href="${r.url}" target="_blank" class="mode-link">🔗 ${esc(r.label)}</a>`).join('')}</div>`
+      : '';
     return `<div class="curr-card">
       <div class="curr-head">
         <div><div class="curr-name">${c.flag} ${c.name}</div><div class="curr-century">${c.century}</div></div>
       </div>
       <div class="curr-core">${core}</div>
+      ${modeLinks}
       <div class="curr-grid">
         <div class="curr-box"><b>${llIsEs()?'Cómo se ve':'What it looks like'}</b><span>${c.looks}</span></div>
         <div class="curr-box"><b>${llIsEs()?'Puntos fuertes':'Strengths'}</b><span>${c.strengths}</span></div>
@@ -2251,6 +2274,55 @@ function filterGallery(btn, tag) {
       <div class="curr-evidence">${llIsEs()?'Etiqueta':'Tag'}: ${c.tag} · ${c.century}</div>
     </div>`;
   }).join('') || `<div style="text-align:center;color:var(--text-dim);padding:1.5rem;">${llIsEs()?'Sin resultados':'No matches'}</div>`;
+}
+
+function renderModes() {
+  const el = document.getElementById('panel-modes');
+  const modeCards = LEARN_MODES.map(m => `
+    <div class="sci-card">
+      <div class="sci-head"><div class="sci-name">${m.icon} ${llIsEs()?m.esName:m.name} <span style="font-size:0.7rem;color:var(--muted);font-weight:600;">${m.tagline}</span></div><span class="sci-ev ev-strong">${m.evidence.split('—')[0].replace(/^(Strong|Moderate).*/, '') || 'see below'}</span></div>
+      <div class="sci-row"><b>${llIsEs()?'Qué es':'What it is'}:</b> ${m.desc}</div>
+      <div class="sci-row"><b>${llIsEs()?'Cómo usarlo':'How to use it'}:</b> ${m.how}</div>
+      <div class="sci-row"><b>${llIsEs()?'Evidencia':'Evidence'}:</b> ${m.evidence}</div>
+    </div>`).join('');
+  const brainCards = BRAIN_STATES.map(s => `
+    <div class="sci-card">
+      <div class="sci-head"><div class="sci-name">${s.icon} ${llIsEs()?s.esName:s.name}</div><span class="sci-ev ev-moderate">${s.freq}</span></div>
+      <div class="sci-row"><b>${llIsEs()?'Cómo se siente':'Feels like'}:</b> ${s.feel}</div>
+      <div class="sci-row"><b>${llIsEs()?'Mejor para aprender':'Best for learning'}:</b> ${s.learn}</div>
+      <div class="sci-row"><b>${llIsEs()?'Cómo se cultiva':'How to cultivate it'}:</b> ${s.produce}</div>
+      <div class="sci-row"><b>${llIsEs()?'En la Aldea':'In the Village'}:</b> ${s.village}</div>
+      <div class="sci-row"><b>${llIsEs()?'Evidencia':'Evidence'}:</b> ${s.evidence}</div>
+    </div>`).join('');
+  el.innerHTML = `<div class="sec-title" style="margin-top:0.2rem;"><h2 style="font-size:1.05rem;">${llIsEs()?'Cómo quieres aprender hoy':'How do you want to learn today?'}</h2><span class="sub" style="font-size:0.75rem;color:var(--text-dim);">${llIsEs()?'El mismo conocimiento, en cualquier medio':'The same knowledge, in any medium — pick one, or mix them all.'}</span></div>
+    <div style="margin-bottom:1rem;">${modeCards}</div>
+    <div class="sec-title" style="margin-top:1rem;"><h2 style="font-size:1.05rem;">${llIsEs()?'Estados mentales':'Brain States — the mind behind the learning'}</h2><span class="sub" style="font-size:0.75rem;color:var(--text-dim);">${llIsEs()?'Basado en Dr. Jeffrey Thompson y la investigación del flujo — etiquetado honestamente':'Informed by Dr. Jeffrey Thompson\'s Bio-Tuning and flow research — honestly labeled; exact bands are a guide, not gospel.'}</span></div>
+    <div>${brainCards}</div>`;
+}
+
+function renderPractices() {
+  const el = document.getElementById('panel-practices');
+  const H = HEART_PRACTICE;
+  const heart = `<div class="sec-title" style="margin-top:0.2rem;"><h2 style="font-size:1.05rem;">💓 ${llIsEs()?'Coherencia Corazón-Cerebro — HeartMath':'Heart-Brain Coherence — HeartMath'}</h2><span class="sub" style="font-size:0.72rem;color:var(--text-dim);"><a href="${H.sourceUrl}" target="_blank" style="color:var(--accent-gold);">${H.source}</a></span></div>
+    <div class="sci-card">
+      <div class="sci-row"><b>${llIsEs()?'Qué es':'What it is'}:</b> ${H.intro}</div>
+      <div class="sci-row"><b>${llIsEs()?'Por qué funciona':'Why it matters'}:</b> ${H.why}</div>
+      <div class="sci-row"><b>${llIsEs()?'En la Aldea':'In the Village'}:</b> ${H.village}</div>
+    </div>
+    <div style="margin-top:0.6rem;">${H.steps.map(s => `<div class="curr-box" style="margin-bottom:0.45rem;"><b>${s.n}. ${llIsEs()?s.es:s.t}</b><span>${llIsEs()?s.esd:s.d}</span></div>`).join('')}</div>
+    <div class="curr-box" style="margin-top:0.5rem;"><b>${llIsEs()?'Dispositivos (optativos)':'Devices (optional)'}</b><span style="font-size:0.75rem;color:var(--text-dim);">${H.devices.map(d => `${d.name} — ${llIsEs()?d.esNote:d.note}`).join(' · ')}</span></div>`;
+  const S = SIX_EXERCISES;
+  const six = `<div class="sec-title" style="margin-top:1.4rem;"><h2 style="font-size:1.05rem;">🧘 ${llIsEs()?'Los Seis Ejercicios Básicos':'The Six Basic Exercises'}</h2><span class="sub" style="font-size:0.72rem;color:var(--text-dim);">${S.source} — <a href="${S.sourceVideo}" target="_blank" style="color:var(--accent-gold);">Vesica Institute</a> · <a href="${S.sourceUrl}" target="_blank" style="color:var(--accent-gold);">vesica.org</a></span></div>
+    <div class="sci-card"><div class="sci-row"><b>${llIsEs()?'Qué son':'What they are'}:</b> ${S.intro}</div></div>
+    <div style="margin-top:0.6rem;">${S.exercises.map(e => `<div class="curr-card" style="margin-bottom:0.55rem;">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:0.5rem;">
+        <div class="sci-name">${e.symbol} ${e.n}. ${llIsEs()?e.esName:e.name}</div><span class="math-tag">${llIsEs()?e.esFocus:e.focus}</span>
+      </div>
+      <div class="sci-row"><b>${llIsEs()?'Práctica':'Practice'}:</b> ${llIsEs()?e.esPractice:e.practice}</div>
+      <div class="sci-row"><b>${llIsEs()?'Por qué':'Why'}:</b> ${llIsEs()?e.esWhy:e.why}</div>
+    </div>`).join('')}</div>
+    <div class="curr-box"><b>${llIsEs()?'Robert Gilbert / Vesica':'Robert Gilbert / Vesica Institute'}</b><span style="font-size:0.75rem;color:var(--text-dim);">${S.gilbert}</span></div>`;
+  el.innerHTML = heart + six;
 }
 
 function renderScience() {
@@ -2341,16 +2413,42 @@ function generateBlueprint() {
   if (!best) best = BLUEPRINT_ARCHETYPES[BLUEPRINT_ARCHETYPES.length - 1];
   const name = llIsEs() ? (best.esName || best.name) : best.name;
   const desc = llIsEs() ? (best.esDesc || best.desc) : best.desc;
+  const longDesc = best.longDesc || best.desc;
   learningBlueprint = { name, archetype: best.name, profile: prof, savedAt: new Date().toISOString() };
   try { localStorage.setItem('rpg_blueprint', JSON.stringify(learningBlueprint)); } catch(e) {}
+  const books = best.books ? best.books.map(b => `<div class="sci-row"><b>${b.name}</b> — ${b.work}</div><div class="sci-row" style="margin-top:0;font-style:italic;">${b.line}</div>`).join('') : '';
+  const practices = best.practices ? best.practices.map(p => `<li>${p}</li>`).join('') : '';
   document.getElementById('blueprint-result').innerHTML = `
     <div class="blueprint-result">
       <h4>📜 ${name}</h4>
       <p>${desc}</p>
+      <p style="font-size:0.82em;color:var(--text-light);margin-top:0.5rem;">${longDesc}</p>
+      ${books ? `<div style="margin-top:0.7rem;"><b style="font-size:0.78rem;color:var(--accent-gold);text-transform:uppercase;letter-spacing:0.05em;">${llIsEs()?'Lecturas':'Further reading'}</b>${books}</div>` : ''}
+      ${practices ? `<div style="margin-top:0.7rem;"><b style="font-size:0.78rem;color:var(--accent-gold);text-transform:uppercase;letter-spacing:0.05em;">${llIsEs()?'Prácticas':'Practices'}</b><ul style="font-size:0.8em;color:var(--text-dim);line-height:1.6;margin-left:1rem;">${practices}</ul></div>` : ''}
+      ${best.evidence ? `<div style="margin-top:0.7rem;font-size:0.75rem;color:var(--text-dim);font-style:italic;">${llIsEs()?'Evidencia':'Evidence'}: ${best.evidence}</div>` : ''}
       <div class="blueprint-quests">🎯 ${llIsEs()?'Empieza por':'Start with'}: ${best.quests.join(' · ')}</div>
+      <div style="display:flex;gap:0.5rem;margin-top:0.7rem;flex-wrap:wrap;">
+        <button class="btn btn-small" onclick="startOverBlueprint()">🔄 ${llIsEs()?'Reajustar':'Adjust'}</button>
+        <button class="btn btn-small" onclick="clearBlueprint()">🗑️ ${llIsEs()?'Quitar':'Clear blueprint'}</button>
+      </div>
       <div style="font-size:0.72rem;color:var(--text-dim);margin-top:0.5rem;">${llIsEs()?'Guardado — aparece en tu Aldea y Escuela.':'Saved — it now appears on your Village and Schoolhouse.'}</div>
     </div>`;
   updateBlueprintBanner();
+}
+function startOverBlueprint() {
+  BLUEPRINT_DIMS.forEach(d => { const el = document.getElementById('blend-' + d.id); if (el) { el.value = 5; const v = document.getElementById('blend-val-' + d.id); if (v) v.textContent = 5; } });
+  document.getElementById('blueprint-result').innerHTML = '';
+  learningBlueprint = null;
+  try { localStorage.removeItem('rpg_blueprint'); } catch(e) {}
+  updateBlueprintBanner();
+  renderSchoolhouse(); renderVillage();
+}
+function clearBlueprint() {
+  learningBlueprint = null;
+  try { localStorage.removeItem('rpg_blueprint'); } catch(e) {}
+  document.getElementById('blueprint-result').innerHTML = '';
+  updateBlueprintBanner();
+  renderSchoolhouse(); renderVillage();
 }
 function updateBlueprintBanner() {
   const b = document.getElementById('ll-blueprint-banner');
