@@ -71,7 +71,13 @@ else
   git commit -q -m "Village daily: link fixes + resources + improvements
 
 Co-Authored-By: Chris FocusAndExcell <user-9d03ff11-1357-46de-b0be-8561e6285f7c>"
-  git push --quiet origin main 2>&1 | tail -2 || true
+  if [ -n "${VILLAGEKEY:-}" ]; then
+    git -c credential.helper= -c credential.username=x-access-token \
+      -c 'credential.helper=!f() { echo username=x-access-token; echo "password=$VILLAGEKEY"; }; f' \
+      push --quiet origin main 2>&1 | grep -iv "password\|token" | tail -2 || true
+  else
+    git push --quiet origin main 2>&1 | tail -2 || true
+  fi
   SUMMARY=$(git log -1 --format=%s)
 fi
 

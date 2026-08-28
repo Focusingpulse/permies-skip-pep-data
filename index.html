@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Village — A Roll Making Game (RMG)</title>
 <script src="data.js"></script>
+<script src="learning.js"></script>
 <script src="translations.js"></script>
 <style>
 :root {
@@ -720,6 +721,84 @@ details[open] summary::after { transform: rotate(180deg); }
   .quest-card { flex-direction: column; align-items: flex-start; }
   .quest-action { align-self: flex-end; }
 }
+
+/* ================= Learning Lab ================= */
+.ll-wrap { max-width: 820px; margin: 0 auto; padding: 0.75rem 0 2rem; }
+.ll-intro { text-align:center; font-size:0.88em; color:var(--text-dim); margin-bottom:1rem; }
+.ll-tabs { display:flex; flex-wrap:wrap; gap:0.4rem; justify-content:center; margin-bottom:1.1rem; }
+.ll-tab { padding:0.45rem 0.85rem; border-radius:999px; border:1px solid var(--border-subtle);
+  background:var(--bg-card); color:var(--text-light); font-size:0.78rem; font-weight:600; cursor:pointer; }
+.ll-tab.active { background:var(--accent-green-dark); border-color:var(--accent-green); color:var(--text-bright); }
+.ll-panel { display:none; }
+.ll-panel.active { display:block; }
+.ll-cat { display:flex; gap:0.4rem; flex-wrap:wrap; justify-content:center; margin-bottom:0.9rem; }
+.ll-chip { padding:0.3rem 0.7rem; border-radius:999px; border:1px solid var(--border-subtle);
+  background:var(--bg-card); color:var(--text-dim); font-size:0.72rem; cursor:pointer; }
+.ll-chip.active { background:var(--accent-gold); color:#221c08; border-color:var(--accent-gold); font-weight:700; }
+.curr-card { background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:14px;
+  padding:1rem 1.1rem; margin-bottom:0.8rem; }
+.curr-head { display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; }
+.curr-name { font-size:1.05rem; font-weight:800; color:var(--text-bright); }
+.curr-century { font-size:0.72rem; color:var(--accent-gold); font-weight:600; margin-top:0.15rem; }
+.curr-flag { font-size:1.4rem; }
+.curr-core { font-size:0.86em; color:var(--text-light); margin:0.55rem 0; line-height:1.5; }
+.curr-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; font-size:0.8em; margin-bottom:0.55rem; }
+@media (max-width:560px){ .curr-grid{grid-template-columns:1fr;} }
+.curr-box { background:var(--bg-panel); border-radius:10px; padding:0.6rem 0.75rem; }
+.curr-box b { color:var(--accent-green); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.05em; display:block; margin-bottom:0.25rem; }
+.curr-box span { color:var(--text-dim); }
+.curr-evidence { font-size:0.72rem; color:var(--text-dim); font-style:italic; border-top:1px dashed var(--border-subtle); padding-top:0.5rem; }
+.curr-quests { font-size:0.75rem; color:var(--accent-gold); margin-top:0.45rem; }
+.curr-quote { font-size:0.82em; color:var(--text-light); font-style:italic; border-left:3px solid var(--accent-green); padding-left:0.65rem; margin:0.5rem 0; }
+.sci-card { background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:12px;
+  padding:0.85rem 1rem; margin-bottom:0.7rem; }
+.sci-head { display:flex; justify-content:space-between; align-items:center; gap:0.5rem; }
+.sci-name { font-weight:800; color:var(--text-bright); font-size:0.95rem; }
+.sci-ev { font-size:0.62rem; font-weight:800; text-transform:uppercase; letter-spacing:0.05em;
+  padding:0.2rem 0.5rem; border-radius:999px; white-space:nowrap; }
+.ev-strong { background:rgba(88,196,132,0.18); color:#58c484; }
+.ev-moderate { background:rgba(233,178,60,0.18); color:#e9b23c; }
+.ev-weak { background:rgba(120,130,150,0.18); color:#aab4c2; }
+.sci-row { font-size:0.8em; color:var(--text-dim); margin-top:0.4rem; line-height:1.5; }
+.sci-row b { color:var(--text-light); }
+.map-item { display:flex; gap:0.8rem; margin-bottom:0; }
+.map-line { width:3px; border-radius:3px; background:var(--accent-green); position:relative; flex:none; margin-top:0.3rem; }
+.map-era { font-size:0.7rem; font-weight:800; color:var(--accent-gold); text-transform:uppercase; letter-spacing:0.06em; margin-top:0.35rem; }
+.map-node { font-size:0.98rem; font-weight:800; color:var(--text-bright); }
+.map-desc { font-size:0.82em; color:var(--text-light); margin:0.3rem 0; line-height:1.5; }
+.map-outcome { font-size:0.78em; color:var(--accent-green); }
+.math-card { background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:12px;
+  padding:0.9rem 1rem; margin-bottom:0.7rem; }
+.math-name { font-weight:800; color:var(--text-bright); font-size:0.95rem; }
+.math-tag { font-size:0.62rem; font-weight:800; text-transform:uppercase; color:var(--accent-gold);
+  background:rgba(233,178,60,0.12); padding:0.15rem 0.45rem; border-radius:999px; }
+.math-rule { font-size:0.82em; color:var(--text-light); margin-top:0.4rem; }
+.math-ex { background:var(--bg-panel); border-radius:8px; padding:0.5rem 0.7rem; margin:0.45rem 0;
+  font-family:monospace; font-size:0.82em; color:var(--accent-green); }
+.math-why { font-size:0.76em; color:var(--text-dim); }
+.math-age { font-size:0.72rem; color:var(--accent-gold); font-weight:700; margin-top:0.35rem; }
+.blend-card { background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:14px;
+  padding:1rem 1.1rem; margin-bottom:0.7rem; }
+.blend-row { display:flex; align-items:center; gap:0.6rem; margin-bottom:0.65rem; flex-wrap:wrap; }
+.blend-label { font-size:0.82rem; font-weight:700; color:var(--text-light); min-width:110px; }
+.blend-pole { font-size:0.66rem; color:var(--text-dim); flex:1; min-width:60px; }
+.blend-pole.r { text-align:right; }
+.blend-slider { flex:2.4; min-width:110px; }
+.blueprint-result { background:linear-gradient(135deg, rgba(88,196,132,0.12), rgba(88,196,132,0.02));
+  border:1px solid var(--accent-green); border-radius:14px; padding:1rem 1.1rem; margin-top:0.7rem; }
+.blueprint-result h4 { color:var(--accent-green); font-size:1.1rem; margin-bottom:0.35rem; }
+.blueprint-result p { font-size:0.85em; color:var(--text-light); line-height:1.5; }
+.blueprint-quests { font-size:0.78rem; color:var(--accent-gold); margin-top:0.5rem; }
+.nature-card { background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:12px;
+  padding:0.85rem 1rem; margin-bottom:0.6rem; }
+.nature-card h5 { color:var(--accent-gold); font-size:0.85rem; margin-bottom:0.4rem; }
+.nature-card li { font-size:0.82em; color:var(--text-dim); line-height:1.55; margin-left:1.1rem; }
+.nature-mentor { font-size:0.82em; color:var(--text-light); background:var(--bg-panel); border-radius:10px;
+  padding:0.7rem 0.85rem; margin-top:0.25rem; line-height:1.6; }
+.ll-banner { display:flex; align-items:center; gap:0.5rem; background:rgba(88,196,132,0.1);
+  border:1px solid var(--accent-green); border-radius:10px; padding:0.5rem 0.75rem; margin:0.6rem 0;
+  font-size:0.8rem; color:var(--accent-green); }
+/* ================= End Learning Lab ================= */
 </style>
 </head>
 <body>
@@ -732,6 +811,7 @@ details[open] summary::after { transform: rotate(180deg); }
   <button class="nav-btn" id="nav-quests" onclick="showScreen('quests')" data-i18n="Quests">Quests</button>
   <button class="nav-btn" id="nav-school" onclick="showScreen('school')" data-i18n="Schoolhouse">Schoolhouse</button>
   <button class="nav-btn" id="nav-library" onclick="showScreen('library')" data-i18n="Library">Library</button>
+  <button class="nav-btn" id="nav-learning" onclick="showScreen('learning')" data-i18n="Learning Lab">Learning Lab</button>
   <button class="nav-btn" id="nav-circle" onclick="showScreen('circle')" data-i18n="Mentor's Circle">Mentor's Circle</button>
   <button class="nav-btn" id="nav-commons" onclick="showScreen('commons')" data-i18n="Commons">Commons</button>
   <select id="lang-select" onchange="setLang(this.value)" title="Language / Idioma" style="background:var(--bg-panel); color:var(--text-light); border:1px solid var(--border-subtle); border-radius:6px; padding:0.35rem 0.5rem; font-size:0.8rem;">
@@ -981,6 +1061,7 @@ details[open] summary::after { transform: rotate(180deg); }
 <!-- Schoolhouse -->
 <div class="screen" id="screen-school">
   <h2 style="text-align:center; color:var(--accent-gold); margin-bottom:1rem;" data-i18n="The Colorado Schoolhouse">The Colorado Schoolhouse</h2>
+  <div class="schoolhouse-box" id="school-blueprint-line" style="display:none;"></div>
   <div class="schoolhouse-box">
     <h3 data-i18n="Attendance Tracker (CO Law: 172 Days)">Attendance Tracker (CO Law: 172 Days)</h3>
     <div class="stat-row">
@@ -1167,6 +1248,22 @@ details[open] summary::after { transform: rotate(180deg); }
       <a href="https://archive.org" target="_blank" class="lib-link"><strong>Internet Archive:</strong> Millions of free books, films, software, and audio.</a>
       <a href="https://www.openculture.com/free_textbooks" target="_blank" class="lib-link"><strong>Open Culture:</strong> 200+ free textbooks and open educational resources.</a>
     </div>
+  </div>
+</div>
+
+<!-- Learning Lab -->
+<div class="screen" id="screen-learning">
+  <h2 style="text-align:center; color:var(--accent-gold); margin-bottom:0.6rem;" data-i18n="The Learning Lab">🌱 The Learning Lab</h2>
+  <p class="ll-intro" data-i18n="A living map of how people learn — curricula from around the world and across time, the science of learning, and a builder to weave your family's own blend.">A living map of how people learn — curricula from around the world and across time, the science of learning, and a builder to weave your family's own blend.</p>
+  <div class="ll-banner" id="ll-blueprint-banner" style="display:none;"></div>
+  <div class="ll-tabs" id="ll-tabs"></div>
+  <div class="ll-wrap">
+    <div class="ll-panel active" id="panel-gallery"></div>
+    <div class="ll-panel" id="panel-science"></div>
+    <div class="ll-panel" id="panel-map"></div>
+    <div class="ll-panel" id="panel-math"></div>
+    <div class="ll-panel" id="panel-blend"></div>
+    <div class="ll-panel" id="panel-nature"></div>
   </div>
 </div>
 
@@ -2078,6 +2175,206 @@ function startGame() {
   showScreen('intro');
 }
 
+// ============ Learning Lab ============
+let llTab = 'gallery';
+let learningBlueprint = null;
+try { const lb = localStorage.getItem('rpg_blueprint'); if (lb) learningBlueprint = JSON.parse(lb); } catch(e) {}
+
+function les(obj, en, es) { return (lang === 'es' && obj && obj.es) ? obj.es : en; } // lang-aware pick
+function llIsEs() { return lang === 'es'; }
+
+function renderLearning() {
+  renderLLTabs();
+  renderLLPanel(llTab);
+  updateBlueprintBanner();
+}
+function renderLLTabs() {
+  const tabs = [
+    { id:'gallery', label: llIsEs() ? 'Galería de Currículos' : 'Curriculum Gallery' },
+    { id:'science', label: llIsEs() ? 'Ciencia del Aprendizaje' : 'Learning Science' },
+    { id:'map', label: llIsEs() ? 'El Gran Mapa' : 'The Grand Map' },
+    { id:'math', label: llIsEs() ? 'Matemática Eterna' : 'Timeless Math' },
+    { id:'blend', label: llIsEs() ? 'Creador de Mezclas' : 'Blueprint Builder' },
+    { id:'nature', label: llIsEs() ? 'Ritmo de la Naturaleza' : 'Nature Rhythm' }
+  ];
+  document.getElementById('ll-tabs').innerHTML = tabs.map(t =>
+    `<button class="ll-tab ${t.id===llTab?'active':''}" onclick="setLLTab('${t.id}')">${t.label}</button>`).join('');
+}
+function setLLTab(id) { llTab = id; renderLLTabs(); renderLLPanel(id); }
+function renderLLPanel(id) {
+  document.querySelectorAll('.ll-panel').forEach(p => p.classList.remove('active'));
+  const panel = document.getElementById('panel-' + id);
+  if (panel) panel.classList.add('active');
+  if (id === 'gallery') renderGallery();
+  if (id === 'science') renderScience();
+  if (id === 'map') renderMap();
+  if (id === 'math') renderMath();
+  if (id === 'blend') renderBlend();
+  if (id === 'nature') renderNature();
+}
+
+function renderGallery() {
+  const el = document.getElementById('panel-gallery');
+  const tags = [
+    { id:'all', label: llIsEs() ? 'Todo' : 'All' },
+    { id:'prepared', label:'Montessori' }, { id:'rhythm', label:'Waldorf' },
+    { id:'freedom', label: llIsEs() ? 'Libertad' : 'Freedom' }, { id:'trivium', label:'Classical' },
+    { id:'living', label: llIsEs() ? 'Libros vivos' : 'Living Books' }, { id:'emergent', label:'Reggio' },
+    { id:'nature', label: llIsEs() ? 'Naturaleza' : 'Nature' }, { id:'ancient', label: llIsEs() ? 'Antiguo' : 'Ancient' },
+    { id:'guild', label: llIsEs() ? 'Gremio' : 'Guild' }
+  ];
+  const chips = `<div class="ll-cat">` + tags.map(t =>
+    `<button class="ll-chip ${t.id==='all'?'active':''}" data-tag="${t.id}" onclick="filterGallery(this,'${t.id}')">${t.label}</button>`).join('') + `</div>`;
+  el.innerHTML = chips + `<div id="gallery-list"></div>`;
+  filterGallery(null, 'all');
+}
+let galleryTag = 'all';
+function filterGallery(btn, tag) {
+  galleryTag = tag;
+  document.querySelectorAll('#panel-gallery .ll-chip').forEach(c => c.classList.toggle('active', c.dataset.tag === tag));
+  const list = document.getElementById('gallery-list');
+  const items = CURRICULA.filter(c => tag === 'all' || c.tag === tag);
+  list.innerHTML = items.map(c => {
+    const core = llIsEs() && c.esCore ? c.esCore : c.core;
+    return `<div class="curr-card">
+      <div class="curr-head">
+        <div><div class="curr-name">${c.flag} ${c.name}</div><div class="curr-century">${c.century}</div></div>
+      </div>
+      <div class="curr-core">${core}</div>
+      <div class="curr-grid">
+        <div class="curr-box"><b>${llIsEs()?'Cómo se ve':'What it looks like'}</b><span>${c.looks}</span></div>
+        <div class="curr-box"><b>${llIsEs()?'Puntos fuertes':'Strengths'}</b><span>${c.strengths}</span></div>
+        <div class="curr-box"><b>${llIsEs()?'Cuidado con':'Watch-outs'}</b><span>${c.watchouts}</span></div>
+        <div class="curr-box"><b>${llIsEs()?'Evidencia':'Evidence'}</b><span>${c.evidence}</span></div>
+      </div>
+      <div class="curr-quests">🎯 ${llIsEs()?'Aspectos en la Aldea':'Quests in the Village'}: ${c.quests.join(' · ')}</div>
+      <div class="curr-evidence">${llIsEs()?'Etiqueta':'Tag'}: ${c.tag} · ${c.century}</div>
+    </div>`;
+  }).join('') || `<div style="text-align:center;color:var(--text-dim);padding:1.5rem;">${llIsEs()?'Sin resultados':'No matches'}</div>`;
+}
+
+function renderScience() {
+  const el = document.getElementById('panel-science');
+  el.innerHTML = LEARNING_SCIENCE.map(s => {
+    const evClass = s.evidence.toLowerCase().startsWith('strong') ? 'ev-strong' : s.evidence.toLowerCase().startsWith('moderate') ? 'ev-moderate' : 'ev-weak';
+    return `<div class="sci-card">
+      <div class="sci-head"><div class="sci-name">${s.name}</div><span class="sci-ev ${evClass}">${s.evidence}</span></div>
+      <div class="sci-row"><b>${llIsEs()?'Qué es':'What it is'}:</b> ${s.what}</div>
+      <div class="sci-row"><b>${llIsEs()?'Por qué (neurociencia)':'Why (neuroscience)'}:</b> ${s.why}</div>
+      <div class="sci-row"><b>${llIsEs()?'En la Aldea':'In the Village'}:</b> ${s.village}</div>
+      <div class="sci-row"><b>${llIsEs()?'En casa':'At home'}:</b> ${s.home}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderMap() {
+  const el = document.getElementById('panel-map');
+  el.innerHTML = GRAND_MAP.map(m => `
+    <div class="map-item" style="padding:0.4rem 0;">
+      <div class="map-line"></div>
+      <div style="flex:1;">
+        <div class="map-era">${m.era}</div>
+        <div class="map-node">${m.node}</div>
+        <div class="map-desc">${m.desc}</div>
+        <div class="map-outcome">→ ${llIsEs()?'En la sociedad':'Outcome in society'}: ${m.outcome}</div>
+      </div>
+    </div>`).join('');
+}
+
+function renderMath() {
+  const el = document.getElementById('panel-math');
+  el.innerHTML = TIMELESS_MATH.map(m => `
+    <div class="math-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:0.5rem;">
+        <div class="math-name">${m.name}</div><span class="math-tag">${m.tag}</span>
+      </div>
+      <div class="math-rule"><b>${llIsEs()?'Cómo':'How'}:</b> ${m.rule}</div>
+      <div class="math-ex">${m.example}</div>
+      <div class="math-why"><b>${llIsEs()?'Por qué':'Why it works'}:</b> ${m.why}</div>
+      <div class="math-age">👦 ${llIsEs()?'Edad':'Age'}: ${m.age}</div>
+    </div>`).join('');
+}
+
+function renderBlend() {
+  const el = document.getElementById('panel-blend');
+  const sliders = BLUEPRINT_DIMS.map(d => {
+    return `<div class="blend-row" style="margin-bottom:0.75rem;">
+      <div class="blend-label">${llIsEs()?d.esLabel:d.label}</div>
+      <div class="blend-pole">${d.loShort}</div>
+      <input type="range" class="blend-slider" id="blend-${d.id}" min="0" max="10" value="5" oninput="document.getElementById('blend-val-${d.id}').textContent=this.value">
+      <div class="blend-pole r">${d.hiShort}</div>
+      <span id="blend-val-${d.id}" style="font-size:0.7rem;color:var(--text-dim);min-width:14px;text-align:center;">5</span>
+    </div>`;
+  }).join('');
+  el.innerHTML = `<p style="font-size:0.8em;color:var(--text-dim);margin-bottom:0.9rem;">${llIsEs()?'Desliza para describir cómo quieres que aprenda tu familia — luego genera un plan de aprendizaje combinado.':'Slide to describe how you want your family to learn — then generate a blended learning blueprint.'}</p>
+    <div class="blend-card">${sliders}
+      <button class="btn-success" style="margin-top:0.4rem;" onclick="generateBlueprint()">🧬 ${llIsEs()?'Generar Plan':'Generate Blueprint'}</button>
+      <div id="blueprint-result"></div>
+    </div>`;
+}
+
+function currentBlendProfile() {
+  const prof = {};
+  BLUEPRINT_DIMS.forEach(d => {
+    const v = parseInt(document.getElementById('blend-' + d.id).value, 10);
+    prof[d.id] = v;
+  });
+  return prof;
+}
+
+function generateBlueprint() {
+  const prof = currentBlendProfile();
+  let best = null, bestScore = -1;
+  BLUEPRINT_ARCHETYPES.forEach(a => {
+    let score = 0, count = 0;
+    BLUEPRINT_DIMS.forEach(d => {
+      const pref = a.fit[d.id];
+      if (!pref) return;
+      count++;
+      const v = prof[d.id];
+      if (v <= 4 && pref === 'lo') score += 1;
+      else if (v >= 6 && pref === 'hi') score += 1;
+      else if (v === 5 && (pref === 'lo' || pref === 'hi')) score += 0.5;
+    });
+    if (count && score / count > bestScore) { bestScore = score / count; best = a; }
+  });
+  if (!best) best = BLUEPRINT_ARCHETYPES[BLUEPRINT_ARCHETYPES.length - 1];
+  const name = llIsEs() ? (best.esName || best.name) : best.name;
+  const desc = llIsEs() ? (best.esDesc || best.desc) : best.desc;
+  learningBlueprint = { name, archetype: best.name, profile: prof, savedAt: new Date().toISOString() };
+  try { localStorage.setItem('rpg_blueprint', JSON.stringify(learningBlueprint)); } catch(e) {}
+  document.getElementById('blueprint-result').innerHTML = `
+    <div class="blueprint-result">
+      <h4>📜 ${name}</h4>
+      <p>${desc}</p>
+      <div class="blueprint-quests">🎯 ${llIsEs()?'Empieza por':'Start with'}: ${best.quests.join(' · ')}</div>
+      <div style="font-size:0.72rem;color:var(--text-dim);margin-top:0.5rem;">${llIsEs()?'Guardado — aparece en tu Aldea y Escuela.':'Saved — it now appears on your Village and Schoolhouse.'}</div>
+    </div>`;
+  updateBlueprintBanner();
+}
+function updateBlueprintBanner() {
+  const b = document.getElementById('ll-blueprint-banner');
+  if (!b) return;
+  if (learningBlueprint) {
+    b.style.display = 'flex';
+    b.innerHTML = `📜 ${llIsEs()?'Tu Plan de Aprendizaje':'Your Learning Blueprint'}: <b>${learningBlueprint.name}</b><button class="btn btn-small" style="margin-left:auto;" onclick="learningBlueprint=null;try{localStorage.removeItem('rpg_blueprint')}catch(e){};updateBlueprintBanner();renderSchoolhouse();renderVillage();${llIsEs()?'':'clearBlueprintNote();'}">✕</button>`;
+  } else {
+    b.style.display = 'none';
+  }
+}
+function clearBlueprintNote() {}
+
+function renderNature() {
+  const el = document.getElementById('panel-nature');
+  const R = NATURE_RHYTHM;
+  el.innerHTML = `<p style="font-size:0.85em;color:var(--text-dim);margin-bottom:0.8rem;">${R.intro}</p>
+    <div class="nature-card"><h5>🌅 ${llIsEs()?'A diario':'Daily'}</h5><ul>${R.daily.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+    <div class="nature-card"><h5>🗓️ ${llIsEs()?'Cada semana':'Weekly'}</h5><ul>${R.weekly.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+    <div class="nature-card"><h5>🍂 ${llIsEs()?'Por temporada':'Seasonal'}</h5><ul>${R.seasonal.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+    <div class="nature-card"><h5>🧑‍🏫 ${llIsEs()?'Mentoría Coyote':'Coyote Mentoring'}</h5><ul>${R.mentoring.map(x=>`<li>${x}</li>`).join('')}</ul></div>`;
+}
+// ============ End Learning Lab ============
+
 function showScreen(s) {
   document.querySelectorAll('.screen').forEach(el => el.classList.remove('active'));
   document.getElementById('screen-' + s).classList.add('active');
@@ -2090,6 +2387,7 @@ function showScreen(s) {
   if (s === 'studio') renderStudio();
   if (s === 'quests') renderQuests();
   if (s === 'school') renderSchoolhouse();
+  if (s === 'learning') renderLearning();
   if (s === 'commons') renderCommons();
   if (s === 'circle') renderCircle();
 }
@@ -2159,6 +2457,7 @@ function saveVillage() {
   safeSet('rpg_players', players);
   safeSet('rpg_freeRoam', freeRoam);
   safeSet('rpg_learnDepth', learnDepth);
+  safeSet('rpg_blueprint', learningBlueprint);
   // Apply history import if filled
   let historyDays = document.getElementById('history-days');
   if (historyDays && (parseInt(historyDays.value) || 0) > 0) {
@@ -2176,6 +2475,7 @@ function exportVillage() {
     biome: biome,
     freeRoam: freeRoam,
     learnDepth: learnDepth,
+    learningBlueprint: learningBlueprint,
     webhookUrl: webhookUrl
   };
   const blob = new Blob([JSON.stringify(saveData, null, 2)], { type: "application/json" });
@@ -2203,6 +2503,8 @@ function importVillage(event) {
       biome = data.biome || 'apartment';
       freeRoam = !!data.freeRoam;
       learnDepth = data.learnDepth || 'adults';
+      learningBlueprint = data.learningBlueprint || null;
+      safeSet('rpg_blueprint', learningBlueprint);
       webhookUrl = data.webhookUrl || '';
 
       safeSet('rpg_players', players);
@@ -2237,6 +2539,7 @@ function resetVillage() {
   localStorage.removeItem('rpg_biome');
   localStorage.removeItem('rpg_freeRoam');
   localStorage.removeItem('rpg_learnDepth');
+  localStorage.removeItem('rpg_blueprint');
   localStorage.removeItem('rpg_webhook');
   location.reload();
 }
@@ -2442,7 +2745,8 @@ function renderVillage() {
   // Progress overview
   let progress = getTierProgress();
   let eco = getCommerceStatus();
-  document.getElementById('village-progress').innerHTML = `
+  let bpLine = learningBlueprint ? `<div class="ll-banner" style="margin:0.6rem 0;">📜 <b>${t('Your Learning Blueprint')}</b>: ${learningBlueprint.name}</div>` : '';
+  document.getElementById('village-progress').innerHTML = bpLine + `
     <strong style="color:var(--accent-gold);">${t('Family Progress')}</strong><br>
     <span style="font-size:0.85em; color:var(--text-dim);">${completedQuests.length} ${t('quests completed')}</span>
     <div class="badge-bar">
@@ -3121,6 +3425,17 @@ function applySchoolHistory() {
 }
 
 function renderSchoolhouse() {
+  const bpLine = document.getElementById('school-blueprint-line');
+  if (bpLine) {
+    if (learningBlueprint) {
+      bpLine.style.display = 'block';
+      bpLine.innerHTML = `<h3 data-i18n="Your Learning Blueprint">📜 Your Learning Blueprint</h3>
+        <div class="ll-banner"><b>${learningBlueprint.name}</b><span style="font-size:0.75rem;color:var(--text-dim);margin-left:0.4rem;">· ${learningBlueprint.savedAt ? learningBlueprint.savedAt.slice(0,10) : ''}</span></div>
+        <p style="font-size:0.8em;color:var(--text-dim);margin-top:0.4rem;" data-i18n="This is the educational blend your family chose — build quests that honor it.">This is the educational blend your family chose — build quests that honor it.</p>`;
+    } else {
+      bpLine.style.display = 'none';
+    }
+  }
   document.getElementById('att-days').innerText = attendance.days;
   document.getElementById('att-hours').innerText = attendance.hours;
   document.getElementById('att-bar').style.width = Math.min(attendance.days / 172 * 100, 100) + '%';
