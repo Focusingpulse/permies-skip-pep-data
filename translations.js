@@ -178,6 +178,11 @@ const LANG = {
     "Wood": "Madera",
     "Iron": "Hierro"
   },
+  "biomes": {
+    "apartment": "apartamento",
+    "suburb": "suburbio",
+    "rural": "rural"
+  },
   "guilds": {
     "Gardening": {
       "name": "Jardinería",
