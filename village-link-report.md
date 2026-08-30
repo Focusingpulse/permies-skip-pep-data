@@ -1,6 +1,6 @@
 # Village Link Report — 2026-08-30
 
-Checked **609** URLs: **574** OK, **28** HTTP errors, **0** redirects, **7** unreachable/timeouts.
+Checked **613** URLs: **579** OK, **27** HTTP errors, **0** redirects, **7** unreachable/timeouts.
 
 ## Unreachable / timeout (7)
 
@@ -12,7 +12,7 @@ Checked **609** URLs: **574** OK, **28** HTTP errors, **0** redirects, **7** unr
 - `https://deptutor.info`  (error: URLError)
 - `https://mountainherbs.net/grown`  (error: URLError)
 
-## HTTP errors (28)
+## HTTP errors (27)
 
 - [`http://byjillb.com`](http://byjillb.com)  (HTTP 404)
 - [`http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img`](http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img)  (HTTP 404)
@@ -37,7 +37,6 @@ Checked **609** URLs: **574** OK, **28** HTTP errors, **0** redirects, **7** unr
 - [`https://www.congress.gov/resources/display/content/The+Constitution+of+the+United+States`](https://www.congress.gov/resources/display/content/The+Constitution+of+the+United+States)  (HTTP 403)
 - [`https://www.familyhandyman.com/plumbing/`](https://www.familyhandyman.com/plumbing/)  (HTTP 404)
 - [`https://www.familyhandyman.com/smart-homeowner/diy-home-inspection/`](https://www.familyhandyman.com/smart-homeowner/diy-home-inspection/)  (HTTP 404)
-- [`https://www.instagram.com/wizard.mountainman/`](https://www.instagram.com/wizard.mountainman/)  (HTTP 429)
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
 - [`https://www.patreon.com/slowfilms`](https://www.patreon.com/slowfilms)  (HTTP 403)
 - [`https://www.pinterest.ca/joelbc/homestead-methods-tools-equipment/https://www.pinterest.ca/joelbc/mixed-shops/`](https://www.pinterest.ca/joelbc/homestead-methods-tools-equipment/https://www.pinterest.ca/joelbc/mixed-shops/)  (HTTP 403)
