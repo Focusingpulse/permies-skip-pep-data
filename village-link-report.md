@@ -1,6 +1,6 @@
 # Village Link Report — 2026-08-30
 
-Checked **613** URLs: **579** OK, **27** HTTP errors, **0** redirects, **7** unreachable/timeouts.
+Checked **614** URLs: **580** OK, **27** HTTP errors, **0** redirects, **7** unreachable/timeouts.
 
 ## Unreachable / timeout (7)
 
@@ -19,7 +19,7 @@ Checked **613** URLs: **579** OK, **27** HTTP errors, **0** redirects, **7** unr
 - [`http://innoperma.weebly.com/old`](http://innoperma.weebly.com/old)  (HTTP 404)
 - [`http://onceuponeayarden.blogspot.com/`](http://onceuponeayarden.blogspot.com/)  (HTTP 404)
 - [`http://organicfoodbliss.com/my-clear-cut-garden/`](http://organicfoodbliss.com/my-clear-cut-garden/)  (HTTP 500)
-- [`http://paypal.me/lazykatorhttp://www.buymeacoffee.com/dzenifrRead`](http://paypal.me/lazykatorhttp://www.buymeacoffee.com/dzenifrRead)  (HTTP 404)
+- [`http://www.buymeacoffee.com/dzenifrRead`](http://www.buymeacoffee.com/dzenifrRead)  (HTTP 404)
 - [`http://www.fws.gov/whitenosesyndrome/`](http://www.fws.gov/whitenosesyndrome/)  (HTTP 403)
 - [`http://www.my10acres.info`](http://www.my10acres.info)  (HTTP 500)
 - [`http://www.northwestpermaculture.org/-`](http://www.northwestpermaculture.org/-)  (HTTP 404)
