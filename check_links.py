@@ -11,7 +11,7 @@ import json, re, os, urllib.request, urllib.error, concurrent.futures, time, dat
 REPO = os.path.dirname(os.path.abspath(__file__))
 os.chdir(REPO)
 
-URL_RE = re.compile(r'https?://[^\s"\'<>)\]}]+')
+URL_RE = re.compile(r'https?://[^\s"\'<>\]}]+')
 
 def collect_urls():
     urls = set()
