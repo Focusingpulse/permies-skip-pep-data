@@ -1,6 +1,6 @@
-# Village Link Report — 2026-08-30
+# Village Link Report — 2026-08-31
 
-Checked **614** URLs: **580** OK, **27** HTTP errors, **0** redirects, **7** unreachable/timeouts.
+Checked **617** URLs: **583** OK, **27** HTTP errors, **0** redirects, **7** unreachable/timeouts.
 
 ## Unreachable / timeout (7)
 
@@ -39,7 +39,7 @@ Checked **614** URLs: **580** OK, **27** HTTP errors, **0** redirects, **7** unr
 - [`https://www.familyhandyman.com/smart-homeowner/diy-home-inspection/`](https://www.familyhandyman.com/smart-homeowner/diy-home-inspection/)  (HTTP 404)
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
 - [`https://www.patreon.com/slowfilms`](https://www.patreon.com/slowfilms)  (HTTP 403)
-- [`https://www.pinterest.ca/joelbc/homestead-methods-tools-equipment/https://www.pinterest.ca/joelbc/mixed-shops/`](https://www.pinterest.ca/joelbc/homestead-methods-tools-equipment/https://www.pinterest.ca/joelbc/mixed-shops/)  (HTTP 403)
+- [`https://www.pinterest.ca/joelbc/homestead-methods-tools-equipment/https://www.pinterest.ca/joelbc/mixed-shops/`](https://www.pinterest.ca/joelbc/homestead-methods-tools-equipment/https://www.pinterest.ca/joelbc/mixed-shops/)  (HTTP 404)
 - [`https://www.youtube.com/c/EatTheWeeds`](https://www.youtube.com/c/EatTheWeeds)  (HTTP 404)
 
 _Generated automatically. Review then delete broken links or replace with live alternatives._

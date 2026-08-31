@@ -111,6 +111,8 @@ const LANG = {
     "Official PEP quests (marked with the shield icon) count toward Permies certification. RPG Add-on quests (marked with the sparkle icon) are custom to The Village and do not count toward official PEP badges.": "Las misiones oficiales PEP (icono de escudo) cuentan para la certificación de Permies. Las misiones adicionales RPG (icono de chispa) son de La Aldea y no cuentan para las insignias oficiales de PEP.",
     "Open PEP Forum": "Abrir Foro PEP",
     "How to Apply for a Badge": "Cómo solicitar una insignia",
+    "Food Preservation": "Conservación de Alimentos",
+    "Woodworking & Hand Tools": "Carpintería y Herramientas Manuales",
     "Optional: The Offline Archive": "Opcional: El Archivo Offline",
     "For families wanting a complete offline backup drive, download these open-source collections to a local hard drive:": "Para las familias que quieren un respaldo offline completo, descarga estas colecciones de código abierto a un disco local:",
     "Quests Done": "Misiones hechas",
