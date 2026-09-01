@@ -477,15 +477,15 @@ const BLUEPRINT_ARCHETYPES = [
     name: "The Balanced Blend",
     esName: "La Mezcla Equilibrada",
     fit: {},
-    desc: "A custom hand-built blend — the family curates elements from every tradition into something genuinely its own. This is the Village way: born of attention, not allegiance.",
+    desc: "A custom hand-built blend — the family picks elements from every tradition that fit them. This is the Village way: you choose, and you keep what works.",
     esDesc: "Una mezcla propia: la familia elige elementos de cada tradición.",
-    longDesc: "The Balanced Blend is the meta-blueprint: instead of pledging allegiance to one tradition, the family consciously curates — a Montessori shelf in the morning, a Charlotte Mason living-book feast, a Wild Scholar afternoon, a Trivium Guild dinner debate, a Waldorf festival calendar, and unschooling trust throughout. Its founding texts are this Learning Lab itself: the gallery gives you the ingredients, the sciences give you the principles, and you compose your own. Document what you chose and why — that documentation is the curriculum's evidence.",
+    longDesc: "Instead of following one tradition, the family consciously curates — a Montessori shelf in the morning, a Charlotte Mason living-book feast, a Wild Scholar afternoon, a Trivium Guild dinner debate, a Waldorf festival calendar, and unschooling trust throughout. Its founding texts are this Learning Lab itself: the gallery gives you the ingredients, the sciences give you the principles, and you compose your own. Document what you chose and why — that documentation is the curriculum's evidence.",
     books: [
       { name: "This Learning Lab", work: "The Village game — Curriculum Gallery tab", line: "Your ingredients: compare any two traditions and choose." },
       { name: "Every author above, sampled", work: "Montessori, Mason, Steiner, Holt, Gray, Louv, Young...", line: "Read the originals at the pace your family can." }
     ],
     evidence: "As strong as the pieces you choose — a balanced blend inherits the evidence of its parts. The practice of documenting your choices (and revisiting them) is itself metacognitive learning.",
-    practices: ["Pick 2-3 elements from different traditions and try them for a season", "Document why you chose them; adjust at the next season change", "Keep the Village quest board as the common spine", "Family meeting monthly: what worked, what didn't, what's next", "Stay curious — the map keeps growing"],
+    practices: ["Pick 2-3 elements from different traditions and try them for a season", "Document why you chose them; adjust at the next season change", "Keep the Village quest board as the common spine", "Family meeting monthly: what worked, what didn't, what's next"],
     quests: ["Pick what calls to you"]
   }
 ];
