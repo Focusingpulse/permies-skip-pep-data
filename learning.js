@@ -607,7 +607,7 @@ const CURRICULUM_MODES = {
   waldorf: {
     read: [
       { label: "Rudolf Steiner Archive (lectures)", url: "https://rsarchive.org" },
-      { label: "Waldorf Library (curriculum + festivals)", url: "https://waldorflibrary.org" },
+      { label: "Waldorf Library (curriculum + festivals)", url: "https://www.waldorflibrary.org" },
       { label: "Douglas Gabriel — Spirit of Childhood (free curriculum book)", url: "https://eternalcurriculum.com/2017/09/26/spirit-of-childhood/" }
     ],
     listen: [
