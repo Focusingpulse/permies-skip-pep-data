@@ -1,6 +1,6 @@
-# Village Link Report — 2026-08-31
+# Village Link Report — 2026-09-01
 
-Checked **620** URLs: **591** OK, **22** HTTP errors, **0** redirects, **7** unreachable/timeouts.
+Checked **620** URLs: **592** OK, **21** HTTP errors, **0** redirects, **7** unreachable/timeouts.
 
 ## Unreachable / timeout (7)
 
@@ -12,7 +12,7 @@ Checked **620** URLs: **591** OK, **22** HTTP errors, **0** redirects, **7** unr
 - `https://deptutor.info`  (error: URLError)
 - `https://mountainherbs.net/grown`  (error: URLError)
 
-## HTTP errors (22)
+## HTTP errors (21)
 
 - [`http://byjillb.com`](http://byjillb.com)  (HTTP 404)
 - [`http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img`](http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img)  (HTTP 404)
@@ -31,10 +31,9 @@ Checked **620** URLs: **591** OK, **22** HTTP errors, **0** redirects, **7** unr
 - [`https://www.activelivingresearch.org/physical-literacy`](https://www.activelivingresearch.org/physical-literacy)  (HTTP 403)
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
 - [`https://www.allaboutbirds.org/guide/`](https://www.allaboutbirds.org/guide/)  (HTTP 403)
-- [`https://www.amazon.com/Jill-b/e/B00OJKS5G8?ref=sr_ntt_srch_lnk_3&qid=1578855737&sr=8-3`](https://www.amazon.com/Jill-b/e/B00OJKS5G8?ref=sr_ntt_srch_lnk_3&qid=1578855737&sr=8-3)  (HTTP 405)
 - [`https://www.congress.gov/resources/display/content/The+Constitution+of+the+United+States`](https://www.congress.gov/resources/display/content/The+Constitution+of+the+United+States)  (HTTP 403)
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
 - [`https://www.patreon.com/slowfilms`](https://www.patreon.com/slowfilms)  (HTTP 403)
-- [`https://www.pinterest.ca/joelbc/homestead-methods-tools-equipment/https://www.pinterest.ca/joelbc/mixed-shops/`](https://www.pinterest.ca/joelbc/homestead-methods-tools-equipment/https://www.pinterest.ca/joelbc/mixed-shops/)  (HTTP 404)
+- [`https://www.pinterest.ca/joelbc/homestead-methods-tools-equipment/https://www.pinterest.ca/joelbc/mixed-shops/`](https://www.pinterest.ca/joelbc/homestead-methods-tools-equipment/https://www.pinterest.ca/joelbc/mixed-shops/)  (HTTP 403)
 
 _Generated automatically. Review then delete broken links or replace with live alternatives._
