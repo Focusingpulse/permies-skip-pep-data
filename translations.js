@@ -12,6 +12,7 @@ const LANG = {
     "Quests": "Misiones",
     "Schoolhouse": "Escuela",
     "Library": "Biblioteca",
+    "Homesteading": "Granja autosuficiente",
     "Learning Lab": "Laboratorio de Aprendizaje",
     "The Learning Lab": "El Laboratorio de Aprendizaje",
     "A living map of how people learn — curricula from around the world and across time, the science of learning, and a builder to weave your family's own blend.": "Un mapa vivo de cómo aprenden las personas — currículos de todo el mundo y de todas las épocas, la ciencia del aprendizaje y un creador para tejer la mezcla propia de tu familia.",
