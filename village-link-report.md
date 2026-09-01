@@ -1,16 +1,23 @@
+
+## 2026-09-01 maintenance pass
+-   added resource: Cornell Lab — All About Birds
+
 # Village Link Report — 2026-09-01
 
-Checked **624** URLs: **601** OK, **18** HTTP errors, **0** redirects, **5** unreachable/timeouts.
+Checked **626** URLs: **601** OK, **17** HTTP errors, **0** redirects, **8** unreachable/timeouts.
 
-## Unreachable / timeout (5)
+## Unreachable / timeout (8)
 
 - `http://ia800306.us.archive.org/30/items/fe_The_Solar_Greenhouse_Book/The_Solar_Greenhouse_Book.pdf`  (error: URLError)
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
+- `http://www.davidhuang.org`  (error: TimeoutError)
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)
+- `http://www.theartisthomestead.com`  (error: TimeoutError)
 - `https://deptutor.info`  (error: URLError)
 - `https://mountainherbs.net/grown`  (error: URLError)
+- `https://web.archive.org/web/20240101000000/https://8shields.org`  (error: URLError)
 
-## HTTP errors (18)
+## HTTP errors (17)
 
 - [`http://byjillb.com`](http://byjillb.com)  (HTTP 404)
 - [`http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img`](http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img)  (HTTP 404)
@@ -22,13 +29,12 @@ Checked **624** URLs: **601** OK, **18** HTTP errors, **0** redirects, **5** unr
 - [`http://www.sasez.com`](http://www.sasez.com)  (HTTP 404)
 - [`https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`](https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20)  (HTTP 404)
 - [`https://skipthejourney.wordpress.com/`](https://skipthejourney.wordpress.com/)  (HTTP 404)
+- [`https://waldorfteacherresources.com/`](https://waldorfteacherresources.com/)  (HTTP 403)
 - [`https://wise.com`](https://wise.com)  (HTTP 403)
-- [`https://www.activelivingresearch.org/physical-literacy`](https://www.activelivingresearch.org/physical-literacy)  (HTTP 403)
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
-- [`https://www.allaboutbirds.org/guide/`](https://www.allaboutbirds.org/guide/)  (HTTP 403)
-- [`https://www.amazon.com/Jill-b/e/B00OJKS5G8?ref=sr_ntt_srch_lnk_3&qid=1578855737&sr=8-3`](https://www.amazon.com/Jill-b/e/B00OJKS5G8?ref=sr_ntt_srch_lnk_3&qid=1578855737&sr=8-3)  (HTTP 503)
+- [`https://www.allaboutbirds.org`](https://www.allaboutbirds.org)  (HTTP 403)
+- [`https://www.amazon.com/Jill-b/e/B00OJKS5G8?ref=sr_ntt_srch_lnk_3&qid=1578855737&sr=8-3`](https://www.amazon.com/Jill-b/e/B00OJKS5G8?ref=sr_ntt_srch_lnk_3&qid=1578855737&sr=8-3)  (HTTP 405)
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
 - [`https://www.patreon.com/slowfilms`](https://www.patreon.com/slowfilms)  (HTTP 403)
-- [`https://www.waldorflibrary.org`](https://www.waldorflibrary.org)  (HTTP 403)
 
 _Generated automatically. Review then delete broken links or replace with live alternatives._
