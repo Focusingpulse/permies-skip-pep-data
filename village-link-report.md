@@ -1,14 +1,15 @@
 # Village Link Report — 2026-09-02
 
-Checked **634** URLs: **611** OK, **18** HTTP errors, **0** redirects, **5** unreachable/timeouts.
+Checked **637** URLs: **613** OK, **18** HTTP errors, **0** redirects, **6** unreachable/timeouts.
 
-## Unreachable / timeout (5)
+## Unreachable / timeout (6)
 
 - `http://ia800306.us.archive.org/30/items/fe_The_Solar_Greenhouse_Book/The_Solar_Greenhouse_Book.pdf`  (error: URLError)
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)
 - `https://deptutor.info`  (error: URLError)
 - `https://mountainherbs.net/grown`  (error: URLError)
+- `https://www.motherearthnews.com/sustainable-living/green-homes/cob-building-basics-zm0z13onzrob/`  (error: TimeoutError)
 
 ## HTTP errors (18)
 
@@ -20,6 +21,7 @@ Checked **634** URLs: **611** OK, **18** HTTP errors, **0** redirects, **5** unr
 - [`http://www.fws.gov/whitenosesyndrome/`](http://www.fws.gov/whitenosesyndrome/)  (HTTP 403)
 - [`http://www.my10acres.info`](http://www.my10acres.info)  (HTTP 500)
 - [`http://www.sasez.com`](http://www.sasez.com)  (HTTP 404)
+- [`http://www.theartisthomestead.com`](http://www.theartisthomestead.com)  (HTTP 404)
 - [`https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`](https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20)  (HTTP 404)
 - [`https://skipthejourney.wordpress.com/`](https://skipthejourney.wordpress.com/)  (HTTP 404)
 - [`https://waldorfteacherresources.com/`](https://waldorfteacherresources.com/)  (HTTP 403)
@@ -27,7 +29,6 @@ Checked **634** URLs: **611** OK, **18** HTTP errors, **0** redirects, **5** unr
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
 - [`https://www.allaboutbirds.org`](https://www.allaboutbirds.org)  (HTTP 403)
 - [`https://www.allaboutbirds.org/guide/`](https://www.allaboutbirds.org/guide/)  (HTTP 403)
-- [`https://www.instagram.com/wizard.mountainman/`](https://www.instagram.com/wizard.mountainman/)  (HTTP 429)
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
 - [`https://www.patreon.com/slowfilms`](https://www.patreon.com/slowfilms)  (HTTP 403)
 

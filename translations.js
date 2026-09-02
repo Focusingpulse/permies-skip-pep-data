@@ -13,6 +13,7 @@ const LANG = {
     "Schoolhouse": "Escuela",
     "Library": "Biblioteca",
     "Homesteading": "Granja autosuficiente",
+    "Natural Building": "Construcción Natural",
     "Learning Lab": "Laboratorio de Aprendizaje",
     "The Learning Lab": "El Laboratorio de Aprendizaje",
     "A living map of how people learn — curricula from around the world and across time, the science of learning, and a tool for building your family's own blend.": "Un mapa vivo de cómo aprenden las personas — currículos de todo el mundo y de todas las épocas, la ciencia del aprendizaje y una herramienta para crear la mezcla propia de tu familia.",
