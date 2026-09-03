@@ -923,3 +923,108 @@ const CONNECTION_VOICES = [
   { who: "Parent, The Invisible Learning (naturalcommunity.org)", year: "2026", note: "\"No worksheet could have predicted how she would approach that rock wall. No assessment would have measured her empathy for a worm. Yet these are the very qualities that help children navigate the world.\"", medium: "anecdote" },
   { who: "Friedman (2024), Children's Geographies — interviews with Forest School mothers", year: "2024", note: "Mothers chose forest school for the autonomy and compassion their children found nowhere else — especially children with additional support needs; the benefits spilled into family nature habits beyond the program.", medium: "qualitative study" }
 ];
+
+/* ============================================================
+ * CONNECTION ATTRIBUTES — the felt qualities beneath the roles
+ * Six attributes, each backed by a pillar of the Connection
+ * Science panel. Quests earn points; tiers square upward
+ * (1, 4, 9, 16, 25 — each level takes more proofs than the last).
+ * ============================================================ */
+const CONNECTION_ATTRS = [
+  {
+    id: "curiosity", icon: "🧭", name: "Curiosity", esName: "Curiosidad",
+    def: "Wonder, and the habit of asking what's under the surface.",
+    esDef: "La maravilla, y el hábito de preguntar qué hay debajo de la superficie.",
+    science: "Serve & return — a responsive adult builds a child's reach toward the world (Harvard Center on the Developing Child).",
+    tiers: ["Wondering", "Questioning", "Exploring", "Investigating", "Questing"],
+    esTiers: ["Asombro", "Preguntar", "Explorar", "Investigar", "Buscar"]
+  },
+  {
+    id: "persistence", icon: "🌱", name: "Persistence", esName: "Persistencia",
+    def: "Showing up, doing it again, finishing what you started.",
+    esDef: "Presentarse, volver a intentarlo, terminar lo que empezaste.",
+    science: "Perseverance is a documented outcome of nature-based learning (Kuo 2019); the BBBS trial showed what eighteen months of showing up does.",
+    tiers: ["Starting", "Steadying", "Crafting", "Finishing", "Iron-hearted"],
+    esTiers: ["Empezar", "Sostener", "Labrar", "Terminar", "Corazón de hierro"]
+  },
+  {
+    id: "attention", icon: "👀", name: "Attention", esName: "Atención",
+    def: "Seeing what's actually there — details, tracks, small changes.",
+    esDef: "Ver lo que realmente está ahí — detalles, rastros, pequeños cambios.",
+    science: "Nature restores directed attention (Faber Taylor & Kuo; Dadvand 2015) — the Tracker's whole craft.",
+    tiers: ["Noticing", "Watching", "Tracking", "Following", "Seeing"],
+    esTiers: ["Notar", "Observar", "Rastrear", "Seguir", "Ver"]
+  },
+  {
+    id: "empathy", icon: "💛", name: "Empathy", esName: "Empatía",
+    def: "Noticing how others feel, and caring about it.",
+    esDef: "Notar cómo se sienten los demás, y que te importe.",
+    science: "Imitation runs both ways — children mirror the care they see modeled (Bandura 1961).",
+    tiers: ["Caring", "Kind", "Gentle", "Compassionate", "Heart-Keeper"],
+    esTiers: ["Cuidar", "Ser amable", "Ser gentil", "Compasión", "Guardián del corazón"]
+  },
+  {
+    id: "courage", icon: "🔥", name: "Courage", esName: "Coraje",
+    def: "Trying the hard thing when the easy thing is right there.",
+    esDef: "Intentar lo difícil cuando lo fácil está ahí mismo.",
+    science: "Supported risk in nature grows confidence children carry elsewhere (forest school practice).",
+    tiers: ["Daring", "Brave", "Bold", "Fearless", "Legendary"],
+    esTiers: ["Atreverse", "Ser valiente", "Audaz", "Sin miedo", "Leyenda"]
+  },
+  {
+    id: "stewardship", icon: "🛡️", name: "Stewardship", esName: "Custodia",
+    def: "Caring for the land, the tools, and the home that holds you.",
+    esDef: "Cuidar la tierra, las herramientas y el hogar que te sostiene.",
+    science: "Over fifty studies link emotional connection to nature with pro-environmental behavior (Kuo 2019).",
+    tiers: ["Helping", "Gardener", "Keeper", "Guardian", "Land-Steward"],
+    esTiers: ["Ayudar", "Jardinero", "Guardián", "Custodio", "Guardián de la tierra"]
+  }
+];
+
+const CONNECTION_ATTR_THRESHOLDS = [1, 4, 9, 16, 25];
+const CONNECTION_ATTR_ROMAN = ["I", "II", "III", "IV", "V"];
+
+/* Each guild grows a small set of attributes. */
+const GUILD_ATTRS = {
+  "Gardening": ["persistence", "stewardship", "curiosity"],
+  "Natural Building": ["persistence", "courage", "attention"],
+  "Woodland Care": ["stewardship", "attention", "courage"],
+  "Round Wood Woodworking": ["attention", "persistence", "curiosity"],
+  "Tool Care": ["attention", "stewardship", "persistence"],
+  "Earthworks": ["persistence", "courage", "attention"],
+  "Dimensional Lumber Woodworking": ["attention", "persistence", "courage"],
+  "Rocket": ["curiosity", "courage", "attention"],
+  "Food Prep": ["attention", "stewardship", "empathy"],
+  "Animal Care": ["empathy", "stewardship", "attention"],
+  "Foraging": ["curiosity", "attention", "courage"],
+  "Community Living": ["empathy", "courage", "curiosity"],
+  "Textiles": ["attention", "persistence", "curiosity"],
+  "Greywater and Willow Feeders": ["stewardship", "curiosity", "attention"],
+  "Metalworking": ["persistence", "courage", "attention"],
+  "Plumbing and Hot Water": ["attention", "persistence", "courage"],
+  "Electricity": ["curiosity", "courage", "attention"],
+  "Commerce": ["persistence", "attention", "courage"],
+  "Natural Medicine": ["curiosity", "empathy", "attention"],
+  "Nest": ["stewardship", "attention", "empathy"],
+  "Homesteading": ["persistence", "courage", "stewardship"],
+  "Oddball": ["curiosity", "courage", "empathy"],
+  "Vitality": ["persistence", "courage", "attention"],
+  "Community": ["empathy", "courage", "persistence"]
+};
+
+function attrLevel(points) {
+  let lv = 0;
+  for (let i = 0; i < CONNECTION_ATTR_THRESHOLDS.length; i++) {
+    if (points >= CONNECTION_ATTR_THRESHOLDS[i]) lv = i + 1;
+  }
+  return lv;
+}
+function attrByGuild(guildName) {
+  const ids = GUILD_ATTRS[guildName] || [];
+  return ids.map(id => CONNECTION_ATTRS.find(a => a && a.id === id)).filter(Boolean);
+}
+function attrName(a) { return (llIsEs && llIsEs() && a.esName) ? a.esName : a.name; }
+function attrTierName(a, lv) {
+  const arr = (llIsEs && llIsEs() && a.esTiers) ? a.esTiers : a.tiers;
+  return arr[lv - 1] || CONNECTION_ATTR_ROMAN[lv - 1] || "I";
+}

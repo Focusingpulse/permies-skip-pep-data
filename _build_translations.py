@@ -99,6 +99,7 @@ UI = {
     "Gear": "Equipo",
     "Background": "Fondo",
     "Wardrobe": "Vestuario",
+    "Attributes": "Atributos",
     "Save & Exit to Village": "Guardar y salir a la Aldea",
     # quest board
     "The Quest Board": "El Tablero de Misiones",

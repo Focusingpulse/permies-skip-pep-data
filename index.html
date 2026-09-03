@@ -1044,6 +1044,7 @@ details[open] summary::after { transform: rotate(180deg); }
     <button class="studio-tab" id="tab-gear" onclick="switchStudioTab('gear')" data-i18n="Gear">Gear</button>
     <button class="studio-tab" id="tab-bg" onclick="switchStudioTab('bg')" data-i18n="Background">Background</button>
     <button class="studio-tab" id="tab-wardrobe" onclick="switchStudioTab('wardrobe')" data-i18n="Wardrobe">Wardrobe</button>
+    <button class="studio-tab" id="tab-attributes" onclick="switchStudioTab('attributes')" data-i18n="Attributes">Attributes</button>
   </div>
   <div class="studio-options" id="studio-options-area"></div>
   <button class="btn-success" style="margin-top:1rem;" onclick="showScreen('village')" data-i18n="Save & Exit to Village">Save & Exit to Village</button>
@@ -2427,7 +2428,16 @@ function renderConnection() {
   const voices = `<div class="sec-title" style="margin-top:1rem;"><h2 style="font-size:1.05rem;">💬 ${llIsEs()?'Voces de familias':'Family voices'}</h2>
     <span class="sub" style="font-size:0.75rem;color:var(--text-dim);">${llIsEs()?'Contadas como historias, etiquetadas como historias — testimonios, no ensayos controlados.':'Told as stories, labeled as stories — testimonial, not controlled trials.'}</span></div>
     <div>${CONNECTION_VOICES.map(v => `<div class="curr-card" style="margin-bottom:0.5rem;"><div style="font-size:0.72em;color:var(--text-dim);">${v.who} · ${v.year} · <span class="math-tag">${v.medium}</span></div><div style="font-size:0.9em;margin-top:0.25rem;">${v.note}</div></div>`).join('')}</div>`;
-  el.innerHTML = head + cards + voices;
+  const attrsSection = (typeof CONNECTION_ATTRS !== 'undefined')
+    ? `<div class="sec-title" style="margin-top:1rem;"><h2 style="font-size:1.05rem;">🎮 ${llIsEs() ? 'Atributos de conexión en la Aldea' : 'Connection attributes in the Village'}</h2>
+    <span class="sub" style="font-size:0.75rem;color:var(--text-dim);">${llIsEs() ? 'Seis cualidades que cada gremio hace crecer — míralas en tu máscara de personaje.' : 'Six qualities each guild actually grows — watch them on your character sheet.'}</span></div>
+    <div>${CONNECTION_ATTRS.map(at => `<div class="curr-card" style="margin-bottom:0.5rem;">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:0.5rem;flex-wrap:wrap;"><span class="sci-name">${at.icon} ${(llIsEs() && at.esName) ? at.esName : at.name}</span><span class="math-tag">${at.tiers[0]} → ${at.tiers[4]}</span></div>
+      <p style="font-size:0.88em;color:var(--text-light);margin:0.3rem 0;">${(llIsEs() && at.esDef) ? at.esDef : at.def}</p>
+      <p style="font-size:0.78em;color:var(--text-dim);margin:0;">🔬 ${at.science}</p>
+    </div>`).join('')}</div>`
+    : '';
+  el.innerHTML = head + cards + attrsSection + voices;
 }
 
 function renderMap() {
@@ -2624,6 +2634,8 @@ function makeNewPlayer(name, role) {
   return {
     name: name, role: role,
     stats: { tracker: 0, witness: 0, hearth: 0, mentor: 0 },
+    attributes: {},
+    connected: 0,
     wardrobe: [],
     equipped: {
       characterClass: "gardener",
@@ -2939,6 +2951,11 @@ function renderVillage() {
         <strong>${p.name}</strong><br>
         <span class="role">${roleIcons[p.role] || ''} ${t(RoleLabel(p.role))}</span>
         <div class="stats">${t('Quests:')} ${getPlayerQuestCount(p.name)} | ${t('Wardrobe:')} ${p.wardrobe.length} ${t('items')}</div>
+        ${(typeof CONNECTION_ATTRS !== 'undefined') ? `<div class="stats" style="font-size:0.88rem;margin-top:0.25rem;">${CONNECTION_ATTRS.map(at => {
+          const pts = (p.attributes || {})[at.id] || 0;
+          const lv = attrLevel(pts);
+          return `<span title="${at.name}: ${pts} ${(llIsEs && llIsEs()) ? 'puntos' : 'pts'} — ${at.def}" style="margin-right:0.45rem;">${at.icon}${lv ? CONNECTION_ATTR_ROMAN[lv - 1] : ''}</span>`;
+        }).join('')}<span title="${(llIsEs && llIsEs()) ? 'Misiones hechas en compañía' : 'Quests done together'}" style="color:var(--accent-green);">💞 ${p.connected || 0}</span></div>` : ''}
       </div>
     `;
     card.onclick = () => { activeStudioPlayer = i; showScreen('studio'); };
@@ -3009,6 +3026,19 @@ function isTierUnlocked(a, tier) {
 
 function makeQuestId(aspectName, tier, questName) {
   return aspectName.replace(/\s/g, '_').toLowerCase() + "_" + tier + "_" + questName.replace(/\s/g, '_').toLowerCase();
+}
+
+function questGuildFromId(qId) {
+  for (let a of allAspects) {
+    for (let t of ['sand', 'straw', 'wood', 'iron']) {
+      if (a[t]) {
+        for (let q of a[t]) {
+          if (makeQuestId(a.name, t, q[0]) === qId) return a.name;
+        }
+      }
+    }
+  }
+  return '';
 }
 
 function questTitleFromId(qId) {
@@ -3160,6 +3190,23 @@ function renderStudioOptions() {
       let sic = String(w.icon || '').replace(/'/g, "\\'");
       g.innerHTML += `<div class="wardrobe-slot ${equipped ? 'equipped' : ''}" onclick="equipWardrobeItem('${sid}','${sic}')"><span class="slot-icon">${w.icon}</span><span class="slot-name">${name}</span></div>`;
     });
+  } else if (activeStudioTab === 'attributes') {
+    a.innerHTML = `<p style="font-size:0.8em; color:var(--text-dim); margin-bottom:0.7rem;">${llIsEs() ? 'Seis cualidades que crecen con cada misión — respaldadas por la Ciencia de la Conexión.' : 'Six qualities that grow with each quest — backed by the Connection Science panel.'}</p>` + CONNECTION_ATTRS.map(at => {
+      const pts = (p.attributes || {})[at.id] || 0;
+      const lv = attrLevel(pts);
+      const T = CONNECTION_ATTR_THRESHOLDS;
+      const next = lv < T.length ? T[lv] : null;
+      const prev = lv > 0 ? T[lv - 1] : 0;
+      const pct = next ? Math.min(100, Math.round(((pts - prev) / (next - prev)) * 100)) : 100;
+      return `<div class="sci-card" style="margin-bottom:0.7rem;">
+        <div class="sci-head"><div class="sci-name">${at.icon} ${attrName(at)} <span style="font-size:0.68rem;color:var(--text-dim);font-weight:600;">${lv ? attrTierName(at, lv) : (llIsEs() ? 'Sin puntos' : 'No points yet')} · ${pts} ${llIsEs() ? 'puntos' : 'pts'}</span></div><span class="sci-ev ev-strong">${at.tiers[0]} → ${at.tiers[4]}</span></div>
+        <div style="height:7px;background:var(--bg-input);border-radius:999px;margin:0.4rem 0;"><div style="height:100%;width:${pct}%;background:var(--accent-gold);border-radius:999px;"></div></div>
+        <div class="sci-row"><b>${llIsEs() ? 'Qué es' : 'What it is'}:</b> ${(llIsEs() && at.esDef) ? at.esDef : at.def}</div>
+        <div class="sci-row"><b>${llIsEs() ? 'Por qué' : 'Why'}:</b> ${at.science}</div>
+        <div class="sci-row"><b>${llIsEs() ? 'Próximo nivel' : 'Next tier'}:</b> ${next !== null ? `${(llIsEs() ? 'Te faltan' : 'Need')} ${next - pts} ${llIsEs() ? 'puntos para' : 'pts for'} ${attrTierName(at, lv + 1)}` : '★★★★★'}</div>
+      </div>`;
+    }).join('');
+    return;
   }
 }
 
@@ -3303,6 +3350,9 @@ function renderQuestCard(a, q, tier, locked) {
   let isDone = completedQuests.includes(qId);
   let subjects = q[2].map(s => `<span>${t(s)}</span>`).join('');
   let rewardIcon = q[3] || "📦";
+  let attrChips = (typeof GUILD_ATTRS !== 'undefined' && typeof CONNECTION_ATTRS !== 'undefined')
+    ? attrByGuild(a.name).map(atr => `<span title="${esc(atr.def)}">${atr.icon} ${attrName(atr)}</span>`).join('')
+    : '';
 
   if (!rosterSelections[qId]) rosterSelections[qId] = { trackers: [], witnesses: [], hearth: [], mentor: [] };
 
@@ -3325,6 +3375,7 @@ function renderQuestCard(a, q, tier, locked) {
       <strong>${t(q[0])}</strong> ${isDone ? '✓' : ''}<br>
       <small>${td(q[1])}</small>
       <div class="subject-tags">${subjects}</div>
+      ${attrChips ? `<div class="subject-tags" style="margin-top:0.15rem;font-size:0.75em;color:var(--accent-gold);">${attrChips}</div>` : ''}
       ${rewardIcon !== '📦' ? `<span class="quest-reward">${t('Reward:')} ${rewardIcon}</span>` : ''}
       ${learnMoreBtn}
     </div>
@@ -3492,6 +3543,21 @@ function finalizeQuest(qId, icon) {
       }
     }
   });
+
+  // Connection attributes: the quest's guild grows these traits
+  if (typeof CONNECTION_ATTRS !== 'undefined' && typeof GUILD_ATTRS !== 'undefined') {
+    let attrs = GUILD_ATTRS[questGuildFromId(qId)] || [];
+    if (attrs.length) {
+      all.forEach(n => {
+        let p = players.find(pl => pl.name === n);
+        if (p) {
+          p.attributes = p.attributes || {};
+          attrs.forEach(id => { p.attributes[id] = (p.attributes[id] || 0) + 1; });
+          if (all.length >= 2) p.connected = (p.connected || 0) + 1;
+        }
+      });
+    }
+  }
 
   safeSet('rpg_players', players);
   safeSet('rpg_completed', completedQuests);

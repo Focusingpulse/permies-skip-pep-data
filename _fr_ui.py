@@ -73,6 +73,7 @@ FR_UI = {
     "Gear": "Équipement",
     "Background": "Arrière-plan",
     "Wardrobe": "Garde-robe",
+    "Attributes": "Attributs",
     "Save & Exit to Village": "Enregistrer et quitter vers le Village",
     # quest board
     "The Quest Board": "Le Tableau des Quêtes",
