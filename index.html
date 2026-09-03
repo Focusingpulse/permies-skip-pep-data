@@ -7,6 +7,7 @@
 <script src="data.js"></script>
 <script src="learning.js"></script>
 <script src="translations.js"></script>
+<script src="story.js"></script>
 <style>
 :root {
   --bg-dark: #1a1a2e;
@@ -817,6 +818,7 @@ details[open] summary::after { transform: rotate(180deg); }
   <select id="lang-select" onchange="setLang(this.value)" title="Language / Idioma" style="background:var(--bg-panel); color:var(--text-light); border:1px solid var(--border-subtle); border-radius:6px; padding:0.35rem 0.5rem; font-size:0.8rem;">
     <option value="en">English</option>
     <option value="es">Español</option>
+    <option value="fr">Français</option>
   </select>
 </div>
 
@@ -940,6 +942,7 @@ details[open] summary::after { transform: rotate(180deg); }
     <h3>2. Choose Your Game Mode</h3>
     <select id="mode-select" onchange="setGameMode(this.value)">
       <option value="adventure">Adventure Mode — progress through tiers</option>
+      <option value="story">Story Mode — a guided adventure, new every time</option>
       <option value="freeroam">Free Roam Mode — all quests unlocked from the start</option>
     </select>
     <p style="font-size:0.8em; color:var(--text-dim); margin-top:0.4rem;">Adventure Mode follows the intended path. Free Roam is like Minecraft creative mode — explore any quest in any order.</p>
@@ -1050,6 +1053,7 @@ details[open] summary::after { transform: rotate(180deg); }
 <div class="screen" id="screen-quests">
   <h2 style="text-align:center; color:var(--accent-gold);" data-i18n="The Quest Board">The Quest Board</h2>
   <div class="data-warning" id="data-warning" data-i18n="Data.js not found or failed to load. Using fallback data.">Data.js not found or failed to load. Using fallback data.</div>
+  <div id="story-panel"></div>
   <div class="level-banner" id="tier-banner"></div>
   <div class="quest-filters">
     <button class="nav-btn active" id="filter-all" onclick="setQuestFilter('all')" data-i18n="All Quests">All Quests</button>
@@ -2552,12 +2556,16 @@ function showScreen(s) {
 
 // ---- Setup ----
 function setBiome(b) { biome = b; safeSet('rpg_biome', b); }
-function setGameMode(m) { freeRoam = (m === 'freeroam'); safeSet('rpg_freeRoam', freeRoam); }
+function setGameMode(m) {
+  freeRoam = (m === 'freeroam');
+  safeSet('rpg_freeRoam', freeRoam);
+  if (typeof storyToggleMode === 'function') storyToggleMode(m === 'story');
+}
 function setLearnDepth(d) { learnDepth = d; safeSet('rpg_learnDepth', d); }
 
 function renderSetup() {
   document.getElementById('biome-select').value = biome;
-  document.getElementById('mode-select').value = freeRoam ? 'freeroam' : 'adventure';
+  document.getElementById('mode-select').value = storyMode ? 'story' : (freeRoam ? 'freeroam' : 'adventure');
   document.getElementById('depth-select').value = learnDepth;
   document.getElementById('webhook-input').value = webhookUrl || '';
   const list = document.getElementById('player-list');
@@ -2632,6 +2640,8 @@ function exportVillage() {
     attendance: attendance,
     biome: biome,
     freeRoam: freeRoam,
+    storyMode: storyMode,
+    storyRun: (typeof storyRun !== 'undefined') ? storyRun : null,
     learnDepth: learnDepth,
     learningBlueprint: learningBlueprint,
     webhookUrl: webhookUrl
@@ -2660,6 +2670,11 @@ function importVillage(event) {
       attendance = data.attendance || { days: 0, hours: 0, customHours: {} };
       biome = data.biome || 'apartment';
       freeRoam = !!data.freeRoam;
+      storyMode = !!data.storyMode;
+      if (data.storyRun && typeof storyLoadRun === 'function') {
+        storyRun = data.storyRun;
+        storySaveRun();
+      }
       learnDepth = data.learnDepth || 'adults';
       learningBlueprint = data.learningBlueprint || null;
       safeSet('rpg_blueprint', learningBlueprint);
@@ -2670,11 +2685,12 @@ function importVillage(event) {
       safeSet('rpg_attendance', attendance);
       safeSet('rpg_biome', biome);
       safeSet('rpg_freeRoam', freeRoam);
+      if (typeof storyToggleMode === 'function') storyToggleMode(storyMode);
       safeSet('rpg_learnDepth', learnDepth);
       safeSet('rpg_webhook', webhookUrl);
 
       document.getElementById('biome-select').value = biome;
-      document.getElementById('mode-select').value = freeRoam ? 'freeroam' : 'adventure';
+      document.getElementById('mode-select').value = storyMode ? 'story' : (freeRoam ? 'freeroam' : 'adventure');
       document.getElementById('depth-select').value = learnDepth;
       document.getElementById('webhook-input').value = webhookUrl;
 
@@ -2696,6 +2712,8 @@ function resetVillage() {
   localStorage.removeItem('rpg_attendance');
   localStorage.removeItem('rpg_biome');
   localStorage.removeItem('rpg_freeRoam');
+  localStorage.removeItem('rpg_storyMode');
+  localStorage.removeItem('rpg_story_run');
   localStorage.removeItem('rpg_learnDepth');
   localStorage.removeItem('rpg_blueprint');
   localStorage.removeItem('rpg_webhook');
@@ -3156,10 +3174,13 @@ function setQuestFilter(f) {
 function renderQuests() {
   let progress = getTierProgress();
 
+  // Story Mode panel
+  if (storyMode && typeof storyRender === 'function') storyRender();
+
   // Tier banner
   let banner = document.getElementById('tier-banner');
   let eco = getCommerceStatus();
-  let modeLabel = freeRoam ? '<span style="color:var(--accent-green);">🎮 ' + t('Free Roam — all quests unlocked') + '</span>' : '<span style="color:var(--text-dim);">🛡️ ' + t('Adventure Mode — complete 50% of a tier within one guild to unlock the next') + '</span>';
+  let modeLabel = storyMode ? '<span style="color:var(--accent-gold);">📖 ' + t('Story Mode — a guided adventure, new every time') + '</span>' : (freeRoam ? '<span style="color:var(--accent-green);">🎮 ' + t('Free Roam — all quests unlocked') + '</span>' : '<span style="color:var(--text-dim);">🛡️ ' + t('Adventure Mode — complete 50% of a tier within one guild to unlock the next') + '</span>');
   banner.innerHTML = `
     <div style="font-weight:bold; color:var(--accent-gold); margin-bottom:0.4rem;">${t('Badge Progression')}</div>
     <div class="tier-progress">
@@ -3225,17 +3246,17 @@ function createGuildDetails(a, open, progress) {
     a.sand.forEach(q => { h += renderQuestCard(a, q, 'sand'); });
   }
   if (a.straw && a.straw.length > 0) {
-    let locked = !isTierUnlocked(a, 'straw');
+    let locked = !storyMode && !isTierUnlocked(a, 'straw');
     h += `<div class="tier-header straw ${locked ? 'locked' : ''}"><strong>🟡 ${t('Straw')} ${t('Tier')} (${t('Level')} 2)</strong> — ${countDone(a, 'straw')}/${a.straw.length} ${t('complete')}</div>`;
     a.straw.forEach(q => { h += renderQuestCard(a, q, 'straw', locked); });
   }
   if (a.wood && a.wood.length > 0) {
-    let locked = !isTierUnlocked(a, 'wood');
+    let locked = !storyMode && !isTierUnlocked(a, 'wood');
     h += `<div class="tier-header wood ${locked ? 'locked' : ''}"><strong>🪵 ${t('Wood')} ${t('Tier')} (${t('Level')} 3)</strong> — ${countDone(a, 'wood')}/${a.wood.length} ${t('complete')}</div>`;
     a.wood.forEach(q => { h += renderQuestCard(a, q, 'wood', locked); });
   }
   if (a.iron && a.iron.length > 0) {
-    let locked = !isTierUnlocked(a, 'iron');
+    let locked = !storyMode && !isTierUnlocked(a, 'iron');
     h += `<div class="tier-header iron ${locked ? 'locked' : ''}"><strong>⚙️ ${t('Iron')} ${t('Tier')} (${t('Level')} 4)</strong> — ${countDone(a, 'iron')}/${a.iron.length} ${t('complete')}</div>`;
     a.iron.forEach(q => { h += renderQuestCard(a, q, 'iron', locked); });
   }
@@ -3498,6 +3519,9 @@ function finalizeQuest(qId, icon) {
   }
 
   alert('Quest Complete! Items added to participants\' wardrobes.' + unlockMsg);
+
+  // Story Mode: advance the adventure if this was the current story quest
+  if (storyMode && typeof storyAdvance === 'function') storyAdvance(qId);
 }
 
 function postToPermies(qId, questTitle) {

@@ -12,19 +12,12 @@ const LANG = {
     "Quests": "Misiones",
     "Schoolhouse": "Escuela",
     "Library": "Biblioteca",
-    "Homesteading": "Granja autosuficiente",
-    "Natural Building": "Construcción Natural",
-    "Learning Lab": "Laboratorio de Aprendizaje",
-    "The Learning Lab": "El Laboratorio de Aprendizaje",
-    "A living map of how people learn — curricula from around the world and across time, the science of learning, and a tool for building your family's own blend.": "Un mapa vivo de cómo aprenden las personas — currículos de todo el mundo y de todas las épocas, la ciencia del aprendizaje y una herramienta para crear la mezcla propia de tu familia.",
-    "Your Learning Blueprint": "Tu Plan de Aprendizaje",
-    "This is the educational blend your family chose. Build quests that honor it.": "Esta es la mezcla educativa que eligió tu familia — construye misiones que la honren.",
     "Mentor's Circle": "Círculo del Mentor",
     "Circle": "Círculo",
     "Commons": "Plaza",
     "WELCOME": "BIENVENIDOS",
     "The Village — A Roll Making Game (RMG) for families": "La Aldea — Un Juego de Formar Roles (RMG) para familias",
-    "Starts on a screen. Grows into real life: real skills, real attributes, real badges in the real world.": "Empieza en la pantalla. Crece en la vida real: habilidades reales, atributos reales e insignias reales en el mundo real.",
+    "A real-life skill-building journey — not a digital game you play on a screen. Build real skills, grow real attributes, earn real badges in the real world.": "Un viaje real de desarrollo de habilidades — no un juego digital que se juega en pantalla. Construye habilidades reales, desarrolla atributos reales, gana insignias reales en el mundo real.",
     "Data.js not found or failed to load. Using fallback data.": "No se encontró data.js o falló al cargar. Usando datos de respaldo.",
     "▼ Scroll down ▼": "▼ Desliza hacia abajo ▼",
     "School days already completed": "Días de escuela ya completados",
@@ -56,9 +49,10 @@ const LANG = {
     "Badge Progression": "Progreso de Insignias",
     "Free Roam — all quests unlocked": "Modo Libre — todas las misiones desbloqueadas",
     "Adventure Mode — complete 50% of a tier within one guild to unlock the next": "Modo Aventura — completa el 50% de un nivel en un gremio para desbloquear el siguiente",
+    "Story Mode — a guided adventure, new every time": "Modo Historia — una aventura guiada, nueva en cada partida",
     "Official Permies PEP Quests": "Misiones Oficiales PEP de Permies",
     "Submit evidence to their forum for official certification.": "Envía tu evidencia a su foro para la certificación oficial.",
-    "RPG Add-on Guilds": "Gremios Adicionales RPG",
+    "Holistic RPG Add-on Guilds": "Gremios Adicionales RPG Holístico",
     "Custom to The Village. Do not count toward official Permies PEP certification.": "Creados para La Aldea. No cuentan para la certificación oficial PEP de Permies.",
     "Guild": "Gremio",
     "No description available.": "Sin descripción disponible.",
@@ -100,7 +94,7 @@ const LANG = {
     "Add History to Tracker": "Añadir historial al registro",
     "Hours": "horas",
     "The Village Library": "La Biblioteca de la Aldea",
-    "Free, public-domain, and government resources for homeschooling — curated by hand.": "Recursos gratuitos, de dominio público y gubernamentales para educar en casa, elegidos a mano.",
+    "A curated knowledge graph of free, public domain, and government resources for holistic homeschooling.": "Una colección curada de recursos gratuitos, de dominio público y gubernamentales para la educación en casa holística.",
     "Educational Philosophy & Nature Connection": "Filosofía Educativa y Conexión con la Naturaleza",
     "Colorado Homeschooling": "Educación en Casa en Colorado",
     "Permies & PEP Badges": "Insignias de Permies y PEP",
@@ -113,8 +107,6 @@ const LANG = {
     "Official PEP quests (marked with the shield icon) count toward Permies certification. RPG Add-on quests (marked with the sparkle icon) are custom to The Village and do not count toward official PEP badges.": "Las misiones oficiales PEP (icono de escudo) cuentan para la certificación de Permies. Las misiones adicionales RPG (icono de chispa) son de La Aldea y no cuentan para las insignias oficiales de PEP.",
     "Open PEP Forum": "Abrir Foro PEP",
     "How to Apply for a Badge": "Cómo solicitar una insignia",
-    "Food Preservation": "Conservación de Alimentos",
-    "Woodworking & Hand Tools": "Carpintería y Herramientas Manuales",
     "Optional: The Offline Archive": "Opcional: El Archivo Offline",
     "For families wanting a complete offline backup drive, download these open-source collections to a local hard drive:": "Para las familias que quieren un respaldo offline completo, descarga estas colecciones de código abierto a un disco local:",
     "Quests Done": "Misiones hechas",
@@ -129,7 +121,7 @@ const LANG = {
     "The 64 cultural elements of deep nature connection — from Jon Young's 512 Project and the 8 Shields framework. These practices weave the invisible fabric of community that makes permaculture skills sustainable across generations.": "Los 64 elementos culturales de la conexión profunda con la naturaleza — del Proyecto 512 de Jon Young y el marco de los 8 Escudos. Estas prácticas tejen el tejido invisible de la comunidad que hace sostenibles las habilidades de permacultura a través de las generaciones.",
     "Gold Nugget Earned!": "¡Pepita de Oro Ganada!",
     "You worked the entire Commerce guild — budgets, currency exchange, paper trading, even a family forex night. That's real financial skill, earned in the real world.": "Completaste todo el gremio de Comercio — presupuestos, cambio de divisas, operaciones de papel y hasta una noche familiar de forex. Eso es habilidad financiera real, ganada en el mundo real.",
-    "The Gold Nugget is now part of your family's story. No real money moved; what grew was understanding.": "La Pepita de Oro ahora es parte de la historia de tu familia. No se movió dinero real; lo que creció fue comprensión.",
+    "The Gold Nugget is now part of your family's story. No real money was moved — only understanding.": "La Pepita de Oro ahora es parte de la historia de tu familia. No se movió dinero real — solo comprensión.",
     "Glow on ✨": "¡A brillar ✨",
     "Before": "Antes",
     "During": "Durante",
@@ -181,11 +173,6 @@ const LANG = {
     "Straw": "Paja",
     "Wood": "Madera",
     "Iron": "Hierro"
-  },
-  "biomes": {
-    "apartment": "apartamento",
-    "suburb": "suburbio",
-    "rural": "rural"
   },
   "guilds": {
     "Gardening": {
@@ -943,5 +930,276 @@ const LANG = {
       "desc": "Enseña una clase simple o un intercambio de habilidades."
     }
   }
+},
+  "fr": {
+  "name": "Français",
+  "ui": {
+    "Setup": "Configuration",
+    "Village": "Village",
+    "Studio": "Studio",
+    "Quests": "Quêtes",
+    "Schoolhouse": "École",
+    "Library": "Bibliothèque",
+    "Mentor's Circle": "Cercle du Mentor",
+    "Circle": "Cercle",
+    "Commons": "Plaza",
+    "WELCOME": "BIENVENUE",
+    "The Village — A Roll Making Game (RMG) for families": "Le Village — Un Jeu de Formation des Rôles (RMG) pour familles",
+    "A real-life skill-building journey — not a digital game you play on a screen. Build real skills, grow real attributes, earn real badges in the real world.": "Un parcours réel de développement de compétences — pas un jeu numérique sur écran. Développe de vraies compétences, éprouve de vrais progrès, gagne de vrais badges dans le monde réel.",
+    "Data.js not found or failed to load. Using fallback data.": "data.js introuvable ou impossible à charger. Utilisation des données de secours.",
+    "▼ Scroll down ▼": "▼ Faites défiler ▼",
+    "School days already completed": "Jours d'école déjà effectués",
+    "Total hours already logged": "Heures totales déjà enregistrées",
+    "Current curriculum (optional)": "Programme actuel (facultatif)",
+    "Player Name": "Nom du joueur",
+    "Save & Enter Village": "Enregistrer et entrer au Village",
+    "Reset Village": "Réinitialiser le Village",
+    "Reset": "Réinitialiser",
+    "8. Start Over / Reset": "8. Recommencer / Réinitialiser",
+    "Wipe all progress, quests, attendance, and player data from this browser and start fresh. Cannot be undone.": "Efface tous les progrès, quêtes, présences et données de joueurs de ce navigateur et repartez à zéro. Impossible d'annuler.",
+    "Your Family Guild": "Le Groupe de Votre Famille",
+    "Click a character to open the Avatar Studio": "Cliquez sur un personnage pour ouvrir le Studio d'Avatar",
+    "Save Village (Download File)": "Enregistrer le Village (télécharger le fichier)",
+    "Load Saved Village": "Charger le Village enregistré",
+    "Start Questing": "Commencer les Quêtes",
+    "Avatar Studio": "Studio d'Avatar",
+    "Class": "Classe",
+    "Face": "Visage",
+    "Hair": "Cheveux",
+    "Outfit": "Tenue",
+    "Gear": "Équipement",
+    "Background": "Arrière-plan",
+    "Wardrobe": "Garde-robe",
+    "Save & Exit to Village": "Enregistrer et quitter vers le Village",
+    "The Quest Board": "Le Tableau des Quêtes",
+    "All Quests": "Toutes les quêtes",
+    "My Biome Only": "Mon biome uniquement",
+    "Badge Progression": "Progression des Badges",
+    "Free Roam — all quests unlocked": "Mode Libre — toutes les quêtes débloquées",
+    "Adventure Mode — complete 50% of a tier within one guild to unlock the next": "Mode Aventure — terminez 50% d'un niveau dans une guilde pour débloquer le suivant",
+    "Story Mode — a guided adventure, new every time": "Mode Histoire — une aventure guidée, nouvelle à chaque fois",
+    "Official Permies PEP Quests": "Quêtes PEP Officielles de Permies",
+    "Submit evidence to their forum for official certification.": "Envoyez vos preuves sur leur forum pour une certification officielle.",
+    "Holistic RPG Add-on Guilds": "Guildes Bonus RPG Holistiques",
+    "Custom to The Village. Do not count toward official Permies PEP certification.": "Spécifiques au Village. Ne comptent pas pour la certification officielle PEP de Permies.",
+    "Guild": "Guilde",
+    "No description available.": "Aucune description disponible.",
+    "complete": "terminées",
+    "Locked": "Verrouillée",
+    "Post to Permies": "Publier sur Permies",
+    "Complete!": "Terminée !",
+    "Finalize": "Finaliser",
+    "Learn More": "En savoir plus",
+    "Trackers": "Traqueurs",
+    "Witnesses": "Témoins",
+    "Otis Verification Protocol:": "Protocole de Vérification Otis :",
+    "photo of materials/site": "photo des matériaux / du lieu",
+    "photo of you working": "photo de vous en train de travailler",
+    "photo of finished product WITH a sign showing your name and date": "photo du produit fini AVEC une pancarte indiquant votre nom et la date",
+    "Select who participated. Multiple people can hold the same role!": "Sélectionnez qui a participé. Plusieurs personnes peuvent tenir le même rôle !",
+    "Confirm & Complete Quest": "Confirmer et terminer la quête",
+    "Guided Path for this Quest": "Parcours guidé pour cette quête",
+    "Prep": "Préparation",
+    "Core": "Cœur",
+    "Stretch": "Défi",
+    "Curriculum topics connected to this skill:": "Sujets de programme liés à cette compétence :",
+    "Skill-wide resources:": "Ressources générales de la compétence :",
+    "Feeling lucky? Spin for a surprise resource:": "Tentez votre chance ? Faites tourner pour une ressource surprise :",
+    "Spin": "Tourner",
+    "The Colorado Schoolhouse": "L'École du Colorado",
+    "Attendance Tracker (CO Law: 172 Days)": "Suivi de Présence (Loi du CO : 172 jours)",
+    "Days Completed:": "Jours effectués :",
+    "Hours Logged:": "Heures enregistrées :",
+    "hrs": "h",
+    "Log 4-Hour School Day": "Enregistrer une journée d'école de 4 heures",
+    "Log 1-Hour Day": "Enregistrer une journée d'1 heure",
+    "Academic Transcript (CO Required Subjects)": "Relevé Académique (Matières obligatoires du CO)",
+    "Hours are logged from completed quests (2 hrs each) plus any custom hours below.": "Les heures sont enregistrées à partir des quêtes terminées (2 h chacune) plus toutes heures personnalisées ci-dessous.",
+    "Log Custom Academic Hours": "Enregistrer des heures académiques personnalisées",
+    "Add Hours": "Ajouter des heures",
+    "Bring Your History": "Apportez votre historique",
+    "Already partway through your school year with another curriculum? Add your prior days and hours here so the tracker reflects where you actually are.": "Déjà à mi-chemin de votre année scolaire avec un autre programme ? Ajoutez vos jours et heures précédents ici pour que le suivi reflète votre situation réelle.",
+    "Add History to Tracker": "Ajouter l'historique au suivi",
+    "Hours": "heures",
+    "The Village Library": "La Bibliothèque du Village",
+    "A curated knowledge graph of free, public domain, and government resources for holistic homeschooling.": "Un graphe de connaissances organisé de ressources gratuites, de domaine public et gouvernementales pour l'école à la maison holistique.",
+    "Educational Philosophy & Nature Connection": "Philosophie Éducative & Connexion à la Nature",
+    "Colorado Homeschooling": "École à la Maison au Colorado",
+    "Permies & PEP Badges": "Badges Permies & PEP",
+    "Curriculum by Subject": "Programme par Matière",
+    "The Money Lab — Financial Literacy & Foreign Exchange": "Le Laboratoire de l'Argent — Culture Financière & Change de Devises",
+    "The Village Commons": "La Plaza du Village",
+    "Family Achievements": "Réussites Familiales",
+    "Bridge to Permies": "Pont vers Permies",
+    "Post your evidence to the PEP Forum to get officially certified by Paul Wheaton's team.": "Publiez vos preuves sur le Forum PEP pour obtenir la certification officielle de l'équipe de Paul Wheaton.",
+    "Official PEP quests (marked with the shield icon) count toward Permies certification. RPG Add-on quests (marked with the sparkle icon) are custom to The Village and do not count toward official PEP badges.": "Les quêtes PEP officielles (avec l'icône bouclier) comptent pour la certification Permies. Les quêtes bonus RPG (avec l'icône étincelle) sont spécifiques au Village et ne comptent pas pour les badges PEP officiels.",
+    "Open PEP Forum": "Ouvrir le Forum PEP",
+    "How to Apply for a Badge": "Comment demander un badge",
+    "Optional: The Offline Archive": "Facultatif : L'Archive Hors Ligne",
+    "For families wanting a complete offline backup drive, download these open-source collections to a local hard drive:": "Pour les familles souhaitant une sauvegarde complète hors ligne, téléchargez ces collections open-source sur un disque local :",
+    "Quests Done": "Quêtes terminées",
+    "Wardrobe Items": "Objets de garde-robe",
+    "Sand Badges": "Badges de Sable",
+    "Straw Badges": "Badges de Paille",
+    "Wood Badges": "Badges de Bois",
+    "Iron Badges": "Badges de Fer",
+    "Earned": "Gagné(e)",
+    "Family Members": "Membres de la famille",
+    "School Days": "Jours d'école",
+    "The 64 cultural elements of deep nature connection — from Jon Young's 512 Project and the 8 Shields framework. These practices weave the invisible fabric of community that makes permaculture skills sustainable across generations.": "Les 64 éléments culturels de la connexion profonde à la nature — du Projet 512 de Jon Young et du cadre des 8 Boucliers. Ces pratiques tissent le tissu invisible de la communauté qui rend les compétences en permaculture durables à travers les générations.",
+    "Gold Nugget Earned!": "Pépite d'Or gagnée !",
+    "You worked the entire Commerce guild — budgets, currency exchange, paper trading, even a family forex night. That's real financial skill, earned in the real world.": "Vous avez travaillé toute la guilde du Commerce — budgets, change de devises, trading papier, même une soirée forex familiale. C'est une vraie compétence financière, gagnée dans le monde réel.",
+    "The Gold Nugget is now part of your family's story. No real money was moved — only understanding.": "La Pépite d'Or fait désormais partie de l'histoire de votre famille. Aucun argent réel n'a été déplacé — seulement de la compréhension.",
+    "Glow on ✨": "Brillez ✨",
+    "Before": "Avant",
+    "During": "Pendant",
+    "After": "Après",
+    "Tier": "Niveau",
+    "Level": "Niveau",
+    "Guild of": "Guilde de",
+    "Gold Nugget": "Pépite d'Or",
+    "The Village — A Roll Making Game (RMG)": "Le Village — Un Jeu de Formation des Rôles (RMG)",
+    "Print All 15 Sheets": "🖨️ Imprimer les 15 feuilles",
+    "Print This Sheet": "🖨️ Imprimer cette feuille",
+    "All 15 Sheets": "Les 15 feuilles",
+    "Family Progress": "Progrès de la Famille",
+    "quests completed": "quêtes terminées",
+    "Quests:": "Quêtes :",
+    "Wardrobe:": "Garde-robe :",
+    "items": "objets",
+    "earned": "gagné(e)",
+    "Reward:": "Récompense :",
+    "💾 Save Village (Download File)": "💾 Enregistrer le Village (télécharger le fichier)",
+    "📂 Load Saved Village": "📂 Charger le Village enregistré",
+    "🔄 Reset": "🔄 Réinitialiser"
+  },
+  "subjects": {
+    "Science": "Sciences",
+    "Math": "Mathématiques",
+    "Art": "Arts",
+    "PE": "Éducation Physique",
+    "Health": "Santé",
+    "Geography": "Géographie",
+    "Writing": "Écriture",
+    "History": "Histoire",
+    "Economics": "Économie",
+    "Constitution": "Constitution",
+    "Reading": "Lecture"
+  },
+  "roles": {
+    "Tracker": "Traqueur / Traqueuse",
+    "Witness": "Témoin",
+    "Hearth Tender": "Gardien du Foyer / Gardienne du Foyer",
+    "Hearth": "Foyer",
+    "Mentor": "Mentor / Mentore",
+    "Mentors": "Mentors",
+    "Trackers": "Traqueurs",
+    "Witnesses": "Témoins"
+  },
+  "tiers": {
+    "Sand": "Sable",
+    "Straw": "Paille",
+    "Wood": "Bois",
+    "Iron": "Fer"
+  },
+  "guilds": {
+    "Gardening": {
+      "name": "Jardinage",
+      "desc": "Cultivez des aliments, conservez des graines et construisez des systèmes de jardin résilients."
+    },
+    "Natural Building": {
+      "name": "Construction Naturelle",
+      "desc": "Utilisez l'argile, la paille, le bois et la pierre pour bâtir des abris sains."
+    },
+    "Woodland Care": {
+      "name": "Soin des Bois",
+      "desc": "Entretenez les forêts, le bois de feu, les clôtures, les champignons et les systèmes de bois vivant."
+    },
+    "Round Wood Woodworking": {
+      "name": "Menuiserie de Bois Rond",
+      "desc": "Construisez des objets utiles avec des rondins, bâtons et branches, avec peu de colle et de métal."
+    },
+    "Tool Care": {
+      "name": "Soin des Outils",
+      "desc": "Gardez les outils affûtés, propres, huilés et réparés pour qu'ils durent plus longtemps."
+    },
+    "Earthworks": {
+      "name": "Terrassement",
+      "desc": "Façonnez le terrain pour déplacer l'eau, réduire l'érosion et créer des chemins durables."
+    },
+    "Dimensional Lumber Woodworking": {
+      "name": "Menuiserie de Bois d'Œuvre",
+      "desc": "Utilisez du bois droit et des assemblages solides pour fabriquer des meubles et structures pratiques."
+    },
+    "Rocket": {
+      "name": "Poêle Fusée",
+      "desc": "Construisez des appareils à bois qui économisent le combustible et utilisent la chaleur avec une grande efficacité."
+    },
+    "Food Prep": {
+      "name": "Préparation des Aliments",
+      "desc": "Conservez, cuisinez et savourez les aliments de façon sûre et délicieuse."
+    },
+    "Animal Care": {
+      "name": "Soin des Animaux",
+      "desc": "Prenez soin des animaux domestiques et de ferme avec respect et abondance."
+    },
+    "Foraging": {
+      "name": "Cueillette Sauvage",
+      "desc": "Apprenez à trouver, identifier et récolter des plantes sauvages comestibles en toute sécurité."
+    },
+    "Community Living": {
+      "name": "Vie en Communauté",
+      "desc": "Pratiquez des compétences sociales, de service et d'événements qui aident les groupes à prospérer."
+    },
+    "Textiles": {
+      "name": "Textiles",
+      "desc": "Fabriquez, réparez et utilisez le tissu, le fil et la fibre naturelle pour des choses utiles et belles."
+    },
+    "Greywater and Willow Feeders": {
+      "name": "Eaux Grises et Saules",
+      "desc": "Gérez les eaux grises et cultivez des saules pour des jardins et paysages productifs."
+    },
+    "Metalworking": {
+      "name": "Travail du Métal",
+      "desc": "Frappez, limez, soudez et assemblez le métal pour créer outils et structures."
+    },
+    "Plumbing and Hot Water": {
+      "name": "Plomberie et Eau Chaude",
+      "desc": "Réparez les fuites, les drains et les systèmes d'eau et de chaleur de votre maison."
+    },
+    "Electricity": {
+      "name": "Électricité",
+      "desc": "Apprenez les bases du courant alternatif et continu, des batteries, des circuits et du solaire en toute sécurité."
+    },
+    "Commerce": {
+      "name": "Commerce",
+      "desc": "Gagnez de l'argent, échangez de la valeur, tenez des registres et apprenez comment les devises circulent — de la petite monnaie au coffre de la Pépite d'Or."
+    },
+    "Natural Medicine": {
+      "name": "Médecine Naturelle",
+      "desc": "Apprenez des façons sûres et pratiques d'identifier et d'utiliser les plantes médicinales."
+    },
+    "Nest": {
+      "name": "Nid",
+      "desc": "Gardez la maison propre, rangée et confortable pour la vie familiale de tous les jours."
+    },
+    "Homesteading": {
+      "name": "Autosuffisance",
+      "desc": "Gérez des compétences pratiques qui maintiennent une maison et une famille prêtes pour de vraies urgences."
+    },
+    "Oddball": {
+      "name": "Curiosités",
+      "desc": "Rassemblez des expériences de vie étranges, créatives et délicieusement inattendues."
+    },
+    "Vitality": {
+      "name": "Vitalité",
+      "desc": "Développez la vitalité physique par le mouvement, le rythme et la conscience du corps."
+    },
+    "Community": {
+      "name": "Communauté",
+      "desc": "Pratiquez des compétences sociales, de service et d'événements qui aident les groupes à prospérer."
+    }
+  },
+  "quests": {}
 }
 };

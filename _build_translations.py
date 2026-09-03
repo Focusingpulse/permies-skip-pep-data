@@ -6,6 +6,7 @@ Add a language: create an *_xx.py module and a LANG block entry here.
 """
 import json, re, importlib.util
 from _es_quests import ES
+from _fr_ui import FR_UI, FR_SUBJECTS, FR_ROLES, FR_TIERS, FR_GUILDS
 
 # ---- parse data.js to get exact English order ----
 s = open('data.js', encoding='utf-8').read()
@@ -106,6 +107,7 @@ UI = {
     "Badge Progression": "Progreso de Insignias",
     "Free Roam — all quests unlocked": "Modo Libre — todas las misiones desbloqueadas",
     "Adventure Mode — complete 50% of a tier within one guild to unlock the next": "Modo Aventura — completa el 50% de un nivel en un gremio para desbloquear el siguiente",
+    "Story Mode — a guided adventure, new every time": "Modo Historia — una aventura guiada, nueva en cada partida",
     "Official Permies PEP Quests": "Misiones Oficiales PEP de Permies",
     "Submit evidence to their forum for official certification.": "Envía tu evidencia a su foro para la certificación oficial.",
     "Holistic RPG Add-on Guilds": "Gremios Adicionales RPG Holístico",
@@ -252,8 +254,20 @@ data = {
     "quests": QUESTS,
 }
 
+
+FR_GUILD_DICT = {k: {"name": v[0], "desc": v[1]} for k, v in FR_GUILDS.items()}
+data_fr = {
+    "name": "Français",
+    "ui": FR_UI,
+    "subjects": FR_SUBJECTS,
+    "roles": FR_ROLES,
+    "tiers": FR_TIERS,
+    "guilds": FR_GUILD_DICT,
+    "quests": {},
+}
+
 out = "/* The Village — i18n module.\n * Add a language by adding a block under LANG (copy the es block, translate, change the key).\n * Quest keys are the English titles; values are {title, desc}.\n */\n"
-out += "const LANG = {\n  \"es\": " + json.dumps(data, ensure_ascii=False, indent=2) + "\n};\n"
+out += "const LANG = {\n  \"es\": " + json.dumps(data, ensure_ascii=False, indent=2) + ",\n  \"fr\": " + json.dumps(data_fr, ensure_ascii=False, indent=2) + "\n};\n"
 with open('translations.js', 'w', encoding='utf-8') as f:
     f.write(out)
 
