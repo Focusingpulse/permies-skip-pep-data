@@ -83,6 +83,7 @@ FR_UI = {
     "Free Roam — all quests unlocked": "Mode Libre — toutes les quêtes débloquées",
     "Adventure Mode — complete 50% of a tier within one guild to unlock the next": "Mode Aventure — terminez 50% d'un niveau dans une guilde pour débloquer le suivant",
     "Story Mode — a guided adventure, new every time": "Mode Histoire — une aventure guidée, nouvelle à chaque fois",
+    "Survival Mode — train the family for the long haul": "Mode Survie — entraînez la famille pour le long terme",
     "Official Permies PEP Quests": "Quêtes PEP Officielles de Permies",
     "Submit evidence to their forum for official certification.": "Envoyez vos preuves sur leur forum pour une certification officielle.",
     "Holistic RPG Add-on Guilds": "Guildes Bonus RPG Holistiques",
