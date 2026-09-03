@@ -813,3 +813,113 @@ const SIX_EXERCISES = {
 
 /* ---------- PRACTICES joined for the UI ---------- */
 const PRACTICES_ORDER = ["heart", "six"];
+
+/* ============================================================
+ * CONNECTION SCIENCE — the research beneath the four roles
+ * Every pillar maps a finding to a Village role (Tracker,
+ * Witness, Hearth Tender, Mentor) with the same evidence-honest
+ * labels used everywhere else: benchmark study · RCT · review ·
+ * practitioner synthesis · anecdote (labeled as such).
+ * ============================================================ */
+const CONNECTION_SCIENCE = [
+  {
+    id: "servreturn",
+    icon: "🏓",
+    name: "Serve & Return Builds the Brain",
+    esName: "El 'dar y recibir' construye el cerebro",
+    chip: "consensus",
+    claim: "Brains are built, not born. The single most replicated finding in developmental neuroscience: back-and-forth exchanges with a caring adult shape the child's brain architecture. When those exchanges are steady, circuits strengthen. When they're absent, stress hormones flood the developing brain and the foundation thins.",
+    evidence: "Strong — consensus across developmental neuroscience; hundreds of studies, brain-imaging confirmed.",
+    studies: [
+      { source: "Harvard Center on the Developing Child, Working Paper No. 1 (2004) & Serve & Return key concept", claim: "Serve and return interactions — child reaches out, adult responds warmly — build and strengthen neural connections essential for communication and social skills; their absence activates the toxic stress response.", medium: "benchmark synthesis", confidence: "Strong", year: "2004–2024" },
+      { source: "Filming Interactions to Nurture Development (FIND) growth studies", claim: "Sensitive, responsive caregiving predicts secure attachment, higher cognitive competence, and fewer psychological problems — including measurable brain differences at age 8 (larger total brain and gray-matter volumes).", medium: "longitudinal + brain imaging", confidence: "Strong", year: "2010s" }
+    ],
+    village: "Role: Witness. The Witness is deliberate serve-and-return — a child does the work, an adult responds with attention and words. The game just makes the response a rule instead of an accident.",
+    esVillage: "Rol: Testigo — el adulto responde con atención y palabras al trabajo del niño; el juego convierte la respuesta en regla."
+  },
+  {
+    id: "regulate",
+    icon: "🛟",
+    name: "Regulate Before Reason",
+    esName: "Regular antes de razonar",
+    chip: "neuroscience",
+    claim: "The brain learns in order: regulate → relate → reason. A dysregulated child can't access the cortex — the lower brain is running the show. Connection is the fastest route to regulation, which is why a calm adult is the most powerful learning technology in the room.",
+    evidence: "Strong in trauma neuroscience and clinical practice; increasingly applied in education as the Neurosequential Model in Education (NME).",
+    studies: [
+      { source: "Bruce Perry, Neurosequential Model — Sequence of Engagement", claim: "'Regulate, then Relate, then Reason.' A child must feel safe and connected before higher learning is possible; a calm, regulated adult can regulate a dysregulated child ('relational contagion').", medium: "practitioner synthesis + clinical neuroscience", confidence: "Strong", year: "2006–2022" },
+      { source: "Stephen Porges, Polyvagal Theory — 'A Science of Safety' (Frontiers in Integrative Neuroscience, 2022)", claim: "When the nervous system perceives safety, the Social Engagement System comes online and higher brain functions become accessible; cues of safety from a trusted adult co-regulate the child's physiology.", medium: "theory + converging evidence", confidence: "Moderate-Strong", year: "1994–2022" }
+    ],
+    village: "Role: Hearth Tender. The calm, warm presence the game asks a parent to embody is the co-regulation research describes — the child borrows the adult's nervous system until theirs is built.",
+    esVillage: "Rol: Custodio del Fogón — el adulto sereno es la co-regulación que el niño necesita para poder aprender."
+  },
+  {
+    id: "modeling",
+    icon: "🪞",
+    name: "Children Learn from What They See",
+    esName: "Los niños aprenden de lo que ven",
+    chip: "classic experiment",
+    claim: "The Bobo doll experiments (1961–1965) are still the cleanest demonstration: children imitate behavior they watch — not just direct instruction. And it cuts both ways: children who watched a non-aggressive model were LESS aggressive than the no-model control. Modeling isn't a theory; it's a reflex.",
+    evidence: "Strong — foundational, replicated behavioral research; the mechanism behind social learning theory.",
+    studies: [
+      { source: "Bandura, Ross & Ross (1961), 'Transmission of Aggression through Imitation of Aggressive Models' — Journal of Abnormal and Social Psychology, 63, 575-582", claim: "Children who observed an aggressive model reproduced the model's specific acts — in a new room, without the model present. Children who watched a non-aggressive model showed less aggression than controls who saw no model.", medium: "benchmark experiment", confidence: "Strong", year: "1961" },
+      { source: "Bandura (1965), vicarious reinforcement follow-up", claim: "Observing a model being rewarded or punished changes the observer's willingness to imitate — learning through others' consequences, no direct reward needed.", medium: "benchmark experiment", confidence: "Strong", year: "1965" }
+    ],
+    village: "Role: Tracker. This is the whole game in one finding: a child watches a parent build a hugelkultur, tend the fire, fix the tool — then does it themselves. The parent IS the curriculum.",
+    esVillage: "Rol: Rastreador — el niño ve hacer, y luego hace. El padre es el currículo."
+  },
+  {
+    id: "mentoring",
+    icon: "🧭",
+    name: "A Caring Adult Changes Trajectories",
+    esName: "Un adulto que se interesa cambia trayectorias",
+    chip: "RCT",
+    claim: "The Big Brothers Big Sisters randomized trial (959 youth, 18-month follow-up) is the landmark: a consistent, caring adult relationship cut drug initiation by 46%, halved skipped school days, and improved grades. The mechanism isn't tutoring — it's the relationship.",
+    evidence: "Strong — randomized controlled trial, rated by the What Works Clearinghouse; supported by two decades of mentoring research.",
+    studies: [
+      { source: "Tierney, Grossman & Resch (1995/2000), Public/Private Ventures — BBBS impact study", claim: "Youth with Bigs were 46% less likely to initiate drug use, 27% less likely to initiate alcohol use, almost 1/3 less likely to hit someone, skipped half as many school days, and showed modest GPA gains.", medium: "randomized controlled trial", confidence: "Strong", year: "1995" },
+      { source: "Jean Rhodes, mentoring relationship quality research (1998–2017)", claim: "Relationship quality and duration — not program structure — predict youth outcomes; close, enduring bonds are the active ingredient.", medium: "longitudinal + meta-analytic review", confidence: "Strong", year: "1998–2017" },
+      { source: "Search Institute, Developmental Relationships framework (Pekel, Roehlkepartain et al., 2018)", claim: "Five elements — Express Care, Challenge Growth, Provide Support, Share Power, Expand Possibilities — predict thriving; yet 1 in 5 young people report no developmental relationship at all.", medium: "large-scale surveys (n≈254k)", confidence: "Moderate-Strong", year: "2018" }
+    ],
+    village: "Role: Mentor. The game assigns a mentor to every quest on purpose — not to check work, but because the research says the caring adult is the intervention. Mentor language in the Village is inclusive ('those you mentor') because anyone can hold this role.",
+    esVillage: "Rol: Mentor — el adulto que se interesa es la intervención; el Juego lo asigna a cada misión a propósito."
+  },
+  {
+    id: "belonging",
+    icon: "🏡",
+    name: "Belonging Is a Lever",
+    esName: "Pertenecer es una palanca",
+    chip: "RCT",
+    claim: "Walton & Cohen (2011, Science): a one-hour social-belonging intervention — framed as a short reading and writing exercise — raised minority students' GPA across three years and halved the achievement gap. Belonging isn't a warm fuzzy; it's a psychological lever.",
+    evidence: "Strong — randomized controlled trial in Science; replicated in expansion studies (Yeager et al., 2016, 10,000+ students).",
+    studies: [
+      { source: "Walton & Cohen (2011), 'A Brief Social-Belonging Intervention…' — Science 331, 1447", claim: "Framing social adversity as common and transient tripled the percentage of African-American students earning top-quarter GPAs and halved the achievement gap over 3 years; also improved self-reported health.", medium: "randomized controlled trial", confidence: "Strong", year: "2011" },
+      { source: "Yeager et al. (2016), replication in 10,000+ students (two national samples)", claim: "Brief belonging interventions improved grades across a diverse national sample — the effect is general, not limited to one campus.", medium: "randomized controlled trial (national)", confidence: "Strong", year: "2016" }
+    ],
+    village: "Role: Hearth Tender & Witness. Every completed quest with a named witness sends the message 'you are known here.' That's the belonging intervention, delivered weekly instead of once.",
+    esVillage: "Rol: Custodio del Fogón y Testigo — cada misión completada con un testigo nombrado dice: 'aquí te conocemos'."
+  },
+  {
+    id: "nature",
+    icon: "🌲",
+    name: "Nature Is Part of the Mechanism",
+    esName: "La naturaleza es parte del mecanismo",
+    chip: "converging review",
+    claim: "Kuo, Barnes & Jordan (2019, Frontiers in Psychology): hundreds of studies converge — nature contact restores attention, reduces stress, builds self-discipline, and supports learning. Nature-based instruction outperforms indoor instruction, and the effect is strongest for students traditional classrooms fail.",
+    evidence: "Strong — integrative review of hundreds of studies plus meta-analyses; effects on attention and stress well-established.",
+    studies: [
+      { source: "Kuo, Barnes & Jordan (2019), 'Do Experiences With Nature Promote Learning?' — Frontiers in Psychology 10:305", claim: "Converging evidence: nature boosts attention, lowers stress, improves self-discipline, and nature-based instruction outperforms traditional instruction across academic outcomes.", medium: "integrative review (hundreds of studies)", confidence: "Strong", year: "2019" },
+      { source: "Faber Taylor & Kuo (2011), ADHD attention studies; Dadvand et al. (2015) school greenness", claim: "Nature exposure improves attention in children with ADHD (after-school green play) and greenness around schools is linked to cognitive development.", medium: "experimental + longitudinal", confidence: "Strong", year: "2011/2015" }
+    ],
+    village: "The whole game runs outdoors — every guild, every quest. This panel is the reason: nature isn't the setting, it's part of the mechanism.",
+    esVillage: "Todo el juego ocurre al aire libre — la naturaleza no es el escenario, es parte del mecanismo."
+  }
+];
+
+/* Family voices — TOLD AS STORIES, LABELED AS STORIES. */
+const CONNECTION_VOICES = [
+  { who: "Parent of two, Thrive Forest School (KY, USA)", year: "2026", note: "\"The teachers always remark they can tell my kids attended forest school — their confidence, kindness toward other students, comfort in the outdoor world, love of nature, ability to climb trees.\"", medium: "anecdote" },
+  { who: "Parent, Nestlings Forest School (UK)", year: "2026", note: "\"He came home smelling like a bonfire. They chopped strawberries, made jam over a tiny fire, toasted croissants on sticks. No one asking them to sit still for hours. No pressure to perform. Just space to explore, get messy and be curious.\"", medium: "anecdote" },
+  { who: "Parent, Ferncliff Nature School (AR, USA)", year: "2026", note: "\"Being outdoors still changed her. Nature school didn't just give her a few good preschool memories — it shaped how she experiences the world. It nurtured creativity, confidence, and a deep connection to the outdoors that still remains.\"", medium: "anecdote" },
+  { who: "Parent, The Invisible Learning (naturalcommunity.org)", year: "2026", note: "\"No worksheet could have predicted how she would approach that rock wall. No assessment would have measured her empathy for a worm. Yet these are the very qualities that help children navigate the world.\"", medium: "anecdote" },
+  { who: "Friedman (2024), Children's Geographies — interviews with Forest School mothers", year: "2024", note: "Mothers chose forest school for the autonomy and compassion their children found nowhere else — especially children with additional support needs; the benefits spilled into family nature habits beyond the program.", medium: "qualitative study" }
+];

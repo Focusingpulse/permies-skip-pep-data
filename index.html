@@ -1318,6 +1318,7 @@ details[open] summary::after { transform: rotate(180deg); }
     <div class="ll-panel" id="panel-modes"></div>
     <div class="ll-panel" id="panel-practices"></div>
     <div class="ll-panel" id="panel-science"></div>
+    <div class="ll-panel" id="panel-connection"></div>
     <div class="ll-panel" id="panel-map"></div>
     <div class="ll-panel" id="panel-math"></div>
     <div class="ll-panel" id="panel-blend"></div>
@@ -2261,6 +2262,7 @@ function renderLLTabs() {
     { id:'modes', label: llIsEs() ? 'Modos y Estados' : 'Modes & States' },
     { id:'practices', label: llIsEs() ? 'Prácticas del Corazón y la Mente' : 'Heart & Mind Practices' },
     { id:'science', label: llIsEs() ? 'Ciencia del Aprendizaje' : 'Learning Science' },
+    { id:'connection', label: llIsEs() ? 'Ciencia de la Conexión' : 'Connection Science' },
     { id:'map', label: llIsEs() ? 'El Gran Mapa' : 'The Grand Map' },
     { id:'math', label: llIsEs() ? 'Matemática Eterna' : 'Timeless Math' },
     { id:'blend', label: llIsEs() ? 'Creador de Mezclas' : 'Blueprint Builder' },
@@ -2278,6 +2280,7 @@ function renderLLPanel(id) {
   if (id === 'modes') renderModes();
   if (id === 'practices') renderPractices();
   if (id === 'science') renderScience();
+  if (id === 'connection') renderConnection();
   if (id === 'map') renderMap();
   if (id === 'math') renderMath();
   if (id === 'blend') renderBlend();
@@ -2401,6 +2404,30 @@ function renderScience() {
       <div class="sci-row"><b>${llIsEs()?'En casa':'At home'}:</b> ${s.home}</div>
     </div>`;
   }).join('');
+}
+
+function renderConnection() {
+  const el = document.getElementById('panel-connection');
+  const head = `<div class="sec-title" style="margin-top:0.2rem;"><h2 style="font-size:1.05rem;">🤝 ${llIsEs()?'La ciencia detrás de los cuatro roles':'The science beneath the four roles'}</h2>
+    <span class="sub" style="font-size:0.75rem;color:var(--text-dim);">${llIsEs()?'Cada pilar es un hallazgo real que sostiene un rol de la Aldea — con las etiquetas honestas de siempre (estudio · ensayo controlado · revisión · anécdota).':'Each pillar is a real finding that supports a Village role — with the usual honest labels (study · RCT · review · anecdote).'}</span></div>`;
+  const cards = CONNECTION_SCIENCE.map(p => {
+    const studies = p.studies.map(st => `<div class="curr-box" style="margin-top:0.5rem;">
+      <b><span class="math-tag" style="margin-right:0.35rem;">${st.medium}</span>${st.source}</b>
+      <span style="font-size:0.85em;">${st.claim}</span>
+      <span style="display:block;font-size:0.7em;color:var(--text-dim);margin-top:0.2rem;">${llIsEs()?'Confianza':'Confidence'}: ${st.confidence} · ${st.year}</span>
+    </div>`).join('');
+    return `<div class="sci-card" style="margin-bottom:0.8rem;">
+      <div class="sci-head"><div class="sci-name">${p.icon} ${llIsEs()&&p.esName?p.esName:p.name}</div><span class="sci-ev ev-strong">${p.chip}</span></div>
+      <div class="sci-row"><b>${llIsEs()?'Lo que dice':'What it says'}:</b> ${p.claim}</div>
+      <div class="sci-row"><b>${llIsEs()?'Evidencia':'Evidence'} ${llIsEs()?'— etiquetada':'— labeled'}:</b> ${p.evidence}</div>
+      ${studies}
+      <div class="sci-row" style="border-left:3px solid var(--accent-gold);"><b>🏡 ${llIsEs()?'En la Aldea':'In the Village'}:</b> ${llIsEs()&&p.esVillage?p.esVillage:p.village}</div>
+    </div>`;
+  }).join('');
+  const voices = `<div class="sec-title" style="margin-top:1rem;"><h2 style="font-size:1.05rem;">💬 ${llIsEs()?'Voces de familias':'Family voices'}</h2>
+    <span class="sub" style="font-size:0.75rem;color:var(--text-dim);">${llIsEs()?'Contadas como historias, etiquetadas como historias — testimonios, no ensayos controlados.':'Told as stories, labeled as stories — testimonial, not controlled trials.'}</span></div>
+    <div>${CONNECTION_VOICES.map(v => `<div class="curr-card" style="margin-bottom:0.5rem;"><div style="font-size:0.72em;color:var(--text-dim);">${v.who} · ${v.year} · <span class="math-tag">${v.medium}</span></div><div style="font-size:0.9em;margin-top:0.25rem;">${v.note}</div></div>`).join('')}</div>`;
+  el.innerHTML = head + cards + voices;
 }
 
 function renderMap() {
