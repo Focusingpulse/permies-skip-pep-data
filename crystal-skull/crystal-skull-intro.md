@@ -1,6 +1,6 @@
 # The Crystal Skull — your family's Elder
 
-*A 15-minute setup for the Village RPG*
+*A 15-minute setup for the Creative Village*
 
 ## What it is
 

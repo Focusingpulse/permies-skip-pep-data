@@ -1,5 +1,5 @@
 /* ============================================================
- * The Village — Learning Lab data (v2)
+ * The Creative Village — Learning Lab data (v2)
  * Curriculum Gallery · Learning Science · Grand Map · Timeless Math · Blueprint Builder
  * Evidence-honest by design — AND evidence-broad by design:
  * each claim carries a "medium" so you can see WHERE the evidence lives:
@@ -141,7 +141,7 @@ const CURRICULA = [
     tag: "nature", flag: "🌲",
     core: "Nature is the classroom, all year, in all weather. Risk, play, and real tools in the woods build resilience and sensory intelligence. Learning follows the forest's rhythm.",
     looks: "Full days outside. Rain gear is the uniform. Fires, knives, rope, shelters, mud, tree climbing. Math and literacy emerge from the situation (counting sticks, mapping trails, rope knots).",
-    strengths: "Resilience, risk assessment, sensory attunement, gross motor, calm, nature connection (the Village's core), executive function through self-directed play.",
+    strengths: "Resilience, risk assessment, sensory attunement, gross motor, calm, nature connection (the Creative Village's core), executive function through self-directed play.",
     watchouts: "Climate/logistics for families; structured academics are thin by design (often paired with home academics); biases toward rural/privileged families without care.",
     verdict: "Strong evidence for wellbeing, motor skills and nature connection; the academic deficit question is a mismatch — forest school does not claim to be an academic program.",
     evidence_depth: [
@@ -181,7 +181,7 @@ const CURRICULA = [
     esName: "Permacultura y Oficio",
     century: "Ancient guilds → 1978 Mollison & Holmgren",
     tag: "guild", flag: "🌾",
-    core: "The Village's native curriculum. Learn by doing real work that matters, in a guild or family band, with a mentor, toward mastery that is demonstrated. Badges = guild journeyman marks. Nature's patterns are the design language.",
+    core: "The Creative Village's native curriculum. Learn by doing real work that matters, in a guild or family band, with a mentor, toward mastery that is demonstrated. Badges = guild journeyman marks. Nature's patterns are the design language.",
     looks: "This game. Every quest is a real skill: soil, fire, building, food, medicine, economics, community. Evidence of work is produced and witnessed (Otis!).",
     strengths: "Real competence, confidence that comes from making things work, ecological literacy, intergenerational learning, meaning.",
     watchouts: "Needs STRUCTURE to avoid aimlessness: the badge tiers, biome paths, and guilds provide it. Requires real work to be available (land, tools, family cooperation).",
@@ -191,14 +191,14 @@ const CURRICULA = [
       { source: "Apprenticeship literature (Collins, Brown & Newman 1989)", claim: "Apprenticeship is the canonical model of situated, authentic learning — cognitive apprenticeship research formalizes what guilds always knew.", medium: "benchmark synthesis", confidence: "Strong", year: "1989" },
       { source: "Mollison & Holmgren, Permaculture One (1978); Permies.com's 22-badge system (Paul Wheaton)", claim: "40+ years of global practice documentation: food forests, earthworks, natural building — outcomes in soil, health and community, not journal metrics.", medium: "practitioner documentation", confidence: "High (practice)", year: "1978–today" }
     ],
-    authors: [{ name: "Bill Mollison & David Holmgren", work: "Permaculture One (1978); Designers' Manual (1988)", point: "The founders — design science for permanent agriculture." }, { name: "Paul Wheaton", work: "Permies.com badge system", point: "The real-world badge (PEP/SKIP) system The Village adapts." }, { name: "Collins, Brown & Newman", work: "Cognitive Apprenticeship (1989)", point: "The research articulation of learn-by-doing-with-a-master." }],
+    authors: [{ name: "Bill Mollison & David Holmgren", work: "Permaculture One (1978); Designers' Manual (1988)", point: "The founders — design science for permanent agriculture." }, { name: "Paul Wheaton", work: "Permies.com badge system", point: "The real-world badge (PEP/SKIP) system The Creative Village adapts." }, { name: "Collins, Brown & Newman", work: "Cognitive Apprenticeship (1989)", point: "The research articulation of learn-by-doing-with-a-master." }],
     quests: ["All — this is the spine"],
     esCore: "Aprender haciendo trabajo real, en un gremio, con un mentor, hacia la maestría demostrada. Las insignias son marcas de oficial."
   }
 ];
 
 /* ---------- 2. LEARNING SCIENCE ---------- */
-/* Each principle: what, why (neuroscience), how the Village uses it, at home,
+/* Each principle: what, why (neuroscience), how the Creative Village uses it, at home,
  * evidence label, sources (real, citable). */
 const LEARNING_SCIENCE = [
   {
@@ -314,7 +314,7 @@ const GRAND_MAP = [
   { era: "Early 20th c", node: "The Great Innovators", desc: "Maria Montessori's prepared environment; Rudolf Steiner's Waldorf rhythm; John Dewey's learning-by-doing in democracy.", outcome: "Child-centered education enters the mainstream vocabulary; evidence still catching up a century later.", tag: "progressive" },
   { era: "Mid-20th c", node: "Democratic & Free Schools", desc: "A.S. Neill's Summerhill; Sudbury schools; the deschooling critique (Illich). Children govern and direct.", outcome: "Proof that self-direction is survivable — and often thriving; fuels the homeschooling boom.", tag: "freedom" },
   { era: "1970s–2000s", node: "Homeschooling & Unschooling", desc: "John Holt's 'unschooling'; Charlotte Mason revival; forest schools spread from Scandinavia; Reggio Emilia becomes world-famous.", outcome: "Millions of families leave the system; a live laboratory of alternative models, now cross-pollinating.", tag: "freedom" },
-  { era: "Today", node: "Mastery + Self-Directed + AI", desc: "Khan-style mastery learning, game-based motivation, AI tutors (DeepTutor), and the Village's own blend: real-world quests, badge mastery, intergenerational mentorship.", outcome: "The individual child can now assemble a curriculum from all of history — which is exactly what this screen does.", tag: "now" }
+  { era: "Today", node: "Mastery + Self-Directed + AI", desc: "Khan-style mastery learning, game-based motivation, AI tutors (DeepTutor), and the Creative Village's own blend: real-world quests, badge mastery, intergenerational mentorship.", outcome: "The individual child can now assemble a curriculum from all of history — which is exactly what this screen does.", tag: "now" }
 ];
 
 /* ---------- 4. TIMELESS MATH (ancient & alternative methods) ---------- */
@@ -378,10 +378,10 @@ const BLUEPRINT_ARCHETYPES = [
     fit: { structure: "hi", adult: "hi", nature: "hi", arts: "lo", pace: "lo", community: "hi" },
     desc: "Nature-led, child-driven, deep-dive learning with strong mentorship. Forest School + unschooling + apprenticeship, held by trusting adults who keep the wild available.",
     esDesc: "Aprendizaje guiado por la naturaleza, profundo y autodirigido, con mentoría fuerte.",
-    longDesc: "The Wild Scholar blends the nature-connection traditions (Louv, Jon Young, 8 Shields, forest school) with the trust of self-directed education and the depth of apprenticeship. The wild is the classroom; the mentor curates opportunity, not content; mastery is demonstrated, not tested. Strongest where land, tools, and mentors are available — the Village quest board is its natural habitat.",
+    longDesc: "The Wild Scholar blends the nature-connection traditions (Louv, Jon Young, 8 Shields, forest school) with the trust of self-directed education and the depth of apprenticeship. The wild is the classroom; the mentor curates opportunity, not content; mastery is demonstrated, not tested. Strongest where land, tools, and mentors are available — the Creative Village quest board is its natural habitat.",
     books: [
       { name: "Richard Louv", work: "Last Child in the Woods (2005); Vitamin N (2016)", line: "The case and the practical prescription for nature-rich childhood." },
-      { name: "Jon Young, Ellen Haas & Evan McGown", work: "Coyote's Guide to Connecting with Nature (2010)", line: "The 8 Shields framework — sit spots, bird language, the errand principle. The Village's mentoring spine." },
+      { name: "Jon Young, Ellen Haas & Evan McGown", work: "Coyote's Guide to Connecting with Nature (2010)", line: "The 8 Shields framework — sit spots, bird language, the errand principle. The Creative Village's mentoring spine." },
       { name: "Tom Brown Jr.", work: "The Tracker (1978)", line: "Deep connection lineage: awareness exercises and tracking as a way of life." },
       { name: "Peter Gray", work: "Free to Learn (2013)", line: "Evolutionary case for self-directed play as the native learning mode." }
     ],
@@ -428,7 +428,7 @@ const BLUEPRINT_ARCHETYPES = [
     fit: { structure: "lo", adult: "lo", nature: "lo", arts: "hi", pace: "hi", community: "lo" },
     desc: "Classical rigor + guild mastery: memory in the grammar years, logic and debate in the middle, rhetoric and real projects at the end. Text-heavy, argument-rich.",
     esDesc: "Rigor clásico + maestría gremial: memoria, lógica, retórica y proyectos reales.",
-    longDesc: "The Trivium Guild marries the classical trivium (grammar → logic → rhetoric) with the Village's guild mastery ladder. Early years: memory, narration, and the Great Books' stories. Middle years: logic, debate, and Socratic questioning — argument becomes the tool. Teen years: rhetoric, original writing, and real projects (a Constitution debate, a market, a workshop build). Its evidence is 2,500 years of tradition plus modern argumentation research; its watch-out is dryness — keep joy and real work in the mix.",
+    longDesc: "The Trivium Guild marries the classical trivium (grammar → logic → rhetoric) with the Creative Village's guild mastery ladder. Early years: memory, narration, and the Great Books' stories. Middle years: logic, debate, and Socratic questioning — argument becomes the tool. Teen years: rhetoric, original writing, and real projects (a Constitution debate, a market, a workshop build). Its evidence is 2,500 years of tradition plus modern argumentation research; its watch-out is dryness — keep joy and real work in the mix.",
     books: [
       { name: "Plato & Aristotle", work: "The Republic; Rhetoric", line: "The originals — education as the shaping of the citizen." },
       { name: "Quintilian", work: "Institutio Oratoria (c. 95 CE)", line: "The trivium, codified by a practicing teacher." },
@@ -445,7 +445,7 @@ const BLUEPRINT_ARCHETYPES = [
     fit: { structure: "hi", adult: "hi", nature: "hi", arts: "lo", pace: "hi", community: "hi" },
     desc: "Unschooling with a nature bias: trust the learner completely, follow interests, keep the wild and real work available, let mastery emerge from love.",
     esDesc: "Unschooling con sesgo natural: confía plenamente en quien aprende y sigue sus intereses.",
-    longDesc: "The Free Range is the radical-trust model: no timetable, no curriculum you impose — instead, a rich environment (books, tools, land, people, time) and adults who pay close attention. Interests are followed wherever they lead; the parent's art is providing access and noticing. Like unschooling generally, the watch-outs are the areas a child avoids (often formal math and writing) and the family bandwidth to keep the environment rich. The Village in Free-Roam mode is this blueprint made playable.",
+    longDesc: "The Free Range is the radical-trust model: no timetable, no curriculum you impose — instead, a rich environment (books, tools, land, people, time) and adults who pay close attention. Interests are followed wherever they lead; the parent's art is providing access and noticing. Like unschooling generally, the watch-outs are the areas a child avoids (often formal math and writing) and the family bandwidth to keep the environment rich. The Creative Village in Free-Roam mode is this blueprint made playable.",
     books: [
       { name: "John Holt", work: "How Children Fail (1964); Instead of Education (1976)", line: "The doubting teacher's case: trust the learner." },
       { name: "Peter Gray", work: "Free to Learn (2013)", line: "The evolutionary and research case for play-driven self-direction." },
@@ -477,15 +477,15 @@ const BLUEPRINT_ARCHETYPES = [
     name: "The Balanced Blend",
     esName: "La Mezcla Equilibrada",
     fit: {},
-    desc: "A custom hand-built blend — the family picks elements from every tradition that fit them. This is the Village way: you choose, and you keep what works.",
+    desc: "A custom hand-built blend — the family picks elements from every tradition that fit them. This is the Creative Village way: you choose, and you keep what works.",
     esDesc: "Una mezcla propia: la familia elige elementos de cada tradición.",
     longDesc: "Instead of following one tradition, the family consciously curates — a Montessori shelf in the morning, a Charlotte Mason living-book feast, a Wild Scholar afternoon, a Trivium Guild dinner debate, a Waldorf festival calendar, and unschooling trust throughout. Its founding texts are this Learning Lab itself: the gallery gives you the ingredients, the sciences give you the principles, and you compose your own. Document what you chose and why — that documentation is the curriculum's evidence.",
     books: [
-      { name: "This Learning Lab", work: "The Village game — Curriculum Gallery tab", line: "Your ingredients: compare any two traditions and choose." },
+      { name: "This Learning Lab", work: "The Creative Village game — Curriculum Gallery tab", line: "Your ingredients: compare any two traditions and choose." },
       { name: "Every author above, sampled", work: "Montessori, Mason, Steiner, Holt, Gray, Louv, Young...", line: "Read the originals at the pace your family can." }
     ],
     evidence: "As strong as the pieces you choose — a balanced blend inherits the evidence of its parts. The practice of documenting your choices (and revisiting them) is itself metacognitive learning.",
-    practices: ["Pick 2-3 elements from different traditions and try them for a season", "Document why you chose them; adjust at the next season change", "Keep the Village quest board as the common spine", "Family meeting monthly: what worked, what didn't, what's next"],
+    practices: ["Pick 2-3 elements from different traditions and try them for a season", "Document why you chose them; adjust at the next season change", "Keep the Creative Village quest board as the common spine", "Family meeting monthly: what worked, what didn't, what's next"],
     quests: ["Pick what calls to you"]
   }
 ];
@@ -522,7 +522,7 @@ const LEARN_MODES = [
     how:"Watch a demo first, then do the quest. Pause and predict what happens next — that prediction is learning.",
     evidence:"Strong for procedural preview (Mayer's multimedia learning; demonstration → imitation)." },
   { id:"do", name:"Do", esName:"Hacer", icon:"🛠️", tagline:"Hands-on quests",
-    desc:"Real work: build, dig, cook, fix, plant, trade. The Village's native mode — mastery by making, witnessed by Otis.",
+    desc:"Real work: build, dig, cook, fix, plant, trade. The Creative Village's native mode — mastery by making, witnessed by Otis.",
     how:"Pick a quest, do the thing, produce evidence, reflect. Generation beats consumption, every time.",
     evidence:"Strong — generation effect, cognitive apprenticeship, mastery learning all point here." },
   { id:"discuss", name:"Discuss", esName:"Dialogar", icon:"🗣️", tagline:"Narrate & teach back",
@@ -880,7 +880,7 @@ const CONNECTION_SCIENCE = [
       { source: "Jean Rhodes, mentoring relationship quality research (1998–2017)", claim: "Relationship quality and duration — not program structure — predict youth outcomes; close, enduring bonds are the active ingredient.", medium: "longitudinal + meta-analytic review", confidence: "Strong", year: "1998–2017" },
       { source: "Search Institute, Developmental Relationships framework (Pekel, Roehlkepartain et al., 2018)", claim: "Five elements — Express Care, Challenge Growth, Provide Support, Share Power, Expand Possibilities — predict thriving; yet 1 in 5 young people report no developmental relationship at all.", medium: "large-scale surveys (n≈254k)", confidence: "Moderate-Strong", year: "2018" }
     ],
-    village: "Role: Mentor. The game assigns a mentor to every quest on purpose — not to check work, but because the research says the caring adult is the intervention. Mentor language in the Village is inclusive ('those you mentor') because anyone can hold this role.",
+    village: "Role: Mentor. The game assigns a mentor to every quest on purpose — not to check work, but because the research says the caring adult is the intervention. Mentor language in the Creative Village is inclusive ('those you mentor') because anyone can hold this role.",
     esVillage: "Rol: Mentor — el adulto que se interesa es la intervención; el Juego lo asigna a cada misión a propósito."
   },
   {
