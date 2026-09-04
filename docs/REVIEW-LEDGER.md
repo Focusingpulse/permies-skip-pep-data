@@ -99,3 +99,37 @@ Verdicts: **ADOPT** (build on approval) · **RIGHT-SIZE** (do it differently) ·
 10. Setup progressive disclosure
 
 *Tick items here as they're approved, built, verified, and shipped.*
+
+---
+
+## Review 4 — Manus AI (Sep 4) — delta
+
+New items this review surfaced (weight 1/4 unless bumped):
+
+### P1 — add
+- **Biome changes the visual palette** (NEW, standout). Apartment = cool grays, suburb = warm earth, rural = deep green. We already swap CSS vars by mode; layering biome on top makes the world feel lived-in. *Low, high delight.*
+- **Data-load resilience** (now 2/4 w/ Kimi). If data.js fails: clear error + Retry button, and cache quest data in localStorage as a fallback instead of the sparse inline fallback. *Low-med.*
+- **"What should I do now?" floating button** — contextual next action from progress + mode. Pairs with the guided first session. *Low-med.*
+- **Auto-save "Saved just now" indicator** — reassure parents progress is safe. *Low.*
+- **Export to Markdown/CSV** for print/records (now 2/4 w/ Kimi print). *Low.*
+- **Breadcrumb "← Village"** from deep sections (nav bar exists — reviewer missed it; a breadcrumb costs nothing). *Trivial.*
+
+### P2 — add / right-size
+- **Mentor's Circle interactive 8-shields wheel** (now 2/4 w/ Kimi). Clickable wheel → practices/stories/quests per direction. *Medium. Defer.*
+- **Offline archive → integrated "survival kit"** in the Library (not a separate link list). *Medium content.*
+- **Per-kid progress tracks** (family profiles). Current model = family ledger + per-player participation; real per-kid tracks is a medium-large rework. *Right-size: defer.*
+- **In-app community layer** — share progress/questions inside the app. Big idea; Permies bridge already exists out-of-app. *Defer.*
+- **Crystal Skull webhook as "magic"** — a hosted option or email fallback later; for now Advanced + honest line (weight now 4/4 across reviews).
+
+### Weight bumps
+- Onboarding / guided first session: **4/4**
+- Intro gate (skip/toggle/Start): **4/4**
+- Quest completion celebration: **3/4**
+- Webhook clarity: **4/4**
+- Avatar studio mobile: **2/4**
+- Print/export: **2/4**
+- Mentor's Circle visualization: **2/4**
+- Micro-interactions / hover feedback: **2/4**
+
+### Recommended batch — updated top 12
+1. Guided first session (4/4) · 2. Intro skip/toggle + Start (4/4) · 3. Biome → visual palette (NEW) · 4. Safety gates · 5. Save versioning + import preview · 6. Reduced-motion + focus · 7. Quest celebration + "Start" CTA (3/4) · 8. Library search · 9. Webhook → Advanced (4/4) · 10. Data-load resilient retry + cache · 11. Mode comparison table · 12. Setup progressive disclosure
