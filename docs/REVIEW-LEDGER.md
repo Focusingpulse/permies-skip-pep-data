@@ -107,7 +107,7 @@ Verdicts: **ADOPT** (build on approval) · **RIGHT-SIZE** (do it differently) ·
 New items this review surfaced (weight 1/4 unless bumped):
 
 ### P1 — add
-- **Biome changes the visual palette** (NEW, standout). Apartment = cool grays, suburb = warm earth, rural = deep green. We already swap CSS vars by mode; layering biome on top makes the world feel lived-in. *Low, high delight.*
+- ✅ **Biome changes the visual palette** (BUILT Sep 4). Apartment = cool grays, suburb = warm earth, rural = deep green. We already swap CSS vars by mode; layering biome on top makes the world feel lived-in. *Low, high delight.*
 - **Data-load resilience** (now 2/4 w/ Kimi). If data.js fails: clear error + Retry button, and cache quest data in localStorage as a fallback instead of the sparse inline fallback. *Low-med.*
 - **"What should I do now?" floating button** — contextual next action from progress + mode. Pairs with the guided first session. *Low-med.*
 - **Auto-save "Saved just now" indicator** — reassure parents progress is safe. *Low.*
@@ -132,4 +132,4 @@ New items this review surfaced (weight 1/4 unless bumped):
 - Micro-interactions / hover feedback: **2/4**
 
 ### Recommended batch — updated top 12
-1. Guided first session (4/4) · 2. Intro skip/toggle + Start (4/4) · 3. Biome → visual palette (NEW) · 4. Safety gates · 5. Save versioning + import preview · 6. Reduced-motion + focus · 7. Quest celebration + "Start" CTA (3/4) · 8. Library search · 9. Webhook → Advanced (4/4) · 10. Data-load resilient retry + cache · 11. Mode comparison table · 12. Setup progressive disclosure
+1. Guided first session (4/4) · 2. Intro skip/toggle + Start (4/4) · 3. ✅ Biome → visual palette (built) · 4. Safety gates · 5. Save versioning + import preview · 6. Reduced-motion + focus · 7. Quest celebration + "Start" CTA (3/4) · 8. Library search · 9. Webhook → Advanced (4/4) · 10. Data-load resilient retry + cache · 11. Mode comparison table · 12. Setup progressive disclosure

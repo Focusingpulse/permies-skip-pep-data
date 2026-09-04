@@ -826,16 +826,40 @@ html[data-mode="freeroam"] { /* creative sandbox */
   --accent-orange: #ff9f1c;
 }
 html[data-mode="adventure"] body {
-  background-image: radial-gradient(ellipse at top, rgba(15,52,96,0.4), transparent 60%), radial-gradient(ellipse at bottom, rgba(233,196,106,0.12), transparent 50%);
+  background-image: radial-gradient(ellipse at top, rgba(15,52,96,0.4), transparent 60%), radial-gradient(ellipse at bottom, rgba(233,196,106,0.12), transparent 50%), radial-gradient(ellipse at 50% -10%, var(--biome-glow, transparent), transparent 60%);
 }
 html[data-mode="story"] body {
-  background-image: radial-gradient(ellipse at 70% 15%, rgba(139,92,246,0.22), transparent 55%), radial-gradient(ellipse at 15% 85%, rgba(242,201,76,0.10), transparent 50%);
+  background-image: radial-gradient(ellipse at 70% 15%, rgba(139,92,246,0.22), transparent 55%), radial-gradient(ellipse at 15% 85%, rgba(242,201,76,0.10), transparent 50%), radial-gradient(ellipse at 50% -10%, var(--biome-glow, transparent), transparent 60%);
 }
 html[data-mode="survival"] body {
-  background-image: radial-gradient(ellipse at 80% 10%, rgba(255,123,46,0.14), transparent 55%), repeating-linear-gradient(135deg, rgba(255,255,255,0.015) 0 2px, transparent 2px 6px);
+  background-image: radial-gradient(ellipse at 80% 10%, rgba(255,123,46,0.14), transparent 55%), repeating-linear-gradient(135deg, rgba(255,255,255,0.015) 0 2px, transparent 2px 6px), radial-gradient(ellipse at 50% -10%, var(--biome-glow, transparent), transparent 60%);
 }
 html[data-mode="freeroam"] body {
-  background-image: radial-gradient(ellipse at 80% 20%, rgba(94,234,212,0.18), transparent 55%), radial-gradient(ellipse at 10% 80%, rgba(255,209,102,0.10), transparent 50%);
+  background-image: radial-gradient(ellipse at 80% 20%, rgba(94,234,212,0.18), transparent 55%), radial-gradient(ellipse at 10% 80%, rgba(255,209,102,0.10), transparent 50%), radial-gradient(ellipse at 50% -10%, var(--biome-glow, transparent), transparent 60%);
+}
+
+/* ============================================================
+ * BIOME PALETTES — the environment tints the whole world
+ * Layers onto whatever mode theme is active (mode keeps its
+ * accents; biome adds its own atmosphere).
+ * ============================================================ */
+html[data-biome="apartment"] { /* cool urban grays / steel */
+  --biome-glow: rgba(148,163,184,0.14);
+  --biome-edge: rgba(148,163,184,0.18);
+}
+html[data-biome="suburb"] { /* warm earth / amber */
+  --biome-glow: rgba(233,196,106,0.16);
+  --biome-edge: rgba(233,196,106,0.22);
+}
+html[data-biome="rural"] { /* deep forest greens */
+  --biome-glow: rgba(74,222,128,0.16);
+  --biome-edge: rgba(74,222,128,0.22);
+}
+html[data-biome] #nav-bar {
+  border-top: 2px solid var(--biome-edge, transparent);
+}
+html[data-biome] .title-main {
+  text-shadow: 0 2px 18px var(--biome-glow, transparent);
 }
 #mode-atmo { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
 #mode-atmo span { position: absolute; font-size: 26px; opacity: 0.10; animation: atmoFloat linear infinite alternate; will-change: transform; }
@@ -972,9 +996,9 @@ html[data-mode="freeroam"] body {
   <div class="setup-section">
     <h3>1. Choose Your Biome</h3>
     <select id="biome-select" onchange="setBiome(this.value)">
-      <option value="apartment">Apartment (PEA Path - limited quests)</option>
-      <option value="suburb">Suburban Home (PEP Path - most quests)</option>
-      <option value="rural">Rural / Acreage (PEP Path - all quests)</option>
+      <option value="apartment">Apartment (PEA Path - cool city tones)</option>
+      <option value="suburb">Suburban Home (PEP Path - warm earth tones)</option>
+      <option value="rural">Rural / Acreage (PEP Path - deep forest tones)</option>
     </select>
     <p style="font-size:0.8em; color:var(--text-dim); margin-top:0.4rem;">Your biome determines which quests are available. Rural families get the full PEP curriculum.</p>
   </div>
@@ -1488,7 +1512,7 @@ let rosterSelections = {};
 let questFilter = 'all';
 let webhookUrl = safeGet('rpg_webhook', '');
 
-try { biome = localStorage.getItem('rpg_biome') || 'apartment'; } catch(e) {}
+try { biome = safeGet('rpg_biome', 'apartment') || 'apartment'; } catch(e) {}
 try { freeRoam = localStorage.getItem('rpg_freeRoam') === 'true'; } catch(e) {}
 try { learnDepth = localStorage.getItem('rpg_learnDepth') || 'adults'; } catch(e) {}
 
@@ -2637,7 +2661,7 @@ function showScreen(s) {
 }
 
 // ---- Setup ----
-function setBiome(b) { biome = b; safeSet('rpg_biome', b); }
+function setBiome(b) { biome = b; safeSet('rpg_biome', b); applyBiomeTheme(b); }
 function setGameMode(m) {
   freeRoam = (m === 'freeroam');
   safeSet('rpg_freeRoam', freeRoam);
@@ -2676,6 +2700,13 @@ function applyModeTheme(m) {
 
 // Apply the saved mode's visual theme once MODE_ATMO is defined
 applyModeTheme(storyMode ? 'story' : (survivalMode ? 'survival' : (freeRoam ? 'freeroam' : 'adventure')));
+applyBiomeTheme(biome);
+
+/* ---- Biome palettes: the environment tints the world ---- */
+function applyBiomeTheme(b) {
+  b = ['apartment', 'suburb', 'rural'].includes(b) ? b : 'apartment';
+  try { document.documentElement.setAttribute('data-biome', b); } catch (e) {}
+}
 function setLearnDepth(d) { learnDepth = d; safeSet('rpg_learnDepth', d); }
 
 function renderSetup() {
@@ -2817,6 +2848,7 @@ function importVillage(event) {
       document.getElementById('biome-select').value = biome;
       document.getElementById('mode-select').value = storyMode ? 'story' : (survivalMode ? 'survival' : (freeRoam ? 'freeroam' : 'adventure'));
       applyModeTheme(storyMode ? 'story' : (survivalMode ? 'survival' : (freeRoam ? 'freeroam' : 'adventure')));
+      applyBiomeTheme(biome);
       document.getElementById('depth-select').value = learnDepth;
       document.getElementById('webhook-input').value = webhookUrl;
 
