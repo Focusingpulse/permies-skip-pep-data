@@ -3376,6 +3376,17 @@ function setQuestFilter(f) {
 function renderQuests() {
   let progress = getTierProgress();
 
+  // Preserve the player's place: remember which guilds are open and the
+  // scroll position so re-renders (role selection, quest completion) don't
+  // collapse the whole board and yank the view back up to the top.
+  let savedScroll = window.scrollY || document.documentElement.scrollTop || 0;
+  let openGuildIdx = [];
+  let guildCount = 0;
+  document.querySelectorAll('#quest-list details').forEach((d, i) => {
+    guildCount = i + 1;
+    if (d.open) openGuildIdx.push(i);
+  });
+
   // Story Mode panel
   if (storyMode && typeof storyRender === 'function') storyRender();
   // Survival Mode panel
@@ -3428,6 +3439,20 @@ function renderQuests() {
     rpg.forEach(a => {
       list.appendChild(createGuildDetails(a, false, progress));
     });
+  }
+
+  // Reopen the guilds the player had open (same guild set means same order).
+  // If the guild count changed (e.g. a filter switch), keep the default view.
+  let details = list.querySelectorAll('details');
+  if (details.length === guildCount) {
+    openGuildIdx.forEach(i => {
+      if (details[i]) details[i].open = true;
+    });
+  }
+
+  // Put the viewport back where it was, after the new layout settles.
+  if (savedScroll > 0) {
+    requestAnimationFrame(() => { window.scrollTo(0, savedScroll); });
   }
 }
 
