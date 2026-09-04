@@ -801,6 +801,46 @@ details[open] summary::after { transform: rotate(180deg); }
   border:1px solid var(--accent-green); border-radius:10px; padding:0.5rem 0.75rem; margin:0.6rem 0;
   font-size:0.8rem; color:var(--accent-green); }
 /* ================= End Learning Lab ================= */
+/* ============================================================
+ * MODE THEMES — each game mode gets its own visual identity
+ * Swapped via html[data-mode]; JS sets it in applyModeTheme().
+ * ============================================================ */
+html[data-mode="adventure"] { /* classic — default */
+  --bg-dark: #1a1a2e; --bg-panel: #16213e; --bg-card: #0f3460;
+  --accent-gold: #e9c46a; --accent-green: #4ade80; --accent-green-dark: #2d6a4f;
+  --accent-orange: #f97316;
+}
+html[data-mode="story"] { /* storybook night */
+  --bg-dark: #16102e; --bg-panel: #1e1744; --bg-card: #2a1f5e;
+  --accent-gold: #f2c94c; --accent-green: #3ddc97; --accent-green-dark: #1f6f54;
+  --accent-orange: #b388eb;
+}
+html[data-mode="survival"] { /* field-grade / off-grid */
+  --bg-dark: #12170e; --bg-panel: #1a2315; --bg-card: #24341b;
+  --accent-gold: #d9a82f; --accent-green: #a3d45a; --accent-green-dark: #5c7a2e;
+  --accent-orange: #ff7b2e;
+}
+html[data-mode="freeroam"] { /* creative sandbox */
+  --bg-dark: #0c1f2c; --bg-panel: #143449; --bg-card: #1b4a63;
+  --accent-gold: #ffd166; --accent-green: #5eead4; --accent-green-dark: #157a6e;
+  --accent-orange: #ff9f1c;
+}
+html[data-mode="adventure"] body {
+  background-image: radial-gradient(ellipse at top, rgba(15,52,96,0.4), transparent 60%), radial-gradient(ellipse at bottom, rgba(233,196,106,0.12), transparent 50%);
+}
+html[data-mode="story"] body {
+  background-image: radial-gradient(ellipse at 70% 15%, rgba(139,92,246,0.22), transparent 55%), radial-gradient(ellipse at 15% 85%, rgba(242,201,76,0.10), transparent 50%);
+}
+html[data-mode="survival"] body {
+  background-image: radial-gradient(ellipse at 80% 10%, rgba(255,123,46,0.14), transparent 55%), repeating-linear-gradient(135deg, rgba(255,255,255,0.015) 0 2px, transparent 2px 6px);
+}
+html[data-mode="freeroam"] body {
+  background-image: radial-gradient(ellipse at 80% 20%, rgba(94,234,212,0.18), transparent 55%), radial-gradient(ellipse at 10% 80%, rgba(255,209,102,0.10), transparent 50%);
+}
+#mode-atmo { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+#mode-atmo span { position: absolute; font-size: 26px; opacity: 0.10; animation: atmoFloat linear infinite alternate; will-change: transform; }
+@keyframes atmoFloat { from { transform: translateY(0) rotate(-6deg); } to { transform: translateY(26px) rotate(8deg); } }
+.screen { position: relative; z-index: 1; }
 </style>
 </head>
 <body>
@@ -2603,7 +2643,39 @@ function setGameMode(m) {
   safeSet('rpg_freeRoam', freeRoam);
   if (typeof storyToggleMode === 'function') storyToggleMode(m === 'story');
   if (typeof survToggleMode === 'function') survToggleMode(m === 'survival');
+  applyModeTheme(m);
 }
+
+/* ---- Mode themes: distinct visual identity per game mode ---- */
+const MODE_ATMO = {
+  adventure: ['🏰', '🛡️', '⚔️', '🌿', '🔥', '🗡️'],
+  story: ['📖', '✨', '🌙', '🧭', '🕯️', '🌟'],
+  survival: ['🔦', '🛠️', '⛑️', '💧', '🔥', '📻'],
+  freeroam: ['🎮', '🎈', '🌈', '✏️', '🧩', '⭐']
+};
+function applyModeTheme(m) {
+  m = (typeof MODE_ATMO !== 'undefined' && MODE_ATMO[m]) ? m : 'adventure';
+  try { document.documentElement.setAttribute('data-mode', m); } catch (e) {}
+  let at = document.getElementById('mode-atmo');
+  if (!at) {
+    at = document.createElement('div');
+    at.id = 'mode-atmo';
+    try { document.body.appendChild(at); } catch (e) { return; }
+  }
+  const ems = MODE_ATMO[m];
+  let html = '';
+  for (let i = 0; i < ems.length; i++) {
+    const x = (i * 17 + 7) % 92;
+    const y = (i * 29 + 13) % 88;
+    const dur = 7 + (i % 5) * 2;
+    const delay = (i * 2) % 10;
+    html += `<span style="left:${x}%;top:${y}%;animation-duration:${dur}s;animation-delay:-${delay}s;">${ems[i]}</span>`;
+  }
+  at.innerHTML = html;
+}
+
+// Apply the saved mode's visual theme once MODE_ATMO is defined
+applyModeTheme(storyMode ? 'story' : (survivalMode ? 'survival' : (freeRoam ? 'freeroam' : 'adventure')));
 function setLearnDepth(d) { learnDepth = d; safeSet('rpg_learnDepth', d); }
 
 function renderSetup() {
@@ -2744,6 +2816,7 @@ function importVillage(event) {
 
       document.getElementById('biome-select').value = biome;
       document.getElementById('mode-select').value = storyMode ? 'story' : (survivalMode ? 'survival' : (freeRoam ? 'freeroam' : 'adventure'));
+      applyModeTheme(storyMode ? 'story' : (survivalMode ? 'survival' : (freeRoam ? 'freeroam' : 'adventure')));
       document.getElementById('depth-select').value = learnDepth;
       document.getElementById('webhook-input').value = webhookUrl;
 
