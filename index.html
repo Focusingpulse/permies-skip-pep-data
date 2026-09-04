@@ -9,6 +9,7 @@
 <script src="translations.js"></script>
 <script src="story.js"></script>
 <script src="survival.js"></script>
+<script src="gamcod.js"></script>
 <style>
 :root {
   --bg-dark: #1a1a2e;
@@ -904,7 +905,7 @@ html[data-biome] .title-main {
 
     <h3>0. A Roll Making Game — Not a Digital Game</h3>
     <p>Most games ask you to <em>play</em> a role: a fictional character in a fictional world. <strong>The Village</strong> is a <strong>Roll Making Game (RMG)</strong>. It asks you to <em>build</em> your real self in the real world. The "roll" begins as a word on a character sheet and becomes the real attributes, skills, and practiced knowledge you actually develop. Your avatar doesn't level up because you clicked a button. It evolves because <em>you</em> did. You'll put the screen down and go outside, into the kitchen, the garden, the workshop, and the marketplace.</p>
-    <p style="font-size:0.9em; color:var(--text-dim);">New in this version: the <strong style="color:var(--accent-gold);">Money Lab</strong> — a family financial literacy track in the Library, and the <strong style="color:var(--accent-gold);">Gold Nugget</strong> — a special economic badge earned by working through the Commerce guild. No real money needed: you'll learn how dollars, euros, and francs actually move, and how a family can trade and grow value on its own terms.</p>
+    <p style="font-size:0.9em; color:var(--text-dim);">New in this version: the <strong style="color:var(--accent-gold);">Money Lab</strong> — a family financial literacy track in the Library, the <strong style="color:var(--accent-gold);">Gold Nugget</strong> — a special economic badge earned by working through the Commerce guild — and <strong style="color:var(--accent-green);">🌱 GAMCOD Mode</strong> — Paul Wheaton's real-world challenge to grow a million calories on dirt, played as a full Village season with its own ledger, crop tracker, and per-acre projection. No real money needed: you'll learn how dollars, euros, and francs actually move, and how a family can trade and grow value on its own terms.</p>
 
     <h3>1. Competence, Not Just Points</h3>
     <p>In most games, you click a button and your character levels up. In <strong>The Village</strong>, <strong>you</strong> are the character. To earn badges and upgrade your avatar, you must build real-world skills. The real-world reward is <em>competence</em>. The digital reward is watching your avatar evolve.</p>
@@ -1038,6 +1039,7 @@ html[data-biome] .title-main {
       <option value="adventure">Adventure Mode — progress through tiers</option>
       <option value="story">Story Mode — a guided adventure, new every time</option>
       <option value="survival">Survival Mode — train the family for the long haul</option>
+      <option value="gamcod">GAMCOD Mode — grow a million calories on dirt</option>
       <option value="freeroam">Free Roam Mode — all quests unlocked from the start</option>
     </select>
     <p style="font-size:0.8em; color:var(--text-dim); margin-top:0.4rem;">Adventure Mode follows the intended path. Free Roam is like Minecraft creative mode — explore any quest in any order.</p>
@@ -1151,6 +1153,7 @@ html[data-biome] .title-main {
   <div class="data-warning" id="data-warning" data-i18n="Data.js not found or failed to load. Using fallback data.">Data.js not found or failed to load. Using fallback data.</div>
   <div id="story-panel"></div>
   <div id="survival-panel"></div>
+  <div id="gamcod-panel"></div>
   <div class="level-banner" id="tier-banner"></div>
   <div class="quest-filters">
     <button class="nav-btn active" id="filter-all" onclick="setQuestFilter('all')" data-i18n="All Quests">All Quests</button>
@@ -2720,6 +2723,7 @@ function setGameMode(m) {
   safeSet('rpg_freeRoam', freeRoam);
   if (typeof storyToggleMode === 'function') storyToggleMode(m === 'story');
   if (typeof survToggleMode === 'function') survToggleMode(m === 'survival');
+  if (typeof gamcodToggleMode === 'function') gamcodToggleMode(m === 'gamcod');
   applyModeTheme(m);
 }
 
@@ -2728,6 +2732,7 @@ const MODE_ATMO = {
   adventure: ['🏰', '🛡️', '⚔️', '🌿', '🔥', '🗡️'],
   story: ['📖', '✨', '🌙', '🧭', '🕯️', '🌟'],
   survival: ['🔦', '🛠️', '⛑️', '💧', '🔥', '📻'],
+  gamcod: ['🌱', '🌾', '🥔', '⛏️', '📏', '💰'],
   freeroam: ['🎮', '🎈', '🌈', '✏️', '🧩', '⭐']
 };
 function applyModeTheme(m) {
@@ -2752,7 +2757,7 @@ function applyModeTheme(m) {
 }
 
 // Apply the saved mode's visual theme once MODE_ATMO is defined
-applyModeTheme(storyMode ? 'story' : (survivalMode ? 'survival' : (freeRoam ? 'freeroam' : 'adventure')));
+applyModeTheme(storyMode ? 'story' : (survivalMode ? 'survival' : (gamcodMode ? 'gamcod' : (freeRoam ? 'freeroam' : 'adventure'))));
 applyBiomeTheme(biome);
 
 /* ---- Biome palettes: the environment tints the world ---- */
@@ -2764,7 +2769,7 @@ function setLearnDepth(d) { learnDepth = d; safeSet('rpg_learnDepth', d); }
 
 function renderSetup() {
   document.getElementById('biome-select').value = biome;
-  document.getElementById('mode-select').value = storyMode ? 'story' : (survivalMode ? 'survival' : (freeRoam ? 'freeroam' : 'adventure'));
+  document.getElementById('mode-select').value = storyMode ? 'story' : (survivalMode ? 'survival' : (gamcodMode ? 'gamcod' : (freeRoam ? 'freeroam' : 'adventure')));
   document.getElementById('depth-select').value = learnDepth;
   document.getElementById('webhook-input').value = webhookUrl || '';
   const list = document.getElementById('player-list');
@@ -2845,6 +2850,8 @@ function exportVillage() {
     storyRun: (typeof storyRun !== 'undefined') ? storyRun : null,
     survivalMode: survivalMode,
     survRun: (typeof survRun !== 'undefined') ? survRun : null,
+    gamcodMode: gamcodMode,
+    gamcodRun: (typeof gamcodRun !== 'undefined') ? gamcodRun : null,
     learnDepth: learnDepth,
     learningBlueprint: learningBlueprint,
     webhookUrl: webhookUrl
@@ -2883,6 +2890,11 @@ function importVillage(event) {
         survRun = data.survRun;
         survSaveRun();
       }
+      gamcodMode = !!data.gamcodMode;
+      if (data.gamcodRun && typeof gamcodLoadRun === 'function') {
+        gamcodRun = data.gamcodRun;
+        gamcodSaveRun();
+      }
       learnDepth = data.learnDepth || 'adults';
       learningBlueprint = data.learningBlueprint || null;
       safeSet('rpg_blueprint', learningBlueprint);
@@ -2895,12 +2907,13 @@ function importVillage(event) {
       safeSet('rpg_freeRoam', freeRoam);
       if (typeof storyToggleMode === 'function') storyToggleMode(storyMode);
       if (typeof survToggleMode === 'function') survToggleMode(survivalMode);
+      if (typeof gamcodToggleMode === 'function') gamcodToggleMode(gamcodMode);
       safeSet('rpg_learnDepth', learnDepth);
       safeSet('rpg_webhook', webhookUrl);
 
       document.getElementById('biome-select').value = biome;
-      document.getElementById('mode-select').value = storyMode ? 'story' : (survivalMode ? 'survival' : (freeRoam ? 'freeroam' : 'adventure'));
-      applyModeTheme(storyMode ? 'story' : (survivalMode ? 'survival' : (freeRoam ? 'freeroam' : 'adventure')));
+      document.getElementById('mode-select').value = storyMode ? 'story' : (survivalMode ? 'survival' : (gamcodMode ? 'gamcod' : (freeRoam ? 'freeroam' : 'adventure')));
+      applyModeTheme(storyMode ? 'story' : (survivalMode ? 'survival' : (gamcodMode ? 'gamcod' : (freeRoam ? 'freeroam' : 'adventure'))));
       applyBiomeTheme(biome);
       document.getElementById('depth-select').value = learnDepth;
       document.getElementById('webhook-input').value = webhookUrl;
@@ -2927,6 +2940,8 @@ function resetVillage() {
   localStorage.removeItem('rpg_story_run');
   localStorage.removeItem('rpg_survivalMode');
   localStorage.removeItem('rpg_survival_run');
+  localStorage.removeItem('rpg_gamcodMode');
+  localStorage.removeItem('rpg_gamcod_run');
   localStorage.removeItem('rpg_learnDepth');
   localStorage.removeItem('rpg_blueprint');
   localStorage.removeItem('rpg_webhook');
@@ -3437,11 +3452,13 @@ function renderQuests() {
   if (storyMode && typeof storyRender === 'function') storyRender();
   // Survival Mode panel
   if (survivalMode && typeof survRender === 'function') survRender();
+  // GAMCOD Mode panel
+  if (gamcodMode && typeof gamcodRender === 'function') gamcodRender();
 
   // Tier banner
   let banner = document.getElementById('tier-banner');
   let eco = getCommerceStatus();
-  let modeLabel = storyMode ? '<span style="color:var(--accent-gold);">📖 ' + t('Story Mode — a guided adventure, new every time') + '</span>' : (survivalMode ? '<span style="color:var(--accent-orange);">🛡️ ' + t('Survival Mode — train the family for the long haul') + '</span>' : (freeRoam ? '<span style="color:var(--accent-green);">🎮 ' + t('Free Roam — all quests unlocked') + '</span>' : '<span style="color:var(--text-dim);">🛡️ ' + t('Adventure Mode — complete 50% of a tier within one guild to unlock the next') + '</span>'));
+  let modeLabel = storyMode ? '<span style="color:var(--accent-gold);">📖 ' + t('Story Mode — a guided adventure, new every time') + '</span>' : (survivalMode ? '<span style="color:var(--accent-orange);">🛡️ ' + t('Survival Mode — train the family for the long haul') + '</span>' : (gamcodMode ? '<span style="color:var(--accent-green);">🌱 ' + t('GAMCOD Mode — grow a million calories on dirt') + '</span>' : (freeRoam ? '<span style="color:var(--accent-green);">🎮 ' + t('Free Roam — all quests unlocked') + '</span>' : '<span style="color:var(--text-dim);">🛡️ ' + t('Adventure Mode — complete 50% of a tier within one guild to unlock the next') + '</span>')));
   banner.innerHTML = `
     <div style="font-weight:bold; color:var(--accent-gold); margin-bottom:0.4rem;">${t('Badge Progression')}</div>
     <div class="tier-progress">
@@ -3521,17 +3538,17 @@ function createGuildDetails(a, open, progress) {
     a.sand.forEach(q => { h += renderQuestCard(a, q, 'sand'); });
   }
   if (a.straw && a.straw.length > 0) {
-    let locked = !storyMode && !survivalMode && !isTierUnlocked(a, 'straw');
+    let locked = !storyMode && !survivalMode && !gamcodMode && !isTierUnlocked(a, 'straw');
     h += `<div class="tier-header straw ${locked ? 'locked' : ''}"><strong>🟡 ${t('Straw')} ${t('Tier')} (${t('Level')} 2)</strong> — ${countDone(a, 'straw')}/${a.straw.length} ${t('complete')}</div>`;
     a.straw.forEach(q => { h += renderQuestCard(a, q, 'straw', locked); });
   }
   if (a.wood && a.wood.length > 0) {
-    let locked = !storyMode && !survivalMode && !isTierUnlocked(a, 'wood');
+    let locked = !storyMode && !survivalMode && !gamcodMode && !isTierUnlocked(a, 'wood');
     h += `<div class="tier-header wood ${locked ? 'locked' : ''}"><strong>🪵 ${t('Wood')} ${t('Tier')} (${t('Level')} 3)</strong> — ${countDone(a, 'wood')}/${a.wood.length} ${t('complete')}</div>`;
     a.wood.forEach(q => { h += renderQuestCard(a, q, 'wood', locked); });
   }
   if (a.iron && a.iron.length > 0) {
-    let locked = !storyMode && !survivalMode && !isTierUnlocked(a, 'iron');
+    let locked = !storyMode && !survivalMode && !gamcodMode && !isTierUnlocked(a, 'iron');
     h += `<div class="tier-header iron ${locked ? 'locked' : ''}"><strong>⚙️ ${t('Iron')} ${t('Tier')} (${t('Level')} 4)</strong> — ${countDone(a, 'iron')}/${a.iron.length} ${t('complete')}</div>`;
     a.iron.forEach(q => { h += renderQuestCard(a, q, 'iron', locked); });
   }
@@ -3818,6 +3835,8 @@ function finalizeQuest(qId, icon) {
   if (storyMode && typeof storyAdvance === 'function') storyAdvance(qId);
   // Survival Mode: advance the drill if this was the current survival task
   if (survivalMode && typeof survAdvance === 'function') survAdvance(qId);
+  // GAMCOD Mode: advance the season if this was the current GAMCOD quest
+  if (gamcodMode && typeof gamcodAdvance === 'function') gamcodAdvance(qId);
 }
 
 function postToPermies(qId, questTitle) {
