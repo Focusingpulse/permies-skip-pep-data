@@ -10,6 +10,7 @@
 <script src="story.js"></script>
 <script src="survival.js"></script>
 <script src="gamcod.js"></script>
+<script src="thorns.js"></script>
 <style>
 :root {
   --bg-dark: #1a1a2e;
@@ -968,6 +969,7 @@ html[data-biome] .title-main {
         <p style="font-weight:bold; color:var(--text-bright); margin-bottom:0.2rem;">🛖 The Permaculture Bootcamp — live it full-time</p>
         <p style="font-size:0.9em; line-height:1.55; margin-bottom:0.3rem;">220 acres near Missoula, Montana. Boots put in <strong>40 hours a week</strong> of hands-on gardening and natural building — hugelkultur, cob and straw-bale walls, rocket mass heaters — with national and global experts stopping by to lead projects. People come for a week and stay for years; a few end up earning an acre of their own. New boots are welcomed the <strong>first Sunday of every month</strong>. Paul's own words on what the Bootcamp grows: <em>"YOU are the crop."</em></p>
         <button class="btn" style="background:var(--accent-gold); color:#1a1a1a; font-weight:bold; padding:0.45rem 1rem; font-size:0.85em;" onclick="window.open('https://wheaton-labs.com/bootcamp/','_blank')">Explore the Permaculture Bootcamp 🛖</button>
+        <p style="font-size:0.8em; line-height:1.5; margin-top:0.5rem; color:var(--text-dim);">Paul's honest advice for anyone coming: read his <a href="https://permies.com/wiki/123760/permaculture-thorns-Book-Build-Permaculture" target="_blank" style="color:var(--accent-green);"><strong>in-progress book, Permaculture Thorns</strong></a> first. The Village has its own Thorns Welcome in the Commons. 🌹</p>
       </div>
 
       <div style="margin-bottom:0.75rem; padding-left:0.6rem; border-left:3px solid var(--accent-green);">
@@ -985,6 +987,12 @@ html[data-biome] .title-main {
         <p style="font-weight:bold; color:var(--text-bright); margin-bottom:0.2rem;">🔭 More from Paul — programs & the mad scientist himself</p>
         <p style="font-size:0.9em; line-height:1.55; margin-bottom:0.3rem;">Not ready for 40 hours a week? The <a href="https://permies.com/wiki/sepper" target="_blank" style="color:var(--accent-green);"><strong>Sepper program</strong></a> rents humble cabins and lets you join bootcamp life as much or as little as you like; kids have the <strong>Thistle program</strong>. Hundreds of podcasts, 420,000+ YouTube subscribers, a stated plan to increase permaculture on Earth by <em>200%</em>, and an online Permaculture Design Course — follow the "Duke of Permaculture" at <a href="https://paulwheaton.com" target="_blank" style="color:var(--accent-green);"><strong>paulwheaton.com</strong></a> and on <a href="https://permies.com" target="_blank" style="color:var(--accent-green);"><strong>Permies.com</strong></a>.</p>
       </div>
+    </div>
+
+    <div style="background:rgba(233,196,106,0.06); border:1px solid var(--accent-gold); border-radius:12px; padding:1rem 1.2rem; margin:1.25rem 0;">
+      <h3 style="color:var(--accent-gold); margin:0 0 0.5rem 0; font-size:1.05rem;">🌹 An Honest Word About the Thorns</h3>
+      <p style="font-size:0.9em; line-height:1.6; margin-bottom:0.6rem; color:var(--text-light);">Community living has a syllabus nobody gives you: the <strong>Permaculture Thorns</strong> — Paul Wheaton's book-in-progress about the difficult realities of building community. <strong>A thorn is not a failure, it is the lesson.</strong> Read them once, before you go all in, and you'll meet the hard parts as challenges instead of roadblocks.</p>
+      <button class="btn btn-small" style="background:var(--accent-gold); color:#1a1a1a; font-weight:bold;" onclick="showScreen('commons')">Meet the Thorns in the Commons 🌹</button>
     </div>
 
     <h3>5. Badge Progression — How It Really Works</h3>
@@ -1031,6 +1039,31 @@ html[data-biome] .title-main {
       <option value="rural">Rural / Acreage (PEP Path - deep forest tones)</option>
     </select>
     <p style="font-size:0.8em; color:var(--text-dim); margin-top:0.4rem;">Your biome determines which quests are available. Rural families get the full PEP curriculum.</p>
+  </div>
+
+  <div class="setup-section">
+    <h3>1.5 🌡️ Your Growing Zone &amp; Climate</h3>
+    <select id="zone-select" onchange="setZone(this.value)">
+      <option value="">Pick your zone (or use the helper below)…</option>
+      <option value="1">Zone 1 — -60 to -50°F</option>
+      <option value="2">Zone 2 — -50 to -40°F</option>
+      <option value="3">Zone 3 — -40 to -30°F</option>
+      <option value="4">Zone 4 — -30 to -20°F</option>
+      <option value="5">Zone 5 — -20 to -10°F</option>
+      <option value="6">Zone 6 — -10 to 0°F</option>
+      <option value="7">Zone 7 — 0 to 10°F</option>
+      <option value="8">Zone 8 — 10 to 20°F</option>
+      <option value="9">Zone 9 — 20 to 30°F</option>
+      <option value="10">Zone 10 — 30 to 40°F</option>
+      <option value="11">Zone 11 — 40 to 50°F</option>
+      <option value="12">Zone 12 — 50°F+</option>
+    </select>
+    <p style="font-size:0.8em; color:var(--text-dim); margin-top:0.4rem;">Your zone frames the season: which crops suit your climate, how long your growing year is, and whether you're <strong style="color:var(--accent-green);">GAMCOD-qualified</strong> (0°F or colder — the official challenge rule). GAMCOD Mode shows crop ideas matched to your zone.</p>
+    <div style="margin-top:0.5rem; display:flex; gap:0.4rem; flex-wrap:wrap; align-items:center;">
+      <span style="font-size:0.8em; color:var(--text-dim);">Don't know your zone?</span>
+      <input type="number" id="zone-coldest" placeholder="Coldest °F you've seen" style="flex:1; min-width:130px; background:var(--bg-input); color:var(--text-light); border:1px solid var(--border-subtle); border-radius:6px; padding:0.5rem; font-size:0.85em;">
+      <button class="btn btn-small" onclick="guessZone()">Guess my zone</button>
+    </div>
   </div>
 
   <div class="setup-section">
@@ -1121,6 +1154,7 @@ html[data-biome] .title-main {
     <input type="file" id="village-import-file" accept=".json" style="display:none;" onchange="importVillage(event)">
   </div>
   <div class="progress-overview" id="village-progress"></div>
+  <div class="progress-overview" id="village-gamcod" style="display:none;"></div>
   <div id="village-list"></div>
   <button class="btn-success" style="margin-top:1rem;" onclick="showScreen('quests')" data-i18n="Start Questing">Start Questing</button>
 </div>
@@ -1266,6 +1300,9 @@ html[data-biome] .title-main {
       <a href="https://permies.com/wiki/160690/physical-copy-SKIP-book" target="_blank" class="lib-link"><strong>SKIP: Skills to Inherit Property:</strong> The book behind the SKIP badge system — connecting industrious young people with elderly landowners. An alternative to the college path.</a>
       <a href="https://permies.com/wiki/sepper" target="_blank" class="lib-link"><strong>The Sepper Program:</strong> Rent a humble cabin at Wheaton Labs and join bootcamp life as much or as little as you like. A low-commitment way to experience the Labs.</a>
       <a href="https://paulwheaton.com" target="_blank" class="lib-link"><strong>paulwheaton.com:</strong> The Duke of Permaculture's hub — hundreds of podcasts, videos, articles, and his online Permaculture Design Course.</a>
+      <a href="https://permies.com/wiki/123760/permaculture-thorns-Book-Build-Permaculture" target="_blank" class="lib-link"><strong>Permaculture Thorns (book, draft):</strong> Paul's in-progress book about the difficult realities of building permaculture community — the honest version of communal life. The Village has its own Thorns Welcome in the Commons.</a>
+      <a href="https://permies.com/wiki/380698/Podcast-Challenges-Building-Community-Part" target="_blank" class="lib-link"><strong>Podcast 754 — The Challenges of Building Community, Part 1:</strong> Paul with Kay, Julia, Samantha & Ash Jackson on Permaculture Thorns, nobility filters, and what he's learned from Permies.com.</a>
+      <a href="https://permies.com/wiki/380877/Podcast-Challenges-Building-Community-Part" target="_blank" class="lib-link"><strong>Podcast 755 — The Challenges of Building Community, Part 2:</strong> Standards & judgment, the "go with the flow" rule for new boots, self-selection as the best filter.</a>
     </div>
 
     <div class="lib-category">
@@ -1465,6 +1502,9 @@ html[data-biome] .title-main {
       <button class="btn btn-small" style="background:var(--accent-gold); color:#1a1a1a; font-weight:bold; margin-top:0.4rem;" onclick="window.open('https://wheaton-labs.com/bootcamp/','_blank')">Explore the Permaculture Bootcamp 🛖</button>
       <button class="btn btn-small" style="border:1px solid var(--accent-green); color:var(--accent-green); margin-top:0.4rem;" onclick="window.open('https://permies.com/f/511/','_blank')">🌱 Join GAMCOD from Home</button>
     </div>
+  </div>
+  <div class="commons-box">
+    <div id="thorns-panel"></div>
   </div>
   <div class="commons-box">
     <h3 data-i18n="Optional: The Offline Archive">Optional: The Offline Archive</h3>
@@ -2718,6 +2758,28 @@ function showScreen(s) {
 
 // ---- Setup ----
 function setBiome(b) { biome = b; safeSet('rpg_biome', b); applyBiomeTheme(b); }
+function setZone(z) {
+  if (typeof gamcodSetZone === 'function') gamcodSetZone(z);
+  else {
+    const n = parseInt(z, 10);
+    try { if (n >= 1 && n <= 12) localStorage.setItem('rpg_zone', String(n)); else localStorage.removeItem('rpg_zone'); } catch (e) {}
+  }
+}
+function guessZone() {
+  const input = document.getElementById('zone-coldest');
+  if (!input) return;
+  const f = parseFloat(input.value);
+  if (isNaN(f)) { alert('Enter the coldest temperature (°F) you have seen where you live — e.g. -15 for a cold area, 25 for a mild one.'); return; }
+  const z = (typeof gamcodZoneFromTemp === 'function') ? gamcodZoneFromTemp(f) : null;
+  if (!z) { alert('That looks warmer than our map — pick the closest zone.'); return; }
+  setZone(String(z));
+  const sel = document.getElementById('zone-select');
+  if (sel) sel.value = String(z);
+  input.value = '';
+  const L = (typeof gamcodS === 'function') ? gamcodS(gamcodLang) : null;
+  const zo = (typeof gamcodZoneObj === 'function') ? gamcodZoneObj(z) : null;
+  alert('Your coldest around ' + f + '°F maps to ' + (zo ? zo.label : 'Zone ' + z) + (zo && zo.cold ? ' — GAMCOD-qualified! ❄️' : ' — a warm zone. 🌞'));
+}
 function setGameMode(m) {
   freeRoam = (m === 'freeroam');
   safeSet('rpg_freeRoam', freeRoam);
@@ -2769,6 +2831,8 @@ function setLearnDepth(d) { learnDepth = d; safeSet('rpg_learnDepth', d); }
 
 function renderSetup() {
   document.getElementById('biome-select').value = biome;
+  const zsel = document.getElementById('zone-select');
+  if (zsel) zsel.value = (typeof gamcodZone !== 'undefined' && gamcodZone) ? String(gamcodZone) : '';
   document.getElementById('mode-select').value = storyMode ? 'story' : (survivalMode ? 'survival' : (gamcodMode ? 'gamcod' : (freeRoam ? 'freeroam' : 'adventure')));
   document.getElementById('depth-select').value = learnDepth;
   document.getElementById('webhook-input').value = webhookUrl || '';
@@ -2846,6 +2910,7 @@ function exportVillage() {
     attendance: attendance,
     biome: biome,
     freeRoam: freeRoam,
+    zone: (typeof gamcodZone !== 'undefined') ? gamcodZone : null,
     storyMode: storyMode,
     storyRun: (typeof storyRun !== 'undefined') ? storyRun : null,
     survivalMode: survivalMode,
@@ -2880,6 +2945,8 @@ function importVillage(event) {
       attendance = data.attendance || { days: 0, hours: 0, customHours: {} };
       biome = data.biome || 'apartment';
       freeRoam = !!data.freeRoam;
+      if (data.zone && typeof gamcodSetZone === 'function') gamcodSetZone(data.zone);
+      else if (data.zone) setZone(data.zone);
       storyMode = !!data.storyMode;
       if (data.storyRun && typeof storyLoadRun === 'function') {
         storyRun = data.storyRun;
@@ -2935,6 +3002,7 @@ function resetVillage() {
   localStorage.removeItem('rpg_completed');
   localStorage.removeItem('rpg_attendance');
   localStorage.removeItem('rpg_biome');
+  localStorage.removeItem('rpg_zone');
   localStorage.removeItem('rpg_freeRoam');
   localStorage.removeItem('rpg_storyMode');
   localStorage.removeItem('rpg_story_run');
@@ -2942,6 +3010,7 @@ function resetVillage() {
   localStorage.removeItem('rpg_survival_run');
   localStorage.removeItem('rpg_gamcodMode');
   localStorage.removeItem('rpg_gamcod_run');
+  localStorage.removeItem('rpg_thorns_named');
   localStorage.removeItem('rpg_learnDepth');
   localStorage.removeItem('rpg_blueprint');
   localStorage.removeItem('rpg_webhook');
@@ -3166,6 +3235,67 @@ function renderVillage() {
       <span class="badge-chip ${eco.earned ? 'gold' : 'locked'}">⛏️ ${t('Gold Nugget')} ${eco.done}/${eco.total}${eco.earned ? ' ✨' : ''}</span>
     </div>
   `;
+  renderVillageGamcod();
+}
+
+/* GAMCOD season card on the Village Hub — current season at a glance */
+function renderVillageGamcod() {
+  const el = document.getElementById('village-gamcod');
+  if (!el) return;
+  el.style.display = 'none';
+  if (typeof gamcodMode === 'undefined' || !gamcodMode || typeof gamcodRun === 'undefined' || !gamcodRun) {
+    return;
+  }
+  const run = gamcodRun;
+  const L = (typeof gamcodS === 'function') ? gamcodS(gamcodLang) : null;
+  if (!L) return;
+  const zo = (typeof gamcodZoneObj === 'function') ? gamcodZoneObj(gamcodZone) : null;
+  const zoneChip = zo ? ` <span style="font-size:0.72em; color:var(--accent-sand);">🌡 ${zo.label} ${zo.cold ? '· ❄' : '· 🌞'}</span>` : '';
+  if (run.step === 'done') {
+    el.style.display = 'block';
+    el.innerHTML = `
+      <strong style="color:var(--accent-gold);">🌱 ${L.ui.gamcodMode}</strong>
+      <span style="font-size:0.85em; color:var(--text-dim);"> 🏁 ${L.ui.done}</span>
+      <div style="font-size:0.8em; color:var(--text-dim); margin-top:0.3rem;">${(run.log && run.log.calories) ? `${Math.round(run.log.calories).toLocaleString()} ${L.ui.ledgerCalories.toLowerCase()}` : ''}</div>
+      <div style="margin-top:0.6rem;"><button class="btn btn-small" onclick="gamcodNewRun()">${L.ui.newAdventure}</button></div>`;
+    return;
+  }
+  const actIdx = run.act;
+  const act = run.acts[actIdx];
+  if (!act) return;
+  const actName = L.acts[act.tier].title;
+  const themeName = L.themes[act.theme] ? L.themes[act.theme].name : act.theme;
+  const qPos = GAMCOD_ACTS.slice(0, actIdx).reduce((s, a) => s + a.count, 0) + run.qIndex + 1;
+  const total = GAMCOD_ACTS.reduce((s, a) => s + a.count, 0);
+  const log = run.log || {};
+  const cropCount = (log.crops || []).length;
+  const perAcre = Math.round((log.calories || 0) * 207);
+  const millionPct = Math.min(100, Math.round((perAcre / 1000000) * 100));
+  const payout = Math.round((log.footageMin || 0) * 400);
+
+  el.style.display = 'block';
+  el.innerHTML = `
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.4rem;">
+      <strong style="color:var(--accent-gold);">🌱 ${L.ui.gamcodMode}</strong>${zoneChip}
+      <span style="font-size:0.78em; color:var(--text-dim);">${L.ui.adventureCode}: <code style="background:var(--bg-input); padding:0.1rem 0.4rem; border-radius:4px; cursor:pointer;" onclick="navigator.clipboard.writeText('${run.code}')">${run.code}</code></span>
+    </div>
+    <div style="font-size:0.85em; margin-top:0.35rem;">
+      <span class="tier-pill unlocked" style="display:inline-block; padding:0.15rem 0.5rem;">${L.ui.act} ${actIdx + 1} ${L.ui.of} 4 — ${actName}</span>
+      <span style="margin-left:0.4rem; color:var(--text-dim);">${themeName} · ${L.ui.quest} ${qPos}/${total}</span>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:1.1rem; margin-top:0.5rem; font-size:0.85em;">
+      <span>🥔 ${cropCount}/5 ${L.ui.ledgerCrops.toLowerCase()}</span>
+      <span>🔥 ${Math.round(log.calories || 0).toLocaleString()} ${L.ui.ledgerCalories.toLowerCase()}</span>
+      <span style="color:var(--accent-gold);">📏 ${perAcre.toLocaleString()} ${L.ui.ledgerPerAcre.toLowerCase()}</span>
+      <span>🎬 ${L.ui.dollars}${payout.toLocaleString()}</span>
+    </div>
+    <div style="height:6px; background:var(--bg-card); border-radius:999px; margin-top:0.5rem;">
+      <div style="height:100%; width:${millionPct}%; background:var(--accent-gold); border-radius:999px;"></div>
+    </div>
+    <div style="margin-top:0.6rem; display:flex; gap:0.4rem; flex-wrap:wrap;">
+      <button class="btn btn-small" style="background:var(--accent-gold); color:#1a1a1a; font-weight:bold;" onclick="showScreen('quests')">📜 ${L.ui.resume}</button>
+      <button class="btn btn-small" onclick="gamcodNewRun()">${L.ui.newAdventure}</button>
+    </div>`;
 }
 
 function getPlayerQuestCount(name) {
@@ -3992,6 +4122,7 @@ function renderCommons() {
     <div class="achievement-card"><div class="icon">👥</div><div class="value">${players.length}</div><div class="label">${t('Family Members')}</div></div>
     <div class="achievement-card"><div class="icon">🏫</div><div class="value">${attendance.days}</div><div class="label">${t('School Days')}</div></div>
   `;
+  if (typeof renderThorns === 'function') renderThorns();
 }
 
 function renderCircle() {

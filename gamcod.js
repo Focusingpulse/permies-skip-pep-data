@@ -46,6 +46,11 @@ const GAMCOD_I18N = {
       "rulesGhost": "Use a 'ghost acre' outside the plot to grow mulch and fertility.",
       "rulesTrack": "Track time (keep it low), money spent (keep it low), and groceries saved (keep it high).",
       "rulesPayout": "The best video makes the final movie — $400 per minute of footage used.",
+      "gamcodQualified": "GAMCOD-QUALIFIED — 0°F or colder here",
+      "gamcodWarmZone": "Warm zone — future movie rounds may open here",
+      "zonePrompt": "Pick your growing zone to tailor crops & season",
+      "zonePick": "Choose zone",
+      "zonePicks": "Suggested for your zone:",
       "ledger": "The GAMCOD Ledger",
       "ledgerPlot": "Plot",
       "ledgerCropCount": "crops planted (min 5)",
@@ -144,6 +149,11 @@ const GAMCOD_I18N = {
       "rulesGhost": "Usa un 'acre fantasma' fuera de la parcela para cultivar mantillo y fertilidad.",
       "rulesTrack": "Registra el tiempo (mantenlo bajo), el dinero gastado (mantenlo bajo) y los ahorros en compras (mantenlos altos).",
       "rulesPayout": "El mejor video entra en la película final: $400 por minuto de metraje usado.",
+      "gamcodQualified": "CALIFICADO GAMCOD — 0°F o menos aquí",
+      "gamcodWarmZone": "Zona cálida — las futuras rondas de la película pueden abrir aquí",
+      "zonePrompt": "Elige tu zona de cultivo para adaptar cultivos y temporada",
+      "zonePick": "Elige zona",
+      "zonePicks": "Sugeridos para tu zona:",
       "ledger": "El Libro GAMCOD",
       "ledgerPlot": "Parcela",
       "ledgerCropCount": "cultivos plantados (mín. 5)",
@@ -242,6 +252,11 @@ const GAMCOD_I18N = {
       "rulesGhost": "Utilisez un 'acre fantôme' hors de la parcelle pour cultiver paillis et fertilité.",
       "rulesTrack": "Suivez le temps (gardez-le bas), l'argent dépensé (gardez-le bas) et les économies d'épicerie (gardez-les hautes).",
       "rulesPayout": "La meilleure vidéo entre dans le film final — 400 $ par minute de métrage utilisée.",
+      "gamcodQualified": "QUALIFIÉ GAMCOD — 0°F ou moins ici",
+      "gamcodWarmZone": "Zone chaude — les futures rondes du film pourraient s'ouvrir ici",
+      "zonePrompt": "Choisissez votre zone de culture pour adapter cultures et saison",
+      "zonePick": "Choisir la zone",
+      "zonePicks": "Suggestions pour votre zone :",
       "ledger": "Le Registre GAMCOD",
       "ledgerPlot": "Parcelle",
       "ledgerCropCount": "cultures plantées (min. 5)",
@@ -319,6 +334,64 @@ const GAMCOD_I18N = {
 
 /* Crop list for the ledger (real GAMCOD-legal crops, cold-climate friendly) */
 const GAMCOD_CROPS = ["Sunchokes","Potatoes","Turnips","Squash","Mustard greens","Beans","Corn","Carrots","Beets","Onions","Cabbage","Kale","Peas","Garlic","Tomatoes","Lettuce"];
+
+/* ---- Growing Zone & Climate ----
+ * USDA hardiness bands by average annual extreme minimum temperature.
+ * The official GAMCOD movie qualifier is "0°F or colder in the last ten
+ * years" — that maps to Zone 7a and colder, which is why most of the
+ * challenge's proven crops (sunchokes, potatoes, turnips) are cold staples.
+ * Families in warmer zones can still play and grow real food; the future
+ * movie rounds are expected to open to warmer climates. */
+const GAMCOD_ZONES = [
+  { z: 1, label: "Zone 1", range: "-60 to -50°F", cold: true,  frost: "Very short, hard season (~90 days)", picks: ["Sunchokes","Potatoes","Turnips","Kale","Garlic","Cabbage"] },
+  { z: 2, label: "Zone 2", range: "-50 to -40°F", cold: true,  frost: "Very short, hard season (~100 days)", picks: ["Sunchokes","Potatoes","Turnips","Kale","Garlic","Cabbage"] },
+  { z: 3, label: "Zone 3", range: "-40 to -30°F", cold: true,  frost: "Short season (~110 days), hard winters", picks: ["Sunchokes","Potatoes","Turnips","Kale","Garlic","Cabbage"] },
+  { z: 4, label: "Zone 4", range: "-30 to -20°F", cold: true,  frost: "Short season (~130 days)", picks: ["Sunchokes","Potatoes","Turnips","Kale","Garlic","Cabbage"] },
+  { z: 5, label: "Zone 5", range: "-20 to -10°F", cold: true,  frost: "Solid season (~150 days)", picks: ["Potatoes","Beets","Carrots","Peas","Onions","Winter Squash"] },
+  { z: 6, label: "Zone 6", range: "-10 to 0°F",  cold: true,  frost: "Reliable season (~170 days)", picks: ["Potatoes","Beets","Carrots","Peas","Onions","Winter Squash"] },
+  { z: 7, label: "Zone 7", range: "0 to 10°F",   cold: true,  frost: "Good season (~200 days), mild winters", picks: ["Potatoes","Beans","Corn","Tomatoes","Winter Squash","Sunchokes"] },
+  { z: 8, label: "Zone 8", range: "10 to 20°F",  cold: false, frost: "Long season (~230 days)", picks: ["Sweet Potatoes","Beans","Corn","Tomatoes","Peppers","Melons"] },
+  { z: 9, label: "Zone 9", range: "20 to 30°F",  cold: false, frost: "Long season (~270 days), mild winters", picks: ["Sweet Potatoes","Okra","Tomatoes","Peppers","Corn","Melons"] },
+  { z: 10, label: "Zone 10", range: "30 to 40°F", cold: false, frost: "Year-round / frost-free", picks: ["Sweet Potatoes","Okra","Peanuts","Taro","Pigeon Peas","Tomatoes"] },
+  { z: 11, label: "Zone 11", range: "40 to 50°F", cold: false, frost: "Year-round / tropical", picks: ["Sweet Potatoes","Okra","Peanuts","Taro","Pigeon Peas","Bananas"] },
+  { z: 12, label: "Zone 12", range: "50°F+",      cold: false, frost: "Year-round / tropical", picks: ["Sweet Potatoes","Okra","Peanuts","Taro","Pigeon Peas","Bananas"] }
+];
+
+function gamcodZoneObj(z) {
+  const n = parseInt(z, 10);
+  return GAMCOD_ZONES.find(o => o.z === n) || null;
+}
+/* Map a "coldest you've seen" temperature (°F) to a zone band. */
+function gamcodZoneFromTemp(f) {
+  const n = parseFloat(f);
+  if (isNaN(n)) return null;
+  if (n < -50) return 1;
+  if (n < -40) return 2;
+  if (n < -30) return 3;
+  if (n < -20) return 4;
+  if (n < -10) return 5;
+  if (n < 0) return 6;
+  if (n < 10) return 7;
+  if (n < 20) return 8;
+  if (n < 30) return 9;
+  if (n < 40) return 10;
+  if (n < 50) return 11;
+  return 12;
+}
+let gamcodZone = null;
+try { const z = localStorage.getItem('rpg_zone'); if (z) gamcodZone = parseInt(z, 10) || null; } catch (e) {}
+function gamcodSetZone(z) {
+  const n = parseInt(z, 10);
+  gamcodZone = (n >= 1 && n <= 12) ? n : null;
+  try {
+    if (gamcodZone) localStorage.setItem('rpg_zone', String(gamcodZone));
+    else localStorage.removeItem('rpg_zone');
+  } catch (e) {}
+  try { window.gamcodZone = gamcodZone; } catch (e) {}
+  if (typeof renderSetup === 'function') renderSetup();
+  if (gamcodMode && typeof gamcodRender === 'function') gamcodRender();
+  if (typeof renderVillage === 'function') renderVillage();
+}
 
 /* ============================================================
  * ENGINE (mirrors survival.js; gamcod-prefixed)
@@ -556,12 +629,41 @@ function gamcodLedgerHTML(L) {
   const millionPct = Math.min(100, Math.round((perAcre / 1000000) * 100));
   const payout = Math.round((log.footageMin || 0) * 400);
 
+  /* Growing zone strip — your territory, your season */
+  const zo = gamcodZoneObj(gamcodZone);
+  const zoneOptions = GAMCOD_ZONES.map(o => `<option value="${o.z}" ${gamcodZone === o.z ? 'selected' : ''}>${o.label} (${o.range})</option>`).join('');
+  const zoneSel = document.getElementById('gamcod-zone-select');
+  let zoneStrip = '';
+  if (zo) {
+    const coldBadge = zo.cold
+      ? `<span style="background:rgba(74,222,128,0.12); color:var(--accent-green); border:1px solid var(--accent-green); border-radius:20px; padding:0.1rem 0.6rem; font-size:0.72em; font-weight:bold; margin-left:0.4rem;">✓ ${L.ui.gamcodQualified}</span>`
+      : `<span style="background:rgba(249,115,22,0.1); color:var(--accent-orange); border:1px solid var(--accent-orange); border-radius:20px; padding:0.1rem 0.6rem; font-size:0.72em; font-weight:bold; margin-left:0.4rem;">${L.ui.gamcodWarmZone}</span>`;
+    const pickBtns = zo.picks.map(c =>
+      `<span class="roster-player-btn ${(log.crops || []).includes(c) ? 'selected' : ''}" style="cursor:default; font-size:0.72em; margin:0.1rem;">${c}</span>`
+    ).join('');
+    zoneStrip = `
+      <div style="background:var(--bg-card); border-left:3px solid var(--accent-sand); border-radius:8px; padding:0.55rem 0.8rem; margin-bottom:0.7rem; display:flex; flex-wrap:wrap; gap:0.4rem 1rem; align-items:center;">
+        <span style="font-weight:bold; color:var(--text-bright);">🌡️ ${zo.label} <span style="color:var(--text-dim); font-weight:normal; font-size:0.8em;">${zo.range}</span>${coldBadge}</span>
+        <span style="font-size:0.78em; color:var(--text-dim);">${zo.frost}</span>
+        <select id="gamcod-zone-select" onchange="gamcodSetZone(this.value)" style="background:var(--bg-input); color:var(--text-light); border:1px solid var(--border-subtle); border-radius:6px; padding:0.3rem 0.5rem; font-size:0.78em; max-width:11rem;">${zoneOptions}</select>
+      </div>
+      <div style="font-size:0.78em; color:var(--text-dim); margin-bottom:0.4rem;"><strong style="color:var(--accent-green);">${L.ui.zonePicks}</strong> ${pickBtns}</div>`;
+  } else {
+    zoneStrip = `
+      <div style="background:var(--bg-card); border-left:3px solid var(--accent-sand); border-radius:8px; padding:0.55rem 0.8rem; margin-bottom:0.7rem; display:flex; flex-wrap:wrap; gap:0.4rem 1rem; align-items:center;">
+        <span style="font-weight:bold; color:var(--text-bright);">🌡️ ${L.ui.zonePrompt}</span>
+        <select id="gamcod-zone-select" onchange="gamcodSetZone(this.value)" style="background:var(--bg-input); color:var(--text-light); border:1px solid var(--border-subtle); border-radius:6px; padding:0.3rem 0.5rem; font-size:0.78em; max-width:11rem;"><option value="">${L.ui.zonePick}…</option>${zoneOptions}</select>
+      </div>`;
+  }
+
   const cropBtns = GAMCOD_CROPS.map(c =>
     `<button class="roster-player-btn ${(log.crops || []).includes(c) ? 'selected' : ''}" style="margin:0.15rem;" onclick="gamcodToggleCrop('${c.replace(/'/g, "\\'")}')">${c}</button>`
   ).join('');
 
   return `<div style="background:var(--bg-panel);border:1px solid var(--border-subtle);border-radius:12px;padding:1rem 1.1rem;margin-bottom:1rem;">
     <h4 style="color:var(--accent-gold);margin:0 0 0.6rem 0;">🌱 ${L.ui.ledger}</h4>
+
+    ${zoneStrip}
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0.5rem;margin-bottom:0.7rem;">
       <div style="background:var(--bg-input);border-radius:8px;padding:0.5rem 0.7rem;">
@@ -767,6 +869,10 @@ window.gamcodCurrent = gamcodCurrent;
 window.gamcodToggleCrop = gamcodToggleCrop;
 window.gamcodAddCustomCrop = gamcodAddCustomCrop;
 window.gamcodSetNum = gamcodSetNum;
+window.gamcodZone = gamcodZone;
+window.gamcodSetZone = gamcodSetZone;
+window.gamcodZoneFromTemp = gamcodZoneFromTemp;
+window.GAMCOD_ZONES = GAMCOD_ZONES;
 
 try { gamcodMode = localStorage.getItem('rpg_gamcodMode') === 'true'; } catch (e) {}
 if (gamcodMode) gamcodLoadRun();
