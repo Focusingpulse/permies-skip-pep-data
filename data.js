@@ -412,7 +412,7 @@ const VILLAGE_QUESTS = [
     iron: []
   },
   {
-    type: "PEP",
+    type: "RPG",
     biomes: ["apartment","suburb","rural"],
     name: "Vitality",
     desc: "Build physical vitality with movement, rhythm, and body awareness.",
