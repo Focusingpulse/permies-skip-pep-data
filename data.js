@@ -445,9 +445,9 @@ const VILLAGE_QUESTS = [
     type: "RPG",
     biomes: ["suburb","rural"],
     name: "Water Vortex — Aetherforce",
-    desc: "Aetherforce quest — build and test the Schauberger water vortexer. A quest card is a TEST of a claim, not an endorsement. ⚡ Aetherforce custom: does NOT count toward Permies badges (earn it here)."
+    desc: "Aetherforce quest — build and test the Schauberger water vortexer. A quest card is a TEST of a claim, not an endorsement. ⚡ Aetherforce custom: does NOT count toward Permies badges (earn it here).",
     sand: [
-      ["Build the Wasserwirbler","Build a hyperbolic funnel with a threaded outlet; pour water through in a centripetal spin. Run the blind temperature + taste tests from dossier 001. Record all numbers + photos.","Science","🌀"]
+      ["Build the Wasserwirbler","Build a hyperbolic funnel with a threaded outlet; pour water through in a centripetal spin. Run the blind temperature + taste tests from dossier 001. Record all numbers + photos.",["Science","Engineering"],"🌀"]
     ],
     straw: [],
     wood: [],
@@ -457,9 +457,9 @@ const VILLAGE_QUESTS = [
     type: "RPG",
     biomes: ["apartment","suburb","rural"],
     name: "Biocircuitry — Eeman",
-    desc: "Aetherforce quest — build and test the Eeman relaxation circuit (L.E. Eeman). A test of the biofield claim, not an endorsement. ⚡ Aetherforce custom: does NOT count toward Permies badges (earn it here)."
+    desc: "Aetherforce quest — build and test the Eeman relaxation circuit (L.E. Eeman). A test of the biofield claim, not an endorsement. ⚡ Aetherforce custom: does NOT count toward Permies badges (earn it here).",
     sand: [
-      ["Build the Eeman Circuit","Wind a self-connecting copper coil (no power). Run the blind pulse/relaxation test vs a sham coil from dossier 002. Record the numbers.","Science","⚡"]
+      ["Build the Eeman Circuit","Wind a self-connecting copper coil (no power). Run the blind pulse/relaxation test vs a sham coil from dossier 002. Record the numbers.",["Science","Engineering"],"⚡"]
     ],
     straw: [],
     wood: [],
