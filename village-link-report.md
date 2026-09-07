@@ -1,6 +1,6 @@
 # Village Link Report — 2026-09-07
 
-Checked **661** URLs: **639** OK, **18** HTTP errors, **0** redirects, **4** unreachable/timeouts.
+Checked **663** URLs: **641** OK, **18** HTTP errors, **0** redirects, **4** unreachable/timeouts.
 
 ## Unreachable / timeout (4)
 
