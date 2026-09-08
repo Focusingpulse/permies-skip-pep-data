@@ -149,7 +149,19 @@ const LANG = {
     "Reward:": "Premio:",
     "💾 Save Village (Download File)": "💾 Guardar Aldea (Descargar archivo)",
     "📂 Load Saved Village": "📂 Cargar Aldea guardada",
-    "🔄 Reset": "🔄 Reiniciar"
+    "🔄 Reset": "🔄 Reiniciar",
+    "Learning Lab": "Laboratorio de Aprendizaje",
+    "The Learning Lab": "El Laboratorio de Aprendizaje",
+    "The Village Library": "La Biblioteca de la Aldea",
+    "The Village Commons": "La Plaza de la Aldea",
+    "Paul Wheaton, Right Now": "Paul Wheaton, Ahora Mismo",
+    "Woodworking & Hand Tools": "Carpintería y Herramientas Manuales",
+    "Your Learning Blueprint": "Tu Plan de Aprendizaje",
+    "Starts on a screen. Grows into real life: real skills, real attributes, real badges in the real world.": "Empieza en una pantalla. Crece en la vida real: habilidades reales, atributos reales, insignias reales en el mundo real.",
+    "Free, public-domain, and government resources for homeschooling — curated by hand.": "Recursos gratuitos, de dominio público y gubernamentales para la educación en casa — curados a mano.",
+    "A living map of how people learn — curricula from around the world and across time, the science of learning, and a tool for building your family's own blend.": "Un mapa vivo de cómo aprende la gente — planes de estudio de todo el mundo y de todas las épocas, la ciencia del aprendizaje y una herramienta para crear la mezcla propia de tu familia.",
+    "The Gold Nugget is now part of your family's story. No real money moved; what grew was understanding.": "La Pepita de Oro ahora es parte de la historia de tu familia. No se movió dinero real; lo que creció fue la comprensión.",
+    "This is the educational blend your family chose. Build quests that honor it.": "Esta es la mezcla educativa que eligió tu familia. Crea misiones que la honren."
   },
   "subjects": {
     "Science": "Ciencias",
@@ -1083,7 +1095,19 @@ const LANG = {
     "Reward:": "Récompense :",
     "💾 Save Village (Download File)": "💾 Enregistrer le Village (télécharger le fichier)",
     "📂 Load Saved Village": "📂 Charger le Village enregistré",
-    "🔄 Reset": "🔄 Réinitialiser"
+    "🔄 Reset": "🔄 Réinitialiser",
+    "Learning Lab": "Laboratoire d'Apprentissage",
+    "The Learning Lab": "Le Laboratoire d'Apprentissage",
+    "The Village Library": "La Bibliothèque du Village",
+    "The Village Commons": "La Place du Village",
+    "Paul Wheaton, Right Now": "Paul Wheaton, Maintenant",
+    "Woodworking & Hand Tools": "Menuiserie et Outils à Main",
+    "Your Learning Blueprint": "Votre Plan d'Apprentissage",
+    "Starts on a screen. Grows into real life: real skills, real attributes, real badges in the real world.": "Commence sur un écran. Grandit dans la vraie vie : vraies compétences, vrais attributs, vrais badges dans le monde réel.",
+    "Free, public-domain, and government resources for homeschooling — curated by hand.": "Ressources gratuites, de domaine public et gouvernementales pour l'instruction en famille — sélectionnées à la main.",
+    "A living map of how people learn — curricula from around the world and across time, the science of learning, and a tool for building your family's own blend.": "Une carte vivante de la façon dont les gens apprennent — programmes du monde entier et de toutes les époques, la science de l'apprentissage et un outil pour créer le mélange propre à votre famille.",
+    "The Gold Nugget is now part of your family's story. No real money moved; what grew was understanding.": "La Pépite d'Or fait désormais partie de l'histoire de votre famille. Aucun argent réel n'a été déplacé ; ce qui a grandi, c'est la compréhension.",
+    "This is the educational blend your family chose. Build quests that honor it.": "C'est le mélange éducatif que votre famille a choisi. Créez des quêtes qui l'honorent."
   },
   "subjects": {
     "Science": "Sciences",
