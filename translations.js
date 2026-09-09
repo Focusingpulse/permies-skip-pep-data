@@ -1237,5 +1237,294 @@ const LANG = {
     }
   },
   "quests": {}
-}
+  },
+  "de": {
+    "name": "Deutsch",
+    "ui": {
+      "Setup": "Einrichtung",
+      "Village": "Dorf",
+      "Studio": "Atelier",
+      "Quests": "Aufgaben",
+      "Schoolhouse": "Schulhaus",
+      "Library": "Bibliothek",
+      "Mentor's Circle": "Mentorenkreis",
+      "Circle": "Kreis",
+      "Commons": "Platz",
+      "WELCOME": "WILLKOMMEN",
+      "The Creative Village — A Roll Making Game (RMG) for families": "Das Kreative Dorf — Ein Rollenbildendes Spiel (RMG) für Familien",
+      "A real-life skill-building journey — not a digital game you play on a screen. Build real skills, grow real attributes, earn real badges in the real world.": "Eine reale Reise zum Aufbau von Fähigkeiten — kein digitales Spiel auf einem Bildschirm. Entwickle echte Fähigkeiten, entwickle echte Attribute, verdiene echte Abzeichen in der echten Welt.",
+      "Data.js not found or failed to load. Using fallback data.": "data.js nicht gefunden oder Laden fehlgeschlagen. Verwende Ersatzdaten.",
+      "▼ Scroll down ▼": "▼ Nach unten scrollen ▼",
+      "School days already completed": "Bereits absolvierte Schultage",
+      "Total hours already logged": "Bereits erfasste Gesamtstunden",
+      "Current curriculum (optional)": "Aktueller Lehrplan (optional)",
+      "Player Name": "Spielername",
+      "Save & Enter Village": "Speichern & Dorf betreten",
+      "Reset Village": "Dorf zurücksetzen",
+      "Reset": "Zurücksetzen",
+      "8. Start Over / Reset": "8. Neu beginnen / Zurücksetzen",
+      "Wipe all progress, quests, attendance, and player data from this browser and start fresh. Cannot be undone.": "Lösche allen Fortschritt, alle Aufgaben, Anwesenheit und Spielerdaten aus diesem Browser und beginne von vorne. Kann nicht rückgängig gemacht werden.",
+      "Your Family Guild": "Dein Familien-Gilde",
+      "Click a character to open the Avatar Studio": "Klicke auf einen Charakter, um das Avatar-Atelier zu öffnen",
+      "Save Village (Download File)": "Dorf speichern (Datei herunterladen)",
+      "Load Saved Village": "Gespeichertes Dorf laden",
+      "Start Questing": "Aufgaben beginnen",
+      "Avatar Studio": "Avatar-Atelier",
+      "Class": "Klasse",
+      "Face": "Gesicht",
+      "Hair": "Haare",
+      "Outfit": "Kleidung",
+      "Gear": "Ausrüstung",
+      "Background": "Hintergrund",
+      "Wardrobe": "Garderobe",
+      "Attributes": "Attribute",
+      "Save & Exit to Village": "Speichern & zum Dorf",
+      "The Quest Board": "Die Aufgabentafel",
+      "All Quests": "Alle Aufgaben",
+      "My Biome Only": "Nur mein Biom",
+      "Badge Progression": "Abzeichen-Fortschritt",
+      "Free Roam — all quests unlocked": "Freier Modus — alle Aufgaben freigeschaltet",
+      "Adventure Mode — complete 50% of a tier within one guild to unlock the next": "Abenteuermodus — schließe 50% einer Stufe innerhalb einer Gilde ab, um die nächste freizuschalten",
+      "Story Mode — a guided adventure, new every time": "Geschichtenmodus — ein geführtes Abenteuer, jedes Mal neu",
+      "Survival Mode — train the family for the long haul": "Überlebensmodus — trainiere die Familie für die lange Strecke",
+      "Official Permies PEP Quests": "Offizielle Permies PEP-Aufgaben",
+      "Submit evidence to their forum for official certification.": "Reiche deine Nachweise in ihrem Forum ein für offizielle Zertifizierung.",
+      "Holistic RPG Add-on Guilds": "Ganzheitliche RPG-Zusatzgilden",
+      "Custom to The Creative Village. Do not count toward official Permies PEP certification.": "Speziell für Das Kreative Dorf. Zählen nicht zur offiziellen Permies PEP-Zertifizierung.",
+      "Guild": "Gilde",
+      "No description available.": "Keine Beschreibung verfügbar.",
+      "complete": "abgeschlossen",
+      "Locked": "Gesperrt",
+      "Post to Permies": "Bei Permies veröffentlichen",
+      "Complete!": "Abgeschlossen!",
+      "Finalize": "Abschließen",
+      "Learn More": "Mehr erfahren",
+      "Trackers": "Verfolger",
+      "Witnesses": "Zeugen",
+      "Otis Verification Protocol:": "Otis-Verifikationsprotokoll:",
+      "photo of materials/site": "Foto der Materialien / des Ortes",
+      "photo of you working": "Foto von dir bei der Arbeit",
+      "photo of finished product WITH a sign showing your name and date": "Foto des fertigen Produkts MIT einem Schild mit deinem Namen und dem Datum",
+      "Select who participated. Multiple people can hold the same role!": "Wähle aus, wer teilgenommen hat. Mehrere Personen können dieselbe Rolle haben!",
+      "Confirm & Complete Quest": "Bestätigen & Aufgabe abschließen",
+      "Guided Path for this Quest": "Geführter Pfad für diese Aufgabe",
+      "Prep": "Vorbereitung",
+      "Core": "Kern",
+      "Stretch": "Herausforderung",
+      "Curriculum topics connected to this skill:": "Lehrplan-Themen zu dieser Fähigkeit:",
+      "Skill-wide resources:": "Ressourcen für diese Fähigkeit:",
+      "Feeling lucky? Spin for a surprise resource:": "Glücksgefühl? Dreh für eine Überraschungsressource:",
+      "Spin": "Drehen",
+      "The Colorado Schoolhouse": "Das Colorado-Schulhaus",
+      "Attendance Tracker (CO Law: 172 Days)": "Anwesenheitsverfolgung (CO-Gesetz: 172 Tage)",
+      "Days Completed:": "Absolvierte Tage:",
+      "Hours Logged:": "Erfasste Stunden:",
+      "hrs": "Std",
+      "Log 4-Hour School Day": "4-Stunden-Schultag erfassen",
+      "Log 1-Hour Day": "1-Stunden-Tag erfassen",
+      "Academic Transcript (CO Required Subjects)": "Akademisches Zeugnis (CO-Pflichtfächer)",
+      "Hours are logged from completed quests (2 hrs each) plus any custom hours below.": "Stunden werden aus abgeschlossenen Aufgaben (je 2 Std.) plus benutzerdefinierte Stunden unten erfasst.",
+      "Log Custom Academic Hours": "Benutzerdefinierte akademische Stunden erfassen",
+      "Add Hours": "Stunden hinzufügen",
+      "Bring Your History": "Bringe deinen Verlauf",
+      "Already partway through your school year with another curriculum? Add your prior days and hours here so the tracker reflects where you actually are.": "Bereits mitten im Schuljahr mit einem anderen Lehrplan? Füge hier deine früheren Tage und Stunden hinzu, damit die Verfolgung deinen tatsächlichen Stand widerspiegelt.",
+      "Add History to Tracker": "Verlauf zur Verfolgung hinzufügen",
+      "Hours": "Stunden",
+      "The Creative Village Library": "Die Bibliothek des Kreativen Dorfes",
+      "A curated knowledge graph of free, public domain, and government resources for holistic homeschooling.": "Ein kuratierter Wissensgraph kostenloser, gemeinfreier und staatlicher Ressourcen für ganzheitliches Homeschooling.",
+      "Educational Philosophy & Nature Connection": "Bildungsphilosophie & Naturverbindung",
+      "Colorado Homeschooling": "Homeschooling in Colorado",
+      "Permies & PEP Badges": "Permies & PEP-Abzeichen",
+      "Curriculum by Subject": "Lehrplan nach Fach",
+      "The Money Lab — Financial Literacy & Foreign Exchange": "Das Geldlabor — Finanzkompetenz & Devisenhandel",
+      "Food Preservation": "Lebensmittelkonservierung",
+      "Woodworking": "Holzverarbeitung",
+      "Homesteading & Self-Sufficiency": "Homesteading & Selbstversorgung",
+      "Foraging & Herbalism": "Wildsammlung & Kräuterkunde",
+      "The Creative Village Commons": "Der Platz des Kreativen Dorfes",
+      "Family Achievements": "Familienerfolge",
+      "Bridge to Permies": "Brücke zu Permies",
+      "Post your evidence to the PEP Forum to get officially certified by Paul Wheaton's team.": "Veröffentliche deine Nachweise im PEP-Forum, um dich offiziell vom Team von Paul Wheaton zertifizieren zu lassen.",
+      "Official PEP quests (marked with the shield icon) count toward Permies certification. RPG Add-on quests (marked with the sparkle icon) are custom to The Creative Village and do not count toward official PEP badges.": "Offizielle PEP-Aufgaben (mit dem Schild-Symbol) zählen zur Permies-Zertifizierung. RPG-Zusatzaufgaben (mit dem Glitzer-Symbol) sind speziell für Das Kreative Dorf und zählen nicht zu offiziellen PEP-Abzeichen.",
+      "Open PEP Forum": "PEP-Forum öffnen",
+      "How to Apply for a Badge": "Wie man ein Abzeichen beantragt",
+      "Optional: The Offline Archive": "Optional: Das Offline-Archiv",
+      "For families wanting a complete offline backup drive, download these open-source collections to a local hard drive:": "Für Familien, die ein vollständiges Offline-Backup-Laufwerk möchten, lade diese Open-Source-Sammlungen auf eine lokale Festplatte herunter:",
+      "Quests Done": "Aufgaben erledigt",
+      "Wardrobe Items": "Garderoben-Objekte",
+      "Sand Badges": "Sand-Abzeichen",
+      "Straw Badges": "Stroh-Abzeichen",
+      "Wood Badges": "Holz-Abzeichen",
+      "Iron Badges": "Eisen-Abzeichen",
+      "Earned": "Verdient",
+      "Family Members": "Familienmitglieder",
+      "School Days": "Schultage",
+      "The 64 cultural elements of deep nature connection — from Jon Young's 512 Project and the 8 Shields framework. These practices weave the invisible fabric of community that makes permaculture skills sustainable across generations.": "Die 64 kulturellen Elemente tiefer Naturverbindung — aus Jon Youngs 512-Projekt und dem 8-Shields-Rahmen. Diese Praktiken weben den unsichtbaren Stoff der Gemeinschaft, der Permakultur-Fähigkeiten über Generationen nachhaltig macht.",
+      "Gold Nugget Earned!": "Goldnugget verdient!",
+      "You worked the entire Commerce guild — budgets, currency exchange, paper trading, even a family forex night. That's real financial skill, earned in the real world.": "Du hast die gesamte Handels-Gilde bearbeitet — Budgets, Währungswechsel, Papierhandel, sogar einen Familien-Devisenabend. Das ist echte Finanzkompetenz, verdient in der echten Welt.",
+      "The Gold Nugget is now part of your family's story. No real money was moved — only understanding.": "Das Goldnugget ist jetzt Teil der Geschichte deiner Familie. Kein echtes Geld wurde bewegt — nur Verständnis.",
+      "Glow on ✨": "Lass es leuchten ✨",
+      "Before": "Vorher",
+      "During": "Während",
+      "After": "Nachher",
+      "Tier": "Stufe",
+      "Level": "Niveau",
+      "Guild of": "Gilde der",
+      "Gold Nugget": "Goldnugget",
+      "The Creative Village — A Roll Making Game (RMG)": "Das Kreative Dorf — Ein Rollenbildendes Spiel (RMG)",
+      "Print All 15 Sheets": "🖨️ Alle 15 Blätter drucken",
+      "Print This Sheet": "🖨️ Dieses Blatt drucken",
+      "All 15 Sheets": "Alle 15 Blätter",
+      "Family Progress": "Familienfortschritt",
+      "quests completed": "Aufgaben abgeschlossen",
+      "Quests:": "Aufgaben:",
+      "Wardrobe:": "Garderobe:",
+      "items": "Objekte",
+      "earned": "verdient",
+      "Reward:": "Belohnung:",
+      "💾 Save Village (Download File)": "💾 Dorf speichern (Datei herunterladen)",
+      "📂 Load Saved Village": "📂 Gespeichertes Dorf laden",
+      "🔄 Reset": "🔄 Zurücksetzen",
+      "Learning Lab": "Lernlabor",
+      "The Learning Lab": "Das Lernlabor",
+      "The Village Library": "Die Dorfbibliothek",
+      "The Village Commons": "Der Dorfplatz",
+      "Paul Wheaton, Right Now": "Paul Wheaton, Jetzt",
+      "Woodworking & Hand Tools": "Holzverarbeitung & Handwerkzeuge",
+      "Your Learning Blueprint": "Dein Lernbauplan",
+      "Starts on a screen. Grows into real life: real skills, real attributes, real badges in the real world.": "Beginnt auf einem Bildschirm. Wächst in das echte Leben: echte Fähigkeiten, echte Attribute, echte Abzeichen in der echten Welt.",
+      "Free, public-domain, and government resources for homeschooling — curated by hand.": "Kostenlose, gemeinfreie und staatliche Ressourcen für Homeschooling — von Hand kuratiert.",
+      "A living map of how people learn — curricula from around the world and across time, the science of learning, and a tool for building your family's own blend.": "Eine lebendige Karte wie Menschen lernen — Lehrpläne aus aller Welt und aller Zeiten, die Wissenschaft des Lernens und ein Werkzeug, um deine eigene Familienmischung zu erstellen.",
+      "The Gold Nugget is now part of your family's story. No real money moved; what grew was understanding.": "Das Goldnugget ist jetzt Teil der Geschichte deiner Familie. Kein echtes Geld wurde bewegt; was wuchs war Verständnis.",
+      "This is the educational blend your family chose. Build quests that honor it.": "Das ist die Bildungsmischung, die deine Familie gewählt hat. Erstelle Aufgaben, die sie ehren."
+    },
+    "subjects": {
+      "Science": "Naturwissenschaften",
+      "Math": "Mathematik",
+      "Art": "Kunst",
+      "PE": "Sport",
+      "Health": "Gesundheit",
+      "Geography": "Geografie",
+      "Writing": "Schreiben",
+      "History": "Geschichte",
+      "Economics": "Wirtschaft",
+      "Constitution": "Verfassung",
+      "Reading": "Lesen"
+    },
+    "roles": {
+      "Tracker": "Verfolger / Verfolgerin",
+      "Witness": "Zeuge / Zeugin",
+      "Hearth Tender": "Herdhüter / Herdhüterin",
+      "Hearth": "Herd",
+      "Mentor": "Mentor / Mentorin",
+      "Mentors": "Mentoren",
+      "Trackers": "Verfolger",
+      "Witnesses": "Zeugen"
+    },
+    "tiers": {
+      "Sand": "Sand",
+      "Straw": "Stroh",
+      "Wood": "Holz",
+      "Iron": "Eisen"
+    },
+    "guilds": {
+      "Gardening": {
+        "name": "Gärtnern",
+        "desc": "Baue Nahrung an, bewahre Samen und errichte widerstandsfähige Gartensysteme."
+      },
+      "Natural Building": {
+        "name": "Natürliches Bauen",
+        "desc": "Verwende Lehm, Stroh, Holz und Stein, um gesunde Unterkünfte und Oberflächen zu bauen."
+      },
+      "Woodland Care": {
+        "name": "Waldpflege",
+        "desc": "Pflege Wälder, Brennholz, Zäune, Pilze und lebende Holzsysteme."
+      },
+      "Round Wood Woodworking": {
+        "name": "Rundholzverarbeitung",
+        "desc": "Baue nützliche Dinge aus Stämmen, Ästen und Zweigen mit wenig Leim und Metall."
+      },
+      "Tool Care": {
+        "name": "Werkzeugpflege",
+        "desc": "Halte Werkzeuge scharf, sauber, geölt und repariert, damit sie länger halten."
+      },
+      "Earthworks": {
+        "name": "Erdbau",
+        "desc": "Forme das Land, um Wasser zu bewegen, Erosion zu reduzieren und dauerhafte Wege zu schaffen."
+      },
+      "Dimensional Lumber Woodworking": {
+        "name": "Schnittholzverarbeitung",
+        "desc": "Verwende gerades Holz und starke Verbindungen, um praktische Möbel und Strukturen zu bauen."
+      },
+      "Rocket": {
+        "name": "Raketenofen",
+        "desc": "Baue holzbefeuerte Geräte, die Brennstoff sparen und Wärme sehr effizient nutzen."
+      },
+      "Food Prep": {
+        "name": "Nahrungszubereitung",
+        "desc": "Koche, konserviere und lagere Nahrung mit praktischen Küchenkenntnissen."
+      },
+      "Animal Care": {
+        "name": "Tierpflege",
+        "desc": "Pflege Nutztiere und Wildtierlebensräume mit Freundlichkeit und Beobachtung."
+      },
+      "Foraging": {
+        "name": "Wildsammlung",
+        "desc": "Finde, ernte, identifiziere und bewahre nützliche wilde Nahrung und Medizin."
+      },
+      "Community Living": {
+        "name": "Gemeinschaftsleben",
+        "desc": "Übe gemeinschaftliche Lebensfähigkeiten, die Familien helfen, zusammenzuarbeiten."
+      },
+      "Textiles": {
+        "name": "Textilien",
+        "desc": "Repariere, stelle und pflege Kleidung und Stoff, damit sie länger hält."
+      },
+      "Greywater and Willow Feeders": {
+        "name": "Grauwasser und Weiden",
+        "desc": "Verwende Waschwasser sicher und ziehe Pflanzen, die Feuchtigkeit und Nährstoffe lieben."
+      },
+      "Metalworking": {
+        "name": "Metallverarbeitung",
+        "desc": "Schneide, forme, schweiße, biege und bearbeite Metall für nützliche Objekte."
+      },
+      "Plumbing and Hot Water": {
+        "name": "Klempnerei und Warmwasser",
+        "desc": "Halte Wasser sicher durch Waschbecken, Abflüsse, Toiletten und Warmwassersysteme fließend."
+      },
+      "Electricity": {
+        "name": "Elektrizität",
+        "desc": "Lerne sichere Wechselstrom- und Gleichstrom-Grundlagen, Batterien, Schaltkreise und Solarsysteme."
+      },
+      "Commerce": {
+        "name": "Handel",
+        "desc": "Verdiene Geld, tausche Werte, führe Aufzeichnungen und lerne, wie Währungen zirkulieren — von Kleingeld zum Goldnugget-Tresor."
+      },
+      "Natural Medicine": {
+        "name": "Naturmedizin",
+        "desc": "Lerne sichere, praktische Wege, Heilpflanzen zu identifizieren und zu verwenden."
+      },
+      "Nest": {
+        "name": "Nest",
+        "desc": "Halte das Haus sauber, organisiert und gemütlich für das tägliche Familienleben."
+      },
+      "Homesteading": {
+        "name": "Homesteading",
+        "desc": "Behandle praktische Lebensfähigkeiten, die ein Haus und eine Familie auf echte Notfälle vorbereiten."
+      },
+      "Oddball": {
+        "name": "Kuriositäten",
+        "desc": "Sammle seltsame, kreative und entzückend unerwartete Lebenserfahrungen."
+      },
+      "Vitality": {
+        "name": "Vitalität",
+        "desc": "Entwickle körperliche Vitalität durch Bewegung, Rhythmus und Körperbewusstsein."
+      },
+      "Community": {
+        "name": "Gemeinschaft",
+        "desc": "Übe soziale, dienstliche und Event-Fähigkeiten, die Gruppen helfen zu gedeihen."
+      }
+    },
+    "quests": {}
+  }
 };
