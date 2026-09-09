@@ -753,7 +753,12 @@ const HEART_PRACTICE = {
     { name: "Inner Balance / emWave Pro (newer)", es: "Inner Balance / emWave Pro (moderno)", note: "Ear-sensor + app with real-time training regimens, challenges, and sessions — the current generation.", esNote: "Sensor de oído + app con regímenes de entrenamiento en tiempo real." },
     { name: "Any HRV-capable wearable", es: "Cualquier wearable con HRV", note: "Modern watches/heart straps measure HRV — pair with a breathing pacer app for the same practice without extra hardware.", esNote: "Relojes y bandas miden HRV — combina con una app de respiración." }
   ],
-  village: "Use it before quests that need focus (before sit spots, before a test/recital, before a hard conversation). Make it the family's 60-second reset — a quest in the Vitality guild of the body."
+  village: "Use it before quests that need focus (before sit spots, before a test/recital, before a hard conversation). Make it the family's 60-second reset — a quest in the Vitality guild of the body.",
+  evidence_depth: [
+    { source: "Lehrer & Gevirtz, Frontiers in Psychology (2014), DOI 10.3389/fpsyg.2014.00756", claim: "Independent review: slow breathing at ~6 breaths/min (~5-sec in/out, exactly this practice's pace) maximizes HRV amplitude via baroreflex resonance — the mechanism behind 'heart breathing' is real and independent of HeartMath.", medium: "independent benchmark review", confidence: "Strong (mechanism)", year: "2014" },
+    { source: "Gevirtz (2013) outcome review, summarized in Lehrer & Gevirtz (2014)", claim: "HRV biofeedback training shows positive outcomes across anxiety, PTSD, insomnia, asthma, hypertension and performance — wide support, though few areas have extensive controlled studies.", medium: "benchmark synthesis", confidence: "Moderate", year: "2013" },
+    { source: "McCraty, Atkinson, Tomasino & Bradley, The Coherent Heart (2009)", claim: "HeartMath's own monograph: coherence mode marked by a smooth sine-wave HRV pattern, associated with positive emotion and self-reported cognitive/performance gains — the source tradition, self-published.", medium: "self-published research monograph (HeartMath)", confidence: "Moderate (self-published)", year: "2009" }
+  ]
 };
 
 /* ---------- Steiner's Six Basic Exercises (Rosicrucian), expanded per Robert Gilbert ---------- */
