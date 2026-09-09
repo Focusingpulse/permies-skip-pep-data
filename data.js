@@ -464,5 +464,17 @@ const VILLAGE_QUESTS = [
     straw: [],
     wood: [],
     iron: []
+  },
+  {
+    type: "RPG",
+    biomes: ["suburb","rural"],
+    name: "Aetherforce — Power",
+    desc: "Aetherforce quest — build Tesla's 1901 radiant energy receiver (elevated insulated plate charging a capacitor to ground) and measure what the sky actually gives you. A quest card is a TEST of a claim, not an endorsement. ⚡ Aetherforce custom: does NOT count toward Permies badges (earn it here). Source: Aetherforce Knowledge Vault",
+    sand: [],
+    straw: [
+      ["Build the Radiant Energy Receiver","Mount an insulated metal plate 3-5 m up on a NON-metal pole, wire it through a film capacitor to a ground rod, and measure voltage at 0/5/10/15 min across 5+ sessions (morning/noon/night, clear/overcast). Then wrap the plate in grounded foil as the control and repeat. PASS: receiver reads ≥10× the shielded control in ≥4/5 sessions. Storms: always disconnect and ground the antenna first.",["Science","Engineering"],"⚡"]
+    ],
+    wood: [],
+    iron: []
   }
 ];
