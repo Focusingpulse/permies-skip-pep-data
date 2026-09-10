@@ -1,6 +1,6 @@
 # Village Link Report — 2026-09-10
 
-Checked **680** URLs: **657** OK, **19** HTTP errors, **0** redirects, **4** unreachable/timeouts.
+Checked **682** URLs: **660** OK, **18** HTTP errors, **0** redirects, **4** unreachable/timeouts.
 
 ## Unreachable / timeout (4)
 
@@ -9,10 +9,9 @@ Checked **680** URLs: **657** OK, **19** HTTP errors, **0** redirects, **4** unr
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)
 - `https://mountainherbs.net/grown`  (error: URLError)
 
-## HTTP errors (19)
+## HTTP errors (18)
 
 - [`http://byjillb.com`](http://byjillb.com)  (HTTP 404)
-- [`http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img`](http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img)  (HTTP 404)
 - [`http://innoperma.weebly.com/old`](http://innoperma.weebly.com/old)  (HTTP 404)
 - [`http://onceuponeayarden.blogspot.com/`](http://onceuponeayarden.blogspot.com/)  (HTTP 404)
 - [`http://organicfoodbliss.com/my-clear-cut-garden/`](http://organicfoodbliss.com/my-clear-cut-garden/)  (HTTP 500)
