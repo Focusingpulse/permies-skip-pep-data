@@ -685,13 +685,18 @@ const CURRICULUM_MODES = {
   forest: {
     read: [
       { label: "Richard Louv — Last Child in the Woods", url: "https://www.richardlouv.com/books/last-child/" },
-      { label: "Jon Young — Coyote's Guide to Connecting with Nature", url: "https://www.amazon.com/Coyotes-Guide-Connecting-Nature-Young/dp/1579940250" }
+      { label: "Jon Young — Coyote's Guide to Connecting with Nature", url: "https://www.amazon.com/Coyotes-Guide-Connecting-Nature-Young/dp/1579940250" },
+      { label: "Jon Young — What the Robin Knows (bird language primer)", url: "https://www.jonyoung.org" },
+      { label: "Bird Language — free bird alarm & communication guide", url: "https://birdlanguage.com" },
+      { label: "Wilderness Awareness School — Kamana naturalist training program", url: "https://www.wildernessawareness.org" }
     ],
     listen: [
-      { label: "The Forest School Podcast (UK)", url: "https://theforestschoolpodcast.com" }
+      { label: "The Forest School Podcast (UK)", url: "https://theforestschoolpodcast.com" },
+      { label: "Tracking Connections — Jon Young's nature connection podcast (Connection 1st)", url: "https://podcasts.apple.com/us/podcast/tracking-connections/id1738301682" }
     ],
     watch: [
-      { label: "Forest school in action — video search", url: "https://www.youtube.com/results?search_query=forest+school+day+in+the+life" }
+      { label: "Jon Young — TEDxGrandPark: Repairing Emotional Isolation through Nature Connection", url: "https://www.youtube.com/watch?v=QMWSvUp0CYk" },
+      { label: "Jon Young — Connecting Children to Nature (9 min, nature mentoring in practice)", url: "https://www.youtube.com/watch?v=U4MWvAM3Ksk" }
     ],
     do: [
       { label: "Woodland Care + Tracking guilds (in-game)", url: "#learning" }
