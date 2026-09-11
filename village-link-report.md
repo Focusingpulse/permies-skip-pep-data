@@ -1,18 +1,13 @@
-
-## 2026-09-11 maintenance pass
--   fixed 1 × double trailing slash
--   fixed 1 × trailing punct
--   master_quests.json: 2 URL fixes applied
-
 # Village Link Report — 2026-09-11
 
-Checked **917** URLs: **885** OK, **23** HTTP errors, **0** redirects, **9** unreachable/timeouts.
+Checked **919** URLs: **887** OK, **22** HTTP errors, **0** redirects, **10** unreachable/timeouts.
 
-## Unreachable / timeout (9)
+## Unreachable / timeout (10)
 
 - `http://ia800306.us.archive.org/30/items/fe_The_Solar_Greenhouse_Book/The_Solar_Greenhouse_Book.pdf`  (error: URLError)
 - `http://quarteracrehome.wordpress.comhttps://www.etsy.com/shop/HomeAndHedgewitchhttps://www.instagram.com/wren_ohio/`  (error: URLError)
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
+- `http://www.davidhuang.org`  (error: RemoteDisconnected)
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)
 - `http://www.dlive.tv/mavisfarmacyThe`  (error: URLError)
 - `http://www.theartisthomestead.comor`  (error: URLError)
@@ -20,13 +15,12 @@ Checked **917** URLs: **885** OK, **23** HTTP errors, **0** redirects, **9** unr
 - `https://mountainherbs.net/grown`  (error: URLError)
 - `https://tranqvillium.org`  (error: URLError)
 
-## HTTP errors (23)
+## HTTP errors (22)
 
 - [`http://byjillb.com`](http://byjillb.com)  (HTTP 404)
 - [`http://innoperma.weebly.com/old`](http://innoperma.weebly.com/old)  (HTTP 404)
 - [`http://onceuponeayarden.blogspot.com/`](http://onceuponeayarden.blogspot.com/)  (HTTP 404)
 - [`http://organicfoodbliss.com/my-clear-cut-garden/`](http://organicfoodbliss.com/my-clear-cut-garden/)  (HTTP 500)
-- [`http://organicfoodbliss.com/my-clear-cut-garden//`](http://organicfoodbliss.com/my-clear-cut-garden//)  (HTTP 500)
 - [`http://paypal.me/lazykatorhttp://www.buymeacoffee.com/dzenifrRead`](http://paypal.me/lazykatorhttp://www.buymeacoffee.com/dzenifrRead)  (HTTP 404)
 - [`http://www.fws.gov/whitenosesyndrome/`](http://www.fws.gov/whitenosesyndrome/)  (HTTP 403)
 - [`http://www.my10acres.info`](http://www.my10acres.info)  (HTTP 500)
