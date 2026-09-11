@@ -1,25 +1,41 @@
+
+## 2026-09-11 maintenance pass
+-   fixed 1 × double trailing slash
+-   fixed 1 × trailing punct
+-   master_quests.json: 2 URL fixes applied
+
 # Village Link Report — 2026-09-11
 
-Checked **686** URLs: **664** OK, **18** HTTP errors, **0** redirects, **4** unreachable/timeouts.
+Checked **917** URLs: **885** OK, **23** HTTP errors, **0** redirects, **9** unreachable/timeouts.
 
-## Unreachable / timeout (4)
+## Unreachable / timeout (9)
 
 - `http://ia800306.us.archive.org/30/items/fe_The_Solar_Greenhouse_Book/The_Solar_Greenhouse_Book.pdf`  (error: URLError)
+- `http://quarteracrehome.wordpress.comhttps://www.etsy.com/shop/HomeAndHedgewitchhttps://www.instagram.com/wren_ohio/`  (error: URLError)
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)
+- `http://www.dlive.tv/mavisfarmacyThe`  (error: URLError)
+- `http://www.theartisthomestead.comor`  (error: URLError)
+- `https://miteigenenhaenden.dehttps://miteigenenhaenden-de.translate.goog/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp`  (error: URLError)
 - `https://mountainherbs.net/grown`  (error: URLError)
+- `https://tranqvillium.org`  (error: URLError)
 
-## HTTP errors (18)
+## HTTP errors (23)
 
 - [`http://byjillb.com`](http://byjillb.com)  (HTTP 404)
 - [`http://innoperma.weebly.com/old`](http://innoperma.weebly.com/old)  (HTTP 404)
 - [`http://onceuponeayarden.blogspot.com/`](http://onceuponeayarden.blogspot.com/)  (HTTP 404)
 - [`http://organicfoodbliss.com/my-clear-cut-garden/`](http://organicfoodbliss.com/my-clear-cut-garden/)  (HTTP 500)
+- [`http://organicfoodbliss.com/my-clear-cut-garden//`](http://organicfoodbliss.com/my-clear-cut-garden//)  (HTTP 500)
+- [`http://paypal.me/lazykatorhttp://www.buymeacoffee.com/dzenifrRead`](http://paypal.me/lazykatorhttp://www.buymeacoffee.com/dzenifrRead)  (HTTP 404)
 - [`http://www.fws.gov/whitenosesyndrome/`](http://www.fws.gov/whitenosesyndrome/)  (HTTP 403)
 - [`http://www.my10acres.info`](http://www.my10acres.info)  (HTTP 500)
+- [`http://www.northwestpermaculture.org/-`](http://www.northwestpermaculture.org/-)  (HTTP 404)
 - [`http://www.sasez.com`](http://www.sasez.com)  (HTTP 404)
 - [`https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`](https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20)  (HTTP 404)
+- [`https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20|`](https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20|)  (HTTP 404)
 - [`https://extensioncourses.usu.edu/product/permaculture-design-fundamentals/`](https://extensioncourses.usu.edu/product/permaculture-design-fundamentals/)  (HTTP 403)
+- [`https://gemmaboyd.space/https://www.instagram.com/gemmaboyd407/?hl=en`](https://gemmaboyd.space/https://www.instagram.com/gemmaboyd407/?hl=en)  (HTTP 404)
 - [`https://open.oregonstate.education/permaculture/`](https://open.oregonstate.education/permaculture/)  (HTTP 403)
 - [`https://skipthejourney.wordpress.com/`](https://skipthejourney.wordpress.com/)  (HTTP 404)
 - [`https://waldorfteacherresources.com/`](https://waldorfteacherresources.com/)  (HTTP 403)
