@@ -1236,7 +1236,676 @@ const LANG = {
       "desc": "Pratiquez des compétences sociales, de service et d'événements qui aident les groupes à prospérer."
     }
   },
-  "quests": {}
+  "quests": {
+    "Build a Hugelkultur Bed": {
+      "title": "Construire une butte hugelkultur",
+      "desc": "Construisez un petit monticule hugelkultur avec paillis, graines et plantes fixatrices d'azote."
+    },
+    "Chop and Drop": {
+      "title": "Couper et laisser au sol",
+      "desc": "Coupez les plantes et laissez la matière sur place comme paillis sur une zone du jardin."
+    },
+    "Ruth Stout Composting": {
+      "title": "Compostage façon Ruth Stout",
+      "desc": "Installez des zones de jardin à paillis épais avec des couches organiques et des restes de cuisine."
+    },
+    "Seed Saving": {
+      "title": "Récupérer des graines",
+      "desc": "Récoltez, séchez et stockez les graines de quatre espèces végétales différentes."
+    },
+    "Build a 12 Foot Hugelkultur": {
+      "title": "Construire un hugelkultur de 12 pieds",
+      "desc": "Étendez une butte hugelkultur jusqu'à environ 12 pieds avec rondins, paillis et terre."
+    },
+    "Encourage Volunteer Plants": {
+      "title": "Encourager les plantes spontanées",
+      "desc": "Identifiez et protégez cinq plantes semées d'elles-mêmes au jardin."
+    },
+    "Direct Seed Perennials": {
+      "title": "Semer des vivaces directement",
+      "desc": "Semez des cultures vivaces en pleine terre et suivez ce qui lève."
+    },
+    "Make a 100 Sq Ft Polyculture Garden": {
+      "title": "Créer un jardin polyculture de 100 pieds carrés",
+      "desc": "Concevez et plantez un jardin d'espèces mélangées avec au moins 12 espèces."
+    },
+    "Build a 7 x 24 Hugelkultur": {
+      "title": "Construire un hugelkultur de 7 x 24",
+      "desc": "Créez une butte hugelkultur plus grande avec rondins, paillis et terre."
+    },
+    "Grow and Harvest 1M Calories": {
+      "title": "Cultiver et récolter 1M de calories",
+      "desc": "Planifiez, plantez et récoltez un système de jardin qui produit un million de calories."
+    },
+    "Build a Quarter Acre Food Forest": {
+      "title": "Créer une forêt nourricière d'un quart d'acre",
+      "desc": "Aménagez et établissez une forêt nourricière diversifiée à plusieurs strates."
+    },
+    "Direct Seed 50 Each of 10 Perennial Species": {
+      "title": "Semer 50 graines de chacune de 10 espèces vivaces",
+      "desc": "Plantez de grands semis de dix espèces vivaces et suivez la germination."
+    },
+    "Grow and Harvest 4M Calories": {
+      "title": "Cultiver et récolter 4M de calories",
+      "desc": "Passez à l'échelle un système de production alimentaire pour des millions de calories."
+    },
+    "Build a 7 x 150 Hugelkultur": {
+      "title": "Construire un hugelkultur de 7 x 150",
+      "desc": "Créez un vaste système hugelkultur avec plusieurs buttes et un paillage épais."
+    },
+    "Harvest Fruit from 12 Seed-Grown Trees": {
+      "title": "Récolter des fruits de 12 arbres issus de semis",
+      "desc": "Élevez et récoltez les fruits d'une douzaine d'arbres poussés depuis la graine."
+    },
+    "Build a 1 Acre Food Forest": {
+      "title": "Créer une forêt nourricière d'un acre",
+      "desc": "Établissez une forêt nourricière d'un acre complet avec des plantations étagées."
+    },
+    "Landrace Seed Saving": {
+      "title": "Sauvegarder des variétés locales",
+      "desc": "Sauvegardez les graines de 12 espèces sur 3 générations en gardant les traits vigoureux."
+    },
+    "Make 12 Adobe Bricks": {
+      "title": "Faire 12 briques d'adobe",
+      "desc": "Mélangez, moulez et séchez un petit lot de briques d'adobe."
+    },
+    "Make Clay Paint": {
+      "title": "Faire de la peinture d'argile",
+      "desc": "Mélangez et appliquez une finition simple de peinture d'argile."
+    },
+    "Level a Skiddable Structure with Rocks": {
+      "title": "Niveler une structure déplaçable avec des pierres",
+      "desc": "Utilisez des pierres pour niveler une structure qui peut bouger sur des patins."
+    },
+    "Make a 25 Sq Ft Shake Roof": {
+      "title": "Faire un toit de bardeaux de 25 pieds carrés",
+      "desc": "Assemblez une petite section de toit en bardeaux."
+    },
+    "Make Whitewash": {
+      "title": "Faire un badigeon (chaux)",
+      "desc": "Mélangez et appliquez une finition au badigeon de chaux."
+    },
+    "Assess Clay Mixes": {
+      "title": "Évaluer des mélanges d'argile",
+      "desc": "Testez plusieurs mélanges d'argile, sable et paille et comparez les résultats."
+    },
+    "Build a Tiny Shed on Skids": {
+      "title": "Construire un petit abri sur patins",
+      "desc": "Élevez et finissez un petit abri qui peut être déplacé sur des patins."
+    },
+    "Make a Cob Sink": {
+      "title": "Faire un évier en cob",
+      "desc": "Façonnez et finissez un bac à évier en cob pour la maison ou la cuisine extérieure."
+    },
+    "Make a Tree Stand": {
+      "title": "Faire un support d'arbre",
+      "desc": "Construisez un petit support en matériaux naturels pour un arbre ou un panneau."
+    },
+    "Operating Window from Scratch": {
+      "title": "Une fenêtre fonctionnelle de A à Z",
+      "desc": "Construisez un cadre et un battant de fenêtre fonctionnels, entièrement à la main."
+    },
+    "Straw Bale Wall of a Wofati": {
+      "title": "Mur en bottes de paille d'un wofati",
+      "desc": "Créez une section de mur en bottes de paille pour une structure de type wofati."
+    },
+    "Wattle and Daub Wall": {
+      "title": "Mur en clayonnage et torchis",
+      "desc": "Tissez un panneau de clayonnage et enduisez-le de plâtre d'argile."
+    },
+    "Cob Bench with Round Pole Roof": {
+      "title": "Banc en cob avec toit de perches rondes",
+      "desc": "Construisez un banc et son abri en matériaux naturels."
+    },
+    "Build a Wofati and Live in It for a Winter": {
+      "title": "Construire un wofati et y vivre un hiver",
+      "desc": "Créez une maison wofati et vivez-y tout au long de l'hiver."
+    },
+    "Drop a 6-8 Inch Dead Standing Tree with a Bow Saw": {
+      "title": "Abattre un arbre mort de 15-20 cm à l'égoine",
+      "desc": "Abattez en sécurité un petit arbre mort sur pied à l'aide d'une égoine."
+    },
+    "Drop a 6-8 Inch Dead Standing Tree with a Chainsaw": {
+      "title": "Abattre un arbre mort de 15-20 cm à la tronçonneuse",
+      "desc": "Abattez en sécurité un petit arbre mort sur pied à la tronçonneuse, sous supervision."
+    },
+    "Drop a 6-8 Inch Live Tree with a Bow Saw": {
+      "title": "Abattre un arbre vivant de 15-20 cm à l'égoine",
+      "desc": "Abattez en sécurité un petit arbre vivant à l'aide d'une égoine."
+    },
+    "Drop a 6-8 Inch Live Tree with a Chainsaw": {
+      "title": "Abattre un arbre vivant de 15-20 cm à la tronçonneuse",
+      "desc": "Abattez en sécurité un petit arbre vivant à la tronçonneuse, sous supervision."
+    },
+    "Limb 4 Trees": {
+      "title": "Ébrancher 4 arbres",
+      "desc": "Retirez les branches de quatre arbres et empilez proprement les brindilles."
+    },
+    "Peel 2 Live Trees and Put Them Up to Dry": {
+      "title": "Écorcer 2 arbres vivants et les mettre à sécher",
+      "desc": "Écorcez deux arbres vivants et stockez-les au sec, surélevés, pour qu'ils sèchent."
+    },
+    "Split and Stack Dead Standing Wood as Firewood": {
+      "title": "Fendre et empiler du bois mort en bois de chauffage",
+      "desc": "Transformez le bois mort sur pied en bois de chauffage empilé."
+    },
+    "Prep 10 Junkpoles": {
+      "title": "Préparer 10 perches (junkpoles)",
+      "desc": "Préparez dix perches droites pour la construction ou la clôture."
+    },
+    "Cleave 6 Shakes with a Froe": {
+      "title": "Fendre 6 bardeaux au fendeur (froe)",
+      "desc": "Fendez six bardeaux de toit dans un bois au fil droit."
+    },
+    "Build 12 Feet of Junkpole Fence or Repair 24 Feet": {
+      "title": "Construire 12 pieds de clôture en perches ou réparer 24 pieds",
+      "desc": "Construisez ou réparez une section de clôture en perches."
+    },
+    "Drop at Least 12 Trees 8 Inches or Larger": {
+      "title": "Abattre au moins 12 arbres de 20 cm ou plus",
+      "desc": "Abattez en sécurité une douzaine d'arbres de taille moyenne."
+    },
+    "One Cord of Firewood Cut and Stacked Under a Roof": {
+      "title": "Un corde de bois coupé et empilé sous un toit",
+      "desc": "Coupez et empilez une corde de bois de chauffage à l'abri de la pluie."
+    },
+    "Make Lumber: a Dozen 2x4s, 1x4s, and 3/8x4s": {
+      "title": "Scier du bois : une douzaine de 2x4, 1x4 et 3/8x4",
+      "desc": "Sciez ou rabotez un premier lot de bois de construction."
+    },
+    "Twig Construction: 5 Foot Tomato Cage and 8 Foot Pole Bean Trellis": {
+      "title": "Construire en branchages : cage à tomates de 5 pieds et treillis de 8 pieds",
+      "desc": "Construisez des supports utiles pour plantes avec des branchages et des perches."
+    },
+    "36 Feet of Junkpole Fence plus Gate with Latch": {
+      "title": "36 pieds de clôture en perches avec portail et loquet",
+      "desc": "Construisez une clôture plus longue en perches avec un portail fonctionnel."
+    },
+    "Plant Tree Seeds for 100 Feet of Living Fence": {
+      "title": "Semer des graines d'arbres pour 100 pieds de haie vivante",
+      "desc": "Semez des graines d'arbres pour une future haie vivante et suivez les pousses."
+    },
+    "Put Up Three Cords of Firewood": {
+      "title": "Préparer trois cordes de bois de chauffage",
+      "desc": "Coupez, fendez et empilez trois cordes de bois de chauffage."
+    },
+    "More Lumber: 8 Dozen 2x4s, 1x4s, and 3/8x4s": {
+      "title": "Plus de bois : 8 douzaines de 2x4, 1x4 et 3/8x4",
+      "desc": "Produisez un grand lot de bois de construction."
+    },
+    "Build Six Rock Jacks from Split Logs": {
+      "title": "Construire six vérins à rocher en rondins fendus",
+      "desc": "Fabriquez des vérins à rocher robustes pour le levage ou le soutien."
+    },
+    "120 Feet of Junkpole Fence with Good Gate and Latch": {
+      "title": "120 pieds de clôture en perches avec bon portail et loquet",
+      "desc": "Construisez une longue clôture en perches avec un portail solide."
+    },
+    "Plant 300 Black Locust Seeds": {
+      "title": "Planter 300 graines de robinier",
+      "desc": "Semez des graines de robinier à grande échelle et suivez la germination."
+    },
+    "Plant 300 Cleavers": {
+      "title": "Planter 300 gaillets",
+      "desc": "Démarrez une parcelle de gaillet et observez sa propagation."
+    },
+    "Plant 300 Nettles": {
+      "title": "Planter 300 orties",
+      "desc": "Démarrez une parcelle d'orties et gérez-la en sécurité."
+    },
+    "Plant 60 Willows": {
+      "title": "Planter 60 saules",
+      "desc": "Cultivez des saules pour le futur fourrage, les clôtures et la vannerie."
+    },
+    "Plant 40 Sweet Sap Silver Maples": {
+      "title": "Planter 40 érables argentés à sève sucrée",
+      "desc": "Établissez des arbres qui peuvent fournir sève et ombre."
+    },
+    "Plant 10 Cedar Trees": {
+      "title": "Planter 10 cèdres",
+      "desc": "Établissez une ligne de cèdres pour l'abri et l'habitat futurs."
+    },
+    "Twig Construction: Six 5 Foot Tomato Cages and Three 8 Foot Trellises": {
+      "title": "Construire en branchages : six cages de 5 pieds et trois treillis de 8 pieds",
+      "desc": "Construisez un jeu complet de supports de jardin en perches et branchages."
+    },
+    "Plant Tree Seeds for 800 Feet of Living Fence": {
+      "title": "Semer des graines d'arbres pour 800 pieds de haie vivante",
+      "desc": "Semez des graines pour une longue haie vivante à venir."
+    },
+    "Lay 50 Feet of Living Hedge": {
+      "title": "Établir 50 pieds de haie vivante",
+      "desc": "Construisez une haie vivante et protégez-la jusqu'à ce qu'elle s'établisse."
+    },
+    "Berm Shed 8x8x8 with 5 Foot Eave": {
+      "title": "Hangar en talus 8x8x8 avec débord de 5 pieds",
+      "desc": "Construisez un hangar en talus aux dimensions indiquées."
+    },
+    "Gin Pole: Lift a 10 Foot Log 15 Feet Off the Ground": {
+      "title": "Mât de levage : hisser un rondin de 10 pieds à 15 pieds",
+      "desc": "Utilisez un mât de levage (gin pole) pour élever un rondin en sécurité."
+    },
+    "Outdoor Mushrooms: 1 lb Each Oyster and Shiitake": {
+      "title": "Champignons extérieurs : 1 livre de pleurotes et de shiitakés",
+      "desc": "Cultivez des pleurotes et des shiitakés en extérieur."
+    },
+    "Put Up Six Cords of Firewood": {
+      "title": "Préparer six cordes de bois de chauffage",
+      "desc": "Produisez et empilez six cordes de bois de chauffage."
+    },
+    "200 2x4s, 1x4s, and 3/8x4s Lumber": {
+      "title": "200 pièces de bois 2x4, 1x4 et 3/8x4",
+      "desc": "Sciez un très grand lot de bois de construction."
+    },
+    "Build 24 Rock Jacks from Split Logs": {
+      "title": "Construire 24 vérins à rocher en rondins fendus",
+      "desc": "Fabriquez une série robuste de vérins à rocher."
+    },
+    "Plant Seeds to Restore Creek Bed": {
+      "title": "Semer pour restaurer un lit de ruisseau",
+      "desc": "Semez et stabilisez une grande zone de restauration de lit de ruisseau."
+    },
+    "Berm Shed: 3 Cells, 12x12x12 Each, 5 Foot Eaves": {
+      "title": "Hangar en talus : 3 cellules de 12x12x12, débords de 5 pieds",
+      "desc": "Construisez un hangar en talus multi-cellules à grande échelle."
+    },
+    "Build Two Skiddable Structures": {
+      "title": "Construire deux structures déplaçables",
+      "desc": "Créez deux structures qui peuvent bouger sur des patins."
+    },
+    "Gin Pole: Lift a 20 Foot Log 20 Feet Off the Ground": {
+      "title": "Mât de levage : hisser un rondin de 20 pieds à 20 pieds",
+      "desc": "Levez un gros rondin avec un système de mât de levage."
+    },
+    "Produce 10 lbs Each Oyster and Shiitake Mushrooms": {
+      "title": "Produire 10 livres chacun de pleurotes et shiitakés",
+      "desc": "Cultivez une grande récolte de champignons extérieurs."
+    },
+    "Carve a Spoon": {
+      "title": "Sculpter une cuillère",
+      "desc": "Façonnez une cuillère en bois utilisable à partir d'une branche ou de chutes."
+    },
+    "Make a Wooden Mallet": {
+      "title": "Faire un maillet en bois",
+      "desc": "Transformez un bâton rond ou une branche en maillet simple."
+    },
+    "Build a Simple Roundwood Bench": {
+      "title": "Construire un banc simple en bois rond",
+      "desc": "Fabriquez un petit banc robuste en bois rond et ligatures."
+    },
+    "Make Coat Hooks from Sticks": {
+      "title": "Faire des patères à partir de bâtons",
+      "desc": "Créez une série de patères avec des bâtons ou petites branches."
+    },
+    "Sharpen a Knife": {
+      "title": "Aiguiser un couteau",
+      "desc": "Aiguisez un couteau de cuisine ou de poche en sécurité."
+    },
+    "Sharpen a Shovel or Hoe": {
+      "title": "Aiguiser une pelle ou un râteau",
+      "desc": "Redonnez son tranchant à un outil de terrassement."
+    },
+    "Oil a Tool": {
+      "title": "Huiler un outil",
+      "desc": "Nettoyez et huilez un outil à main pour prévenir la rouille."
+    },
+    "Repair a Tool": {
+      "title": "Réparer un outil",
+      "desc": "Réparez un manche, un assemblage ou une fixation d'outil cassé."
+    },
+    "Build a Berm": {
+      "title": "Construire une butte de terre",
+      "desc": "Amoncelez et façonnez la terre en une petite butte."
+    },
+    "Dig a Swale": {
+      "title": "Creuser une saignée (swale)",
+      "desc": "Creusez une saignée peu profonde sur la courbe de niveau pour ralentir l'eau."
+    },
+    "Build a Trail": {
+      "title": "Tracer un sentier",
+      "desc": "Créez un sentier simple qui résiste au passage."
+    },
+    "Build a Birdhouse": {
+      "title": "Construire un nichoir",
+      "desc": "Fabriquez un petit nichoir avec des coupes propres et un assemblage solide."
+    },
+    "Make a Shelf": {
+      "title": "Faire une étagère",
+      "desc": "Construisez et fixez une étagère simple."
+    },
+    "Build a Toolbox": {
+      "title": "Construire une caisse à outils",
+      "desc": "Construisez une caisse à outils utile en bois de construction."
+    },
+    "Make a Stool": {
+      "title": "Faire un tabouret",
+      "desc": "Construisez un petit tabouret avec un assemblage solide."
+    },
+    "Cook a Meal on a Rocket Stove": {
+      "title": "Cuisiner un repas sur un poêle rocket",
+      "desc": "Préparez un repas sur un poêle rocket simple ou en camp."
+    },
+    "Build a Small Rocket Stove": {
+      "title": "Construire un petit poêle rocket",
+      "desc": "Assemblez un poêle rocket de base pour cuisiner."
+    },
+    "Make a Rocket Mass Heater Model": {
+      "title": "Faire une maquette de poêle de masse rocket",
+      "desc": "Construisez une petite maquette montrant le fonctionnement d'un poêle de masse rocket."
+    },
+    "Heat Water with a Rocket Heater": {
+      "title": "Chauffer de l'eau avec un poêle rocket",
+      "desc": "Utilisez un système rocket pour chauffer de l'eau pour une tâche."
+    },
+    "Cook Grain 4 Ways": {
+      "title": "Cuisiner une céréale de 4 façons",
+      "desc": "Préparez une même céréale de quatre manières différentes."
+    },
+    "Preserve One Item": {
+      "title": "Conserver un aliment",
+      "desc": "Conservez un aliment par congélation, séchage, fermentation ou mise en conserve."
+    },
+    "Bread from Scratch": {
+      "title": "Du pain fait à la main",
+      "desc": "Faites du pain avec farine, eau, levure ou levain, et sel."
+    },
+    "Hay Box Cooking": {
+      "title": "Cuisson en boîte isolée (hay box)",
+      "desc": "Cuisinez un repas dans une boîte isolée ou cuiseur à foin."
+    },
+    "Build a Bird Feeder or Waterer": {
+      "title": "Construire une mangeoire ou abreuvoir à oiseaux",
+      "desc": "Fabriquez une mangeoire ou une source d'eau pour oiseaux ou pollinisateurs."
+    },
+    "Create a Pollinator Habitat Patch": {
+      "title": "Créer une parcelle d'habitat pour pollinisateurs",
+      "desc": "Plantez et protégez une parcelle qui soutient abeilles et papillons."
+    },
+    "Clean an Animal Shelter or Coop": {
+      "title": "Nettoyer un abri ou poulailler",
+      "desc": "Nettoyez et remettez en état un abri pour animaux ou un poulailler."
+    },
+    "Build a Wildlife Shelter": {
+      "title": "Construire un abri pour la faune",
+      "desc": "Fabriquez un petit abri ou tas de branches pour la faune locale."
+    },
+    "Identify 5 Edible Wild Plants": {
+      "title": "Identifier 5 plantes sauvages comestibles",
+      "desc": "Apprenez à reconnaître cinq plantes sauvages comestibles de votre région."
+    },
+    "Harvest a Wild Food": {
+      "title": "Récolter un aliment sauvage",
+      "desc": "Cueillez baies, fruits, noix ou feuilles avec permission et précaution."
+    },
+    "Make a Wild Tea": {
+      "title": "Faire une tisane sauvage",
+      "desc": "Faites sécher ou infuser une plante sauvage sûre en tisane."
+    },
+    "Preserve a Wild Harvest": {
+      "title": "Conserver une cueillette sauvage",
+      "desc": "Séchez, congelez ou conservez autrement quelque chose de cueilli."
+    },
+    "Cook for a Neighbor or Group": {
+      "title": "Cuisiner pour un voisin ou un groupe",
+      "desc": "Préparez à manger pour quelqu'un en dehors de votre foyer."
+    },
+    "Public Art": {
+      "title": "Art public",
+      "desc": "Créez une œuvre d'art destinée à égayer un espace partagé."
+    },
+    "Host a Workshop or Skill Share": {
+      "title": "Animer un atelier ou un partage de compétences",
+      "desc": "Enseignez ou animez une classe simple pour d'autres."
+    },
+    "Organize a Swap": {
+      "title": "Organiser un troc",
+      "desc": "Coordonnez un troc de biens, de graines ou de compétences."
+    },
+    "Mend a Hole": {
+      "title": "Rapiécer un trou",
+      "desc": "Réparez un trou dans un tissu avec un point simple ou une pièce."
+    },
+    "Replace a Button": {
+      "title": "Remplacer un bouton",
+      "desc": "Recousez un bouton ou remplacez-en un manquant."
+    },
+    "Hem Clothing": {
+      "title": "Ourler un vêtement",
+      "desc": "Raccourcissez ou finissez un ourlet sur un vêtement."
+    },
+    "Sew an Item": {
+      "title": "Coudre un objet",
+      "desc": "Faites un petit objet cousu comme une pochette, une serviette ou un sac."
+    },
+    "Use Greywater-Safe Soap": {
+      "title": "Utiliser un savon compatible eaux grises",
+      "desc": "Choisissez un savon sans danger pour l'usage en eaux grises."
+    },
+    "Reuse Rinse Water on a Plant Bed": {
+      "title": "Réutiliser l'eau de rinçage sur une planche de culture",
+      "desc": "Portez l'eau de rinçage jusqu'à un bassin paillé ou une planche de culture."
+    },
+    "Mulch a Willow Basin": {
+      "title": "Pailler un bassin de saules",
+      "desc": "Ajoutez du paillis autour d'une zone nourricière de saules ou peupliers."
+    },
+    "Plant a Willow or Poplar Cutting": {
+      "title": "Planter une bouture de saule ou peuplier",
+      "desc": "Démarrez une bouture de saule ou de peuplier pour l'usage futur en eaux grises."
+    },
+    "Hammer and Bend a Metal Hook": {
+      "title": "Marteler et plier un crochet en métal",
+      "desc": "Façonnez un crochet simple à partir de fer plat ou rond."
+    },
+    "File and Smooth a Metal Edge": {
+      "title": "Limer et lisser un bord en métal",
+      "desc": "Utilisez une lime pour finir et lisser une pièce métallique."
+    },
+    "Cut Simple Stock with a Hacksaw": {
+      "title": "Couper du métal à la scie égoïne (métaux)",
+      "desc": "Coupez du métal en sécurité avec des outils à main."
+    },
+    "Make a Small Bracket or Hanger": {
+      "title": "Faire un petit support ou crochet",
+      "desc": "Créez un support, crochet ou porte-objet utile en métal."
+    },
+    "Replace a Faucet Washer": {
+      "title": "Remplacer le joint d'un robinet",
+      "desc": "Réparez un gouttage en remplaçant le joint d'un robinet."
+    },
+    "Unclog a Drain": {
+      "title": "Déboucher un évier",
+      "desc": "Débouchez un évier ou une douche avec un outil ou une méthode simple."
+    },
+    "Fix a Dripping Hose Connection": {
+      "title": "Réparer un raccord de tuyau qui fuit",
+      "desc": "Stoppez une fuite sur un tuyau ou un raccord d'eau extérieur."
+    },
+    "Insulate a Hot Water Pipe": {
+      "title": "Isoler un tuyau d'eau chaude",
+      "desc": "Enveloppez un tuyau ou une ligne d'eau chaude pour garder la chaleur."
+    },
+    "Build a Battery and Bulb Circuit": {
+      "title": "Construire un circuit pile et ampoule",
+      "desc": "Réalisez un circuit simple et fonctionnel avec une pile et une ampoule."
+    },
+    "Replace a Lightbulb Safely": {
+      "title": "Remplacer une ampoule en sécurité",
+      "desc": "Changez une ampoule et vérifiez que le luminaire fonctionne."
+    },
+    "Organize and Label Cords": {
+      "title": "Ranger et étiqueter les câbles",
+      "desc": "Triez les câbles et étiquetez-les pour un usage plus sûr."
+    },
+    "Test a Battery and Read Voltage": {
+      "title": "Tester une pile et lire la tension",
+      "desc": "Mesurez ou comparez la tension d'une pile et notez le résultat."
+    },
+    "Sell or Trade Something Homemade": {
+      "title": "Vendre ou troquer une création",
+      "desc": "Fabriquez quelque chose et vendez-le ou troquez-le."
+    },
+    "Track a Simple Budget": {
+      "title": "Tenir un budget simple",
+      "desc": "Notez les entrées et les dépenses pendant une semaine."
+    },
+    "Offer a Service and Track the Earnings": {
+      "title": "Rendre un service et en noter les gains",
+      "desc": "Faites un travail payé ou troqué et notez ce que vous avez gagné."
+    },
+    "Create a Mini Online Listing": {
+      "title": "Créer une petite annonce en ligne",
+      "desc": "Rédigez une annonce simple pour quelque chose que vous avez fait ou offrez."
+    },
+    "Meet a Foreign Currency": {
+      "title": "Découvrir une devise étrangère",
+      "desc": "Découvrez une devise, son symbole et les pays qui l'utilisent."
+    },
+    "Run a Family Currency Exchange": {
+      "title": "Faire un bureau de change familial",
+      "desc": "Échangez un peu d'argent fictif entre deux devises et calculez le total ensemble."
+    },
+    "Start a Paper-Trading Journal": {
+      "title": "Tenir un journal de trading papier",
+      "desc": "Notez un échange fictif : ce que vous attendiez contre ce qui s'est passé."
+    },
+    "Compare Buying Power": {
+      "title": "Comparer le pouvoir d'achat",
+      "desc": "Demandez le prix d'un article courant en dollars, euros et francs."
+    },
+    "Save Toward a Tiny Goal": {
+      "title": "Épargner vers un petit objectif",
+      "desc": "Mettez un peu d'argent de côté vers un petit objectif pendant un mois et suivez-le."
+    },
+    "Track Exchange Rates for a Week": {
+      "title": "Suivre les taux de change pendant une semaine",
+      "desc": "Observez une paire de devises pendant une semaine et notez hausse, baisse ou stagnation."
+    },
+    "Run a Simulated Trade": {
+      "title": "Passer un échange simulé",
+      "desc": "Utilisez un simulateur gratuit : placez un échange papier avec stop-loss et notez le résultat."
+    },
+    "Plan a Get-Off-the-Dollar Experiment": {
+      "title": "Planifier une expérience hors-dollar",
+      "desc": "Concevez une petite façon pour votre famille d'échanger de la valeur au-delà du dollar."
+    },
+    "Host the Family Forex Game Night": {
+      "title": "Animer la soirée forex familiale",
+      "desc": "Réunissez la famille sur un simulateur gratuit et jouez une soirée de missions."
+    },
+    "Present a Family Financial Freedom Plan": {
+      "title": "Présenter le plan de liberté financière familiale",
+      "desc": "Exposez le plan familial d'épargne, d'échange et de croissance de la valeur, à votre façon."
+    },
+    "Run a Simulated Season": {
+      "title": "Jouer une saison simulée",
+      "desc": "Suivez un portefeuille fictif multi-devises pendant une saison complète et notez chaque choix."
+    },
+    "Keep the Golden Rule Alive": {
+      "title": "Garder vivante la règle d'or",
+      "desc": "Apprenez à un ami ou un frère/sœur : protéger l'argent d'abord, apprendre ensuite, trader en dernier."
+    },
+    "Identify 5 Medicinal Herbs": {
+      "title": "Identifier 5 plantes médicinales",
+      "desc": "Apprenez à reconnaître cinq plantes médicinales ou plantes curatives courantes."
+    },
+    "Make a Simple Herbal Tea": {
+      "title": "Faire une tisane simple",
+      "desc": "Faites sécher ou infuser une plante sûre en tisane."
+    },
+    "Prepare a Salve or Balm": {
+      "title": "Préparer une pommade ou un baume",
+      "desc": "Faites une pommade, un baume ou un bâton de soin simple."
+    },
+    "Assemble a Family First Aid Herb Card": {
+      "title": "Composer la fiche herbale familiale de premiers secours",
+      "desc": "Notez quelques plantes et leurs usages sur une fiche familiale."
+    },
+    "Wash Dishes Without a Dishwasher": {
+      "title": "Laver la vaisselle sans lave-vaisselle",
+      "desc": "Lavez la vaisselle à la main et rangez-la propre."
+    },
+    "Clean an Oily Dish Without Soap": {
+      "title": "Nettoyer une assiette grasse sans savon",
+      "desc": "Retirez le gras d'une assiette avec une méthode peu chimique."
+    },
+    "Do Laundry by Hand": {
+      "title": "Laver le linge à la main",
+      "desc": "Lavez les vêtements sans machine."
+    },
+    "Make Rags from Old Clothes": {
+      "title": "Faire des chiffons avec de vieux vêtements",
+      "desc": "Transformez des vêtements usés en chiffons utiles."
+    },
+    "Test Smoke and CO Alarms": {
+      "title": "Tester les détecteurs de fumée et de CO",
+      "desc": "Vérifiez les alarmes de la maison et remplacez les piles si besoin."
+    },
+    "Practice with a Fire Extinguisher": {
+      "title": "S'exercer avec un extincteur",
+      "desc": "Apprenez à utiliser un extincteur en sécurité."
+    },
+    "Clean Gutters Safely": {
+      "title": "Nettoyer les gouttières en sécurité",
+      "desc": "Retirez les débris des gouttières ou descentes d'eau."
+    },
+    "Make an Emergency Supplies Checklist": {
+      "title": "Faire une liste de provisions d'urgence",
+      "desc": "Rédigez une liste familiale de provisions d'urgence."
+    },
+    "Build a Whimsical Invention from Scrap": {
+      "title": "Construire une invention farfelue avec de la récup'",
+      "desc": "Fabriquez quelque chose d'étrange, d'utile ou de drôle avec des matériaux de récupération."
+    },
+    "Create a Secret Family Trail Marker": {
+      "title": "Créer un marqueur de sentier secret familial",
+      "desc": "Concevez un marqueur caché ou un code pour un sentier local."
+    },
+    "Make Music from Found Objects": {
+      "title": "Faire de la musique avec des objets trouvés",
+      "desc": "Créez un instrument simple ou un bruiteur avec des rebuts."
+    },
+    "Design a Zero-Budget Game or Challenge": {
+      "title": "Concevoir un jeu ou défi sans budget",
+      "desc": "Inventez un jeu, une énigme ou un défi familial sans budget."
+    },
+    "Five Animal Exercises": {
+      "title": "Les Cinq Animaux",
+      "desc": "Pratiquez les exercices des Cinq Animaux comme routine corporelle."
+    },
+    "Eight Brocade Pieces": {
+      "title": "Les Huit Pièces de Brocart",
+      "desc": "Faites les Huit Pièces de Brocart comme série d'exercices en douceur."
+    },
+    "Twelve Zodiac Watches": {
+      "title": "Les Douze postures du Zodiaque",
+      "desc": "Pratiquez la série des Douze postures du Zodiaque."
+    },
+    "Deer and Crane Exercises": {
+      "title": "Exercices du Cerf et de la Grue",
+      "desc": "Faites les exercices du Cerf et de la Grue pour l'équilibre et la coordination."
+    },
+    "Cook for a Group": {
+      "title": "Cuisiner pour un groupe",
+      "desc": "Préparez à manger pour un groupe et nettoyez ensuite."
+    },
+    "Host a Workshop": {
+      "title": "Animer un atelier",
+      "desc": "Enseignez une classe simple ou un partage de compétences."
+    },
+    "Build the Wasserwirbler": {
+      "title": "Construire le Wasserwirbler",
+      "desc": "Construisez un entonnoir hyperbolique à sortie filetée ; versez l'eau en tourbillon centripète. Réalisez les tests en aveugle de température et de goût du dossier 001. Notez tous les chiffres et photos."
+    },
+    "Build the Eeman Circuit": {
+      "title": "Construire le circuit Eeman",
+      "desc": "Bobinez une bobine de cuivre auto-connectée (sans alimentation). Réalisez le test en aveugle pulsation/détente contre une bobine témoin du dossier 002. Notez les chiffres."
+    },
+    "Build the Radiant Energy Receiver": {
+      "title": "Construire le récepteur d'énergie radiante",
+      "desc": "Montez une plaque métallique isolée à 3-5 m sur un mât NON métallique, reliez-la via un condensateur à une prise de terre, et mesurez la tension à 0/5/10/15 min sur 5+ séances (matin/midi/nuit, ciel clair/couvert). Puis enveloppez la plaque dans un blindage relié à la terre comme témoin et recommencez. RÉUSSI : le récepteur lit ≥10× le témoin blindé dans ≥4/5 séances. Orage : débranchez et mettez toujours l'antenne à la terre d'abord."
+    }
+    }
   },
   "de": {
     "name": "Deutsch",

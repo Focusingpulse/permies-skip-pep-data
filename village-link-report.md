@@ -1,16 +1,15 @@
 # Village Link Report — 2026-09-11
 
-Checked **682** URLs: **657** OK, **20** HTTP errors, **0** redirects, **5** unreachable/timeouts.
+Checked **686** URLs: **664** OK, **18** HTTP errors, **0** redirects, **4** unreachable/timeouts.
 
-## Unreachable / timeout (5)
+## Unreachable / timeout (4)
 
 - `http://ia800306.us.archive.org/30/items/fe_The_Solar_Greenhouse_Book/The_Solar_Greenhouse_Book.pdf`  (error: URLError)
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)
-- `https://archive.org`  (error: URLError)
 - `https://mountainherbs.net/grown`  (error: URLError)
 
-## HTTP errors (20)
+## HTTP errors (18)
 
 - [`http://byjillb.com`](http://byjillb.com)  (HTTP 404)
 - [`http://innoperma.weebly.com/old`](http://innoperma.weebly.com/old)  (HTTP 404)
@@ -24,12 +23,10 @@ Checked **682** URLs: **657** OK, **20** HTTP errors, **0** redirects, **5** unr
 - [`https://open.oregonstate.education/permaculture/`](https://open.oregonstate.education/permaculture/)  (HTTP 403)
 - [`https://skipthejourney.wordpress.com/`](https://skipthejourney.wordpress.com/)  (HTTP 404)
 - [`https://waldorfteacherresources.com/`](https://waldorfteacherresources.com/)  (HTTP 403)
-- [`https://web.archive.org/web/20240101000000/https://8shields.org`](https://web.archive.org/web/20240101000000/https://8shields.org)  (HTTP 503)
 - [`https://wise.com`](https://wise.com)  (HTTP 403)
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
 - [`https://www.allaboutbirds.org`](https://www.allaboutbirds.org)  (HTTP 403)
 - [`https://www.allaboutbirds.org/guide/`](https://www.allaboutbirds.org/guide/)  (HTTP 403)
-- [`https://www.instagram.com/wizard.mountainman/`](https://www.instagram.com/wizard.mountainman/)  (HTTP 429)
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
 - [`https://www.patreon.com/slowfilms`](https://www.patreon.com/slowfilms)  (HTTP 403)
 
