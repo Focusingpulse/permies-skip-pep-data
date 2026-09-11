@@ -1,17 +1,16 @@
 # Village Link Report — 2026-09-11
 
-Checked **682** URLs: **655** OK, **21** HTTP errors, **0** redirects, **6** unreachable/timeouts.
+Checked **682** URLs: **657** OK, **20** HTTP errors, **0** redirects, **5** unreachable/timeouts.
 
-## Unreachable / timeout (6)
+## Unreachable / timeout (5)
 
 - `http://ia800306.us.archive.org/30/items/fe_The_Solar_Greenhouse_Book/The_Solar_Greenhouse_Book.pdf`  (error: URLError)
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
-- `http://www.davidhuang.org`  (error: TimeoutError)
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)
-- `http://www.theartisthomestead.com`  (error: TimeoutError)
+- `https://archive.org`  (error: URLError)
 - `https://mountainherbs.net/grown`  (error: URLError)
 
-## HTTP errors (21)
+## HTTP errors (20)
 
 - [`http://byjillb.com`](http://byjillb.com)  (HTTP 404)
 - [`http://innoperma.weebly.com/old`](http://innoperma.weebly.com/old)  (HTTP 404)
@@ -21,7 +20,6 @@ Checked **682** URLs: **655** OK, **21** HTTP errors, **0** redirects, **6** unr
 - [`http://www.my10acres.info`](http://www.my10acres.info)  (HTTP 500)
 - [`http://www.sasez.com`](http://www.sasez.com)  (HTTP 404)
 - [`https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`](https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20)  (HTTP 404)
-- [`https://archive.org`](https://archive.org)  (HTTP 503)
 - [`https://extensioncourses.usu.edu/product/permaculture-design-fundamentals/`](https://extensioncourses.usu.edu/product/permaculture-design-fundamentals/)  (HTTP 403)
 - [`https://open.oregonstate.education/permaculture/`](https://open.oregonstate.education/permaculture/)  (HTTP 403)
 - [`https://skipthejourney.wordpress.com/`](https://skipthejourney.wordpress.com/)  (HTTP 404)
