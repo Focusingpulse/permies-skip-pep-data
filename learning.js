@@ -87,7 +87,8 @@ const CURRICULA = [
     evidence_depth: [
       { source: "Marrou, A History of Education in Antiquity (1956)", claim: "Documents the Greek/Roman trivium-quadrivium system and why it dominated for a millennium.", medium: "historical scholarship", confidence: "High (history)", year: "1956" },
       { source: "Rhetoric & argumentation research (modern)", claim: "Debate and argumentation training measurably improve critical thinking and writing (e.g., Kuhn 2005 argumentation studies).", medium: "benchmark study", confidence: "Moderate", year: "2005" },
-      { source: "Dorothy Sayers, 'The Lost Tools of Learning' (1947)", claim: "The modern classical revival essay — a theory, not a study; treat the stage-mapping as a hypothesis.", medium: "author synthesis", confidence: "Low (as evidence)", year: "1947" }
+      { source: "Dorothy Sayers, 'The Lost Tools of Learning' (1947)", claim: "The modern classical revival essay — a theory, not a study; treat the stage-mapping as a hypothesis.", medium: "author synthesis", confidence: "Low (as evidence)", year: "1947" },
+      { source: "Circe Institute & Classical Conversations communities (1990s–today)", claim: "Decades of practitioner documentation from classical schools and homeschool co-ops: memory work songs, Socratic discussion guides, and Great Books reading lists — the 'how to actually do it' corpus.", medium: "practitioner documentation", confidence: "High (practice)", year: "1990s–today" }
     ],
     authors: [{ name: "Plato & Aristotle", work: "The Republic; Rhetoric", point: "The original source — education as the shaping of the soul and the citizen." }, { name: "Quintilian", work: "Institutio Oratoria (c. 95 CE)", point: "The first complete classical pedagogy — the trivium codified by a Roman teacher." }, { name: "Dorothy Sayers", work: "The Lost Tools of Learning (1947)", point: "The spark of the modern classical homeschooling revival." }],
     quests: ["Constitution", "Commerce"],
