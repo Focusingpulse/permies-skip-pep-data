@@ -1917,8 +1917,8 @@ const LANG = {
       "title": "Construire le récepteur d'énergie radiante",
       "desc": "Montez une plaque métallique isolée à 3-5 m sur un mât NON métallique, reliez-la via un condensateur à une prise de terre, et mesurez la tension à 0/5/10/15 min sur 5+ séances (matin/midi/nuit, ciel clair/couvert). Puis enveloppez la plaque dans un blindage relié à la terre comme témoin et recommencez. RÉUSSI : le récepteur lit ≥10× le témoin blindé dans ≥4/5 séances. Orage : débranchez et mettez toujours l'antenne à la terre d'abord."
     }
-  },
-  },
+  }
+},
   "de": {
     "name": "Deutsch",
     "ui": {
@@ -2875,6 +2875,6 @@ const LANG = {
       "title": "Den Strahlungsenergie-Empfänger bauen",
       "desc": "Montiere eine isolierte Metallplatte 3-5 m hoch an einem NICHT-metallischen Mast, verdrahte sie über einen Folienkondensator mit einem Erdungspfahl und miss die Spannung bei 0/5/10/15 Min über 5+ Sitzungen (Morgen/Mittag/Nacht, klar/bewölkt). Dann wickle die Platte als Kontrolle in geerdete Folie und wiederhole. BESTANDEN: Der Empfänger zeigt ≥10× die abgeschirmte Kontrolle in ≥4/5 Sitzungen. Bei Gewitter: immer zuerst die Antenne trennen und erden."
     }
-    }
   }
+}
 };
