@@ -1,17 +1,16 @@
 # Village Link Report — 2026-09-12
 
-Checked **924** URLs: **895** OK, **23** HTTP errors, **0** redirects, **6** unreachable/timeouts.
+Checked **927** URLs: **898** OK, **24** HTTP errors, **0** redirects, **5** unreachable/timeouts.
 
-## Unreachable / timeout (6)
+## Unreachable / timeout (5)
 
 - `http://ia800306.us.archive.org/30/items/fe_The_Solar_Greenhouse_Book/The_Solar_Greenhouse_Book.pdf`  (error: URLError)
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)
-- `http://www.theartisthomestead.com`  (error: TimeoutError)
 - `https://mountainherbs.net/grown`  (error: URLError)
 - `https://tranqvillium.org`  (error: URLError)
 
-## HTTP errors (23)
+## HTTP errors (24)
 
 - [`http://byjillb.com`](http://byjillb.com)  (HTTP 404)
 - [`http://innoperma.weebly.com/old`](http://innoperma.weebly.com/old)  (HTTP 404)
@@ -31,6 +30,7 @@ Checked **924** URLs: **895** OK, **23** HTTP errors, **0** redirects, **6** unr
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
 - [`https://www.allaboutbirds.org`](https://www.allaboutbirds.org)  (HTTP 403)
 - [`https://www.allaboutbirds.org/guide/`](https://www.allaboutbirds.org/guide/)  (HTTP 403)
+- [`https://www.amazon.com/Jill-b/e/B00OJKS5G8?ref=sr_ntt_srch_lnk_3&qid=1578855737&sr=8-3`](https://www.amazon.com/Jill-b/e/B00OJKS5G8?ref=sr_ntt_srch_lnk_3&qid=1578855737&sr=8-3)  (HTTP 405)
 - [`https://www.etsy.com/shop/HomeAndHedgewitchhttps://www.instagram.com/wren_ohio/`](https://www.etsy.com/shop/HomeAndHedgewitchhttps://www.instagram.com/wren_ohio/)  (HTTP 403)
 - [`https://www.instagram.com/gemmaboyd407/?hl=en`](https://www.instagram.com/gemmaboyd407/?hl=en)  (HTTP 429)
 - [`https://www.instagram.com/wizard.mountainman/`](https://www.instagram.com/wizard.mountainman/)  (HTTP 429)
