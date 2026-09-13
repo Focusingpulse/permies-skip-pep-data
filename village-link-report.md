@@ -1,13 +1,15 @@
 # Village Link Report — 2026-09-13
 
-Checked **772** URLs: **751** OK, **17** HTTP errors, **0** redirects, **4** unreachable/timeouts.
+Checked **772** URLs: **749** OK, **17** HTTP errors, **0** redirects, **6** unreachable/timeouts.
 
-## Unreachable / timeout (4)
+## Unreachable / timeout (6)
 
 - `http://ia800306.us.archive.org/30/items/fe_The_Solar_Greenhouse_Book/The_Solar_Greenhouse_Book.pdf`  (error: URLError)
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)
+- `https://extension.sdstate.edu/home-food-preservation-self-study-course`  (error: TimeoutError)
 - `https://mountainherbs.net/grown`  (error: URLError)
+- `https://www.permaculturesouthafrica.co.za/what-is-permaculture-free-course/`  (error: URLError)
 
 ## HTTP errors (17)
 
@@ -19,8 +21,8 @@ Checked **772** URLs: **751** OK, **17** HTTP errors, **0** redirects, **4** unr
 - [`http://www.my10acres.info`](http://www.my10acres.info)  (HTTP 500)
 - [`http://www.sasez.com`](http://www.sasez.com)  (HTTP 404)
 - [`https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`](https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20)  (HTTP 404)
+- [`https://extensioncourses.usu.edu/product/permaculture-design-fundamentals/`](https://extensioncourses.usu.edu/product/permaculture-design-fundamentals/)  (HTTP 403)
 - [`https://skipthejourney.wordpress.com/`](https://skipthejourney.wordpress.com/)  (HTTP 404)
-- [`https://web.archive.org/web/2023/https://extensioncourses.usu.edu/product/permaculture-design-fundamentals/`](https://web.archive.org/web/2023/https://extensioncourses.usu.edu/product/permaculture-design-fundamentals/)  (HTTP 404)
 - [`https://wise.com/us/`](https://wise.com/us/)  (HTTP 403)
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
 - [`https://www.allaboutbirds.org/guide/`](https://www.allaboutbirds.org/guide/)  (HTTP 403)
