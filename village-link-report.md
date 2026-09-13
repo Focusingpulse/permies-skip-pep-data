@@ -1,6 +1,6 @@
 # Village Link Report — 2026-09-13
 
-Checked **773** URLs: **753** OK, **16** HTTP errors, **0** redirects, **4** unreachable/timeouts.
+Checked **773** URLs: **752** OK, **17** HTTP errors, **0** redirects, **4** unreachable/timeouts.
 
 ## Unreachable / timeout (4)
 
@@ -9,7 +9,7 @@ Checked **773** URLs: **753** OK, **16** HTTP errors, **0** redirects, **4** unr
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)
 - `https://mountainherbs.net/grown`  (error: URLError)
 
-## HTTP errors (16)
+## HTTP errors (17)
 
 - [`http://byjillb.com`](http://byjillb.com)  (HTTP 404)
 - [`http://innoperma.weebly.com/old`](http://innoperma.weebly.com/old)  (HTTP 404)
@@ -25,6 +25,7 @@ Checked **773** URLs: **753** OK, **16** HTTP errors, **0** redirects, **4** unr
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
 - [`https://www.allaboutbirds.org/guide/`](https://www.allaboutbirds.org/guide/)  (HTTP 403)
 - [`https://www.allaboutbirds.org/news/`](https://www.allaboutbirds.org/news/)  (HTTP 403)
+- [`https://www.instagram.com/wizard.mountainman/`](https://www.instagram.com/wizard.mountainman/)  (HTTP 429)
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
 - [`https://www.patreon.com/slowfilms`](https://www.patreon.com/slowfilms)  (HTTP 403)
 
