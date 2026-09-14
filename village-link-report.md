@@ -1,10 +1,6 @@
+# Village Link Report — 2026-09-14
 
-## 2026-09-13 maintenance pass
--   added resource: Cornell Lab — All About Birds
-
-# Village Link Report — 2026-09-13
-
-Checked **769** URLs: **751** OK, **14** HTTP errors, **0** redirects, **4** unreachable/timeouts.
+Checked **770** URLs: **752** OK, **14** HTTP errors, **0** redirects, **4** unreachable/timeouts.
 
 ## Unreachable / timeout (4)
 
@@ -24,8 +20,8 @@ Checked **769** URLs: **751** OK, **14** HTTP errors, **0** redirects, **4** unr
 - [`http://www.sasez.com`](http://www.sasez.com)  (HTTP 404)
 - [`https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`](https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20)  (HTTP 404)
 - [`https://skipthejourney.wordpress.com/`](https://skipthejourney.wordpress.com/)  (HTTP 404)
-- [`https://web.archive.org/web/2023/https://waldorfteacherresources.com/`](https://web.archive.org/web/2023/https://waldorfteacherresources.com/)  (HTTP 500)
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
+- [`https://www.allaboutbirds.org/guide/`](https://www.allaboutbirds.org/guide/)  (HTTP 403)
 - [`https://www.instagram.com/wizard.mountainman/`](https://www.instagram.com/wizard.mountainman/)  (HTTP 429)
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
 - [`https://www.patreon.com/slowfilms`](https://www.patreon.com/slowfilms)  (HTTP 403)
