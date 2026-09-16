@@ -12,6 +12,8 @@
 <script src="gamcod.js"></script>
 <script src="thorns.js"></script>
 <script src="digital-defense.js"></script>
+<script src="quest_cards.js"></script>
+<script src="lab.js"></script>
 <style>
 :root {
   --bg-dark: #1a1a2e;
@@ -878,6 +880,7 @@ html[data-biome] .title-main {
   <button class="nav-btn" id="nav-village" onclick="showScreen('village')" data-i18n="Village">Village</button>
   <button class="nav-btn" id="nav-studio" onclick="showScreen('studio')" data-i18n="Studio">Studio</button>
   <button class="nav-btn" id="nav-quests" onclick="showScreen('quests')" data-i18n="Quests">Quests</button>
+  <button class="nav-btn" id="nav-lab" onclick="showScreen('lab')" data-i18n="Lab">Lab</button>
   <button class="nav-btn" id="nav-school" onclick="showScreen('school')" data-i18n="Schoolhouse">Schoolhouse</button>
   <button class="nav-btn" id="nav-library" onclick="showScreen('library')" data-i18n="Library">Library</button>
   <button class="nav-btn" id="nav-learning" onclick="showScreen('learning')" data-i18n="Learning Lab">Learning Lab</button>
@@ -1307,6 +1310,12 @@ Skull: the family's story held in one place, carried across years.
     <button class="nav-btn" id="filter-biome" onclick="setQuestFilter('biome')" data-i18n="My Biome Only">My Biome Only</button>
   </div>
   <div id="quest-list"></div>
+</div>
+
+<!-- Quest Lab -->
+<div class="screen" id="screen-lab">
+  <h2 style="text-align:center; color:var(--accent-gold); margin-bottom:1rem;" data-i18n="The Quest Lab">The Quest Lab</h2>
+  <div id="lab-panel"></div>
 </div>
 
 <!-- Schoolhouse -->
