@@ -290,6 +290,10 @@ const LANG = {
     "Community": {
       "name": "Comunidad",
       "desc": "Practica habilidades sociales, de servicio y de eventos que ayudan a los grupos a prosperar."
+    },
+    "Digital Defense": {
+      "name": "Defensa Digital",
+      "desc": "Protege las cuentas, el dinero y la confianza de la familia contra estafas, phishing y clonación de voz."
     }
   },
   "quests": {
@@ -1250,6 +1254,10 @@ const LANG = {
     "Community": {
       "name": "Communauté",
       "desc": "Pratiquez des compétences sociales, de service et d'événements qui aident les groupes à prospérer."
+    },
+    "Digital Defense": {
+      "name": "Défense Numérique",
+      "desc": "Protégez les comptes, l'argent et la confiance de la famille contre les arnaques, le phishing et le clonage vocal."
     }
   },
   "quests": {
@@ -2210,6 +2218,10 @@ const LANG = {
       "Community": {
         "name": "Gemeinschaft",
         "desc": "Übe soziale, dienstliche und Event-Fähigkeiten, die Gruppen helfen zu gedeihen."
+      },
+      "Digital Defense": {
+        "name": "Digitale Verteidigung",
+        "desc": "Schütze die Konten, das Geld und das Vertrauen der Familie vor Betrug, Phishing und Stimmklonen."
       }
     },
     "quests": {

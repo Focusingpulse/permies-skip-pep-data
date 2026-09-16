@@ -18,7 +18,7 @@ const SURVIVAL_I18N = {
   "en": {
     "ui": {
       "survivalMode": "Survival Mode",
-      "survivalTag": "A preparedness circuit — the family trains for the long haul: water, food, energy, shelter, health, community. Every run is a new drill.",
+      "survivalTag": "A preparedness circuit — the family trains for the long haul: water, food, energy, shelter, health, community, digital defense. Every run is a new drill.",
       "newRun": "🌀 New Drill",
       "runCode": "Drill code",
       "begin": "Begin",
@@ -47,7 +47,8 @@ const SURVIVAL_I18N = {
       "energy":{ "name": "Energy", "line": "Sun, wood, batteries, and fire — power that does not depend on the grid." },
       "shelter":{ "name": "Shelter", "line": "Walls, roof, warmth, and tools — the house that holds through anything." },
       "health":{ "name": "Health", "line": "Medicine, care, and calm — the family body that stays strong." },
-      "community":{ "name": "Community", "line": "Neighbors, trade, and helping hands — no family is an island for long." }
+      "community":{ "name": "Community", "line": "Neighbors, trade, and helping hands — no family is an island for long." },
+      "digital":{ "name": "Digital Defense", "line": "Code word, backups, and a calm pause — the family's shield when trust moves at machine speed." }
     },
     "beats": {
       "sand": [
@@ -84,7 +85,8 @@ const SURVIVAL_I18N = {
       "energy": "The family turned to energy. Sun, wood, and batteries — power in the family's own hands.",
       "shelter": "The family turned to shelter. Walls, warmth, and tools — the house made to hold.",
       "health": "The family turned to health. Medicine and calm — the family body kept strong.",
-      "community": "The family turned to community. Neighbors and trade — strength beyond the front door."
+      "community": "The family turned to community. Neighbors and trade — strength beyond the front door.",
+      "digital": "The family turned to digital defense. Code word, passphrases, and backups — the household's trust made proof, not assumption."
     },
     "epilogue": [
       "The drill closes. {count} tasks sit in the ledger — water rotated, food stored, systems practiced, all proven with photos and witnesses. The family that ran this circuit did not need the world to be easy; it needed to be ready. It is.",
@@ -95,7 +97,7 @@ const SURVIVAL_I18N = {
   "es": {
     "ui": {
       "survivalMode": "Modo Supervivencia",
-      "survivalTag": "Un circuito de preparación — la familia entrena para la larga temporada: agua, comida, energía, refugio, salud y comunidad. Cada partida es un nuevo ejercicio.",
+      "survivalTag": "Un circuito de preparación — la familia entrena para la larga temporada: agua, comida, energía, refugio, salud, comunidad y defensa digital. Cada partida es un nuevo ejercicio.",
       "newRun": "🌀 Nuevo Ejercicio",
       "runCode": "Código de ejercicio",
       "begin": "Comenzar",
@@ -124,7 +126,8 @@ const SURVIVAL_I18N = {
       "energy":{ "name": "Energía", "line": "Sol, leña, baterías y fuego — poder que no depende de la red." },
       "shelter":{ "name": "Refugio", "line": "Muros, techo, calor y herramientas — la casa que aguanta lo que venga." },
       "health":{ "name": "Salud", "line": "Medicina, cuidado y calma — el cuerpo familiar que se mantiene fuerte." },
-      "community":{ "name": "Comunidad", "line": "Vecinos, trueque y manos que ayudan — ninguna familia es una isla por mucho tiempo." }
+      "community":{ "name": "Comunidad", "line": "Vecinos, trueque y manos que ayudan — ninguna familia es una isla por mucho tiempo." },
+      "digital":{ "name": "Defensa Digital", "line": "Palabra clave, copias de seguridad y una pausa con calma — el escudo familiar cuando la confianza se mueve a velocidad de máquina." }
     },
     "beats": {
       "sand": [
@@ -161,7 +164,8 @@ const SURVIVAL_I18N = {
       "energy": "La familia se volvió hacia la energía. Sol, leña y baterías — poder en las propias manos de la familia.",
       "shelter": "La familia se volvió hacia el refugio. Muros, calor y herramientas — la casa hecha para aguantar.",
       "health": "La familia se volvió hacia la salud. Medicina y calma — el cuerpo familiar mantenido fuerte.",
-      "community": "La familia se volvió hacia la comunidad. Vecinos y trueque — fuerza más allá de la puerta."
+      "community": "La familia se volvió hacia la comunidad. Vecinos y trueque — fuerza más allá de la puerta.",
+      "digital": "La familia se volvió hacia la defensa digital. Palabra clave, frases de contraseña y copias — la confianza de la casa, hecha prueba y no suposición."
     },
     "epilogue": [
       "El ejercicio termina. {count} tareas están en el registro — agua rotada, comida guardada, sistemas practicados, todo probado con fotos y testigos. La familia que corrió este circuito no necesitaba que el mundo fuera fácil; necesitaba estar lista. Lo está.",
@@ -172,7 +176,7 @@ const SURVIVAL_I18N = {
   "fr": {
     "ui": {
       "survivalMode": "Mode Survie",
-      "survivalTag": "Un circuit de préparation — la famille s'entraîne pour le long terme : eau, nourriture, énergie, abri, santé, communauté. Chaque partie est un nouvel exercice.",
+      "survivalTag": "Un circuit de préparation — la famille s'entraîne pour le long terme : eau, nourriture, énergie, abri, santé, communauté et défense numérique. Chaque partie est un nouvel exercice.",
       "newRun": "🌀 Nouvel Exercice",
       "runCode": "Code d'exercice",
       "begin": "Commencer",
@@ -201,7 +205,8 @@ const SURVIVAL_I18N = {
       "energy":{ "name": "Énergie", "line": "Soleil, bois, batteries et feu — un pouvoir qui ne dépend pas du réseau." },
       "shelter":{ "name": "Abri", "line": "Murs, toit, chaleur et outils — la maison qui tient contre tout." },
       "health":{ "name": "Santé", "line": "Médecine, soin et calme — le corps familial qui reste fort." },
-      "community":{ "name": "Communauté", "line": "Voisins, échange et mains secourables — aucune famille n'est une île longtemps." }
+      "community":{ "name": "Communauté", "line": "Voisins, échange et mains secourables — aucune famille n'est une île longtemps." },
+      "digital":{ "name": "Défense Numérique", "line": "Mot de code, sauvegardes et une pause calme — le bouclier familial quand la confiance va à la vitesse de la machine." }
     },
     "beats": {
       "sand": [
@@ -238,7 +243,8 @@ const SURVIVAL_I18N = {
       "energy": "La famille s'est tournée vers l'énergie. Soleil, bois et batteries — le pouvoir entre les mains de la famille.",
       "shelter": "La famille s'est tournée vers l'abri. Murs, chaleur et outils — la maison faite pour tenir.",
       "health": "La famille s'est tournée vers la santé. Médecine et calme — le corps familial maintenu fort.",
-      "community": "La famille s'est tournée vers la communauté. Voisins et échange — la force au-delà de la porte."
+      "community": "La famille s'est tournée vers la communauté. Voisins et échange — la force au-delà de la porte.",
+      "digital": "La famille s'est tournée vers la défense numérique. Mot de code, phrases de passe et sauvegardes — la confiance de la maison, faite preuve et non supposition."
     },
     "epilogue": [
       "L'exercice se termine. {count} tâches sont dans le registre — eau rotée, nourriture stockée, systèmes pratiqués, tout prouvé par photos et témoins. La famille qui a couru ce circuit n'avait pas besoin que le monde soit facile ; elle avait besoin d'être prête. Elle l'est.",
@@ -257,7 +263,8 @@ const SURVIVAL_THEMES = {
   energy:  ["Electricity", "Rocket", "Metalworking", "Tool Care"],
   shelter: ["Natural Building", "Woodland Care", "Round Wood Woodworking", "Dimensional Lumber Woodworking"],
   health:  ["Natural Medicine", "Vitality", "Nest"],
-  community: ["Community Living", "Community", "Commerce", "Homesteading", "Oddball"]
+  community: ["Community Living", "Community", "Commerce", "Homesteading", "Oddball"],
+  digital: ["Digital Defense"]
 };
 
 const SURVIVAL_ACTS = [
@@ -546,7 +553,8 @@ function survWaterDepotHTML() {
     <span class="sub" style="font-size:0.75rem;color:var(--text-dim);">${lang === 'es' ? 'Conocimiento práctico del manantial al almacenamiento — sigue la práctica de CDC/FEMA, orientativo, no consejo médico.' : 'Practical knowledge from spring to storage. Guidance follows CDC / FEMA practice — general, not medical advice.'}</span></div>
     ${rotationCard}
     ${guide}
-    ${depot}`;
+    ${depot}
+  ${(typeof survDigitalDepotHTML === 'function') ? survDigitalDepotHTML() : ''}`;
 }
 
 function survPanelHTML() {
