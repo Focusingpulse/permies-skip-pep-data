@@ -307,6 +307,18 @@ const LANG = {
     "Digital Defense": {
       "name": "Defensa Digital",
       "desc": "Protege las cuentas, el dinero y la confianza de la familia contra estafas, phishing y clonación de voz."
+    },
+    "Water Vortex — Aetherforce": {
+      "name": "Vórtice de Agua — Aetherforce",
+      "desc": "Búsqueda de Aetherforce — construye y prueba el vórtice de agua de Schauberger. Una carta de misión es una PRUEBA de una afirmación, no un respaldo. ⚡ No cuenta para las insignias de Permies (se gana aquí)."
+    },
+    "Biocircuitry — Eeman": {
+      "name": "Biocircuitos — Eeman",
+      "desc": "Búsqueda de Aetherforce — construye y prueba el circuito de relajación Eeman (L.E. Eeman). Una prueba de la afirmación del bio-campo, no un respaldo. ⚡ No cuenta para las insignias de Permies (se gana aquí)."
+    },
+    "Aetherforce — Power": {
+      "name": "Aetherforce — Energía",
+      "desc": "Búsqueda de Aetherforce — construye el receptor de energía radiante de Tesla (1901) y mide lo que el cielo realmente te da. Una carta de misión es una PRUEBA de una afirmación, no un respaldo. ⚡ No cuenta para las insignias de Permies (se gana aquí)."
     }
   },
   "quests": {
@@ -1281,6 +1293,18 @@ const LANG = {
     "Digital Defense": {
       "name": "Défense Numérique",
       "desc": "Protégez les comptes, l'argent et la confiance de la famille contre les arnaques, le phishing et le clonage vocal."
+    },
+    "Water Vortex — Aetherforce": {
+      "name": "Vortex d'Eau — Aetherforce",
+      "desc": "Quête Aetherforce — construisez et testez le vortex d'eau de Schauberger. Une carte de quête est un TEST d'une affirmation, pas une approbation. ⚡ Ne compte pas pour les badges Permies (à gagner ici)."
+    },
+    "Biocircuitry — Eeman": {
+      "name": "Biocircuits — Eeman",
+      "desc": "Quête Aetherforce — construisez et testez le circuit de relaxation Eeman (L.E. Eeman). Un test de l'affirmation du bio-champ, pas une approbation. ⚡ Ne compte pas pour les badges Permies (à gagner ici)."
+    },
+    "Aetherforce — Power": {
+      "name": "Aetherforce — Énergie",
+      "desc": "Quête Aetherforce — construisez le récepteur d'énergie radiante de Tesla (1901) et mesurez ce que le ciel vous donne réellement. Une carte de quête est un TEST d'une affirmation, pas une approbation. ⚡ Ne compte pas pour les badges Permies (à gagner ici)."
     }
   },
   "quests": {
@@ -2255,6 +2279,18 @@ const LANG = {
       "Digital Defense": {
         "name": "Digitale Verteidigung",
         "desc": "Schütze die Konten, das Geld und das Vertrauen der Familie vor Betrug, Phishing und Stimmklonen."
+      },
+      "Water Vortex — Aetherforce": {
+        "name": "Wasserwirbel — Aetherforce",
+        "desc": "Aetherforce-Quest — baue und teste Schaubergers Wasserwirbler. Eine Quest-Karte ist ein TEST einer Behauptung, keine Befürwortung. ⚡ Zählt NICHT für Permies-Abzeichen (hier zu verdienen)."
+      },
+      "Biocircuitry — Eeman": {
+        "name": "Biokreise — Eeman",
+        "desc": "Aetherforce-Quest — baue und teste den Eeman-Entspannungskreis (L.E. Eeman). Ein Test der Biofeld-Behauptung, keine Befürwortung. ⚡ Zählt NICHT für Permies-Abzeichen (hier zu verdienen)."
+      },
+      "Aetherforce — Power": {
+        "name": "Aetherforce — Energie",
+        "desc": "Aetherforce-Quest — baue Teslas Empfänger für Strahlungsenergie (1901) und miss, was der Himmel dir wirklich gibt. Eine Quest-Karte ist ein TEST einer Behauptung, keine Befürwortung. ⚡ Zählt NICHT für Permies-Abzeichen (hier zu verdienen)."
       }
     },
     "quests": {

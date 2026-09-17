@@ -7,7 +7,8 @@ const VILLAGE_QUESTS = [
     sand: [
       ["Build a Hugelkultur Bed","Build a small hugelkultur mound with mulch, seeds, and nitrogen-fixing support plants.",["Science","Math"],"🌱"],
       ["Chop and Drop","Cut back plants and leave the material in place as mulch over a garden area.",["Science","PE"],"✂️"],
-      ["Ruth Stout Composting","Set up thick-mulch garden spots using organic layers and kitchen scraps.",["Science","Health"],"🪱"]
+      ["Ruth Stout Composting","Set up thick-mulch garden spots using organic layers and kitchen scraps.",["Science","Health"],"🪱"],
+      ["Grow a New Plant From a Cutting","Take a cutting from an existing plant and root it without manufactured chemicals (willow water is fine), then grow it on to prove viability.",["Science","Math"],"🌱"]
     ],
     straw: [
       ["Seed Saving","Harvest, dry, and store seed from four different plant species.",["Science","Math"],"🫘"],
@@ -195,7 +196,8 @@ const VILLAGE_QUESTS = [
       ["Cook Grain 4 Ways","Prepare one grain in four different ways.",["Science","Math"],"🍚"],
       ["Preserve One Item","Preserve one food item by freezing, drying, fermenting, or canning.",["Science","Health"],"🫙"],
       ["Bread from Scratch","Bake bread from flour, water, yeast or starter, and salt.",["Math","Science"],"🍞"],
-      ["Hay Box Cooking","Cook a meal in a hay box or insulated cooker.",["Science","Health"],"🥘"]
+      ["Hay Box Cooking","Cook a meal in a hay box or insulated cooker.",["Science","Health"],"🥘"],
+      ["Make Salted Pork","Salt-cure two pounds of meat starting from fresh, using only materials that existed 200 years ago (no plastic or aluminum).",["Science","History"],"🥓"]
     ],
     straw: [],
     wood: [],
@@ -270,7 +272,8 @@ const VILLAGE_QUESTS = [
       ["Use Greywater-Safe Soap","Choose a soap that is safe for greywater use.",["Science","Health"],"💧"],
       ["Reuse Rinse Water on a Plant Bed","Carry rinse water to a mulch basin or plant bed.",["Science","Math"],"🌱"],
       ["Mulch a Willow Basin","Add mulch around a willow or poplar feeder area.",["Science","Geography"],"🌿"],
-      ["Plant a Willow or Poplar Cutting","Start a willow or poplar cutting for future greywater use.",["Science","Geography"],"🌳"]
+      ["Plant a Willow or Poplar Cutting","Start a willow or poplar cutting for future greywater use.",["Science","Geography"],"🌳"],
+      ["Reuse Water From a Shower","Place a bucket in the shower to catch water (10–20% is fine, pooless showers only), then use at least three gallons to flush a toilet or water something outside.",["Science","Math"],"🚿"]
     ],
     straw: [],
     wood: [],
@@ -360,7 +363,8 @@ const VILLAGE_QUESTS = [
       ["Identify 5 Medicinal Herbs","Learn to recognize five medicinal herbs or common healing plants.",["Science","Geography"],"🌿"],
       ["Make a Simple Herbal Tea","Dry or steep a safe herb into tea.",["Science","Health"],"🍵"],
       ["Prepare a Salve or Balm","Make a simple salve, balm, or lotion bar.",["Science","Health"],"🧴"],
-      ["Assemble a Family First Aid Herb Card","Write down a few herbs and what they are used for.",["Writing","Health"],"📇"]
+      ["Assemble a Family First Aid Herb Card","Write down a few herbs and what they are used for.",["Writing","Health"],"📇"],
+      ["Make a Rose Blossom Salve","Create a healing salve using rose blossoms — harvest the plant material, infuse it in oil, make the salve, and jar it with a label.",["Science","Health"],"🌹"]
     ],
     straw: [],
     wood: [],
@@ -375,7 +379,8 @@ const VILLAGE_QUESTS = [
       ["Wash Dishes Without a Dishwasher","Wash dishes by hand and put them away clean.",["Health","Science"],"🍽️"],
       ["Clean an Oily Dish Without Soap","Remove grease from a dish using a low-chemical method.",["Science","Health"],"🧼"],
       ["Do Laundry by Hand","Wash clothes without a machine.",["Science","PE"],"🧺"],
-      ["Make Rags from Old Clothes","Turn worn clothing into useful cleaning rags.",["Art","Economics"],"🧵"]
+      ["Make Rags from Old Clothes","Turn worn clothing into useful cleaning rags.",["Art","Economics"],"🧵"],
+      ["Clean a Kitchen","Clean the whole kitchen — sink, counters, table, stovetop, and floor — with before/after photos. Any soap used must be greywater safe or readily biodegradable.",["Health","Science"],"🧽"]
     ],
     straw: [],
     wood: [],
@@ -390,7 +395,8 @@ const VILLAGE_QUESTS = [
       ["Test Smoke and CO Alarms","Check home alarms and replace batteries if needed.",["Health","Science"],"🚨"],
       ["Practice with a Fire Extinguisher","Learn how to use a fire extinguisher safely.",["Health","Science"],"🧯"],
       ["Clean Gutters Safely","Remove debris from gutters or downspouts.",["Science","PE"],"🏠"],
-      ["Make an Emergency Supplies Checklist","Write a family list of emergency supplies.",["Writing","Health"],"📝"]
+      ["Make an Emergency Supplies Checklist","Write a family list of emergency supplies.",["Writing","Health"],"📝"],
+      ["Make a Snare","Build a wire, cable, twine, or rope snare for a specific critter and set it up as if to catch it — no actual trapping needed. Only materials that existed 200 years ago.",["Science","PE"],"🪤"]
     ],
     straw: [],
     wood: [],
