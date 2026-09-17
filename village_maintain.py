@@ -53,6 +53,24 @@ RESOURCE_POOL = [
 # --- Bounded resource addition: how many new resources per run ---
 RESOURCES_PER_RUN = 2
 
+
+def _norm_url(u):
+    """Normalise a URL for dedupe: host without 'www', path without trailing slash."""
+    try:
+        from urllib.parse import urlsplit
+        p = urlsplit(u)
+        host = p.netloc.lower()
+        if host.startswith("www."):
+            host = host[4:]
+        return host + p.path.rstrip("/")
+    except Exception:
+        return u.strip()
+
+
+def _norm_title(t):
+    """Normalise a resource title for dedupe (case/space/punctuation-insensitive)."""
+    return re.sub(r'[^a-z0-9]', '', (t or '').lower())
+
 # Family ledger integration (coordinated crons) — path-independent
 FAMILY_DIR = ""
 for cand in (
@@ -132,13 +150,22 @@ def main():
             lib_marker = matches[-1].end()
         if lib_marker:
             added = 0
-            # Pick resources not already referenced
-            already = set(re.findall(r'href="(https?://[^"]+)"', html))
-            pool = [r for r in RESOURCE_POOL if r[2] not in already]
+            # Pick resources not already referenced. Dedupe on BOTH the
+            # normalised URL and the normalised title: the same resource is
+            # often listed under a slightly different URL (e.g. allaboutbirds.org
+            # vs allaboutbirds.org/guide/), and an exact-URL check would re-add
+            # it every run, filling the Library with duplicate rows.
+            already = {_norm_url(u) for u in re.findall(r'href="(https?://[^"]+)"', html)}
+            already_titles = {_norm_title(t) for t in re.findall(
+                r'class="lib-link"[^>]*>\s*<strong>([^<]+)</strong>', html)}
+            pool = [r for r in RESOURCE_POOL
+                    if _norm_url(r[2]) not in already and _norm_title(r[1]) not in already_titles]
             for topic, title, url, blurb in pool[:RESOURCES_PER_RUN]:
                 new_block = f'\n      <a href="{url}" target="_blank" class="lib-link"><strong>{title}:</strong> {blurb}</a>'
                 html = html[:lib_marker] + new_block + html[lib_marker:]
                 lib_marker += len(new_block)
+                already.add(_norm_url(url))
+                already_titles.add(_norm_title(title))
                 log.append(f"  added resource: {title}")
                 added += 1
             if added:

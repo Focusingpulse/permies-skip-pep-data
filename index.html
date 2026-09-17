@@ -755,6 +755,13 @@ details[open] summary::after { transform: rotate(180deg); }
 .curr-box b { color:var(--accent-green); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.05em; display:block; margin-bottom:0.25rem; }
 .curr-box span { color:var(--text-dim); }
 .curr-evidence { font-size:0.72rem; color:var(--text-dim); font-style:italic; border-top:1px dashed var(--border-subtle); padding-top:0.5rem; }
+.curr-depth { margin-top:0.5rem; font-size:0.76em; }
+.curr-depth > summary { cursor:pointer; color:var(--accent-gold); font-weight:700; font-size:0.78em; letter-spacing:0.02em; padding:0.3rem 0; }
+.curr-depth-list { border-left:2px solid var(--border-subtle); padding-left:0.6rem; margin:0.2rem 0 0.5rem; }
+.curr-depth-row { color:var(--text-light); line-height:1.45; margin-bottom:0.5rem; }
+.curr-med { display:inline-block; background:rgba(88,196,132,0.12); color:var(--accent-green); font-size:0.68em; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; border-radius:6px; padding:0.05rem 0.35rem; margin-right:0.3rem; }
+.curr-dim { color:var(--text-dim); }
+.curr-claim { color:var(--text-dim); font-size:0.94em; margin-top:0.15rem; }
 .curr-quests { font-size:0.75rem; color:var(--accent-gold); margin-top:0.45rem; }
 .curr-quote { font-size:0.82em; color:var(--text-light); font-style:italic; border-left:3px solid var(--accent-green); padding-left:0.65rem; margin:0.5rem 0; }
 .sci-card { background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:12px;
@@ -2738,6 +2745,26 @@ function filterGallery(btn, tag) {
     const modeLinks = learnMode && media[learnMode] && media[learnMode].length
       ? `<div class="modes-row">${media[learnMode].map(r => `<a href="${r.url}" target="_blank" class="mode-link">🔗 ${esc(r.label)}</a>`).join('')}</div>`
       : '';
+    const depth = (c.evidence_depth && c.evidence_depth.length)
+      ? `<details class="curr-depth">
+          <summary>📐 ${llIsEs()?'Profundidad de la evidencia':'Evidence depth'} (${c.evidence_depth.length})</summary>
+          <div class="curr-depth-list">${c.evidence_depth.map(e => `<div class="curr-depth-row">
+            <span class="curr-med">${esc(e.medium||'—')}</span>
+            ${esc(e.source)}${e.year?` <span class="curr-dim">(${esc(e.year)})</span>`:''}
+            ${e.confidence && e.confidence!=='—'?`<span class="curr-dim"> · ${llIsEs()?'confianza':'confidence'}: ${esc(e.confidence)}</span>`:''}
+            ${e.claim?`<div class="curr-claim">${esc(e.claim)}</div>`:''}
+          </div>`).join('')}</div>
+        </details>`
+      : '';
+    const voices = (c.authors && c.authors.length)
+      ? `<details class="curr-depth">
+          <summary>🗣️ ${llIsEs()?'Voces':'Voices'} (${c.authors.length})</summary>
+          <div class="curr-depth-list">${c.authors.map(a => `<div class="curr-depth-row">
+            <b>${esc(a.name)}</b>${a.work?` — ${esc(a.work)}`:''}
+            ${a.point?`<div class="curr-claim">${esc(a.point)}</div>`:''}
+          </div>`).join('')}</div>
+        </details>`
+      : '';
     return `<div class="curr-card">
       <div class="curr-head">
         <div><div class="curr-name">${c.flag} ${c.name}</div><div class="curr-century">${c.century}</div></div>
@@ -2748,8 +2775,10 @@ function filterGallery(btn, tag) {
         <div class="curr-box"><b>${llIsEs()?'Cómo se ve':'What it looks like'}</b><span>${c.looks}</span></div>
         <div class="curr-box"><b>${llIsEs()?'Puntos fuertes':'Strengths'}</b><span>${c.strengths}</span></div>
         <div class="curr-box"><b>${llIsEs()?'Cuidado con':'Watch-outs'}</b><span>${c.watchouts}</span></div>
-        <div class="curr-box"><b>${llIsEs()?'Evidencia':'Evidence'}</b><span>${c.evidence}</span></div>
+        <div class="curr-box"><b>${llIsEs()?'Veredicto':'Verdict'}</b><span>${c.verdict}</span></div>
       </div>
+      ${depth}
+      ${voices}
       <div class="curr-quests">🎯 ${llIsEs()?'Aspectos en la Aldea':'Quests in the Village'}: ${c.quests.join(' · ')}</div>
       <div class="curr-evidence">${llIsEs()?'Etiqueta':'Tag'}: ${c.tag} · ${c.century}</div>
     </div>`;
