@@ -421,16 +421,33 @@ const VILLAGE_QUESTS = [
     type: "RPG",
     biomes: ["apartment","suburb","rural"],
     name: "Vitality",
-    desc: "Build physical vitality with movement, rhythm, and body awareness.",
+    desc: "Build physical vitality with movement, rhythm, and body awareness — traditional energy movements, modern movement science, and the daily habits that hold them together.",
     sand: [
       ["Five Animal Exercises","Practice the Five Animal Exercises as a body-movement routine.",["PE","Health"],"🧘"],
       ["Eight Brocade Pieces","Do the Eight Brocade Pieces as a gentle exercise set.",["PE","Health"],"🧘"],
       ["Twelve Zodiac Watches","Practice the Twelve Zodiac Watches movement set.",["PE","Health"],"🕒"],
-      ["Deer and Crane Exercises","Do Deer and Crane Exercises for balance and coordination.",["PE","Health"],"🦌"]
+      ["Deer and Crane Exercises","Do Deer and Crane Exercises for balance and coordination.",["PE","Health"],"🦌"],
+      ["Five Rites — 21-Day Streak","Do all five rites every morning for 21 days. Start at 5 reps each and add one rep a week. Log the date and one number per day — resting pulse or hours slept.",["PE","Health"],"🏔️"],
+      ["The Five-Minute Energy Routine","Do the full daily energy routine (hook-up, crown pull, three thumps, zip-up, Wayne Cook) every morning for two weeks. Rate how you feel before and after on a 1–5 scale.",["PE","Health"],"✨"],
+      ["Five Minutes of Breath","Do five minutes of cyclic sighing (double inhale, long exhale) every day for two weeks. Rate your mood before and after each time and look at the pattern.",["PE","Health"],"🌬️"],
+      ["Semi-Supine Rest","Do 10 minutes of semi-supine rest (on your back, knees bent, books under the head) every day for two weeks. Notice what changes in how you sit and stand afterward.",["PE","Health"],"🎭"],
+      ["Barefoot & Honest","Spend 15 minutes barefoot on natural ground daily for two weeks. Track sleep hours and how your feet feel. Report what changed and what did not — a null result earns the Skeptic's Star.",["PE","Health","Science"],"🌍"]
     ],
-    straw: [],
-    wood: [],
-    iron: []
+    straw: [
+      ["Eight Brocades — 30 Days","Do the full eight-piece set once a day for 30 days. On day 1 and day 30, time your single-leg stand with eyes closed (each side). Record both numbers.",["PE","Health"],"🧘"],
+      ["The Balance Number","Time your single-leg stand with eyes closed (both sides, best of three). Train tai chi or single-leg stands for eight weeks, then measure again. Record both numbers and the difference.",["PE","Health","Science"],"🌊"],
+      ["Inner Smile Circuit","Learn the Inner Smile: bring attention to your heart, lungs, liver, stomach, kidneys, and spine, one at a time, and smile into each. Do it daily for a week, then teach it to someone else.",["PE","Health"],"☯️"],
+      ["The Bounce & Flow Week","For seven days, do five minutes of whole-body bouncing plus five minutes of continuous flowing movement (no stopping at end ranges). Notice where you feel stiff on day 1 and again on day 7.",["PE","Health","Science"],"🕸️"],
+      ["The Position-Variety Day","For one day, change position every 30 minutes (stand, squat, reach, walk, floor). Count how many distinct positions you actually used. Then do it for a week and compare the count.",["PE","Health","Science"],"🪑"]
+    ],
+    wood: [
+      ["Five Rites — Full 21","Work the Five Rites up to a full 21 repetitions of each movement, done daily before breakfast. Keep the daily log going — the streak is the practice.",["PE","Health"],"🏔️"],
+      ["Microcosmic Orbit","Learn the Microcosmic Orbit: attention up the spine to the crown, down the front to the navel, 9–36 slow loops with the breath. Ten to twenty minutes daily. Adult practice — the Inner Smile is the family doorway.",["PE","Health"],"☯️"],
+      ["Family Form — Teach It","Learn all five animal forms, then teach them to someone else in the family. Each of you picks the animal you are worst at and drills it for two weeks.",["PE","Health"],"🐅"]
+    ],
+    iron: [
+      ["The Family Practice Year","Choose one daily practice from this guild and hold it for a full year — every member picks their own. Keep a shared log. At the end, compare the numbers you recorded on day 1 with the numbers on day 365.",["PE","Health"],"🏅"]
+    ]
   },
   {
     type: "PEP",

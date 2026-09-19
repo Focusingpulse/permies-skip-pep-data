@@ -6,6 +6,7 @@
 <title>The Creative Village — A Roll Making Game (RMG)</title>
 <script src="data.js"></script>
 <script src="learning.js"></script>
+<script src="vitality.js"></script>
 <script src="translations.js"></script>
 <script src="story.js"></script>
 <script src="survival.js"></script>
@@ -1521,7 +1522,18 @@ Skull: the family's story held in one place, carried across years.
 
     <div class="lib-category">
       <h4>PE & Movement</h4>
-      <a href="https://www.youtube.com/results?search_query=five+animal+qigong+for+kids" target="_blank" class="lib-link"><strong>Five Animal Qigong:</strong> Movement patterns based on tiger, deer, bear, monkey, and crane.</a>
+      <div class="lib-link" style="cursor:default; border-left:3px solid var(--accent-gold);"><strong>💪 Start here:</strong> the <strong>Vitality &amp; Movement</strong> tab in the Learning Lab — the full physical-education library: energy medicine, energy movements, fascia and posture science, breathwork, and balance training, each with its own honest evidence label and a proposed PE quest. This category below is the link shelf that feeds it.</div>
+      <a href="https://en.wikipedia.org/wiki/Five_Tibetan_Rites" target="_blank" class="lib-link"><strong>The Five Tibetan Rites:</strong> The five-movement daily set popularized by Peter Kelder's 1939 booklet, with its origin story and its limits laid out plainly.</a>
+      <a href="https://en.wikipedia.org/wiki/Baduanjin_qigong" target="_blank" class="lib-link"><strong>Eight Brocade Pieces (Baduanjin):</strong> The classical eight-movement qigong set — short, gentle, and the most trial-tested of the traditional sets.</a>
+      <a href="https://en.wikipedia.org/wiki/Wu_Qin_Xi" target="_blank" class="lib-link"><strong>Five Animal Frolics (Wu Qin Xi):</strong> Tiger, deer, bear, monkey, crane — attributed to the physician Hua Tuo, c. 200 CE, and the original animal-movement game.</a>
+      <a href="https://en.wikipedia.org/wiki/Tai_chi" target="_blank" class="lib-link"><strong>Tai Chi:</strong> The slow internal martial art with the strongest clinical record of any traditional movement practice — balance and fall prevention especially.</a>
+      <a href="https://en.wikipedia.org/wiki/Alexander_technique" target="_blank" class="lib-link"><strong>The Alexander Technique:</strong> The one posture method that survived a randomized trial (ATEAM, BMJ 2008) — semi-supine rest, inhibition, and direction.</a>
+      <a href="https://www.donnaeden.com" target="_blank" class="lib-link"><strong>Donna Eden — Energy Medicine:</strong> The daily energy routine: hook-up, crown pull, three thumps, zip-up, Wayne Cook posture. Experiential practice, honestly labeled — the energy-testing model is not benchmark-validated.</a>
+      <a href="https://www.mantakchia.com" target="_blank" class="lib-link"><strong>Mantak Chia — Healing Tao:</strong> Taoist internal alchemy: the Microcosmic Orbit, the Inner Smile, and the Six Healing Sounds. Note for parents — parts of the fuller system are adult-only; the Inner Smile is the family doorway.</a>
+      <a href="https://www.fasciacongress.org" target="_blank" class="lib-link"><strong>Fascia Research Congress:</strong> The research line behind the newest entry in the library — Robert Schleip, Helene Langevin, and colleagues on connective tissue as a body-wide sensory organ.</a>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=sedentary+behavior+interruption+metabolic" target="_blank" class="lib-link"><strong>The 'movement diet' research (PubMed):</strong> Breaking up prolonged sitting produces measurable metabolic benefits independent of total exercise — the best-studied practical claim behind the position-variety entry.</a>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=cyclic+sighing+breathwork" target="_blank" class="lib-link"><strong>Breathwork research (PubMed):</strong> The slow-breathing and cyclic-sighing literature — the most evidence-backed five minutes in the whole PE section.</a>
+      <a href="https://www.youtube.com/results?search_query=five+animal+qigong+for+kids" target="_blank" class="lib-link"><strong>Five Animal Qigong for kids:</strong> Follow-along movement patterns based on tiger, deer, bear, monkey, and crane.</a>
       <a href="https://www.youtube.com/results?search_query=cosmic+kids+yoga" target="_blank" class="lib-link"><strong>Cosmic Kids Yoga:</strong> Story-based yoga and movement for younger kids.</a>
       <a href="https://www.gonoodle.com" target="_blank" class="lib-link"><strong>GoNoodle:</strong> Short movement breaks and dance-along videos.</a>
       <a href="https://www.nhs.uk/healthier-families/activities/" target="_blank" class="lib-link"><strong>NHS Healthier Families:</strong> Free indoor and outdoor activity ideas.</a>
@@ -1708,6 +1720,7 @@ Skull: the family's story held in one place, carried across years.
     <div class="ll-panel active" id="panel-gallery"></div>
     <div class="ll-panel" id="panel-modes"></div>
     <div class="ll-panel" id="panel-practices"></div>
+    <div class="ll-panel" id="panel-movement"></div>
     <div class="ll-panel" id="panel-science"></div>
     <div class="ll-panel" id="panel-connection"></div>
     <div class="ll-panel" id="panel-map"></div>
@@ -2681,6 +2694,7 @@ function renderLLTabs() {
     { id:'gallery', label: llIsEs() ? 'Galería de Currículos' : 'Curriculum Gallery' },
     { id:'modes', label: llIsEs() ? 'Modos y Estados' : 'Modes & States' },
     { id:'practices', label: llIsEs() ? 'Prácticas del Corazón y la Mente' : 'Heart & Mind Practices' },
+    { id:'movement', label: llIsEs() ? 'Vitalidad y Movimiento' : 'Vitality & Movement' },
     { id:'science', label: llIsEs() ? 'Ciencia del Aprendizaje' : 'Learning Science' },
     { id:'connection', label: llIsEs() ? 'Ciencia de la Conexión' : 'Connection Science' },
     { id:'map', label: llIsEs() ? 'El Gran Mapa' : 'The Grand Map' },
@@ -2699,6 +2713,7 @@ function renderLLPanel(id) {
   if (id === 'gallery') renderGallery();
   if (id === 'modes') renderModes();
   if (id === 'practices') renderPractices();
+  if (id === 'movement') renderMovement();
   if (id === 'science') renderScience();
   if (id === 'connection') renderConnection();
   if (id === 'map') renderMap();
@@ -2832,6 +2847,53 @@ function renderPractices() {
     </div>`).join('')}</div>
     <div class="curr-box"><b>${llIsEs()?'Robert Gilbert / Vesica':'Robert Gilbert / Vesica Institute'}</b><span style="font-size:0.75rem;color:var(--text-dim);">${S.gilbert}</span></div>`;
   el.innerHTML = heart + six;
+}
+
+/* ---- Vitality & Movement (PE library) — fed by vitality.js, grown by the vitality-engine cron ---- */
+function renderMovement() {
+  const el = document.getElementById('panel-movement');
+  if (typeof MOVEMENT_SYSTEMS === 'undefined') { el.innerHTML = ''; return; }
+  const es = llIsEs();
+  const evWord = { strong: es?'Fuerte':'Strong', moderate: es?'Moderada':'Moderate', weak: es?'Débil / tradicional':'Weak / traditional' };
+
+  const head = `<div class="sec-title" style="margin-top:0.2rem;"><h2 style="font-size:1.05rem;">${es?'💪 Vitalidad y Movimiento — la biblioteca de Educación Física':'💪 Vitality & Movement — the physical education library'}</h2>
+    <span class="sub" style="font-size:0.75rem;color:var(--text-dim);">${es?'Medicina energética, movimientos energéticos y práctica corporal — los sistemas tradicionales Y la investigación moderna que los pone a prueba. Cada entrada lleva su etiqueta honesta de evidencia.':'Energy medicine, energy movements, and practical body practice — the traditional systems AND the modern research that tests them. Every entry carries its honest evidence label.'}</span></div>
+    <div class="curr-box" style="margin-bottom:1rem;"><b>${es?'La regla de honestidad':'The honesty rule'}</b><span style="font-size:0.78rem;color:var(--text-dim);">${es?'Ser antiguo no lo hace verdadero; ser nuevo no lo hace mejor. Donde hay investigación, se nombra. Donde no la hay, la etiqueta lo dice. Una práctica es una práctica hasta que se prueba.':'Old does not make it true; new does not make it better. Where research exists it is named. Where it does not, the label says so. A practice is a practice until it is tested.'}</span></div>`;
+
+  const cards = MOVEMENT_SYSTEMS.map(s => {
+    const research = (s.research || []).map(r => `<div class="curr-box" style="margin-top:0.5rem;">
+      <b><span class="math-tag" style="margin-right:0.35rem;">${esc(r.medium)}</span>${esc(r.source)}</b>
+      <span style="font-size:0.85em;">${esc(r.claim)}</span>
+      <span style="display:block;font-size:0.7em;color:var(--text-dim);margin-top:0.2rem;">${es?'Confianza':'Confidence'}: ${esc(r.confidence)} · ${esc(r.year)}</span>
+    </div>`).join('');
+    const practice = (s.practice || []).map(p => `<div class="curr-box" style="margin-bottom:0.4rem;"><span style="font-size:0.85em;">${esc(p)}</span></div>`).join('');
+    const q = s.quest || [];
+    return `<div class="sci-card" style="margin-bottom:0.9rem;">
+      <div class="sci-head"><div class="sci-name">${s.icon} ${esc(es && s.esName ? s.esName : s.name)} <span style="font-size:0.7rem;color:var(--muted);font-weight:600;">${esc(s.tagline)}</span></div><span class="sci-ev ev-${s.evClass}">${evWord[s.evClass] || esc(s.evidence)}</span></div>
+      <div class="sci-row"><b>${es?'Linaje':'Lineage'}:</b> ${esc(s.lineage)}</div>
+      <div class="sci-row"><b>${es?'Qué es':'What it is'}:</b> ${esc(es && s.esWhat ? s.esWhat : s.what)}</div>
+      <div style="margin-top:0.5rem;"><b style="font-size:0.82rem;">${es?'La práctica':'The practice'}</b></div>
+      <div style="margin-top:0.35rem;">${practice}</div>
+      <div class="sci-row" style="margin-top:0.3rem;"><b>${es?'Dosis':'Dose'}:</b> ${esc(s.reps)}</div>
+      <div style="margin-top:0.5rem;"><b style="font-size:0.82rem;">${es?'Evidencia e investigación':'Evidence & research'} — <span style="color:var(--text-dim);font-weight:400;">${esc(s.evidence)}</span></b></div>
+      ${research}
+      <div class="sci-row" style="margin-top:0.5rem;"><b>${es?'Cómo probarlo':'How to test it'}:</b> ${esc(s.verify)}</div>
+      <div class="sci-row"><b>${es?'En la Aldea':'In the Village'}:</b> ${esc(s.village)}</div>
+      ${q.length ? `<div class="curr-box" style="margin-top:0.5rem;border-left:3px solid var(--accent-gold);"><b>🏅 ${es?'Quest de PE propuesta':'Proposed PE quest'} — ${esc(q[0])}</b><span style="font-size:0.85em;">${esc(q[1])}</span><span style="display:block;font-size:0.7em;color:var(--text-dim);margin-top:0.2rem;">${(q[2]||[]).map(x=>esc(x)).join(' · ')}</span></div>` : ''}
+    </div>`;
+  }).join('');
+
+  const cross = (typeof MOVEMENT_CROSSLINKS !== 'undefined') ? MOVEMENT_CROSSLINKS.map(c => `<div class="curr-box" style="margin-bottom:0.4rem;">
+      <b>${c.icon} ${esc(es && c.esName ? c.esName : c.name)}</b>
+      <span style="font-size:0.8em;">${esc(c.note)}</span>
+      <span style="display:block;font-size:0.68em;color:var(--text-dim);margin-top:0.15rem;">${es?'Ya en la Biblioteca':'Already in the Library'} → ${esc(c.where)}</span>
+    </div>`).join('') : '';
+
+  const domains = `<div class="sec-title" style="margin-top:1.4rem;"><h2 style="font-size:1.0rem;">${es?'Los diez dominios de movimiento':'The ten movement domains'}</h2>
+    <span class="sub" style="font-size:0.72rem;color:var(--text-dim);">${es?'La biblioteca crece un dominio a la vez. Esta es la ruta.':'The library grows one domain at a time. This is the route.'}</span></div>
+    <div>${(typeof MOVEMENT_DOMAINS !== 'undefined' ? MOVEMENT_DOMAINS : []).map(d => `<span class="ll-chip" style="cursor:default;">${esc(d.replace(/-/g,' '))}</span>`).join('')}</div>`;
+
+  el.innerHTML = head + cards + `<div class="sec-title" style="margin-top:1.4rem;"><h2 style="font-size:1.0rem;">${es?'Cruces con el resto de la Biblioteca':'Cross-links to the rest of the Library'}</h2></div>` + cross + domains;
 }
 
 function renderScience() {
