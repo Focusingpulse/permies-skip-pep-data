@@ -7,6 +7,7 @@
 <script src="data.js"></script>
 <script src="learning.js"></script>
 <script src="vitality.js"></script>
+<script src="culture.js"></script>
 <script src="translations.js"></script>
 <script src="story.js"></script>
 <script src="survival.js"></script>
@@ -4493,10 +4494,59 @@ function renderCommons() {
   if (typeof renderThorns === 'function') renderThorns();
 }
 
+/* ---- Cultural elements ledger: the tip jar ---- */
+function cultureLocalKey() { return 'village_culture_expressions_v1'; }
+function getLocalExpressions(key) {
+  try {
+    let all = JSON.parse(localStorage.getItem(cultureLocalKey()) || '{}');
+    return Array.isArray(all[key]) ? all[key] : [];
+  } catch (e) { return []; }
+}
+function getAllLocalExpressions() {
+  try { return JSON.parse(localStorage.getItem(cultureLocalKey()) || '{}'); } catch (e) { return {}; }
+}
+function addExpression(key, name) {
+  let what = prompt('Record a real expression of "' + name + '".\n\nWhat happened, where, and who did it?');
+  if (!what || !what.trim()) return;
+  let all = getAllLocalExpressions();
+  if (!Array.isArray(all[key])) all[key] = [];
+  let today = new Date().toISOString().slice(0, 10);
+  all[key].push({ date: today, domain: 'family', what: what.trim() });
+  try { localStorage.setItem(cultureLocalKey(), JSON.stringify(all)); } catch (e) { alert('Could not save — storage is full or blocked.'); return; }
+  renderCircle();
+}
+function exportExpressions() {
+  let all = getAllLocalExpressions();
+  let lines = [];
+  for (let key in all) {
+    for (let x of all[key]) lines.push(key + ' | ' + (x.date || '') + ' | ' + (x.what || ''));
+  }
+  if (!lines.length) { alert('No expressions recorded yet. Add one with "+ Add one" on any element.'); return; }
+  let text = lines.join('\n');
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(
+      () => alert('Copied ' + lines.length + ' expression(s). Paste them back to the fleet and they join the ledger.'),
+      () => prompt('Copy these and send them back to the fleet:', text)
+    );
+  } else {
+    prompt('Copy these and send them back to the fleet:', text);
+  }
+}
+
 function renderCircle() {
   let container = document.getElementById('circle-rings');
   if (!container) return;
   let html = '';
+  let localCount = 0;
+  let allLocal = getAllLocalExpressions();
+  for (let k in allLocal) localCount += (allLocal[k] || []).length;
+  let seededCount = (typeof CULTURE_TIP_JAR !== 'undefined') ? CULTURE_TIP_JAR.length : 0;
+  let enriched = (typeof CULTURE_ELEMENTS !== 'undefined') ? Object.keys(CULTURE_ELEMENTS).length : 0;
+  html += `<div style="margin-bottom:1.2rem; padding:0.9rem 1rem; border-radius:10px; background:var(--bg-card); border:1px solid var(--border);">`;
+  html += `<p style="font-size:0.88em; margin:0 0 0.5rem 0;"><strong>Why these elements work.</strong> Each one below now carries the brain and behavioural science behind it, the ways to apply it, where our own fleet already does it, and a running list of real expressions — the tip jar. Old does not make it true; where the evidence is thin or the claim is traditional, the label says so.</p>`;
+  html += `<p style="font-size:0.82em; color:var(--text-dim); margin:0;">${enriched} of 64 elements enriched · ${seededCount} seeded expressions · ${localCount} added by this family. Add your own with “+ Add one” on any element — the list grows.</p>`;
+  html += `<div style="margin-top:0.5rem;"><button onclick="exportExpressions()" style="font-size:0.78em; padding:0.3rem 0.8rem; border-radius:999px; border:1px solid var(--accent-gold); background:transparent; color:var(--accent-gold); cursor:pointer;">Copy my additions</button></div>`;
+  html += `</div>`;
   for (let ring of CONNECTION_RING) {
     let ringId = 'ring-' + ring.ring;
     html += `<div style="margin-bottom:1.5rem;">`;
@@ -4507,14 +4557,40 @@ function renderCircle() {
     html += `<div id="${ringId}" style="display:none; padding-top:0.5rem;">`;
     for (let el of ring.elements) {
       let shield = SHIELD_NAMES[el.shield];
+      let key = ring.ring + '.' + el.shield;
+      let C = (typeof CULTURE_ELEMENTS !== 'undefined') ? CULTURE_ELEMENTS[key] : null;
+      let localEx = getLocalExpressions(key);
+      let seededEx = (C && C.expressions) ? C.expressions : [];
+      let allEx = seededEx.concat(localEx);
       html += `<div style="margin:0.5rem 0; padding:0.8rem; border-radius:8px; background:var(--bg-card); border:1px solid var(--border);">`;
       html += `<div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.4rem;">`;
       html += `<span style="font-size:1.3rem;">${shield.icon}</span>`;
       html += `<strong style="color:${ring.color};">${el.name}</strong>`;
+      if (C) html += `<span class="sci-ev ev-${C.evClass}" style="margin-left:0.4rem;">${C.evClass === 'traditional' ? 'Traditional' : C.evClass}</span>`;
       html += `<span style="font-size:0.75em; color:var(--text-dim); margin-left:auto;">${shield.dir} &middot; ${shield.name}</span>`;
       html += `</div>`;
       html += `<p style="font-size:0.88em; color:var(--text); margin:0.3rem 0;">${el.concept}</p>`;
       html += `<p style="font-size:0.82em; color:var(--text-dim); margin:0.3rem 0; padding-left:0.5rem; border-left:2px solid ${ring.color};"><em>Practice:</em> ${el.practice}</p>`;
+      if (C) {
+        html += `<p style="font-size:0.82em; margin:0.4rem 0; padding:0.5rem 0.6rem; border-radius:6px; background:var(--bg);"><strong style="color:var(--accent-green);">Why the brain needs this:</strong> ${esc(C.science)}</p>`;
+        if (C.useCases && C.useCases.length) {
+          html += `<div style="margin:0.4rem 0;"><strong style="font-size:0.82em;">How to apply it</strong>`;
+          for (let u of C.useCases) {
+            html += `<div style="font-size:0.8em; color:var(--text-dim); margin-top:0.25rem;"><span class="math-tag" style="margin-right:0.3rem;">${esc(u.domain)}</span>${esc(u.how)}</div>`;
+          }
+          html += `</div>`;
+        }
+        if (C.fleet) {
+          html += `<p style="font-size:0.8em; margin:0.35rem 0; padding-left:0.5rem; border-left:2px solid var(--accent-gold);"><strong>In our own fleet:</strong> ${esc(C.fleet)}</p>`;
+        }
+        html += `<div style="margin-top:0.5rem; padding-top:0.4rem; border-top:1px dashed var(--border);">`;
+        html += `<div style="display:flex; align-items:center; gap:0.4rem; flex-wrap:wrap;"><strong style="font-size:0.8em;">🫙 The tip jar</strong><span style="font-size:0.72em; color:var(--text-dim);">${allEx.length} recorded expression${allEx.length === 1 ? '' : 's'}</span>`;
+        html += `<button onclick="addExpression('${key}','${esc(el.name).replace(/'/g, "\\'")}')" style="font-size:0.7em; padding:0.2rem 0.55rem; border-radius:999px; border:1px solid var(--accent-gold); background:transparent; color:var(--accent-gold); cursor:pointer;">+ Add one</button></div>`;
+        for (let x of allEx) {
+          html += `<div style="font-size:0.78em; color:var(--text-dim); margin-top:0.3rem;"><span style="color:var(--accent-gold);">${esc(x.date || '')}</span> · <span class="math-tag" style="margin-right:0.3rem;">${esc(x.domain || x.source || '')}</span>${esc(x.what)}</div>`;
+        }
+        html += `</div>`;
+      }
       if (el.vocab && el.vocab.length > 0) {
         html += `<div style="margin-top:0.3rem;">`;
         for (let v of el.vocab) {
