@@ -27,6 +27,13 @@ FIX_PATTERNS = [
     (re.compile(r'(https?://[^\s"\'<>]+?)[,.;]+(?=\s|"|\x27|<|>)'), r"\1", "trailing punct"),
     # stray dash / colon at end of URL
     (re.compile(r'(https?://[^\s"\'<>]+?)[-:]$'), r"\1", "trailing dash"),
+    # missing space between a .com URL and a following word (scraper ate the
+    # separator): "…homestead.comor my artwork" -> "…homestead.com or my artwork".
+    # ".comor" is never a valid TLD, so this is always a typo.
+    (re.compile(r'(https?://[^\s"\'<>]*\.com)or(?=\s)'), r"\1 or", "missing space after .com"),
+    # trailing pipe used as a list separator glued onto the URL
+    # ("…JARS20| Shop:…"): pipe is not a legal URL char, always junk.
+    (re.compile(r'(https?://[^\s"\'<>]+?)\|(?=\s|"|\x27|<|>|$)'), r"\1", "trailing pipe"),
 ]
 
 # --- Vetted library resources (curated pool; added gradually so the Library grows) ---
