@@ -53,7 +53,8 @@ const VILLAGE_QUESTS = [
       ["Operating Window from Scratch","Build a functioning window frame and sash from scratch.",["Math","Science"],"🪟"],
       ["Straw Bale Wall of a Wofati","Create a straw bale wall section for a wofati-style structure.",["Science","Math"],"🏡"],
       ["Wattle and Daub Wall","Weave a wattle panel and daub it with clay plaster.",["Art","Science"],"🧱"],
-      ["Cob Bench with Round Pole Roof","Build a bench and weather cover from natural materials.",["Art","Science"],"🪑"]
+      ["Cob Bench with Round Pole Roof","Build a bench and weather cover from natural materials.",["Art","Science"],"🪑"],
+      ["Make an Ice House","Build a traditional ice storage building — at least 8 cubic yards of ice storage, very well insulated, with drainage for melted ice. Only materials that existed 200 years ago. (PEM BB: traditional.wood.icehouse)",["Science","Math"],"🧊"]
     ],
     iron: [
       ["Build a Wofati and Live in It for a Winter","Create a wofati home and live in it through winter conditions.",["Science","Math"],"🏆"]
@@ -74,7 +75,8 @@ const VILLAGE_QUESTS = [
       ["Split and Stack Dead Standing Wood as Firewood","Turn dead standing wood into stacked firewood.",["Science","Math"],"🔥"],
       ["Prep 10 Junkpoles","Prepare ten straight poles for building or fencing.",["Science","Math"],"🪵"],
       ["Cleave 6 Shakes with a Froe","Split six roof shakes from straight-grained wood.",["Science","Math"],"🏚️"],
-      ["Build 12 Feet of Junkpole Fence or Repair 24 Feet","Construct or repair a junkpole fence section.",["Science","Math"],"🪢"]
+      ["Build 12 Feet of Junkpole Fence or Repair 24 Feet","Construct or repair a junkpole fence section.",["Science","Math"],"🪢"],
+      ["Start a Fire with a Bow Drill","Make a fire using a bow drill — ember to burning tinder. Only materials that existed 200 years ago. (PEM BB: traditional.sand.bowdrill)",["Science","History"],"🔥"]
     ],
     straw: [
       ["Drop at Least 12 Trees 8 Inches or Larger","Safely drop a dozen medium trees.",["Science","PE"],"🌲"],
@@ -380,7 +382,8 @@ const VILLAGE_QUESTS = [
       ["Clean an Oily Dish Without Soap","Remove grease from a dish using a low-chemical method.",["Science","Health"],"🧼"],
       ["Do Laundry by Hand","Wash clothes without a machine.",["Science","PE"],"🧺"],
       ["Make Rags from Old Clothes","Turn worn clothing into useful cleaning rags.",["Art","Economics"],"🧵"],
-      ["Clean a Kitchen","Clean the whole kitchen — sink, counters, table, stovetop, and floor — with before/after photos. Any soap used must be greywater safe or readily biodegradable.",["Health","Science"],"🧽"]
+      ["Clean a Kitchen","Clean the whole kitchen — sink, counters, table, stovetop, and floor — with before/after photos. Any soap used must be greywater safe or readily biodegradable.",["Health","Science"],"🧽"],
+      ["Make 12 Rushlights","Make twelve rushlights (rush candles) 8 inches or longer, dipped in beeswax or combustible fat. Only materials that existed 200 years ago. (PEM BB: traditional.sand.rushlights)",["Art","History"],"🕯️"]
     ],
     straw: [],
     wood: [],

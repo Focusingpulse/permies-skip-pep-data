@@ -6,6 +6,15 @@ const LANG = {
   "es": {
   "name": "Español",
   "ui": {
+    "Enter the coldest temperature (°F) you have seen where you live — e.g. -15 for a cold area, 25 for a mild one.": "Introduce la temperatura más fría (°F) que hayas visto donde vives — p. ej. -15 para una zona fría, 25 para una templada.",
+    "That looks warmer than our map — pick the closest zone.": "Eso parece más cálido que nuestro mapa — elige la zona más cercana.",
+    "GAMCOD Mode — grow a million calories on dirt": "Modo GAMCOD — cultiva un millón de calorías en tierra",
+    "Please assign at least one person to a role.": "Asigna al menos a una persona a un rol.",
+    "PEP Forum opened in a new tab. The post text has been copied to your clipboard. Paste it into your new Permies thread.": "El foro de PEP se abrió en una pestaña nueva. El texto de la publicación se copió a tu portapapeles. Pégalo en tu nuevo hilo de Permies.",
+    "Enter a valid number of hours.": "Introduce un número válido de horas.",
+    "Enter some days or hours to add.": "Introduce algunos días u horas para añadir.",
+    "Could not save — storage is full or blocked.": "No se pudo guardar — el almacenamiento está lleno o bloqueado.",
+    "No expressions recorded yet. Add one with \"+ Add one\" on any element.": "Aún no hay expresiones registradas. Añade una con \"+ Añadir una\" en cualquier elemento.",
     "Setup": "Configuración",
     "Village": "Aldea",
     "Studio": "Estudio",
@@ -322,6 +331,18 @@ const LANG = {
     }
   },
   "quests": {
+    "Make an Ice House": {
+      "title": "Construir una casa de hielo",
+      "desc": "Construir un edificio tradicional de almacenamiento de hielo — al menos 8 yardas cúbicas de almacenamiento, muy bien aislado y con drenaje para el hielo derretido. Solo materiales que existieran hace 200 años. (BB de PEM: traditional.wood.icehouse)"
+    },
+    "Make 12 Rushlights": {
+      "title": "Hacer 12 luces de junco",
+      "desc": "Hacer doce luces de junco de 8 pulgadas (20 cm) o más, sumergidas en cera de abejas o grasa combustible. Solo materiales que existieran hace 200 años. (BB de PEM: traditional.sand.rushlights)"
+    },
+    "Start a Fire with a Bow Drill": {
+      "title": "Encender un fuego con taladro de arco",
+      "desc": "Hacer fuego con un taladro de arco — de ascua a yesca encendida. Solo materiales que existieran hace 200 años. (BB de PEM: traditional.sand.bowdrill)"
+    },
     "Build a Hugelkultur Bed": {
       "title": "Construir un lecho Hugelkultur",
       "desc": "Construye un montículo hugelkultur pequeño con mantillo, semillas y plantas fijadoras de nitrógeno."
@@ -995,6 +1016,15 @@ const LANG = {
   "fr": {
   "name": "Français",
   "ui": {
+    "Enter the coldest temperature (°F) you have seen where you live — e.g. -15 for a cold area, 25 for a mild one.": "Saisissez la température la plus froide (°F) que vous ayez vue chez vous — p. ex. -15 pour une région froide, 25 pour une région douce.",
+    "That looks warmer than our map — pick the closest zone.": "Cela semble plus chaud que notre carte — choisissez la zone la plus proche.",
+    "GAMCOD Mode — grow a million calories on dirt": "Mode GAMCOD — cultivez un million de calories sur terre",
+    "Please assign at least one person to a role.": "Veuillez assigner au moins une personne à un rôle.",
+    "PEP Forum opened in a new tab. The post text has been copied to your clipboard. Paste it into your new Permies thread.": "Le forum PEP s'est ouvert dans un nouvel onglet. Le texte de la publication a été copié dans votre presse-papiers. Collez-le dans votre nouveau fil Permies.",
+    "Enter a valid number of hours.": "Saisissez un nombre d'heures valide.",
+    "Enter some days or hours to add.": "Saisissez quelques jours ou heures à ajouter.",
+    "Could not save — storage is full or blocked.": "Impossible d'enregistrer — le stockage est plein ou bloqué.",
+    "No expressions recorded yet. Add one with \"+ Add one\" on any element.": "Aucune expression enregistrée pour l'instant. Ajoutez-en une avec « + Ajouter » sur n'importe quel élément.",
     "Setup": "Configuration",
     "Village": "Village",
     "Studio": "Studio",
@@ -1308,6 +1338,18 @@ const LANG = {
     }
   },
   "quests": {
+    "Make an Ice House": {
+      "title": "Construire une glacière",
+      "desc": "Construire un bâtiment traditionnel de stockage de glace — au moins 8 verges cubes de stockage, très bien isolé, avec drainage pour la glace fondue. Uniquement des matériaux existant il y a 200 ans. (BB PEM : traditional.wood.icehouse)"
+    },
+    "Make 12 Rushlights": {
+      "title": "Fabriquer 12 roseaux-lumières",
+      "desc": "Fabriquer douze rushlights (chandelles de roseau) de 8 pouces ou plus, trempées dans de la cire d'abeille ou de la graisse combustible. Uniquement des matériaux existant il y a 200 ans. (BB PEM : traditional.sand.rushlights)"
+    },
+    "Start a Fire with a Bow Drill": {
+      "title": "Allumer un feu avec un archet",
+      "desc": "Faire un feu avec un archet (bow drill) — de la braise à l'amadou enflammé. Uniquement des matériaux existant il y a 200 ans. (BB PEM : traditional.sand.bowdrill)"
+    },
     "Build a Hugelkultur Bed": {
       "title": "Construire une butte hugelkultur",
       "desc": "Construisez un petit monticule hugelkultur avec paillis, graines et plantes fixatrices d'azote."
@@ -1981,6 +2023,15 @@ const LANG = {
   "de": {
     "name": "Deutsch",
     "ui": {
+    "Enter the coldest temperature (°F) you have seen where you live — e.g. -15 for a cold area, 25 for a mild one.": "Gib die kälteste Temperatur (°F) ein, die du bei dir zu Hause erlebt hast — z. B. -15 für eine kalte Gegend, 25 für eine milde.",
+    "That looks warmer than our map — pick the closest zone.": "Das wirkt wärmer als unsere Karte — wähle die nächstgelegene Zone.",
+    "GAMCOD Mode — grow a million calories on dirt": "Modo GAMCOD — cultiva un millón de calorías en tierra",
+    "Please assign at least one person to a role.": "Bitte weise mindestens einer Person eine Rolle zu.",
+    "PEP Forum opened in a new tab. The post text has been copied to your clipboard. Paste it into your new Permies thread.": "Das PEP-Forum wurde in einem neuen Tab geöffnet. Der Beitragstext wurde in deine Zwischenablage kopiert. Füge ihn in deinen neuen Permies-Thread ein.",
+    "Enter a valid number of hours.": "Gib eine gültige Anzahl von Stunden ein.",
+    "Enter some days or hours to add.": "Gib einige Tage oder Stunden zum Hinzufügen ein.",
+    "Could not save — storage is full or blocked.": "Speichern nicht möglich — der Speicher ist voll oder blockiert.",
+    "No expressions recorded yet. Add one with \"+ Add one\" on any element.": "Noch keine Ausdrücke erfasst. Füge einen mit „+ Hinzufügen“ bei einem beliebigen Element hinzu.",
       "Setup": "Einrichtung",
       "Village": "Dorf",
       "Studio": "Atelier",
@@ -2294,6 +2345,18 @@ const LANG = {
       }
     },
     "quests": {
+    "Make an Ice House": {
+      "title": "Ein Eishaus bauen",
+      "desc": "Ein traditionelles Eislagergebäude errichten — mindestens 8 Kubik-Yards Lagerplatz, sehr gut isoliert, mit Abfluss für das Schmelzwasser. Nur Materialien, die vor 200 Jahren existierten. (PEM-BB: traditional.wood.icehouse)"
+    },
+    "Make 12 Rushlights": {
+      "title": "12 Schilflichter herstellen",
+      "desc": "Zwölf Rushlights (Schilfkerzen) von mindestens 8 Zoll Länge herstellen, in Bienenwachs oder brennbarem Fett getaucht. Nur Materialien, die vor 200 Jahren existierten. (PEM-BB: traditional.sand.rushlights)"
+    },
+    "Start a Fire with a Bow Drill": {
+      "title": "Ein Feuer mit dem Bogenbohrer entfachen",
+      "desc": "Feuer mit einem Bogenbohrer machen — von der Glut zur brennenden Zunder. Nur Materialien, die vor 200 Jahren existierten. (PEM-BB: traditional.sand.bowdrill)"
+    },
     "Build a Hugelkultur Bed": {
       "title": "Ein Hugelkultur-Hochbeet bauen",
       "desc": "Baue einen kleinen Hugelkultur-Hügel mit Mulch, Samen und stickstofffixierenden Begleitpflanzen."
