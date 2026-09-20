@@ -139,7 +139,9 @@ const CULTURE_ELEMENTS = {
       { domain: "project", how: "Start outdoor sessions with silent listening before instruction." }
     ],
     fleet: "The scout pods — they read the terrain (sites, repos, advisories) before anything is acted on.",
-    expressions: []
+    expressions: [
+      { date: "2026-09-17", source: "fleet", what: "The svpwiki scout read 'constant read timeouts' as a mis-set instrument rather than a failing source — the wiki's page list legitimately takes 17-25s and our timeout sat right at the edge. The deeper catch: on a failed fetch the old code advanced the offset, so a transient timeout permanently skipped that page range on resume. The terrain had been read wrong, and the wrong reading was silently costing ground." }
+    ]
   },
 
   /* ---------- RING 2 — Childhood Vigor (9–teens) ---------- */
@@ -892,5 +894,6 @@ const CULTURE_TIP_JAR = [
   { date: "2026-09-17", element: "3.2", domain: "fleet", what: "Pods were commissioned with their own doctrines rather than one undifferentiated fleet." },
   { date: "2026-09-06", element: "8.3", domain: "fleet", what: "User submissions land in quarantine and a human reviews them before anything publishes — asking permission is built into the pipeline." },
   { date: "2026-09-19", element: "6.4", domain: "fleet", what: "The preview cleaner repaired 1,787 contaminated previews across a 76,000-document archive — tending the wild." },
-  { date: "2026-09-19", element: "8.6", domain: "village", what: "The Grounding/Earthing entry is labeled 'Weak / contested' and included anyway — the honesty rule applied to the Village's own content." }
+  { date: "2026-09-19", element: "8.6", domain: "village", what: "The Grounding/Earthing entry is labeled 'Weak / contested' and included anyway — the honesty rule applied to the Village's own content." },
+  { date: "2026-09-17", element: "1.8", domain: "fleet", what: "The svpwiki scout read 'constant read timeouts' as a mis-set instrument rather than a failing source — the wiki's page list legitimately takes 17-25s and our timeout sat right at the edge. The deeper catch: on a failed fetch the old code advanced the offset, so a transient timeout permanently skipped that page range on resume. The terrain had been read wrong, and the wrong reading was silently costing ground." }
 ];
