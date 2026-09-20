@@ -160,6 +160,76 @@ const MOVEMENT_SYSTEMS = [
   },
 
   {
+    id: "sun-salutation",
+    icon: "☀️",
+    name: "The Sun Salutation (Surya Namaskar)",
+    esName: "El Saludo al Sol (Surya Namaskar)",
+    tagline: "Twelve linked postures, one breath each — and an origin story that is not as old as it looks.",
+    lineage: "Sun prostration is ancient; the twelve-pose sequence as it is taught today is not. The first systematic published version is by Bhawanrao Shriniwasrao Pant Pratinidhi, the Raja of Aundh, in 'Surya Namaskars' (Marathi 1923, English 1928) — he credited the Raja of Miraj for teaching it to him in 1908, and his own father for practising it for 55 years. Scholars of modern yoga (Norman Sjoman, 'The Yoga Tradition of the Mysore Palace', 1996; Mark Singleton, 'Yoga Body', 2010) read the sequence as a 20th-century synthesis of Indian dand and vyayama physical culture with Western exercise, not an unbroken Vedic lineage. The claim that it is ancient is a claim; the documented publication date is 1928.",
+    what: "A fixed sequence of twelve postures performed as one continuous flow, one breath per transition: prayer, arms raised, standing forward fold, the equestrian lunge, plank, eight-limbs, low cobra, downward-facing dog, the lunge on the other side, forward fold, arms raised, prayer. One round is the full twelve; a set is however many rounds you do. The whole method is the linking — movement tied to breath — and the pace is the dial: slow is mobility work, fast is aerobic work.",
+    esWhat: "Una secuencia fija de doce posturas en un solo flujo continuo, una respiración por transición: oración, brazos arriba, flexión de pie, la zancada, plancha, ocho miembros, cobra baja, perro boca abajo, la zancada del otro lado, flexión, brazos arriba, oración. Una ronda son las doce; la serie es cuantas rondas hagas. El método es el enlace — movimiento con respiración — y el ritmo es el dial: lento es movilidad, rápido es trabajo aeróbico.",
+    practice: [
+      "1. Prayer — stand tall, palms together at the chest. Exhale.",
+      "2. Arms raised — inhale, sweep the arms overhead, a gentle look up and a small backbend.",
+      "3. Forward fold — exhale, fold from the hips with soft knees, hands beside the feet.",
+      "4. Equestrian lunge — inhale, step the RIGHT foot back, left foot between the hands, look forward.",
+      "5. Plank — exhale, step the left foot back so the body is one straight line, shoulders over wrists.",
+      "6. Eight limbs — exhale, lower knees, chest, and chin to the floor (or hold a low plank if knees are tender).",
+      "7. Cobra — inhale, peel the chest up from the UPPER back, elbows soft, shoulders down, neck long.",
+      "8. Downward-facing dog — exhale, press the hips up and back, spine long, heels reaching down.",
+      "9. Equestrian lunge — inhale, step the RIGHT foot forward between the hands.",
+      "10. Forward fold — exhale, step the left foot to meet the right and fold again.",
+      "11. Arms raised — inhale, rise all the way up, arms overhead.",
+      "12. Prayer — exhale, hands back to the chest. That is one round.",
+      "Alternate which foot goes back first on the next round. The alternating lead is the part families skip, and the part that keeps it even.",
+      "Gentle version for beginners, young children, and stiff mornings: hands on a chair or blocks instead of the floor, knees down in step 6, low cobra instead of high, and no jumping — step everything. The flow is the point, not the depth."
+    ],
+    reps: "Start at 2–3 slow rounds once a day and build to 6–12. Slow (roughly 4–6 seconds per transition) is mobility and breath practice. Fast (about 20 seconds per round) is a real aerobic session — the fast version has been measured at roughly 80–90% of age-predicted maximum heart rate.",
+    evidence: "Moderate — small trials, mostly one research tradition",
+    evClass: "moderate",
+    research: [
+      {
+        source: "Dubey S, Choudhary PK, Saha S, Ochiana N, Antohe B, Alexe CI, 'Multidimensional Effects of Suryanamaskar on Physical, Physiological, and Psychological Outcomes: A Systematic Review', Healthcare 14(13):1924 (2026)",
+        claim: "Fourteen studies met inclusion. Findings point the same direction — fitness, physiological markers, and well-being all move favorably — but the studies were too heterogeneous to pool, a meta-analysis was not possible, most were conducted in India, and the review did not run a formal certainty-of-evidence (GRADE) assessment. The authors' own conclusion is that confidence should be interpreted with caution.",
+        medium: "systematic review (PRISMA; RoB 2 / ROBINS-I), narrative synthesis",
+        confidence: "Moderate (direction) · low (certainty)",
+        year: "2026"
+      },
+      {
+        source: "Bandyopadhyay A, Halder K, Pathak A, Kumar B, Saha M, 'Surya Namaskar: As an Alternative for Aerobic Fitness', International Journal of Yoga 15(2):163-167 (2022)",
+        claim: "Comparing metabolic responses between Surya Namaskar and bicycle ergometry, the sequence produced a greater arteriovenous oxygen difference at 71-80% of VO2max while keeping a lower respiratory exchange ratio. The authors conclude it can serve as genuine aerobic exercise. This is a physiology study, not an outcome trial — it measures the intensity, not the long-term benefit.",
+        medium: "small controlled physiology study, single lab",
+        confidence: "Moderate (as an intensity measure)",
+        year: "2022"
+      },
+      {
+        source: "Patil K, Afle G, 'Effect of fast Surya Namaskar versus aerobic dance on cardiorespiratory fitness in children aged 10-13 years at the end of 4 weeks', International Journal of Community Medicine and Public Health (2025)",
+        claim: "120 schoolchildren were randomised to fast Surya Namaskar or aerobic dance, three alternate days a week for four weeks. Both groups improved VO2max significantly (Surya Namaskar 38.64 to 40.60 ml/kg/min; aerobic dance 38.82 to 41.22). Aerobic dance improved slightly more. The honest read: the sequence works as school-based aerobic exercise, and it is not magic relative to other exercise.",
+        medium: "randomised comparative trial (n=120, 4 weeks)",
+        confidence: "Moderate (short trial, single site)",
+        year: "2025"
+      },
+      {
+        source: "Mody BS, 'Acute effects of Surya Namaskar on the cardiovascular & metabolic system', Journal of Bodywork and Movement Therapies 15(3):343-347 (2011)",
+        claim: "A single session raises heart rate and metabolic rate into a training range — the acute-effect evidence behind calling the sequence aerobic.",
+        medium: "small acute-effect study",
+        confidence: "Moderate",
+        year: "2011"
+      },
+      {
+        source: "Mullerpatan RP, Agarwal BM, Shetty T, Nehete GR, Narasipura OS, 'Kinematics of Suryanamaskar using three-dimensional motion capture', International Journal of Yoga 12:124-131 (2019)",
+        claim: "Three-dimensional motion capture of the sequence — the biomechanical description of what the joints actually do. Useful because it shows the load is real: repeated wrist extension in plank and cobra, repeated lumbar extension in the backbend.",
+        medium: "biomechanical measurement study",
+        confidence: "Moderate (as description)",
+        year: "2019"
+      }
+    ],
+    verify: "Two home tests, both real numbers. (1) Aerobic: after one fast round, take your pulse for 15 seconds immediately and multiply by four. Compare it to 80-90% of your age-predicted maximum (220 minus your age). If you land in that band, the 'it is aerobic' claim is confirmed on you. (2) Mobility: sit-and-reach and single-leg stand with eyes closed, on day 1 and day 30. If neither number moves in 30 days, that is a real result too — write it down.",
+    village: "The natural warm-up form for the Vitality guild, and the library's best teaching case for the honesty rule: the practice is genuinely good exercise AND the origin story everyone repeats is a 20th-century claim. A family that learns both has learned how to read a lineage. It pairs with the Five Rites (a fixed daily set) and the Eight Brocades (a slow standing set) — three traditional sets, three different jobs.",
+    quest: ["Sun Salutation — 30 Days & the Origin Check", "Do 6 slow rounds every morning for 30 days. Record resting pulse and single-leg stand time on day 1 and day 30. Then find out who first published the modern twelve-pose sequence and in what year — and write one sentence on why that matters.", ["PE", "Health", "History"], "☀️"]
+  },
+
+  {
     id: "eden-energy-medicine",
     icon: "✨",
     name: "Donna Eden — Energy Medicine Daily Routine",
