@@ -1,6 +1,6 @@
 # Village Link Report — 2026-09-21
 
-Checked **823** URLs: **802** OK, **17** HTTP errors, **0** redirects, **4** unreachable/timeouts.
+Checked **823** URLs: **803** OK, **16** HTTP errors, **0** redirects, **4** unreachable/timeouts.
 
 ## Unreachable / timeout (4)
 
@@ -9,7 +9,7 @@ Checked **823** URLs: **802** OK, **17** HTTP errors, **0** redirects, **4** unr
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)
 - `https://mountainherbs.net/`  (error: URLError)
 
-## HTTP errors (17)
+## HTTP errors (16)
 
 - [`http://byjillb.com`](http://byjillb.com)  (HTTP 404)
 - [`http://innoperma.weebly.com/old`](http://innoperma.weebly.com/old)  (HTTP 404)
@@ -20,7 +20,6 @@ Checked **823** URLs: **802** OK, **17** HTTP errors, **0** redirects, **4** unr
 - [`http://www.sasez.com`](http://www.sasez.com)  (HTTP 404)
 - [`https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`](https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20)  (HTTP 404)
 - [`https://blog.lostartpress.com/2025/05/19/the-free-video-series-of-build-a-chair-from-bullst/`](https://blog.lostartpress.com/2025/05/19/the-free-video-series-of-build-a-chair-from-bullst/)  (HTTP 403)
-- [`https://course.thannal.com/courses/kickstart-to-natural-building-6986d90b438f33547bf96e99`](https://course.thannal.com/courses/kickstart-to-natural-building-6986d90b438f33547bf96e99)  (HTTP 405)
 - [`https://handtoolwoodworking.com/green-woodworking-videos/`](https://handtoolwoodworking.com/green-woodworking-videos/)  (HTTP 403)
 - [`https://skipthejourney.wordpress.com/`](https://skipthejourney.wordpress.com/)  (HTTP 404)
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
