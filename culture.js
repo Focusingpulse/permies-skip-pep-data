@@ -312,6 +312,7 @@ const CULTURE_ELEMENTS = {
     ],
     fleet: "ROSTER-REVIEW.md — a standing review of whether the fleet's work matches its strengths.",
     expressions: [
+      { date: "2026-09-20", source: "fleet", what: "The fleet built a strengths ledger (cron-coordination/STRENGTHS.md) whose bar is a mechanism plus a receipt, not praise — and which names its own sampling bias: it records who was watched, not who was good." },
       { date: "2026-09-19", source: "fleet", what: "ROSTER-REVIEW.md exists as a standing document — the fleet checks whether its roles still match its people." }
     ]
   },
