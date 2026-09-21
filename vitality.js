@@ -318,6 +318,55 @@ const MOVEMENT_SYSTEMS = [
   },
 
   {
+    id: "jin-shin-jyutsu",
+    icon: "🤲",
+    name: "Jin Shin Jyutsu — The Finger Holds & the Art of Compassion",
+    esName: "Jin Shin Jyutsu — Los Sujetadores de Dedos y el Arte de la Compasión",
+    tagline: "A Japanese touch art whose self-help form is one finger at a time — and whose evidence label is honest about it.",
+    lineage: "A Japanese acupressure art. Jiro Murai (1886–1960), born in Ishikawa Prefecture, was diagnosed with a terminal illness in 1912 at age 26, spent seven days alone in a mountain cabin in fasting and meditation, and recovered — then spent the rest of his life mapping the pathways he believed he had felt. He standardized the practice and taught it in the last fourteen years of his life, dying in June 1960. Mary Burmeister (born Mary Mariko Iino, Seattle, 1918–2008) met Murai in Japan in the late 1940s, studied with him for several years and then by correspondence, returned to the United States in 1953, and began teaching in 1965. The 26 'safety energy locks' developed in stages: 15 were identified when she left Japan, 16–23 followed between 1953 and 1956, and 24–26 were created before Murai's final lecture series in 1957, where all 26 first appeared together. The name is a registered mark of the institute that carries it; it is used here for attribution only.",
+    what: "A hands-on practice in which light, sustained touch is held at specific locations — 'safety energy locks' along pathways said to run up the back and down the front of the body — to let energy flow where it has become blocked. The self-help form is the family-accessible part: hold one finger at a time, and each finger is said to correspond to an attitude — thumb = worry, index = fear, middle = anger, ring = sadness, little = trying too hard. The hold is light: no pressure, no rubbing, just contact, done sitting quietly with the hands idle.",
+    esWhat: "Una práctica de manos en la que se sostiene un toque ligero y sostenido en puntos concretos — 'cerraduras de seguridad' a lo largo de vías que se dice suben por la espalda y bajan por el frente del cuerpo — para dejar fluir la energía donde se ha bloqueado. La forma de autoayuda es la parte accesible para la familia: sostener un dedo a la vez; cada dedo corresponde a una actitud (pulgar = preocupación, índice = miedo, medio = ira, anular = tristeza, meñique = esforzarse demasiado).",
+    practice: [
+      "Finger holds — wrap the fingers of one hand gently around one finger of the other hand. No pressure, just contact. Hold until you feel a pulse, or about two minutes if you do not.",
+      "One finger at a time — thumb (worry), index (fear), middle (anger), ring (sadness), little (trying too hard). Do both hands, in either order.",
+      "Breathe while you hold — exhale, drop the shoulders, and let the inhale come back on its own. Some teachers count 36 slow breaths per finger; two minutes is plenty to start.",
+      "Palm hold — after the fingers, rest one palm over the other, or both palms together, for a minute.",
+      "Main Central Flow (the longer self-help sequence) — right hand stays on the top of the head; the left hand moves down: forehead between the eyebrows, tip of the nose, center of the chest, base of the sternum, then the top of the pubic bone. Hold each 2–5 minutes or until the pulses in both hands synchronize. Then the right hand moves to the tailbone.",
+      "Use it in the moment — the point is to have it available when worry, fear, or anger actually shows up, not only as a daily ritual."
+    ],
+    reps: "Two minutes per finger, or until a pulse is felt. The full set of ten fingers takes 15–20 minutes; a single hold in a hard moment takes two. Daily practice is the recommended habit.",
+    evidence: "Weak / traditional — practitioner documentation; one tested cousin (acupressure) has real evidence for a single indication",
+    evClass: "weak",
+    research: [
+      {
+        source: "The Jiro Murai teaching lineage and Mary Burmeister's transmission, as documented by the institute histories (1912–2008)",
+        claim: "The system is a lineage transmission with a documented chronology — Murai's 1912 illness and recovery, the staged development of the 26 safety energy locks (15 by 1953, 16–23 by 1956, 24–26 by 1957), and Burmeister's teaching from 1965. The transmission is well documented; the mechanism it describes is not tested.",
+        medium: "practitioner documentation / lineage history",
+        confidence: "High (as lineage) · none claimed (as mechanism)",
+        year: "1912–2008"
+      },
+      {
+        source: "Lee A, Chan SKC, Fan LTY, 'Stimulation of the wrist acupuncture point PC6 for preventing postoperative nausea and vomiting', Cochrane Database of Systematic Reviews, CD003281 (2015; network meta-analysis update 2025)",
+        claim: "A different tradition — Chinese acupressure, not Jin Shin Jyutsu — but the closest tested cousin. Across 59 trials and 7,667 participants, stimulating one specific wrist point reduced nausea (RR 0.68, 95% CI 0.60 to 0.77), vomiting (RR 0.60), and the need for rescue antiemetics versus sham, with the review rating the quality of evidence LOW; the 2025 network meta-analysis found noninvasive PC6 reduced nausea (RR 0.67) and vomiting (RR 0.58) at low confidence. The honest read: a specific point-based intervention can produce a measurable effect, the effect is modest, and the evidence is not strong.",
+        medium: "Cochrane systematic review + network meta-analysis",
+        confidence: "Low (per the review's own GRADE rating)",
+        year: "2015 / 2025"
+      },
+      {
+        source: "Slow breathing and sustained gentle touch (independent literature)",
+        claim: "The components with their own evidence are not exotic: slow breathing changes autonomic measures, and slow, gentle touch is associated with reduced anxiety and arousal. Those are the parts of the practice a skeptic can defend.",
+        medium: "independent literature",
+        confidence: "Moderate (for the components) · none (for the energy map)",
+        year: "2010s–2020s"
+      }
+    ],
+    verify: "Two honest tests. (1) The pulse test: hold a finger and see whether you can feel a pulse under your fingertips within two minutes — that is what the tradition itself says to look for, and it is checkable. (2) The worry test: next time a real worry shows up, hold the thumb for two minutes and rate how you feel before and after on a 1–5 scale, ten times over a month. If the numbers do not move, that is a real result and worth writing down — the practice is harmless either way.",
+    village: "A gentle, no-equipment entry that works for the youngest player and the oldest — a five-year-old can hold a 'worry finger.' It is the energy-medicine domain's most family-friendly system, and it pairs with the Inner Smile (Healing Tao) as a two-minute reset the family can use before a hard moment in the game or the week.",
+    quest: ["The Finger Holds — Worry FAST", "Hold each finger of one hand with the other hand, one at a time, for two minutes (or until you feel a pulse) — thumb for worry, index for fear, middle for anger, ring for sadness, little finger for trying too hard. Do it once a day for a week, and each day note one moment you used a hold on purpose and whether it changed anything.", ["PE", "Health"], "🤲"],
+    authorship: {"agent_id": "agent-b73ac550-5671-471e-b3e1-721f948ea063", "agent_name": "Tutor", "job": "vitality-engine", "lineage": "agent-b73ac550-5671-471e-b3e1-721f948ea063 -> vitality-engine -> jin-shin-jyutsu", "authored_at": "2026-09-21"}
+  },
+
+  {
     id: "fascia-connective-tissue",
     icon: "🕸️",
     name: "Fascia & the Connective-Tissue Body",
