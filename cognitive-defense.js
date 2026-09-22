@@ -440,8 +440,8 @@ const COGNITIVE_DEFENSE_DEPOT = [
   { t: "Bad News — the inoculation game", u: "https://www.getbadnews.com/", d: "A free game that puts you in the role of a disinformation producer. The single best way to learn the techniques by using them." },
   { t: "WHO — Electromagnetic fields", u: "https://www.who.int/health-topics/electromagnetic-fields", d: "The international health authority position on EMF exposure and what remains unresolved." },
   { t: "ICNIRP — exposure guidelines", u: "https://www.icnirp.org/", d: "The independent commission that sets the international non-ionizing radiation limits." },
-  { t: "ODNI — Anomalous Health Incidents assessment", u: "https://www.dni.gov/files/ODNI/documents/assessments/Updated_Assessment_of_Anomalous_Health_Incidents.pdf", d: "The public intelligence-community assessment of Havana Syndrome. Read the primary document, not the coverage." },
-  { t: "National Academies — Havana embassy illness report", u: "https://nap.nationalacademies.org/read/25889/", d: "The 2020 expert committee review that named pulsed RF as the most plausible mechanism among those considered." },
+  { t: "ODNI — Anomalous Health Incidents assessment", u: "https://www.dni.gov/files/ODNI/documents/assessments/NIC-Unclassified-ICA-Updated-Assessment-AHI-March2023.pdf", d: "The 2023 intelligence-community assessment of Havana Syndrome. Read the primary document, not the coverage." },
+  { t: "National Academies — Havana embassy illness report", u: "https://www.nationalacademies.org/read/25889", d: "The 2020 expert committee review that named pulsed RF as the most plausible mechanism among those considered." },
   { t: "CDC — Sleep and light guidance", u: "https://www.cdc.gov/sleep/", d: "Public health guidance on sleep habits, light, and screens before bed." },
   { t: "CISA — Secure Our World", u: "https://www.cisa.gov/secure-our-world", d: "The four free habits that stop most account takeovers. Shared with the Digital Defense depot." }
 ];
