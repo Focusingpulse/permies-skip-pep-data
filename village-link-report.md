@@ -1,18 +1,18 @@
 # Village Link Report — 2026-09-22
 
-Checked **839** URLs: **813** OK, **19** HTTP errors, **0** redirects, **7** unreachable/timeouts.
+Checked **839** URLs: **812** OK, **20** HTTP errors, **0** redirects, **7** unreachable/timeouts.
 
 ## Unreachable / timeout (7)
 
 - `http://ia800306.us.archive.org/30/items/fe_The_Solar_Greenhouse_Book/The_Solar_Greenhouse_Book.pdf`  (error: URLError)
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
-- `http://www.davidhuang.org`  (error: TimeoutError)
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)
-- `http://www.theartisthomestead.com`  (error: TimeoutError)
 - `https://8shields.org/`  (error: URLError)
+- `https://consumer.ftc.gov/articles/scammers-use-fake-emergencies-steal-your-money`  (error: TimeoutError)
+- `https://consumer.ftc.gov/features/pass-it`  (error: TimeoutError)
 - `https://mountainherbs.net/`  (error: URLError)
 
-## HTTP errors (19)
+## HTTP errors (20)
 
 - [`http://byjillb.com`](http://byjillb.com)  (HTTP 404)
 - [`http://innoperma.weebly.com/old`](http://innoperma.weebly.com/old)  (HTTP 404)
@@ -26,6 +26,7 @@ Checked **839** URLs: **813** OK, **19** HTTP errors, **0** redirects, **7** unr
 - [`https://handtoolwoodworking.com/green-woodworking-videos/`](https://handtoolwoodworking.com/green-woodworking-videos/)  (HTTP 503)
 - [`https://nap.nationalacademies.org/read/25889/`](https://nap.nationalacademies.org/read/25889/)  (HTTP 404)
 - [`https://skipthejourney.wordpress.com/`](https://skipthejourney.wordpress.com/)  (HTTP 404)
+- [`https://web.archive.org/web/2023/https://waldorfteacherresources.com/`](https://web.archive.org/web/2023/https://waldorfteacherresources.com/)  (HTTP 500)
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
 - [`https://www.allaboutbirds.org/`](https://www.allaboutbirds.org/)  (HTTP 403)
 - [`https://www.amazon.com/Jill-b/e/B00OJKS5G8?ref=sr_ntt_srch_lnk_3&qid=1578855737&sr=8-3`](https://www.amazon.com/Jill-b/e/B00OJKS5G8?ref=sr_ntt_srch_lnk_3&qid=1578855737&sr=8-3)  (HTTP 405)
