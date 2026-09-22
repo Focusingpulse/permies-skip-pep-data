@@ -645,6 +645,7 @@ const CULTURE_ELEMENTS = {
     ],
     fleet: "The staleness watchdog and staleness-false-positives.md — the fleet names what is stuck.",
     expressions: [
+      { date: "2026-09-22", source: "fleet", what: "The translation sweeper went back for work that had been stranded since 2026-09-11 — and found the reason: 37 manifests where completed chunks were never registered, a systemic bug rather than one stalled job. Clearing the block fixed the cause, not just the symptom: Korschelt 1892 (131/131 chunks, stranded 11 days) was assembled, five blocked documents were unblocked and translated, and the fully-translated count rose 66→71." },
       { date: "2026-09-19", source: "fleet", what: "staleness-false-positives.md exists so the watchdog's own mistakes are recorded rather than quietly tolerated." }
     ]
   },
@@ -896,5 +897,7 @@ const CULTURE_TIP_JAR = [
   { date: "2026-09-06", element: "8.3", domain: "fleet", what: "User submissions land in quarantine and a human reviews them before anything publishes — asking permission is built into the pipeline." },
   { date: "2026-09-19", element: "6.4", domain: "fleet", what: "The preview cleaner repaired 1,787 contaminated previews across a 76,000-document archive — tending the wild." },
   { date: "2026-09-19", element: "8.6", domain: "village", what: "The Grounding/Earthing entry is labeled 'Weak / contested' and included anyway — the honesty rule applied to the Village's own content." },
-  { date: "2026-09-17", element: "1.8", domain: "fleet", what: "The svpwiki scout read 'constant read timeouts' as a mis-set instrument rather than a failing source — the wiki's page list legitimately takes 17-25s and our timeout sat right at the edge. The deeper catch: on a failed fetch the old code advanced the offset, so a transient timeout permanently skipped that page range on resume. The terrain had been read wrong, and the wrong reading was silently costing ground." }
+  { date: "2026-09-17", element: "1.8", domain: "fleet", what: "The svpwiki scout read 'constant read timeouts' as a mis-set instrument rather than a failing source — the wiki's page list legitimately takes 17-25s and our timeout sat right at the edge. The deeper catch: on a failed fetch the old code advanced the offset, so a transient timeout permanently skipped that page range on resume. The terrain had been read wrong, and the wrong reading was silently costing ground." },
+  { date: "2026-09-20", element: "3.5", domain: "fleet", what: "The fleet built a strengths ledger (cron-coordination/STRENGTHS.md) whose bar is a mechanism plus a receipt, not praise — and which names its own sampling bias: it records who was watched, not who was good." },
+  { date: "2026-09-22", element: "6.6", domain: "fleet", what: "The translation sweeper went back for work that had been stranded since 2026-09-11 — and found the reason: 37 manifests where completed chunks were never registered, a systemic bug rather than one stalled job. Clearing the block fixed the cause, not just the symptom: Korschelt 1892 (131/131 chunks, stranded 11 days) was assembled, five blocked documents were unblocked and translated, and the fully-translated count rose 66→71." }
 ];
