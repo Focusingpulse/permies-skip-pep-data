@@ -415,6 +415,75 @@ const MOVEMENT_SYSTEMS = [
   },
 
   {
+    id: "self-myofascial-release",
+    icon: "🧻",
+    name: "Foam Rolling — the Practice Whose Name Is Wrong",
+    esName: "Rodillo de Espuma — la Práctica con el Nombre Equivocado",
+    tagline: "A real effect with a false explanation — the best evidence lesson in the library.",
+    lineage: "Not a tradition and not ancient: foam rolling spread out of 1990s sports rehabilitation and manual therapy, where the foam roller was a cheap stand-in for a therapist's hands. It borrowed its name from 'myofascial release', a clinical technique developed by physical therapist John F. Barnes from the 1980s. The name stuck; the mechanism was never demonstrated. The research line that actually checked it is modern sports science — Behm & Wilke (2019), Wiewelhove et al. (2019), Beardsley & Skarabot (2015).",
+    what: "You roll a limb or your back slowly over a firm foam cylinder (or a ball), letting your body weight do the work, pausing on tender spots. The claimed effect is that the pressure releases fascia — breaking up adhesions, scar tissue, and knots. The measured effects are real but modest: a small acute increase in range of motion and a reduction in how sore you feel. The claimed mechanism is not supported. Dense fascia (the iliotibial band, the plantar fascia) is far too strong for any pressure a person can apply — and the same range-of-motion gain shows up in the limb you did not roll, which a local mechanical release cannot explain.",
+    esWhat: "Ruedas un brazo, una pierna o la espalda lentamente sobre un cilindro de espuma firme (o una pelota), dejando que el peso del cuerpo haga el trabajo y pausando en los puntos sensibles. El efecto que se le atribuye es que la presión libera la fascia: rompe adherencias, tejido cicatricial y nudos. Los efectos medidos son reales pero modestos: un pequeno aumento agudo del rango de movimiento y menos sensacion de dolor. El mecanismo que se le atribuye no esta respaldado. La fascia densa (la banda iliotibial, la fascia plantar) es demasiado fuerte para cualquier presion que una persona pueda aplicar, y la misma mejora del rango aparece en la extremidad que NO rodaste, lo que una liberacion mecanica local no puede explicar.",
+    practice: [
+      "Pick one area — calf, thigh, or upper back — and roll slowly, about an inch per second. Slow matters more than hard.",
+      "Pause on a tender spot for 20 to 30 seconds and breathe. Do not grind through sharp pain.",
+      "Keep it short: one to two minutes per area is the dose most studies used. More is not better.",
+      "Use it before activity as a warm-up rather than as the main recovery tool — that is where the evidence is stronger.",
+      "For the back, use a ball against a wall or the floor instead of arching over a roller, and never roll the lower back directly over the spine.",
+      "Skip it on an acute injury, a bruise, a swollen joint, or skin that is numb or tingling. Pressure on a fresh injury is not release, it is more injury."
+    ],
+    reps: "One to two minutes per area, before activity, a few times a week. The effect fades within minutes, so treat it as a warm-up, not a cure.",
+    evidence: "Moderate — real trials, small and partly negligible effects; the effect is real, the name and the mechanism are not supported",
+    evClass: "moderate",
+    research: [
+      {
+        source: "Behm & Wilke, 'Do Self-Myofascial Release Devices Release Myofascia? Rolling Mechanisms: A Narrative Review', Sports Medicine 49:1173-1181 (2019)",
+        claim: "There is insufficient evidence that foam rollers release myofascial restrictions — the authors call the term self-myofascial release a misnomer. The plausible mechanisms are neurophysiological (pain modulation, stretch tolerance, parasympathetic relaxation) and hydration or thixotropic changes, not mechanical breakdown of tissue.",
+        medium: "peer-reviewed narrative review",
+        confidence: "Strong (that the mechanism claim is unsupported)",
+        year: "2019"
+      },
+      {
+        source: "Chaudhry, Schleip, Ji, Bukiet, Maney & Findley, 'Three-Dimensional Mathematical Model for Deformation of Human Fasciae in Manual Therapy', J Am Osteopath Assoc 108(8):379-390 (2008)",
+        claim: "A finite-deformation model shows that forces outside the normal physiological range are required to produce even 1% compression or shear in dense fascia (fascia lata, plantar fascia). The palpable release therapists report cannot be deformation of those firm tissues.",
+        medium: "biomechanical modelling study",
+        confidence: "Strong (mechanism)",
+        year: "2008"
+      },
+      {
+        source: "Wiewelhove, Doeweling, Schneider, Hottenrott, Meyer, Kellmann, Pfeiffer & Ferrauti, 'A Meta-Analysis of the Effects of Foam Rolling on Performance and Recovery', Frontiers in Physiology 10:376 (2019)",
+        claim: "Across 21 studies the effects are small to partly negligible: pre-rolling raised flexibility about 4% and sprint about 0.7%, jump and strength changes were negligible, and post-rolling reduced perceived muscle pain (g = 0.47). The authors conclude the evidence better supports foam rolling as a warm-up than as a recovery tool.",
+        medium: "meta-analysis (21 studies)",
+        confidence: "Moderate-Strong",
+        year: "2019"
+      },
+      {
+        source: "Beardsley & Skarabot, 'Effects of self-myofascial release: A systematic review', Journal of Bodywork and Movement Therapies 19(4):747-758 (2015)",
+        claim: "Acutely, self-myofascial release increases flexibility and reduces muscle soreness without harming performance, and may acutely improve arterial and endothelial function and parasympathetic activity. Evidence for long-term flexibility gains is conflicting.",
+        medium: "systematic review",
+        confidence: "Moderate",
+        year: "2015"
+      },
+      {
+        source: "Nakamura, Konrad, Kiyono, Sato, Yahata, Yoshida et al., 'Local and Non-local Effects of Foam Rolling on Passive Soft Tissue Properties and Spinal Excitability', Frontiers in Physiology 12:702042 (2021)",
+        claim: "Rolling one calf increased ankle range of motion in BOTH legs, and the change tracked stretch tolerance rather than any change in muscle stiffness or shear elastic modulus. A local mechanical release cannot act on the limb that was never touched — this is the cleanest evidence that the effect is nervous-system, not tissue.",
+        medium: "controlled trial (mechanism)",
+        confidence: "Moderate-Strong",
+        year: "2021"
+      },
+      {
+        source: "Young, Spence & Behm, 'Roller massage decreases spinal excitability to the soleus', Journal of Applied Physiology (2018)",
+        claim: "Roller massage temporarily inhibited the H-reflex (spinal excitability) in an intensity-dependent way — direct evidence that rolling changes nervous-system signalling, not only local tissue.",
+        medium: "peer-reviewed physiology study",
+        confidence: "Moderate",
+        year: "2018"
+      }
+    ],
+    verify: "Roll ONE calf or thigh for two minutes, then measure a reach or an ankle bend on BOTH legs. If the leg you never touched also improves, the effect is in your nervous system, not in the tissue under the roller — that is the whole lesson. Then re-measure after five minutes: the gain fades, which is what a temporary change in how you sense stretch looks like, and not what a structural release would look like.",
+    village: "The library's honesty laboratory: a practice with a real, measurable effect and a false, popular explanation. It is how the section teaches the difference between 'this helps' and 'this is why it helps' — the same distinction the whole archive is built on.",
+    quest: ["The Roller Test — Does It Really Release?", "Foam roll only your left calf for two minutes. Measure how far you can reach, or bend your ankle, on both legs before and after. If the right leg improves too, the roller is not releasing tissue — your nervous system is changing how much stretch you tolerate. Record both numbers and write one sentence about what you think is happening.", ["PE", "Health", "Science"], "🧻"]
+  },
+
+  {
     id: "posture-movement-science",
     icon: "🪑",
     name: "Posture Science — What Actually Holds Up",
