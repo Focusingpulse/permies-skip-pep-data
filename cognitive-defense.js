@@ -474,6 +474,14 @@ const COGNITIVE_CROSSLINKS = [
     note: "The scam side: code words, phishing, voice cloning, credit freezes, backups. That guild defends the accounts. This section defends the attention. They are two halves of one shield."
   },
   {
+    id: "meditation-abilities",
+    icon: "🎯",
+    name: "Meditation & Abilities — the practice-to-ability map",
+    esName: "Meditación y Habilidades — el mapa de práctica a habilidad",
+    where: "Learning Lab — Meditation & Abilities",
+    note: "Where attention training comes from as a tradition. The focused-attention entry there carries the four-link chain and the honest caveat that far transfer is contested — the same practice this section puts to work as a defense."
+  },
+  {
     id: "learning-science",
     icon: "🧪",
     name: "Learning Science — Attention & Memory",

@@ -7,6 +7,7 @@
 <script src="data.js"></script>
 <script src="learning.js"></script>
 <script src="vitality.js"></script>
+<script src="meditation.js"></script>
 <script src="culture.js"></script>
 <script src="translations.js"></script>
 <script src="story.js"></script>
@@ -1546,6 +1547,18 @@ Skull: the family's story held in one place, carried across years.
     </div>
 
     <div class="lib-category">
+      <h4>Meditation &amp; Abilities</h4>
+      <div class="lib-link" style="cursor:default; border-left:3px solid var(--accent-gold);"><strong>🎯 Start here:</strong> the <strong>Meditation &amp; Abilities</strong> tab in the Learning Lab — the practice-to-ability map. Every entry carries the whole chain (practice → energy-body effect → ability → long-term meaning) with each link labeled separately, and every entry has a dose and a way to tell whether it worked. It keeps its negative results on purpose. This category below is the link shelf that feeds it.</div>
+      <a href="https://8shields.org/" target="_blank" class="lib-link"><strong>8 Shields — the 512 Project:</strong> The lineage behind the sit spot, and the 64 cultural elements already mapped in the Village's Mentor's Circle.</a>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=slow+breathing+heart+rate+variability" target="_blank" class="lib-link"><strong>Breathwork research (PubMed):</strong> The primary literature behind the most measurable entry in the section — HRV, respiratory rate, and vagal tone are all real instruments here.</a>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=focused+attention+meditation+sustained+attention" target="_blank" class="lib-link"><strong>Focused-attention research (PubMed):</strong> Attention training, including the contested question of how far the benefit transfers beyond the trained task.</a>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=meditation+adverse+effects" target="_blank" class="lib-link"><strong>Meditation adverse effects (PubMed):</strong> The literature that keeps the section honest — meditation is not universally benign, and a family teaching children should know the failure modes exist.</a>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=nature+relatedness+scale+Nisbet" target="_blank" class="lib-link"><strong>Nature Relatedness Scale:</strong> The validated instrument that gives the sit-spot claim a real outcome measure — connection to nature is measurable, not just felt.</a>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=intercessory+prayer+STEP+cardiac+bypass" target="_blank" class="lib-link"><strong>The STEP trial — intercessory prayer:</strong> The largest randomized trial of prayer found no benefit. The honest negative this section keeps on purpose.</a>
+      <a href="https://www.flowresearchcollective.com/" target="_blank" class="lib-link"><strong>Flow Research Collective:</strong> One hub among several on meditation and creativity — the citation trails connect to the academic networks in the flow-creativity map.</a>
+    </div>
+
+    <div class="lib-category">
       <h4>Cognitive &amp; EMF Defense</h4>
       <div class="lib-link" style="cursor:default; border-left:3px solid var(--accent-gold);"><strong>🧠 Start here:</strong> the <strong>Cognitive &amp; EMF Defense</strong> tab in the Learning Lab — the defense library, ranked by evidence strongest-first: prebunking against manipulation, the documented cognitive-warfare program, EMF distance rules, shielding tradeoffs, and the tinfoil measurement. It includes the entries that describe what does <em>not</em> work, and it says plainly that no practice here blocks a directed-energy beam. This category below is the link shelf that feeds it.</div>
       <a href="https://interventions.withgoogle.com/" target="_blank" class="lib-link"><strong>Jigsaw / Google — Prebunking:</strong> The practical guide and the research behind technique-based inoculation — the strongest evidence-backed cognitive defense there is.</a>
@@ -1741,6 +1754,7 @@ Skull: the family's story held in one place, carried across years.
     <div class="ll-panel" id="panel-modes"></div>
     <div class="ll-panel" id="panel-practices"></div>
     <div class="ll-panel" id="panel-movement"></div>
+    <div class="ll-panel" id="panel-meditation"></div>
     <div class="ll-panel" id="panel-defense"></div>
     <div class="ll-panel" id="panel-science"></div>
     <div class="ll-panel" id="panel-connection"></div>
@@ -2716,6 +2730,7 @@ function renderLLTabs() {
     { id:'modes', label: llIsEs() ? 'Modos y Estados' : 'Modes & States' },
     { id:'practices', label: llIsEs() ? 'Prácticas del Corazón y la Mente' : 'Heart & Mind Practices' },
     { id:'movement', label: llIsEs() ? 'Vitalidad y Movimiento' : 'Vitality & Movement' },
+    { id:'meditation', label: llIsEs() ? 'Meditación y Habilidades' : 'Meditation & Abilities' },
     { id:'defense', label: llIsEs() ? 'Defensa Cognitiva y EMF' : 'Cognitive & EMF Defense' },
     { id:'science', label: llIsEs() ? 'Ciencia del Aprendizaje' : 'Learning Science' },
     { id:'connection', label: llIsEs() ? 'Ciencia de la Conexión' : 'Connection Science' },
@@ -2736,6 +2751,7 @@ function renderLLPanel(id) {
   if (id === 'modes') renderModes();
   if (id === 'practices') renderPractices();
   if (id === 'movement') renderMovement();
+  if (id === 'meditation') renderMeditation();
   if (id === 'defense') renderCognitiveDefense();
   if (id === 'science') renderScience();
   if (id === 'connection') renderConnection();
@@ -2917,6 +2933,77 @@ function renderMovement() {
     <div>${(typeof MOVEMENT_DOMAINS !== 'undefined' ? MOVEMENT_DOMAINS : []).map(d => `<span class="ll-chip" style="cursor:default;">${esc(d.replace(/-/g,' '))}</span>`).join('')}</div>`;
 
   el.innerHTML = head + cards + `<div class="sec-title" style="margin-top:1.4rem;"><h2 style="font-size:1.0rem;">${es?'Cruces con el resto de la Biblioteca':'Cross-links to the rest of the Library'}</h2></div>` + cross + domains;
+}
+
+/* ---- Meditation & Abilities — fed by meditation.js, grown by the
+ * meditation-abilities cron. Every entry carries the four-link chain
+ * (practice -> energy-body effect -> ability -> long-term meaning) with
+ * each link labeled separately. The chain is the point. ---- */
+function renderMeditation() {
+  const el = document.getElementById('panel-meditation');
+  if (typeof MEDITATION_SYSTEMS === 'undefined') { el.innerHTML = ''; return; }
+  const es = llIsEs();
+  const evWord = { strong: es?'Fuerte':'Strong', moderate: es?'Moderada':'Moderate', weak: es?'Débil / en disputa':'Weak / contested' };
+  const labelWord = { replicated: es?'Replicado':'Replicated', documented: es?'Documentado':'Documented', plausible: es?'Plausible':'Plausible', folklore: es?'Folclore / sin medir':'Folklore / unmeasured' };
+
+  const head = `<div class="sec-title" style="margin-top:0.2rem;"><h2 style="font-size:1.05rem;">${es?'🎯 Meditación y Habilidades — el mapa de práctica a habilidad':'🎯 Meditation & Abilities — the practice-to-ability map'}</h2>
+    <span class="sub" style="font-size:0.75rem;color:var(--text-dim);">${es?'Cómo distintas meditaciones, respiraciones, posturas y oraciones producen distintos resultados — y cómo se mapean a los «Siddhis» tradicionales. Cada eslabón lleva su propia etiqueta.':'How different meditations, breathing practices, postures, and prayer produce different results — and how they map onto the traditional "Siddhis." Every link carries its own label.'}</span></div>
+    <div class="curr-box" style="margin-bottom:0.6rem;"><b>${es?'La cadena completa':'The whole chain'}</b><span style="font-size:0.78rem;color:var(--text-dim);">${es?'PRÁCTICA → EFECTO EN EL CUERPO ENERGÉTICO → HABILIDAD → SIGNIFICADO A LARGO PLAZO. La práctica es verificable. Los otros tres son afirmaciones. Sostener la cadena completa cambia cómo haces la práctica — una práctica hecha como «esto me ayuda a concentrarme» y la misma hecha como «esto forma el cuerpo hacia una capacidad que lo sobrevive» no son la misma práctica. La intención es parte de la técnica.':'PRACTICE → ENERGY-BODY EFFECT → ABILITY → LONG-TERM MEANING. The practice is verifiable. The other three are claims. Holding the whole chain changes how you do the practice — a practice done as "this helps me focus" and the same one done as "this shapes the body toward a capacity that outlasts it" are not the same practice. The intention is part of the technique.'}</span></div>
+    <div class="curr-box" style="margin-bottom:1rem;border-left:3px solid var(--accent-gold);"><b>${es?'La disciplina honesta':'The honest discipline'}</b><span style="font-size:0.78rem;color:var(--text-dim);">${es?'No colapses la cadena. Colapsar hacia abajo («solo es respirar, solo te calma») le quita dirección a la práctica. Colapsar hacia arriba («hace todo esto, por lo tanto está probado») cuela afirmaciones no comprobables a lomos de una comprobable. Ambas pueden ser ciertas a la vez — y solo una necesita un recibo. Una práctica sin instrumento no es un rechazo: es una afirmación falsable pero no probada. Se archiva, no se borra.':'Do not collapse the chain. Collapsing downward ("it\'s just breathing, it just calms you") strips the practice of its direction. Collapsing upward ("it does all of this, therefore it\'s proven") smuggles untestable claims in on the back of a testable one. Both can be true at once — and only one needs a receipt. A practice with no instrument is not a refutation: it is falsifiable-but-untested. It gets filed, not deleted.'}</span></div>`;
+
+  const cards = MEDITATION_SYSTEMS.map(s => {
+    const ch = s.chain || {};
+    const chainRows = [
+      [es?'Práctica':'Practice', ch.practice],
+      [es?'Cuerpo energético':'Energy body', ch.energyBody],
+      [es?'Habilidad':'Ability', ch.ability],
+      [es?'Significado':'Meaning', ch.meaning]
+    ].map(([k,v]) => `<div class="curr-box" style="margin-bottom:0.35rem;"><b style="font-size:0.78rem;">${esc(k)}</b><span style="font-size:0.82em;">${esc(v||'')}</span></div>`).join('');
+    const research = (s.research || []).map(r => `<div class="curr-box" style="margin-top:0.5rem;">
+      <b><span class="math-tag" style="margin-right:0.35rem;">${esc(r.medium)}</span>${esc(r.source)}</b>
+      <span style="font-size:0.85em;">${esc(r.claim)}</span>
+      <span style="display:block;font-size:0.7em;color:var(--text-dim);margin-top:0.2rem;">${es?'Confianza':'Confidence'}: ${esc(r.confidence)} · ${esc(r.year)}</span>
+    </div>`).join('');
+    const practice = (s.practice || []).map(p => `<div class="curr-box" style="margin-bottom:0.4rem;"><span style="font-size:0.85em;">${esc(p)}</span></div>`).join('');
+    const q = s.quest || [];
+    return `<div class="sci-card" style="margin-bottom:0.9rem;">
+      <div class="sci-head"><div class="sci-name">${s.icon} ${esc(es && s.esName ? s.esName : s.name)} <span style="font-size:0.7rem;color:var(--muted);font-weight:600;">${esc(s.tagline)}</span></div><span class="sci-ev ev-${s.evClass}">${evWord[s.evClass] || esc(s.evidence)}</span></div>
+      <div class="sci-row"><b>${es?'Linaje':'Lineage'}:</b> ${esc(s.lineage)}</div>
+      <div class="sci-row"><b>${es?'Qué es':'What it is'}:</b> ${esc(es && s.esWhat ? s.esWhat : s.what)}</div>
+      <div style="margin-top:0.5rem;"><b style="font-size:0.82rem;">${es?'La cadena completa':'The whole chain'} <span class="math-tag" style="margin-left:0.3rem;">${labelWord[s.label] || esc(s.label)}</span></b></div>
+      <div style="margin-top:0.35rem;">${chainRows}</div>
+      <div class="sci-row" style="margin-top:0.4rem;"><b>${es?'Lo que se afirma':'What is claimed'}:</b> ${esc(s.claimed)}</div>
+      <div class="sci-row"><b>${es?'Medible':'Measurable'}:</b> ${esc(s.measurable)}</div>
+      <div class="sci-row"><b>${es?'Correlato tradicional':'Traditional correlate'}:</b> ${esc(s.correlate)}</div>
+      <div style="margin-top:0.5rem;"><b style="font-size:0.82rem;">${es?'La práctica':'The practice'}</b></div>
+      <div style="margin-top:0.35rem;">${practice}</div>
+      <div class="sci-row" style="margin-top:0.3rem;"><b>${es?'Dosis':'Dose'}:</b> ${esc(s.reps)}</div>
+      <div style="margin-top:0.5rem;"><b style="font-size:0.82rem;">${es?'Evidencia e investigación':'Evidence & research'} — <span style="color:var(--text-dim);font-weight:400;">${esc(s.evidence)}</span></b></div>
+      ${research}
+      <div class="sci-row" style="margin-top:0.5rem;"><b>${es?'Cómo probarlo':'How to test it'}:</b> ${esc(s.verify)}</div>
+      <div class="sci-row"><b>${es?'En la Aldea':'In the Village'}:</b> ${esc(s.village)}</div>
+      ${q.length ? `<div class="curr-box" style="margin-top:0.5rem;border-left:3px solid var(--accent-gold);"><b>🏅 ${es?'Quest propuesta':'Proposed quest'} — ${esc(q[0])}</b><span style="font-size:0.85em;">${esc(q[1])}</span><span style="display:block;font-size:0.7em;color:var(--text-dim);margin-top:0.2rem;">${(q[2]||[]).map(x=>esc(x)).join(' · ')}</span></div>` : ''}
+    </div>`;
+  }).join('');
+
+  const guild = (typeof MEDITATION_QUESTS !== 'undefined' && MEDITATION_QUESTS.length) ? `<div class="sec-title" style="margin-top:1.4rem;"><h2 style="font-size:1.0rem;">${es?'El gremio «Agua Quieta» (Modo Supervivencia)':'The Still Water guild (Survival Mode)'}</h2>
+    <span class="sub" style="font-size:0.72rem;color:var(--text-dim);">${es?'El lado jugable: 33 quests en cuatro niveles. La práctica es una tecnología, y una tecnología se mide.':'The playable side: 33 quests across four tiers. Practice is a technology, and a technology gets measured.'}</span></div>
+    <div>${MEDITATION_QUESTS.map(g => {
+      const counts = ['sand','straw','wood','iron'].map(t => `${(g[t]||[]).length} ${t}`).join(' · ');
+      return `<div class="curr-card" style="margin-bottom:0.5rem;"><div class="sci-head"><div class="sci-name">🎯 ${esc(g.name)}</div><span class="math-tag">${counts}</span></div><div class="sci-row">${esc(g.desc)}</div></div>`;
+    }).join('')}</div>` : '';
+
+  const cross = (typeof MEDITATION_CROSSLINKS !== 'undefined') ? MEDITATION_CROSSLINKS.map(c => `<div class="curr-box" style="margin-bottom:0.4rem;">
+      <b>${c.icon} ${esc(es && c.esName ? c.esName : c.name)}</b>
+      <span style="font-size:0.8em;">${esc(c.note)}</span>
+      <span style="display:block;font-size:0.68em;color:var(--text-dim);margin-top:0.15rem;">${es?'Ya en la Biblioteca':'Already in the Library'} → ${esc(c.where)}</span>
+    </div>`).join('') : '';
+
+  const depot = `<div class="sec-title" style="margin-top:1.4rem;"><h2 style="font-size:1.0rem;">${es?'El Depósito de Meditación':'The Meditation Depot'}</h2>
+    <span class="sub" style="font-size:0.72rem;color:var(--text-dim);">${es?'Fuentes públicas y gratuitas — incluidos los resultados negativos.':'Free, public sources — including the negative results.'}</span></div>
+    <div>${(typeof MEDITATION_DEPOT !== 'undefined' ? MEDITATION_DEPOT : []).map(l => `<div class="curr-box" style="margin-bottom:0.4rem;"><b><a href="${l.u}" target="_blank" style="color:var(--accent-green);">${esc(l.t)}</a></b><span style="font-size:0.82em;">${esc(l.d)}</span></div>`).join('')}</div>`;
+
+  el.innerHTML = head + cards + guild + `<div class="sec-title" style="margin-top:1.4rem;"><h2 style="font-size:1.0rem;">${es?'Cruces con el resto de la Biblioteca':'Cross-links to the rest of the Library'}</h2></div>` + cross + depot;
 }
 
 /* ---- Cognitive & EMF Defense — fed by cognitive-defense.js ----
