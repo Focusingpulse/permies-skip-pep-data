@@ -14,6 +14,7 @@
 <script src="gamcod.js"></script>
 <script src="thorns.js"></script>
 <script src="digital-defense.js"></script>
+<script src="cognitive-defense.js"></script>
 <script src="quest_cards.js"></script>
 <script src="lab.js"></script>
 <style>
@@ -1725,6 +1726,7 @@ Skull: the family's story held in one place, carried across years.
     <div class="ll-panel" id="panel-modes"></div>
     <div class="ll-panel" id="panel-practices"></div>
     <div class="ll-panel" id="panel-movement"></div>
+    <div class="ll-panel" id="panel-defense"></div>
     <div class="ll-panel" id="panel-science"></div>
     <div class="ll-panel" id="panel-connection"></div>
     <div class="ll-panel" id="panel-map"></div>
@@ -2699,6 +2701,7 @@ function renderLLTabs() {
     { id:'modes', label: llIsEs() ? 'Modos y Estados' : 'Modes & States' },
     { id:'practices', label: llIsEs() ? 'Prácticas del Corazón y la Mente' : 'Heart & Mind Practices' },
     { id:'movement', label: llIsEs() ? 'Vitalidad y Movimiento' : 'Vitality & Movement' },
+    { id:'defense', label: llIsEs() ? 'Defensa Cognitiva y EMF' : 'Cognitive & EMF Defense' },
     { id:'science', label: llIsEs() ? 'Ciencia del Aprendizaje' : 'Learning Science' },
     { id:'connection', label: llIsEs() ? 'Ciencia de la Conexión' : 'Connection Science' },
     { id:'map', label: llIsEs() ? 'El Gran Mapa' : 'The Grand Map' },
@@ -2718,6 +2721,7 @@ function renderLLPanel(id) {
   if (id === 'modes') renderModes();
   if (id === 'practices') renderPractices();
   if (id === 'movement') renderMovement();
+  if (id === 'defense') renderCognitiveDefense();
   if (id === 'science') renderScience();
   if (id === 'connection') renderConnection();
   if (id === 'map') renderMap();
@@ -2898,6 +2902,64 @@ function renderMovement() {
     <div>${(typeof MOVEMENT_DOMAINS !== 'undefined' ? MOVEMENT_DOMAINS : []).map(d => `<span class="ll-chip" style="cursor:default;">${esc(d.replace(/-/g,' '))}</span>`).join('')}</div>`;
 
   el.innerHTML = head + cards + `<div class="sec-title" style="margin-top:1.4rem;"><h2 style="font-size:1.0rem;">${es?'Cruces con el resto de la Biblioteca':'Cross-links to the rest of the Library'}</h2></div>` + cross + domains;
+}
+
+/* ---- Cognitive & EMF Defense — fed by cognitive-defense.js ----
+ * Ranked by evidence, strongest first. Includes the entries that
+ * describe what does NOT work; the label is the lesson. */
+function renderCognitiveDefense() {
+  const el = document.getElementById('panel-defense');
+  if (typeof COGNITIVE_DEFENSE_SYSTEMS === 'undefined') { el.innerHTML = ''; return; }
+  const es = llIsEs();
+  const evWord = { strong: es?'Fuerte':'Strong', moderate: es?'Moderada':'Moderate', weak: es?'Débil / en disputa':'Weak / contested' };
+
+  const head = `<div class="sec-title" style="margin-top:0.2rem;"><h2 style="font-size:1.05rem;">${es?'🧠 Defensa Cognitiva y EMF — la biblioteca de defensa':'🧠 Cognitive & EMF Defense — the defense library'}</h2>
+    <span class="sub" style="font-size:0.75rem;color:var(--text-dim);">${es?'Lo que realmente protege a una familia, ordenado por evidencia — de lo más fuerte a lo más débil. Incluye las entradas que describen lo que NO funciona.':'What actually protects a family, ranked by evidence — strongest first. Includes the entries that describe what does NOT work.'}</span></div>
+    <div class="curr-box" style="margin-bottom:0.6rem;"><b>${es?'La regla de honestidad':'The honesty rule'}</b><span style="font-size:0.78rem;color:var(--text-dim);">${es?'Donde hay investigación, se nombra. Donde no la hay, la etiqueta lo dice. Una práctica es una práctica hasta que se prueba.':'Where research exists it is named. Where it does not, the label says so. A practice is a practice until it is tested.'}</span></div>
+    <div class="curr-box" style="margin-bottom:1rem;border-left:3px solid var(--accent-gold);"><b>${es?'No hay campo de fuerza':'There is no force field'}</b><span style="font-size:0.78rem;color:var(--text-dim);">${es?'Ninguna meditación, respiración o blindaje tiene evidencia de que bloquee un haz de energía dirigida. Lo que estas prácticas hacen es regular a la persona: atención, estrés, sueño, criterio. Eso no es nada. Tampoco es un escudo, y esta sección lo dice.':'No meditation, breathing pattern, or shielding practice has evidence that it blocks a directed-energy beam. What these practices do is regulate the person: attention, stress, sleep, discernment. That is not nothing. It is also not a shield, and this section says so.'}</span></div>
+    <div class="curr-box" style="margin-bottom:1rem;"><b>${es?'La amenaza real':'The real threat'}</b><span style="font-size:0.78rem;color:var(--text-dim);">${es?'Lo que opera sobre tu familia ahora mismo no es un haz desde una camioneta. Es el entorno informativo — documentado, continuo, y dirigido a todos. El haz es raro y difícil de atribuir. Ordenar estas dos cosas correctamente ES la primera defensa.':'The threat operating on your family right now is not a beam from a van. It is the information environment — documented, continuous, and aimed at everyone. The beam is rare and hard to attribute. Ranking these two correctly IS the first defense.'}</span></div>`;
+
+  const cards = COGNITIVE_DEFENSE_SYSTEMS.map(s => {
+    const research = (s.research || []).map(r => `<div class="curr-box" style="margin-top:0.5rem;">
+      <b><span class="math-tag" style="margin-right:0.35rem;">${esc(r.medium)}</span>${esc(r.source)}</b>
+      <span style="font-size:0.85em;">${esc(r.claim)}</span>
+      <span style="display:block;font-size:0.7em;color:var(--text-dim);margin-top:0.2rem;">${es?'Confianza':'Confidence'}: ${esc(r.confidence)} · ${esc(r.year)}</span>
+    </div>`).join('');
+    const practice = (s.practice || []).map(p => `<div class="curr-box" style="margin-bottom:0.4rem;"><span style="font-size:0.85em;">${esc(p)}</span></div>`).join('');
+    const q = s.quest || [];
+    return `<div class="sci-card" style="margin-bottom:0.9rem;">
+      <div class="sci-head"><div class="sci-name">${s.icon} ${esc(es && s.esName ? s.esName : s.name)} <span style="font-size:0.7rem;color:var(--muted);font-weight:600;">${esc(s.tagline)}</span></div><span class="sci-ev ev-${s.evClass}">${evWord[s.evClass] || esc(s.evidence)}</span></div>
+      <div class="sci-row"><b>${es?'Linaje':'Lineage'}:</b> ${esc(s.lineage)}</div>
+      <div class="sci-row"><b>${es?'Qué es':'What it is'}:</b> ${esc(es && s.esWhat ? s.esWhat : s.what)}</div>
+      <div style="margin-top:0.5rem;"><b style="font-size:0.82rem;">${es?'La práctica':'The practice'}</b></div>
+      <div style="margin-top:0.35rem;">${practice}</div>
+      <div class="sci-row" style="margin-top:0.3rem;"><b>${es?'Dosis':'Dose'}:</b> ${esc(s.reps)}</div>
+      <div style="margin-top:0.5rem;"><b style="font-size:0.82rem;">${es?'Evidencia e investigación':'Evidence & research'} — <span style="color:var(--text-dim);font-weight:400;">${esc(s.evidence)}</span></b></div>
+      ${research}
+      <div class="sci-row" style="margin-top:0.5rem;"><b>${es?'Cómo probarlo':'How to test it'}:</b> ${esc(s.verify)}</div>
+      <div class="sci-row"><b>${es?'En la Aldea':'In the Village'}:</b> ${esc(s.village)}</div>
+      ${q.length ? `<div class="curr-box" style="margin-top:0.5rem;border-left:3px solid var(--accent-gold);"><b>🏅 ${es?'Quest propuesta':'Proposed quest'} — ${esc(q[0])}</b><span style="font-size:0.85em;">${esc(q[1])}</span><span style="display:block;font-size:0.7em;color:var(--text-dim);margin-top:0.2rem;">${(q[2]||[]).map(x=>esc(x)).join(' · ')}</span></div>` : ''}
+    </div>`;
+  }).join('');
+
+  const cross = (typeof COGNITIVE_CROSSLINKS !== 'undefined') ? COGNITIVE_CROSSLINKS.map(c => `<div class="curr-box" style="margin-bottom:0.4rem;">
+      <b>${c.icon} ${esc(es && c.esName ? c.esName : c.name)}</b>
+      <span style="font-size:0.8em;">${esc(c.note)}</span>
+      <span style="display:block;font-size:0.68em;color:var(--text-dim);margin-top:0.15rem;">${es?'Ya en la Biblioteca':'Already in the Library'} → ${esc(c.where)}</span>
+    </div>`).join('') : '';
+
+  const depot = `<div class="sec-title" style="margin-top:1.4rem;"><h2 style="font-size:1.0rem;">${es?'El Depósito de Defensa Cognitiva':'The Cognitive Defense Depot'}</h2>
+    <span class="sub" style="font-size:0.72rem;color:var(--text-dim);">${es?'Fuentes públicas y gratuitas — incluyendo los documentos primarios, no la cobertura.':'Free, public sources — including the primary documents, not the coverage.'}</span></div>
+    <div>${(typeof COGNITIVE_DEFENSE_DEPOT !== 'undefined' ? COGNITIVE_DEFENSE_DEPOT : []).map(l => `<div class="curr-box" style="margin-bottom:0.4rem;"><b><a href="${l.u}" target="_blank" style="color:var(--accent-green);">${esc(l.t)}</a></b><span style="font-size:0.82em;">${esc(l.d)}</span></div>`).join('')}</div>`;
+
+  const guild = (typeof COGNITIVE_DEFENSE_QUESTS !== 'undefined' && COGNITIVE_DEFENSE_QUESTS.length) ? `<div class="sec-title" style="margin-top:1.4rem;"><h2 style="font-size:1.0rem;">${es?'El gremio «Señal Clara» (Modo Supervivencia)':'The Clear Signal guild (Survival Mode)'}</h2>
+    <span class="sub" style="font-size:0.72rem;color:var(--text-dim);">${es?'El lado jugable: 33 quests en cuatro niveles, de arena a hierro.':'The playable side: 33 quests across four tiers, sand to iron.'}</span></div>
+    <div>${COGNITIVE_DEFENSE_QUESTS.map(g => {
+      const counts = ['sand','straw','wood','iron'].map(t => `${(g[t]||[]).length} ${t}`).join(' · ');
+      return `<div class="curr-card" style="margin-bottom:0.5rem;"><div class="sci-head"><div class="sci-name">🎯 ${esc(g.name)}</div><span class="math-tag">${counts}</span></div><div class="sci-row">${esc(g.desc)}</div></div>`;
+    }).join('')}</div>` : '';
+
+  el.innerHTML = head + cards + guild + `<div class="sec-title" style="margin-top:1.4rem;"><h2 style="font-size:1.0rem;">${es?'Cruces con el resto de la Biblioteca':'Cross-links to the rest of the Library'}</h2></div>` + cross + depot;
 }
 
 function renderScience() {
