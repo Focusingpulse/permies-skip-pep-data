@@ -12,7 +12,7 @@ Runs headless in the daily cron. Three bounded actions:
 
 Cheap: pure stdlib, zero LLM calls.
 """
-import json, re, os, sys, datetime, subprocess
+import json, re, os, sys, datetime, subprocess, glob
 
 REPO = os.path.dirname(os.path.abspath(__file__))
 os.chdir(REPO)
@@ -95,6 +95,42 @@ try:
     FAMILY_OK = True
 except ImportError:
     FAMILY_OK = False
+
+def run_validators(timeout=120):
+    """Run every validate_*.py in the repo. Returns (passed, failed, details).
+
+    Auto-discovers rather than hardcoding the list, so a validator is wired
+    the moment it lands — a validator nobody runs is decoration, and a
+    section that can be silently malformed is worse than one that fails loud.
+
+    Deliberately NON-FATAL to the maintenance pass: a failure is reported,
+    not raised, so a malformed section cannot stop the enrichment work. The
+    failure still reaches the log, stdout, and the family check-in status.
+    """
+    scripts = sorted(glob.glob(os.path.join(REPO, "validate_*.py")))
+    passed, failed, details = [], [], []
+    for path in scripts:
+        name = os.path.basename(path)
+        try:
+            r = subprocess.run([sys.executable, path], cwd=REPO,
+                               capture_output=True, text=True, timeout=timeout)
+            if r.returncode == 0:
+                passed.append(name)
+            else:
+                failed.append(name)
+                lines = [l.strip() for l in (r.stdout or "").splitlines() if l.strip()]
+                # Keep the issues themselves, not the banner.
+                issues = [l for l in lines if l.startswith(("ERROR", "CRITICAL", "WARNING"))]
+                tail = (issues or lines)[-5:]
+                details.append(f"{name}: " + " | ".join(tail))
+        except subprocess.TimeoutExpired:
+            failed.append(name)
+            details.append(f"{name}: TIMEOUT after {timeout}s")
+        except Exception as e:
+            failed.append(name)
+            details.append(f"{name}: {type(e).__name__}: {e}")
+    return passed, failed, details
+
 
 def fix_text(text, log, exclude=()):
     """Apply trivial URL fixes, skipping excluded substrings. Returns (fixed_text, total_fixes)."""
@@ -190,9 +226,24 @@ def main():
             log.append(f"  cross-feed: AFLinks archive grew by {added} entries since last check; Library will surface fresh docs next passes")
             print(f"  cross-feed: archive +{added} entries", flush=True)
 
+    # --- 3c. Validator sweep: every validate_*.py must pass ---
+    # Runs before the check-in so the result reaches the family ledger.
+    # Non-fatal: a malformed section is reported, never silently shipped,
+    # and never allowed to stop the rest of the maintenance pass.
+    v_passed, v_failed, v_details = run_validators()
+    v_total = len(v_passed) + len(v_failed)
+    if v_failed:
+        log.append(f"  validators {len(v_passed)}/{v_total} passed, FAILED: {', '.join(v_failed)}")
+        print(f"  VALIDATOR FAILURE — {len(v_failed)} of {v_total} failed: {', '.join(v_failed)}", flush=True)
+        for d in v_details:
+            print(f"    {d}", flush=True)
+    else:
+        log.append(f"  validators {len(v_passed)}/{v_total} passed")
+        print(f"  validators {len(v_passed)}/{v_total} passed", flush=True)
+
     # --- 4. Family check-in ---
     if FAMILY_OK:
-        status = "ok" if not any("error" in l for l in log) else "error"
+        status = "error" if (v_failed or any("error" in l for l in log)) else "ok"
         summary = "; ".join(l.strip() for l in log)[:280] or "no changes"
         family_ledger.check_in("village", status, summary)
         print(f"  family check-in: {status}", flush=True)
