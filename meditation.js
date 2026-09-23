@@ -276,6 +276,71 @@ const MEDITATION_SYSTEMS = [
     verify: "The honest test of a claim like BG3 is a blinded one: a practitioner who does not know which condition is which, measuring prayer and non-prayer conditions in randomized order. That protocol is described in the Village's own chisel-cut protocol design. Until it is run, the claim is filed, not believed.",
     village: "The entry that models the section's honesty for a child. A family that can say 'we do this, and the biggest trial found nothing, and we still do it because the reason we do it was never what the trial measured' has learned something more valuable than any single practice. This is the Skeptic's Star territory.",
     quest: ["Read the Negative Result", "Find one study where a practice you believe in did not work — prayer, or any other. Read the actual paper, not a summary. Write five sentences on what it tested, what it found, and whether it tested the thing you actually care about.", ["Science", "Writing", "Constitution"], "🕯️"]
+  },
+
+  {
+    id: "asana",
+    icon: "🧘",
+    name: "Asana — Posture, and the Test It Failed",
+    esName: "Asana — La Postura, y el Examen que No Pasó",
+    tagline: "The most-marketed claim — that it prevents falls — failed its largest trial. The tradition never made that claim.",
+    lineage: "The Hatha Yoga Pradipika (15th c.) opens by treating asana as the first accessory of Hatha Yoga, practised for steadiness, health, and lightness of body; the Yoga Sutras of Patanjali (c. 400 CE) define asana as a steady and comfortable posture. The modern claim is a different one — yoga as exercise therapy — and it entered through clinical trials from the 2000s onward.",
+    what: "The family of physical postures — standing, seated, twisting, balancing — held deliberately, usually with the breath. The tradition's stated purpose is narrower than the modern marketing: the posture exists to make the body steady enough to sit still for the practices that follow it. The trials test something else — yoga as exercise for back pain, balance, and falls.",
+    esWhat: "La familia de posturas físicas — de pie, sentadas, con torsión, de equilibrio — sostenidas deliberadamente, normalmente con la respiración. El propósito que declara la tradición es más estrecho que el marketing moderno: la postura existe para que el cuerpo esté lo bastante firme para sentarse quieto en las prácticas que siguen. Los ensayos miden otra cosa: el yoga como ejercicio para el dolor de espalda, el equilibrio y las caídas.",
+    chain: {
+      practice: "Hold defined postures, deliberately, on a mat, usually coordinated with the breath. Fully verifiable — you do it or you do not.",
+      energyBody: "The tradition's claim is that asana purifies and opens the subtle channels, removes blockages, and builds the body's capacity to hold a seat without disturbance. This is a claim from the tradition. No trial has measured it, and none has tried.",
+      ability: "Partly measurable, and the measurement is humbling. Flexibility, strength, balance, and back function move — but modestly, and not more than other exercise moves them. The most-marketed ability claim, that yoga prevents falls, failed its largest trial, and the objective outcome moved the wrong way while self-reported confidence improved. The classical Siddhis attributed to posture mastery are filed as folklore.",
+      meaning: "The tradition's own framing is that the body is the vehicle and asana is what makes the vehicle serviceable — you cannot hold the seat for a practice that outlasts the body if the body cannot hold the seat. This is the link no trial has ever tested."
+    },
+    claimed: "The tradition claims posture prepares the body for the higher limbs. The modern market claims yoga improves balance, prevents falls, and fixes backs. The trials tested the modern claims and found them smaller than advertised — and the falls claim failed outright. The traditional claim was never tested, which is not the same as it being false.",
+    measurable: "Yes, partly — back-related function and pain, balance (one-legged stance, postural sway), mobility (timed sit-to-stand, four-metre walk), and falls rate. The falls rate is the one objective outcome measured at scale, and it went the wrong way.",
+    correlate: "Asana is the third limb of Patanjali's eight-limbed path and the first limb of Hatha Yoga. The posture-related Siddhis — the claim that a mastered seat confers specific powers — are filed as folklore.",
+    label: "documented",
+    practice: [
+      "Start with the seat — a simple cross-legged or kneeling posture you can hold without strain. The tradition's first asana is the one you can stay in, not the one that looks impressive.",
+      "Standing postures — the balance work: tree, warrior, chair. These are the ones the balance trials actually used, and they are where the measurable effects live.",
+      "Back-focused sequences — the Cochrane trials used programmes built specifically for low back pain, taught by experienced teachers, one or two sessions a week for six to twenty-four weeks. That is the dose the evidence covers.",
+      "Move with the breath — the tradition ties posture to breath; the trials mostly did not isolate this, so treat it as the tradition's claim rather than a measured one.",
+      "Never force or strain — the Cochrane review found yoga increased adverse events compared with doing nothing, mostly increased back pain. The safety note is not decorative.",
+      "Do not confuse the feeling with the outcome — in the SAGE trial the participants felt more confident about their balance and fell more. Track the objective number, not the confidence."
+    ],
+    reps: "One or two sessions per week for six to twenty-four weeks is the dose the back-pain evidence covers; the balance trials used twice weekly for twelve weeks. Daily practice is not required and is not what was tested.",
+    evidence: "Moderate benchmark evidence (for modest physiological effects); the falls-prevention claim failed its largest trial",
+    evClass: "moderate",
+    research: [
+      {
+        source: "Wieland, Skoetz, Pilkington, Harbin, Vempati & Berman, 'Yoga for chronic non-specific low back pain', Cochrane Database of Systematic Reviews, Issue 11, Art. No. CD010671 (2022)",
+        claim: "Against no exercise, yoga probably produces a small improvement in back-related function and a clinically unimportant improvement in pain at three months. Against other back-focused exercise there is little or no difference. Yoga was associated with more adverse events than no exercise, mostly increased back pain. The authors' own conclusion is the sharpest line in the entry: because every trial was unblinded and at high risk of bias, it is unlikely that blinded comparisons would find a clinically important benefit.",
+        medium: "systematic review (Cochrane)",
+        confidence: "Low to moderate certainty",
+        year: "2022"
+      },
+      {
+        source: "Oliveira, Sherrington, Lord, et al., 'The effect of an Iyengar yoga-based exercise programme versus a seated yoga relaxation programme on falls in people aged 60 years and older (SAGE)', The Lancet Healthy Longevity (2025)",
+        claim: "The largest test of the falls claim: 700 community-dwelling adults aged 60 and over, randomised to an Iyengar-based yoga exercise programme (80 supervised classes over twelve months) or a seated relaxation control. Falls were MORE frequent in the yoga group — 0.87 versus 0.64 falls per person-year, incidence rate ratio 1.33 (95% CI 1.01–1.75, p=0.044). Planned physical activity and self-reported balance confidence both improved. The trial's own interpretation is that the programme as delivered should not be recommended for fall prevention.",
+        medium: "large randomized controlled trial",
+        confidence: "Strong (for the null-to-negative result)",
+        year: "2025"
+      },
+      {
+        source: "Tiedemann, O'Rourke, Sesto & Sherrington, 'A 12-Week Iyengar Yoga Program Improved Balance and Mobility in Older Community-Dwelling People: A Pilot Randomized Controlled Trial', Journals of Gerontology Series A (2013)",
+        claim: "A small pilot (54 participants, twice weekly for twelve weeks, standing postures) improved standing balance, timed sit-to-stand, four-metre walk time, and one-legged stand with eyes closed. This is the positive counterweight to SAGE — and it is a pilot, which is exactly why the larger trial was run. It is also where this entry's at-home test comes from: the measures are a stopwatch and a chair.",
+        medium: "pilot randomized controlled trial",
+        confidence: "Moderate (small, single trial)",
+        year: "2013"
+      },
+      {
+        source: "The Hatha Yoga Pradipika (15th c.), ch. 1, and the Yoga Sutras of Patanjali (c. 400 CE), 2.46 — the tradition's own statement of what asana is for",
+        claim: "The Hatha Yoga Pradipika places asana first among the accessories of Hatha Yoga and says it is practised for steadiness, health, and lightness of body; Patanjali defines asana as a steady and comfortable posture. The tradition's purpose is to make the body fit to sit — a preparatory claim about the body's capacity, not a therapeutic claim about pain or falls. Presented here as the tradition's claim, not as evidence, and paraphrased rather than reproduced.",
+        medium: "primary text (translated) — tradition claim",
+        confidence: "High (as a statement of the tradition) · none claimed (as an outcome)",
+        year: "c. 400 CE / 15th c."
+      }
+    ],
+    verify: "The one-legged stand with eyes closed, timed, plus a thirty-second chair-stand count — both are field measures the balance trials themselves used, and both need only a stopwatch and a chair. Record them on day 1 and at week 12. Then the part that matters: also record how confident you feel about your balance, on a scale of one to ten, and watch whether the two numbers move together. The SAGE trial found they can move in opposite directions, so the objective number is the one that counts.",
+    village: "This is the section's second honest negative, and the sharper one, because the claim it fails is a modern claim rather than a traditional one. Prayer fails a claim the tradition never made; asana fails a claim the market made on the tradition's behalf. It also carries the section's most transferable lesson — that a self-reported measure can improve while the objective outcome worsens — which is the same discipline the fleet applies to its own status reports. The honest read is not that yoga is worthless: it is that the effect is real, modest, not better than other exercise, and not located where the advertising put it.",
+    quest: ["Test the Feeling Against the Number", "Practise a short standing-balance sequence twice a week for eight weeks. Measure two things on day 1 and day 56: the objective one (timed one-legged stand with eyes closed, and a thirty-second chair-stand count) and the felt one (how confident you are about your balance, one to ten). Report both, and say plainly whether they agreed.", ["PE", "Health", "Math"], "🧘"]
   }
 ];
 
@@ -349,7 +414,9 @@ const MEDITATION_DEPOT = [
   { t: "8 Shields — the 512 Project", u: "https://8shields.org/", d: "The lineage behind sit spot and the 64 cultural elements already mapped in the Village's Mentor's Circle." },
   { t: "Flow Research Collective", u: "https://www.flowresearchcollective.com/", d: "One hub among several on meditation and creativity — the citation trails connect to the academic networks." },
   { t: "Nature Relatedness Scale (NR-6)", u: "https://pubmed.ncbi.nlm.nih.gov/?term=nature+relatedness+scale+Nisbet", d: "The validated instrument that gives the sit-spot claim a real outcome measure." },
-  { t: "STEP trial — intercessory prayer", u: "https://pubmed.ncbi.nlm.nih.gov/?term=intercessory+prayer+STEP+cardiac+bypass", d: "The largest randomized trial of prayer. The honest negative this section keeps on purpose." }
+  { t: "STEP trial — intercessory prayer", u: "https://pubmed.ncbi.nlm.nih.gov/?term=intercessory+prayer+STEP+cardiac+bypass", d: "The largest randomized trial of prayer. The honest negative this section keeps on purpose." },
+  { t: "Cochrane — yoga for chronic low back pain", u: "https://www.cochrane.org/evidence/CD010671_yoga-chronic-non-specific-low-back-pain", d: "The systematic review behind the asana entry. Read the authors' own conclusion — it is blunter than the marketing." },
+  { t: "SAGE trial — yoga and falls in older adults", u: "https://doi.org/10.1016/j.lanhl.2025.100749", d: "The largest test of the falls claim, and the one it failed. 700 participants; falls were more frequent in the yoga group." }
 ];
 
 /* Cross-links to practices that already live elsewhere in the Library —
