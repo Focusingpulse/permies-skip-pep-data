@@ -532,6 +532,70 @@ const MOVEMENT_SYSTEMS = [
   },
 
   {
+    id: "movement-snacks",
+    icon: "⏱️",
+    name: "Movement Snacks — The One-Minute Dose",
+    esName: "Bocados de Movimiento — La Dosis de Un Minuto",
+    tagline: "One hard minute, three times a day. The smallest dose in the section.",
+    lineage: "Not a lineage — a research construct. The term 'exercise snacks' was used in the 2014 study by Francois and colleagues at the University of Otago; the framing was extended by Gibala's group at McMaster and by Stamatakis and colleagues at Sydney, who named the everyday version VILPA (vigorous intermittent lifestyle physical activity). The practice it describes — short bursts of hard, ordinary movement — is as old as carrying a load up a hill. What is new is the dose, and the fact that someone counted it.",
+    what: "Several times a day, do one to two minutes of genuinely hard movement and then go back to your life: stair sprints, twenty fast squats, carrying something heavy up the stairs, walking uphill at a pace you cannot talk over. The whole design is small and frequent instead of long and rare. The studied doses are roughly three bouts a day of one to two minutes each, or two minutes of walking every twenty to thirty minutes of sitting. It is the practice half of the posture entry beside it — that one says the body wants to change position often; this one says how often, and how hard.",
+    esWhat: "Varias veces al día, haz de uno a dos minutos de movimiento realmente intenso y luego vuelve a tu vida: subir escaleras rápido, veinte sentadillas, cargar algo pesado escaleras arriba. El diseño es pequeño y frecuente en lugar de largo y raro: unas tres dosis al día de uno a dos minutos, o dos minutos de caminata cada veinte o treinta minutos sentado.",
+    practice: [
+      "Pick three anchors in the day. The studied version is before each main meal — before breakfast, before lunch, before dinner. Anchors beat willpower: the meal is the reminder.",
+      "At each anchor, do one minute of hard movement. Hard means you could not hold a conversation through it.",
+      "Use whatever is in the house: sprint up the stairs and walk down (repeat for the minute); 20 bodyweight squats; 30 seconds of fast step-ups onto a stair; 10 push-ups then 10 squats; a fast walk up a hill; carrying a heavy bucket or a full laundry basket up the stairs.",
+      "The full study dose is six one-minute rounds before each meal with a minute of easy movement between. One round per meal is the honest starting point — three hard minutes a day.",
+      "The lighter, more frequent version: every 20–30 minutes of sitting, stand and walk for two minutes. This one was tested directly and it works at light intensity — you do not have to make it hard.",
+      "Children: same idea, kept as play. A race to the top of the stairs, a wheelbarrow walk, carrying the firewood. Do not turn it into a workout.",
+      "Stop if you get dizzy or cannot recover your breath within a minute. If you have a heart condition, or are pregnant, ask a clinician before adding hard intervals."
+    ],
+    reps: "Three one-minute bouts a day (before meals) is the studied minimum; two minutes of walking every 20–30 minutes of sitting is the other studied dose. Start with one bout a day for a week and let the anchors carry it.",
+    evidence: "Moderate — a large observational association plus small randomized acute trials that agree with it",
+    evClass: "moderate",
+    research: [
+      {
+        source: "Stamatakis et al., 'Association of wearable device-measured vigorous intermittent lifestyle physical activity with mortality', Nature Medicine (2022)",
+        claim: "In 25,241 non-exercisers followed for an average of 6.9 years, brief bursts of vigorous everyday movement — about three bouts a day of one to two minutes, roughly 4.4 minutes in total — were associated with 38–40% lower all-cause and cancer mortality and 48–49% lower cardiovascular mortality. This is the strongest single result in the entry, and it is observational: it measures an association, not a cause.",
+        medium: "large prospective cohort study (observational, wearable-measured)",
+        confidence: "Strong as an association · none claimed as causation",
+        year: "2022"
+      },
+      {
+        source: "Francois et al., 'Exercise snacks before meals: a novel strategy to improve glycaemic control in individuals with insulin resistance', Diabetologia (2014)",
+        claim: "Nine adults with insulin resistance, randomized crossover: six one-minute bouts at about 90% of maximum heart rate before each meal lowered post-breakfast glucose by 1.4 mmol/L and the 24-hour mean by 0.7 mmol/L, and beat a single 30-minute moderate session after dinner. Small, short, and in one population — but randomized, and directly on this practice.",
+        medium: "small randomized crossover trial",
+        confidence: "Moderate (tiny sample, acute outcomes, insulin-resistant adults)",
+        year: "2014"
+      },
+      {
+        source: "Dunstan et al., 'Breaking Up Prolonged Sitting Reduces Postprandial Glucose and Insulin Responses', Diabetes Care 35(5):976–983 (2012)",
+        claim: "Nineteen overweight adults, randomized three-period crossover: two minutes of walking every twenty minutes lowered the post-meal glucose response by 24–30% and the insulin response by about 23% compared with uninterrupted sitting. Light and moderate intensity worked about equally — which is why the frequent-light version is the one to teach a family.",
+        medium: "randomized crossover trial (acute outcomes)",
+        confidence: "Moderate–Strong (consistent, but small and short-term)",
+        year: "2012"
+      },
+      {
+        source: "Takaishi et al., 'A short bout of stair climbing–descending exercise attenuates postprandial hyperglycemia in middle-aged males with impaired glucose tolerance', Applied Physiology, Nutrition, and Metabolism 37(1):193–196 (2012)",
+        claim: "A single short bout of stair climbing and descending blunted the post-meal glucose rise in middle-aged men with impaired glucose tolerance — the study that makes the stairs in your own house a legitimate intervention rather than a substitute for one.",
+        medium: "small controlled acute study",
+        confidence: "Moderate (small, single population, acute)",
+        year: "2012"
+      },
+      {
+        source: "Alexe et al., 'Exercise Snacks as a Strategy to Interrupt Sedentary Behavior: A Systematic Review of Health Outcomes and Feasibility', Healthcare (2025)",
+        claim: "Twenty-six studies from 2012–2025: exercise snacks improved post-meal glucose, insulin and triglycerides, lowered blood pressure, and improved cardiorespiratory fitness, with high retention (90–100%) and adherence (80–100%). The authors are explicit that the literature is heterogeneous and mostly small and that the optimal dose is unresolved — the review is a map of the evidence, not a verdict.",
+        medium: "systematic review (narrative synthesis of heterogeneous trials)",
+        confidence: "Moderate",
+        year: "2025"
+      }
+    ],
+    verify: "Eat the same breakfast on two mornings and change nothing else except this: on day one, sit for two hours afterwards; on day two, walk for two minutes every twenty minutes. Rate how sleepy you feel at the two-hour mark, 1–10, on both days. If an adult in the house has a glucose meter, take a reading at 30 and 60 minutes instead — that is the Dunstan trial run in your own kitchen: same meal, same person, two conditions. If the numbers come out the same, the effect is not showing up for you, and that is a real result worth writing down. The honest limit: the mortality finding comes from a cohort, so it cannot tell you the snacks caused the benefit — people who move in bursts may differ in other ways too.",
+    village: "The cheapest PE in the game: no session, no equipment, no room. It is also the entry that keeps the Village's physical-education layer usable on a bad day — three hard minutes count, and the quest can be scored on the log rather than on a workout.",
+    quest: ["The One-Minute Dose", "Three times a day for a week — before breakfast, before lunch, before dinner — do one minute of genuinely hard movement: stair sprints, 20 fast squats, or carrying something heavy up the stairs. Hard enough that you could not talk through it. Log the three times each day and one number: how you feel at 3pm, 1–10.", ["PE", "Health", "Science"], "⏱️"],
+    authorship: {"agent_id": "agent-b73ac550-5671-471e-b3e1-721f948ea063", "agent_name": "Tutor", "job": "vitality-engine", "lineage": "agent-b73ac550-5671-471e-b3e1-721f948ea063 -> vitality-engine -> movement-snacks", "authored_at": "2026-09-23"}
+  },
+
+  {
     id: "breathwork",
     icon: "🌬️",
     name: "Breathwork — Slow Breathing & Cyclic Sighing",
