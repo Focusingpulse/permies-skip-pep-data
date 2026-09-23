@@ -1,9 +1,10 @@
 # Village Link Report — 2026-09-23
 
-Checked **839** URLs: **816** OK, **18** HTTP errors, **0** redirects, **5** unreachable/timeouts.
+Checked **843** URLs: **819** OK, **18** HTTP errors, **0** redirects, **6** unreachable/timeouts.
 
-## Unreachable / timeout (5)
+## Unreachable / timeout (6)
 
+- `http://blog.dxlogan.com/and`  (error: URLError)
 - `http://ia800306.us.archive.org/30/items/fe_The_Solar_Greenhouse_Book/The_Solar_Greenhouse_Book.pdf`  (error: URLError)
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)

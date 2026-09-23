@@ -1010,6 +1010,86 @@ const LANG = {
     "Build the Radiant Energy Receiver": {
       "title": "Construir el receptor de energía radiante",
       "desc": "Monta una placa metálica aislada a 3-5 m de altura sobre un poste NO metálico, conéctala a través de un condensador de película a una puesta a tierra, y mide el voltaje a los 0/5/10/15 min en 5+ sesiones (mañana/mediodía/noche, despejado/nublado). Luego envuelve la placa en papel de aluminio conectado a tierra como control y repite. APRUEBA: el receptor lee ≥10× el control apantallado en ≥4/5 sesiones. Tormentas: desconecta y pon a tierra la antena siempre primero."
+    },
+    "Barefoot & Honest": {
+      "title": "Descalzo y honesto",
+      "desc": "Pasa 15 minutos descalzo sobre suelo natural cada día durante dos semanas. Registra las horas de sueño y cómo se sienten tus pies. Informa qué cambió y qué no — un resultado nulo gana la Estrella del Escéptico."
+    },
+    "Clean a Kitchen": {
+      "title": "Limpiar una cocina",
+      "desc": "Limpia toda la cocina — fregadero, encimeras, mesa, fogones y suelo — con fotos de antes y después. Cualquier jabón usado debe ser seguro para aguas grises o fácilmente biodegradable."
+    },
+    "Eight Brocades — 30 Days": {
+      "title": "Ocho Brocados — 30 días",
+      "desc": "Haz la serie completa de ocho piezas una vez al día durante 30 días. El día 1 y el día 30, cronometra tu apoyo en una sola pierna con los ojos cerrados (cada lado). Registra ambos números."
+    },
+    "Family Form — Teach It": {
+      "title": "Forma familiar — enséñala",
+      "desc": "Aprende las cinco formas de animales y luego enséñaselas a otra persona de la familia. Cada uno elige el animal que peor le sale y lo practica durante dos semanas."
+    },
+    "Five Minutes of Breath": {
+      "title": "Cinco minutos de respiración",
+      "desc": "Haz cinco minutos de suspiros cíclicos (doble inhalación, exhalación larga) cada día durante dos semanas. Califica tu ánimo antes y después de cada vez y observa el patrón."
+    },
+    "Five Rites — 21-Day Streak": {
+      "title": "Cinco Ritos — racha de 21 días",
+      "desc": "Haz los cinco ritos cada mañana durante 21 días. Empieza con 5 repeticiones de cada uno y añade una por semana. Registra la fecha y un número al día — pulso en reposo u horas dormidas."
+    },
+    "Five Rites — Full 21": {
+      "title": "Cinco Ritos — 21 completas",
+      "desc": "Lleva los Cinco Ritos hasta 21 repeticiones completas de cada movimiento, a diario antes del desayuno. Mantén el registro diario — la racha es la práctica."
+    },
+    "Grow a New Plant From a Cutting": {
+      "title": "Cultivar una planta nueva desde un esqueje",
+      "desc": "Toma un esqueje de una planta existente y enrraízalo sin químicos manufacturados (el agua de sauce está bien), luego cultívalo para demostrar su viabilidad."
+    },
+    "Inner Smile Circuit": {
+      "title": "Circuito de la Sonrisa Interior",
+      "desc": "Aprende la Sonrisa Interior: lleva la atención al corazón, pulmones, hígado, estómago, riñones y columna, uno a uno, y sonríe a cada uno. Hazlo a diario durante una semana, luego enséñaselo a otra persona."
+    },
+    "Make Salted Pork": {
+      "title": "Hacer cerdo en salazón",
+      "desc": "Cura en sal dos libras de carne partiendo de carne fresca, usando solo materiales que existían hace 200 años (nada de plástico ni aluminio)."
+    },
+    "Make a Rose Blossom Salve": {
+      "title": "Hacer un bálsamo de flores de rosa",
+      "desc": "Crea un bálsamo curativo con flores de rosa — cosecha el material vegetal, infúndelo en aceite, haz el bálsamo y envasa con etiqueta."
+    },
+    "Make a Snare": {
+      "title": "Hacer un lazo trampa",
+      "desc": "Construye un lazo de alambre, cable, cuerda o soga para un animal concreto y colócalo como si fuera a atraparlo — sin atrapar de verdad. Solo materiales que existían hace 200 años."
+    },
+    "Microcosmic Orbit": {
+      "title": "Órbita Microcósmica",
+      "desc": "Aprende la Órbita Microcósmica: la atención sube por la columna hasta la coronilla y baja por el frente hasta el ombligo, 9–36 vueltas lentas con la respiración. De diez a veinte minutos diarios. Práctica adulta — la Sonrisa Interior es la puerta familiar."
+    },
+    "Reuse Water From a Shower": {
+      "title": "Reutilizar agua de la ducha",
+      "desc": "Coloca un cubo en la ducha para recoger agua (con el 10–20% basta, solo duchas sin jabón), luego usa al menos tres galones para tirar de la cisterna o regar algo fuera."
+    },
+    "Semi-Supine Rest": {
+      "title": "Reposo semisupino",
+      "desc": "Haz 10 minutos de reposo semisupino (boca arriba, rodillas dobladas, libros bajo la cabeza) cada día durante dos semanas. Observa qué cambia en cómo te sientas y te pones de pie después."
+    },
+    "The Balance Number": {
+      "title": "El número de equilibrio",
+      "desc": "Cronometra tu apoyo en una sola pierna con los ojos cerrados (ambos lados, el mejor de tres). Entrena tai chi o apoyos en una pierna durante ocho semanas y vuelve a medir. Registra ambos números y la diferencia."
+    },
+    "The Bounce & Flow Week": {
+      "title": "La semana de rebote y flujo",
+      "desc": "Durante siete días, haz cinco minutos de rebote de todo el cuerpo más cinco minutos de movimiento fluido continuo (sin parar al final de los rangos). Observa dónde te sientes rígido el día 1 y de nuevo el día 7."
+    },
+    "The Family Practice Year": {
+      "title": "El año de práctica familiar",
+      "desc": "Elige una práctica diaria de este gremio y mantenla durante un año entero — cada miembro elige la suya. Llevad un registro compartido. Al final, comparad los números del día 1 con los del día 365."
+    },
+    "The Five-Minute Energy Routine": {
+      "title": "La rutina energética de cinco minutos",
+      "desc": "Haz la rutina energética diaria completa (hook-up, tracción de coronilla, tres golpecitos, zip-up, Wayne Cook) cada mañana durante dos semanas. Califica cómo te sientes antes y después en una escala de 1 a 5."
+    },
+    "The Position-Variety Day": {
+      "title": "El día de variedad de posturas",
+      "desc": "Durante un día, cambia de postura cada 30 minutos (de pie, sentadilla, alcance, caminar, suelo). Cuenta cuántas posturas distintas usaste de verdad. Luego hazlo durante una semana y compara el conteo."
     }
   }
 },
@@ -2017,6 +2097,86 @@ const LANG = {
     "Build the Radiant Energy Receiver": {
       "title": "Construire le récepteur d'énergie radiante",
       "desc": "Montez une plaque métallique isolée à 3-5 m sur un mât NON métallique, reliez-la via un condensateur à une prise de terre, et mesurez la tension à 0/5/10/15 min sur 5+ séances (matin/midi/nuit, ciel clair/couvert). Puis enveloppez la plaque dans un blindage relié à la terre comme témoin et recommencez. RÉUSSI : le récepteur lit ≥10× le témoin blindé dans ≥4/5 séances. Orage : débranchez et mettez toujours l'antenne à la terre d'abord."
+    },
+    "Barefoot & Honest": {
+      "title": "Pieds nus et honnête",
+      "desc": "Passez 15 minutes pieds nus sur sol naturel chaque jour pendant deux semaines. Notez vos heures de sommeil et la sensation de vos pieds. Rapportez ce qui a changé et ce qui n'a pas changé — un résultat nul vaut l'Étoile du Sceptique."
+    },
+    "Clean a Kitchen": {
+      "title": "Nettoyer une cuisine",
+      "desc": "Nettoyez toute la cuisine — évier, plans de travail, table, plaque de cuisson et sol — avec photos avant/après. Tout savon utilisé doit être compatible eaux grises ou facilement biodégradable."
+    },
+    "Eight Brocades — 30 Days": {
+      "title": "Huit Brocarts — 30 jours",
+      "desc": "Faites la série complète des huit pièces une fois par jour pendant 30 jours. Les jours 1 et 30, chronométrez votre équilibre sur une jambe, yeux fermés (chaque côté). Notez les deux nombres."
+    },
+    "Family Form — Teach It": {
+      "title": "Forme familiale — enseignez-la",
+      "desc": "Apprenez les cinq formes d'animaux, puis enseignez-les à quelqu'un d'autre de la famille. Chacun choisit l'animal qu'il réussit le moins et le travaille pendant deux semaines."
+    },
+    "Five Minutes of Breath": {
+      "title": "Cinq minutes de respiration",
+      "desc": "Faites cinq minutes de soupirs cycliques (double inspiration, longue expiration) chaque jour pendant deux semaines. Notez votre humeur avant et après chaque fois et regardez le schéma."
+    },
+    "Five Rites — 21-Day Streak": {
+      "title": "Cinq Rites — série de 21 jours",
+      "desc": "Faites les cinq rites chaque matin pendant 21 jours. Commencez à 5 répétitions chacun et ajoutez-en une par semaine. Notez la date et un nombre par jour — pouls au repos ou heures de sommeil."
+    },
+    "Five Rites — Full 21": {
+      "title": "Cinq Rites — 21 complètes",
+      "desc": "Montez les Cinq Rites jusqu'à 21 répétitions complètes de chaque mouvement, chaque jour avant le petit-déjeuner. Continuez le journal quotidien — la série, c'est la pratique."
+    },
+    "Grow a New Plant From a Cutting": {
+      "title": "Cultiver une plante à partir d'une bouture",
+      "desc": "Prenez une bouture d'une plante existante et enracinez-la sans produits chimiques industriels (l'eau de saule convient), puis cultivez-la pour prouver sa viabilité."
+    },
+    "Inner Smile Circuit": {
+      "title": "Circuit du Sourire Intérieur",
+      "desc": "Apprenez le Sourire Intérieur : portez l'attention sur le cœur, les poumons, le foie, l'estomac, les reins et la colonne, un à un, et souriez à chacun. Chaque jour pendant une semaine, puis enseignez-le à quelqu'un d'autre."
+    },
+    "Make Salted Pork": {
+      "title": "Faire du porc au sel",
+      "desc": "Salez et affinez deux livres de viande à partir du frais, en n'utilisant que des matériaux qui existaient il y a 200 ans (ni plastique ni aluminium)."
+    },
+    "Make a Rose Blossom Salve": {
+      "title": "Faire un baume aux fleurs de rose",
+      "desc": "Créez un baume cicatrisant avec des fleurs de rose — récoltez le végétal, infusez-le dans l'huile, préparez le baume et mettez-le en pot avec une étiquette."
+    },
+    "Make a Snare": {
+      "title": "Fabriquer un collet",
+      "desc": "Construisez un collet en fil, câble, ficelle ou corde pour un animal précis et installez-le comme pour l'attraper — sans piéger réellement. Uniquement des matériaux qui existaient il y a 200 ans."
+    },
+    "Microcosmic Orbit": {
+      "title": "Orbite Microcosmique",
+      "desc": "Apprenez l'Orbite Microcosmique : l'attention monte le long de la colonne jusqu'au sommet du crâne, redescend par le devant jusqu'au nombril, 9–36 boucles lentes avec le souffle. Dix à vingt minutes par jour. Pratique adulte — le Sourire Intérieur est la porte familiale."
+    },
+    "Reuse Water From a Shower": {
+      "title": "Réutiliser l'eau de la douche",
+      "desc": "Placez un seau dans la douche pour récupérer l'eau (10–20 % suffisent, douches sans savon uniquement), puis utilisez au moins trois gallons pour tirer la chasse ou arroser dehors."
+    },
+    "Semi-Supine Rest": {
+      "title": "Repos semi-allongé",
+      "desc": "Faites 10 minutes de repos semi-allongé (sur le dos, genoux pliés, livres sous la tête) chaque jour pendant deux semaines. Observez ce qui change ensuite dans votre façon de vous asseoir et de vous tenir debout."
+    },
+    "The Balance Number": {
+      "title": "Le nombre d'équilibre",
+      "desc": "Chronométrez votre équilibre sur une jambe, yeux fermés (les deux côtés, meilleur des trois). Entraînez le tai-chi ou les équilibres sur une jambe pendant huit semaines, puis remesurez. Notez les deux nombres et la différence."
+    },
+    "The Bounce & Flow Week": {
+      "title": "La semaine rebond et fluidité",
+      "desc": "Pendant sept jours, cinq minutes de rebonds de tout le corps plus cinq minutes de mouvement fluide continu (sans s'arrêter en fin d'amplitude). Repérez où vous vous sentez raide le jour 1 et à nouveau le jour 7."
+    },
+    "The Family Practice Year": {
+      "title": "L'année de pratique familiale",
+      "desc": "Choisissez une pratique quotidienne de cette guilde et tenez-la pendant un an entier — chacun la sienne. Tenez un journal commun. À la fin, comparez les nombres du jour 1 avec ceux du jour 365."
+    },
+    "The Five-Minute Energy Routine": {
+      "title": "La routine énergétique de cinq minutes",
+      "desc": "Faites la routine énergétique quotidienne complète (hook-up, traction de la couronne, trois tapes, zip-up, Wayne Cook) chaque matin pendant deux semaines. Notez votre état avant et après sur une échelle de 1 à 5."
+    },
+    "The Position-Variety Day": {
+      "title": "La journée de variété de postures",
+      "desc": "Pendant une journée, changez de position toutes les 30 minutes (debout, accroupi, extension, marche, sol). Comptez combien de positions distinctes vous avez réellement utilisées. Puis faites-le une semaine et comparez."
     }
   }
 },
@@ -3024,6 +3184,86 @@ const LANG = {
     "Build the Radiant Energy Receiver": {
       "title": "Den Strahlungsenergie-Empfänger bauen",
       "desc": "Montiere eine isolierte Metallplatte 3-5 m hoch an einem NICHT-metallischen Mast, verdrahte sie über einen Folienkondensator mit einem Erdungspfahl und miss die Spannung bei 0/5/10/15 Min über 5+ Sitzungen (Morgen/Mittag/Nacht, klar/bewölkt). Dann wickle die Platte als Kontrolle in geerdete Folie und wiederhole. BESTANDEN: Der Empfänger zeigt ≥10× die abgeschirmte Kontrolle in ≥4/5 Sitzungen. Bei Gewitter: immer zuerst die Antenne trennen und erden."
+    },
+    "Barefoot & Honest": {
+      "title": "Barfuß & ehrlich",
+      "desc": "Verbringe zwei Wochen lang täglich 15 Minuten barfuß auf natürlichem Boden. Verfolge die Schlafstunden und wie sich deine Füße anfühlen. Berichte, was sich verändert hat und was nicht — ein Nullergebnis verdient den Stern des Skeptikers."
+    },
+    "Clean a Kitchen": {
+      "title": "Eine Küche putzen",
+      "desc": "Putze die ganze Küche — Spüle, Arbeitsflächen, Tisch, Herd und Boden — mit Vorher/Nachher-Fotos. Jede verwendete Seife muss grauwassersicher oder leicht biologisch abbaubar sein."
+    },
+    "Eight Brocades — 30 Days": {
+      "title": "Acht Brocate — 30 Tage",
+      "desc": "Mache die volle achtteilige Reihe einmal täglich für 30 Tage. An Tag 1 und Tag 30 miss deinen Einbeinstand mit geschlossenen Augen (jede Seite). Notiere beide Zahlen."
+    },
+    "Family Form — Teach It": {
+      "title": "Familienform — bring sie bei",
+      "desc": "Lerne alle fünf Tierformen und bring sie dann jemand anderem in der Familie bei. Jeder von euch wählt das Tier, das ihm am schlechtesten gelingt, und übt es zwei Wochen lang."
+    },
+    "Five Minutes of Breath": {
+      "title": "Fünf Minuten Atem",
+      "desc": "Mache zwei Wochen lang täglich fünf Minuten zyklisches Seufzen (doppeltes Einatmen, langes Ausatmen). Bewerte deine Stimmung vorher und nachher und schau dir das Muster an."
+    },
+    "Five Rites — 21-Day Streak": {
+      "title": "Fünf Riten — 21-Tage-Serie",
+      "desc": "Mache drei Wochen lang jeden Morgen alle fünf Riten. Beginne mit je 5 Wiederholungen und steigere um eine pro Woche. Notiere Datum und eine Zahl pro Tag — Ruhepuls oder Schlafstunden."
+    },
+    "Five Rites — Full 21": {
+      "title": "Fünf Riten — volle 21",
+      "desc": "Steigere die Fünf Riten bis zu vollen 21 Wiederholungen jeder Bewegung, täglich vor dem Frühstück. Führe das Tagebuch weiter — die Serie ist die Praxis."
+    },
+    "Grow a New Plant From a Cutting": {
+      "title": "Eine neue Pflanze aus einem Steckling ziehen",
+      "desc": "Schneide einen Trieb von einer bestehenden Pflanze und bewurzele ihn ohne industrielle Chemie (Weidenwasser ist erlaubt), dann ziehe ihn weiter hoch, um die Lebensfähigkeit zu beweisen."
+    },
+    "Inner Smile Circuit": {
+      "title": "Kreis des Inneren Lächelns",
+      "desc": "Lerne das Innere Lächeln: Lenke die Aufmerksamkeit nacheinander auf Herz, Lunge, Leber, Magen, Nieren und Wirbelsäule und lächle in jedes. Tägliche Praxis für eine Woche, dann bring es jemandem bei."
+    },
+    "Make Salted Pork": {
+      "title": "Gesalzenes Fleisch herstellen",
+      "desc": "Pökle zwei Pfund Fleisch ab frisch, nur mit Materialien, die vor 200 Jahren existierten (kein Plastik, kein Aluminium)."
+    },
+    "Make a Rose Blossom Salve": {
+      "title": "Rosenblüten-Salbe herstellen",
+      "desc": "Stelle eine heilende Salbe aus Rosenblüten her — ernte das Pflanzenmaterial, ziehe es in Öl aus, fertige die Salbe und fülle sie mit Etikett ab."
+    },
+    "Make a Snare": {
+      "title": "Eine Schlinge bauen",
+      "desc": "Baue eine Draht-, Kabel-, Garn- oder Seilschlinge für ein bestimmtes Tier und stelle sie auf, als würdest du fangen — ohne wirklich zu fangen. Nur Materialien, die vor 200 Jahren existierten."
+    },
+    "Microcosmic Orbit": {
+      "title": "Mikrokosmischer Orbit",
+      "desc": "Lerne den Mikrokosmischen Orbit: Die Aufmerksamkeit steigt die Wirbelsäule zum Scheitel und fällt vorne zum Nabel, 9–36 langsame Umläufe mit dem Atem. Zehn bis zwanzig Minuten täglich. Erwachsenenpraxis — das Innere Lächeln ist der Familieneingang."
+    },
+    "Reuse Water From a Shower": {
+      "title": "Duschwasser wiederverwenden",
+      "desc": "Stelle einen Eimer in die Dusche, um Wasser aufzufangen (10–20 % genügen, nur seifenfreie Duschen), und nutze dann mindestens drei Gallonen für die Toilettenspülung oder zum Gießen im Freien."
+    },
+    "Semi-Supine Rest": {
+      "title": "Halbliegende Ruhe",
+      "desc": "Mache zwei Wochen lang täglich 10 Minuten halbliegende Ruhe (auf dem Rücken, Knie gebeugt, Bücher unter dem Kopf). Beachte, was sich danach beim Sitzen und Stehen verändert."
+    },
+    "The Balance Number": {
+      "title": "Die Gleichgewichtszahl",
+      "desc": "Miss deinen Einbeinstand mit geschlossenen Augen (beide Seiten, Bestwert von drei). Trainiere acht Wochen Tai-Chi oder Einbeinstände und miss erneut. Notiere beide Zahlen und die Differenz."
+    },
+    "The Bounce & Flow Week": {
+      "title": "Die Bounce-&-Flow-Woche",
+      "desc": "Sieben Tage lang: fünf Minuten Ganzkörper-Wippen plus fünf Minuten kontinuierlich fließende Bewegung (nicht am Ende der Bewegungsradien anhalten). Beachte, wo du dich an Tag 1 steif fühlst — und wieder an Tag 7."
+    },
+    "The Family Practice Year": {
+      "title": "Das Familien-Praxisjahr",
+      "desc": "Wähle eine tägliche Praxis aus dieser Gilde und halte sie ein ganzes Jahr durch — jedes Familienmitglied seine eigene. Führt ein gemeinsames Logbuch. Vergleicht am Ende die Zahlen von Tag 1 mit denen von Tag 365."
+    },
+    "The Five-Minute Energy Routine": {
+      "title": "Die Fünf-Minuten-Energie-Routine",
+      "desc": "Mache zwei Wochen lang jeden Morgen die volle tägliche Energie-Routine (Hook-up, Kronenzug, drei Klopfen, Zip-up, Wayne Cook). Bewerte dein Befinden vorher und nachher auf einer Skala von 1–5."
+    },
+    "The Position-Variety Day": {
+      "title": "Der Positionswechsel-Tag",
+      "desc": "Wechsle einen Tag lang alle 30 Minuten die Position (stehen, hocken, greifen, gehen, Boden). Zähle, wie viele verschiedene Positionen du wirklich genutzt hast. Dann eine Woche lang wiederholen und vergleichen."
     }
   }
 }
