@@ -643,6 +643,65 @@ const MOVEMENT_SYSTEMS = [
   },
 
   {
+    id: "resonance-frequency-breathing",
+    icon: "💓",
+    name: "Resonance-Frequency Breathing — Find Your Own Rate",
+    esName: "Respiración a Frecuencia de Resonancia — Encuentra Tu Ritmo",
+    tagline: "The one number in this section you can only find on yourself.",
+    lineage: "A laboratory finding, not a tradition. The resonance phenomenon in the cardiovascular system was mapped by Evgeny Vaschillo, Bronya Vaschillo and Paul Lehrer at Rutgers in a series of papers from 2000 to 2006, and the clinical framework was reviewed by Lehrer and Gevirtz in 2014. The practice it produces — slow paced breathing — is ancient and appears in every tradition in this section. What is modern is the claim that the *right* rate is different for each person, and that you can find yours with a pulse and a clock.",
+    what: "Every person's cardiovascular system has a natural resonant frequency — a breathing rate at which the heart-rate swing between inhale and exhale is largest. Breathing there makes the pulse oscillation grow to several times its resting size and turn smooth and wave-like, which is what the biofeedback devices are measuring. The average sits around six breaths a minute, which is why 'six breaths per minute' is the number everyone quotes — but the studied range is 4.5 to 6.5, it is stable for a given person across many sessions, and it runs slower in taller people and in men. So the honest version of the practice is: find your rate, then breathe there. The generic entry beside this one teaches the drill; this one teaches the tuning.",
+    esWhat: "Cada persona tiene una frecuencia de resonancia cardiovascular propia — un ritmo respiratorio en el que la oscilación del pulso entre inhalación y exhalación es máxima. La media ronda las seis respiraciones por minuto, pero el rango estudiado va de 4,5 a 6,5, es estable para cada persona y es más lento en personas altas y en hombres. La versión honesta de la práctica es: encuentra tu ritmo y respira ahí.",
+    practice: [
+      "Sit quietly for two minutes first, without changing your breathing. Let the baseline settle.",
+      "Put two fingers on the pulse at your wrist or your neck and keep them there. You are going to feel the pulse get faster and slower within each breath — that swing is the whole measurement.",
+      "Breathe at a set rate for two minutes, using a clock or a slow count. Start at 5.5 seconds in and 5.5 seconds out — that is about 5.5 breaths per minute.",
+      "While you breathe, notice the size of the pulse swing: how much faster it feels at the top of the inhale than at the bottom of the exhale. If you can count it, count beats for 15 seconds at the peak of the inhale and again at the end of the exhale and write both numbers down.",
+      "Change the rate and repeat. Test 4.5, 5, 5.5, 6 and 6.5 breaths per minute — two minutes at each, with a minute of normal breathing between them. Slower is not automatically better; the largest swing wins, and for some people that is 4.5 and for others 6.5.",
+      "The rate with the biggest swing is your resonance rate. That is the rate to practise at — five to fifteen minutes a day, sitting, nose-breathing, no strain.",
+      "If you have a chest-strap heart-rate monitor or a phone app that shows a live pulse wave, use it instead of your fingers: you are looking for the wave with the tallest peaks. The fingers work, the device is just easier to read.",
+      "Children: same idea, kept as a game. 'Find the breathing speed that makes your heartbeat dance the most.' A minute at each rate is enough for a child.",
+      "Stop if you feel dizzy or air-starved. Slow breathing below your comfortable rate can lower carbon dioxide and cause light-headedness — the studied protocol had this happen in early sessions and it settled with practice. Do not force a rate that feels wrong just because it is the one on the chart."
+    ],
+    reps: "Find your rate once (about 15 minutes), then practise at it for 5–15 minutes a day. The rate does not drift much — the studies found it stable within half a breath per minute across ten sessions — so it is a one-time measurement you keep.",
+    evidence: "Strong as a physiological protocol — the resonance effect and the 4.5–6.5 breaths-per-minute range are directly measured. Moderate as a clinical outcome — the stress and anxiety benefit comes mostly from self-reported measures in small trials.",
+    evClass: "strong",
+    research: [
+      {
+        source: "Vaschillo, Vaschillo & Lehrer, 'Characteristics of Resonance in Heart Rate Variability Stimulated by Biofeedback', Applied Psychophysiology and Biofeedback 31(2):129–142 (2006)",
+        claim: "The paper that names the phenomenon and measures it. In 32 adult asthma patients and 24 healthy adults, each person's resonant frequency sat between 4.5 and 6.5 breaths per minute; it was stable across ten training sessions (almost never varying by more than 0.5 breaths per minute); it related negatively to height and was lower in men than in women; and it showed no relationship to age, weight, or whether the person had asthma. This is the source for the claim that the rate is personal and the source for the range.",
+        medium: "physiological measurement study (clinical trial, NIH-funded)",
+        confidence: "Strong for the resonance effect and the range",
+        year: "2006"
+      },
+      {
+        source: "Steffen, Austin, DeBarros & Brown, 'The Impact of Resonance Frequency Breathing on Measures of Heart Rate Variability, Blood Pressure, and Mood', Frontiers in Public Health 5:222 (2017)",
+        claim: "A three-group experiment that tested whether the *personal* rate matters: one group breathed at their own resonance frequency for 15 minutes, one at one breath per minute faster, and one sat quietly. The resonance group reported higher positive mood, showed a higher LF/HF heart-rate-variability ratio than the control group, and had lower systolic blood pressure during a stressful mental task and during recovery. The group breathing just one breath off their rate did not separate cleanly from either side — which is the finding that makes 'find your own rate' a real instruction rather than a slogan.",
+        medium: "randomized three-group experiment (acute outcomes)",
+        confidence: "Moderate–Strong (randomized, but small and short-term)",
+        year: "2017"
+      },
+      {
+        source: "Lehrer & Gevirtz, 'Heart rate variability biofeedback: how and why does it work?', Frontiers in Psychology 5:756 (2014)",
+        claim: "The mechanism review. During resonance breathing the heart-rate oscillation grows to many times its resting amplitude and becomes simple and sinusoidal, driven by the baroreflex — the blood-pressure reflex loop. With home practice twice daily over about three months, resting baroreflex gain increases even before a session begins, which the authors read as the reflex getting stronger. The paper is explicit that the mechanism is the best-supported explanation rather than a settled one, and that a vagal pathway to the frontal cortex is a competing proposal.",
+        medium: "mechanism review",
+        confidence: "Strong for the mechanism · the competing explanation is stated as open",
+        year: "2014"
+      },
+      {
+        source: "Goessl, Curtiss & Hofmann, 'The effect of heart rate variability biofeedback training on stress and anxiety: a meta-analysis', Psychological Medicine 47(15):2578–2586 (2017)",
+        claim: "Twenty-four studies, 484 participants: heart-rate-variability biofeedback was associated with a large reduction in self-reported stress and anxiety (within-group Hedges' g = 0.81; between-group versus control g = 0.83). The effect did not change with study year, risk of bias, number of sessions, or whether an anxiety disorder was present. The authors' own limit is in the abstract: the outcome is self-reported, the total sample is small, and more well-controlled studies are needed. This is the entry's clinical half, and it is the weaker half.",
+        medium: "meta-analysis (random-effects, 24 small studies)",
+        confidence: "Moderate (large pooled effect, but self-reported and small total N)",
+        year: "2017"
+      }
+    ],
+    verify: "Find your own resonance rate and write it down — that is the test, and it takes about fifteen minutes. Sit quietly, fingers on your pulse, and breathe at 4.5, 5, 5.5, 6 and 6.5 breaths per minute for two minutes each. At every rate, count your pulse for 15 seconds at the top of the inhale and again at the end of the exhale, and subtract. The rate with the biggest difference is yours. Then do the honest comparison: on two days, do five minutes at your own rate, and on two other days do five minutes at a rate one breath away from it, and rate how calm you feel afterwards, 1–10. If your own rate does not beat the wrong rate for you, the tuning is not doing anything you can feel — and that is a real result. The honest limits: the stress-and-anxiety evidence is self-reported and comes from small studies, so a calm feeling is not proof of a physiological change; and the resonance effect is real in the laboratory whether or not you can feel it, which means the measurement is more trustworthy than the sensation.",
+    village: "This is the section's lesson about personalisation, made physical. Every other practice in the library is the same for everyone; this one has a number that only exists on your own body, and the game's job is to get the player to go find it. It pairs with the breathwork entry beside it — that one is the drill, this one is the tuning — and it gives the family a shared experiment: five people, five different rates, one table of numbers.",
+    quest: ["Find Your Rate", "Spend fifteen minutes finding your own resonance breathing rate: breathe at 4.5, 5, 5.5, 6 and 6.5 breaths per minute for two minutes each, counting your pulse at the top of the inhale and the end of the exhale, and write down the rate where the pulse swing is largest. Then practise at your rate for five minutes a day for a week, and put your number on the family chart next to everyone else's.", ["PE", "Health", "Science"], "💓"],
+    authorship: {"agent_id": "agent-b73ac550-5671-471e-b3e1-721f948ea063", "agent_name": "Tutor", "job": "vitality-engine", "lineage": "agent-b73ac550-5671-471e-b3e1-721f948ea063 -> vitality-engine -> resonance-frequency-breathing", "authored_at": "2026-09-24"}
+  },
+
+  {
     id: "tai-chi-balance",
     icon: "🌊",
     name: "Tai Chi & Balance Training",
