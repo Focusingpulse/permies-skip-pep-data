@@ -198,7 +198,8 @@ const LANG = {
     "History": "Historia",
     "Economics": "Economía",
     "Constitution": "Constitución",
-    "Reading": "Lectura"
+    "Reading": "Lectura",
+    "Engineering": "Ingeniería",
   },
   "roles": {
     "Tracker": "Rastreador(a)",
@@ -332,6 +333,66 @@ const LANG = {
   },
   "quests": {
     "Make an Ice House": {
+    "Sew a Small Pillow": {
+      "title": "Coser una almohada pequeña",
+      "desc": "Muestra tu tela, la almohada en progreso, el relleno y la almohada terminada. (BB de PEP: textile.sand.pillow)"
+    },
+    "Make a Comfrey Leaf Infused Oil": {
+      "title": "Hacer un aceite infusionado de hoja de consuelda",
+      "desc": "Cosecha consuelda e infúsala en aceite: muestra la cosecha, el material vegetal en el aceite (con el aceite descrito) y el frasco colado y etiquetado. (BB de PEP: medicine.sand.oil.comfrey)"
+    },
+    "Clean a Bathroom": {
+      "title": "Limpiar un baño",
+      "desc": "Fotos de antes y después del inodoro, lavabo/encimera, suelo, bañera/ducha y espejo — más un informe de los limpiadores usados. (BB de PEP: nest.sand.bathroom)"
+    },
+    "Sweep a Floor": {
+      "title": "Barrer un suelo",
+      "desc": "Fotos de antes, de la acción y de después de barrer un suelo — o un vídeo de 2 minutos. (BB de PEP: nest.sand.sweepfloor)"
+    },
+    "Chink Between Logs with Cob": {
+      "title": "Rellenar entre troncos con cob",
+      "desc": "Rellena al menos 20 pies lineales entre los troncos de un wofati con cob de baja calidad: foto del antes, preparación del cob, colocación y resultado final. (BB de PEP: naturalbuilding.sand.cobfill)"
+    },
+    "Whitewash a 4x8 Area": {
+      "title": "Encalar una zona de 4x8",
+      "desc": "Fabrica lechada de cal con materias primas y cubre una superficie de 4x8: materias primas, antes, acción (¡sal tú en la foto!) y después. (BB de PEP: naturalbuilding.sand.whitewash)"
+    },
+    "Carve a Club-Style Mallet": {
+      "title": "Tallar un mazo tipo garrote",
+      "desc": "A partir de un trozo verde de unos 40 cm de largo y 10 cm de grosor, talla a mano un mazo lo delgado como para que el pulgar y el dedo se toquen alrededor del mango. Muestra inicio, mitad y final. (BB de PEP: roundwood.sand.club)"
+    },
+    "Direct Seed and Grow 50 Perennials": {
+      "title": "Sembrar directamente y cultivar 50 perennes",
+      "desc": "Siembra directamente al menos 50 de cada uno: manzana, ciruela, melocotón, cereza, albaricoque, pera, mora, espino amarillo, nogal o avellano (sin trasplantes) y verifica que germinaron al menos 12. (BB de PEP: gardening.wood.perennial)"
+    },
+    "Beat and Sun a Area Rug": {
+      "title": "Sacudir y asolear una alfombra",
+      "desc": "Sacude una alfombra y dale al menos 2 horas de sol: fotos de antes, de la acción y de después. (BB de PEP: nest.sand.cleanrug)"
+    },
+    "Make an Atlatl": {
+      "title": "Hacer un átlatl",
+      "desc": "Talla un lanzador de átlatl más una flecha emplumada con punta reemplazable — solo con materiales que existieran hace 200 años. (BB de PEM: traditional.straw.atlatl)"
+    },
+    "Carve a First-Timer Spoon": {
+      "title": "Tallar una cuchara para principiantes",
+      "desc": "Publica tres fotos del tallado a mano de una cuchara: el trozo de madera inicial, el progreso a mitad de camino con tus herramientas y la cuchara final. (BB de PEP: roundwood.sand.spoon)"
+    },
+    "Clean Out 4 Chicken Nest Boxes": {
+      "title": "Limpiar 4 nidos de gallinas",
+      "desc": "Fotografía 4 nidos sucios, renueva la paja o virutas y muestra los 4 limpios — o un vídeo de 2 minutos del trabajo completo. (BB de PEP: animal.sand.cleanbox)"
+    },
+    "Clean Four Windows": {
+      "title": "Limpiar cuatro ventanas",
+      "desc": "Muestra tu limpiacristales (descrito) y fotos de antes/acción/después de limpiar cuatro ventanas por dentro y por fuera. (BB de PEP: nest.sand.cleanwindows)"
+    },
+    "Make a Comfrey Salve": {
+      "title": "Hacer una pomada de consuelda",
+      "desc": "Cosecha una hoja de consuelda, infúndela en aceite y conviértela en una pomada etiquetada. Publica fotos de la hoja fresca, la infusión y la pomada terminada. (BB de PEP: medicine.sand.salve.comfrey)"
+    },
+    "Prepare a Foraged Dish": {
+      "title": "Preparar un plato silvestre",
+      "desc": "Recolecta más de una taza de ingredientes silvestres (no cultivados) y cocina un plato: muestra la planta en la naturaleza, los ingredientes, el plato terminado y descríbelo. (BB de PEP: foraging.sand.dish)"
+    },
       "title": "Construir una casa de hielo",
       "desc": "Construir un edificio tradicional de almacenamiento de hielo — al menos 8 yardas cúbicas de almacenamiento, muy bien aislado y con drenaje para el hielo derretido. Solo materiales que existieran hace 200 años. (BB de PEM: traditional.wood.icehouse)"
     },
@@ -1285,7 +1346,8 @@ const LANG = {
     "History": "Histoire",
     "Economics": "Économie",
     "Constitution": "Constitution",
-    "Reading": "Lecture"
+    "Reading": "Lecture",
+    "Engineering": "Ingénierie",
   },
   "roles": {
     "Tracker": "Traqueur / Traqueuse",
@@ -1419,6 +1481,66 @@ const LANG = {
   },
   "quests": {
     "Make an Ice House": {
+    "Sew a Small Pillow": {
+      "title": "Coudre un petit coussin",
+      "desc": "Montre ton tissu, le coussin en cours, le rembourrage et le coussin terminé. (BB PEP : textile.sand.pillow)"
+    },
+    "Make a Comfrey Leaf Infused Oil": {
+      "title": "Faire une huile infusée aux feuilles de consoude",
+      "desc": "Récolte de la consoude et infuse-la dans l'huile : montre la récolte, le matériel végétal dans l'huile (huile décrite) et le flacon filtré et étiqueté. (BB PEP : medicine.sand.oil.comfrey)"
+    },
+    "Clean a Bathroom": {
+      "title": "Nettoyer une salle de bain",
+      "desc": "Photos avant/après des toilettes, lavabo/plan, sol, baignoire/douche et miroir — plus un rapport sur les produits utilisés. (BB PEP : nest.sand.bathroom)"
+    },
+    "Sweep a Floor": {
+      "title": "Balayer un sol",
+      "desc": "Photos avant, pendant et après le balayage — ou une vidéo de 2 minutes. (BB PEP : nest.sand.sweepfloor)"
+    },
+    "Chink Between Logs with Cob": {
+      "title": "Calfeutrer entre les rondins au cob",
+      "desc": "Remplis au moins 20 pieds linéaires entre les rondins d'un wofati avec du cob grossier : photo avant, préparation du cob, mise en place et résultat final. (BB PEP : naturalbuilding.sand.cobfill)"
+    },
+    "Whitewash a 4x8 Area": {
+      "title": "Badigeonner une zone de 4x8",
+      "desc": "Fabrique du badigeon à partir de matières premières et couvre une surface de 4x8 : matières premières, avant, action (toi sur la photo !) et après. (BB PEP : naturalbuilding.sand.whitewash)"
+    },
+    "Carve a Club-Style Mallet": {
+      "title": "Sculpter un maillet type gourdin",
+      "desc": "À partir d'un morceau vert d'environ 40 cm de long et 10 cm de diamètre, sculpte à la main un maillet assez fin pour que pouce et index se touchent autour du manche. Montre début, milieu et fin. (BB PEP : roundwood.sand.club)"
+    },
+    "Direct Seed and Grow 50 Perennials": {
+      "title": "Semer directement et cultiver 50 vivaces",
+      "desc": "Sème directement au moins 50 de chaque : pomme, prune, pêche, cerise, abricot, poire, mûre, argousier, noyer ou noisetier (pas de repiquage) et vérifie qu'au moins 12 ont germé. (BB PEP : gardening.wood.perennial)"
+    },
+    "Beat and Sun a Area Rug": {
+      "title": "Battre et exposer un tapis au soleil",
+      "desc": "Bats un tapis et laisse-le au moins 2 heures au soleil : photos avant, action et après. (BB PEP : nest.sand.cleanrug)"
+    },
+    "Make an Atlatl": {
+      "title": "Fabriquer un atlatl",
+      "desc": "Sculpte un propulseur d'atlatl plus une flèche emplumée à pointe remplaçable — uniquement avec des matériaux existant il y a 200 ans. (BB PEM : traditional.straw.atlatl)"
+    },
+    "Carve a First-Timer Spoon": {
+      "title": "Sculpter une cuillère de débutant",
+      "desc": "Publie trois photos de la sculpture à la main d'une cuillère : le morceau de bois de départ, la mi-course avec tes outils et la cuillère finale. (BB PEP : roundwood.sand.spoon)"
+    },
+    "Clean Out 4 Chicken Nest Boxes": {
+      "title": "Nettoyer 4 nids de poules",
+      "desc": "Photographie 4 nids sales, remplace la paille ou les copeaux et montre les 4 propres — ou une vidéo de 2 minutes. (BB PEP : animal.sand.cleanbox)"
+    },
+    "Clean Four Windows": {
+      "title": "Nettoyer quatre fenêtres",
+      "desc": "Montre ton produit pour vitres (décrit) et des photos avant/action/après de quatre fenêtres nettoyées dedans et dehors. (BB PEP : nest.sand.cleanwindows)"
+    },
+    "Make a Comfrey Salve": {
+      "title": "Faire un baume à la consoude",
+      "desc": "Récolte une feuille de consoude, infuse-la dans l'huile et transforme-la en baume étiqueté. Publie des photos de la feuille fraîche, de l'infusion et du baume fini. (BB PEP : medicine.sand.salve.comfrey)"
+    },
+    "Prepare a Foraged Dish": {
+      "title": "Préparer un plat cueilli",
+      "desc": "Cueille plus d'une tasse d'ingrédients sauvages (non cultivés) et cuisine un plat : montre la plante en nature, les ingrédients, le plat fini et décris-le. (BB PEP : foraging.sand.dish)"
+    },
       "title": "Construire une glacière",
       "desc": "Construire un bâtiment traditionnel de stockage de glace — au moins 8 verges cubes de stockage, très bien isolé, avec drainage pour la glace fondue. Uniquement des matériaux existant il y a 200 ans. (BB PEM : traditional.wood.icehouse)"
     },
@@ -2372,7 +2494,8 @@ const LANG = {
       "History": "Geschichte",
       "Economics": "Wirtschaft",
       "Constitution": "Verfassung",
-      "Reading": "Lesen"
+      "Reading": "Lesen",
+      "Engineering": "Ingenieurwesen",
     },
     "roles": {
       "Tracker": "Verfolger / Verfolgerin",
@@ -2507,6 +2630,66 @@ const LANG = {
     "quests": {
     "Make an Ice House": {
       "title": "Ein Eishaus bauen",
+    "Sew a Small Pillow": {
+      "title": "Ein kleines Kissen nähen",
+      "desc": "Zeige deinen Stoff, das Kissen in Arbeit, die Füllung und das fertige Kissen. (PEP-BB: textile.sand.pillow)"
+    },
+    "Make a Comfrey Leaf Infused Oil": {
+      "title": "Beinwell-Blätteröl ansetzen",
+      "desc": "Ernte Beinwell und setze es in Öl an: zeige die Ernte, das Pflanzenmaterial im Öl (Öl beschrieben) und das abgeseihte, etikettierte Glas. (PEP-BB: medicine.sand.oil.comfrey)"
+    },
+    "Clean a Bathroom": {
+      "title": "Ein Badezimmer putzen",
+      "desc": "Vorher-/Nachher-Fotos von Toilette, Waschbecken/Ablage, Boden, Badewanne/Dusche und Spiegel — plus ein Bericht über die verwendeten Reiniger. (PEP-BB: nest.sand.bathroom)"
+    },
+    "Sweep a Floor": {
+      "title": "Einen Boden fegen",
+      "desc": "Vorher-, Aktions- und Nachher-Fotos des Fegens — oder ein 2-Minuten-Video. (PEP-BB: nest.sand.sweepfloor)"
+    },
+    "Chink Between Logs with Cob": {
+      "title": "Zwischen Rundhölzer mit Cob abdichten",
+      "desc": "Fülle mindestens 20 Laufmeter zwischen den Rundhölzern eines Wofati mit einfachem Cob: Vorher-Foto, Cob-Zubereitung, Einbringen und Endergebnis. (PEP-BB: naturalbuilding.sand.cobfill)"
+    },
+    "Whitewash a 4x8 Area": {
+      "title": "Eine 4x8-Fläche kalken",
+      "desc": "Stelle Kalktünche aus Rohstoffen her und streiche eine 4x8-Fläche: Rohstoffe, vorher, Aktion (idealerweise mit DIR im Bild!) und nachher. (PEP-BB: naturalbuilding.sand.whitewash)"
+    },
+    "Carve a Club-Style Mallet": {
+      "title": "Ein knüppelförmiges Holzbeil schnitzen",
+      "desc": "Aus einem grünen Stück von ca. 40 cm Länge und 10 cm Durchmesser schnitze von Hand ein Beil, so schlank, dass Daumen und Zeigefinger sich um den Griff schließen. Zeige Anfang, Mitte und Ende. (PEP-BB: roundwood.sand.club)"
+    },
+    "Direct Seed and Grow 50 Perennials": {
+      "title": "50 Stauden direkt aussäen und ziehen",
+      "desc": "Säe direkt mindestens 50 von jeder Sorte aus: Apfel, Pflaume, Pfirsich, Kirsche, Aprikose, Birne, Maulbeere, Sanddorn, Walnuss oder Haselnuss (kein Umpflanzen) und bestätige, dass mindestens 12 gekeimt sind. (PEP-BB: gardening.wood.perennial)"
+    },
+    "Beat and Sun a Area Rug": {
+      "title": "Einen Teppich klopfen und sonnen",
+      "desc": "Klopfe einen Teppich aus und gib ihm mindestens 2 Stunden Sonne: Vorher-, Aktions- und Nachher-Fotos. (PEP-BB: nest.sand.cleanrug)"
+    },
+    "Make an Atlatl": {
+      "title": "Einen Atlatl bauen",
+      "desc": "Schnitze einen Atlatl-Wurfstock plus einen befiederten Pfeil mit austauschbarer Spitze — nur mit Materialien, die vor 200 Jahren existierten. (PEM-BB: traditional.straw.atlatl)"
+    },
+    "Carve a First-Timer Spoon": {
+      "title": "Ein Anfänger-Löffel schnitzen",
+      "desc": "Poste drei Fotos des handgeschnitzten Löffels: das Anfangsstück Holz, der halbe Weg mit deinen Werkzeugen und der fertige Löffel. (PEP-BB: roundwood.sand.spoon)"
+    },
+    "Clean Out 4 Chicken Nest Boxes": {
+      "title": "4 Hühnernester säubern",
+      "desc": "Fotografiere 4 schmutzige Nester, erneuere das Stroh oder die Späne und zeige alle 4 sauber — oder ein 2-Minuten-Video. (PEP-BB: animal.sand.cleanbox)"
+    },
+    "Clean Four Windows": {
+      "title": "Vier Fenster putzen",
+      "desc": "Zeige deinen Glasreiniger (beschrieben) und Vorher-/Aktions-/Nachher-Fotos von vier innen und außen geputzten Fenstern. (PEP-BB: nest.sand.cleanwindows)"
+    },
+    "Make a Comfrey Salve": {
+      "title": "Eine Beinwell-Salbe machen",
+      "desc": "Ernte ein Beinwellblatt, infundiere es in Öl und fülle es in ein etikettiertes Salbenglas. Poste Fotos vom frischen Blatt, der Infusion und der fertigen Salbe. (PEP-BB: medicine.sand.salve.comfrey)"
+    },
+    "Prepare a Foraged Dish": {
+      "title": "Ein Wildgericht zubereiten",
+      "desc": "Sammle mehr als eine Tasse wilder Zutaten (nicht kultiviert) und koche ein Gericht: zeige die Pflanze in der Natur, die Zutaten, das fertige Gericht und beschreibe es. (PEP-BB: foraging.sand.dish)"
+    },
       "desc": "Ein traditionelles Eislagergebäude errichten — mindestens 8 Kubik-Yards Lagerplatz, sehr gut isoliert, mit Abfluss für das Schmelzwasser. Nur Materialien, die vor 200 Jahren existierten. (PEM-BB: traditional.wood.icehouse)"
     },
     "Make 12 Rushlights": {

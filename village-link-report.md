@@ -1,14 +1,15 @@
 # Village Link Report — 2026-09-24
 
-Checked **848** URLs: **827** OK, **16** HTTP errors, **0** redirects, **5** unreachable/timeouts.
+Checked **851** URLs: **829** OK, **16** HTTP errors, **0** redirects, **6** unreachable/timeouts.
 
-## Unreachable / timeout (5)
+## Unreachable / timeout (6)
 
 - `http://ia800306.us.archive.org/30/items/fe_The_Solar_Greenhouse_Book/The_Solar_Greenhouse_Book.pdf`  (error: URLError)
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)
 - `https://8shields.org/`  (error: URLError)
 - `https://mountainherbs.net/`  (error: URLError)
+- `https://www.motherearthnews.com/sustainable-living/green-homes/cob-building-basics-zm0z13onzrob/`  (error: TimeoutError)
 
 ## HTTP errors (16)
 
