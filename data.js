@@ -8,7 +8,7 @@ const VILLAGE_QUESTS = [
       ["Build a Hugelkultur Bed","Build a small hugelkultur mound with mulch, seeds, and nitrogen-fixing support plants.",["Science","Math"],"🌱"],
       ["Chop and Drop","Cut back plants and leave the material in place as mulch over a garden area.",["Science","PE"],"✂️"],
       ["Ruth Stout Composting","Set up thick-mulch garden spots using organic layers and kitchen scraps.",["Science","Health"],"🪱"],
-      ["Grow a New Plant From a Cutting","Take a cutting from an existing plant and root it without manufactured chemicals (willow water is fine), then grow it on to prove viability.",["Science","Math"],"🌱"]
+      ["Grow a New Plant From a Cutting","Take a cutting from an existing plant and root it without manufactured chemicals (willow water is fine), then grow it on to prove viability.",["Science","Math"],"🌱"],
       ["Direct Seed and Grow 50 Perennials","Direct-seed at least 50 each of apple, plum, peach, cherry, apricot, pear, mulberry, seaberry, walnut, or hazelnut (no transplanting) and verify at least 12 sprouted. (PEP BB: gardening.wood.perennial)",["Science","Math"],"🌰"]
     ],
     straw: [
@@ -42,9 +42,9 @@ const VILLAGE_QUESTS = [
       ["Make Clay Paint","Mix and apply a simple clay paint finish.",["Art","Science"],"🎨"],
       ["Level a Skiddable Structure with Rocks","Use rocks to level a structure that can move on skids.",["Math","Science"],"🪨"],
       ["Make a 25 Sq Ft Shake Roof","Put together a small shake roof section.",["Math","Science"],"🏚️"],
-      ["Make Whitewash","Mix and apply a whitewash finish.",["Art","Science"],"⚪"]
-      ["Level a Skiddable Structure with Rocks","Use rocks to level a skiddable structure: before, action, and leveled-after pictures. (PEP BB: naturalbuilding.sand.rocklevel)",["Science","Math"],"🪨"]
-      ["Chink Between Logs with Cob","Fill at least 20 linear feet between logs of a wofati with low-grade cob: before pic, cob prep, cob going in, final result. (PEP BB: naturalbuilding.sand.cobfill)",["Science","PE"],"🧱"]
+      ["Make Whitewash","Mix and apply a whitewash finish.",["Art","Science"],"⚪"],
+      ["Level a Skiddable Structure with Rocks","Use rocks to level a skiddable structure: before, action, and leveled-after pictures. (PEP BB: naturalbuilding.sand.rocklevel)",["Science","Math"],"🪨"],
+      ["Chink Between Logs with Cob","Fill at least 20 linear feet between logs of a wofati with low-grade cob: before pic, cob prep, cob going in, final result. (PEP BB: naturalbuilding.sand.cobfill)",["Science","PE"],"🧱"],
       ["Whitewash a 4x8 Area","Make whitewash from raw materials and cover a 4x8 surface: raw materials, before, action (you in it!), and after pics. (PEP BB: naturalbuilding.sand.whitewash)",["Art","Science"],"🤍"]
     ],
     straw: [
@@ -128,8 +128,8 @@ const VILLAGE_QUESTS = [
       ["Carve a Spoon","Shape a usable wooden spoon from a branch or scrap wood.",["Art","Science"],"🥄"],
       ["Make a Wooden Mallet","Turn a round stick or branch into a simple mallet.",["Art","Math"],"🔨"],
       ["Build a Simple Roundwood Bench","Make a sturdy little bench from round wood and lashings.",["Art","Math"],"🪑"],
-      ["Make Coat Hooks from Sticks","Create a set of hooks from sticks or small branches.",["Art","Science"],"🪝"]
-      ["Carve a First-Timer Spoon","Post three pics of hand-carving a spoon: starting chunk of wood, halfway progress with your tools, and the final spoon. (PEP BB: roundwood.sand.spoon)",["Art","PE"],"🥄"]
+      ["Make Coat Hooks from Sticks","Create a set of hooks from sticks or small branches.",["Art","Science"],"🪝"],
+      ["Carve a First-Timer Spoon","Post three pics of hand-carving a spoon: starting chunk of wood, halfway progress with your tools, and the final spoon. (PEP BB: roundwood.sand.spoon)",["Art","PE"],"🥄"],
       ["Carve a Club-Style Mallet","From a green chunk about 16 inches long and 4 inches across, hand-carve a club mallet thin enough that your thumb and finger touch around the handle. Show start, halfway, and final. (PEP BB: roundwood.sand.club)",["Art","PE"],"🔨"]
     ],
     straw: [],
@@ -159,7 +159,12 @@ const VILLAGE_QUESTS = [
     sand: [
       ["Build a Berm","Pile and shape soil into a small berm.",["Science","Math"],"🏞️"],
       ["Dig a Swale","Cut a shallow swale on contour to slow water.",["Science","Math"],"💧"],
-      ["Build a Trail","Create a simple trail that holds up to foot traffic.",["Geography","PE"],"🥾"]
+      ["Build a Trail","Create a simple trail that holds up to foot traffic.",["Geography","PE"],"🥾"],
+      ["Improve a Berm","Make an existing berm 2 feet taller over at least 3 feet of length using solid material like logs, soil, or stone, seed it immediately, and mulch it. (PEP BB: earthworks.sand.impberm)",["Science","Math"],"⛰️"],
+      ["Seal a Tiny Pond","Dig a 2-foot-wide, 1-foot-deep test hole, compact the soil, and prove it holds 5 gallons of water for over an hour — the classic pond-sealing test before building any real pond. (PEP BB: earthworks.sand.pondtest)",["Science","PE"],"🕳️"],
+      ["Fix a Road Pothole","Repair a pothole or standing puddle in a driveway or farm road so water no longer collects there. (PEP BB: earthworks.sand.pothole)",["Science","PE"],"🛣️"],
+      ["Maintain 200 Feet of Trail","Walk a trail with a measuring wheel, note the problem spots, and repair them — drainage, washouts, obstacles — then walk it again on video showing the improvements. (PEP BB: earthworks.sand.trail)",["Geography","PE"],"🥾"],
+      ["Dry Stack a Small Retaining Wall","Build a free-standing dry-stack rock wall at least 4 feet tall and 6 feet long using the 2-over-1 / 1-over-2 technique, with gravel behind it. (PEP BB: earthworks.straw.drystack)",["Math","Science"],"🧱"]
     ],
     straw: [],
     wood: [],
@@ -220,7 +225,7 @@ const VILLAGE_QUESTS = [
       ["Build a Bird Feeder or Waterer","Make a feeder or water source for birds or pollinators.",["Science","Art"],"🐦"],
       ["Create a Pollinator Habitat Patch","Plant and protect a patch that supports bees and butterflies.",["Science","Geography"],"🐝"],
       ["Clean an Animal Shelter or Coop","Clean and reset a simple animal shelter or coop area.",["Science","Health"],"🧹"],
-      ["Build a Wildlife Shelter","Make a small shelter or brush pile for local wildlife.",["Science","PE"],"🪺"]
+      ["Build a Wildlife Shelter","Make a small shelter or brush pile for local wildlife.",["Science","PE"],"🪺"],
       ["Clean Out 4 Chicken Nest Boxes","Photograph 4 dirty nest boxes, replace the straw or shavings, and show all 4 clean — or a 2-minute video of the whole job. (PEP BB: animal.sand.cleanbox)",["Science","Health"],"🐔"]
     ],
     straw: [],
@@ -236,7 +241,7 @@ const VILLAGE_QUESTS = [
       ["Identify 5 Edible Wild Plants","Learn to recognize five edible wild plants in your area.",["Science","Geography"],"🌿"],
       ["Harvest a Wild Food","Gather berries, fruit, nuts, or greens with permission and care.",["Science","Health"],"🍓"],
       ["Make a Wild Tea","Dry or steep a safe wild plant into tea.",["Science","Health"],"🍵"],
-      ["Preserve a Wild Harvest","Dry, freeze, or otherwise preserve something foraged.",["Science","Math"],"🫙"]
+      ["Preserve a Wild Harvest","Dry, freeze, or otherwise preserve something foraged.",["Science","Math"],"🫙"],
       ["Prepare a Foraged Dish","Forage more than a cup of wild ingredients (not cultivated), and cook a dish: show the plant in the wild, the ingredients, the finished dish, and describe it. (PEP BB: foraging.sand.dish)",["Science","Health"],"🥗"]
     ],
     straw: [],
@@ -267,7 +272,7 @@ const VILLAGE_QUESTS = [
       ["Mend a Hole","Repair a hole in fabric using a simple stitch or patch.",["Art","Health"],"🧵"],
       ["Replace a Button","Sew a button back on or replace a missing one.",["Art","Math"],"🪡"],
       ["Hem Clothing","Shorten or finish a hem on clothing.",["Math","Art"],"👖"],
-      ["Sew an Item","Make a small sewn item like a pouch, napkin, or bag.",["Art","Writing"],"🧶"]
+      ["Sew an Item","Make a small sewn item like a pouch, napkin, or bag.",["Art","Writing"],"🧶"],
       ["Sew a Small Pillow","Show your fabric, the pillow in progress, the stuffing, and the finished pillow. (PEP BB: textile.sand.pillow)",["Art","Science"],"🛏️"]
     ],
     straw: [],
@@ -375,8 +380,8 @@ const VILLAGE_QUESTS = [
       ["Make a Simple Herbal Tea","Dry or steep a safe herb into tea.",["Science","Health"],"🍵"],
       ["Prepare a Salve or Balm","Make a simple salve, balm, or lotion bar.",["Science","Health"],"🧴"],
       ["Assemble a Family First Aid Herb Card","Write down a few herbs and what they are used for.",["Writing","Health"],"📇"],
-      ["Make a Rose Blossom Salve","Create a healing salve using rose blossoms — harvest the plant material, infuse it in oil, make the salve, and jar it with a label.",["Science","Health"],"🌹"]
-      ["Make a Comfrey Salve","Harvest a comfrey leaf, infuse it in oil, and turn it into a labeled salve jar. Post pics of the fresh leaf, the infusion, and the finished salve. (PEP BB: medicine.sand.salve.comfrey)",["Science","Health"],"🌿"]
+      ["Make a Rose Blossom Salve","Create a healing salve using rose blossoms — harvest the plant material, infuse it in oil, make the salve, and jar it with a label.",["Science","Health"],"🌹"],
+      ["Make a Comfrey Salve","Harvest a comfrey leaf, infuse it in oil, and turn it into a labeled salve jar. Post pics of the fresh leaf, the infusion, and the finished salve. (PEP BB: medicine.sand.salve.comfrey)",["Science","Health"],"🌿"],
       ["Make a Comfrey Leaf Infused Oil","Harvest comfrey and infuse it in oil: show the harvest, the plant material in oil (with oil described), and the strained, labeled finished jar. (PEP BB: medicine.sand.oil.comfrey)",["Science","Health"],"🫗"]
     ],
     straw: [],
@@ -394,10 +399,10 @@ const VILLAGE_QUESTS = [
       ["Do Laundry by Hand","Wash clothes without a machine.",["Science","PE"],"🧺"],
       ["Make Rags from Old Clothes","Turn worn clothing into useful cleaning rags.",["Art","Economics"],"🧵"],
       ["Clean a Kitchen","Clean the whole kitchen — sink, counters, table, stovetop, and floor — with before/after photos. Any soap used must be greywater safe or readily biodegradable.",["Health","Science"],"🧽"],
-      ["Make 12 Rushlights","Make twelve rushlights (rush candles) 8 inches or longer, dipped in beeswax or combustible fat. Only materials that existed 200 years ago. (PEM BB: traditional.sand.rushlights)",["Art","History"],"🕯️"]
-      ["Clean Four Windows","Show your glass cleaner (described), then before/action/after photos of cleaning four windows inside and out. (PEP BB: nest.sand.cleanwindows)",["Health","Science"],"🪟"]
-      ["Clean a Bathroom","Before and after pictures of the toilet, sink/counter, floor, tub/shower, and mirror — plus a report on the cleaners you used. (PEP BB: nest.sand.bathroom)",["Health","Science"],"🚿"]
-      ["Beat and Sun a Area Rug","Beat an area rug and give it at least 2 hours of sunlight: before, action shot, and after pictures. (PEP BB: nest.sand.cleanrug)",["Health","PE"],"🧹"]
+      ["Make 12 Rushlights","Make twelve rushlights (rush candles) 8 inches or longer, dipped in beeswax or combustible fat. Only materials that existed 200 years ago. (PEM BB: traditional.sand.rushlights)",["Art","History"],"🕯️"],
+      ["Clean Four Windows","Show your glass cleaner (described), then before/action/after photos of cleaning four windows inside and out. (PEP BB: nest.sand.cleanwindows)",["Health","Science"],"🪟"],
+      ["Clean a Bathroom","Before and after pictures of the toilet, sink/counter, floor, tub/shower, and mirror — plus a report on the cleaners you used. (PEP BB: nest.sand.bathroom)",["Health","Science"],"🚿"],
+      ["Beat and Sun a Area Rug","Beat an area rug and give it at least 2 hours of sunlight: before, action shot, and after pictures. (PEP BB: nest.sand.cleanrug)",["Health","PE"],"🧹"],
       ["Sweep a Floor","Before, action, and after pictures of sweeping a floor — or a 2-minute video. (PEP BB: nest.sand.sweepfloor)",["Health","PE"],"🧹"]
     ],
     straw: [],
@@ -414,7 +419,7 @@ const VILLAGE_QUESTS = [
       ["Practice with a Fire Extinguisher","Learn how to use a fire extinguisher safely.",["Health","Science"],"🧯"],
       ["Clean Gutters Safely","Remove debris from gutters or downspouts.",["Science","PE"],"🏠"],
       ["Make an Emergency Supplies Checklist","Write a family list of emergency supplies.",["Writing","Health"],"📝"],
-      ["Make a Snare","Build a wire, cable, twine, or rope snare for a specific critter and set it up as if to catch it — no actual trapping needed. Only materials that existed 200 years ago.",["Science","PE"],"🪤"]
+      ["Make a Snare","Build a wire, cable, twine, or rope snare for a specific critter and set it up as if to catch it — no actual trapping needed. Only materials that existed 200 years ago.",["Science","PE"],"🪤"],
       ["Make an Atlatl","Carve an atlatl thrower plus a fletched arrow with replaceable tip — only materials that existed 200 years ago. (PEM BB: traditional.straw.atlatl)",["History","PE"],"🏹"]
     ],
     straw: [],

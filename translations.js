@@ -332,6 +332,26 @@ const LANG = {
     }
   },
   "quests": {
+    "Improve a Berm": {
+      "title": "Mejorar un montículo",
+      "desc": "Haz que un montículo existente sea 60 cm más alto a lo largo de al menos 90 cm, usando material sólido como troncos, tierra o piedra; siémbralo de inmediato y cúbrelo con mantillo. (BB de PEP: earthworks.sand.impberm)"
+    },
+    "Seal a Tiny Pond": {
+      "title": "Sellar un estanque en miniatura",
+      "desc": "Cava un agujero de prueba de 60 cm de diámetro y 30 cm de profundidad, compacta el suelo y demuestra que retiene 19 litros de agua durante más de una hora: la prueba clásica antes de construir un estanque real. (BB de PEP: earthworks.sand.pondtest)"
+    },
+    "Fix a Road Pothole": {
+      "title": "Reparar un bache",
+      "desc": "Repara un bache o charco permanente en un camino de entrada o de granja para que el agua ya no se acumule ahí. (BB de PEP: earthworks.sand.pothole)"
+    },
+    "Maintain 200 Feet of Trail": {
+      "title": "Mantener 60 m de sendero",
+      "desc": "Recorre un sendero con una rueda de medir, anota los puntos problemáticos y repáralos — drenaje, socavones, obstáculos — luego recórrelo de nuevo en vídeo mostrando las mejoras. (BB de PEP: earthworks.sand.trail)"
+    },
+    "Dry Stack a Small Retaining Wall": {
+      "title": "Muro de contención de piedra en seco",
+      "desc": "Construye un muro de piedras sin mortero de al menos 1,2 m de alto y 1,8 m de largo con la técnica 2-sobre-1 / 1-sobre-2, libre y con grava detrás. (BB de PEP: earthworks.straw.drystack)"
+    },
     "Make an Ice House": {
     "Sew a Small Pillow": {
       "title": "Coser una almohada pequeña",
@@ -1480,6 +1500,26 @@ const LANG = {
     }
   },
   "quests": {
+    "Improve a Berm": {
+      "title": "Améliorer une butte",
+      "desc": "Rendez une butte existante 60 cm plus haute sur au moins 90 cm de long, avec un matériau solide (bûches, terre, pierre), semez-la immédiatement et paillez-la. (BB PEP : earthworks.sand.impberm)"
+    },
+    "Seal a Tiny Pond": {
+      "title": "Étanchéifier un mini-étang",
+      "desc": "Creusez un trou d'essai de 60 cm de diamètre et 30 cm de profondeur, tassez le sol et prouvez qu'il retient 19 litres d'eau pendant plus d'une heure — le test classique avant tout vrai étang. (BB PEP : earthworks.sand.pondtest)"
+    },
+    "Fix a Road Pothole": {
+      "title": "Réparer un nid-de-poule",
+      "desc": "Réparez un nid-de-poule ou une flaque permanente dans une allée ou un chemin de ferme pour que l'eau ne s'y accumule plus. (BB PEP : earthworks.sand.pothole)"
+    },
+    "Maintain 200 Feet of Trail": {
+      "title": "Entretenir 60 m de sentier",
+      "desc": "Parcourez un sentier avec une roue de mesure, notez les passages endommagés et réparez-les — drainage, ravinement, obstacles — puis refaites le parcours en vidéo pour montrer les améliorations. (BB PEP : earthworks.sand.trail)"
+    },
+    "Dry Stack a Small Retaining Wall": {
+      "title": "Mur de soutènement à pierres sèches",
+      "desc": "Construisez un mur en pierres sèches d'au moins 1,2 m de haut et 1,8 m de long avec la technique 2-sur-1 / 1-sur-2, autoportant avec du gravier derrière. (BB PEP : earthworks.straw.drystack)"
+    },
     "Make an Ice House": {
     "Sew a Small Pillow": {
       "title": "Coudre un petit coussin",
@@ -2628,6 +2668,26 @@ const LANG = {
       }
     },
     "quests": {
+    "Improve a Berm": {
+      "title": "Einen Damm verbessern",
+      "desc": "Mache einen bestehenden Damm über mindestens 90 cm Länge um 60 cm höher mit solidem Material wie Holz, Erde oder Stein, säe ihn sofort ein und mulche ihn. (PEP-BB: earthworks.sand.impberm)"
+    },
+    "Seal a Tiny Pond": {
+      "title": "Ein Mini-Teich abdichten",
+      "desc": "Grabe ein 60 cm breites und 30 cm tiefes Testloch, verdichte den Boden und beweise, dass es 19 Liter Wasser über eine Stunde hält — der klassische Abdichtungstest vor jedem echten Teich. (PEP-BB: earthworks.sand.pondtest)"
+    },
+    "Fix a Road Pothole": {
+      "title": "Ein Schlagloch ausbessern",
+      "desc": "Repariere ein Schlagloch oder eine stehende Pfütze in einer Zufahrt oder einem Wirtschaftsweg, damit sich dort kein Wasser mehr sammelt. (PEP-BB: earthworks.sand.pothole)"
+    },
+    "Maintain 200 Feet of Trail": {
+      "title": "60 m Weg pflegen",
+      "desc": "Gehe einen Weg mit Messrad ab, notiere die Problemstellen und repariere sie — Entwässerung, Auswaschungen, Hindernisse — dann gehe ihn auf Video nochmals ab und zeige die Verbesserungen. (PEP-BB: earthworks.sand.trail)"
+    },
+    "Dry Stack a Small Retaining Wall": {
+      "title": "Eine kleine Trockenmauer",
+      "desc": "Baue eine freistehende Trockensteinmauer von mindestens 1,2 m Höhe und 1,8 m Länge mit der 2-über-1 / 1-über-2 Technik und Kies dahinter. (PEP-BB: earthworks.straw.drystack)"
+    },
     "Make an Ice House": {
       "title": "Ein Eishaus bauen",
     "Sew a Small Pillow": {
