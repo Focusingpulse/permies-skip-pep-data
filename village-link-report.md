@@ -1,19 +1,18 @@
-# Village Link Report — 2026-09-24
+# Village Link Report — 2026-09-25
 
-Checked **918** URLs: **895** OK, **15** HTTP errors, **0** redirects, **8** unreachable/timeouts.
+Checked **854** URLs: **831** OK, **16** HTTP errors, **0** redirects, **7** unreachable/timeouts.
 
-## Unreachable / timeout (8)
+## Unreachable / timeout (7)
 
 - `http://ia800306.us.archive.org/30/items/fe_The_Solar_Greenhouse_Book/The_Solar_Greenhouse_Book.pdf`  (error: URLError)
-- `http://quarteracrehome.wordpress.comhttps://www.etsy.com/shop/HomeAndHedgewitchhttps://www.instagram.com/wren_ohio/`  (error: URLError)
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)
 - `http://www.dlive.tv/mavisfarmacyThe`  (error: URLError)
-- `https://8shields.org/`  (error: URLError)
 - `https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`  (error: URLError)
 - `https://mountainherbs.net/`  (error: URLError)
+- `https://www.motherearthnews.com/sustainable-living/green-homes/cob-building-basics-zm0z13onzrob/`  (error: TimeoutError)
 
-## HTTP errors (15)
+## HTTP errors (16)
 
 - [`http://byjillb.com`](http://byjillb.com)  (HTTP 404)
 - [`http://innoperma.weebly.com/old`](http://innoperma.weebly.com/old)  (HTTP 404)
@@ -28,6 +27,7 @@ Checked **918** URLs: **895** OK, **15** HTTP errors, **0** redirects, **8** unr
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
 - [`https://www.allaboutbirds.org/`](https://www.allaboutbirds.org/)  (HTTP 403)
 - [`https://www.elevify.com/en/courses/food-gastronomy-and-hospitality/food/food-preserving-course-bac2e`](https://www.elevify.com/en/courses/food-gastronomy-and-hospitality/food/food-preserving-course-bac2e)  (HTTP 403)
+- [`https://www.instagram.com/wizard.mountainman/`](https://www.instagram.com/wizard.mountainman/)  (HTTP 429)
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
 - [`https://www.patreon.com/slowfilms`](https://www.patreon.com/slowfilms)  (HTTP 403)
 
