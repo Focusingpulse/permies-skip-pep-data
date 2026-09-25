@@ -743,6 +743,62 @@ const MOVEMENT_SYSTEMS = [
   },
 
   {
+    id: "vestibular-rehab-gaze-stabilization",
+    icon: "👁️",
+    name: "Vestibular Training — Gaze Stabilization & the Three Balance Senses",
+    esName: "Entrenamiento Vestibular — Estabilización de la Mirada y los Tres Sentidos del Equilibrio",
+    tagline: "Balance has three inputs. This is the one almost nobody trains.",
+    lineage: "Vestibular rehabilitation came out of the clinic, not a tradition. The first widely used habituation programme was the Cawthorne–Cooksey set, developed in London in the 1940s for people recovering from head injury; the field became a formal rehabilitation specialty from the 1980s onward through the work of clinicians such as Susan Herdman at Emory, and it now has its own textbooks and a Cochrane review. The exercises are simple; the lineage is documented clinical practice rather than a lineage transmission.",
+    what: "The balance system combines three inputs — vision, proprioception (the body's sense of its own position), and the vestibular system (the inner ear's motion sensors). Most balance practice trains the first two. Vestibular rehabilitation trains the third directly, with gaze stabilization: you keep your eyes fixed on a target while turning your head, which forces the vestibulo-ocular reflex (VOR) to hold the image steady. The clinical version adds habituation — deliberately repeating a movement that provokes mild dizziness until the brain stops over-reacting to it.",
+    esWhat: "El sistema del equilibrio combina tres entradas: la visión, la propiocepción (el sentido de la posición del cuerpo) y el sistema vestibular (los sensores de movimiento del oído interno). Casi toda la práctica del equilibrio entrena las dos primeras. La rehabilitación vestibular entrena la tercera directamente, con estabilización de la mirada: mantienes los ojos fijos en un blanco mientras giras la cabeza, lo que obliga al reflejo vestíbulo-ocular (VOR) a mantener la imagen estable. La versión clínica añade habituación: repetir a propósito un movimiento que provoca un mareo leve hasta que el cerebro deja de sobrerreaccionar.",
+    practice: [
+      "Find a target — a letter on the wall at arm's length, or your own thumb held up in front of you.",
+      "VOR x1 — keep your eyes on the target and turn your head left and right about 30 degrees at a comfortable speed, for 30 seconds. The target should stay as sharp as it is when your head is still. If it smears or you feel queasy, slow down; speed is the thing you add later, not the thing you start with.",
+      "VOR x2 — the same, but move the target and your head in opposite directions (target left while the head turns right). Noticeably harder; add it only when x1 stays clean.",
+      "Vertical — the same with head nodding up and down, and with the target moving up while the head moves down.",
+      "The sensory ladder — stand on one leg with eyes open, then eyes closed, then on a folded towel or cushion, timing each. Removing vision forces the vestibular and proprioceptive inputs to do the work, which is what makes the eyes-closed number informative.",
+      "Habituation — only if a clinician has diagnosed a vestibular problem: repeat the specific movement that provokes mild dizziness, a few times, twice a day. This is the clinical part. It is not a self-treatment for undiagnosed vertigo, and unexplained dizziness is a reason to see a clinician, not a reason to start this exercise."
+    ],
+    reps: "Gaze stabilization — 30–60 seconds per direction, once or twice a day. Sensory ladder — one timed round per side, daily. Progress by making the target smaller, the head faster, or the surface softer, never by pushing through real dizziness.",
+    evidence: "Moderate — Strong for diagnosed unilateral vestibular hypofunction, weaker as general prevention",
+    evClass: "moderate",
+    research: [
+      {
+        source: "Cochrane review of vestibular rehabilitation for unilateral peripheral vestibular dysfunction (Hillier & McDonnell; first published 2007, updated through the 2010s)",
+        claim: "Vestibular rehabilitation is effective for unilateral peripheral vestibular dysfunction, but the review's own conclusion is that the evidence base is limited in size and quality — which is exactly why the label on this entry is Moderate and not Strong. The strongest evidence is for treating a diagnosed problem, not for preventing one in healthy people.",
+        medium: "Cochrane systematic review",
+        confidence: "Moderate",
+        year: "2007–2010s"
+      },
+      {
+        source: "Herdman & Clendaniel, 'Vestibular Rehabilitation' (F. A. Davis; the standard clinical textbook, editions from the 1990s through the 2010s)",
+        claim: "Gaze stabilization (VOR x1 and x2) and habituation are the core exercises of vestibular rehabilitation, and the textbook documents the protocols and their progression. This is practitioner documentation of a clinical field rather than a single trial.",
+        medium: "clinical textbook / practitioner documentation",
+        confidence: "Strong (as the field's standard reference)",
+        year: "1990s–2010s"
+      },
+      {
+        source: "Springer et al., 'Normative values for the unipedal stance test with eyes open and closed', Journal of Geriatric Physical Therapy, 2007",
+        claim: "Single-leg stance time with the eyes closed declines predictably with age and has published normative values by decade — which is what makes the eyes-closed stand a real measurement with a reference range rather than a party trick.",
+        medium: "cross-sectional normative study",
+        confidence: "Moderate",
+        year: "2007"
+      },
+      {
+        source: "The standard three-input model of balance physiology (vision, proprioception, vestibular) — taught in every physiology and audiology text",
+        claim: "Balance is produced by combining three sensory inputs, and removing one (closing the eyes) changes how much the other two must contribute. This is consensus, not a finding from a single study — and it is what makes the sensory ladder a useful test.",
+        medium: "physiology consensus",
+        confidence: "Strong (as a model)",
+        year: "—"
+      }
+    ],
+    verify: "The gaze-stabilization test: hold a target at arm's length, turn your head left and right at about one turn per second, and notice whether the target stays sharp or smears. Then the sensory ladder: time your single-leg stand with eyes open, then eyes closed, then on a folded towel. Write all three numbers down. The eyes-closed one is the number that reflects your vestibular and proprioceptive input, and it is the one to re-measure in eight weeks.",
+    village: "The balance domain's missing half. Tai chi trains the weight-shift and proprioceptive side; this trains the vestibular side and lets the family see the three inputs separately. It also carries a lesson the rest of the section does not: a balance problem can be medical, so the habituation exercises are labeled as clinical rather than turned into a game.",
+    quest: ["The Three-Number Balance Test", "Time your single-leg stand three ways — eyes open, eyes closed, and standing on a folded towel — best of three on each side. Write all six numbers down. Then practise gaze stabilization (head turns with your eyes fixed on a target) for 30 seconds each direction, daily, for four weeks, and measure all six again to see which number moved most.", ["PE", "Health", "Science"], "👁️"],
+    authorship: {"agent_id": "agent-b73ac550-5671-471e-b3e1-721f948ea063", "agent_name": "Tutor", "job": "vitality-engine", "lineage": "agent-b73ac550-5671-471e-b3e1-721f948ea063 -> vitality-engine -> vestibular-rehab-gaze-stabilization", "authored_at": "2026-09-25"}
+  },
+
+  {
     id: "alexander-technique",
     icon: "🎭",
     name: "The Alexander Technique",
