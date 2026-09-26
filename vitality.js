@@ -799,6 +799,76 @@ const MOVEMENT_SYSTEMS = [
   },
 
   {
+    id: "loaded-carries",
+    icon: "🪣",
+    name: "Loaded Carries — The Farmer's Walk & the Grip That Predicts",
+    esName: "Cargas con Peso — La Caminata del Granjero y la Fuerza de Agarre que Predice",
+    tagline: "Pick something heavy up and walk with it. The oldest strength test there is — and the one number that predicts the most.",
+    lineage: "No founder and no lineage to claim — the loaded carry is the oldest strength practice there is, because it is what work was: carrying water, wood, grain, feed, children. The named forms came later. The farmer's walk is a strongman competition event (a weight in each hand, walk for distance or time); the suitcase carry is the one-sided version; the yoke walk, the Zercher carry, and overhead carries are the other named variants. The modern coaching literature is practitioner documentation (the NSCA's own 2020 article on loaded carries says plainly that there is limited research on them), not a trial base.",
+    what: "Walking while carrying a heavy load — in one hand, both hands, at the chest, overhead, or on the back — for distance or time. The point is not the arms. It is the whole body holding a braced, upright position while moving under load: the trunk resists being pulled sideways, the grip holds, the feet keep walking. Bilateral (farmer's walk) is a weight in each hand. Unilateral (suitcase carry) is a weight in one hand only, and the trunk has to resist the pull — which is the harder and more useful version for most people. It needs almost no equipment: two full water jugs, two buckets of sand, two heavy grocery bags, or a loaded backpack.",
+    esWhat: "Caminar cargando un peso — en una mano, en las dos, al pecho, sobre la cabeza o en la espalda — por distancia o tiempo. El punto no son los brazos. Es todo el cuerpo sosteniendo una posición firme y erguida mientras se mueve bajo carga: el tronco resiste que lo jalen hacia un lado, el agarre sostiene, los pies siguen caminando. Bilateral (granjero) es un peso en cada mano. Unilateral (maleta) es un peso en una sola mano, y el tronco debe resistir el tirón — que es la versión más difícil y más útil para casi todos. Casi no necesita equipo: dos garrafones llenos de agua, dos cubetas de arena, dos bolsas pesadas del mandado, o una mochila cargada.",
+    practice: [
+      "1. Start light — a full water jug in each hand (about 4 L ≈ 4 kg each), two buckets of sand, or two heavy grocery bags with handles. Stand tall: ribs down, shoulders back and down, eyes forward, feet under you.",
+      "2. Walk a set distance — 10 to 20 metres down and back — at a normal pace. The load should not change your posture. If you are leaning back, the load is too heavy or you are carrying it wrong.",
+      "3. Bilateral (farmer's walk) — one load in each hand, arms hanging. Unilateral (suitcase carry) — load in one hand only; stay square, do not lean away from it. Walk half the distance, switch hands, walk back. The one-sided version is the one that trains the trunk.",
+      "4. Add load before adding distance. When 20 m is easy, go heavier — not longer. A good working set is one you could not carry for much more than 30–60 seconds.",
+      "5. Stop when your grip is about to fail, not after. Setting the load down under control, with a flat back, is part of the exercise — not the part you skip.",
+      "6. Children carry scaled loads: a full water bottle in each hand, a small loaded backpack, or a bucket of sand. The rule is the same — perfect posture, stop before the grip fails."
+    ],
+    reps: "3–5 carries of 20–40 m (or 30–60 seconds each), 2–3 times a week. Add weight before distance. One set done with good posture beats five done sloppily — this is a practice where form is the whole exercise.",
+    evidence: "Strong as an association · not established as an intervention — grip strength is one of the best-replicated predictors of mortality in all of epidemiology (millions of participants across dozens of cohorts), but no trial has shown that *training* grip strength changes those outcomes. The carry builds the thing that predicts; whether building it changes the prediction is the open question, and the label says so.",
+    evClass: "strong",
+    research: [
+      {
+        source: "Leong et al., 'Prognostic value of grip strength: findings from the Prospective Urban Rural Epidemiology (PURE) study', The Lancet (2015)",
+        claim: "139,691 adults in 17 countries, median 4.0 years' follow-up. Each 5 kg reduction in grip strength was associated with higher all-cause mortality (hazard ratio 1.16, 95% CI 1.13–1.20), cardiovascular mortality (1.17), myocardial infarction (1.07), and stroke (1.09). Grip strength was a stronger predictor of all-cause and cardiovascular mortality than systolic blood pressure. An association — not a demonstration that training grip changes any of it.",
+        medium: "prospective multi-country cohort",
+        confidence: "Strong (as an association) · none claimed (as cause)",
+        year: "2015"
+      },
+      {
+        source: "Celis-Morales et al., 'Associations of grip strength with cardiovascular, respiratory, and cancer outcomes and all cause mortality: prospective cohort study of half a million UK Biobank participants', BMJ (2018)",
+        claim: "502,293 participants, mean 7.1 years, 13,322 deaths. Per 5 kg lower grip strength, all-cause mortality hazard ratio was 1.20 in women and 1.16 in men. The paper also sets the 'muscle weakness' line used widely since: grip below about 26 kg for men and 16 kg for women. It is the largest single cohort in the grip-strength literature and it is still observational.",
+        medium: "prospective cohort (UK Biobank)",
+        confidence: "Strong (as an association)",
+        year: "2018"
+      },
+      {
+        source: "Soysal et al., 'Handgrip strength and health outcomes: Umbrella review of systematic reviews with meta-analyses of observational studies', Journal of Sport and Health Science (2020)",
+        claim: "The honesty ceiling for this whole entry. Across 8 systematic reviews and 11 outcomes, NO outcome reached 'convincing' evidence (Class I). Three reached 'highly suggestive' (Class II): all-cause mortality (34 studies, 1,855,817 participants, relative risk 0.72), cardiovascular death (RR 0.84), and disability (RR 0.76). Two associations — hip fracture and cancer mortality — were not significant. So the strongest possible reading is 'highly suggestive,' and that is the label this entry earns.",
+        medium: "umbrella review of observational meta-analyses",
+        confidence: "Highly suggestive, not convincing — the honest ceiling",
+        year: "2020"
+      },
+      {
+        source: "López-Bueno et al., 'Thresholds of handgrip strength for all-cause, cancer, and cardiovascular mortality: A systematic review with dose-response meta-analysis', Ageing Research Reviews (2022)",
+        claim: "48 prospective cohorts, 3,135,473 participants from more than 40 countries. Higher grip strength was associated with lower all-cause mortality in a close-to-linear dose-response fashion within the 26–50 kg band. The relationship has a shape — which is useful for a reference number — but a shape in observational data is not a mechanism.",
+        medium: "dose-response meta-analysis",
+        confidence: "Strong (as an association) · the shape, not the cause",
+        year: "2022"
+      },
+      {
+        source: "National Strength and Conditioning Association, 'Increase Hip and Trunk Stability with Loaded Carries' (NSCA Coach, 2020)",
+        claim: "The coaching literature presents loaded carries as a hip- and trunk-stability method and a rehabilitation tool, and states plainly that there is limited research on loaded carries and few recommendations for time under tension or distance. This is practitioner documentation of a real training practice, not evidence of a health outcome — and it is labeled as such.",
+        medium: "practitioner documentation / coaching article",
+        confidence: "Moderate (as a training method) · none (as an outcome)",
+        year: "2020"
+      },
+      {
+        source: "Holmstrup, Kelley, Calhoun & Kiess, 'Fat-Free Mass and the Balance Error Scoring System Predict an Appropriate Maximal Load in the Unilateral Farmer's Walk', Sports (2018)",
+        claim: "51 recreationally active adults; fat-free mass predicted the maximal safe load carried in the unilateral farmer's walk (r² = 0.774), and adding a balance score improved the prediction. Useful for one practical thing — how heavy to start — and honest about its limit: young healthy adults, not a family, and no outcome measured beyond the carry itself.",
+        medium: "cross-sectional study",
+        confidence: "Moderate",
+        year: "2018"
+      }
+    ],
+    verify: "Grip is the number this whole entry rests on, so measure it — but measure it honestly. The cheapest home test is a fixed-load carry: pick a load you can carry for about 30 seconds, and time how long you can hold it before you must set it down. Write down the load and the seconds. Do carries 3× a week for six weeks, then repeat the exact same test with the exact same load. Your grip will improve — that part is nearly certain. The honest question is the second one: did anything else change (how you feel, how you sleep, how stairs feel)? If nothing but the grip number moved, you have learned exactly what the research says — the association is real, the causal claim is untested. A bathroom scale squeezed in the hand is a crude grip proxy; a real hand dynamometer gives the number the studies use, but it is optional and the fixed-load test is enough to see change.",
+    village: "The Village's first strength quest, because it needs no equipment beyond something heavy — and because it is the homestead work the family already does (carrying water, wood, feed). It ties straight into Survival Mode's water and food domains: carrying water is the literal task, and the carry is its training drill. The number it produces (load × time) is the family's first real strength stat — a trackable score with a published reference range behind it, which makes it the cleanest example in the section of a practice whose honest label and whose game number are the same thing.",
+    quest: ["The Carry Test — Load & Time", "Pick a load you can carry for about 30 seconds (two full water jugs, two buckets of sand, heavy grocery bags). Time how long you can hold it before you must set it down, and write down the load and the seconds. Then do 3 carries, 2–3 times a week for six weeks — adding weight before distance — and repeat the exact same test. Log both numbers and one sentence on what else changed.", ["PE", "Health", "Science"], "🪣"],
+    authorship: {"agent_id": "agent-b73ac550-5671-471e-b3e1-721f948ea063", "agent_name": "Tutor", "job": "vitality-engine", "lineage": "agent-b73ac550-5671-471e-b3e1-721f948ea063 -> vitality-engine -> loaded-carries", "authored_at": "2026-09-26"}
+  },
+
+  {
     id: "alexander-technique",
     icon: "🎭",
     name: "The Alexander Technique",
