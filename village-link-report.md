@@ -1,13 +1,15 @@
 # Village Link Report — 2026-09-26
 
-Checked **856** URLs: **834** OK, **16** HTTP errors, **0** redirects, **6** unreachable/timeouts.
+Checked **856** URLs: **832** OK, **16** HTTP errors, **0** redirects, **8** unreachable/timeouts.
 
-## Unreachable / timeout (6)
+## Unreachable / timeout (8)
 
 - `http://ia800306.us.archive.org/30/items/fe_The_Solar_Greenhouse_Book/The_Solar_Greenhouse_Book.pdf`  (error: URLError)
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
+- `http://www.davidhuang.org`  (error: RemoteDisconnected)
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)
 - `http://www.dlive.tv/mavisfarmacyThe`  (error: URLError)
+- `http://www.theartisthomestead.com`  (error: RemoteDisconnected)
 - `https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`  (error: URLError)
 - `https://mountainherbs.net/`  (error: URLError)
 
