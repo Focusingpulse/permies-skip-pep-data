@@ -1171,7 +1171,67 @@ const LANG = {
     "The Position-Variety Day": {
       "title": "El día de variedad de posturas",
       "desc": "Durante un día, cambia de postura cada 30 minutos (de pie, sentadilla, alcance, caminar, suelo). Cuenta cuántas posturas distintas usaste de verdad. Luego hazlo durante una semana y compara el conteo."
-    }
+    },
+    "Direct Seed and Grow 50 Perennials": {
+      "title": "Siembra directa y cultivo de 50 perennes",
+      "desc": "Siembra directamente al menos 50 unidades de cada uno: manzano, ciruelo, melocotonero, cerezo, albaricoquero, peral, morera, espino amarillo, nogal o avellano (sin trasplante) y verifica que al menos 12 brotaron. (BB PEP: gardening.wood.perennial)"
+    },
+    "Chink Between Logs with Cob": {
+      "title": "Rellena entre troncos con cob",
+      "desc": "Rellena al menos 20 pies lineales entre los troncos de un wofati con cob de baja calidad: foto antes, preparación del cob, cob colocado, relleno terminado. (BB PEP: natural-building.straw.chinkcob)"
+    },
+    "Whitewash a 4x8 Area": {
+      "title": "Encala un área de 4x8",
+      "desc": "Mezcla y aplica encalado sobre un área de 4x8 pies: foto antes, mezclado, aplicación, área terminada. (BB PEP: natural-building.wood.whitewash)"
+    },
+    "Carve a First-Timer Spoon": {
+      "title": "Talla una cuchara de principiante",
+      "desc": "Talla una cuchara de madera sencilla a partir de una rama o pieza en bruto, mostrando la pieza, el desbastado y la cuchara terminada. (BB PEP: round-wood-woodworking.sand.spoon)"
+    },
+    "Carve a Club-Style Mallet": {
+      "title": "Talla un mazo estilo garrote",
+      "desc": "Talla un mazo de madera estilo garrote a partir de una sola pieza de madera, mostrando la pieza, el darle forma y el mazo terminado. (BB PEP: round-wood-woodworking.sand.mallet)"
+    },
+    "Clean Out 4 Chicken Nest Boxes": {
+      "title": "Limpia 4 nidos de gallina",
+      "desc": "Limpia cuatro nidos de gallina: foto antes, limpieza en curso, foto después. (BB PEP: animal-care.sand.nestbox)"
+    },
+    "Prepare a Foraged Dish": {
+      "title": "Prepara un plato forrajeado",
+      "desc": "Prepara y documenta un plato hecho con ingredientes forrajeados: recolección, preparación y plato terminado. (BB PEP: foraging.sand.dish)"
+    },
+    "Sew a Small Pillow": {
+      "title": "Cose una almohada pequeña",
+      "desc": "Cose una almohada pequeña a mano o a máquina, mostrando la tela, la costura y la almohada terminada. (BB PEP: textile.sand.pillow)"
+    },
+    "Make a Comfrey Salve": {
+      "title": "Haz una pomada de consuelda",
+      "desc": "Haz una pomada curativa de consuelda: infusionar el aceite, añadir cera de abejas, pomada terminada. (BB PEP: herbalism.sand.salve)"
+    },
+    "Make a Comfrey Leaf Infused Oil": {
+      "title": "Haz un aceite infusionado de hojas de consuelda",
+      "desc": "Infusiona aceite con hojas de consuelda con el método casero o con calor: frasco con hojas y aceite, proceso de infusión, aceite terminado. (BB PEP: herbalism.sand.infusedoil)"
+    },
+    "Clean Four Windows": {
+      "title": "Limpia cuatro ventanas",
+      "desc": "Limpia cuatro ventanas por dentro y por fuera: foto antes, limpieza, foto después. (BB PEP: nest.sand.windows)"
+    },
+    "Clean a Bathroom": {
+      "title": "Limpia un baño",
+      "desc": "Limpia un baño por completo: foto antes, durante, foto después. (BB PEP: nest.sand.bathroom)"
+    },
+    "Beat and Sun a Area Rug": {
+      "title": "Golpea y asolea una alfombra",
+      "desc": "Golpea una alfombra en el exterior y ponla al sol: alfombra fuera, golpearla, asolearla, terminada. (BB PEP: nest.straw.rug)"
+    },
+    "Sweep a Floor": {
+      "title": "Barre un suelo",
+      "desc": "Barre un suelo por completo, incluyendo esquinas y bordes: foto antes, barriendo, foto después. (BB PEP: nest.sand.sweep)"
+    },
+    "Make an Atlatl": {
+      "title": "Haz un átlatl",
+      "desc": "Haz un átlatl (lanzador de dardos) de madera: darle forma, átlatl terminado y un lanzamiento que demuestre que funciona. (BB PEP: traditional-tools.wood.atlatl)"
+    },
   }
 },
   "fr": {
@@ -2339,7 +2399,67 @@ const LANG = {
     "The Position-Variety Day": {
       "title": "La journée de variété de postures",
       "desc": "Pendant une journée, changez de position toutes les 30 minutes (debout, accroupi, extension, marche, sol). Comptez combien de positions distinctes vous avez réellement utilisées. Puis faites-le une semaine et comparez."
-    }
+    },
+    "Direct Seed and Grow 50 Perennials": {
+      "title": "Semis direct et culture de 50 vivaces",
+      "desc": "Semez directement au moins 50 de chacun : pommier, prunier, pêcher, cerisier, abricotier, poirier, mûrier, argousier, noyer ou noisetier (sans repiquage) et vérifiez qu'au moins 12 ont germé. (BB PEP : gardening.wood.perennial)"
+    },
+    "Chink Between Logs with Cob": {
+      "title": "Bouchez les interstices entre rondins au cob",
+      "desc": "Remplissez au moins 6 mètres linéaires entre les rondins d'un wofati avec du cob grossier : photo avant, préparation du cob, cob en place, calfeutrement terminé. (BB PEP : natural-building.straw.chinkcob)"
+    },
+    "Whitewash a 4x8 Area": {
+      "title": "Badigeonnez une zone de 4x8",
+      "desc": "Préparez et appliquez un badigeon (chaux) sur une zone de 4x8 pieds : photo avant, mélange, application, zone terminée. (BB PEP : natural-building.wood.whitewash)"
+    },
+    "Carve a First-Timer Spoon": {
+      "title": "Taillez une cuillère de débutant",
+      "desc": "Taillez une cuillère en bois simple à partir d'une branche ou d'un morceau brut, en montrant l'ébauche, l'ébauchage et la cuillère finie. (BB PEP : round-wood-woodworking.sand.spoon)"
+    },
+    "Carve a Club-Style Mallet": {
+      "title": "Taillez un maillet en masse",
+      "desc": "Taillez un maillet en bois de style masse à partir d'un seul morceau de bois, en montrant le brut, la mise en forme et le maillet fini. (BB PEP : round-wood-woodworking.sand.mallet)"
+    },
+    "Clean Out 4 Chicken Nest Boxes": {
+      "title": "Nettoyez 4 pondoirs",
+      "desc": "Nettoyez quatre pondoirs à poules : photo avant, nettoyage en cours, photo après. (BB PEP : animal-care.sand.nestbox)"
+    },
+    "Prepare a Foraged Dish": {
+      "title": "Préparez un plat de cueillette",
+      "desc": "Préparez et documentez un plat fait d'ingrédients cueillis : récolte, préparation et plat terminé. (BB PEP : foraging.sand.dish)"
+    },
+    "Sew a Small Pillow": {
+      "title": "Cousez un petit coussin",
+      "desc": "Cousez un petit coussin à la main ou à la machine, en montrant le tissu, la couture et le coussin fini. (BB PEP : textile.sand.pillow)"
+    },
+    "Make a Comfrey Salve": {
+      "title": "Faites un baume de consoude",
+      "desc": "Faites un baume cicatrisant à la consoude : huile infusée, ajout de cire d'abeille, baume terminé. (BB PEP : herbalism.sand.salve)"
+    },
+    "Make a Comfrey Leaf Infused Oil": {
+      "title": "Faites une huile infusée de consoude",
+      "desc": "Infusez de l'huile avec des feuilles de consoude selon la méthode simple ou à chaud : bocal de feuilles et d'huile, infusion, huile terminée. (BB PEP : herbalism.sand.infusedoil)"
+    },
+    "Clean Four Windows": {
+      "title": "Nettoyez quatre fenêtres",
+      "desc": "Nettoyez quatre fenêtres à l'intérieur et à l'extérieur : photo avant, nettoyage, photo après. (BB PEP : nest.sand.windows)"
+    },
+    "Clean a Bathroom": {
+      "title": "Nettoyez une salle de bain",
+      "desc": "Nettoyez une salle de bain entièrement : photo avant, pendant, photo après. (BB PEP : nest.sand.bathroom)"
+    },
+    "Beat and Sun a Area Rug": {
+      "title": "Battez et solez un tapis",
+      "desc": "Battez un tapis dehors et exposez-le au soleil : tapis sorti, battage, exposition au soleil, terminé. (BB PEP : nest.straw.rug)"
+    },
+    "Sweep a Floor": {
+      "title": "Balayez un sol",
+      "desc": "Balayez un sol entièrement, y compris les coins et les bords : photo avant, balayage, photo après. (BB PEP : nest.sand.sweep)"
+    },
+    "Make an Atlatl": {
+      "title": "Fabriquez un propulseur",
+      "desc": "Fabriquez un propulseur (atlatl) en bois : mise en forme, propulseur terminé et un lancer qui prouve qu'il fonctionne. (BB PEP : traditional-tools.wood.atlatl)"
+    },
   }
 },
   "de": {
@@ -3507,7 +3627,67 @@ const LANG = {
     "The Position-Variety Day": {
       "title": "Der Positionswechsel-Tag",
       "desc": "Wechsle einen Tag lang alle 30 Minuten die Position (stehen, hocken, greifen, gehen, Boden). Zähle, wie viele verschiedene Positionen du wirklich genutzt hast. Dann eine Woche lang wiederholen und vergleichen."
-    }
+    },
+    "Direct Seed and Grow 50 Perennials": {
+      "title": "Direktsaat und Anbau von 50 Stauden",
+      "desc": "Säe direkt mindestens 50 von jeder Sorte aus: Apfel, Pflaume, Pfirsich, Kirsche, Aprikose, Birne, Maulbeere, Sanddorn, Walnuss oder Haselnuss (kein Umpflanzen) und prüfe, dass mindestens 12 gekeimt sind. (PEP-BB: gardening.wood.perennial)"
+    },
+    "Chink Between Logs with Cob": {
+      "title": "Zwischenräume zwischen Rundhölzern mit Cob abdichten",
+      "desc": "Fülle mindestens 6 Meter Zwischenräume zwischen den Rundhölzern eines Wofati mit einfachem Cob: Foto vorher, Cob-Ansetzung, Cob eingebracht, abgedichtet fertig. (PEP-BB: natural-building.straw.chinkcob)"
+    },
+    "Whitewash a 4x8 Area": {
+      "title": "Kalkanstrich auf einer 4x8-Fläche",
+      "desc": "Mische Kalktünche an und trage sie auf eine 4x8-Fuß-Fläche auf: Foto vorher, Anmischen, Auftragen, fertige Fläche. (PEP-BB: natural-building.wood.whitewash)"
+    },
+    "Carve a First-Timer Spoon": {
+      "title": "Schnitze einen Löffel für Einsteiger",
+      "desc": "Schnitze einen einfachen Holzlöffel aus einem Ast oder Rohling und zeige Rohling, Grobschnitt und fertigen Löffel. (PEP-BB: round-wood-woodworking.sand.spoon)"
+    },
+    "Carve a Club-Style Mallet": {
+      "title": "Schnitze einen Keulenhammer",
+      "desc": "Schnitze einen Keulenhammer aus einem einzigen Stück Holz und zeige Rohling, Formgebung und fertigen Hammer. (PEP-BB: round-wood-woodworking.sand.mallet)"
+    },
+    "Clean Out 4 Chicken Nest Boxes": {
+      "title": "Reinige 4 Hühnernester",
+      "desc": "Reinige vier Hühnernester: Foto vorher, Reinigung im Gange, Foto nachher. (PEP-BB: animal-care.sand.nestbox)"
+    },
+    "Prepare a Foraged Dish": {
+      "title": "Bereite ein Wildgericht zu",
+      "desc": "Bereite ein Gericht aus gesammelten Zutaten zu und dokumentiere es: Sammeln, Zubereitung und fertiges Gericht. (PEP-BB: foraging.sand.dish)"
+    },
+    "Sew a Small Pillow": {
+      "title": "Näh ein kleines Kissen",
+      "desc": "Näh ein kleines Kissen von Hand oder mit der Maschine und zeige Stoff, Nähen und fertiges Kissen. (PEP-BB: textile.sand.pillow)"
+    },
+    "Make a Comfrey Salve": {
+      "title": "Stelle eine Beinwell-Salbe her",
+      "desc": "Stelle eine heilende Salbe aus Beinwell her: Öl ansetzen, Bienenwachs zugeben, fertige Salbe. (PEP-BB: herbalism.sand.salve)"
+    },
+    "Make a Comfrey Leaf Infused Oil": {
+      "title": "Stelle Beinwell-Öl her",
+      "desc": "Setze Öl mit Beinwellblättern nach der Volks- oder Warmmethode an: Glas mit Blättern und Öl, Ansatzprozess, fertiges Öl. (PEP-BB: herbalism.sand.infusedoil)"
+    },
+    "Clean Four Windows": {
+      "title": "Putze vier Fenster",
+      "desc": "Putze vier Fenster innen und außen: Foto vorher, Putzen, Foto nachher. (PEP-BB: nest.sand.windows)"
+    },
+    "Clean a Bathroom": {
+      "title": "Reinige ein Badezimmer",
+      "desc": "Reinige ein Badezimmer komplett: Foto vorher, während, Foto nachher. (PEP-BB: nest.sand.bathroom)"
+    },
+    "Beat and Sun a Area Rug": {
+      "title": "Klopfe und lüfte einen Teppich",
+      "desc": "Klopfe einen Teppich im Freien aus und lege ihn in die Sonne: Teppich draußen, Ausklopfen, Sonnenbad, fertig. (PEP-BB: nest.straw.rug)"
+    },
+    "Sweep a Floor": {
+      "title": "Kehre einen Boden",
+      "desc": "Kehre einen Boden komplett, auch Ecken und Kanten: Foto vorher, Kehren, Foto nachher. (PEP-BB: nest.sand.sweep)"
+    },
+    "Make an Atlatl": {
+      "title": "Baue einen Speerwerfer",
+      "desc": "Baue einen Atlatl (Speerwerfer) aus Holz: Formgebung, fertiger Atlatl und ein Wurf, der zeigt, dass er funktioniert. (PEP-BB: traditional-tools.wood.atlatl)"
+    },
   }
 }
 };
