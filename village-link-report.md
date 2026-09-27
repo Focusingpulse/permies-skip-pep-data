@@ -1,8 +1,8 @@
 # Village Link Report — 2026-09-27
 
-Checked **860** URLs: **837** OK, **16** HTTP errors, **0** redirects, **7** unreachable/timeouts.
+Checked **860** URLs: **838** OK, **16** HTTP errors, **0** redirects, **6** unreachable/timeouts.
 
-## Unreachable / timeout (7)
+## Unreachable / timeout (6)
 
 - `http://ia800306.us.archive.org/30/items/fe_The_Solar_Greenhouse_Book/The_Solar_Greenhouse_Book.pdf`  (error: URLError)
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
@@ -10,7 +10,6 @@ Checked **860** URLs: **837** OK, **16** HTTP errors, **0** redirects, **7** unr
 - `http://www.dlive.tv/mavisfarmacyThe`  (error: URLError)
 - `https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`  (error: URLError)
 - `https://mountainherbs.net/`  (error: URLError)
-- `https://naturalbuildingalliance.org`  (error: URLError)
 
 ## HTTP errors (16)
 
