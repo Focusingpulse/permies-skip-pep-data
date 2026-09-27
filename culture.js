@@ -37,7 +37,7 @@ const CULTURE_ELEMENTS = {
   /* ---------- RING 1 — The Spirit of Welcoming (Birth–9) ---------- */
 
   "1.1": {
-    science: "Co-regulation and social buffering: a familiar greeting lowers stress reactivity before anything else happens (social baseline theory, Coan & Scolnick). Face, voice, and touch engage the vagal social-engagement system (Porges).",
+    science: "Co-regulation and social buffering: a familiar greeting lowers stress reactivity before anything else happens. Social Baseline Theory holds that the brain treats close others as a baseline resource, offloading risk and effort (Beckes & Coan 2011; Coan & Sbarra 2015); in the hand-holding fMRI study a partner's touch attenuated threat-related activation in the hypothalamus and anterior insula, and more so with higher relationship quality (Coan, Schaefer & Davidson 2006). Face, voice, and touch engage the vagal social-engagement system (Porges).",
     evClass: "moderate",
     useCases: [
       { domain: "family", how: "Greet each person at the door with thirty seconds of full attention before anything else — no phone, no task." },
