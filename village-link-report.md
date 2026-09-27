@@ -1,6 +1,6 @@
 # Village Link Report — 2026-09-27
 
-Checked **856** URLs: **834** OK, **16** HTTP errors, **0** redirects, **6** unreachable/timeouts.
+Checked **856** URLs: **828** OK, **22** HTTP errors, **0** redirects, **6** unreachable/timeouts.
 
 ## Unreachable / timeout (6)
 
@@ -11,7 +11,7 @@ Checked **856** URLs: **834** OK, **16** HTTP errors, **0** redirects, **6** unr
 - `https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`  (error: URLError)
 - `https://mountainherbs.net/`  (error: URLError)
 
-## HTTP errors (16)
+## HTTP errors (22)
 
 - [`http://byjillb.com`](http://byjillb.com)  (HTTP 404)
 - [`http://innoperma.weebly.com/old`](http://innoperma.weebly.com/old)  (HTTP 404)
@@ -22,11 +22,17 @@ Checked **856** URLs: **834** OK, **16** HTTP errors, **0** redirects, **6** unr
 - [`http://www.sasez.com`](http://www.sasez.com)  (HTTP 404)
 - [`https://blog.lostartpress.com/2025/05/19/the-free-video-series-of-build-a-chair-from-bullst/`](https://blog.lostartpress.com/2025/05/19/the-free-video-series-of-build-a-chair-from-bullst/)  (HTTP 403)
 - [`https://handtoolwoodworking.com/green-woodworking-videos/`](https://handtoolwoodworking.com/green-woodworking-videos/)  (HTTP 403)
+- [`https://pubmed.ncbi.nlm.nih.gov/?term=cyclic+sighing+breathwork`](https://pubmed.ncbi.nlm.nih.gov/?term=cyclic+sighing+breathwork)  (HTTP 500)
+- [`https://pubmed.ncbi.nlm.nih.gov/?term=focused+attention+meditation+sustained+attention`](https://pubmed.ncbi.nlm.nih.gov/?term=focused+attention+meditation+sustained+attention)  (HTTP 500)
+- [`https://pubmed.ncbi.nlm.nih.gov/?term=intercessory+prayer+STEP+cardiac+bypass`](https://pubmed.ncbi.nlm.nih.gov/?term=intercessory+prayer+STEP+cardiac+bypass)  (HTTP 500)
+- [`https://pubmed.ncbi.nlm.nih.gov/?term=meditation+adverse+effects`](https://pubmed.ncbi.nlm.nih.gov/?term=meditation+adverse+effects)  (HTTP 500)
+- [`https://pubmed.ncbi.nlm.nih.gov/?term=nature+relatedness+scale+Nisbet`](https://pubmed.ncbi.nlm.nih.gov/?term=nature+relatedness+scale+Nisbet)  (HTTP 500)
+- [`https://pubmed.ncbi.nlm.nih.gov/?term=sedentary+behavior+interruption+metabolic`](https://pubmed.ncbi.nlm.nih.gov/?term=sedentary+behavior+interruption+metabolic)  (HTTP 500)
+- [`https://pubmed.ncbi.nlm.nih.gov/?term=slow+breathing+heart+rate+variability`](https://pubmed.ncbi.nlm.nih.gov/?term=slow+breathing+heart+rate+variability)  (HTTP 500)
 - [`https://skipthejourney.wordpress.com/`](https://skipthejourney.wordpress.com/)  (HTTP 404)
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
 - [`https://www.allaboutbirds.org/`](https://www.allaboutbirds.org/)  (HTTP 403)
 - [`https://www.elevify.com/en/courses/food-gastronomy-and-hospitality/food/food-preserving-course-bac2e`](https://www.elevify.com/en/courses/food-gastronomy-and-hospitality/food/food-preserving-course-bac2e)  (HTTP 403)
-- [`https://www.instagram.com/wizard.mountainman/`](https://www.instagram.com/wizard.mountainman/)  (HTTP 429)
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
 - [`https://www.patreon.com/slowfilms`](https://www.patreon.com/slowfilms)  (HTTP 403)
 
