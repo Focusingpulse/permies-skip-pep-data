@@ -946,6 +946,75 @@ const MOVEMENT_SYSTEMS = [
     verify: "This entry exists to model honesty, not to sell a practice. Grounding is the clearest case in the library where the mechanism is plausible, the practice is pleasant and harmless, and the evidence is not there yet. Label it that way and do it if you enjoy it — the barefoot walking is the part that pays off regardless.",
     village: "A good teaching entry: it shows the family how the Village labels evidence, including for something it is happy to include. The Skeptic's Star belongs here — a family that tries it and reports 'no measurable change' has done real work.",
     quest: ["Barefoot & Honest", "Spend 15 minutes barefoot on natural ground daily for two weeks. Track sleep hours and how your feet feel. Report what changed and what did not — a null result earns the Skeptic's Star.", ["PE", "Health", "Science"], "🌍"]
+  },
+
+  {
+    id: "foot-core-barefoot",
+    icon: "🦶",
+    name: "Barefoot & the Foot Core",
+    esName: "Descalzo y el Núcleo del Pie",
+    tagline: "The feet are the one body part a shoe can switch off — and the part the ground trains back.",
+    lineage: "The barefoot idea is old; the modern research line runs from Robbins' footwear-and-balance experiments in the 1990s, through the barefoot-running literature that followed Lieberman's 2010 foot-strike paper, to McKeon and colleagues' 2015 'foot core' concept in the British Journal of Sports Medicine — which reframed the small muscles inside the foot as a trainable core, with the short-foot exercise as its basic drill. The short-foot exercise itself is older than the concept; it comes from foot and ankle rehabilitation.",
+    what: "Two different things get called 'going barefoot'. The first is the contested earthing claim (see the Grounding / Earthing entry) — that skin contact with the Earth moves electrons and changes your health. The second is not contested at all: the small muscles inside the foot, the 'foot core', work harder without a shoe, and the sole is a dense field of pressure sensors feeding balance and movement. This entry is the second one — the half of barefoot practice that does not depend on the electron hypothesis.",
+    esWhat: "Dos cosas distintas se llaman 'andar descalzo'. La primera es la afirmación disputada del earthing (ver la entrada de Conexión a Tierra): que el contacto de la piel con la tierra mueve electrones y cambia la salud. La segunda no está en disputa: los pequeños músculos dentro del pie, el 'núcleo del pie', trabajan más sin zapato, y la planta es un campo denso de sensores de presión que alimentan el equilibrio. Esta entrada es la segunda.",
+    practice: [
+      "1. Short foot — sit with the foot flat and the toes relaxed. Without curling the toes, draw the ball of the big toe toward the heel so the arch lifts a few millimetres. Hold 5–10 seconds, 10 reps each foot. This is the foot-core drill.",
+      "2. Toe spread — press the toes down and try to lift and separate them one at a time, especially the big toe. Slow, and it will feel nearly impossible at first.",
+      "3. Barefoot on varied ground — 10–20 minutes on grass, sand, gravel, stone, or a forest floor. Different surfaces load the foot differently; the variety is the point.",
+      "4. Barefoot heel raises and single-leg stands — load the foot core under body weight: 10 slow heel raises, then 30 seconds standing on one bare foot.",
+      "5. Transition slowly — do not go from cushioned shoes straight to barefoot running. Add barefoot time in minutes, not miles, and stop if the top of the foot aches (the classic overuse injury of the minimalist-shoe boom)."
+    ],
+    reps: "10 minutes of barefoot time daily, plus the short-foot drill 10 reps × 2 sets per foot, once or twice a day. The drill is the training; the barefoot walking is the practice.",
+    evidence: "Moderate — the foot itself is well studied; the injury and performance claims are not",
+    evClass: "moderate",
+    research: [
+      {
+        source: "McKeon, Hertel, Bramble & Davis, 'The foot core system: a new paradigm for understanding intrinsic foot muscle function', British Journal of Sports Medicine 49(5):290 (2015)",
+        claim: "Proposes that the small muscles inside the foot act as a core for the arch — local stabilisers and direct sensors of foot deformation — and that they are largely ignored in favour of externally supporting the foot. This is a concept and review paper, not a trial: it names the mechanism and the drill (the short-foot exercise), and it is the framing this entry rests on.",
+        medium: "concept / narrative review",
+        confidence: "Strong as a framework · no outcome measured",
+        year: "2015"
+      },
+      {
+        source: "Miller, Whitcome, Lieberman, Norton & Dyer, 'The effect of minimal shoes on arch structure and intrinsic foot muscle strength', Journal of Sport and Health Science 3(2):74–85 (2014)",
+        claim: "33 healthy runners randomized to minimal (4 mm offset or less) or standard running shoes for 12 weeks, with MRI before and after. Only the minimal-shoe group grew the abductor digiti minimi (18% cross-sectional area, 22% volume) and stiffened the longitudinal arch by about 60%. Real randomized evidence that the foot responds to what it is worn in — but n = 33, it measured muscle size and arch stiffness, and it says nothing about injury or performance.",
+        medium: "randomized trial, small",
+        confidence: "Moderate",
+        year: "2014"
+      },
+      {
+        source: "Hollander et al., 'Growing-up (habitually) barefoot influences the development of foot and arch morphology in children and adolescents', Scientific Reports 7:8079 (2017)",
+        claim: "810 habitually barefoot children and adolescents compared with age-, sex- and ethnicity-matched shod peers: barefoot upbringing was associated with higher arches, lower hallux (big-toe) angles, and more pliable feet. Large and well controlled, but cross-sectional — it compares populations that differ in many ways, so it shows an association, not that taking your child's shoes off changes their feet.",
+        medium: "cross-sectional, large",
+        confidence: "Moderate (association)",
+        year: "2017"
+      },
+      {
+        source: "Hollander et al., 'Motor Skills of Children and Adolescents Are Influenced by Growing up Barefoot or Shod', Frontiers in Pediatrics 6:115 (2018)",
+        claim: "Habitually barefoot and shod children in South Africa and Germany tested on balance, standing long jump, and 20 m sprint. Barefoot children were better at balance and jumping in the youngest group (6–10 years); shod children were faster at sprinting. The balance advantage is the interesting one, and the honest caveat is the same — observational, and the groups differ in more than footwear.",
+        medium: "cross-sectional, binational",
+        confidence: "Moderate (association)",
+        year: "2018"
+      },
+      {
+        source: "Robbins, Waked, Gouw & McClaran, 'Athletic footwear affects balance in men', British Journal of Sports Medicine 28(2):117–122 (1994)",
+        claim: "17 adult men walked a 9 m balance beam barefoot and in six experimental shoes differing only in midsole thickness and hardness. Thick, soft midsoles produced more than twice the balance failures of thin, hard ones (12.34 vs 3.89 per 100 m). This is the reverse framing of the barefoot claim — evidence that footwear can degrade balance — from a small mechanical study.",
+        medium: "small experimental study",
+        confidence: "Moderate",
+        year: "1994"
+      },
+      {
+        source: "The injury reports that followed the 2010 minimalist-shoe boom (clinical commentary and case series, not a trial)",
+        claim: "The transition caution — that going barefoot or minimal too fast produces metatarsal stress injuries — comes from clinical observation rather than a controlled study. It is included because the honest label for a claim you cannot cite precisely is 'practitioner documentation', and because the caution is the practical half of this entry.",
+        medium: "clinical commentary / case reports",
+        confidence: "Weak (as evidence) · sensible (as advice)",
+        year: "2010s"
+      }
+    ],
+    verify: "The foot is measurable, so measure it — but measure the right thing. Day 1: time a single-leg barefoot stand, eyes open, best of three, each foot; then time the short-foot hold (how many seconds you can keep the arch lifted without curling the toes). Do 10 minutes barefoot daily plus the short-foot drill for 30 days, then repeat both numbers. The balance time is the one most likely to move; an adult's arch index probably will not change in a month, and expecting it to is the mistake this test is designed to catch. Write down both numbers either way — a number that does not move is a real result, and it is the honest answer to 'does barefoot training do anything for me'.",
+    village: "The grounded, testable half of the Grounding domain — it sits beside the earthing entry as the pair that teaches the section's whole method: one practice with a contested claim and one with a solid one, labeled differently, both included. It also gives the family a number (single-leg barefoot seconds) that pairs with the Vestibular entry's balance test, and it is the natural training for the barefoot life the homestead already asks for.",
+    quest: ["Barefoot 30 — The Foot Core Test", "Spend 10 minutes a day barefoot on natural ground and do the short-foot drill (10 reps × 2, each foot) for 30 days. On day 1 and day 30, time a single-leg barefoot stand (eyes open, best of three, each foot) and time how long you can hold the short-foot arch lift without curling your toes. Write down all four numbers.", ["PE", "Health", "Science"], "🦶"],
+    authorship: {"agent_id": "agent-b73ac550-5671-471e-b3e1-721f948ea063", "agent_name": "Tutor", "job": "vitality-engine", "lineage": "agent-b73ac550-5671-471e-b3e1-721f948ea063 -> vitality-engine -> foot-core-barefoot", "authored_at": "2026-09-27"}
   }
 ];
 
