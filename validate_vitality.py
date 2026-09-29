@@ -14,6 +14,7 @@ import os
 import re
 import subprocess
 import sys
+import tempfile
 
 REPO = os.path.dirname(os.path.abspath(__file__))
 VITALITY = os.path.join(REPO, "vitality.js")
@@ -37,22 +38,36 @@ def load_systems():
     """Evaluate vitality.js in node and return MOVEMENT_SYSTEMS as JSON."""
     # Concatenate rather than eval: `const` declarations are block-scoped to
     # the eval, so an indirect eval leaves the symbols undefined.
+    #
+    # Write the concatenated script to a temp file and run `node <file>`
+    # rather than `node -e <script>`: a single argv string is capped at
+    # MAX_ARG_STRLEN (128 KB on Linux), so `-e` dies with OSError errno 7
+    # ("Argument list too long") as soon as vitality.js grows past that.
     source = open(VITALITY, encoding="utf-8").read()
     js = source + (
         "\nprocess.stdout.write(JSON.stringify("
         "{systems:MOVEMENT_SYSTEMS,domains:MOVEMENT_DOMAINS,crosslinks:MOVEMENT_CROSSLINKS}));"
     )
+    fd, script_path = tempfile.mkstemp(prefix="vitality_", suffix=".js")
     try:
-        out = subprocess.run(
-            ["node", "-e", js], capture_output=True, text=True, timeout=60, check=True
-        )
-    except FileNotFoundError:
-        print("WARNING: node not found — skipping JS evaluation, doing text checks only")
-        return None
-    except subprocess.CalledProcessError as e:
-        print("CRITICAL: vitality.js failed to evaluate in node:")
-        print(e.stderr.strip()[:2000])
-        sys.exit(1)
+        with os.fdopen(fd, "w", encoding="utf-8") as fh:
+            fh.write(js)
+        try:
+            out = subprocess.run(
+                ["node", script_path], capture_output=True, text=True, timeout=60, check=True
+            )
+        except FileNotFoundError:
+            print("WARNING: node not found — skipping JS evaluation, doing text checks only")
+            return None
+        except subprocess.CalledProcessError as e:
+            print("CRITICAL: vitality.js failed to evaluate in node:")
+            print(e.stderr.strip()[:2000])
+            sys.exit(1)
+    finally:
+        try:
+            os.unlink(script_path)
+        except OSError:
+            pass
     return json.loads(out.stdout)
 
 
