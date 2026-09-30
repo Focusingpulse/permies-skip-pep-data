@@ -341,6 +341,71 @@ const MEDITATION_SYSTEMS = [
     verify: "The one-legged stand with eyes closed, timed, plus a thirty-second chair-stand count — both are field measures the balance trials themselves used, and both need only a stopwatch and a chair. Record them on day 1 and at week 12. Then the part that matters: also record how confident you feel about your balance, on a scale of one to ten, and watch whether the two numbers move together. The SAGE trial found they can move in opposite directions, so the objective number is the one that counts.",
     village: "This is the section's second honest negative, and the sharper one, because the claim it fails is a modern claim rather than a traditional one. Prayer fails a claim the tradition never made; asana fails a claim the market made on the tradition's behalf. It also carries the section's most transferable lesson — that a self-reported measure can improve while the objective outcome worsens — which is the same discipline the fleet applies to its own status reports. The honest read is not that yoga is worthless: it is that the effect is real, modest, not better than other exercise, and not located where the advertising put it.",
     quest: ["Test the Feeling Against the Number", "Practise a short standing-balance sequence twice a week for eight weeks. Measure two things on day 1 and day 56: the objective one (timed one-legged stand with eyes closed, and a thirty-second chair-stand count) and the felt one (how confident you are about your balance, one to ten). Report both, and say plainly whether they agreed.", ["PE", "Health", "Math"], "🧘"]
+  },
+
+  {
+    id: "open-monitoring",
+    icon: "👁️",
+    name: "Open Monitoring — Choiceless Awareness",
+    esName: "Monitoreo Abierto — Conciencia sin Elección",
+    tagline: "The practice sold as the easy one is the one that asks the most — and the tradition's own map already marks the hard part.",
+    lineage: "Vipassanā (insight) in the Theravāda tradition, and the 'choiceless awareness' instruction in Zen and in Krishnamurti's framing. The modern research taxonomy entered with Lutz and colleagues in 2008, who split meditation into focused attention and open monitoring — the distinction this entry exists to carry.",
+    what: "Sit with no object. Instead of holding attention on the breath, let attention rest open and notice whatever arises — a sound, a thought, a sensation — without following it and without pushing it away. The tradition's own instruction is usually to stabilise first with focused attention and then widen; the widening is the practice. The modern frame calls this open monitoring, and its defining skill is not relaxation but meta-awareness — noticing that you have been caught, which is a trained capacity and not a rest state.",
+    esWhat: "Sentarse sin objeto. En lugar de sostener la atención en la respiración, dejar que la atención repose abierta y notar lo que surja — un sonido, un pensamiento, una sensación — sin seguirlo y sin rechazarlo. La instrucción de la tradición suele ser estabilizar primero con atención focalizada y luego ampliar; la ampliación es la práctica. Su habilidad definitoria no es la relajación sino la meta-conciencia: notar que uno ha sido atrapado.",
+    chain: {
+      practice: "Sit and hold no object; notice whatever arises without following it or pushing it away. Fully verifiable — you do it or you do not.",
+      energyBody: "The tradition's own map is unusually specific here: insight practice is said to move through a sequence of stages, and several of them are explicitly difficult — the knowledges of suffering. This is a claim from the tradition, not a measurement — and it is the claim the modern adverse-effects literature independently found.",
+      ability: "Claimed: insight, non-reactive awareness, equanimity, and at the far end the Siddhis of heightened perception and knowing the minds of others. Partly measurable: the attentional blink, conflict monitoring, and divergent thinking all move — and they move differently from focused attention.",
+      meaning: "The tradition's own framing is that this is the practice that produces liberation — the capacity that outlasts the body. It is the upper link, it is the whole point, and no instrument reaches it."
+    },
+    claimed: "The tradition claims open monitoring produces insight — a direct seeing of how experience is constructed — and that this ripens into liberation. Modern research claims something narrower and stranger: that a single bout of open monitoring and a single bout of focused attention push cognitive control in opposite directions. The tradition's claim is about wisdom; the research claim is about the width of attention.",
+    measurable: "Yes, partly — the attentional blink, conflict monitoring, and divergent-thinking tasks all respond to open-monitoring practice, and the effects are dissociable from focused attention. What is not measurable is the claim the tradition actually cares about: insight, and the permanent change it is said to produce.",
+    correlate: "Vipassanā (insight) in the Theravāda frame; in the yoga frame, the movement from dharana toward dhyana. The Siddhi of knowing the minds of others is the traditional correlate of the monitoring capacity, and is filed as a claim.",
+    label: "documented",
+    practice: [
+      "Stabilise first — the traditional instruction is to begin with focused attention on the breath, then widen. Starting open without a base is the common way to get lost.",
+      "Widen — let attention rest open. Do not choose an object and do not refuse one. Whatever arises is allowed to arise.",
+      "Notice, do not follow — when a thought or sensation arrives, register it and let it pass. The noticing is the practice; the content is not.",
+      "Catch the catching — the skill is meta-awareness: noticing that you have been absorbed. Each time you notice, that is one repetition.",
+      "Do not chase a state — the goal is not calm and not blankness. Chasing either one is the same mistake as chasing a vision.",
+      "Safety — the adverse-effects literature is real and this is the practice it is drawn from. If difficult material keeps arising, stop and talk to someone. This is not a solo endurance test."
+    ],
+    reps: "10–20 minutes daily, after a few minutes of focused attention to stabilise. The tradition's own instruction is to alternate the two — doing only the open half is doing half the practice.",
+    evidence: "Moderate benchmark evidence (dissociable attentional and creativity effects; the insight claim untested)",
+    evClass: "moderate",
+    research: [
+      {
+        source: "Lutz, Slagter, Dunne & Davidson, 'Attention regulation and monitoring in meditation', Trends in Cognitive Sciences 12(4):163–169 (2008)",
+        claim: "The paper that split meditation into two styles: focused attention, which voluntarily holds a chosen object, and open monitoring, which non-reactively monitors experience from moment to moment. It is a theoretical review, not a trial — its contribution is the taxonomy, and the taxonomy is why this lane can say different practices produce different results at all. Presented as a framework, not as evidence of an outcome.",
+        medium: "theoretical review / taxonomy",
+        confidence: "High (as a framework) · none claimed (as an outcome)",
+        year: "2008"
+      },
+      {
+        source: "Slagter, Lutz, Greischar, Francis, Nieuwenhuis, Davis & Davidson, 'Mental training affects distribution of limited brain resources', PLoS Biology 5(6):e138 (2007)",
+        claim: "Three months of intensive Vipassana practice produced a smaller attentional blink and a smaller T1-elicited P3b — the brain allocated less to the first target and therefore missed the second target less. The finding is specific and it is the positive case for open monitoring: the practice changed how a limited resource was distributed, not merely how calm the practitioner felt.",
+        medium: "longitudinal study with a waitlist control group",
+        confidence: "Moderate (single study, intensive retreat dose)",
+        year: "2007"
+      },
+      {
+        source: "Lippelt, Hommel & Colzato, 'Focused attention, open monitoring and loving kindness meditation: effects on attention, conflict monitoring, and creativity — A review', Frontiers in Psychology 5:1083 (2014)",
+        claim: "The review that gathers the dissociation evidence: single bouts of the two styles push cognitive control in opposite directions. Focused attention increases the attentional blink and strengthens top-down control; open monitoring reduces it and improves divergent thinking on the Alternate Uses Task (the primary finding is Colzato, Ozturk & Hommel, Frontiers in Psychology 3:116, 2012). This is the sharpest support for the lane's whole thesis — two practices, one system, opposite directions.",
+        medium: "review of experimental studies",
+        confidence: "Moderate (consistent direction, small single-bout studies)",
+        year: "2014"
+      },
+      {
+        source: "Lindahl, Fisher, Cooper, Rosen & Britton, 'The varieties of contemplative experience: A mixed-methods study of meditation-related challenges in Western Buddhists', PLoS ONE 12(5):e0176239 (2017)",
+        claim: "A taxonomy of 59 meditation-related experiences across 7 domains, drawn from Western Buddhist practitioners — a sample weighted toward insight traditions. Valence ranged from very positive to very negative, and impairment from transient to severe and enduring. This is the entry's honest negative, and it is a different kind from the others: the tradition's own map already marks the difficult stages, and the clinical literature found them independently.",
+        medium: "mixed-methods qualitative and survey study",
+        confidence: "Moderate (that these experiences occur) · contested (on prevalence and causation)",
+        year: "2017"
+      }
+    ],
+    verify: "Two counts, and the prediction is that they move in opposite directions. Before and after a session, do a three-minute divergent-thinking count (name as many distinct uses as you can for one household object, then count distinct categories rather than raw ideas) and a three-minute noticing count (how many times you catch your attention absorbed). The single-bout research predicts open monitoring widens the first and focused attention narrows it. If the two practices give you the same result, you are probably doing the same practice twice — and that is worth knowing.",
+    village: "This is the entry that tests the lane's own thesis directly. If different practices produce different results, the sharpest evidence should be two practices that push the same system in opposite directions — and that is what the single-bout research found for focused attention and open monitoring. It is also the section's third honest negative, and a different kind from the other two: prayer fails a claim the tradition never made, asana fails a claim the market made on the tradition's behalf, and open monitoring is the case where the tradition's own map and the clinical literature agree — on a risk. The tradition marks the hard stages; the adverse-effects study found them. That agreement is the entry's reason to exist.",
+    quest: ["The Two Ways of Paying Attention", "Practise two meditations for a week each: one holding attention on a single object (the breath), and one holding no object and simply noticing whatever arises. After each session, do the same three-minute task — name as many distinct uses as you can for one household object. Compare the two lists. Different practices, different results, and you can feel the difference yourself.", ["Health", "PE", "Science"], "👁️"]
   }
 ];
 
@@ -416,7 +481,10 @@ const MEDITATION_DEPOT = [
   { t: "Nature Relatedness Scale (NR-6)", u: "https://pubmed.ncbi.nlm.nih.gov/?term=nature+relatedness+scale+Nisbet", d: "The validated instrument that gives the sit-spot claim a real outcome measure." },
   { t: "STEP trial — intercessory prayer", u: "https://pubmed.ncbi.nlm.nih.gov/?term=intercessory+prayer+STEP+cardiac+bypass", d: "The largest randomized trial of prayer. The honest negative this section keeps on purpose." },
   { t: "Cochrane — yoga for chronic low back pain", u: "https://www.cochrane.org/evidence/CD010671_yoga-chronic-non-specific-low-back-pain", d: "The systematic review behind the asana entry. Read the authors' own conclusion — it is blunter than the marketing." },
-  { t: "SAGE trial — yoga and falls in older adults", u: "https://doi.org/10.1016/j.lanhl.2025.100749", d: "The largest test of the falls claim, and the one it failed. 700 participants; falls were more frequent in the yoga group." }
+  { t: "SAGE trial — yoga and falls in older adults", u: "https://doi.org/10.1016/j.lanhl.2025.100749", d: "The largest test of the falls claim, and the one it failed. 700 participants; falls were more frequent in the yoga group." },
+  { t: "Slagter et al. — three months of Vipassana, and the attentional blink", u: "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0050138", d: "The positive case for open monitoring, open access: the practice changed how a limited attentional resource was distributed." },
+  { t: "Lippelt, Hommel & Colzato — the two styles push in opposite directions", u: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4171985/", d: "The dissociation evidence behind the lane's thesis: focused attention narrows, open monitoring widens." },
+  { t: "Lindahl et al. — the varieties of contemplative experience", u: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0176239", d: "The adverse-effects taxonomy, open access. Read it before teaching insight practice to a child." }
 ];
 
 /* Cross-links to practices that already live elsewhere in the Library —
