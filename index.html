@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Creative Village — A Roll Making Game (RMG)</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231a1a2e'/><path d='M16 25V14' stroke='%234ade80' stroke-width='2.4' stroke-linecap='round'/><path d='M16 15c0-4 3-7 7-7 0 4-3 7-7 7z' fill='%234ade80'/><path d='M16 19c0-3.2-2.4-5.6-5.6-5.6 0 3.2 2.4 5.6 5.6 5.6z' fill='%23e9c46a'/></svg>">
 <script src="data.js"></script>
 <script src="learning.js"></script>
 <script src="vitality.js"></script>
@@ -724,6 +725,87 @@ details[open] summary::after { transform: rotate(180deg); }
   font-weight: bold; cursor: pointer; font-family: inherit; font-size: 0.95rem;
 }
 
+/* ---- The Beat: closing the circle on a finished quest ----
+   The screen is a mirror, not a slot machine. Nothing here rewards the click;
+   it only reflects back what actually happened in the world. */
+.beat-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(10,10,26,0.9);
+  display: none; align-items: center; justify-content: center;
+  z-index: 2100; padding: 1rem; overflow-y: auto;
+}
+.beat-modal {
+  background: var(--bg-panel);
+  max-width: 460px; width: 100%;
+  border: 1px solid var(--border-subtle);
+  border-top: 3px solid var(--accent-green);
+  border-radius: 16px;
+  padding: 1.4rem 1.3rem;
+  box-shadow: 0 0 40px rgba(74,222,128,0.18);
+  animation: beatIn 0.45s ease-out;
+  max-height: 92vh; overflow-y: auto;
+}
+@keyframes beatIn { from { opacity: 0; transform: translateY(14px) scale(0.98); } to { opacity: 1; transform: none; } }
+.beat-eyebrow {
+  font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent-green); font-weight: bold; margin-bottom: 0.35rem;
+}
+.beat-title { font-size: 1.25rem; color: var(--text-bright); margin: 0 0 0.2rem; line-height: 1.25; }
+.beat-sub { font-size: 0.82rem; color: var(--text-dim); margin-bottom: 0.95rem; line-height: 1.45; }
+.beat-roster { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 1rem; }
+.beat-role { display: flex; gap: 0.5rem; align-items: baseline; font-size: 0.88rem; flex-wrap: wrap; }
+.beat-role .rlabel { color: var(--text-dim); min-width: 5.5rem; font-size: 0.78rem; }
+.beat-role .rnames { color: var(--text-bright); font-weight: 600; }
+.beat-field { margin-bottom: 0.9rem; }
+.beat-field label { display: block; font-size: 0.85rem; color: var(--accent-gold); margin-bottom: 0.3rem; font-weight: 600; line-height: 1.35; }
+.beat-field input {
+  width: 100%; box-sizing: border-box;
+  background: var(--bg-input); border: 1px solid var(--border-subtle);
+  border-radius: 8px; padding: 0.65rem 0.7rem;
+  color: var(--text-bright); font-family: inherit; font-size: 0.95rem;
+}
+.beat-field input:focus { outline: 2px solid var(--accent-green); outline-offset: 1px; border-color: var(--accent-green); }
+.beat-field .hint { font-size: 0.72rem; color: var(--text-dim); margin-top: 0.25rem; }
+.beat-actions { display: flex; flex-direction: column; gap: 0.4rem; margin-top: 1.1rem; }
+.beat-btn {
+  background: var(--accent-green-dark); color: var(--text-bright);
+  border: none; padding: 0.8rem 1rem; border-radius: 10px;
+  font-weight: bold; cursor: pointer; font-family: inherit; font-size: 0.98rem;
+}
+.beat-btn:hover { background: var(--accent-green); color: #10221a; }
+.beat-skip {
+  background: none; border: none; color: var(--text-dim);
+  font-family: inherit; font-size: 0.8rem; cursor: pointer; padding: 0.35rem;
+  text-decoration: underline; text-underline-offset: 3px;
+}
+.beat-skip:hover { color: var(--text-light); }
+
+/* The record, read back on a finished quest card */
+.quest-record {
+  width: 100%; margin-top: 0.4rem; padding-top: 0.4rem;
+  border-top: 1px dashed var(--border-subtle);
+  font-size: 0.78rem; color: var(--text-dim); line-height: 1.5;
+}
+.quest-record .who { color: var(--accent-gold); font-weight: 600; }
+
+/* The family story, on the Village Hub */
+.story-line {
+  font-size: 0.82rem; color: var(--text-light); line-height: 1.5;
+  padding: 0.35rem 0; border-bottom: 1px dashed var(--border-subtle);
+}
+.story-line:last-child { border-bottom: none; }
+.story-line .who { color: var(--accent-gold); font-weight: 600; }
+.story-line .when { color: var(--text-dim); font-size: 0.85em; }
+
+/* Motion is a preference, never a requirement. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 600px) {
   .title-main { font-size: 2.2rem; }
@@ -1282,6 +1364,7 @@ Skull: the family's story held in one place, carried across years.
   </div>
   <div class="progress-overview" id="village-progress"></div>
   <div class="progress-overview" id="village-gamcod" style="display:none;"></div>
+  <div class="progress-overview" id="village-story" style="display:none;"></div>
   <div id="village-list"></div>
   <button class="btn-success" style="margin-top:1rem;" onclick="showScreen('quests')" data-i18n="Start Questing">Start Questing</button>
 </div>
@@ -1900,6 +1983,26 @@ let activeStudioTab = 'class';
 let rosterSelections = {};
 let questFilter = 'all';
 let webhookUrl = safeGet('rpg_webhook', '');
+
+// ---- The record ----
+// Every completed quest leaves a record: who was there, in what role, what the
+// witness saw, what was noticed, and when. This is the thing worth keeping —
+// and the thing worth selling. It is also what makes a player's quest count
+// survive a reload, since rosterSelections only ever lived in memory.
+let questRecords = safeGet('rpg_records', {});
+const SAVE_VERSION = 2;
+let pendingGold = false;
+let beatQuestId = null;
+
+// Reflection prompts rotate, so the question never feels recycled.
+const REFLECT_PROMPTS = [
+  'What surprised you?',
+  'What would you do differently next time?',
+  'What did you notice that you did not expect?',
+  'What was harder than it looked?',
+  'What would you teach someone else from this?',
+  'What did your hands learn today?'
+];
 
 try { biome = safeGet('rpg_biome', 'apartment') || 'apartment'; } catch(e) {}
 try { freeRoam = localStorage.getItem('rpg_freeRoam') === 'true'; } catch(e) {}
@@ -3423,9 +3526,10 @@ function saveVillage() {
 
 function exportVillage() {
   const saveData = {
-    version: 1,
+    version: SAVE_VERSION,
     players: players,
     completedQuests: completedQuests,
+    records: questRecords,
     attendance: attendance,
     biome: biome,
     freeRoam: freeRoam,
@@ -3459,8 +3563,17 @@ function importVillage(event) {
   reader.onload = function(e) {
     try {
       const data = JSON.parse(e.target.result);
+      // Never let a malformed file overwrite a real Village.
+      if (!data || typeof data !== 'object' || Array.isArray(data)
+          || (data.players !== undefined && !Array.isArray(data.players))
+          || (data.completedQuests !== undefined && !Array.isArray(data.completedQuests))
+          || (data.records !== undefined && (typeof data.records !== 'object' || Array.isArray(data.records)))) {
+        alert("That file doesn't look like a Village save. Nothing was changed.");
+        return;
+      }
       players = data.players || [];
       completedQuests = data.completedQuests || [];
+      questRecords = data.records || {};
       attendance = data.attendance || { days: 0, hours: 0, customHours: {} };
       biome = data.biome || 'apartment';
       freeRoam = !!data.freeRoam;
@@ -3488,6 +3601,7 @@ function importVillage(event) {
 
       safeSet('rpg_players', players);
       safeSet('rpg_completed', completedQuests);
+      safeSet('rpg_records', questRecords);
       safeSet('rpg_attendance', attendance);
       safeSet('rpg_biome', biome);
       safeSet('rpg_freeRoam', freeRoam);
@@ -3519,6 +3633,7 @@ function resetVillage() {
   if (!confirm("This will erase ALL progress — completed quests, attendance, player data, and settings — from this browser. This cannot be undone.\n\nSave your village first if you want to keep anything.\n\nReset everything?")) return;
   localStorage.removeItem('rpg_players');
   localStorage.removeItem('rpg_completed');
+  localStorage.removeItem('rpg_records');
   localStorage.removeItem('rpg_attendance');
   localStorage.removeItem('rpg_biome');
   localStorage.removeItem('rpg_zone');
@@ -3755,6 +3870,31 @@ function renderVillage() {
     </div>
   `;
   renderVillageGamcod();
+  renderVillageStory();
+}
+
+// The family story: the last few things that actually happened, in the family's
+// own words. This is the record read back — the part worth keeping.
+function renderVillageStory() {
+  const el = document.getElementById('village-story');
+  if (!el) return;
+  const entries = Object.keys(questRecords)
+    .map(qId => questRecords[qId])
+    .filter(r => r && (r.witnessSaid || r.noticed))
+    .sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')))
+    .slice(0, 4);
+  if (!entries.length) { el.style.display = 'none'; return; }
+  el.style.display = 'block';
+  el.innerHTML = `<strong style="color:var(--accent-gold);">📖 ${t('The family story so far')}</strong>` +
+    entries.map(r => {
+      const when = r.date ? new Date(r.date).toLocaleDateString() : '';
+      const line = r.witnessSaid || r.noticed;
+      const speaker = r.witnessSaid
+        ? ((r.witnesses && r.witnesses.length) ? r.witnesses.map(esc).join(', ') : esc(t('Witness')))
+        : esc(t('Noticed'));
+      const meta = [esc(r.title || ''), when ? esc(when) : ''].filter(Boolean).join(' · ');
+      return `<div class="story-line">“${esc(line)}” <span class="who">— ${speaker}</span> <span class="when">· ${meta}</span></div>`;
+    }).join('');
 }
 
 /* GAMCOD season card on the Village Hub — current season at a glance */
@@ -3818,12 +3958,16 @@ function renderVillageGamcod() {
 }
 
 function getPlayerQuestCount(name) {
-  // Count quests where this player participated
-  return completedQuests.filter(qId => {
-    let sel = rosterSelections[qId];
-    if (!sel) return false;
-    return [...(sel.trackers||[]), ...(sel.witnesses||[]), ...(sel.hearth||[]), ...(sel.mentor||[])].includes(name);
-  }).length;
+  // Count from the persistent record. rosterSelections only ever lived in
+  // memory, so counting from it made every player read 0 after a reload.
+  let n = 0;
+  for (const qId in questRecords) {
+    const r = questRecords[qId];
+    if (!r) continue;
+    const who = [].concat(r.trackers || [], r.witnesses || [], r.hearth || [], r.mentor || []);
+    if (who.includes(name)) n++;
+  }
+  return n;
 }
 
 // ---- Tier Progression ----
@@ -3891,6 +4035,20 @@ function questTitleFromId(qId) {
     }
   }
   return qId;
+}
+
+function tierFromQuestId(qId) {
+  // Guild names can contain underscores, so match rather than split.
+  for (let a of allAspects) {
+    for (let t of ['sand', 'straw', 'wood', 'iron']) {
+      if (a[t]) {
+        for (let q of a[t]) {
+          if (makeQuestId(a.name, t, q[0]) === qId) return t;
+        }
+      }
+    }
+  }
+  return '';
 }
 
 // ---- Avatar Studio ----
@@ -4247,6 +4405,7 @@ function renderQuestCard(a, q, tier, locked) {
       ${learnMoreBtn}
     </div>
     <div class="quest-action">${actionHTML}</div>
+    ${isDone ? renderQuestRecord(qId) : ''}
     ${!locked && !isDone ? renderRosterPanel(qId, rewardIcon) : ''}
     ${resources.length > 0 ? renderResourcesPanel(qId, a.name) : ''}
   </div>`;
@@ -4418,16 +4577,45 @@ function sendToSkull(payload) {
 
 function finalizeQuest(qId, icon) {
   let sel = rosterSelections[qId];
-  let hasParticipants = [...sel.trackers, ...sel.witnesses, ...sel.hearth, ...sel.mentor].length > 0;
-  if (!hasParticipants) {
-    alert('Please assign at least one person to a role.');
+  let all = [...new Set([...sel.trackers, ...sel.witnesses, ...sel.hearth, ...sel.mentor])];
+  if (all.length === 0) {
+    // A nudge, not an error box. Someone has to have been there.
+    let panel = document.getElementById('roster_' + qId);
+    if (panel) {
+      let warn = panel.querySelector('.roster-nudge');
+      if (!warn) {
+        warn = document.createElement('div');
+        warn.className = 'roster-nudge';
+        warn.style.cssText = 'background:rgba(249,115,22,0.12);border:1px solid var(--accent-orange);color:var(--accent-orange);border-radius:6px;padding:0.45rem 0.6rem;font-size:0.8em;margin-bottom:0.5rem;line-height:1.4;';
+        panel.insertBefore(warn, panel.firstChild);
+      }
+      warn.textContent = t('Choose at least one person first — someone has to have been there.');
+      panel.style.display = 'block';
+    }
     return;
   }
 
   completedQuests.push(qId);
 
+  // ---- The record ----
+  // Written the moment the quest is marked done, so the fact that it happened is
+  // never lost even if the circle is never closed. The beat only enriches it.
+  questRecords[qId] = {
+    date: new Date().toISOString(),
+    title: questTitleFromId(qId),
+    guild: questGuildFromId(qId),
+    tier: tierFromQuestId(qId),
+    trackers: sel.trackers.slice(),
+    witnesses: sel.witnesses.slice(),
+    hearth: sel.hearth.slice(),
+    mentor: sel.mentor.slice(),
+    witnessSaid: '',
+    noticed: '',
+    level: 'quick'
+  };
+  safeSet('rpg_records', questRecords);
+
   // Update player stats and wardrobe
-  let all = [...new Set([...sel.trackers, ...sel.witnesses, ...sel.hearth, ...sel.mentor])];
   all.forEach(n => {
     let p = players.find(pl => pl.name === n);
     if (p) {
@@ -4488,7 +4676,6 @@ function finalizeQuest(qId, icon) {
     });
     if (justUnlocked.length) safeSet('rpg_completed', completedQuests);
   }
-  let unlockMsg = justUnlocked.length ? '\n\n🎉 New tiers unlocked: ' + justUnlocked.join(', ') + '.' : '';
 
   // Gold Nugget: finish the whole Commerce guild to earn the economic badge
   if (isCommerceQuest(qId) && !completedQuests.includes('commerce_gold_nugget')) {
@@ -4504,11 +4691,14 @@ function finalizeQuest(qId, icon) {
       safeSet('rpg_completed', completedQuests);
       safeSet('rpg_gold_nugget', true);
       safeSet('rpg_players', players);
-      setTimeout(() => celebrateGold(true), 350);
+      pendingGold = true;   // shown once the circle closes, so the two never stack
     }
   }
 
-  alert('Quest Complete! Items added to participants\' wardrobes.' + unlockMsg);
+  // ---- The beat ----
+  // This replaces the old alert(). The quest is already recorded; this is the
+  // moment the family closes the circle and the Village remembers what happened.
+  openBeat(qId, justUnlocked);
 
   // Story Mode: advance the adventure if this was the current story quest
   if (storyMode && typeof storyAdvance === 'function') storyAdvance(qId);
@@ -4516,6 +4706,105 @@ function finalizeQuest(qId, icon) {
   if (survivalMode && typeof survAdvance === 'function') survAdvance(qId);
   // GAMCOD Mode: advance the season if this was the current GAMCOD quest
   if (gamcodMode && typeof gamcodAdvance === 'function') gamcodAdvance(qId);
+}
+
+// ---- The Beat ----
+// The moment a quest closes. The screen reflects what happened in the world; it
+// does not reward the tap. The record is already written — this is where the
+// family says what they saw and what they noticed, and the Village keeps it.
+
+function openBeat(qId, justUnlocked) {
+  const r = questRecords[qId];
+  if (!r) return;
+  beatQuestId = qId;
+
+  document.getElementById('beat-title').textContent = t(r.title || 'Quest complete');
+
+  let sub = t('Close the circle. This is what the Village will remember.');
+  if (justUnlocked && justUnlocked.length) {
+    sub += ' ' + t('New tier unlocked:') + ' ' + justUnlocked.join(', ') + '.';
+  }
+  document.getElementById('beat-sub').textContent = sub;
+
+  // Read the roster back, by role. This is the mirror.
+  const roles = [
+    ['trackers', '🏃 ' + t('Trackers')],
+    ['witnesses', '📷 ' + t('Witnesses')],
+    ['hearth', '🔥 ' + t('Hearth')],
+    ['mentor', '🧑‍🏫 ' + t('Mentor')]
+  ];
+  document.getElementById('beat-roster').innerHTML = roles
+    .filter(([k]) => r[k] && r[k].length)
+    .map(([k, label]) => `<div class="beat-role"><span class="rlabel">${label}</span><span class="rnames">${r[k].map(esc).join(', ')}</span></div>`)
+    .join('');
+
+  // The witness only speaks if someone actually witnessed.
+  const wf = document.getElementById('beat-witness-field');
+  const wIn = document.getElementById('beat-witness');
+  if (r.witnesses && r.witnesses.length) {
+    wf.style.display = 'block';
+    document.getElementById('beat-witness-label').textContent = t('What did you see?') + ' — ' + r.witnesses.join(' & ');
+    wIn.placeholder = t('One line. What did they actually do?');
+    wIn.value = '';
+  } else {
+    wf.style.display = 'none';
+  }
+
+  // The reflection rotates, so the question never feels recycled.
+  const prompt = REFLECT_PROMPTS[completedQuests.length % REFLECT_PROMPTS.length];
+  document.getElementById('beat-reflect-label').textContent = t(prompt);
+  document.getElementById('beat-reflect').value = '';
+
+  document.getElementById('beat-close').textContent = t('Close the circle');
+  document.getElementById('beat-overlay').style.display = 'flex';
+
+  // Put the cursor where the family will actually type.
+  setTimeout(() => {
+    const first = (r.witnesses && r.witnesses.length) ? wIn : document.getElementById('beat-reflect');
+    if (first) { try { first.focus(); } catch (e) {} }
+  }, 60);
+}
+
+function closeBeat(skip) {
+  const qId = beatQuestId;
+  beatQuestId = null;
+  const ov = document.getElementById('beat-overlay');
+  if (ov) ov.style.display = 'none';
+
+  if (qId && questRecords[qId] && !skip) {
+    const r = questRecords[qId];
+    const w = (document.getElementById('beat-witness').value || '').trim();
+    const n = (document.getElementById('beat-reflect').value || '').trim();
+    if (w) r.witnessSaid = w.slice(0, 140);
+    if (n) r.noticed = n.slice(0, 140);
+    r.level = (r.witnessSaid && r.noticed) ? 'full' : ((r.witnessSaid || r.noticed) ? 'standard' : 'quick');
+    safeSet('rpg_records', questRecords);
+  }
+
+  document.getElementById('beat-witness').value = '';
+  document.getElementById('beat-reflect').value = '';
+
+  renderQuests();
+  renderVillage();
+
+  // If the Gold Nugget landed on this quest, it comes after the circle closes.
+  if (pendingGold) { pendingGold = false; setTimeout(() => celebrateGold(true), 250); }
+}
+
+// The record, read back on a finished quest card.
+function renderQuestRecord(qId) {
+  const r = questRecords[qId];
+  if (!r) return '';
+  let lines = [];
+  if (r.witnessSaid) {
+    const who = (r.witnesses && r.witnesses.length) ? r.witnesses.map(esc).join(', ') : esc(t('Witness'));
+    lines.push('📷 <span class="who">' + who + '</span> — “' + esc(r.witnessSaid) + '”');
+  }
+  if (r.noticed) {
+    lines.push('🌱 <span class="who">' + esc(t('Noticed')) + '</span> — “' + esc(r.noticed) + '”');
+  }
+  if (!lines.length) return '';
+  return '<div class="quest-record">' + lines.join('<br>') + '</div>';
 }
 
 function postToPermies(qId, questTitle) {
@@ -4833,6 +5122,14 @@ if (players.length > 0) {
   document.getElementById('nav-bar').style.display = 'flex';
 }
 
+// ---- The Beat: Enter closes the circle ----
+['beat-witness', 'beat-reflect'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('keydown', e => {
+    if (e.key === 'Enter') { e.preventDefault(); closeBeat(false); }
+  });
+});
+
 // ---- Apply saved language ----
 if (lang !== 'en') {
   const sel = document.getElementById('lang-select');
@@ -4842,6 +5139,29 @@ if (lang !== 'en') {
   translateStatic();
 }
 </script>
+
+<!-- The Beat: closing the circle on a finished quest -->
+<div class="beat-overlay" id="beat-overlay" role="dialog" aria-modal="true" aria-labelledby="beat-title">
+  <div class="beat-modal">
+    <div class="beat-eyebrow" data-i18n="Quest complete">Quest complete</div>
+    <h2 class="beat-title" id="beat-title"></h2>
+    <div class="beat-sub" id="beat-sub"></div>
+    <div class="beat-roster" id="beat-roster"></div>
+    <div class="beat-field" id="beat-witness-field">
+      <label for="beat-witness" id="beat-witness-label"></label>
+      <input id="beat-witness" type="text" maxlength="140" autocomplete="off" enterkeyhint="done">
+    </div>
+    <div class="beat-field">
+      <label for="beat-reflect" id="beat-reflect-label"></label>
+      <input id="beat-reflect" type="text" maxlength="140" autocomplete="off" enterkeyhint="done">
+      <div class="hint" data-i18n="One line is enough. Ten seconds.">One line is enough. Ten seconds.</div>
+    </div>
+    <div class="beat-actions">
+      <button class="beat-btn" id="beat-close" onclick="closeBeat(false)"></button>
+      <button class="beat-skip" onclick="closeBeat(true)" data-i18n="Skip — just record it">Skip — just record it</button>
+    </div>
+  </div>
+</div>
 
 <!-- Gold Nugget celebration -->
 <div class="gold-modal-overlay" id="gold-modal-overlay">
