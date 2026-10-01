@@ -32,7 +32,6 @@ Checked **860** URLs: **832** OK, **21** HTTP errors, **0** redirects, **7** unr
 - [`https://www.allaboutbirds.org/`](https://www.allaboutbirds.org/)  (HTTP 403)
 - [`https://www.blackdragonforge.com/products/smithing101`](https://www.blackdragonforge.com/products/smithing101)  (HTTP 429)
 - [`https://www.elevify.com/en/courses/food-gastronomy-and-hospitality/food/food-preserving-course-bac2e`](https://www.elevify.com/en/courses/food-gastronomy-and-hospitality/food/food-preserving-course-bac2e)  (HTTP 403)
-- [`https://www.instagram.com/wizard.mountainman/`](https://www.instagram.com/wizard.mountainman/)  (HTTP 429)
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
 - [`https://www.patreon.com/slowfilms`](https://www.patreon.com/slowfilms)  (HTTP 403)
 
