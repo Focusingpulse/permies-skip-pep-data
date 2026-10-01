@@ -806,6 +806,68 @@ details[open] summary::after { transform: rotate(180deg); }
   }
 }
 
+/* ---- The Familiar ----
+   A small presence at the edge of every screen. It is a mirror: it changes
+   only when something real happened, and it never punishes you for being away.
+   Nothing here rewards the tap — tapping only shows you what the Village kept. */
+.familiar {
+  position: fixed; right: 0.9rem; bottom: 0.9rem;
+  z-index: 150; display: none;
+  flex-direction: column; align-items: flex-end; gap: 0.55rem;
+}
+.familiar-wrap { position: relative; width: 62px; height: 62px; }
+.familiar-btn {
+  width: 62px; height: 62px; border-radius: 50%; padding: 0;
+  background: radial-gradient(circle at 50% 38%, rgba(74,222,128,0.14), rgba(10,10,26,0.94) 72%);
+  border: 1px solid var(--border-subtle);
+  cursor: pointer; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+.familiar-btn:active { transform: scale(0.93); }
+.familiar.warm .familiar-btn {
+  border-color: rgba(74,222,128,0.45);
+  box-shadow: 0 0 22px rgba(74,222,128,0.26), 0 6px 22px rgba(0,0,0,0.5);
+}
+.familiar-btn .mini-avatar { transform: scale(0.6); transform-origin: center; }
+.familiar-ring { position: absolute; inset: 0; pointer-events: none; }
+.familiar-ring circle { fill: none; stroke-width: 2.5; }
+.familiar-ring .track { stroke: rgba(255,255,255,0.07); }
+.familiar-ring .fill { stroke: var(--accent-green); stroke-linecap: round; transition: stroke-dashoffset 0.7s ease; }
+.familiar-badge {
+  position: absolute; top: -2px; right: -2px;
+  background: var(--accent-gold); color: #1a1a2e;
+  font-size: 0.6rem; font-weight: bold; font-family: inherit;
+  min-width: 19px; height: 19px; border-radius: 10px; padding: 0 4px;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.familiar-panel {
+  display: none;
+  width: min(300px, calc(100vw - 1.8rem));
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  border-top: 3px solid var(--accent-green);
+  border-radius: 14px; padding: 0.9rem 0.95rem;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.6);
+  animation: beatIn 0.3s ease-out;
+}
+.familiar-panel.open { display: block; }
+.familiar-panel h4 {
+  margin: 0; color: var(--accent-green); font-size: 0.7rem;
+  letter-spacing: 0.13em; text-transform: uppercase;
+}
+.familiar-stats { display: flex; gap: 0.9rem; font-size: 0.8rem; color: var(--text-dim); margin: 0.55rem 0 0.6rem; }
+.familiar-stats b { color: var(--text-bright); }
+.familiar-panel .fam-line {
+  font-size: 0.86rem; color: var(--text-light); line-height: 1.5;
+  margin: 0 0 0.65rem; padding-left: 0.6rem;
+  border-left: 2px solid var(--accent-gold);
+}
+.familiar-panel .fam-line .who { color: var(--accent-gold); font-weight: 600; }
+.familiar-panel .fam-quiet { font-size: 0.82rem; color: var(--text-dim); line-height: 1.5; margin: 0 0 0.7rem; }
+
 /* ---- Responsive ---- */
 @media (max-width: 600px) {
   .title-main { font-size: 2.2rem; }
@@ -3376,6 +3438,8 @@ function showScreen(s) {
   if (s === 'learning') renderLearning();
   if (s === 'commons') renderCommons();
   if (s === 'circle') renderCircle();
+  renderFamiliar();
+  closeFamiliar();
 }
 
 // ---- Setup ----
@@ -4786,6 +4850,7 @@ function closeBeat(skip) {
 
   renderQuests();
   renderVillage();
+  renderFamiliar();
 
   // If the Gold Nugget landed on this quest, it comes after the circle closes.
   if (pendingGold) { pendingGold = false; setTimeout(() => celebrateGold(true), 250); }
@@ -5116,10 +5181,120 @@ function celebrateGold(show) {
 }
 function dismissGold() { celebrateGold(false); }
 
+// ---- The Familiar ----
+// A small presence at the edge of every screen, fed by what the family actually
+// did. It reads the record; it never rewards the tap. No decay, no streaks, no
+// guilt — a companion, not a creditor.
+
+const FAMILIAR_WINDOW_DAYS = 7;
+const FAMILIAR_RING_C = 2 * Math.PI * 29;   // r=29 in the 62x62 viewBox
+
+function familiarState() {
+  const recs = Object.keys(questRecords).map(k => questRecords[k]).filter(Boolean);
+  const total = completedQuests.filter(q => q.indexOf('_unlocked_') !== 0 && q !== 'commerce_gold_nugget').length;
+  const cutoff = Date.now() - FAMILIAR_WINDOW_DAYS * 86400000;
+  const recent = recs.filter(r => r.date && new Date(r.date).getTime() >= cutoff);
+  const latest = recs.slice().sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')))[0] || null;
+
+  // It wears the face of whoever has been practising most — the Village's
+  // presence, not any one person's trophy.
+  const counts = {};
+  recs.forEach(r => {
+    [].concat(r.trackers || [], r.witnesses || [], r.hearth || [], r.mentor || [])
+      .forEach(n => { counts[n] = (counts[n] || 0) + 1; });
+  });
+  let face = null, best = 0;
+  Object.keys(counts).forEach(n => { if (counts[n] > best) { best = counts[n]; face = n; } });
+
+  return { total, recent: recent.length, latest, face, warm: recent.length > 0 };
+}
+
+function renderFamiliar() {
+  const el = document.getElementById('familiar');
+  if (!el) return;
+  if (!players.length) { el.style.display = 'none'; return; }
+  el.style.display = 'flex';
+
+  const st = familiarState();
+  const p = players.find(x => x.name === st.face) || players[0];
+
+  const av = document.getElementById('familiar-avatar');
+  if (av && p) av.innerHTML = getAvatarHTML(p, true);
+
+  // Growth ring: fills with the family's practice, capped at 40 quests.
+  const ring = document.getElementById('familiar-ring-fill');
+  if (ring) {
+    const pct = Math.min(1, st.total / 40);
+    ring.setAttribute('stroke-dasharray', FAMILIAR_RING_C.toFixed(1));
+    ring.setAttribute('stroke-dashoffset', (FAMILIAR_RING_C * (1 - pct)).toFixed(1));
+  }
+
+  // Badge: this week's count, shown only when there is one.
+  const badge = document.getElementById('familiar-badge');
+  if (badge) {
+    badge.style.display = st.recent > 0 ? 'flex' : 'none';
+    badge.textContent = st.recent;
+  }
+
+  el.classList.toggle('warm', st.warm);
+  renderFamiliarPanel(st);
+}
+
+function renderFamiliarPanel(st) {
+  const panel = document.getElementById('familiar-panel');
+  if (!panel) return;
+  const head = `<h4>${t('The Village remembers')}</h4>`;
+  const goBtn = `<button class="beat-btn" style="width:100%;" onclick="showScreen('quests'); closeFamiliar();">${t('Back to the quest board')}</button>`;
+
+  if (!st.total) {
+    panel.innerHTML = head +
+      `<p class="fam-quiet">${t('Nothing recorded yet. The Village stays quiet until something real happens — then it keeps it.')}</p>` +
+      `<button class="beat-btn" style="width:100%;" onclick="showScreen('quests'); closeFamiliar();">${t('Find the first quest')}</button>`;
+    return;
+  }
+
+  const stats = `<div class="familiar-stats">
+      <span><b>${st.total}</b> ${t('quests')}</span>
+      <span><b>${st.recent}</b> ${t('this week')}</span>
+    </div>`;
+
+  let line = '';
+  if (st.latest && (st.latest.witnessSaid || st.latest.noticed)) {
+    const who = st.latest.witnessSaid
+      ? ((st.latest.witnesses && st.latest.witnesses.length) ? st.latest.witnesses.map(esc).join(', ') : esc(t('Witness')))
+      : esc(t('Noticed'));
+    line = `<p class="fam-line">“${esc(st.latest.witnessSaid || st.latest.noticed)}” <span class="who">— ${who}</span></p>`;
+  }
+
+  const quiet = st.warm ? '' :
+    `<p class="fam-quiet">${t('Nothing this week. The Village is not keeping score — it is just glad to see you.')}</p>`;
+
+  panel.innerHTML = head + stats + line + quiet + goBtn;
+}
+
+function toggleFamiliar() {
+  const panel = document.getElementById('familiar-panel');
+  if (panel) panel.classList.toggle('open');
+}
+function closeFamiliar() {
+  const panel = document.getElementById('familiar-panel');
+  if (panel) panel.classList.remove('open');
+}
+
 // ---- Init ----
 // If returning player, go straight to village
 if (players.length > 0) {
   document.getElementById('nav-bar').style.display = 'flex';
+}
+
+// The Familiar's markup sits after this script, so the first render has to wait
+// for the document to finish parsing. Without this it stays invisible until the
+// family navigates — and the title screen is exactly where a returning family
+// lands. It is the one screen where "the Village remembers" matters most.
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderFamiliar);
+} else {
+  renderFamiliar();
 }
 
 // ---- The Beat: Enter closes the circle ----
@@ -5139,6 +5314,21 @@ if (lang !== 'en') {
   translateStatic();
 }
 </script>
+
+<!-- The Familiar: the Village's presence at the edge of every screen -->
+<div class="familiar" id="familiar">
+  <div class="familiar-panel" id="familiar-panel" role="status"></div>
+  <div class="familiar-wrap">
+    <button class="familiar-btn" id="familiar-btn" onclick="toggleFamiliar()" aria-label="The Village remembers">
+      <div id="familiar-avatar"></div>
+    </button>
+    <svg class="familiar-ring" viewBox="0 0 62 62" aria-hidden="true">
+      <circle class="track" cx="31" cy="31" r="29"></circle>
+      <circle class="fill" id="familiar-ring-fill" cx="31" cy="31" r="29"></circle>
+    </svg>
+    <span class="familiar-badge" id="familiar-badge"></span>
+  </div>
+</div>
 
 <!-- The Beat: closing the circle on a finished quest -->
 <div class="beat-overlay" id="beat-overlay" role="dialog" aria-modal="true" aria-labelledby="beat-title">
