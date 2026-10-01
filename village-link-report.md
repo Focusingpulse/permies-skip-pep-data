@@ -6,12 +6,12 @@ Checked **860** URLs: **832** OK, **20** HTTP errors, **0** redirects, **8** unr
 
 - `http://ia800306.us.archive.org/30/items/fe_The_Solar_Greenhouse_Book/The_Solar_Greenhouse_Book.pdf`  (error: URLError)
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
+- `http://www.davidhuang.org`  (error: TimeoutError)
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)
 - `http://www.dlive.tv/mavisfarmacyThe`  (error: URLError)
+- `http://www.theartisthomestead.com`  (error: TimeoutError)
 - `https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`  (error: URLError)
 - `https://mountainherbs.net/`  (error: URLError)
-- `https://www.permaculture.org.uk/education/course/introduction-permaculture-free-online-foundation-course`  (error: TimeoutError)
-- `https://www.permaculture.org.uk/knowledgebase`  (error: TimeoutError)
 
 ## HTTP errors (20)
 
