@@ -1,8 +1,8 @@
 # Village Link Report — 2026-10-01
 
-Checked **860** URLs: **832** OK, **20** HTTP errors, **0** redirects, **8** unreachable/timeouts.
+Checked **860** URLs: **835** OK, **19** HTTP errors, **0** redirects, **6** unreachable/timeouts.
 
-## Unreachable / timeout (8)
+## Unreachable / timeout (6)
 
 - `http://ia800306.us.archive.org/30/items/fe_The_Solar_Greenhouse_Book/The_Solar_Greenhouse_Book.pdf`  (error: URLError)
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
@@ -13,7 +13,7 @@ Checked **860** URLs: **832** OK, **20** HTTP errors, **0** redirects, **8** unr
 - `https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`  (error: URLError)
 - `https://mountainherbs.net/`  (error: URLError)
 
-## HTTP errors (20)
+## HTTP errors (19)
 
 - [`http://byjillb.com`](http://byjillb.com)  (HTTP 404)
 - [`http://innoperma.weebly.com/old`](http://innoperma.weebly.com/old)  (HTTP 404)
@@ -23,7 +23,6 @@ Checked **860** URLs: **832** OK, **20** HTTP errors, **0** redirects, **8** unr
 - [`http://www.my10acres.info`](http://www.my10acres.info)  (HTTP 500)
 - [`http://www.sasez.com`](http://www.sasez.com)  (HTTP 404)
 - [`https://blog.lostartpress.com/2025/05/19/the-free-video-series-of-build-a-chair-from-bullst/`](https://blog.lostartpress.com/2025/05/19/the-free-video-series-of-build-a-chair-from-bullst/)  (HTTP 403)
-- [`https://calearth.org`](https://calearth.org)  (HTTP 429)
 - [`https://culturesforhealth.com/blogs/learn`](https://culturesforhealth.com/blogs/learn)  (HTTP 429)
 - [`https://goingtoseed.org/collections/courses`](https://goingtoseed.org/collections/courses)  (HTTP 429)
 - [`https://handtoolwoodworking.com/green-woodworking-videos/`](https://handtoolwoodworking.com/green-woodworking-videos/)  (HTTP 403)
