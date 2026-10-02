@@ -1,0 +1,8 @@
+{
+  "appId": "com.focusingpulse.village",
+  "appName": "The Village",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}

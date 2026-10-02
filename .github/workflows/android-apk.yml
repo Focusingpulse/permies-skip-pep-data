@@ -1,0 +1,83 @@
+# ANDROID APK — build an installable debug APK in CI
+#
+# Why CI: the Village is a static site wrapped by Capacitor. Building the APK
+# needs a JDK + Android SDK, which the agent sandbox does not have. GitHub's
+# runners do. So the phone-testable artifact is produced here, not locally.
+#
+# The android/ project is gitignored and generated fresh on every run
+# (`npx cap add android`) — the site at the repo root is the source of truth.
+# www/ is likewise a build output, assembled by scripts/assemble-www.mjs.
+# Neither is committed, so neither can go stale.
+#
+# To get the APK: Actions -> "Android APK" -> the run -> Artifacts ->
+# village-debug-apk. Unzip, sideload app-debug.apk on the phone.
+
+name: Android APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - '*.js'
+      - 'crystal-skull/**'
+      - 'money-lab/**'
+      - 'scripts/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'capacitor.config.json'
+      - '.github/workflows/android-apk.yml'
+
+concurrency:
+  group: android-apk-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      # AGP 8.x requires JDK 17+; Capacitor 8 ships AGP 8.13, so 21 is the
+      # safe choice.
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - uses: android-actions/setup-android@v3
+
+      - name: Install dependencies
+        run: npm ci
+
+      # www/ must exist before `cap add` — the CLI validates webDir.
+      - name: Assemble web assets
+        run: npm run build:web
+
+      - name: Generate Android project
+        run: npx cap add android
+
+      - name: Sync web assets into the Android project
+        run: npx cap sync android
+
+      - name: Build debug APK
+        run: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: village-debug-apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 30

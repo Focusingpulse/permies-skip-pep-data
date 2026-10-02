@@ -18,3 +18,9 @@ _fix_moneylab.py
 _tag_static.py
 _tag2.py
 _validate_js.py
+# Capacitor / Node (added 2026-10-02 for the mobile pilot)
+node_modules/
+android/
+ios/
+.capacitor/
+www/
