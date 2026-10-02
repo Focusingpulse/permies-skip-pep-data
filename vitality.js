@@ -484,6 +484,83 @@ const MOVEMENT_SYSTEMS = [
   },
 
   {
+    id: "stretching-flexibility",
+    icon: "🤸",
+    name: "Stretching — What Flexibility Actually Is",
+    esName: "Estiramientos — Qué Es Realmente la Flexibilidad",
+    tagline: "The most common exercise in the world, and the one whose explanation is most often wrong.",
+    lineage: "Not a tradition and not one lineage. Static stretching entered physical culture through Swedish gymnastics (Pehr Henrik Ling, early 1800s) and the military calisthenics tradition, then spread worldwide through school PE and sport. The rule 'hold it 30 seconds to lengthen the muscle' is a twentieth-century coaching convention, not an ancient practice. The research line that actually tested it is modern rehabilitation and sports science: Magnusson's group in Denmark and Sweden (the sensory theory), Behm in Canada (warm-up effects), and the CDC and Cochrane review teams (injury and soreness).",
+    what: "Flexibility is range of motion, and range of motion has two parts: how far the tissue can physically go, and how much stretch your nervous system will allow before it signals stop. Stretching reliably improves the second. It changes the first only slightly, and mostly only in the moment. This is why a single session can add several degrees of reach in seconds — tissue does not grow that fast; the nervous system simply permits more. The practical consequences: stretch to gain range, not to prevent injury or soreness; move dynamically before activity and save long holds for after or for a separate session; and 30 seconds is enough.",
+    esWhat: "La flexibilidad es rango de movimiento, y el rango de movimiento tiene dos partes: hasta dónde puede llegar el tejido físicamente, y cuánto estiramiento permite tu sistema nervioso antes de dar la señal de alto. Estirar mejora de forma fiable la segunda. La primera solo cambia un poco, y sobre todo en el momento. Por eso una sola sesión puede añadir varios grados de alcance en segundos: el tejido no crece tan rápido; simplemente el sistema nervioso permite más. Las consecuencias prácticas: estira para ganar rango, no para prevenir lesiones ni agujetas; muévete de forma dinámica antes de la actividad y guarda los estiramientos largos para después o para una sesión aparte; y 30 segundos son suficientes.",
+    practice: [
+      "Warm up first — two or three minutes of easy movement (walking, marching, arm swings) before any long hold. This is the one part of the old warning that holds up: do not force a cold muscle.",
+      "Before activity, move rather than hold. Dynamic stretching: leg swings, arm circles, walking lunges, high knees — through a full but comfortable range, five to ten reps each. This is the warm-up half, and it does not cost you performance the way long holds can.",
+      "Save the long holds for after activity or a separate time. Ease into the position until you feel a stretch, not pain, and hold for 30 seconds while breathing normally.",
+      "Thirty seconds is enough. Two to four holds per muscle group, once a day. Sixty seconds does not add range, and stretching three times a day does not add range either.",
+      "Stay below the point of discomfort. If you are bracing, clenching, or holding your breath, you have gone past the useful edge and are training your nervous system to guard instead of yield.",
+      "Do not expect it to prevent injury or to stop next-day soreness. It does neither. Warm up, build strength gradually, and sleep.",
+      "If you want range you keep, use it under load. Full-range strength work — a deep squat, a full-range push-up, lifting something heavy through the whole movement — improves range about as well as stretching does, and builds strength at the same time."
+    ],
+    reps: "Dynamic movement before activity, every time. Static holds after activity or as their own short session: 30 seconds per hold, two to four holds per area, once a day. Consistency matters more than duration — the gains fade within weeks if you stop.",
+    evidence: "Strong research base — and it mostly says the opposite of the folk claims: stretching reliably increases range of motion, but mainly by changing how much stretch you tolerate rather than by lengthening tissue; it does not prevent injury and does not meaningfully reduce next-day soreness.",
+    evClass: "strong",
+    research: [
+      {
+        source: "Weppler & Magnusson, 'Increasing Muscle Extensibility: A Matter of Increasing Length or Modifying Sensation?', Physical Therapy 90(3):438-449 (2010)",
+        claim: "After a single stretch and after 3- to 8-week programs, end-range joint angles increase with no shift in the passive torque-angle curve — the tissue resists the same force at the same angle, but the person tolerates more. The authors call this the sensory theory: the gain is in perception, not muscle length. The biomechanics of programs longer than 8 weeks were, at that time, not yet evaluated.",
+        medium: "peer-reviewed review (synthesis of biomechanical studies)",
+        confidence: "Strong (that short-term gains are sensory) · open (long-term)",
+        year: "2010"
+      },
+      {
+        source: "Freitas, Mendes, Le Sant, Andrade, Nordez & Milanovic, 'Can chronic stretching change the muscle-tendon mechanical properties? A review', Scandinavian Journal of Medicine & Science in Sports 28(3):794-806 (2018)",
+        claim: "Across 26 stretching studies of 3 to 8 weeks, effects on muscle architecture, muscle stiffness and tendon stiffness were trivial; only maximal tolerated passive torque rose slightly. Stretching increased range of motion and tolerance to a greater tensile force, but did not measurably change the muscle or tendon itself. The authors conclude adaptations in this window are mostly sensory.",
+        medium: "systematic review with meta-analysis (26 studies)",
+        confidence: "Moderate-Strong",
+        year: "2018"
+      },
+      {
+        source: "Behm & Chaouachi, 'A review of the acute effects of static and dynamic stretching on performance', European Journal of Applied Physiology 111(11):2633-2651 (2011)",
+        claim: "Long or intense static stretching in a warm-up can acutely reduce strength, power and sprint performance. Short static stretching (under about 90 seconds total) at an intensity below the point of discomfort, in trained people, shows little or no impairment. Dynamic stretching is neutral or beneficial. The recommended warm-up is easy aerobic work, then large-amplitude dynamic movement, then sport-specific activity.",
+        medium: "peer-reviewed narrative review",
+        confidence: "Moderate-Strong",
+        year: "2011"
+      },
+      {
+        source: "Bandy, Irion & Briggler, 'The effect of time and frequency of static stretching on flexibility of the hamstring muscles', Physical Therapy 77(10):1090-1096 (1997)",
+        claim: "In 93 adults with limited hamstring flexibility, every stretching group gained range versus no stretching, but there was no difference between 30-second and 60-second holds, and no difference between stretching once or three times per day. Thirty seconds is an effective dose; more time and more sessions do not add range.",
+        medium: "randomized controlled trial",
+        confidence: "Moderate (single trial, but the finding has been reproduced)",
+        year: "1997"
+      },
+      {
+        source: "Thacker, Gilchrist, Stroup & Kimsey, 'The Impact of Stretching on Sports Injury Risk: A Systematic Review of the Literature', Medicine & Science in Sports & Exercise 36(3):371-378 (2004)",
+        claim: "Pooling the available controlled studies, stretching was not significantly associated with a reduction in total injuries (OR 0.93, 95% CI 0.78-1.11). The authors found insufficient evidence to endorse or discontinue routine stretching for injury prevention. 'Stretching prevents injury' is a belief the trials did not support.",
+        medium: "systematic review with meta-analysis",
+        confidence: "Moderate-Strong (the negative finding is consistent across later reviews)",
+        year: "2004"
+      },
+      {
+        source: "Herbert, de Noronha & Kamper, 'Stretching to prevent or reduce muscle soreness after exercise', Cochrane Database of Systematic Reviews, CD004577 (2011; updated 2022)",
+        claim: "Across 12 randomized studies, stretching before or after exercise did not produce clinically important reductions in delayed-onset muscle soreness — the pooled effects were around half a point to one point on a 100-point scale. The evidence quality was low to moderate, but the results were highly consistent.",
+        medium: "Cochrane systematic review (12 randomized studies)",
+        confidence: "Moderate (low-to-moderate quality evidence, consistent direction)",
+        year: "2011 / 2022"
+      },
+      {
+        source: "Morton, Whitehead, Brinkert & Caine, 'Resistance training vs. static stretching: effects on flexibility and strength', Journal of Strength and Conditioning Research 25(12):3391-3398 (2011)",
+        claim: "Five weeks of full-range resistance training improved hamstring, hip-flexion and hip-extension flexibility as much as static stretching did, and improved knee-extension strength more than stretching or inactivity. Range of motion can be gained by loading it, not only by holding it. A small pilot trial; the finding has since been reproduced in larger studies.",
+        medium: "randomized controlled trial (pilot)",
+        confidence: "Moderate",
+        year: "2011"
+      }
+    ],
+    verify: "Test it in ten minutes. Sit with both legs straight and mark where your fingertips reach — or measure the angle your ankle bends. Now stretch only your LEFT hamstring, three holds of 30 seconds, and immediately re-measure BOTH legs. Two things should happen: the left improves, and the right improves a little too, even though you never touched it. A local change in tissue cannot act on the untouched leg — what changed is how much stretch your nervous system will allow. Then wait half an hour and measure again: most of the gain is gone, which is what a change in sensation looks like and not what new tissue length would look like. Two more checks if you want them: hold for 60 seconds instead of 30 on another day and see whether you get more range (the trials say you will not), and test your vertical jump right after a long hold versus right after a dynamic warm-up (the long hold is the one that costs you).",
+    village: "The section's most-used practice and its most useful correction. Nearly every family already stretches; almost none has been told what it actually does. It is the entry that turns a daily habit into a habit with an honest reason — and it pairs with the foam-rolling entry to make the same point twice, from two directions: the effect is real, the popular explanation is not.",
+    quest: ["The 30-Second Question", "Measure how far your fingertips reach with both legs straight. Stretch only your LEFT hamstring — three holds of 30 seconds — then re-measure BOTH legs straight away. If the right leg improves too, the change is not in the tissue under the stretch; it is in how much stretch your nervous system will allow. Write down all six numbers (both legs, before, after, and again half an hour later) and one sentence on what you think flexibility actually is.", ["PE", "Health", "Science"], "🤸"]
+  },
+
+  {
     id: "posture-movement-science",
     icon: "🪑",
     name: "Posture Science — What Actually Holds Up",
