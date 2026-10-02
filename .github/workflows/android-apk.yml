@@ -11,6 +11,12 @@
 #
 # To get the APK: Actions -> "Android APK" -> the run -> Artifacts ->
 # village-debug-apk. Unzip, sideload app-debug.apk on the phone.
+#
+# NOTE (2026-10-02): we do NOT use android-actions/setup-android. Its default
+# package list includes `tools`, which Google removed from the SDK repository,
+# so it dies with "Failed to find package 'tools'". The ubuntu runner already
+# ships the SDK; we just accept licenses and install the exact packages the
+# project pins (compileSdk 36 / build-tools 36.0.0, from variables.gradle).
 
 name: Android APK
 
@@ -48,12 +54,20 @@ jobs:
 
       # AGP 8.x requires JDK 17+; Capacitor 8 ships AGP 8.13, so 21 is the
       # safe choice.
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '21'
 
-      - uses: android-actions/setup-android@v3
+      - name: Set up Android SDK
+        run: |
+          SDK="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-/usr/local/lib/android/sdk}}"
+          SM="$(ls -d "$SDK"/cmdline-tools/*/bin/sdkmanager 2>/dev/null | sort -V | tail -1)"
+          echo "ANDROID_HOME=$SDK"
+          echo "sdkmanager=$SM"
+          test -n "$SM" || { echo "::error::no sdkmanager found under $SDK"; exit 1; }
+          yes | "$SM" --licenses > /dev/null 2>&1 || true
+          "$SM" "platform-tools" "platforms;android-36" "build-tools;36.0.0"
 
       - name: Install dependencies
         run: npm ci
@@ -71,8 +85,9 @@ jobs:
       - name: Build debug APK
         run: |
           cd android
+          echo "sdk.dir=${ANDROID_HOME:-${ANDROID_SDK_ROOT:-/usr/local/lib/android/sdk}}" > local.properties
           chmod +x gradlew
-          ./gradlew assembleDebug --no-daemon
+          ./gradlew assembleDebug --no-daemon --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
