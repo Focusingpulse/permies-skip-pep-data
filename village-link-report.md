@@ -1,8 +1,8 @@
 # Village Link Report — 2026-10-02
 
-Checked **860** URLs: **831** OK, **22** HTTP errors, **0** redirects, **7** unreachable/timeouts.
+Checked **860** URLs: **829** OK, **22** HTTP errors, **0** redirects, **9** unreachable/timeouts.
 
-## Unreachable / timeout (7)
+## Unreachable / timeout (9)
 
 - `http://ia800306.us.archive.org/30/items/fe_The_Solar_Greenhouse_Book/The_Solar_Greenhouse_Book.pdf`  (error: URLError)
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
@@ -10,7 +10,9 @@ Checked **860** URLs: **831** OK, **22** HTTP errors, **0** redirects, **7** unr
 - `http://www.dlive.tv/mavisfarmacyThe`  (error: URLError)
 - `https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`  (error: URLError)
 - `https://mountainherbs.net/`  (error: URLError)
-- `https://www.permaculturesouthafrica.co.za/what-is-permaculture-free-course/`  (error: TimeoutError)
+- `https://web.archive.org/web/20100708230258/http:/people.csail.mit.edu/rahimi/helmet/`  (error: URLError)
+- `https://web.archive.org/web/20240101000000/https://8shields.org`  (error: URLError)
+- `https://www.permaculturesouthafrica.co.za/what-is-permaculture-free-course/`  (error: URLError)
 
 ## HTTP errors (22)
 
