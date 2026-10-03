@@ -210,7 +210,8 @@ const VILLAGE_QUESTS = [
       ["Preserve One Item","Preserve one food item by freezing, drying, fermenting, or canning.",["Science","Health"],"🫙"],
       ["Bread from Scratch","Bake bread from flour, water, yeast or starter, and salt.",["Math","Science"],"🍞"],
       ["Hay Box Cooking","Cook a meal in a hay box or insulated cooker.",["Science","Health"],"🥘"],
-      ["Make Salted Pork","Salt-cure two pounds of meat starting from fresh, using only materials that existed 200 years ago (no plastic or aluminum).",["Science","History"],"🥓"]
+      ["Make Salted Pork","Salt-cure two pounds of meat starting from fresh, using only materials that existed 200 years ago (no plastic or aluminum).",["Science","History"],"🥓"],
+      ["Fry an Egg on Cast Iron","Fry an egg in a cast iron skillet so it slides around freely — 10-second video of the sliding egg plus pics of the pan cleanup. No plastic, teflon, or aluminum touching the food. (PEP BB: food.sand.egg)",["Science","Health"],"🍳"],
     ],
     straw: [],
     wood: [],
@@ -257,7 +258,8 @@ const VILLAGE_QUESTS = [
       ["Cook for a Neighbor or Group","Prepare food for someone outside your household.",["Writing","Health"],"🍲"],
       ["Public Art","Create a piece of art meant to brighten a shared space.",["Art","Constitution"],"🎨"],
       ["Host a Workshop or Skill Share","Teach or host a simple class for others.",["Writing","Art"],"🧑‍🏫"],
-      ["Organize a Swap","Coordinate a swap of goods, seeds, or skills.",["Economics","Writing"],"🤝"]
+      ["Organize a Swap","Coordinate a swap of goods, seeds, or skills.",["Economics","Writing"],"🤝"],
+      ["Build a Community Garden","Create a community garden: 8+ labelled plots on at least half an acre, deer-proof fencing, reliable water (100 gal/day), watering cans, paths, posted rules, a tool shed, and a rinse area — documented in a permies thread. (PEP BB: community.wood.buildgarden)",["Economics","Science"],"🌻"],
     ],
     straw: [],
     wood: [],
@@ -289,7 +291,8 @@ const VILLAGE_QUESTS = [
       ["Reuse Rinse Water on a Plant Bed","Carry rinse water to a mulch basin or plant bed.",["Science","Math"],"🌱"],
       ["Mulch a Willow Basin","Add mulch around a willow or poplar feeder area.",["Science","Geography"],"🌿"],
       ["Plant a Willow or Poplar Cutting","Start a willow or poplar cutting for future greywater use.",["Science","Geography"],"🌳"],
-      ["Reuse Water From a Shower","Place a bucket in the shower to catch water (10–20% is fine, pooless showers only), then use at least three gallons to flush a toilet or water something outside.",["Science","Math"],"🚿"]
+      ["Reuse Water From a Shower","Place a bucket in the shower to catch water (10–20% is fine, pooless showers only), then use at least three gallons to flush a toilet or water something outside.",["Science","Math"],"🚿"],
+      ["Plant Five Poop Beast Trees","Plant five willow, cottonwood, or poplar trees where they get enough water — from seed, cutting, or transplant. Pics of the starts, the planting, and the finished spot. (PEP BB: greywillow.sand.fivetrees)",["Science","Geography"],"🌳"],
     ],
     straw: [],
     wood: [],
@@ -304,7 +307,8 @@ const VILLAGE_QUESTS = [
       ["Hammer and Bend a Metal Hook","Shape a simple hook from flat or round stock.",["Science","Art"],"⚒️"],
       ["File and Smooth a Metal Edge","Use a file to finish and smooth a metal part.",["Science","Math"],"🔩"],
       ["Cut Simple Stock with a Hacksaw","Cut metal safely with hand tools.",["Science","PE"],"🪚"],
-      ["Make a Small Bracket or Hanger","Create a useful bracket, hanger, or holder from metal.",["Science","Art"],"🧲"]
+      ["Make a Small Bracket or Hanger","Create a useful bracket, hanger, or holder from metal.",["Science","Art"],"🧲"],
+      ["Make a 6oz Metal Ingot","Melt and pour a metal ingot of at least 6oz (no lead) — pics of the supplies, partway through, and the finished ingot. (PEP BB: metalworking.straw.ingot)",["Science","History"],"🧱"],
     ],
     straw: [],
     wood: [],
@@ -420,7 +424,9 @@ const VILLAGE_QUESTS = [
       ["Clean Gutters Safely","Remove debris from gutters or downspouts.",["Science","PE"],"🏠"],
       ["Make an Emergency Supplies Checklist","Write a family list of emergency supplies.",["Writing","Health"],"📝"],
       ["Make a Snare","Build a wire, cable, twine, or rope snare for a specific critter and set it up as if to catch it — no actual trapping needed. Only materials that existed 200 years ago.",["Science","PE"],"🪤"],
-      ["Make an Atlatl","Carve an atlatl thrower plus a fletched arrow with replaceable tip — only materials that existed 200 years ago. (PEM BB: traditional.straw.atlatl)",["History","PE"],"🏹"]
+      ["Make an Atlatl","Carve an atlatl thrower plus a fletched arrow with replaceable tip — only materials that existed 200 years ago. (PEM BB: traditional.straw.atlatl)",["History","PE"],"🏹"],
+      ["Make a Bark Basket","Weave a basket at least 8 inches wide and 6 inches tall from large bark pieces, stitched with spruce roots or similar cordage — only materials that existed 200 years ago. (PEM BB: traditional.straw.barkbasket)",["Art","History"],"🧺"],
+      ["Weave a Fish Net","Make a woven fish net with 1-inch or smaller mesh, at least 8 square feet — only materials that existed 200 years ago. (PEM BB: traditional.straw.net)",["Art","PE"],"🕸️"]
     ],
     straw: [],
     wood: [],

@@ -6,6 +6,28 @@ const LANG = {
   "es": {
   "name": "Español",
   "ui": {
+    "Back to the quest board": "Volver al tablero de misiones",
+    "Choose at least one person first — someone has to have been there.": "Elige primero al menos a una persona — alguien tiene que haber estado allí.",
+    "Close the circle": "Cierra el círculo",
+    "Close the circle. This is what the Village will remember.": "Cierra el círculo. Esto es lo que la Aldea recordará.",
+    "Find the first quest": "Encuentra la primera misión",
+    "New tier unlocked:": "Nuevo nivel desbloqueado:",
+    "No expressions recorded yet. Add one with \"+ Add one\" on any element.": "Aún no hay expresiones registradas. Añade una con \"+ Añadir una\" en cualquier elemento.",
+    "Nothing recorded yet. The Village stays quiet until something real happens — then it keeps it.": "Nada registrado todavía. La Aldea permanece en silencio hasta que ocurre algo real — entonces lo guarda.",
+    "Nothing this week. The Village is not keeping score — it is just glad to see you.": "Nada esta semana. La Aldea no lleva la cuenta — solo se alegra de verte.",
+    "Noticed": "Notado",
+    "One line is enough. Ten seconds.": "Una línea basta. Diez segundos.",
+    "One line. What did they actually do?": "Una línea. ¿Qué hicieron en realidad?",
+    "Please choose a biome.": "Elige un bioma.",
+    "Please choose a role.": "Elige un rol.",
+    "Please enter your name.": "Introduce tu nombre.",
+    "Quest complete": "Misión completada",
+    "Skip — just record it": "Omitir — solo registrarlo",
+    "The Village remembers": "La Aldea recuerda",
+    "The family story so far": "La historia familiar hasta ahora",
+    "What did you see?": "¿Qué viste?",
+    "this week": "esta semana",
+
     "Enter the coldest temperature (°F) you have seen where you live — e.g. -15 for a cold area, 25 for a mild one.": "Introduce la temperatura más fría (°F) que hayas visto donde vives — p. ej. -15 para una zona fría, 25 para una templada.",
     "That looks warmer than our map — pick the closest zone.": "Eso parece más cálido que nuestro mapa — elige la zona más cercana.",
     "GAMCOD Mode — grow a million calories on dirt": "Modo GAMCOD — cultiva un millón de calorías en tierra",
@@ -1232,11 +1254,57 @@ const LANG = {
       "title": "Haz un átlatl",
       "desc": "Haz un átlatl (lanzador de dardos) de madera: darle forma, átlatl terminado y un lanzamiento que demuestre que funciona. (BB PEP: traditional-tools.wood.atlatl)"
     },
+    "Fry an Egg on Cast Iron": {
+      "title": "Freír un huevo en hierro fundido",
+      "desc": "Fríe un huevo en una sartén de hierro fundido hasta que se deslice libremente — vídeo de 10 segundos del huevo deslizándose más fotos de la limpieza de la sartén. Sin plástico, teflón ni aluminio en contacto con la comida. (BB de PEP: food.sand.egg)"
+    },
+    "Plant Five Poop Beast Trees": {
+      "title": "Plantar cinco árboles comederos",
+      "desc": "Planta cinco sauces, álamos o chopos donde reciban suficiente agua — por semilla, esqueje o trasplante. Fotos del material inicial, de la plantación y del sitio terminado. (BB de PEP: greywillow.sand.fivetrees)"
+    },
+    "Make a 6oz Metal Ingot": {
+      "title": "Hacer un lingote de metal de 170 g",
+      "desc": "Funde y vierte un lingote de metal de al menos 6 onzas (sin plomo) — fotos del material, del proceso y del lingote terminado. (BB de PEP: metalworking.straw.ingot)"
+    },
+    "Build a Community Garden": {
+      "title": "Crear un huerto comunitario",
+      "desc": "Crea un huerto comunitario: 8+ parcelas rotuladas en al menos media hectárea, valla a prueba de ciervos, agua fiable (380 L/día), regaderas, caminos, normas publicadas, una caseta de herramientas y zona de enjuague — documentado en un hilo de permies. (BB de PEP: community.wood.buildgarden)"
+    },
+    "Make a Bark Basket": {
+      "title": "Hacer una cesta de corteza",
+      "desc": "Teje una cesta de al menos 20 cm de ancho por 15 cm de alto con piezas grandes de corteza, cosida con raíces de abeto o cordel similar — solo materiales que existieran hace 200 años. (BB de PEM: traditional.straw.barkbasket)"
+    },
+    "Weave a Fish Net": {
+      "title": "Tejer una red de pesca",
+      "desc": "Haz una red de pesca tejida con malla de 2,5 cm o menor, de al menos 8 pies cuadrados — solo materiales que existieran hace 200 años. (BB de PEM: traditional.straw.net)"
+    },
   }
 },
   "fr": {
   "name": "Français",
   "ui": {
+    "Back to the quest board": "Retour au tableau des quêtes",
+    "Choose at least one person first — someone has to have been there.": "Choisis d'abord au moins une personne — quelqu'un doit y avoir été.",
+    "Close the circle": "Ferme le cercle",
+    "Close the circle. This is what the Village will remember.": "Ferme le cercle. C'est ce que le Village retiendra.",
+    "Find the first quest": "Trouve la première quête",
+    "New tier unlocked:": "Nouveau palier débloqué :",
+    "No expressions recorded yet. Add one with \"+ Add one\" on any element.": "Aucune expression enregistrée pour l'instant. Ajoutes-en une avec \"+ Ajouter\" sur n'importe quel élément.",
+    "Nothing recorded yet. The Village stays quiet until something real happens — then it keeps it.": "Rien d'enregistré pour l'instant. Le Village reste silencieux jusqu'à ce que quelque chose de réel se produise — alors il le garde.",
+    "Nothing this week. The Village is not keeping score — it is just glad to see you.": "Rien cette semaine. Le Village ne compte pas les points — il est simplement content de vous voir.",
+    "Noticed": "Remarqué",
+    "One line is enough. Ten seconds.": "Une ligne suffit. Dix secondes.",
+    "One line. What did they actually do?": "Une ligne. Qu'ont-ils réellement fait ?",
+    "Please choose a biome.": "Veuillez choisir un biome.",
+    "Please choose a role.": "Veuillez choisir un rôle.",
+    "Please enter your name.": "Veuillez saisir votre nom.",
+    "Quest complete": "Quête terminée",
+    "Skip — just record it": "Passer — juste l'enregistrer",
+    "The Village remembers": "Le Village se souvient",
+    "The family story so far": "L'histoire de la famille jusqu'ici",
+    "What did you see?": "Qu'as-tu vu ?",
+    "this week": "cette semaine",
+
     "Enter the coldest temperature (°F) you have seen where you live — e.g. -15 for a cold area, 25 for a mild one.": "Saisissez la température la plus froide (°F) que vous ayez vue chez vous — p. ex. -15 pour une région froide, 25 pour une région douce.",
     "That looks warmer than our map — pick the closest zone.": "Cela semble plus chaud que notre carte — choisissez la zone la plus proche.",
     "GAMCOD Mode — grow a million calories on dirt": "Mode GAMCOD — cultivez un million de calories sur terre",
@@ -2460,11 +2528,57 @@ const LANG = {
       "title": "Fabriquez un propulseur",
       "desc": "Fabriquez un propulseur (atlatl) en bois : mise en forme, propulseur terminé et un lancer qui prouve qu'il fonctionne. (BB PEP : traditional-tools.wood.atlatl)"
     },
+    "Fry an Egg on Cast Iron": {
+      "title": "Frire un œuf en fonte",
+      "desc": "Fais frire un œuf dans une poêle en fonte jusqu'à ce qu'il glisse librement — vidéo de 10 secondes de l'œuf glissant plus photos du nettoyage de la poêle. Aucun plastique, téflon ou aluminium en contact avec les aliments. (BB PEP : food.sand.egg)"
+    },
+    "Plant Five Poop Beast Trees": {
+      "title": "Planter cinq arbres mangeurs",
+      "desc": "Plante cinq saules, peupliers ou cottonwoods où ils auront assez d'eau — par graines, boutures ou transplant. Photos du départ, de la plantation et de l'endroit fini. (BB PEP : greywillow.sand.fivetrees)"
+    },
+    "Make a 6oz Metal Ingot": {
+      "title": "Fabriquer un lingot de métal de 170 g",
+      "desc": "Fais fondre et coule un lingot de métal d'au moins 6 onces (pas de plomb) — photos du matériel, de l'avancement et du lingot fini. (BB PEP : metalworking.straw.ingot)"
+    },
+    "Build a Community Garden": {
+      "title": "Créer un jardin communautaire",
+      "desc": "Crée un jardin communautaire : 8+ parcelles étiquetées sur au moins un demi-acre, clôture anti-cerfs, eau fiable (380 L/jour), arrosoirs, allées, règles affichées, un abri à outils et une zone de rinçage — documenté dans un fil permies. (BB PEP : community.wood.buildgarden)"
+    },
+    "Make a Bark Basket": {
+      "title": "Fabriquer un panier d'écorce",
+      "desc": "Tisse un panier d'au moins 20 cm de large et 15 cm de haut avec de grandes pièces d'écorce, cousu avec des racines d'épicéa ou un cordage similaire — uniquement des matériaux d'il y a 200 ans. (BB PEM : traditional.straw.barkbasket)"
+    },
+    "Weave a Fish Net": {
+      "title": "Tisser un filet de pêche",
+      "desc": "Fais un filet de pêche tissé avec des mailles de 2,5 cm ou moins, d'au moins 8 pieds carrés — uniquement des matériaux d'il y a 200 ans. (BB PEM : traditional.straw.net)"
+    },
   }
 },
   "de": {
     "name": "Deutsch",
     "ui": {
+    "Back to the quest board": "Zurück zum Quest-Brett",
+    "Choose at least one person first — someone has to have been there.": "Wähle zuerst mindestens eine Person — jemand muss dabei gewesen sein.",
+    "Close the circle": "Schließe den Kreis",
+    "Close the circle. This is what the Village will remember.": "Schließe den Kreis. Das ist es, was das Dorf in Erinnerung behalten wird.",
+    "Find the first quest": "Finde die erste Quest",
+    "New tier unlocked:": "Neue Stufe freigeschaltet:",
+    "No expressions recorded yet. Add one with \"+ Add one\" on any element.": "Noch keine Beobachtungen erfasst. Füge eine mit \"+ Hinzufügen\" bei jedem Element hinzu.",
+    "Nothing recorded yet. The Village stays quiet until something real happens — then it keeps it.": "Noch nichts erfasst. Das Dorf bleibt still, bis etwas Reales geschieht — dann behält es es.",
+    "Nothing this week. The Village is not keeping score — it is just glad to see you.": "Nichts diese Woche. Das Dorf führt keine Punktejagd — es freut sich einfach, dich zu sehen.",
+    "Noticed": "Bemerkt",
+    "One line is enough. Ten seconds.": "Eine Zeile genügt. Zehn Sekunden.",
+    "One line. What did they actually do?": "Eine Zeile. Was haben sie tatsächlich getan?",
+    "Please choose a biome.": "Bitte wähle ein Biom.",
+    "Please choose a role.": "Bitte wähle eine Rolle.",
+    "Please enter your name.": "Bitte gib deinen Namen ein.",
+    "Quest complete": "Quest abgeschlossen",
+    "Skip — just record it": "Überspringen — nur festhalten",
+    "The Village remembers": "Das Dorf erinnert sich",
+    "The family story so far": "Die Familiengeschichte bis jetzt",
+    "What did you see?": "Was hast du gesehen?",
+    "this week": "diese Woche",
+
     "Enter the coldest temperature (°F) you have seen where you live — e.g. -15 for a cold area, 25 for a mild one.": "Gib die kälteste Temperatur (°F) ein, die du bei dir zu Hause erlebt hast — z. B. -15 für eine kalte Gegend, 25 für eine milde.",
     "That looks warmer than our map — pick the closest zone.": "Das wirkt wärmer als unsere Karte — wähle die nächstgelegene Zone.",
     "GAMCOD Mode — grow a million calories on dirt": "Modo GAMCOD — cultiva un millón de calorías en tierra",
@@ -3687,6 +3801,30 @@ const LANG = {
     "Make an Atlatl": {
       "title": "Baue einen Speerwerfer",
       "desc": "Baue einen Atlatl (Speerwerfer) aus Holz: Formgebung, fertiger Atlatl und ein Wurf, der zeigt, dass er funktioniert. (PEP-BB: traditional-tools.wood.atlatl)"
+    },
+    "Fry an Egg on Cast Iron": {
+      "title": "Ein Ei in Gusseisen braten",
+      "desc": "Brate ein Ei in einer Gusseisenpfanne, bis es frei herumgleitet — 10-Sekunden-Video vom gleitenden Ei plus Fotos vom Pfannensäubern. Kein Plastik, Teflon oder Aluminium darf das Essen berühren. (PEP-BB: food.sand.egg)"
+    },
+    "Plant Five Poop Beast Trees": {
+      "title": "Fünf Fress-Bäume pflanzen",
+      "desc": "Pflanze fünf Weiden, Pappeln oder Baumwollpappeln, wo sie genug Wasser bekommen — per Samen, Steckling oder Pflanzung. Fotos vom Startmaterial, vom Pflanzen und von der fertigen Stelle. (PEP-BB: greywillow.sand.fivetrees)"
+    },
+    "Make a 6oz Metal Ingot": {
+      "title": "Ein 170-g-Metallbarren gießen",
+      "desc": "Schmelze und gieße einen Metallbarren von mindestens 6 Unzen (kein Blei) — Fotos vom Material, vom Fortschritt und vom fertigen Barren. (PEP-BB: metalworking.straw.ingot)"
+    },
+    "Build a Community Garden": {
+      "title": "Einen Gemeinschaftsgarten bauen",
+      "desc": "Schaffe einen Gemeinschaftsgarten: 8+ beschriftete Beete auf mindestens einem halben Hektar, wildsichere Umzäunung, zuverlässiges Wasser (380 L/Tag), Gießkannen, Wege, ausgehängte Regeln, einen Geräteschuppen und eine Spülfläche — dokumentiert in einem Permies-Thread. (PEP-BB: community.wood.buildgarden)"
+    },
+    "Make a Bark Basket": {
+      "title": "Ein Rindenkorb flechten",
+      "desc": "Flechte einen Korb von mindestens 20 cm Breite und 15 cm Höhe aus großen Rindenstücken, mit Fichtenwurzeln oder ähnlichem Bindfaden genäht — nur Materialien, die vor 200 Jahren existierten. (PEM-BB: traditional.straw.barkbasket)"
+    },
+    "Weave a Fish Net": {
+      "title": "Ein Fischnetz knüpfen",
+      "desc": "Mache ein geknüpftes Fischnetz mit Maschen von 2,5 cm oder kleiner, mindestens 8 Quadratfuß — nur Materialien, die vor 200 Jahren existierten. (PEM-BB: traditional.straw.net)"
     },
   }
 }
