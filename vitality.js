@@ -567,8 +567,8 @@ const MOVEMENT_SYSTEMS = [
     esName: "Ciencia de la Postura — Lo Que Realmente Se Sostiene",
     tagline: "The old 'good posture' model mostly did not survive testing. The replacement is better.",
     lineage: "The modern evidence-based movement camp: Eyal Lederman's 'The Fall of the Postural-Structural-Biomechanical Model' (Journal of Bodywork & Movement Therapies, 2011), Katy Bowman's 'Move Your DNA' (2014), and Gray Cook's Functional Movement Systems.",
-    what: "The traditional model said pain comes from bad posture and that correcting posture prevents pain. That model has largely failed to hold up: posture is only weakly related to pain, and there is no single correct posture. What does hold up is movement and position variety — the body wants to change position often, and the harm comes from staying in any one position for hours, including a 'good' one.",
-    esWhat: "El modelo tradicional decía que el dolor viene de la mala postura y que corregirla lo previene. Ese modelo no resistió las pruebas: la postura se relaciona débilmente con el dolor y no existe una postura correcta única. Lo que sí se sostiene es la variedad de movimiento y de posición.",
+    what: "The traditional model said pain comes from bad posture and that correcting posture prevents pain. That model has largely failed to hold up: posture is only weakly related to pain, and there is no single correct posture. What does hold up is movement and position variety — the body wants to change position often. Be precise about which claim is which, though. The case for breaking up sitting is strongest for metabolism (it changes blood sugar and insulin — see Movement Snacks beside this entry) and weakest for pain: the reviews that went looking for a link between sitting and back pain mostly found none. So the honest instruction is 'change position often because that is how the body is built to work,' not 'because sitting is damaging your back.'",
+    esWhat: "El modelo tradicional decía que el dolor viene de la mala postura y que corregirla lo previene. Ese modelo no resistió las pruebas: la postura se relaciona débilmente con el dolor y no existe una postura correcta única. Lo que sí se sostiene es la variedad de movimiento y de posición: el cuerpo quiere cambiar de posición a menudo. Conviene ser preciso sobre qué afirmación es cuál. El caso de interrumpir el estar sentado es más fuerte para el metabolismo (cambia el azúcar y la insulina en sangre — ver Bocados de Movimiento junto a esta entrada) y más débil para el dolor: las revisiones que buscaron un vínculo entre estar sentado y el dolor de espalda casi no encontraron ninguno. La instrucción honesta es 'cambia de posición a menudo porque así está hecho el cuerpo', no 'porque estar sentado está dañando tu espalda'.",
     practice: [
       "Change position often — the best posture is the next one. Set a rhythm, not a shape.",
       "Move every 30 minutes — stand, walk, reach overhead, squat down; break up sitting rather than perfecting it.",
@@ -578,34 +578,49 @@ const MOVEMENT_SYSTEMS = [
       "Do not chase symmetry — humans are asymmetric; the goal is capacity, not a mirror."
     ],
     reps: "Continuous. This is a habit of the whole day, not a session.",
-    evidence: "Moderate benchmark evidence",
+    evidence: "Moderate — the negative finding is strong (several systematic reviews agree that posture and occupational sitting do not predict back pain), but the positive replacement ('variety is what matters') rests more on practitioner synthesis and metabolic trials than on pain trials.",
     evClass: "moderate",
     research: [
       {
-        source: "Eyal Lederman, 'The fall of the postural-structural-biomechanical model in manual and physical therapies: exemplified by lower back pain', J Bodyw Mov Ther (2011)",
+        source: "Eyal Lederman, 'The fall of the postural-structural-biomechanical model in manual and physical therapies: exemplified by lower back pain', J Bodyw Mov Ther 15(2):131–138 (2011), doi:10.1016/j.jbmt.2011.01.011",
         claim: "The assumption that a specific posture or structure causes pain, and that correcting it resolves pain, is not supported by the evidence. Lederman argues the model should be replaced by one based on movement and load tolerance.",
         medium: "peer-reviewed review / theoretical paper",
         confidence: "Moderate–Strong",
         year: "2011"
       },
       {
+        source: "Swain CTV, Pan F, Owen PJ, Schmidt H, Belavý DL, 'No consensus on causality of spine postures or physical exposure and low back pain: a systematic review of systematic reviews', J Biomech 102:109312 (2020), doi:10.1016/j.jbiomech.2019.08.006",
+        claim: "An umbrella review of 41 systematic reviews (1990–2018) found no consensus that any spinal posture or physical exposure causes low back pain. The one point the reviews did agree on was the absence of an association between prolonged or occupational sitting and low back pain — the strongest single statement in this entry.",
+        medium: "umbrella review of systematic reviews",
+        confidence: "Moderate–Strong",
+        year: "2020"
+      },
+      {
+        source: "Roffey DM, Wai EK, Bishop P, Kwon BK, Dagenais S, 'Causal assessment of occupational sitting and low back pain: results of a systematic review', Spine J 10(3):252–261 (2010), doi:10.1016/j.spinee.2009.12.005",
+        claim: "24 studies (5 high-quality) assessed against the Bradford-Hill causality criteria: strong, consistent evidence of no association between occupational sitting and low back pain, moderate evidence against any dose–response trend, and no significant temporality. The authors conclude occupational sitting is unlikely to be an independent cause of back pain.",
+        medium: "systematic review (causal assessment)",
+        confidence: "Strong (for the absence of an association)",
+        year: "2010"
+      },
+      {
+        source: "Mahmoud NF, Hassan KA, Abdelmajeed SF, Moustafa IM, Silva AG, 'The relationship between forward head posture and neck pain: a systematic review and meta-analysis', Curr Rev Musculoskelet Med 12(4):562–577 (2019), doi:10.1007/s12178-019-09594-y",
+        claim: "15 cross-sectional studies. In adults with neck pain, forward head posture is greater than in pain-free adults (mean difference 4.84°, 95% CI 0.14–9.54) and eight studies found it correlated with pain intensity and disability — but in adolescents there is no association at all (mean difference −1.05°, 95% CI −4.23–2.12). The entry's honest complication: posture and pain do track in some adults, the direction cannot be told from cross-sectional data, and in children the link is absent.",
+        medium: "systematic review and meta-analysis (cross-sectional studies)",
+        confidence: "Moderate (age-dependent; cross-sectional, so no direction of cause)",
+        year: "2019"
+      },
+      {
         source: "Katy Bowman, 'Move Your DNA' (2014); the 'movement diet' framing",
-        claim: "Bowman reframes exercise as a small part of a larger 'movement diet' — the total load and variety across the whole day — and argues that the missing input in modern life is variety and volume, not intensity.",
+        claim: "Bowman reframes exercise as a small part of a larger 'movement diet' — the total load and variety across the whole day — and argues that the missing input in modern life is variety and volume, not intensity. This is the entry's positive claim, and it is practitioner synthesis rather than trial evidence.",
         medium: "practitioner synthesis of the research",
         confidence: "Moderate",
         year: "2014"
-      },
-      {
-        source: "Sitting-reduction research (breaking up sedentary time)",
-        claim: "Interrupting prolonged sitting with short bouts of movement produces measurable metabolic benefits independent of total exercise — the best-studied practical claim in this entry.",
-        medium: "controlled studies",
-        confidence: "Moderate–Strong",
-        year: "2010s–2020s"
       }
     ],
-    verify: "The honest version of this entry is a correction: the Village should not teach 'sit up straight.' It should teach 'change position often, build capacity through the whole range, and get on the floor every day.' That is what the evidence supports.",
-    village: "Directly changes how the Village talks about the body. It is also the most immediately actionable entry for a homeschooling family — floor time, position changes, and carrying things in varied ways are all game-able.",
-    quest: ["The Position-Variety Day", "For one day, change position every 30 minutes (stand, squat, reach, walk, floor). Count how many distinct positions you actually used. Then do it for a week and compare the count.", ["PE", "Health", "Science"], "🪑"]
+    verify: "Test the claim, not the advice — two experiments, each about a week. (1) The held-posture test: sit in your most upright, 'correct' posture without moving for 45 minutes and rate your discomfort 1–10. On another day, sit however you like but change position every ten minutes for 45 minutes and rate it again. The prediction from the evidence is that the varied sitting is the comfortable one and that the held 'correct' posture is no better than a held slouch — the position you hold matters less than the fact that you held it. (2) The posture–pain diary: for one week, each evening rate your back and neck pain 1–10, and at the same time each day have someone photograph you sitting and standing (or rate your own posture 1–10). At the end, put the two columns side by side and ask whether the days with the 'best' posture were the days with the least pain. The evidence says they will not line up: the systematic reviews of occupational sitting found no association with back pain at all. If your diary shows no relationship, you have reproduced the finding — and if it shows a strong one, write it down, because a single family is not a study but it is a real observation, and it is worth asking what else changed that week. One honest limit: the neck-posture meta-analysis did find a link in adults who already had neck pain, so 'posture never matters' is too strong a lesson — the link is absent in children and its direction is unclear in adults.",
+    village: "Directly changes how the Village talks about the body — it is the entry that retires 'sit up straight.' It is also the most immediately actionable entry for a homeschooling family: floor time, position changes, and carrying things in varied ways are all game-able. Its second job is teaching the honesty rule in miniature: the same evidence that kills the old posture advice also trims the new advice, so the family learns to read a claim all the way down.",
+    quest: ["The Position-Variety Day", "For one day, change position every 30 minutes (stand, squat, reach, walk, floor). Count how many distinct positions you actually used. Then do it for a week and compare the count.", ["PE", "Health", "Science"], "🪑"],
+    authorship: {"agent_id": "agent-b73ac550-5671-471e-b3e1-721f948ea063", "agent_name": "Tutor", "job": "vitality-engine", "lineage": "agent-b73ac550-5671-471e-b3e1-721f948ea063 -> vitality-engine -> posture-movement-science", "authored_at": "2026-10-03"}
   },
 
   {
