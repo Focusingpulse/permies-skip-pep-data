@@ -1,6 +1,13 @@
+
+## 2026-10-03 maintenance pass
+-   watchdog: translator-ats idle 495.5h; clean-chem idle 46.6h; archive-raid idle 482.0h; steiner-roots idle 480.9h; aflinks-shard-verify idle 234.9h; site-watchdog idle 0.5h; cairn-clean-tech-rd idle 96.0h; cairn-clean-tech-bench idle 48.0h; model-cost-watch idle 19.8h
+-   fixed 1 × missing space after .com
+-   master_quests.json: 1 URL fixes applied
+-   validators 5/5 passed
+
 # Village Link Report — 2026-10-03
 
-Checked **868** URLs: **848** OK, **16** HTTP errors, **0** redirects, **4** unreachable/timeouts.
+Checked **868** URLs: **845** OK, **19** HTTP errors, **0** redirects, **4** unreachable/timeouts.
 
 ## Unreachable / timeout (4)
 
@@ -9,7 +16,7 @@ Checked **868** URLs: **848** OK, **16** HTTP errors, **0** redirects, **4** unr
 - `https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`  (error: URLError)
 - `https://mountainherbs.net/`  (error: URLError)
 
-## HTTP errors (16)
+## HTTP errors (19)
 
 - [`http://www.fws.gov/whitenosesyndrome/`](http://www.fws.gov/whitenosesyndrome/)  (HTTP 403)
 - [`https://blog.lostartpress.com/2025/05/19/the-free-video-series-of-build-a-chair-from-bullst/`](https://blog.lostartpress.com/2025/05/19/the-free-video-series-of-build-a-chair-from-bullst/)  (HTTP 403)
@@ -20,10 +27,13 @@ Checked **868** URLs: **848** OK, **16** HTTP errors, **0** redirects, **4** unr
 - [`https://handtoolwoodworking.com/green-woodworking-videos/`](https://handtoolwoodworking.com/green-woodworking-videos/)  (HTTP 403)
 - [`https://permacultureapprentice.com`](https://permacultureapprentice.com)  (HTTP 403)
 - [`https://skipthejourney.wordpress.com/`](https://skipthejourney.wordpress.com/)  (HTTP 404)
+- [`https://woodworkingformeremortals.com/`](https://woodworkingformeremortals.com/)  (HTTP 405)
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
 - [`https://www.allaboutbirds.org/`](https://www.allaboutbirds.org/)  (HTTP 403)
+- [`https://www.amazon.com/Jill-b/e/B00OJKS5G8?ref=sr_ntt_srch_lnk_3&qid=1578855737&sr=8-3`](https://www.amazon.com/Jill-b/e/B00OJKS5G8?ref=sr_ntt_srch_lnk_3&qid=1578855737&sr=8-3)  (HTTP 405)
 - [`https://www.blackdragonforge.com/products/smithing101`](https://www.blackdragonforge.com/products/smithing101)  (HTTP 429)
 - [`https://www.elevify.com/en/courses/food-gastronomy-and-hospitality/food/food-preserving-course-bac2e`](https://www.elevify.com/en/courses/food-gastronomy-and-hospitality/food/food-preserving-course-bac2e)  (HTTP 403)
+- [`https://www.instagram.com/wizard.mountainman/`](https://www.instagram.com/wizard.mountainman/)  (HTTP 429)
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
 - [`https://www.mantakchia.com`](https://www.mantakchia.com)  (HTTP 403)
 - [`https://www.patreon.com/slowfilms`](https://www.patreon.com/slowfilms)  (HTTP 403)
