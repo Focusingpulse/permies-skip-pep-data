@@ -19,6 +19,7 @@
 <script src="cognitive-defense.js"></script>
 <script src="quest_cards.js"></script>
 <script src="lab.js"></script>
+<script src="village-track.js"></script>
 <style>
 :root {
   --bg-dark: #1a1a2e;
@@ -4506,6 +4507,11 @@ function renderRosterPanel(qId, icon) {
 function toggleRoster(qId) {
   let p = document.getElementById('roster_' + qId);
   if (p) p.style.display = p.style.display === 'block' ? 'none' : 'block';
+  try {
+    if (p && p.style.display === 'block' && window.VillageTrack) {
+      VillageTrack.once('open_' + qId, 'quest_panel_open', { qid: qId });
+    }
+  } catch (e) {}
 }
 
 function renderResourcesPanel(qId, aspectName) {
@@ -4659,10 +4665,24 @@ function finalizeQuest(qId, icon) {
       warn.textContent = t('Choose at least one person first — someone has to have been there.');
       panel.style.display = 'block';
     }
+    try {
+      if (window.VillageTrack) VillageTrack.event('quest_blocked', { qid: qId, reason: 'no_person' });
+    } catch (e) {}
     return;
   }
 
   completedQuests.push(qId);
+  try {
+    if (window.VillageTrack) {
+      VillageTrack.event('quest_complete', {
+        qid: qId,
+        guild: questGuildFromId(qId),
+        tier: tierFromQuestId(qId),
+        roles: sel.trackers.length + sel.witnesses.length + sel.hearth.length + sel.mentor.length
+      });
+      window.__villageTier = tierFromQuestId(qId);
+    }
+  } catch (e) {}
 
   // ---- The record ----
   // Written the moment the quest is marked done, so the fact that it happened is
@@ -4893,7 +4913,11 @@ function postToPermies(qId, questTitle) {
   });
 
   let dateStr = new Date().toLocaleDateString();
-  let postText = `PEP Badge Bit Completed\n\nAspect: ${aspectName}\nTier: ${tier}\nTask: ${questTitle}\nDate: ${dateStr}\n\nBefore, During, and After photos attached per Otis Protocol.`;
+  let postText = `PEP Badge Bit Completed\n\nAspect: ${aspectName}\nTier: ${tier}\nTask: ${questTitle}\nDate: ${dateStr}\n\nBefore, During, and After photos attached per Otis Protocol.\n\nFound this through The Creative Village, a free roll-making game families play together: https://focusingpulse.github.io/permies-skip-pep-data/`;
+
+  try {
+    if (window.VillageTrack) VillageTrack.event('share_click', { qid: qId, tier: tier });
+  } catch (e) {}
 
   // Open PEP forum in new tab
   window.open('https://permies.com/f/178/', '_blank');
@@ -5316,6 +5340,21 @@ if (lang !== 'en') {
   try { document.title = t('The Creative Village — A Roll Making Game (RMG)'); } catch(e) {}
   translateStatic();
 }
+
+// ---- The instrument: one session_start per load. Silent unless configured. ----
+try {
+  if (window.VillageTrack) {
+    var _tier = 'new';
+    try {
+      var _p = getTierProgress();
+      if (_p.iron && _p.iron.done) _tier = 'iron';
+      else if (_p.wood && _p.wood.done) _tier = 'wood';
+      else if (_p.straw && _p.straw.done) _tier = 'straw';
+      else if (_p.sand && _p.sand.done) _tier = 'sand';
+    } catch (e) {}
+    VillageTrack.once('session_start', 'session_start', { lang: lang, tier: _tier });
+  }
+} catch (e) {}
 </script>
 
 <!-- The Familiar: the Village's presence at the edge of every screen -->
