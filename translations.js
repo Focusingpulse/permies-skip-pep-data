@@ -806,6 +806,86 @@ const LANG = {
       "title": "Calentar agua con una estufa cohete",
       "desc": "Usa un sistema cohete para calentar agua para una tarea."
     },
+    "Start and Operate a J-Tube Rocket Mass Heater": {
+      "title": "Encender y operar un calefactor de masa cohete de tubo J",
+      "desc": "Enciende un calefactor de masa cohete de tubo J y mantenlo funcionando una hora completa. (BB de PEP: rocket.sand.rmhjtube)"
+    },
+    "Start and Operate a Batch Box Rocket Mass Heater": {
+      "title": "Encender y operar un calefactor de masa cohete de caja por lotes",
+      "desc": "Enciende un calefactor de masa cohete de caja por lotes y mantenlo funcionando una hora completa. (BB de PEP: rocket.sand.rmhbatchbox)"
+    },
+    "Start a Rocket Oven and Bake Something": {
+      "title": "Encender un horno cohete y hornear algo",
+      "desc": "Enciende un horno cohete y hornea pan, pizza o algo similar. (BB de PEP: rocket.sand.oven)"
+    },
+    "Start a Rocket Cooktop and Cook Something": {
+      "title": "Encender una placa cohete y cocinar algo",
+      "desc": "Enciende una placa cohete y cocina una comida real en ella. (BB de PEP: rocket.sand.cooktop)"
+    },
+    "Start a Rocket Water Heater Above 140°F": {
+      "title": "Encender un calentador de agua cohete por encima de 60 °C",
+      "desc": "Enciende un calentador de agua cohete y logra que el agua supere los 140 °F (60 °C). (BB de PEP: rocket.sand.waterheater)"
+    },
+    "Boil a Gallon of Water on a Rocket J-Tube": {
+      "title": "Hervir un galón de agua en un tubo J cohete",
+      "desc": "Usa una estufa cohete de tubo J para llevar un galón completo de agua a ebullición. (BB de PEP: rocket.sand.boil)"
+    },
+    "Do the Annual Ash Cleanout of a Rocket Mass Heater": {
+      "title": "Hacer la limpieza anual de cenizas de un calefactor de masa cohete",
+      "desc": "Abre la trampa de limpieza y retira las cenizas acumuladas de un calefactor de masa cohete. (BB de PEP: rocket.sand.ashcleanout)"
+    },
+    "Spread Some Ash on a Garden Spot": {
+      "title": "Esparcir un poco de ceniza en un punto del jardín",
+      "desc": "Esparce una pizca de ceniza de madera en una cama de jardín — solo una pizca, no un montón. (BB de PEP: rocket.sand.ashgarden)"
+    },
+    "Heat a Space with a Rocket Mass Heater for One Week": {
+      "title": "Calentar un espacio con un calefactor de masa cohete durante una semana",
+      "desc": "Mantén una habitación o edificio cálido con un calefactor de masa cohete durante siete días. (BB de PEP: rocket.straw.heatweek)"
+    },
+    "Build a J-Tube Style Rocket Mass Heater": {
+      "title": "Construir un calefactor de masa cohete de tubo J",
+      "desc": "Construye un calefactor de masa cohete de tubo J completo desde cero. (BB de PEP: rocket.straw.build)"
+    },
+    "Heat a Space with a Rocket Mass Heater for One Month": {
+      "title": "Calentar un espacio con un calefactor de masa cohete durante un mes",
+      "desc": "Mantén un espacio cálido con un calefactor de masa cohete durante un mes completo. (BB de PEP: rocket.wood.heatmonth)"
+    },
+    "Build a Second J-Tube Style Rocket Mass Heater": {
+      "title": "Construir un segundo calefactor de masa cohete de tubo J",
+      "desc": "Construye otro calefactor de masa cohete de tubo J, distinto del primero. (BB de PEP: rocket.wood.jtubermh)"
+    },
+    "Build a J-Tube Style Rocket Oven": {
+      "title": "Construir un horno cohete de tubo J",
+      "desc": "Construye un horno cohete funcional desde cero. (BB de PEP: rocket.wood.oven)"
+    },
+    "Build a J-Tube Style Rocket Cook Top": {
+      "title": "Construir una placa cohete de tubo J",
+      "desc": "Construye una placa de cocción cohete de tubo J para cocinar. (BB de PEP: rocket.wood.cooktop)"
+    },
+    "Build a J-Tube Style Unpressurized Rocket Hot Water Heater": {
+      "title": "Construir un calentador de agua cohete de tubo J sin presión",
+      "desc": "Construye un calentador de agua cohete sin presión — nunca presurices estos sistemas. (BB de PEP: rocket.wood.waterheater)"
+    },
+    "Heat a Space with a Rocket Mass Heater for a Full Winter": {
+      "title": "Calentar un espacio con un calefactor de masa cohete durante todo el invierno",
+      "desc": "Calienta un espacio con un calefactor de masa cohete durante un invierno entero. (BB de PEP: rocket.iron.heatwinter)"
+    },
+    "Build a Rocket Hot Tub": {
+      "title": "Construir una bañera caliente a cohete",
+      "desc": "Construye una bañera de hidromasaje calentada por cohete. (BB de PEP: rocket.iron.hottub)"
+    },
+    "Build a Rocket Sauna": {
+      "title": "Construir una sauna cohete",
+      "desc": "Construye una sauna calentada por cohete. (BB de PEP: rocket.iron.sauna)"
+    },
+    "Build a Rocket Forge": {
+      "title": "Construir una forja cohete",
+      "desc": "Construye una forja de cohete para calentar metal. (BB de PEP: rocket.iron.forge)"
+    },
+    "Build an Outdoor Rocket Cooker and Smoker": {
+      "title": "Construir una cocina cohete exterior con ahumador",
+      "desc": "Construye una cocina cohete exterior con anillo de fuego para ahumar, como alternativa a una fogata. (BB de PEP: rocket.iron.outdoorcooker)"
+    },
     "Cook Grain 4 Ways": {
       "title": "Cocinar un grano de 4 maneras",
       "desc": "Prepara un grano de cuatro maneras diferentes."
@@ -2080,6 +2160,87 @@ const LANG = {
       "title": "Chauffer de l'eau avec un poêle rocket",
       "desc": "Utilisez un système rocket pour chauffer de l'eau pour une tâche."
     },
+
+    "Start and Operate a J-Tube Rocket Mass Heater": {
+      "title": "Démarrer et faire fonctionner un poêle de masse rocket à tube J",
+      "desc": "Démarrez un poêle de masse rocket à tube J et faites-le tourner une heure pleine. (BB PEP : rocket.sand.rmhjtube)"
+    },
+    "Start and Operate a Batch Box Rocket Mass Heater": {
+      "title": "Démarrer et faire fonctionner un poêle de masse rocket à boîte de charge",
+      "desc": "Démarrez un poêle de masse rocket à boîte de charge et faites-le tourner une heure pleine. (BB PEP : rocket.sand.rmhbatchbox)"
+    },
+    "Start a Rocket Oven and Bake Something": {
+      "title": "Démarrer un four rocket et cuire quelque chose",
+      "desc": "Allumez un four rocket et cuisez-y du pain, une pizza ou autre. (BB PEP : rocket.sand.oven)"
+    },
+    "Start a Rocket Cooktop and Cook Something": {
+      "title": "Démarrer une plaque rocket et cuisiner quelque chose",
+      "desc": "Allumez une plaque rocket et cuisinez un vrai repas dessus. (BB PEP : rocket.sand.cooktop)"
+    },
+    "Start a Rocket Water Heater Above 140°F": {
+      "title": "Démarrer un chauffe-eau rocket au-dessus de 60 °C",
+      "desc": "Démarrez un chauffe-eau rocket et amenez l'eau au-dessus de 140 °F (60 °C). (BB PEP : rocket.sand.waterheater)"
+    },
+    "Boil a Gallon of Water on a Rocket J-Tube": {
+      "title": "Faire bouillir un gallon d'eau sur un tube J rocket",
+      "desc": "Utilisez un poêle rocket à tube J pour porter un gallon d'eau à ébullition. (BB PEP : rocket.sand.boil)"
+    },
+    "Do the Annual Ash Cleanout of a Rocket Mass Heater": {
+      "title": "Faire le nettoyage annuel des cendres d'un poêle de masse rocket",
+      "desc": "Ouvrez le registre de nettoyage et retirez les cendres accumulées d'un poêle de masse rocket. (BB PEP : rocket.sand.ashcleanout)"
+    },
+    "Spread Some Ash on a Garden Spot": {
+      "title": "Épandre un peu de cendre sur une zone du jardin",
+      "desc": "Épandez une fine poussière de cendre de bois sur une planche de jardin — juste une pincée, pas une brouette. (BB PEP : rocket.sand.ashgarden)"
+    },
+    "Heat a Space with a Rocket Mass Heater for One Week": {
+      "title": "Chauffer un espace avec un poêle de masse rocket pendant une semaine",
+      "desc": "Gardez une pièce ou un bâtiment au chaud avec un poêle de masse rocket pendant sept jours. (BB PEP : rocket.straw.heatweek)"
+    },
+    "Build a J-Tube Style Rocket Mass Heater": {
+      "title": "Construire un poêle de masse rocket à tube J",
+      "desc": "Construisez un poêle de masse rocket à tube J complet, de zéro. (BB PEP : rocket.straw.build)"
+    },
+    "Heat a Space with a Rocket Mass Heater for One Month": {
+      "title": "Chauffer un espace avec un poêle de masse rocket pendant un mois",
+      "desc": "Gardez un espace au chaud avec un poêle de masse rocket pendant un mois entier. (BB PEP : rocket.wood.heatmonth)"
+    },
+    "Build a Second J-Tube Style Rocket Mass Heater": {
+      "title": "Construire un second poêle de masse rocket à tube J",
+      "desc": "Construisez un autre poêle de masse rocket à tube J, différent du premier. (BB PEP : rocket.wood.jtubermh)"
+    },
+    "Build a J-Tube Style Rocket Oven": {
+      "title": "Construire un four rocket à tube J",
+      "desc": "Construisez un four rocket fonctionnel de zéro. (BB PEP : rocket.wood.oven)"
+    },
+    "Build a J-Tube Style Rocket Cook Top": {
+      "title": "Construire une plaque rocket à tube J",
+      "desc": "Construisez une plaque de cuisson rocket à tube J. (BB PEP : rocket.wood.cooktop)"
+    },
+    "Build a J-Tube Style Unpressurized Rocket Hot Water Heater": {
+      "title": "Construire un chauffe-eau rocket à tube J non pressurisé",
+      "desc": "Construisez un chauffe-eau rocket non pressurisé — ne jamais mettre ces systèmes sous pression. (BB PEP : rocket.wood.waterheater)"
+    },
+    "Heat a Space with a Rocket Mass Heater for a Full Winter": {
+      "title": "Chauffer un espace avec un poêle de masse rocket tout l'hiver",
+      "desc": "Chauffez un espace avec un poêle de masse rocket pendant tout un hiver. (BB PEP : rocket.iron.heatwinter)"
+    },
+    "Build a Rocket Hot Tub": {
+      "title": "Construire un bain à remous rocket",
+      "desc": "Construisez un bain à remous chauffé par rocket. (BB PEP : rocket.iron.hottub)"
+    },
+    "Build a Rocket Sauna": {
+      "title": "Construire un sauna rocket",
+      "desc": "Construisez un sauna chauffé par rocket. (BB PEP : rocket.iron.sauna)"
+    },
+    "Build a Rocket Forge": {
+      "title": "Construire une forge rocket",
+      "desc": "Construisez une forge rocket pour chauffer le métal. (BB PEP : rocket.iron.forge)"
+    },
+    "Build an Outdoor Rocket Cooker and Smoker": {
+      "title": "Construire une cuisinière rocket extérieure avec fumoir",
+      "desc": "Construisez une cuisinière rocket extérieure avec anneau de feu pour fumer, en alternative au feu de camp. (BB PEP : rocket.iron.outdoorcooker)"
+    },
     "Cook Grain 4 Ways": {
       "title": "Cuisiner une céréale de 4 façons",
       "desc": "Préparez une même céréale de quatre manières différentes."
@@ -3353,6 +3514,87 @@ const LANG = {
     "Heat Water with a Rocket Heater": {
       "title": "Wasser mit einem Raketenofen erhitzen",
       "desc": "Nutze ein Raketensystem, um Wasser für eine Aufgabe zu erhitzen."
+    },
+
+    "Start and Operate a J-Tube Rocket Mass Heater": {
+      "title": "Einen J-Rohr-Raketen-Massivofen anfeuern und betreiben",
+      "desc": "Feuere einen J-Rohr-Raketen-Massivofen an und halte ihn eine volle Stunde in Betrieb. (PEP-BB: rocket.sand.rmhjtube)"
+    },
+    "Start and Operate a Batch Box Rocket Mass Heater": {
+      "title": "Einen Chargenbox-Raketen-Massivofen anfeuern und betreiben",
+      "desc": "Feuere einen Chargenbox-Raketen-Massivofen an und halte ihn eine volle Stunde in Betrieb. (PEP-BB: rocket.sand.rmhbatchbox)"
+    },
+    "Start a Rocket Oven and Bake Something": {
+      "title": "Einen Raketenofen anfeuern und etwas backen",
+      "desc": "Heize einen Raketenofen an und backe Brot, Pizza oder Ähnliches darin. (PEP-BB: rocket.sand.oven)"
+    },
+    "Start a Rocket Cooktop and Cook Something": {
+      "title": "Eine Raketen-Kochplatte anfeuern und etwas kochen",
+      "desc": "Zünde eine Raketen-Kochplatte an und koche darauf eine echte Mahlzeit. (PEP-BB: rocket.sand.cooktop)"
+    },
+    "Start a Rocket Water Heater Above 140°F": {
+      "title": "Einen Raketen-Wassererhitzer über 60 °C starten",
+      "desc": "Starte einen Raketen-Wassererhitzer und bringe das Wasser über 140 °F (60 °C). (PEP-BB: rocket.sand.waterheater)"
+    },
+    "Boil a Gallon of Water on a Rocket J-Tube": {
+      "title": "Eine Gallone Wasser auf einem Raketen-J-Rohr kochen",
+      "desc": "Nutze einen Raketen-J-Rohrofen, um eine ganze Gallone Wasser zum Kochen zu bringen. (PEP-BB: rocket.sand.boil)"
+    },
+    "Do the Annual Ash Cleanout of a Rocket Mass Heater": {
+      "title": "Die jährliche Aschereinigung eines Raketen-Massivofens machen",
+      "desc": "Öffne die Reinigungsklappe und entferne die gesammelte Asche aus einem Raketen-Massivofen. (PEP-BB: rocket.sand.ashcleanout)"
+    },
+    "Spread Some Ash on a Garden Spot": {
+      "title": "Etwas Asche im Garten verteilen",
+      "desc": "Verteile eine hauchdünne Schicht Holzasche auf einem Gartenbeet — nur ein Stäubchen, kein Haufen. (PEP-BB: rocket.sand.ashgarden)"
+    },
+    "Heat a Space with a Rocket Mass Heater for One Week": {
+      "title": "Einen Raum eine Woche lang mit einem Raketen-Massivofen heizen",
+      "desc": "Halte einen Raum oder ein Gebäude sieben Tage lang mit einem Raketen-Massivofen warm. (PEP-BB: rocket.straw.heatweek)"
+    },
+    "Build a J-Tube Style Rocket Mass Heater": {
+      "title": "Einen Raketen-Massivofen im J-Rohr-Stil bauen",
+      "desc": "Baue einen kompletten Raketen-Massivofen im J-Rohr-Stil von Grund auf. (PEP-BB: rocket.straw.build)"
+    },
+    "Heat a Space with a Rocket Mass Heater for One Month": {
+      "title": "Einen Raum einen Monat lang mit einem Raketen-Massivofen heizen",
+      "desc": "Halte einen Raum einen ganzen Monat lang mit einem Raketen-Massivofen warm. (PEP-BB: rocket.wood.heatmonth)"
+    },
+    "Build a Second J-Tube Style Rocket Mass Heater": {
+      "title": "Einen zweiten Raketen-Massivofen im J-Rohr-Stil bauen",
+      "desc": "Baue einen weiteren Raketen-Massivofen im J-Rohr-Stil, anders als den ersten. (PEP-BB: rocket.wood.jtubermh)"
+    },
+    "Build a J-Tube Style Rocket Oven": {
+      "title": "Einen Raketenofen im J-Rohr-Stil bauen",
+      "desc": "Baue einen funktionierenden Raketenofen von Grund auf. (PEP-BB: rocket.wood.oven)"
+    },
+    "Build a J-Tube Style Rocket Cook Top": {
+      "title": "Eine Raketen-Kochplatte im J-Rohr-Stil bauen",
+      "desc": "Baue eine Raketen-Kochplatte im J-Rohr-Stil zum Kochen. (PEP-BB: rocket.wood.cooktop)"
+    },
+    "Build a J-Tube Style Unpressurized Rocket Hot Water Heater": {
+      "title": "Einen drucklosen Raketen-Warmwassererhitzer im J-Rohr-Stil bauen",
+      "desc": "Baue einen drucklosen Raketen-Warmwassererhitzer — diese Systeme niemals unter Druck setzen. (PEP-BB: rocket.wood.waterheater)"
+    },
+    "Heat a Space with a Rocket Mass Heater for a Full Winter": {
+      "title": "Einen Raum einen ganzen Winter mit einem Raketen-Massivofen heizen",
+      "desc": "Heize einen Raum einen ganzen Winter lang mit einem Raketen-Massivofen. (PEP-BB: rocket.iron.heatwinter)"
+    },
+    "Build a Rocket Hot Tub": {
+      "title": "Ein Raketen-Hotpool bauen",
+      "desc": "Baue ein raketenbeheiztes Whirlpool-Bad. (PEP-BB: rocket.iron.hottub)"
+    },
+    "Build a Rocket Sauna": {
+      "title": "Eine Raketen-Sauna bauen",
+      "desc": "Baue eine raketenbeheizte Sauna. (PEP-BB: rocket.iron.sauna)"
+    },
+    "Build a Rocket Forge": {
+      "title": "Eine Raketen-Schmiede bauen",
+      "desc": "Baue eine Raketen-Schmiede zum Erhitzen von Metall. (PEP-BB: rocket.iron.forge)"
+    },
+    "Build an Outdoor Rocket Cooker and Smoker": {
+      "title": "Einen Außen-Raketenkocher mit Räucherofen bauen",
+      "desc": "Baue einen Außen-Raketenkocher mit Räucherring als Alternative zum Lagerfeuer. (PEP-BB: rocket.iron.outdoorcooker)"
     },
     "Cook Grain 4 Ways": {
       "title": "Ein Getreide auf 4 Arten kochen",

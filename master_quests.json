@@ -3191,7 +3191,7 @@
     "title": "PEP Badge: Earthworks",
     "framework": "PEP",
     "url": "https://permies.com/wiki/pep-badge-earthworks",
-    "total_tasks": 66,
+    "total_tasks": 101,
     "tasks": [
       {
         "tier": "General",
@@ -3424,6 +3424,178 @@
       {
         "tier": "General",
         "text": "Garden Master Course (HD Streaming) + Garden Master Guide + Webinars + Movies - Bundle"
+      },
+      {
+        "tier": "Sand",
+        "text": "small dry stack retaining wall"
+      },
+      {
+        "tier": "Sand",
+        "text": "three scoops with an excavator"
+      },
+      {
+        "tier": "Sand",
+        "text": "move dirt/soil with the loader on the tractor"
+      },
+      {
+        "tier": "Sand",
+        "text": "trail maintenance for 200 feet of trail"
+      },
+      {
+        "tier": "Sand",
+        "text": "eliminate a road pothole/puddle"
+      },
+      {
+        "tier": "Sand",
+        "text": "add a small, simple trail to a berm"
+      },
+      {
+        "tier": "Sand",
+        "text": "improve a berm"
+      },
+      {
+        "tier": "Sand",
+        "text": "seal a tiny pond"
+      },
+      {
+        "tier": "Straw",
+        "text": "make 100 feet of proper road with a bulldozer - must have a crown or other form of drainage and side ditches where appropriate"
+      },
+      {
+        "tier": "Straw",
+        "text": "dry stack retaining wall - at least 4 feet tall and 6 feet long"
+      },
+      {
+        "tier": "Straw",
+        "text": "five loads with a dump trailer"
+      },
+      {
+        "tier": "Straw",
+        "text": "build a tall, narrow berm - at least 15 feet tall and 20 feet long, 9 feet wide or less"
+      },
+      {
+        "tier": "Straw",
+        "text": "build a small, shallow pond that holds water without a liner - about 20 feet in diameter, 4 feet deep with proper dam and spillway"
+      },
+      {
+        "tier": "Straw",
+        "text": "trail maintenance for 1000 feet of trail"
+      },
+      {
+        "tier": "Straw",
+        "text": "add simple trails to berms"
+      },
+      {
+        "tier": "Straw",
+        "text": "add a 50 foot trail to relatively flat rocky ground"
+      },
+      {
+        "tier": "Straw",
+        "text": "add a 50 foot trail to steep, rocky ground"
+      },
+      {
+        "tier": "Straw",
+        "text": "100 feet of road maintenance - eliminating potholes, ruts and washboards, restoring crown and improving ditches and drain points"
+      },
+      {
+        "tier": "Wood",
+        "text": "dry stack steps - at least five steps that are 2 feet wide"
+      },
+      {
+        "tier": "Wood",
+        "text": "dry stack retaining walls - at least four different walls that are at least 48 square feet each"
+      },
+      {
+        "tier": "Wood",
+        "text": "dry stack wall - at least 4 feet high and 15 feet long - add a 2 foot moon gate and get a twofer with the community badge"
+      },
+      {
+        "tier": "Wood",
+        "text": "Holzer-style terrace - at least 120 feet long by 12 feet wide"
+      },
+      {
+        "tier": "Wood",
+        "text": "build a full size pond that holds water without a liner (sealed bowl style) - 1/4 acre, at least 10 feet deep and the dam is no taller than 8 feet"
+      },
+      {
+        "tier": "Wood",
+        "text": "create a full size berm - at least 15 feet tall and 100 feet long and no more than 27 feet wide - 6 foot wide paths about halfway up on each side"
+      },
+      {
+        "tier": "Wood",
+        "text": "parking lot - facilitate parking for at least 3 big pickup trucks with room to turn around"
+      },
+      {
+        "tier": "Wood",
+        "text": "create 3 tent pads"
+      },
+      {
+        "tier": "Wood",
+        "text": "ditches to move water - sealed without a liner and at least 200 feet"
+      },
+      {
+        "tier": "Wood",
+        "text": "earthworks for preparing to build a structure"
+      },
+      {
+        "tier": "Wood",
+        "text": "make 600 feet of proper road"
+      },
+      {
+        "tier": "Wood",
+        "text": "add a 100 foot trail to relatively flat rocky ground"
+      },
+      {
+        "tier": "Wood",
+        "text": "add a 100 foot trail to steep, rocky ground"
+      },
+      {
+        "tier": "Wood",
+        "text": "600 feet of road maintenance"
+      },
+      {
+        "tier": "Iron",
+        "text": "Dry stack sun scoop - 7 feet tall and 10 foot diameter"
+      },
+      {
+        "tier": "Iron",
+        "text": "a holzer spring terrace"
+      },
+      {
+        "tier": "Iron",
+        "text": "another 200 feet of ditches to move water"
+      },
+      {
+        "tier": "Iron",
+        "text": "build a second full size pond (sealed bowl style)"
+      },
+      {
+        "tier": "Iron",
+        "text": "dry stack steps - at least ten steps that are at least 4 feet wide"
+      },
+      {
+        "tier": "Iron",
+        "text": "Season extender rocket mass heater - at least 8 feet tall and 30 feet long with a stratification chamber"
+      },
+      {
+        "tier": "Iron",
+        "text": "earthworks for preparing to build a second structure"
+      },
+      {
+        "tier": "Iron",
+        "text": "3 passive garden heaters - 40 foot deep 6 inch hole in the ground with steel casing - 4 foot tall steel cap with glass on south side - black anodized 3/4 inch tube exposed to glass and reaching bottom of hole"
+      },
+      {
+        "tier": "Iron",
+        "text": "Garden ATI - reflecting pond (at least 400 square feet) - double winter heat capture using wofati techniques - flat wall, 7 feet tall, 15 feet wide"
+      },
+      {
+        "tier": "Iron",
+        "text": "large natural swimming pool with a level spot next to it - swimming area is at least 400 square feet and 8 feet deep - water cleaning area is at least 400 square feet, fully planted"
+      },
+      {
+        "tier": "Iron",
+        "text": "Build a full size pond that is based on a dam reaching bedrock, rather than a sealed bowl"
       }
     ]
   },
@@ -4207,7 +4379,7 @@
     "title": "PEP Badge: Rocket",
     "framework": "PEP",
     "url": "https://permies.com/wiki/pep-badge-rocket",
-    "total_tasks": 64,
+    "total_tasks": 94,
     "tasks": [
       {
         "tier": "General",
@@ -4464,6 +4636,126 @@
       {
         "tier": "Sand",
         "text": "Heating Greenhouses using Rocket Mass Heaters with Uncle Mud and Paul Wheaton"
+      },
+      {
+        "tier": "Sand",
+        "text": "start and operate a j-tube rocket mass heater for 1 hour"
+      },
+      {
+        "tier": "Sand",
+        "text": "start and operate a batch box rocket mass heater for 1 hour"
+      },
+      {
+        "tier": "Sand",
+        "text": "start a rocket oven and bake something"
+      },
+      {
+        "tier": "Sand",
+        "text": "start a rocket cooktop and cook something"
+      },
+      {
+        "tier": "Sand",
+        "text": "start a rocket water heater and get the water temperature over 140"
+      },
+      {
+        "tier": "Sand",
+        "text": "use a rocket j-tube to boil a gallon of water"
+      },
+      {
+        "tier": "Sand",
+        "text": "do the annual ash cleanout of a rocket mass heater"
+      },
+      {
+        "tier": "Sand",
+        "text": "spread some ash on a garden spot (just a dusting)"
+      },
+      {
+        "tier": "Sand",
+        "text": "build a dakota stove and cook some food"
+      },
+      {
+        "tier": "Straw",
+        "text": "heat a space with a rocket mass heater for one week"
+      },
+      {
+        "tier": "Straw",
+        "text": "build a j-tube style rocket mass heater"
+      },
+      {
+        "tier": "Wood",
+        "text": "heat a space with a rocket mass heater for one month"
+      },
+      {
+        "tier": "Wood",
+        "text": "build an 8 inch j-tube rocket engine"
+      },
+      {
+        "tier": "Wood",
+        "text": "build a second j-tube style rocket mass heater"
+      },
+      {
+        "tier": "Wood",
+        "text": "build a j-tube style rocket oven"
+      },
+      {
+        "tier": "Wood",
+        "text": "build a j-tube style unpressurized rocket hot water heater"
+      },
+      {
+        "tier": "Wood",
+        "text": "build a j-tube style rocket cook top"
+      },
+      {
+        "tier": "Wood",
+        "text": "build a j-tube style season extender in a hugelkultur"
+      },
+      {
+        "tier": "Iron",
+        "text": "heat a space with a rocket mass heater for a full winter"
+      },
+      {
+        "tier": "Iron",
+        "text": "rocket hot tub"
+      },
+      {
+        "tier": "Iron",
+        "text": "rocket sauna"
+      },
+      {
+        "tier": "Iron",
+        "text": "shop style rocket heater"
+      },
+      {
+        "tier": "Iron",
+        "text": "rocket forge"
+      },
+      {
+        "tier": "Iron",
+        "text": "rocket glass recycler"
+      },
+      {
+        "tier": "Iron",
+        "text": "outdoor rocket cooker, smoker"
+      },
+      {
+        "tier": "Iron",
+        "text": "ring-of-fire alternative to a camp fire"
+      },
+      {
+        "tier": "Iron",
+        "text": "outdoor classroom with butt warmer"
+      },
+      {
+        "tier": "Iron",
+        "text": "experiments in heating a shop very, very fast"
+      },
+      {
+        "tier": "Iron",
+        "text": "experiments in heating a home with extremely little wood"
+      },
+      {
+        "tier": "Iron",
+        "text": "outdoor kitchen / outdoor canning kitchen"
       }
     ]
   },
@@ -43551,7 +43843,7 @@
     "title": "PEP Badge: Metal Working",
     "framework": "PEP",
     "url": "https://permies.com/wiki/108547/PEP-Badge-Metal-Working",
-    "total_tasks": 73,
+    "total_tasks": 104,
     "tasks": [
       {
         "tier": "General",
@@ -43844,6 +44136,130 @@
       {
         "tier": "Sand",
         "text": "October Rocket Mass Heater days! Wheaton Labs October 11-17"
+      },
+      {
+        "tier": "Sand",
+        "text": "build a kindling cracker - 4.5 points"
+      },
+      {
+        "tier": "Sand",
+        "text": "poker - 1/2 point"
+      },
+      {
+        "tier": "Sand",
+        "text": "tongs - 1/2 point"
+      },
+      {
+        "tier": "Sand",
+        "text": "rmh scoop - 1/2 point"
+      },
+      {
+        "tier": "Sand",
+        "text": "metal rack to hold a poker, a set of tongs and an rmh scoop - 1/2 point"
+      },
+      {
+        "tier": "Sand",
+        "text": "make a twisting wrench - 1/2 point"
+      },
+      {
+        "tier": "Sand",
+        "text": "weld two hooks or chain clevises to a tractor bucket - 1/2 point"
+      },
+      {
+        "tier": "Sand",
+        "text": "weld a trailer ball to a tractor implement - 1/2 point"
+      },
+      {
+        "tier": "Sand",
+        "text": "beefy set of shelf brackets - 1 point"
+      },
+      {
+        "tier": "Sand",
+        "text": "fix a crack in a tool - 1/2 point"
+      },
+      {
+        "tier": "Sand",
+        "text": "marshmallow or hot dog fork for campfire - 1 point (2 if SS)"
+      },
+      {
+        "tier": "Sand",
+        "text": "Dress up a mushroomed chisel or splitting wedge - 1/2 point"
+      },
+      {
+        "tier": "Sand",
+        "text": "make a center punch - 1/2 point"
+      },
+      {
+        "tier": "Sand",
+        "text": "chicken funnel - 1/2 point"
+      },
+      {
+        "tier": "Sand",
+        "text": "solar oven reflectors - 1/2 point"
+      },
+      {
+        "tier": "Sand",
+        "text": "(Sand badge: 5 points required, no duplication)"
+      },
+      {
+        "tier": "Straw",
+        "text": "Welding list (complete at least seven points and at least 4 different items): Make a guillotine fuller- 3 points; Make a spring fuller- 1 point; Make four matching angle braces to attach legs to a platform- 2 points; Welded digging fork- 1 point; Sawhorse brackets for two wooden sawhorses- 2 points; Door latch- 1 point; Make a gouge for making log bee houses- 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Forging list (complete at least seven points and at least 5 different items): Set of tongs with rivet and drawn out handles- 2 points; Forge and heat treat two punches or hot chisels- 1 point; Nice fire poker- 1 point; Nice gate handle- 1 point; Drawknife- 3 points; Hardy hole tool- 1 point; Forged digging fork- 3 points; Log peeling spud- 2 points; Tomahawk head from railroad spike- 2 points; Decent knife from railroad spike or file- 2 points; Hand trowel- 2 points; Hinge- 2 points; Holdfast- 1 point; 20 nails- 2 points; Branding iron- 3 points; Utility grade broad axe- 3 points; Utility grade adze- 2 points; Utility grade froe- 2 points; Utility grade gouge- 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Shop list (complete at least seven points and at least 4 different items): Crude forge- 1 point; Prep coil spring for 6 punches/chisels- 1 point; Crude anvil on a stump- 1 point; Sturdy metal work table- 2 points; Sheet metal hand brake- 1 point; Rebar drawer/door handle- 1 point; Nail heading plate- 2 points; Stamp with initials to mark metal- 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Sheet metal list (complete at least seven points and at least 5 different items): Water trough or pan- 2 points; RMH ash scoop- 1 point; Dustpan- 1 point; Grain scoop- 1 point; Squirrel/raccoon guard for a post- 1 point; Pinwheel wind spinner- 1 point; Copper flower- 1 point; Sink a small bowl or spoon- 2-6 points; Gravity powered fan- 2-4 points; Lamp shade- 3 points; Reflector style camp stove- 4 points; Chicken feeder- 2 points; Storage box with lid- 4 points; Chimney cap- 4 points; Berry picker hand scoop- 1 point; Mailbox- 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Other list (complete at least seven points and at least 5 different items): Make, grind, polish and stamp a name tag or key fob- 1 point; Solder garden art from copper- 1/2-4 points; Sand cast aluminum (bigger than a golf ball)- 2 points; Cut a sign from metal (8 by 18 min)- 1 point; Copper tongs- 2 points; Copper shishi odoshi- 3 points; Campfire tripod and hanging grill- 2 points; Draw down wire diameter with a draw plate- 1 point; Make a 6 oz ingot of metal other than lead- 2 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "(Wood badge: 180 points required, oddball points allowed)"
+      },
+      {
+        "tier": "Wood",
+        "text": "Wood Welding list (at least 30 points): Build a trailer (4x6 or bigger)- 8-24 points; Make a welding table- 8-16 points; Two matching metal sawhorses- 4 points; Work stand- 4 points; Exhaust system for a vehicle- 3-6 points; Make a length of chain with 10 links- 3 points; J tube rocket engine (twofer with Rocket badge)- 4 points; Decorative arbor or entry for a gate- 8-16 points; Functional gate- 4 points; Pretty gate- 8-16 points; Bicycle frame- 8 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Wood Forging list (at least 30 points): All the hardware for a door (hinges, latch, knob)- 6-18 points; Custom hammer (hardened)- 2 points; Beautiful door knocker- 3-9 points; Beautiful door handle- 3-9 points; 10 punches/drifts/chisels- 3 points; Beautiful axe- 4-12 points; C-clamp- 4 points; Shovel- 6 points; Decorative spindles for 10 of railing- 6-18 points; Chain with 10 links (forge welding)- 5 points; Soup ladle from one piece of metal- 3 points; 1 place setting of tableware- 4-8 points; High quality broad axe- 4 points; High quality adze- 3 points; High quality froe- 3 points; High quality gouge- 3 points; Two person log tong- 4 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Wood Sheet metal list (at least 30 points): Custom bike fender- 4 points; Custom ductwork for hvac system (20)- 8 points; Raise a small bowl- 4-12 points; Watering can- 8-16 points; Copper pot/kettle/pan- 8-16 points; Urine diverter for willow feeder- 5 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Wood Other list (at least 30 points): Keyed lock- 8-24 points; Safe box that is pretty- 4-12 points; Make a gun barrel- 10 points; Smelt iron from ore- 50 points; Heat powered wood stove fan- 20 points; Veggie oil foundry- 4 points; Japanese box bellows- 8 points; Treadle hammer- 20 points; Build a welder- 8 points; Build a plasma cutter- 16 points; Nice cutting table- 8 points; Timber tool- 16 points; Log arch- 12 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "(Iron badge: 1030 points required, oddball points allowed)"
+      },
+      {
+        "tier": "Iron",
+        "text": "Iron Welding list (at least 100 points): Hammer patch and weld a hole in a truck- 8 points; Large smoker- 30 points; Large trailer- 40 points; Convert a vehicle to wood or charcoal gasification- 80 points (street legal, 60mph, 40 mile range); Convert a tractor to charcoal gasification- 40 points; Small trailer with walking suspension- 40 points; Large trailer with walking suspension- 60 points; Large solar panel mounting system 60+ square feet- 20 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "Iron Forging list (at least 100 points): Beautiful fire tool set- 16-48 points; Iron/steel gate (think 1700s Europe)- 80-240 points; Elegant spindles for 10 railing- 12-36 points; Chandelier- 40-120 points; Nice Candelabra or pair of candlesticks- 16 points; Coach light- 8 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "Iron Sheet metal list (at least 100 points): Beautiful hammered copper sink (food safe)- 40 points; Steel wok- 40 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "Iron Other list (at least 100 points): Make a mid size lathe- 100 points; Convert a vehicle to electric (joint project with Electricity)- 65 points; Convert a motorcycle or dirt bike to electric- 12 points; Convert a tractor to electric- 65 points; Large articulating solar panel system (joint project with Electricity)- 40 points"
       }
     ]
   },

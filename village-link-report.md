@@ -1,14 +1,11 @@
 # Village Link Report — 2026-10-04
 
-Checked **867** URLs: **843** OK, **19** HTTP errors, **0** redirects, **5** unreachable/timeouts.
+Checked **870** URLs: **849** OK, **19** HTTP errors, **0** redirects, **2** unreachable/timeouts.
 
-## Unreachable / timeout (5)
+## Unreachable / timeout (2)
 
-- `http://www.davidhuang.org`  (error: RemoteDisconnected)
 - `https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`  (error: URLError)
 - `https://mountainherbs.net/`  (error: URLError)
-- `https://solar.lowtechmagazine.com/`  (error: URLError)
-- `https://www.lowtechmagazine.com/about/`  (error: URLError)
 
 ## HTTP errors (19)
 
@@ -19,6 +16,7 @@ Checked **867** URLs: **843** OK, **19** HTTP errors, **0** redirects, **5** unr
 - [`https://culturesforhealth.com/blogs/learn`](https://culturesforhealth.com/blogs/learn)  (HTTP 429)
 - [`https://goingtoseed.org/collections/courses`](https://goingtoseed.org/collections/courses)  (HTTP 429)
 - [`https://handtoolwoodworking.com/green-woodworking-videos/`](https://handtoolwoodworking.com/green-woodworking-videos/)  (HTTP 403)
+- [`https://holmgren.com.au/`](https://holmgren.com.au/)  (HTTP 403)
 - [`https://permacultureapprentice.com`](https://permacultureapprentice.com)  (HTTP 403)
 - [`https://skipthejourney.wordpress.com/`](https://skipthejourney.wordpress.com/)  (HTTP 404)
 - [`https://woodworkingformeremortals.com/`](https://woodworkingformeremortals.com/)  (HTTP 405)
@@ -27,7 +25,6 @@ Checked **867** URLs: **843** OK, **19** HTTP errors, **0** redirects, **5** unr
 - [`https://www.allaboutbirds.org/`](https://www.allaboutbirds.org/)  (HTTP 403)
 - [`https://www.blackdragonforge.com/products/smithing101`](https://www.blackdragonforge.com/products/smithing101)  (HTTP 429)
 - [`https://www.elevify.com/en/courses/food-gastronomy-and-hospitality/food/food-preserving-course-bac2e`](https://www.elevify.com/en/courses/food-gastronomy-and-hospitality/food/food-preserving-course-bac2e)  (HTTP 403)
-- [`https://www.instagram.com/wizard.mountainman/`](https://www.instagram.com/wizard.mountainman/)  (HTTP 429)
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
 - [`https://www.mantakchia.com`](https://www.mantakchia.com)  (HTTP 403)
 - [`https://www.patreon.com/slowfilms`](https://www.patreon.com/slowfilms)  (HTTP 403)

@@ -194,11 +194,34 @@ const VILLAGE_QUESTS = [
       ["Cook a Meal on a Rocket Stove","Prepare food on a simple rocket stove or camp setup.",["Science","Health"],"🔥"],
       ["Build a Small Rocket Stove","Assemble a basic rocket stove for cooking.",["Science","Math"],"🚀"],
       ["Make a Rocket Mass Heater Model","Build a small model that shows how a rocket mass heater works.",["Science","Math"],"🌡️"],
-      ["Heat Water with a Rocket Heater","Use a rocket system to heat water for a task.",["Science","Health"],"♨️"]
+      ["Heat Water with a Rocket Heater","Use a rocket system to heat water for a task.",["Science","Health"],"♨️"],
+      ["Start and Operate a J-Tube Rocket Mass Heater","Start a j-tube rocket mass heater and keep it running for one full hour. (PEP BB: rocket.sand.rmhjtube)",["Science","PE"],"🔥"],
+      ["Start and Operate a Batch Box Rocket Mass Heater","Start a batch box rocket mass heater and keep it running for one full hour. (PEP BB: rocket.sand.rmhbatchbox)",["Science","PE"],"🧯"],
+      ["Start a Rocket Oven and Bake Something","Fire up a rocket oven and bake bread, pizza, or similar in it. (PEP BB: rocket.sand.oven)",["Science","Health"],"🥖"],
+      ["Start a Rocket Cooktop and Cook Something","Light a rocket cooktop and cook a real meal on it. (PEP BB: rocket.sand.cooktop)",["Science","Health"],"🍳"],
+      ["Start a Rocket Water Heater Above 140°F","Start a rocket water heater and get the water temperature above 140°F. (PEP BB: rocket.sand.waterheater)",["Science","Math"],"♨️"],
+      ["Boil a Gallon of Water on a Rocket J-Tube","Use a rocket j-tube stove to bring a full gallon of water to a boil. (PEP BB: rocket.sand.boil)",["Science","Math"],"🫖"],
+      ["Do the Annual Ash Cleanout of a Rocket Mass Heater","Open the cleanout and remove the accumulated ash from a rocket mass heater. (PEP BB: rocket.sand.ashcleanout)",["Science","PE"],"🪣"],
+      ["Spread Some Ash on a Garden Spot","Spread a dusting of wood ash on a garden bed — just a dusting, not a dump. (PEP BB: rocket.sand.ashgarden)",["Science","Geography"],"🌾"]
     ],
-    straw: [],
-    wood: [],
-    iron: []
+    straw: [
+      ["Heat a Space with a Rocket Mass Heater for One Week","Keep one room or building warm with a rocket mass heater for seven days. (PEP BB: rocket.straw.heatweek)",["Science","Math"],"🏠"],
+      ["Build a J-Tube Style Rocket Mass Heater","Build a complete j-tube rocket mass heater from scratch. (PEP BB: rocket.straw.build)",["Science","Math"],"🛠️"]
+    ],
+    wood: [
+      ["Heat a Space with a Rocket Mass Heater for One Month","Keep a space warm with a rocket mass heater for a full month. (PEP BB: rocket.wood.heatmonth)",["Science","Math"],"🗓️"],
+      ["Build a Second J-Tube Style Rocket Mass Heater","Build another j-tube rocket mass heater, different from your first. (PEP BB: rocket.wood.jtubermh)",["Science","Math"],"🔧"],
+      ["Build a J-Tube Style Rocket Oven","Build a working rocket oven from scratch. (PEP BB: rocket.wood.oven)",["Science","Math"],"🍞"],
+      ["Build a J-Tube Style Rocket Cook Top","Build a j-tube style rocket cooktop for cooking. (PEP BB: rocket.wood.cooktop)",["Science","Math"],"👩‍🍳"],
+      ["Build a J-Tube Style Unpressurized Rocket Hot Water Heater","Build an unpressurized rocket hot water heater — never pressurize these systems. (PEP BB: rocket.wood.waterheater)",["Science","Health"],"🚿"]
+    ],
+    iron: [
+      ["Heat a Space with a Rocket Mass Heater for a Full Winter","Heat a space with a rocket mass heater through an entire winter. (PEP BB: rocket.iron.heatwinter)",["Science","Math"],"❄️"],
+      ["Build a Rocket Hot Tub","Build a rocket-heated hot tub. (PEP BB: rocket.iron.hottub)",["Science","Math"],"🛁"],
+      ["Build a Rocket Sauna","Build a rocket-heated sauna. (PEP BB: rocket.iron.sauna)",["Science","Health"],"🧖"],
+      ["Build a Rocket Forge","Build a rocket forge for heating metal. (PEP BB: rocket.iron.forge)",["Science","Math"],"⚒️"],
+      ["Build an Outdoor Rocket Cooker and Smoker","Build an outdoor rocket cooker with a smoker ring-of-fire as an alternative to a camp fire. (PEP BB: rocket.iron.outdoorcooker)",["Science","Health"],"🍖"]
+    ]
   },
   {
     type: "PEP",
