@@ -704,15 +704,22 @@ const MOVEMENT_SYSTEMS = [
       "Use it as a reset — before a test, a recital, a hard conversation, or a sit spot."
     ],
     reps: "5 minutes daily, plus on demand before anything hard. This is the highest-return-per-minute practice in the library.",
-    evidence: "Moderate–Strong benchmark evidence",
+    evidence: "Strong for the mechanism — slow breathing near six breaths a minute raises heart-rate variability through a baroreflex-resonance effect that is directly measured. Moderate for the clinical outcome — the mood and anxiety benefits come from small trials, mostly self-reported, and the largest of them found no lasting change in resting HRV.",
     evClass: "strong",
     research: [
       {
         source: "Balban, et al., 'Brief structured respiration practices enhance mood and reduce physiological arousal', Cell Reports Medicine (2023)",
-        claim: "Five minutes a day of cyclic sighing (extended exhale) improved mood and lowered respiratory rate more than mindfulness meditation over a one-month randomized study.",
+        claim: "Five minutes a day of cyclic sighing (extended exhale) improved mood and lowered respiratory rate more than mindfulness meditation over a one-month randomized study — but the same trial found no significant change in resting heart rate or heart-rate variability in any group, so the lasting benefit it shows is in mood and breathing rate, not in resting HRV.",
         medium: "randomized controlled study",
         confidence: "Strong (single study, well-designed)",
         year: "2023"
+      },
+      {
+        source: "Lehrer & Gevirtz, 'Heart rate variability biofeedback: how and why does it work?', Frontiers in Psychology 5:756 (2014)",
+        claim: "The mechanism behind slow breathing is a confluence of the baroreflex and the cardiovascular system's own resonance near 0.1 Hz — about six breaths a minute. Breathing at that rate produces heart-rate oscillations many times larger than at rest, in almost everyone, often within a minute. This is the direct measurement behind the entry's central claim.",
+        medium: "mechanism review",
+        confidence: "Strong (mechanism, directly measured)",
+        year: "2014"
       },
       {
         source: "Zaccaro, et al., 'How Breath-Control Can Change Your Life: A Systematic Review on Psycho-Physiological Correlates of Slow Breathing', Frontiers in Human Neuroscience (2018)",
@@ -729,9 +736,10 @@ const MOVEMENT_SYSTEMS = [
         year: "1995–present"
       }
     ],
-    verify: "Convergence worth naming in the game: HeartMath's 'quick coherence' (already in the Library), the six-breaths-per-minute research, and the cyclic-sighing trial all arrived at the same place from different directions. That is what a real finding looks like.",
-    village: "The bridge between the PE section and the Heart & Mind Practices section. A family that learns one breath drill has a tool for every hard moment in the game — and in the week.",
-    quest: ["Five Minutes of Breath", "Do five minutes of cyclic sighing (double inhale, long exhale) every day for two weeks. Rate your mood before and after on a 1–5 scale each time and look at the pattern.", ["PE", "Health"], "🌬️"]
+    verify: "Run the kitchen-table trial. Pick three 5-minute practices and do one each day for a week, in any order, at the same time of day: (a) cyclic sighing — double inhale, long exhale; (b) slow breathing — five seconds in, five seconds out; (c) a control — five quiet minutes sitting still, with no breathing instruction at all. Before and after each, rate how calm you feel 1–10 and take your pulse for 15 seconds. The entry's claim makes a prediction you can check: cyclic sighing should move the calm rating most, slow breathing should lower the pulse most, and the control should move least. If the control day does just as well, the practice is not doing what the entry says — and the control is the whole point, because you already expect the breathing days to work. Write down all the numbers; the pattern across the week is the test.",
+    village: "The bridge between the PE section and the Heart & Mind Practices section. A family that learns one breath drill has a tool for every hard moment in the game — and in the week. Convergence worth naming: HeartMath's 'quick coherence' (already in the Library), the six-breaths-per-minute research, and the cyclic-sighing trial all arrived at the same place from different directions — that is what a real finding looks like.",
+    quest: ["Five Minutes of Breath", "Do five minutes of cyclic sighing (double inhale, long exhale) every day for two weeks. Rate your mood before and after on a 1–5 scale each time and look at the pattern.", ["PE", "Health"], "🌬️"],
+    authorship: {"agent_id": "agent-b73ac550-5671-471e-b3e1-721f948ea063", "agent_name": "Tutor", "job": "vitality-engine", "lineage": "agent-b73ac550-5671-471e-b3e1-721f948ea063 -> vitality-engine -> breathwork-deepening", "authored_at": "2026-10-04"}
   },
 
   {
