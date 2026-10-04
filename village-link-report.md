@@ -1,19 +1,19 @@
 # Village Link Report — 2026-10-04
 
-Checked **870** URLs: **849** OK, **19** HTTP errors, **0** redirects, **2** unreachable/timeouts.
+Checked **870** URLs: **849** OK, **18** HTTP errors, **0** redirects, **3** unreachable/timeouts.
 
-## Unreachable / timeout (2)
+## Unreachable / timeout (3)
 
 - `https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`  (error: URLError)
+- `https://archive.org/details/fe_The_Solar_Greenhouse_Book`  (error: TimeoutError)
 - `https://mountainherbs.net/`  (error: URLError)
 
-## HTTP errors (19)
+## HTTP errors (18)
 
 - [`http://www.fws.gov/whitenosesyndrome/`](http://www.fws.gov/whitenosesyndrome/)  (HTTP 403)
 - [`https://blog.lostartpress.com/2025/05/19/the-free-video-series-of-build-a-chair-from-bullst/`](https://blog.lostartpress.com/2025/05/19/the-free-video-series-of-build-a-chair-from-bullst/)  (HTTP 403)
 - [`https://calearth.org`](https://calearth.org)  (HTTP 429)
 - [`https://charlesdowding.co.uk`](https://charlesdowding.co.uk)  (HTTP 429)
-- [`https://culturesforhealth.com/blogs/learn`](https://culturesforhealth.com/blogs/learn)  (HTTP 429)
 - [`https://goingtoseed.org/collections/courses`](https://goingtoseed.org/collections/courses)  (HTTP 429)
 - [`https://handtoolwoodworking.com/green-woodworking-videos/`](https://handtoolwoodworking.com/green-woodworking-videos/)  (HTTP 403)
 - [`https://holmgren.com.au/`](https://holmgren.com.au/)  (HTTP 403)
