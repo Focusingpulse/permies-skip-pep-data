@@ -1411,6 +1411,85 @@ const MOVEMENT_SYSTEMS = [
     village: "The energy-medicine domain's fourth entry and its most family-usable one: no equipment, no training, and a parent can do it on a child at bedtime as easily as a child can do it on a parent. It pairs with the Jin Shin Jyutsu finger holds as the library's two touch-based entries — and where Jin Shin Jyutsu teaches 'hold one finger', this one teaches the harder lesson: a practice can feel good, be worth doing, and still not be doing what its map says. In the game it becomes the Vitality guild's 'blind test' badge, the same discipline the Foam Roller Test and the Chair-Stand Prediction already ask for, applied to the sense of touch.",
     quest: ["The Two-Foot Test", "Give one foot the full reflexology routine — thumb-walk every zone for ten minutes — and give the other foot a plain, unhurried ten-minute rub. Then ask the person to guess which foot got the 'real' reflexology, and rate how each foot feels. Do it three times this week, swapping sides, and write down whether anyone could tell. The honest answer is probably no — and the touch still works.", ["PE", "Health", "Science"], "🦶"],
     authorship: {"agent_id": "agent-b73ac550-5671-471e-b3e1-721f948ea063", "agent_name": "Tutor", "job": "vitality-engine", "lineage": "agent-b73ac550-5671-471e-b3e1-721f948ea063 -> vitality-engine -> reflexology-foot-maps", "authored_at": "2026-10-01"}
+  },
+
+  {
+    id: "otago-strength-balance",
+    icon: "🪜",
+    name: "The Otago Programme — Home Strength & Balance for Fall Prevention",
+    esName: "El Programa Otago — Fuerza y Equilibrio en Casa para Prevenir Caídas",
+    tagline: "The home exercise programme with the best fall-prevention record there is — built for the oldest players, and worth doing at any age.",
+    lineage: "Developed in the 1990s at the University of Otago in Dunedin, New Zealand, by A. John Campbell and M. Clare Robertson, who designed it specifically to stop older people living at home from falling. It is not a tradition and does not pretend to be: it is a clinical programme, published as a manual (Campbell & Robertson, 'Otago Exercise Programme to prevent falls in older adults', Accident Compensation Corporation / University of Otago, 2003), and it has been tested in randomised trials since 1997. The lineage is documented research, not transmission.",
+    what: "A fixed set of leg-strengthening and balance exercises plus a walking plan, done at home three times a week. The strengthening half uses ankle cuff weights and targets five muscle groups — the front of the thigh (knee extensor), the back of the thigh (knee flexor), the side of the hip (hip abductor), the calf (plantarflexor), and the muscles that lift the toes (dorsiflexor). The balance half is a ladder of stances and walks that get progressively harder — knee bends, toe walking, heel walking, heel-to-toe (tandem) stance and walking, one-leg standing, backwards walking, and walking-and-turning — each starting with a hand on a chair and progressing to no support. It ends with a walking plan. The whole session takes about 30 minutes.",
+    esWhat: "Un conjunto fijo de ejercicios de fortalecimiento de piernas y equilibrio más un plan de caminata, en casa, tres veces por semana. La mitad de fuerza usa pesas de tobillo y trabaja cinco grupos musculares: la parte delantera del muslo (extensor de rodilla), la parte trasera (flexor de rodilla), el costado de la cadera (abductor de cadera), la pantorrilla (flexor plantar) y los músculos que levantan los dedos del pie (dorsiflexor). La mitad de equilibrio es una escalera de posturas y caminatas cada vez más difíciles — flexiones de rodilla, caminar de puntillas, caminar de talones, postura y caminata talón-punta (tándem), pararse en una pierna, caminar hacia atrás y caminar girando — cada una empezando con una mano en una silla y progresando sin apoyo. Termina con un plan de caminata. La sesión completa toma unos 30 minutos.",
+    practice: [
+      "Warm-up (5 minutes) — the programme always opens with the same five gentle flexibility movements, 5 times each: head turns side to side; neck movements; back extension (hands on the lower back, gently arch); trunk turns side to side; ankle circles and points.",
+      "Front knee strengthener (seated) — sit back in a chair with your feet under your knees. Straighten one leg slowly, lifting for a slow count of 3, and lower for a count of 5. 10 times each leg. Add an ankle weight (start at 1–2 kg) once two sets of 10 feel easy.",
+      "Back knee strengthener (standing) — stand tall holding a chair. Bend one knee, bringing the heel toward your bottom, then lower slowly. 10 times each leg. Ankle weight as above.",
+      "Side hip strengthener (standing) — stand sideways to a chair and hold on. Keep the leg straight and the toes pointing forward, lift the leg out to the side, then lower. 10 times each leg. Ankle weight as above.",
+      "Calf raises and toe raises (standing) — rise onto the balls of your feet 10 times, then lift your toes and rock back onto your heels 10 times. Body weight is enough for these two; no ankle weights.",
+      "The balance ladder — do each one with a hand on a chair first, then with no support once it feels easy: knee bends (10); toe walking (10 steps forward, turn, 10 back); heel walking (10 steps each way); heel-toe stand (one foot directly in front of the other, hold 10 seconds, then swap which foot is in front); heel-toe walking (10 steps); one-leg stand (10 seconds each leg, building toward 30); backwards walking (10 steps); walking and turning around (a figure-8, twice).",
+      "The walking plan — walk for up to 30 minutes, up to three times a week, on the days you do not do the exercises (or as fitness allows).",
+      "The dose — exercises three times a week with a rest day between sessions; walking on the other days. Progress in this order: first take the hand off the chair, then add repetitions, then add ankle weight."
+    ],
+    reps: "About 30 minutes, three times a week with a rest day between sessions, plus a walking plan on the other days. Progress in this order — remove the hand support, then add repetitions, then add ankle weight. The trials started people in their 80s at 1–2 kg and worked up to 8 kg.",
+    evidence: "Strong — one of the best-evidenced exercise programmes there is: several randomised trials and a meta-analysis show it reduces falls in older adults. The honest complications: the same meta-analysis found no clear reduction in injuries from falls, its mortality finding is the least certain part, and the largest independent trial found no improvement in falls risk or mobility at six months.",
+    evClass: "strong",
+    research: [
+      {
+        source: "Campbell AJ, Robertson MC, 'Otago Exercise Programme to prevent falls in older adults: a home-based, individually tailored strength and balance retraining programme' (Accident Compensation Corporation / University of Otago, 2003 — the programme manual)",
+        claim: "The programme's own manual: the exercise set, the levels and repetitions, the walking plan, and the two outcome tests (the chair stand test and the four-test balance scale) that the practice and verify fields here are drawn from. It is the primary document of the programme — practitioner documentation of a clinical routine, not a trial.",
+        medium: "programme manual / practitioner documentation",
+        confidence: "High (as the programme's own definition)",
+        year: "2003"
+      },
+      {
+        source: "Campbell AJ, Robertson MC, Gardner MM, Norton RN, Tilyard MW, Buchner DM, 'Randomised controlled trial of a general practice programme of home based exercise to prevent falls in elderly women', BMJ 315(7115):1065–1069, 1997",
+        claim: "The founding trial: 233 women aged 80 and over, individually prescribed the home strength-and-balance programme. After one year there were 88 falls in the exercise group against 152 in the control group (0.87 vs 1.34 falls per person-year, difference 0.47, 95% CI 0.04–0.90); the hazard for a first injurious fall was 0.61 (95% CI 0.39–0.97), and balance had measurably improved by six months.",
+        medium: "randomised controlled trial",
+        confidence: "High (as a trial) · the effects are modest and the sample is small",
+        year: "1997"
+      },
+      {
+        source: "Robertson MC, Devlin N, Gardner MM, Campbell AJ, 'Effectiveness and economic evaluation of a nurse delivered home exercise programme to prevent falls. 1: Randomised controlled trial', BMJ 322(7288):697–701, 2001",
+        claim: "The programme worked when a trained district nurse delivered it in ordinary home health care, not just a research physiotherapist: falls fell by 46% (incidence rate ratio 0.54, 95% CI 0.32–0.90), and there were five fall-injury hospital admissions in the control group and none in the exercise group.",
+        medium: "randomised controlled trial (pragmatic)",
+        confidence: "Moderate–High",
+        year: "2001"
+      },
+      {
+        source: "Thomas S, Mackintosh S, Halbert J, 'Does the Otago exercise programme reduce mortality and falls in older adults? A systematic review and meta-analysis', Age and Ageing 39(6):681–687, 2010, doi:10.1093/ageing/afq102",
+        claim: "The key pooled estimate, and the source of the honest caveats. Seven trials, 1,503 participants, mean age 81.6: the programme reduced fall rates (incidence rate ratio 0.68, 95% CI 0.56–0.79) and the risk of death over twelve months (risk ratio 0.45, 95% CI 0.25–0.80) — but it found no significant difference in serious or moderate injuries from falls (risk ratio 1.05, 95% CI 0.91–1.22), and only 36.7% of participants still in the studies at a year were exercising three times a week. The mortality result is the least certain finding here: the review's own assessors cautioned about the small samples and the review methods.",
+        medium: "systematic review and meta-analysis",
+        confidence: "Moderate — the falls reduction is solid; the mortality benefit is the part to hold loosely",
+        year: "2010"
+      },
+      {
+        source: "Sherrington C, Fairhall NJ, Wallbank GK, Tiedemann A, Michaleff ZA, Howard K, Clemson L, Hopewell S, Lamb SE, 'Exercise for preventing falls in older people living in the community', Cochrane Database of Systematic Reviews 1(1):CD012424, 2019, doi:10.1002/14651858.CD012424.pub2",
+        claim: "The current Cochrane verdict on exercise for falls, and the reason this entry's label is Strong: exercise reduces the rate of falls by about 23% (rate ratio 0.77, 95% CI 0.71–0.83; 59 studies, 12,981 participants; high-certainty evidence), and programmes that are mostly balance and functional training — which is what this programme is — reduce the rate by about 24% (rate ratio 0.76, 95% CI 0.70–0.81; 39 studies; high-certainty). The effect is real but not large.",
+        medium: "Cochrane systematic review",
+        confidence: "High (as a pooled effect)",
+        year: "2019"
+      },
+      {
+        source: "Liu-Ambrose T, Donaldson MG, Ahamed Y, Graf P, Cook WL, Close JCT, Lord SR, Khan KM, 'Otago home-based strength and balance retraining improves executive functioning in older fallers: a randomized controlled trial', Journal of the American Geriatrics Society 56(10):1821–1830, 2008, doi:10.1111/j.1532-5415.2008.01931.x",
+        claim: "The honest complication, from an independent group: 74 adults aged 70 and over with a recent fall. At six months there was no significant between-group difference in measured falls risk or in the Timed Up and Go — the only thing that improved was one measure of executive function (response inhibition). The fall reduction appeared only after two outliers were removed from the analysis (incidence rate ratio 0.56 unadjusted, 0.47 adjusted). So the programme's benefits are real but not uniform, and a short trial can miss them entirely.",
+        medium: "randomised controlled trial",
+        confidence: "Moderate — a small trial that partly contradicts the larger picture",
+        year: "2008"
+      },
+      {
+        source: "Albornos-Muñoz L, Blanco-Blanco J, Cidoncha-Moreno MÁ, Abad-Corpa E, Rivera-Álvarez A, López-Pisa RM, Caperos JM, Moreno-Casbas MT, 'Efficacy of the Otago Exercise Programme to reduce falls in community-dwelling adults aged 65–80 when delivered as group or individual training: non-inferiority clinical trial', BMC Nursing 23, 2024, doi:10.1186/s12912-024-02310-3",
+        claim: "The most recent large test: 827 adults aged 65–80 in 21 primary-care centres. Delivering the programme to a group worked as well as delivering it one-to-one over twelve months — so a family or a village can do this together rather than alone. Adherence was higher in the individual format, and one minor injury was recorded during the exercises.",
+        medium: "multicentre randomised non-inferiority trial",
+        confidence: "Moderate–High (for the group-vs-individual question)",
+        year: "2024"
+      }
+    ],
+    verify: "The programme comes with its own two tests, and using them is the honest way to check it. Day 1: (1) the chair stand test — sit in a firm straight-backed chair, arms folded, and stand up and sit down five times as fast as you can; time it in seconds; (2) the four-test balance scale — barefoot, hold each stance for 10 seconds and score one point each: feet together, semi-tandem (one foot half in front), tandem (heel directly to toe), and one-leg stand. Write both numbers down. Then do the programme three times a week for twelve weeks and re-measure. The prediction: the balance score should move more than the chair-stand time in someone who is already reasonably strong, and both should move in someone who is not. The number that matters most is the one twelve weeks cannot give you — actual falls — so keep a family falls-and-stumbles diary for the whole period, noting every stumble and whether you caught yourself. A quiet diary is not a failure; falls are rare events and twelve weeks is a short window. The honest lesson: this programme reliably improves the strength and balance you can measure, and its evidence for stopping real falls is strong across many people — but whether it stops your own fall is a question only a long diary can answer.",
+    village: "The balance domain's third entry, and the one that turns the section into a programme rather than a set of practices: where Tai Chi trains the traditional form and the vestibular entry trains the gaze, this one is the structured, progressive, evidence-based home routine — the one a family can run in a hallway with a chair and a pair of ankle weights. Its special place in the Village is the grandparents: it is the only entry designed and tested specifically to keep the oldest players on their feet, and the balance ladder is the same set of movements a child does for fun. In the game it becomes the Vitality guild's 'protect the elders' quest — the family does it together, and the elder's numbers are the ones that count.",
+    quest: ["The Fall-Prevention Programme", "Measure two numbers on day 1 — the chair stand test (stand up and sit down five times as fast as you can, timed) and the four-test balance scale (feet together, semi-tandem, tandem, and one-leg stand, 10 seconds each). Then do the Otago strength-and-balance programme three times a week for twelve weeks, with a grandparent or elder if you have one. Re-measure both numbers and keep a family falls-and-stumbles diary the whole time.", ["PE", "Health", "Science"], "🪜"],
+    authorship: {"agent_id": "agent-b73ac550-5671-471e-b3e1-721f948ea063", "agent_name": "Tutor", "job": "vitality-engine", "lineage": "agent-b73ac550-5671-471e-b3e1-721f948ea063 -> vitality-engine -> otago-strength-balance", "authored_at": "2026-10-05"}
   }
 ];
 
