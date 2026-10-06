@@ -1,26 +1,43 @@
 # Village Link Report — 2026-10-06
 
-Checked **870** URLs: **849** OK, **18** HTTP errors, **0** redirects, **3** unreachable/timeouts.
+Checked **1003** URLs: **964** OK, **26** HTTP errors, **0** redirects, **13** unreachable/timeouts.
 
-## Unreachable / timeout (3)
+## Unreachable / timeout (13)
 
+- `http://TerraPhoenixDesign.com`  (error: TimeoutError)
+- `http://quarteracrehome.wordpress.comhttps://www.etsy.com/shop/HomeAndHedgewitchhttps://www.instagram.com/wren_ohio/`  (error: URLError)
+- `http://uhspr.ca/merit-badges/`  (error: URLError)
+- `http://www.davidhuang.org`  (error: RemoteDisconnected)
+- `http://www.dlive.tv/mavisfarmacyThe`  (error: URLError)
+- `http://www.theartisthomestead.comor`  (error: URLError)
 - `https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`  (error: URLError)
-- `https://archive.org/details/fe_The_Solar_Greenhouse_Book`  (error: TimeoutError)
+- `https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20|`  (error: URLError)
 - `https://mountainherbs.net/`  (error: URLError)
+- `https://tranqvillium.org`  (error: URLError)
+- `https://web.archive.org/web/20220409104932/http://organicfoodbliss.com/my-clear-cut-garden/`  (error: URLError)
+- `https://web.archive.org/web/20241213155330/http://uhspr.ca/merit-badges/`  (error: URLError)
+- `https://www.permaculturesouthafrica.co.za/what-is-permaculture-free-course/`  (error: TimeoutError)
 
-## HTTP errors (18)
+## HTTP errors (26)
 
+- [`http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img`](http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img)  (HTTP 404)
+- [`http://organicfoodbliss.com/my-clear-cut-garden//`](http://organicfoodbliss.com/my-clear-cut-garden//)  (HTTP 500)
+- [`http://paypal.me/lazykatorhttp://www.buymeacoffee.com/dzenifrRead`](http://paypal.me/lazykatorhttp://www.buymeacoffee.com/dzenifrRead)  (HTTP 404)
 - [`http://www.fws.gov/whitenosesyndrome/`](http://www.fws.gov/whitenosesyndrome/)  (HTTP 403)
+- [`http://www.my10acres.info`](http://www.my10acres.info)  (HTTP 500)
+- [`http://www.northwestpermaculture.org/-`](http://www.northwestpermaculture.org/-)  (HTTP 404)
 - [`https://blog.lostartpress.com/2025/05/19/the-free-video-series-of-build-a-chair-from-bullst/`](https://blog.lostartpress.com/2025/05/19/the-free-video-series-of-build-a-chair-from-bullst/)  (HTTP 403)
 - [`https://calearth.org`](https://calearth.org)  (HTTP 429)
 - [`https://charlesdowding.co.uk`](https://charlesdowding.co.uk)  (HTTP 429)
 - [`https://culturesforhealth.com/blogs/learn`](https://culturesforhealth.com/blogs/learn)  (HTTP 429)
+- [`https://gemmaboyd.space/https://www.instagram.com/gemmaboyd407/?hl=en`](https://gemmaboyd.space/https://www.instagram.com/gemmaboyd407/?hl=en)  (HTTP 404)
+- [`https://goingtoseed.org/collections/courses`](https://goingtoseed.org/collections/courses)  (HTTP 429)
+- [`https://growingmodernlandraces.thinkific.com/?ref=b1de16Growingmodernlandraces.com`](https://growingmodernlandraces.thinkific.com/?ref=b1de16Growingmodernlandraces.com)  (HTTP 429)
 - [`https://handtoolwoodworking.com/green-woodworking-videos/`](https://handtoolwoodworking.com/green-woodworking-videos/)  (HTTP 403)
 - [`https://holmgren.com.au/`](https://holmgren.com.au/)  (HTTP 403)
 - [`https://permacultureapprentice.com`](https://permacultureapprentice.com)  (HTTP 403)
 - [`https://skipthejourney.wordpress.com/`](https://skipthejourney.wordpress.com/)  (HTTP 404)
 - [`https://woodworkingformeremortals.com/`](https://woodworkingformeremortals.com/)  (HTTP 405)
-- [`https://www.aces.edu/blog/topics/bees-pollinators/beekeeping-basics-online-course/`](https://www.aces.edu/blog/topics/bees-pollinators/beekeeping-basics-online-course/)  (HTTP 404)
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
 - [`https://www.allaboutbirds.org/`](https://www.allaboutbirds.org/)  (HTTP 403)
 - [`https://www.blackdragonforge.com/products/smithing101`](https://www.blackdragonforge.com/products/smithing101)  (HTTP 429)
@@ -28,5 +45,6 @@ Checked **870** URLs: **849** OK, **18** HTTP errors, **0** redirects, **3** unr
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
 - [`https://www.mantakchia.com`](https://www.mantakchia.com)  (HTTP 403)
 - [`https://www.patreon.com/slowfilms`](https://www.patreon.com/slowfilms)  (HTTP 403)
+- [`https://www.pinterest.ca/joelbc/homestead-methods-tools-equipment/https://www.pinterest.ca/joelbc/mixed-shops/`](https://www.pinterest.ca/joelbc/homestead-methods-tools-equipment/https://www.pinterest.ca/joelbc/mixed-shops/)  (HTTP 404)
 
 _Generated automatically. Review then delete broken links or replace with live alternatives._
