@@ -19,6 +19,7 @@
 <script src="cognitive-defense.js"></script>
 <script src="quest_cards.js"></script>
 <script src="lab.js"></script>
+<script src="games.js"></script>
 <style>
 :root {
   --bg-dark: #1a1a2e;
@@ -112,7 +113,12 @@ body {
 .btn-small { padding: 0.35rem 0.7rem; font-size: 0.8rem; width: auto; }
 
 /* ---- Title Screen ---- */
-#screen-title {
+/* NOTE: must be `#screen-title.active`, not `#screen-title`. An ID rule beats
+ * `.screen { display:none }`, so the bare selector kept the landing hero on
+ * screen permanently — every nav click left the user looking at WELCOME with
+ * the requested screen pushed a full viewport below. The title/intro pair is
+ * one scrollable landing page; it hides once you navigate, like every screen. */
+#screen-title.active {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -653,6 +659,108 @@ details[open] summary::after { transform: rotate(180deg); }
 }
 .lib-link:hover { background: var(--bg-input); color: var(--accent-green); }
 .lib-link strong { color: var(--text-bright); }
+
+/* ---- The Games Shelf ---- */
+.gs-title { text-align:center; color:var(--accent-gold); margin-bottom:0.5rem; }
+.gs-sub { color:var(--text-bright); font-size:0.95rem; margin:1rem 0 0.5rem; }
+.gs-dim { color:var(--text-dim); font-weight:400; font-size:0.85em; }
+.gs-intro { text-align:center; color:var(--text-dim); font-size:0.85rem; max-width:44rem; margin:0 auto 1rem; line-height:1.5; }
+.gs-who, .gs-filter { display:flex; flex-wrap:wrap; gap:0.35rem; justify-content:center; align-items:center; margin-bottom:0.7rem; }
+.gs-who-label { font-size:0.72rem; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.06em; margin-right:0.2rem; }
+.gs-chip { background:var(--bg-card); border:1px solid var(--border-subtle); color:var(--text-dim); border-radius:999px; padding:0.3rem 0.75rem; font-size:0.78rem; cursor:pointer; font-family:inherit; }
+.gs-chip.active { border-color:var(--accent-gold); color:var(--accent-gold); background:rgba(233,196,106,0.1); }
+.gs-points { display:flex; gap:0.5rem; justify-content:center; flex-wrap:wrap; margin-bottom:0.9rem; }
+.gs-pt { font-size:0.78rem; padding:0.3rem 0.7rem; border-radius:999px; background:var(--bg-card); border:1px solid var(--border-subtle); color:var(--text-dim); }
+.gs-pt b { color:var(--text-bright); }
+.gs-pt.teach { border-color:rgba(74,222,128,0.35); }
+.gs-pt.expr { border-color:rgba(233,196,106,0.35); }
+.gs-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(15rem,1fr)); gap:0.7rem; }
+.gs-card { background:var(--bg-panel); border:1px solid var(--border-subtle); border-radius:12px; padding:0.9rem; display:flex; flex-direction:column; }
+.gs-card.soon { opacity:0.72; }
+.gs-card-top { display:flex; align-items:center; gap:0.6rem; margin-bottom:0.5rem; }
+.gs-card-icon { font-size:1.6rem; line-height:1; }
+.gs-card-title { font-weight:800; color:var(--text-bright); font-size:0.98rem; }
+.gs-card-meta { font-size:0.7rem; color:var(--text-dim); }
+.gs-soon-tag { margin-left:auto; font-size:0.6rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-dim); border:1px solid var(--border-subtle); border-radius:999px; padding:0.15rem 0.45rem; white-space:nowrap; }
+.gs-card-blurb { font-size:0.8rem; color:var(--text-light); line-height:1.45; flex:1; }
+.gs-card-base { font-size:0.7rem; color:var(--text-dim); margin:0.5rem 0; }
+.gs-mastery { margin-bottom:0.6rem; }
+.gs-bar { height:6px; border-radius:999px; background:var(--bg-input); overflow:hidden; margin-bottom:0.25rem; }
+.gs-bar i { display:block; height:100%; background:linear-gradient(90deg,var(--accent-green),var(--accent-gold)); }
+.gs-mastery span { font-size:0.68rem; color:var(--text-dim); }
+.gs-btn { background:var(--accent-gold); color:#1a1a1a; font-weight:800; border:none; border-radius:8px; padding:0.6rem 1rem; font-size:0.85rem; cursor:pointer; font-family:inherit; }
+.gs-btn:hover { filter:brightness(1.08); }
+.gs-btn.ghost { background:transparent; border:1px solid var(--border-subtle); color:var(--text-dim); }
+.gs-btn.wide { width:100%; margin-top:0.6rem; }
+.gs-btn:disabled { opacity:0.5; cursor:default; }
+.gs-nugwrap { margin-top:1.4rem; }
+.gs-nuggrid { display:flex; flex-wrap:wrap; gap:0.35rem; }
+.gs-nug { background:var(--bg-card); border:1px solid rgba(233,196,106,0.3); color:var(--accent-gold); border-radius:999px; padding:0.35rem 0.7rem; font-size:0.75rem; cursor:pointer; font-family:inherit; }
+
+/* play surface */
+.gs-play { max-width:34rem; margin:0 auto; }
+.gs-back { background:none; border:none; color:var(--text-dim); font-size:0.8rem; cursor:pointer; padding:0.2rem 0; font-family:inherit; margin-bottom:0.5rem; }
+.gs-back:hover { color:var(--accent-gold); }
+.gs-hud { display:flex; justify-content:space-between; align-items:center; font-size:0.8rem; color:var(--text-dim); margin-bottom:0.4rem; }
+.gs-hud-level { color:var(--accent-gold); font-weight:700; }
+.gs-prog { height:5px; background:var(--bg-input); border-radius:999px; overflow:hidden; margin-bottom:0.9rem; }
+.gs-prog i { display:block; height:100%; background:var(--accent-green); transition:width 0.25s; }
+.gs-qcard { background:var(--bg-panel); border:2px solid var(--border-subtle); border-radius:14px; padding:1.4rem 1rem; text-align:center; margin-bottom:0.9rem; transition:border-color 0.2s, background 0.2s; }
+.gs-qcard.right { border-color:var(--accent-green); background:rgba(74,222,128,0.08); }
+.gs-qcard.wrong { border-color:var(--accent-orange); background:rgba(249,115,22,0.07); }
+.gs-qprompt { font-size:1.6rem; font-weight:800; color:var(--text-bright); line-height:1.5; }
+.gs-qprompt b { color:var(--accent-gold); }
+.gq-emojis { font-size:1.5rem; line-height:1.6; word-break:break-all; margin-bottom:0.3rem; }
+.gq-ask { font-size:1rem; color:var(--text-dim); font-weight:600; }
+.gq-note { display:block; font-size:0.62rem; color:var(--text-dim); font-weight:400; margin-top:0.35rem; }
+.gs-typed { background:var(--bg-input); border:1px solid var(--border-subtle); border-radius:10px; text-align:center; font-size:1.7rem; font-weight:800; color:var(--accent-gold); padding:0.5rem; margin-bottom:0.6rem; min-height:2.6rem; letter-spacing:0.05em; }
+.gs-ph { color:var(--text-dim); opacity:0.5; }
+.gs-pad { display:grid; grid-template-columns:repeat(3,1fr); gap:0.4rem; }
+.gs-key { background:var(--bg-card); border:1px solid var(--border-subtle); color:var(--text-bright); font-size:1.25rem; font-weight:700; padding:0.75rem 0; border-radius:10px; cursor:pointer; font-family:inherit; }
+.gs-key:active { background:var(--accent-gold); color:#1a1a1a; }
+.gs-key.alt { color:var(--text-dim); font-size:1.05rem; }
+.gs-choices { display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; }
+.gs-choice { background:var(--bg-card); border:1px solid var(--border-subtle); color:var(--text-bright); font-size:1.15rem; font-weight:700; padding:0.9rem 0.5rem; border-radius:10px; cursor:pointer; font-family:inherit; }
+.gs-choice.right { border-color:var(--accent-green); color:var(--accent-green); }
+.gs-choice:disabled { cursor:default; }
+.gs-fb { border-radius:10px; padding:0.8rem; margin-top:0.7rem; font-size:0.88rem; line-height:1.5; }
+.gs-fb.right { background:rgba(74,222,128,0.1); border:1px solid rgba(74,222,128,0.4); }
+.gs-fb.wrong { background:rgba(249,115,22,0.08); border:1px solid rgba(249,115,22,0.4); }
+.gs-fb.hintline { background:transparent; border:none; padding:0.3rem 0; }
+.gs-fb-head { font-weight:800; color:var(--text-bright); margin-bottom:0.35rem; }
+.gs-fb.right .gs-fb-head { color:var(--accent-green); }
+.gs-fb.wrong .gs-fb-head { color:var(--accent-orange); }
+.gs-fb-body { color:var(--text-light); }
+.gs-fb-body b { color:var(--accent-gold); }
+.gs-fb-up { margin-top:0.4rem; color:var(--accent-gold); font-weight:700; }
+.gs-fb-down { margin-top:0.4rem; color:var(--text-dim); font-style:italic; }
+.gs-hintbtn { background:none; border:1px dashed var(--border-subtle); color:var(--text-dim); border-radius:8px; padding:0.5rem 0.9rem; font-size:0.8rem; cursor:pointer; width:100%; font-family:inherit; }
+.gs-hintbtn:hover { color:var(--accent-gold); border-color:var(--accent-gold); }
+.gs-nugget { background:var(--bg-panel); border:1px solid rgba(233,196,106,0.35); border-left:3px solid var(--accent-gold); border-radius:10px; padding:0.75rem; margin-top:0.7rem; }
+.gs-nugget.owned { border-color:var(--border-subtle); border-left-color:var(--accent-green); }
+.gs-nug-head { font-size:0.68rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--accent-gold); margin-bottom:0.3rem; }
+.gs-nug-title { font-weight:800; color:var(--text-bright); font-size:0.9rem; margin-bottom:0.25rem; }
+.gs-nug-text { font-size:0.82rem; color:var(--text-light); line-height:1.5; }
+.gs-strip { text-align:center; font-size:0.75rem; color:var(--text-dim); margin-top:0.9rem; }
+.gs-tip { background:var(--bg-panel); border:1px solid var(--border-subtle); border-radius:10px; padding:0.7rem; font-size:0.78rem; color:var(--text-dim); line-height:1.5; margin-top:1rem; }
+.gs-skills { display:grid; grid-template-columns:1fr; gap:0.4rem; }
+.gs-skill { display:flex; align-items:center; gap:0.6rem; background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:10px; padding:0.7rem 0.8rem; cursor:pointer; font-family:inherit; text-align:left; }
+.gs-skill:hover { border-color:var(--accent-gold); }
+.gs-skill-icon { font-size:1.3rem; }
+.gs-skill-name { color:var(--text-bright); font-weight:700; font-size:0.88rem; flex:1; }
+.gs-skill-meta { color:var(--text-dim); font-size:0.7rem; white-space:nowrap; }
+.gs-summary { text-align:center; padding-top:1rem; }
+.gs-summary-icon { font-size:2.6rem; }
+.gs-summary-points { display:flex; gap:0.6rem; justify-content:center; margin:1rem 0; }
+.gs-sp { background:var(--bg-panel); border:1px solid var(--border-subtle); border-radius:12px; padding:0.7rem 1.1rem; display:flex; flex-direction:column; align-items:center; gap:0.15rem; }
+.gs-sp span { font-size:1.1rem; }
+.gs-sp b { font-size:1.2rem; color:var(--text-bright); }
+.gs-sp em { font-size:0.68rem; color:var(--text-dim); font-style:normal; text-transform:uppercase; letter-spacing:0.05em; }
+.gs-sp.teach { border-color:rgba(74,222,128,0.35); }
+.gs-sp.expr { border-color:rgba(233,196,106,0.35); }
+.gs-summary-line { font-size:0.82rem; color:var(--text-dim); margin-bottom:0.6rem; }
+.gs-summary-line b { color:var(--accent-gold); }
+.gs-summary-actions { display:flex; gap:0.5rem; justify-content:center; margin-top:1rem; flex-wrap:wrap; }
 
 /* ---- Commons ---- */
 .commons-box {
@@ -1537,6 +1645,13 @@ Skull: the family's story held in one place, carried across years.
     <p style="text-align:center; font-size:0.85em; color:var(--text-dim); margin-bottom:1rem;" data-i18n="Free, public-domain, and government resources for homeschooling — curated by hand.">Free, public-domain, and government resources for homeschooling — curated by hand.</p>
 
     <div class="lib-category">
+      <h4 data-i18n="The Games Shelf — built by the family">🎮 The Games Shelf — built by the family</h4>
+      <p style="font-size:0.85em; color:var(--text-dim); margin-bottom:0.6rem; line-height:1.55;">Small learning games the family builds and plays. Each one is tagged to a curriculum base — the subjects Colorado asks you to cover, and the extras the kids want for themselves: typing, cursive, sign language, and whatever comes next. The shelf grows one game at a time.</p>
+      <button class="gs-btn" style="width:100%;" onclick="showScreen('games')">▶ Open the Games Shelf</button>
+      <p style="font-size:0.78em; color:var(--text-dim); margin-top:0.6rem; line-height:1.55;">First game on the shelf: <strong style="color:var(--accent-gold);">Number Forge</strong> — ten math skills, ten levels each, and a nugget to collect every time you meet something hard. It moves you up when you're ready and teaches you when you're not. Nobody gets stuck.</p>
+    </div>
+
+    <div class="lib-category">
       <h4 data-i18n="Educational Philosophy & Nature Connection">Educational Philosophy & Nature Connection</h4>
       <a href="https://www.amazon.com/Coyotes-Guide-Connecting-Nature-Young/dp/1579940250" target="_blank" class="lib-link"><strong>Coyote's Guide to Connecting with Nature:</strong> The essential manual for coyote mentoring — storytelling, sit spots, bird language, tracking, the errand principle, and the 8 Shields model. By Jon Young, Ellen Haas, and Evan McGown.</a>
       <a href="https://web.archive.org/web/20240101000000/https://8shields.org" target="_blank" class="lib-link"><strong>8 Shields Institute (archived):</strong> The nature-based framework behind coyote mentoring — principles, practices, and design principles for deep nature connection.</a>
@@ -1931,6 +2046,9 @@ Skull: the family's story held in one place, carried across years.
     <div class="ll-panel" id="panel-nature"></div>
   </div>
 </div>
+
+<!-- The Games Shelf -->
+<div class="screen" id="screen-games"></div>
 
 <!-- Commons -->
 <div class="screen" id="screen-commons">
@@ -3445,6 +3563,7 @@ function showScreen(s) {
   if (s === 'quests') renderQuests();
   if (s === 'school') renderSchoolhouse();
   if (s === 'learning') renderLearning();
+  if (s === 'games') renderGames();
   if (s === 'commons') renderCommons();
   if (s === 'circle') renderCircle();
   renderFamiliar();
