@@ -2,6 +2,13 @@
 const QUEST_CARDS = {
  "generated": "2026-10-06",
  "source": "living-library quest-queue (Engine of Practicality)",
+ "authorship": {
+  "agent_id": "agent-b73ac550-5671-471e-b3e1-721f948ea063",
+  "agent_name": "Tutor",
+  "job": "village-quest-sync",
+  "lineage": "agent-b73ac550-5671-471e-b3e1-721f948ea063 -> village-quest-sync -> quest_cards.js",
+  "authored_at": "2026-10-06"
+ },
  "note": "Auto-generated. A quest card is a TEST of a claim, not an endorsement. Proposed cards are visible here before merging into the Quest Board.",
  "benches": [
   {
