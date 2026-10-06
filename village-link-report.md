@@ -1,22 +1,28 @@
+
+## 2026-10-06 maintenance pass
+-   watchdog: practicality-engine idle 10.8h; translator-ats idle 567.5h; clean-chem idle 22.9h; steiner-roots idle 552.9h; aflinks-shard-verify idle 306.9h; daily-brief idle 45.0h; cairn-clean-tech-rd idle 168.0h; cairn-clean-tech-bench idle 120.0h
+-   fixed 1 × double trailing slash
+-   fixed 8 × missing space after .com
+-   fixed 6 × trailing pipe
+-   master_quests.json: 15 URL fixes applied
+-   validators 5/5 passed
+
 # Village Link Report — 2026-10-06
 
-Checked **1003** URLs: **964** OK, **26** HTTP errors, **0** redirects, **13** unreachable/timeouts.
+Checked **1003** URLs: **967** OK, **26** HTTP errors, **0** redirects, **10** unreachable/timeouts.
 
-## Unreachable / timeout (13)
+## Unreachable / timeout (10)
 
-- `http://TerraPhoenixDesign.com`  (error: TimeoutError)
+- `http://TerraPhoenixDesign.com`  (error: URLError)
 - `http://quarteracrehome.wordpress.comhttps://www.etsy.com/shop/HomeAndHedgewitchhttps://www.instagram.com/wren_ohio/`  (error: URLError)
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
-- `http://www.davidhuang.org`  (error: RemoteDisconnected)
 - `http://www.dlive.tv/mavisfarmacyThe`  (error: URLError)
 - `http://www.theartisthomestead.comor`  (error: URLError)
 - `https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`  (error: URLError)
 - `https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20|`  (error: URLError)
+- `https://archive.org/details/fe_The_Solar_Greenhouse_Book`  (error: TimeoutError)
 - `https://mountainherbs.net/`  (error: URLError)
 - `https://tranqvillium.org`  (error: URLError)
-- `https://web.archive.org/web/20220409104932/http://organicfoodbliss.com/my-clear-cut-garden/`  (error: URLError)
-- `https://web.archive.org/web/20241213155330/http://uhspr.ca/merit-badges/`  (error: URLError)
-- `https://www.permaculturesouthafrica.co.za/what-is-permaculture-free-course/`  (error: TimeoutError)
 
 ## HTTP errors (26)
 
