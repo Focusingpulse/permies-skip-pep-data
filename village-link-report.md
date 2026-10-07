@@ -1,6 +1,6 @@
 # Village Link Report — 2026-10-07
 
-Checked **1010** URLs: **969** OK, **32** HTTP errors, **0** redirects, **9** unreachable/timeouts.
+Checked **1010** URLs: **971** OK, **30** HTTP errors, **0** redirects, **9** unreachable/timeouts.
 
 ## Unreachable / timeout (9)
 
@@ -10,11 +10,11 @@ Checked **1010** URLs: **969** OK, **32** HTTP errors, **0** redirects, **9** un
 - `https://archive.org/details/fe_The_Solar_Greenhouse_Book`  (error: TimeoutError)
 - `https://mountainherbs.net/`  (error: URLError)
 - `https://my10acres.info/`  (error: URLError)
+- `https://thewoodapp.com/`  (error: URLError)
 - `https://tranqvillium.org`  (error: URLError)
-- `https://web.archive.org/web/20100708230258/http:/people.csail.mit.edu/rahimi/helmet/`  (error: URLError)
-- `https://web.archive.org/web/20260711090655/`  (error: URLError)
+- `https://web.archive.org/web/2023/https://waldorfteacherresources.com/`  (error: URLError)
 
-## HTTP errors (32)
+## HTTP errors (30)
 
 - [`http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img`](http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img)  (HTTP 404)
 - [`http://onceuponeayarden.blogspot.com/`](http://onceuponeayarden.blogspot.com/)  (HTTP 404)
@@ -41,12 +41,10 @@ Checked **1010** URLs: **969** OK, **32** HTTP errors, **0** redirects, **9** un
 - [`https://www.blackdragonforge.com/products/smithing101`](https://www.blackdragonforge.com/products/smithing101)  (HTTP 429)
 - [`https://www.byjillb.com/`](https://www.byjillb.com/)  (HTTP 404)
 - [`https://www.etsy.com/shop/HomeAndHedgewitch`](https://www.etsy.com/shop/HomeAndHedgewitch)  (HTTP 403)
-- [`https://www.instagram.com/gemmaboyd407/?hl=en`](https://www.instagram.com/gemmaboyd407/?hl=en)  (HTTP 429)
-- [`https://www.instagram.com/wizard.mountainman/`](https://www.instagram.com/wizard.mountainman/)  (HTTP 429)
-- [`https://www.instagram.com/wren_ohio/`](https://www.instagram.com/wren_ohio/)  (HTTP 429)
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
 - [`https://www.mantakchia.com`](https://www.mantakchia.com)  (HTTP 403)
 - [`https://www.patreon.com/slowfilms`](https://www.patreon.com/slowfilms)  (HTTP 403)
+- [`https://www.theyearofmud.com/`](https://www.theyearofmud.com/)  (HTTP 504)
 - [`https://www.wildfermentation.com/`](https://www.wildfermentation.com/)  (HTTP 500)
 
 _Generated automatically. Review then delete broken links or replace with live alternatives._
