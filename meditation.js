@@ -406,6 +406,64 @@ const MEDITATION_SYSTEMS = [
     verify: "Two counts, and the prediction is that they move in opposite directions. Before and after a session, do a three-minute divergent-thinking count (name as many distinct uses as you can for one household object, then count distinct categories rather than raw ideas) and a three-minute noticing count (how many times you catch your attention absorbed). The single-bout research predicts open monitoring widens the first and focused attention narrows it. If the two practices give you the same result, you are probably doing the same practice twice — and that is worth knowing.",
     village: "This is the entry that tests the lane's own thesis directly. If different practices produce different results, the sharpest evidence should be two practices that push the same system in opposite directions — and that is what the single-bout research found for focused attention and open monitoring. It is also the section's third honest negative, and a different kind from the other two: prayer fails a claim the tradition never made, asana fails a claim the market made on the tradition's behalf, and open monitoring is the case where the tradition's own map and the clinical literature agree — on a risk. The tradition marks the hard stages; the adverse-effects study found them. That agreement is the entry's reason to exist.",
     quest: ["The Two Ways of Paying Attention", "Practise two meditations for a week each: one holding attention on a single object (the breath), and one holding no object and simply noticing whatever arises. After each session, do the same three-minute task — name as many distinct uses as you can for one household object. Compare the two lists. Different practices, different results, and you can feel the difference yourself.", ["Health", "PE", "Science"], "👁️"]
+  },
+
+  {
+    id: "siddhis",
+    icon: "✨",
+    name: "The Siddhis — The Target Set",
+    esName: "Los Siddhis — El Conjunto Objetivo",
+    tagline: "The tradition's own catalog of abilities — and its own warning that they are the wrong thing to want.",
+    lineage: "Patanjali's Yoga Sutras, Book III (the Vibhuti Pada, c. 400 CE), catalogs the siddhis as the fruits of samyama — the sustained application of dharana, dhyana, and samadhi to a single object. The Buddhist canon keeps its own list (the iddhi), and the Hatha texts add more. The catalog is old, specific, and recognisably similar across traditions that did not share a source — which is exactly what makes it a good target set and a poor proof.",
+    what: "This entry is the lane's target set rather than one more technique. The siddhis are the traditional catalog of abilities said to emerge from extended practice: anima (becoming small), mahima (becoming great), laghima (becoming light), prapti (reaching anywhere), prakamya (fulfilling wishes), vasitva (commanding), isitva (lordship) — plus knowing the minds of others, remembering past lives, and knowing the moment of one's own death. The lane's job is to treat them as a list of claims, not as evidence. The tradition's own framing is the surprise: Patanjali files them as obstacles.",
+    esWhat: "Esta entrada es el conjunto objetivo del carril, no una técnica más. Los siddhis son el catálogo tradicional de habilidades que se dice emergen de la práctica prolongada: anima (volverse pequeño), mahima (volverse grande), laghima (volverse ligero), prapti (alcanzar cualquier lugar), prakamya (cumplir deseos), vasitva (dominar), isitva (señorío) — además de conocer las mentes ajenas, recordar vidas pasadas y saber el momento de la propia muerte. El trabajo del carril es tratarlos como una lista de afirmaciones, no como evidencia. El encuadre de la propia tradición es la sorpresa: Patanjali los archiva como obstáculos.",
+    chain: {
+      practice: "Samyama — the sustained triple of concentration, meditation, and absorption on one object, built on the eight limbs. Verifiable as an instruction; the tradition's own dose is measured in years.",
+      energyBody: "The tradition claims that samyama on an object yields mastery of that object — the subtle-body mechanism said to lie behind every siddhi. This is a claim, and no instrument has been pointed at it.",
+      ability: "The siddhi catalog itself — the target set. None of the classical abilities has a validated instrument. One has a measurable neighbour: knowing the minds of others sits next to empathic accuracy, which is measured.",
+      meaning: "The tradition's own answer is the twist: the siddhis are said to be obstacles to liberation, not its goal. The abilities are the by-product, and chasing them is the error."
+    },
+    claimed: "The tradition claims that extended samyama produces specific abilities, and it names them precisely. It also claims — in the same book — that the abilities are distractions to be set aside. Both claims are the tradition's; neither is evidence.",
+    measurable: "None identified for the classical siddhis — no instrument reaches levitation, and none reaches remembering past lives. That is a filing, not a refutation. The one honest neighbour: the siddhi of knowing the minds of others is adjacent to empathic accuracy, which IS measured, and the test below uses it.",
+    correlate: "This entry IS the correlate set — the Siddhis are the traditional names the other entries point at. Every practice in this section has a siddhi it is said to ripen into, and this is where those names live.",
+    label: "folklore",
+    practice: [
+      "This entry prescribes no siddhi practice — samyama is an advanced technique, and the tradition itself says it should not be the goal.",
+      "Learn the catalog — read the list of siddhis as a list of claims, not a menu.",
+      "Sort each one — for every siddhi, ask whether any instrument could reach it. For most, the honest answer is no.",
+      "Find the neighbour — for each siddhi, name the nearest measurable phenomenon (knowing minds → empathic accuracy; control of the body → interoception and autonomic measures).",
+      "Note the tradition's own warning — Patanjali files the siddhis as obstacles. That is the entry's most useful line.",
+      "File it, do not delete it — the doctrine's rule: falsifiable-but-untested is a category, not a refutation."
+    ],
+    reps: "Not applicable as a dose — this is the target set, not a technique. The tradition's own dose for samyama is years of the eight limbs; the honest at-home dose is the sorting exercise in the quest, done once and kept.",
+    evidence: "Weak / folklore (the ability claims); the catalog itself is well attested as a tradition",
+    evClass: "weak",
+    research: [
+      {
+        source: "Patanjali, Yoga Sutras, Book III (the Vibhuti Pada), esp. III.37 — the siddhis, and the warning that they are obstacles",
+        claim: "The tradition catalogs the abilities said to follow from samyama, and in the same book states that they are obstacles to samadhi and are not to be sought. Presented as the tradition's own claim, paraphrased rather than reproduced.",
+        medium: "primary text (translated) — tradition claim",
+        confidence: "High (as a statement of the tradition) · none claimed (as an outcome)",
+        year: "c. 400 CE"
+      },
+      {
+        source: "The empathic-accuracy literature (Ickes and colleagues) and the Reading the Mind in the Eyes test (Baron-Cohen et al.)",
+        claim: "The ability to infer another person's thoughts and feelings is measurable with validated tasks, which makes it the one siddhi with a real instrument next door. It is a neighbour, not the siddhi: the siddhi claims direct access; the instrument measures inference from cues.",
+        medium: "validated psychometric tasks",
+        confidence: "Moderate (as a measure of inference)",
+        year: "1990s–present"
+      },
+      {
+        source: "Lindahl, Fisher, Cooper, Rosen & Britton, 'The varieties of contemplative experience', PLoS ONE 12(5):e0176239 (2017)",
+        claim: "Practitioners who pursue unusual experiences report more adverse outcomes. This belongs here because the siddhi catalog is a menu of unusual experiences, and the tradition's own warning against chasing them is the warning the clinical literature arrived at independently.",
+        medium: "mixed-methods qualitative and survey study",
+        confidence: "Moderate (that adverse experiences occur) · contested (on prevalence)",
+        year: "2017"
+      }
+    ],
+    verify: "The one honest test in this entry: take the siddhi with a measurable neighbour — knowing the minds of others — and test the neighbour, not the siddhi. Use a validated empathic-accuracy task (the Reading the Mind in the Eyes test) before and after eight weeks of any practice in this section. If the score moves, you have measured inference from cues, not direct access — and saying which one you measured is the whole discipline of this lane.",
+    village: "This is the lane's ability-correlate leg: the target set the other entries point at. It is also the entry that carries the section's deepest lesson — the tradition that produced the catalog is the tradition that warns against wanting it. That is the same discipline the fleet applies to its own status reports, and the same discipline a family needs when a child asks whether meditation gives you powers. The honest answer is: here is the list, here is what could be tested, and here is what the tradition itself said about chasing it.",
+    quest: ["Sort the Claims", "Read the traditional list of siddhis — the abilities said to come from long practice. For each one, write two things: whether any instrument could ever reach it, and what the nearest measurable thing is. Then read what the tradition itself says about wanting them. Most of the list cannot be tested; the exercise is learning to say so without either dismissing it or pretending.", ["Science", "Writing", "Constitution"], "✨"]
   }
 ];
 
@@ -484,7 +542,8 @@ const MEDITATION_DEPOT = [
   { t: "SAGE trial — yoga and falls in older adults", u: "https://doi.org/10.1016/j.lanhl.2025.100749", d: "The largest test of the falls claim, and the one it failed. 700 participants; falls were more frequent in the yoga group." },
   { t: "Slagter et al. — three months of Vipassana, and the attentional blink", u: "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0050138", d: "The positive case for open monitoring, open access: the practice changed how a limited attentional resource was distributed." },
   { t: "Lippelt, Hommel & Colzato — the two styles push in opposite directions", u: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4171985/", d: "The dissociation evidence behind the lane's thesis: focused attention narrows, open monitoring widens." },
-  { t: "Lindahl et al. — the varieties of contemplative experience", u: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0176239", d: "The adverse-effects taxonomy, open access. Read it before teaching insight practice to a child." }
+  { t: "Lindahl et al. — the varieties of contemplative experience", u: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0176239", d: "The adverse-effects taxonomy, open access. Read it before teaching insight practice to a child." },
+  { t: "PubMed — empathic accuracy and the Reading the Mind in the Eyes test", u: "https://pubmed.ncbi.nlm.nih.gov/?term=reading+the+mind+in+the+eyes+test", d: "The instrument behind the one measurable neighbour of the siddhi catalog — the test the target-set entry actually uses." }
 ];
 
 /* Cross-links to practices that already live elsewhere in the Library —
