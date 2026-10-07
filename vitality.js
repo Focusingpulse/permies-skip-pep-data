@@ -1028,38 +1028,75 @@ const MOVEMENT_SYSTEMS = [
     name: "Grounding / Earthing",
     esName: "Conexión a Tierra (Earthing)",
     tagline: "Barefoot contact with the Earth — the entry with the biggest gap between claim and evidence.",
-    lineage: "A modern hypothesis popularized by Clint Ober with Stephen Sinatra and Martin Zucker ('Earthing', 2010), with a small research literature beginning in the 2000s.",
-    what: "The claim is that direct skin contact with the Earth's surface allows the body to absorb free electrons, reducing inflammation and improving sleep. The proposed mechanism is real in the sense that the body is conductive and the Earth is a charge reservoir — but the health outcomes claimed on top of that are supported by small, mostly uncontrolled studies.",
-    esWhat: "La afirmación: el contacto directo de la piel con la superficie terrestre permite absorber electrones libres, reduciendo la inflamación y mejorando el sueño. El mecanismo propuesto es real en el sentido de que el cuerpo es conductor; los resultados de salud se apoyan en estudios pequeños y en su mayoría no controlados.",
+    lineage: "A modern hypothesis popularized by Clint Ober with Stephen Sinatra and Martin Zucker ('Earthing', 2010), with a small research literature beginning in the 2000s. The group is small and overlapping: the 2012 review that anchors the claims lists a grounding-products company (Earth FX Inc.) among its authors' affiliations. That does not make the work false — it means the literature has been written largely by the people with a commercial interest in the result, and has never been independently replicated at scale.",
+    what: "The claim is that direct skin contact with the Earth's surface lets the body absorb free electrons, reducing inflammation and improving sleep. Half of that is not in dispute: the body is conductive, the Earth is a charge reservoir, and the connection is measurable with a meter. What is in dispute is everything built on top of it — that the connection changes sleep, pain, inflammation or blood viscosity. That part rests on a small literature written mostly by the practice's own researchers: a narrative review, studies with 10 to 30 participants, and mostly surrogate endpoints (blood and urine values rather than how anyone felt). One small randomised trial exists; its design has been criticised in detail. A decade of credentialed criticism has not been answered with a large independent trial.",
+    esWhat: "La afirmación: el contacto directo de la piel con la superficie terrestre permite absorber electrones libres, reduciendo la inflamación y mejorando el sueño. La mitad de eso no está en disputa: el cuerpo es conductor, la Tierra es un depósito de carga, y la conexión se puede medir con un multímetro. Lo que está en disputa es todo lo que se construye encima — que esa conexión cambie el sueño, el dolor, la inflamación o la viscosidad de la sangre. Esa parte se apoya en una literatura pequeña escrita en su mayoría por los propios investigadores de la práctica: una revisión narrativa, estudios de 10 a 30 participantes, y en su mayoría marcadores indirectos. Existe un ensayo aleatorizado pequeño; su diseño ha sido criticado en detalle. Una década de crítica con credenciales no ha sido respondida con un ensayo independiente y grande.",
     practice: [
-      "Barefoot time — 15–30 minutes of barefoot contact with soil, grass, sand, or stone.",
-      "Cold ground — the practice is more comfortable and more plausible in warm weather; do not turn it into a hardship.",
-      "Barefoot elsewhere — walking barefoot on varied ground is independently good for the feet and balance.",
-      "Sleeping grounded — conductive sheets and mats exist; they are the least-evidenced part of the practice.",
-      "Keep it honest — treat it as a pleasant, plausible, low-cost practice, not a treatment."
+      "Barefoot time — 30–40 minutes of barefoot contact with soil, grass, sand, or stone. That is the dose the practice's own 2012 review recommends; note that it is a recommendation, not a finding.",
+      "Warm ground — the practice is more comfortable and more plausible in warm weather; do not turn it into a hardship.",
+      "Barefoot elsewhere — walking barefoot on varied ground is independently good for the feet and balance (see the Barefoot & the Foot Core entry). That half of the practice does not depend on the electron claim at all.",
+      "Sleeping grounded — conductive sheets and mats exist. They are the least-evidenced and most commercialised part of the practice. Test the connection with a meter before you trust one; see the test below.",
+      "The caution the practice's own review gives — the 2012 review advises talking to a clinician first if you take blood thinners or thyroid medication, citing anecdotal reports of changed INR. That is a caution from the proponents, not an established interaction, but it costs nothing to know.",
+      "Keep it honest — treat it as a pleasant, plausible, low-cost practice, not a treatment. It is not a substitute for anything."
     ],
-    reps: "15–30 minutes daily, weather permitting. The barefoot walking is worth doing regardless of the earthing claim.",
-    evidence: "Weak / contested",
+    reps: "30–40 minutes barefoot daily, weather permitting — or a grounded mat overnight if you want to test the indoor version. The barefoot walking is worth doing regardless of the earthing claim.",
+    evidence: "Weak / contested — and now with the shape of the weakness named. The mechanism claim (your body is conductive, the Earth is a charge reservoir) is true and measurable with a multimeter. The outcome claims — better sleep, less pain, less inflammation, thinner blood — rest on a small literature written largely by the practice's own researchers: one narrative review, a handful of studies with 10 to 30 participants, mostly surrogate endpoints, and one small randomised trial whose stepped-wedge design has been criticised in detail. There is no large independent trial, no replication at increasing rigour, and the one credentialed critique of the field concludes the evidence has not improved in a decade. The practice is cheap, pleasant and very likely harmless; the claims are not established.",
     evClass: "weak",
     research: [
       {
-        source: "Chevalier, et al., 'Earthing: health implications of reconnecting the human body to the Earth's surface electrons', Journal of Environmental and Public Health (2012)",
-        claim: "Reports reduced cortisol, improved sleep, and reduced pain in small studies. The studies are small, frequently uncontrolled, and several key authors are associated with the commercial earthing industry.",
-        medium: "small studies, conflict-of-interest concerns",
-        confidence: "Weak",
+        source: "Chevalier, Sinatra, Oschman, Sokal & Sokal, 'Earthing: Health Implications of Reconnecting the Human Body to the Earth's Surface Electrons', Journal of Environmental and Public Health 2012:291541, doi:10.1155/2012/291541",
+        claim: "The paper that anchors the claims: it reports reduced pain, better sleep, a shift from sympathetic to parasympathetic tone, and a 'blood-thinning' effect, and calls the Earth a 'global treatment table'. It is a narrative review of the same group's small studies, not a systematic review, and its author affiliations include a grounding-products company (Earth FX Inc.) and a research consultancy (Nature's Own Research Association). It also carries a caution of its own: it advises clinician supervision for people on blood thinners or thyroid medication, citing anecdotal reports of INR variability.",
+        medium: "narrative review of small studies, written by the practice's own researchers",
+        confidence: "Weak — the review is the claim, not a test of it",
         year: "2012"
       },
       {
-        source: "Barefoot walking and foot strength (independent literature)",
-        claim: "Separately from the earthing claim, barefoot walking on varied terrain is associated with stronger feet and better proprioceptive input — a real benefit that does not depend on the electron hypothesis.",
-        medium: "independent literature",
-        confidence: "Moderate (for barefoot walking) · weak (for earthing)",
-        year: "2010s–2020s"
+        source: "Chevalier, Sinatra, Oschman & Delany, 'Earthing (Grounding) the Human Body Reduces Blood Viscosity', Journal of Alternative and Complementary Medicine 19(2):102–110, doi:10.1089/acm.2011.0820",
+        claim: "The most concrete laboratory result in the literature: 10 healthy adults, grounded for two hours through patches wired to a rod in the earth. The surface charge (zeta potential) of their red blood cells rose by a factor of 2.70 on average and cell clumping fell. Read it carefully — this is a surrogate marker, not a health outcome; nobody was followed to see whether anything happened to them. The analysis also used a one-tailed test chosen in advance for the expected direction, which makes a positive result easier to obtain.",
+        medium: "small laboratory study (n = 10), surrogate endpoint, one-tailed test",
+        confidence: "Weak as a health claim · real as a measured effect on a lab marker",
+        year: "2013"
+      },
+      {
+        source: "Sokal & Sokal, 'Earthing the Human Body Influences Physiologic Processes', Journal of Alternative and Complementary Medicine 17(4):301–308, doi:10.1089/acm.2010.0687",
+        claim: "Five separate experiments comparing earthed and unearthed people, with blood and urine drawn. Night-time earthing lowered serum iron, ionized calcium and inorganic phosphorus and reduced renal calcium and phosphorus excretion; it also decreased free T3 and increased free T4 and TSH, and continuous earthing lowered blood glucose in people with diabetes. Sample sizes were 84, 28, 12, 12 and 32 across the five experiments, at a single centre. Every outcome is a laboratory value, not a symptom, and none has been independently replicated.",
+        medium: "five small experiments, single centre, surrogate endpoints",
+        confidence: "Weak — small, unreplicated, and surrogate",
+        year: "2011"
+      },
+      {
+        source: "Chevalier, Patel, Weiss, Chopra & Mills, 'The Effects of Grounding (Earthing) on Bodyworkers' Pain and Overall Quality of Life: A Randomized Controlled Trial', Explore 15(3):181–190, doi:10.1016/j.explore.2018.10.001",
+        claim: "The one trial in the literature that looks like a clinical trial: 16 massage therapists, six weeks, stepped-wedge, described as double-blind. Grounded periods brought significant gains in physical function and energy and reductions in pain, fatigue, depressed mood and tiredness. It is also the study the critique lands hardest on: every participant followed the same on/off pattern, so 'double-blind' is doing less work than it sounds; many of the measured outcomes did not reach significance; and with 16 people and roughly a dozen outcomes, some positives are expected by chance.",
+        medium: "small randomised trial (n = 16), stepped-wedge design",
+        confidence: "Weak-to-moderate — a real trial design, too small with too many outcomes to settle anything",
+        year: "2019"
+      },
+      {
+        source: "Novella, S., 'Earthing Update', Science-Based Medicine (2023)",
+        claim: "A neurologist's review of the decade of earthing trials, and the strongest single document in this list. His findings: studies are small, focus on subjective outcomes, are poorly controlled, and never replicate at increasing rigour; the results within the bodyworker trial are 'all over the place' with many outcomes not significant and no adjustment for testing many outcomes at once; and a stepped-wedge design in which every subject receives the same pattern is not really double-blind. His generalisation is the one to carry: with dubious treatments you tend to see a persistent failure to replicate and an inverse relationship between study rigour and positive results.",
+        medium: "expert critique by a credentialed physician (Science-Based Medicine)",
+        confidence: "This is the critique, not a result — and it is the strongest document in the list",
+        year: "2023"
+      },
+      {
+        source: "Jamieson, I. A., 'Grounding (earthing) as related to electromagnetic hygiene: An integrative review', Biomedical Journal 46(1):30–40, doi:10.1016/j.bj.2022.11.005",
+        claim: "A review written from inside the field that names the confounders the trials do not control: soil moisture, the quality of a building's mains ground connection, and how well a given person is actually connected at all. If those variables matter — and the review argues they do — then 'grounded' and 'sham' are fuzzier categories in indoor studies than the trial reports suggest. Useful precisely because it is not a hostile source: it is the field admitting its own measurement problem.",
+        medium: "integrative review (pro-grounding)",
+        confidence: "Weak on outcomes · useful on why the trials are hard to interpret",
+        year: "2023"
+      },
+      {
+        source: "Lu, D., 'Grounding proponents say it helps us realign with the Earth's electric charge — but the claims don't land', The Guardian (2025)",
+        claim: "News reporting that puts a number on the mechanism claim: a study found that a sleeping person connected to the Earth through grounding bedsheets carries a current of up to 10 nanoamps — more than a billion times smaller than the current a household appliance draws. The physicists quoted also note that excess charge tends to stay on the body's surface rather than penetrating it. The scale is the point: a real connection can still be an electrically tiny one.",
+        medium: "news reporting with expert commentary",
+        confidence: "The critique, with a concrete number attached",
+        year: "2025"
       }
     ],
-    verify: "This entry exists to model honesty, not to sell a practice. Grounding is the clearest case in the library where the mechanism is plausible, the practice is pleasant and harmless, and the evidence is not there yet. Label it that way and do it if you enjoy it — the barefoot walking is the part that pays off regardless.",
-    village: "A good teaching entry: it shows the family how the Village labels evidence, including for something it is happy to include. The Skeptic's Star belongs here — a family that tries it and reports 'no measurable change' has done real work.",
-    quest: ["Barefoot & Honest", "Spend 15 minutes barefoot on natural ground daily for two weeks. Track sleep hours and how your feet feel. Report what changed and what did not — a null result earns the Skeptic's Star.", ["PE", "Health", "Science"], "🌍"]
+    verify: "Two tests, because there are two separate claims. FIRST — does the connection even exist? A multimeter answers this. Unplug the mat or sheet and use the meter on its own battery (never probe a live socket): check continuity from the mat's surface to its ground pin, then stand barefoot on moist ground and check resistance between your skin and a metal stake driven into that ground. A real connection reads as low resistance or a near-zero voltage difference; an open circuit means the device is decoration, and no amount of sleeping on it will do anything. SECOND — does it change anything? Run a blinded within-person crossover: two weeks sleeping grounded, two weeks not, with a family member connecting or disconnecting the mat without telling you which week is which. Record one number each morning — how long it took to fall asleep, or how stiff you felt on a 1–10 scale — and compare the two weeks only after the code is broken. Be honest about the limit: with one person you cannot detect a small effect, and a difference you can still see while blinded is more likely to be real than one you can only see when you know. What cannot be tested at home: the blood-viscosity and inflammation claims need blood draws, and the claim that grounding prevents disease has never been tested in a trial at all.",
+    village: "A good teaching entry: it shows the family how the Village labels evidence, including for something it is happy to include. It is also the best entry in the library for teaching the difference between a mechanism you can measure and an outcome you cannot — the multimeter proves the wire, not the benefit. The Skeptic's Star belongs here: a family that tries it and reports 'no measurable change' has done real work.",
+    quest: ["Barefoot & Honest", "Run the two-part test. First prove the connection with a multimeter — if the meter shows no conductive path, the mat is decoration. Then run a blinded two-week crossover on how long it takes to fall asleep and how stiff you feel in the morning. Report what changed and what did not; a null result earns the Skeptic's Star.", ["PE", "Health", "Science"], "🌍"],
+    authorship: {"agent_id": "agent-b73ac550-5671-471e-b3e1-721f948ea063", "agent_name": "Tutor", "job": "vitality-engine", "lineage": "agent-b73ac550-5671-471e-b3e1-721f948ea063 -> vitality-engine -> grounding-earthing-deepening", "authored_at": "2026-10-07"}
   },
 
   {
