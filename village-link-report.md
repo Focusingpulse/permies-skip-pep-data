@@ -1,8 +1,8 @@
-# Village Link Report — 2026-10-07
+# Village Link Report — 2026-10-08
 
-Checked **1010** URLs: **974** OK, **28** HTTP errors, **0** redirects, **8** unreachable/timeouts.
+Checked **1010** URLs: **970** OK, **30** HTTP errors, **0** redirects, **10** unreachable/timeouts.
 
-## Unreachable / timeout (8)
+## Unreachable / timeout (10)
 
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
 - `http://www.dlive.tv/mavisfarmacyThe`  (error: URLError)
@@ -10,10 +10,12 @@ Checked **1010** URLs: **974** OK, **28** HTTP errors, **0** redirects, **8** un
 - `https://archive.org/details/fe_The_Solar_Greenhouse_Book`  (error: TimeoutError)
 - `https://mountainherbs.net/`  (error: URLError)
 - `https://my10acres.info/`  (error: URLError)
+- `https://reviver-project.eu/2024/02/12/digitalized-vocational-curriculum/`  (error: TimeoutError)
 - `https://tranqvillium.org`  (error: URLError)
 - `https://web.archive.org/web/2023/https://waldorfteacherresources.com/`  (error: URLError)
+- `https://web.archive.org/web/2025/https://www.dni.gov/files/ODNI/documents/assessments/NIC-Unclassified-ICA-Updated-Assessment-AHI-December2024.pdf`  (error: URLError)
 
-## HTTP errors (28)
+## HTTP errors (30)
 
 - [`http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img`](http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img)  (HTTP 404)
 - [`http://onceuponeayarden.blogspot.com/`](http://onceuponeayarden.blogspot.com/)  (HTTP 404)
@@ -27,7 +29,6 @@ Checked **1010** URLs: **974** OK, **28** HTTP errors, **0** redirects, **8** un
 - [`https://charlesdowding.co.uk`](https://charlesdowding.co.uk)  (HTTP 429)
 - [`https://culturesforhealth.com/blogs/learn`](https://culturesforhealth.com/blogs/learn)  (HTTP 429)
 - [`https://goingtoseed.org/collections/courses`](https://goingtoseed.org/collections/courses)  (HTTP 429)
-- [`https://growingmodernlandraces.thinkific.com/?ref=b1de16Growingmodernlandraces.com`](https://growingmodernlandraces.thinkific.com/?ref=b1de16Growingmodernlandraces.com)  (HTTP 429)
 - [`https://handtoolwoodworking.com/green-woodworking-videos/`](https://handtoolwoodworking.com/green-woodworking-videos/)  (HTTP 403)
 - [`https://holmgren.com.au/`](https://holmgren.com.au/)  (HTTP 403)
 - [`https://innoperma.weebly.com/`](https://innoperma.weebly.com/)  (HTTP 404)
@@ -37,9 +38,12 @@ Checked **1010** URLs: **974** OK, **28** HTTP errors, **0** redirects, **8** un
 - [`https://woodworkingformeremortals.com/`](https://woodworkingformeremortals.com/)  (HTTP 405)
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
 - [`https://www.allaboutbirds.org/`](https://www.allaboutbirds.org/)  (HTTP 403)
-- [`https://www.blackdragonforge.com/products/smithing101`](https://www.blackdragonforge.com/products/smithing101)  (HTTP 429)
+- [`https://www.amazon.com/Jill-b/e/B00OJKS5G8?ref=sr_ntt_srch_lnk_3&qid=1578855737&sr=8-3`](https://www.amazon.com/Jill-b/e/B00OJKS5G8?ref=sr_ntt_srch_lnk_3&qid=1578855737&sr=8-3)  (HTTP 405)
 - [`https://www.byjillb.com/`](https://www.byjillb.com/)  (HTTP 404)
 - [`https://www.etsy.com/shop/HomeAndHedgewitch`](https://www.etsy.com/shop/HomeAndHedgewitch)  (HTTP 403)
+- [`https://www.instagram.com/gemmaboyd407/?hl=en`](https://www.instagram.com/gemmaboyd407/?hl=en)  (HTTP 429)
+- [`https://www.instagram.com/wizard.mountainman/`](https://www.instagram.com/wizard.mountainman/)  (HTTP 429)
+- [`https://www.instagram.com/wren_ohio/`](https://www.instagram.com/wren_ohio/)  (HTTP 429)
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
 - [`https://www.patreon.com/slowfilms`](https://www.patreon.com/slowfilms)  (HTTP 403)
 - [`https://www.wildfermentation.com/`](https://www.wildfermentation.com/)  (HTTP 500)
