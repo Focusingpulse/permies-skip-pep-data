@@ -1,18 +1,19 @@
 # Village Link Report — 2026-10-09
 
-Checked **1010** URLs: **973** OK, **30** HTTP errors, **0** redirects, **7** unreachable/timeouts.
+Checked **1010** URLs: **976** OK, **26** HTTP errors, **0** redirects, **8** unreachable/timeouts.
 
-## Unreachable / timeout (7)
+## Unreachable / timeout (8)
 
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
+- `http://www.davidhuang.org`  (error: TimeoutError)
 - `http://www.dlive.tv/mavisfarmacyThe`  (error: URLError)
 - `https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`  (error: URLError)
+- `https://archive.org/details/fe_The_Solar_Greenhouse_Book`  (error: TimeoutError)
 - `https://mountainherbs.net/`  (error: URLError)
 - `https://my10acres.info/`  (error: URLError)
 - `https://tranqvillium.org`  (error: URLError)
-- `https://web.archive.org/web/2023/https://waldorfteacherresources.com/`  (error: URLError)
 
-## HTTP errors (30)
+## HTTP errors (26)
 
 - [`http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img`](http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img)  (HTTP 404)
 - [`http://onceuponeayarden.blogspot.com/`](http://onceuponeayarden.blogspot.com/)  (HTTP 404)
@@ -23,7 +24,6 @@ Checked **1010** URLs: **973** OK, **30** HTTP errors, **0** redirects, **7** un
 - [`http://www.northwestpermaculture.org/-`](http://www.northwestpermaculture.org/-)  (HTTP 404)
 - [`https://blog.lostartpress.com/2025/05/19/the-free-video-series-of-build-a-chair-from-bullst/`](https://blog.lostartpress.com/2025/05/19/the-free-video-series-of-build-a-chair-from-bullst/)  (HTTP 403)
 - [`https://calearth.org`](https://calearth.org)  (HTTP 429)
-- [`https://charlesdowding.co.uk`](https://charlesdowding.co.uk)  (HTTP 429)
 - [`https://culturesforhealth.com/blogs/learn`](https://culturesforhealth.com/blogs/learn)  (HTTP 429)
 - [`https://goingtoseed.org/collections/courses`](https://goingtoseed.org/collections/courses)  (HTTP 429)
 - [`https://growingmodernlandraces.thinkific.com/?ref=b1de16Growingmodernlandraces.com`](https://growingmodernlandraces.thinkific.com/?ref=b1de16Growingmodernlandraces.com)  (HTTP 429)
@@ -39,9 +39,6 @@ Checked **1010** URLs: **973** OK, **30** HTTP errors, **0** redirects, **7** un
 - [`https://www.blackdragonforge.com/products/smithing101`](https://www.blackdragonforge.com/products/smithing101)  (HTTP 429)
 - [`https://www.byjillb.com/`](https://www.byjillb.com/)  (HTTP 404)
 - [`https://www.etsy.com/shop/HomeAndHedgewitch`](https://www.etsy.com/shop/HomeAndHedgewitch)  (HTTP 403)
-- [`https://www.instagram.com/gemmaboyd407/?hl=en`](https://www.instagram.com/gemmaboyd407/?hl=en)  (HTTP 429)
-- [`https://www.instagram.com/wizard.mountainman/`](https://www.instagram.com/wizard.mountainman/)  (HTTP 429)
-- [`https://www.instagram.com/wren_ohio/`](https://www.instagram.com/wren_ohio/)  (HTTP 429)
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
 - [`https://www.patreon.com/slowfilms`](https://www.patreon.com/slowfilms)  (HTTP 403)
 
