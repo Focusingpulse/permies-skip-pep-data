@@ -40,7 +40,6 @@ const VILLAGE_QUESTS = [
     sand: [
       ["Make 12 Adobe Bricks","Mix, mold, and dry a small batch of adobe bricks.",["Science","Math"],"🧱"],
       ["Make Clay Paint","Mix and apply a simple clay paint finish.",["Art","Science"],"🎨"],
-      ["Level a Skiddable Structure with Rocks","Use rocks to level a structure that can move on skids.",["Math","Science"],"🪨"],
       ["Make a 25 Sq Ft Shake Roof","Put together a small shake roof section.",["Math","Science"],"🏚️"],
       ["Make Whitewash","Mix and apply a whitewash finish.",["Art","Science"],"⚪"],
       ["Level a Skiddable Structure with Rocks","Use rocks to level a skiddable structure: before, action, and leveled-after pictures. (PEP BB: naturalbuilding.sand.rocklevel)",["Science","Math"],"🪨"],
