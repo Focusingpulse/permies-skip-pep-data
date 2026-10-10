@@ -146,7 +146,9 @@ const VILLAGE_QUESTS = [
       ["Oil a Tool","Clean and oil a hand tool to prevent rust.",["Science","Health"],"🛢️"],
       ["Repair a Tool","Fix a broken tool handle, fit, or fastener.",["Science","Math"],"🔧"]
     ],
-    straw: [],
+    straw: [
+      ["Remove Rust, Clean, and Oil a Hand Tool","Restore a rusty hand tool with a non-toxic method like sandpaper or vinegar, then oil it — show the rust, the removal, and the oiled finish. (PEP BB: tool.straw.removerust)",["Science"],"🧰"]
+    ],
     wood: [],
     iron: []
   },
@@ -251,7 +253,10 @@ const VILLAGE_QUESTS = [
       ["Build a Wildlife Shelter","Make a small shelter or brush pile for local wildlife.",["Science","PE"],"🪺"],
       ["Clean Out 4 Chicken Nest Boxes","Photograph 4 dirty nest boxes, replace the straw or shavings, and show all 4 clean — or a 2-minute video of the whole job. (PEP BB: animal.sand.cleanbox)",["Science","Health"],"🐔"]
     ],
-    straw: [],
+    straw: [
+      ["Breed a Ewe and Raise a Lamb","Care for a ewe through pregnancy and raise her lamb past one week old, documenting the care at each stage. (PEP BB: animal.straw.raiselamb)",["Science"],"🐑"],
+      ["Breed a Cow and Raise a Calf","Care for a cow through pregnancy and raise her calf past one week old, documenting the care at each stage. (PEP BB: animal.straw.calf)",["Science"],"🐄"]
+    ],
     wood: [],
     iron: []
   },
@@ -299,7 +304,9 @@ const VILLAGE_QUESTS = [
       ["Sew an Item","Make a small sewn item like a pouch, napkin, or bag.",["Art","Writing"],"🧶"],
       ["Sew a Small Pillow","Show your fabric, the pillow in progress, the stuffing, and the finished pillow. (PEP BB: textile.sand.pillow)",["Art","Science"],"🛏️"]
     ],
-    straw: [],
+    straw: [
+      ["Spin and Ply Yarn","Spin and ply 8 ounces of natural plant or animal fiber into at least 200 yards of finished yarn with 2 or more plies. (PEP BB: textile.straw.spin.plyyarn)",["Art","Math"],"🌀"]
+    ],
     wood: [],
     iron: []
   },
@@ -449,6 +456,9 @@ const VILLAGE_QUESTS = [
       ["Make an Atlatl","Carve an atlatl thrower plus a fletched arrow with replaceable tip — only materials that existed 200 years ago. (PEM BB: traditional.straw.atlatl)",["History","PE"],"🏹"],
       ["Make a Bark Basket","Weave a basket at least 8 inches wide and 6 inches tall from large bark pieces, stitched with spruce roots or similar cordage — only materials that existed 200 years ago. (PEM BB: traditional.straw.barkbasket)",["Art","History"],"🧺"],
       ["Weave a Fish Net","Make a woven fish net with 1-inch or smaller mesh, at least 8 square feet — only materials that existed 200 years ago. (PEM BB: traditional.straw.net)",["Art","PE"],"🕸️"]
+      ,["Make Leather Cordage","Make 20 feet of leather cordage with a deliberate, consistent width or roughly consistent strength — only materials that existed 200 years ago. (PEM BB: traditional.sand.leather)",["Art","History"],"👢"],
+      ["Weave a Pine Needle Basket","Coil and stitch a pine needle basket at least 4 inches across with natural thread — only materials that existed 200 years ago. (PEM BB: traditional.straw.weavepine)",["Art","History"],"🌲"],
+      ["Make Shell Buttons","Shape and drill 4 smooth, round shell buttons with at least 2 holes each — only materials that existed 200 years ago. (PEM BB: traditional.straw.buttons)",["Art","History"],"🐚"]
     ],
     straw: [],
     wood: [],
@@ -464,6 +474,7 @@ const VILLAGE_QUESTS = [
       ["Create a Secret Family Trail Marker","Design a hidden marker or code for a local trail or path.",["Writing","Art"],"🗺️"],
       ["Make Music from Found Objects","Create a simple instrument or sound maker from trash or scraps.",["Art","PE"],"🎶"],
       ["Design a Zero-Budget Game or Challenge","Invent a game, puzzle, or family challenge with no budget.",["Writing","Art"],"🎲"]
+      ,["Turn a Plastic Jug into a Scoop","Upcycle a plastic jug into a tough, functional scoop — show the jug you're starting with and the finished scoop. (PEM BB: wastestreams.sand.scoop)",["Art","Science"],"🥄"]
     ],
     straw: [],
     wood: [],

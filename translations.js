@@ -1358,6 +1358,38 @@ const LANG = {
       "title": "Tejer una red de pesca",
       "desc": "Haz una red de pesca tejida con malla de 2,5 cm o menor, de al menos 8 pies cuadrados — solo materiales que existieran hace 200 años. (BB de PEM: traditional.straw.net)"
     },
+    "Make Leather Cordage": {
+      "title": "Hacer cordaje de cuero",
+      "desc": "Haz 6 metros (20 pies) de cordaje de cuero con un ancho deliberado y constante o una resistencia aproximadamente constante — solo materiales que existieran hace 200 años. (BB de PEM: traditional.sand.leather)"
+    },
+    "Weave a Pine Needle Basket": {
+      "title": "Tejer una cesta de agujas de pino",
+      "desc": "Enrolla y cose una cesta de agujas de pino de al menos 10 cm de diámetro con hilo natural — solo materiales que existieran hace 200 años. (BB de PEM: traditional.straw.weavepine)"
+    },
+    "Make Shell Buttons": {
+      "title": "Hacer botones de concha",
+      "desc": "Forma y taladra 4 botones de concha lisos y redondeados con al menos 2 agujeros cada uno — solo materiales que existieran hace 200 años. (BB de PEM: traditional.straw.buttons)"
+    },
+    "Spin and Ply Yarn": {
+      "title": "Hilar y retorcer hilo",
+      "desc": "Hila y retuerce 225 g (8 onzas) de fibra natural vegetal o animal en al menos 180 metros de hilo terminado con 2 o más cabos. (BB de PEP: textile.straw.spin.plyyarn)"
+    },
+    "Remove Rust, Clean, and Oil a Hand Tool": {
+      "title": "Quitar el óxido, limpiar y aceitar una herramienta de mano",
+      "desc": "Restaura una herramienta oxidada con un método no tóxico como lija o vinagre, y luego aceítala — muestra el óxido, la limpieza y el acabado aceitado. (BB de PEP: tool.straw.removerust)"
+    },
+    "Breed a Ewe and Raise a Lamb": {
+      "title": "Criar una oveja y levantar un cordero",
+      "desc": "Cuida una oveja durante la gestación y cría su cordero más allá de la primera semana de vida, documentando el cuidado en cada etapa. (BB de PEP: animal.straw.raiselamb)"
+    },
+    "Breed a Cow and Raise a Calf": {
+      "title": "Criar una vaca y levantar un ternero",
+      "desc": "Cuida una vaca durante la gestación y cría su ternero más allá de la primera semana de vida, documentando el cuidado en cada etapa. (BB de PEP: animal.straw.calf)"
+    },
+    "Turn a Plastic Jug into a Scoop": {
+      "title": "Convertir un bidón de plástico en una pala",
+      "desc": "Reutiliza un bidón de plástico para hacer una pala resistente y funcional — muestra el bidón inicial y la pala terminada. (BB de PEM: wastestreams.sand.scoop)"
+    },
   }
 },
   "fr": {
@@ -2713,6 +2745,38 @@ const LANG = {
       "title": "Tisser un filet de pêche",
       "desc": "Fais un filet de pêche tissé avec des mailles de 2,5 cm ou moins, d'au moins 8 pieds carrés — uniquement des matériaux d'il y a 200 ans. (BB PEM : traditional.straw.net)"
     },
+    "Make Leather Cordage": {
+      "title": "Faire du cordage en cuir",
+      "desc": "Fais 6 mètres (20 pieds) de cordage en cuir avec une largeur délibérée et régulière ou une résistance à peu près régulière — uniquement des matériaux d'il y a 200 ans. (BB PEM : traditional.sand.leather)"
+    },
+    "Weave a Pine Needle Basket": {
+      "title": "Tisser un panier d'aiguilles de pin",
+      "desc": "Enroule et couds un panier d'aiguilles de pin d'au moins 10 cm de diamètre avec du fil naturel — uniquement des matériaux d'il y a 200 ans. (BB PEM : traditional.straw.weavepine)"
+    },
+    "Make Shell Buttons": {
+      "title": "Faire des boutons en coquillage",
+      "desc": "Forme et perce 4 boutons en coquillage lisses et ronds avec au moins 2 trous chacun — uniquement des matériaux d'il y a 200 ans. (BB PEM : traditional.straw.buttons)"
+    },
+    "Spin and Ply Yarn": {
+      "title": "Filer et retordre du fil",
+      "desc": "File et retors 225 g (8 onces) de fibre naturelle végétale ou animale en au moins 180 mètres de fil fini avec 2 brins ou plus. (BB PEP : textile.straw.spin.plyyarn)"
+    },
+    "Remove Rust, Clean, and Oil a Hand Tool": {
+      "title": "Dérouiller, nettoyer et huiler un outil à main",
+      "desc": "Restaure un outil rouillé avec une méthode non toxique comme du papier de verre ou du vinaigre, puis huile-le — montre la rouille, le nettoyage et la finition huilée. (BB PEP : tool.straw.removerust)"
+    },
+    "Breed a Ewe and Raise a Lamb": {
+      "title": "Faire reproduire une brebis et élever un agneau",
+      "desc": "Prends soin d'une brebis pendant la gestation et élève son agneau au-delà d'une semaine de vie, en documentant chaque étape. (BB PEP : animal.straw.raiselamb)"
+    },
+    "Breed a Cow and Raise a Calf": {
+      "title": "Faire reproduire une vache et élever un veau",
+      "desc": "Prends soin d'une vache pendant la gestation et élève son veau au-delà d'une semaine de vie, en documentant chaque étape. (BB PEP : animal.straw.calf)"
+    },
+    "Turn a Plastic Jug into a Scoop": {
+      "title": "Transformer un bidon en plastique en pelle",
+      "desc": "Recycle un bidon en plastique en une pelle robuste et fonctionnelle — montre le bidon de départ et la pelle terminée. (BB PEM : wastestreams.sand.scoop)"
+    },
   }
 },
   "de": {
@@ -4067,6 +4131,38 @@ const LANG = {
     "Weave a Fish Net": {
       "title": "Ein Fischnetz knüpfen",
       "desc": "Mache ein geknüpftes Fischnetz mit Maschen von 2,5 cm oder kleiner, mindestens 8 Quadratfuß — nur Materialien, die vor 200 Jahren existierten. (PEM-BB: traditional.straw.net)"
+    },
+    "Make Leather Cordage": {
+      "title": "Lederband herstellen",
+      "desc": "Stelle 6 Meter (20 Fuß) Lederband mit bewusst gleichmäßiger Breite oder ungefähr gleichmäßiger Festigkeit her — nur Materialien, die vor 200 Jahren existierten. (PEM-BB: traditional.sand.leather)"
+    },
+    "Weave a Pine Needle Basket": {
+      "title": "Einen Kiefernnadelkorb flechten",
+      "desc": "Wickle und nähe einen Korb aus Kiefernnadeln von mindestens 10 cm Durchmesser mit Naturfaden — nur Materialien, die vor 200 Jahren existierten. (PEM-BB: traditional.straw.weavepine)"
+    },
+    "Make Shell Buttons": {
+      "title": "Muschelknöpfe herstellen",
+      "desc": "Forme und bohre 4 glatte, runde Muschelknöpfe mit mindestens 2 Löchern — nur Materialien, die vor 200 Jahren existierten. (PEM-BB: traditional.straw.buttons)"
+    },
+    "Spin and Ply Yarn": {
+      "title": "Garn spinnen und zwirnen",
+      "desc": "Spinne und zwirne 225 g (8 Unzen) natürliche Pflanzen- oder Tierfaser zu mindestens 180 Metern fertigem Garn mit 2 oder mehr Fäden. (PEP-BB: textile.straw.spin.plyyarn)"
+    },
+    "Remove Rust, Clean, and Oil a Hand Tool": {
+      "title": "Ein Handwerkzeug entrosten, reinigen und ölen",
+      "desc": "Stelle ein rostiges Handwerkzeug mit einer ungiftigen Methode wie Sandpapier oder Essig wieder her und öle es danach — zeige den Rost, die Reinigung und das geölte Finish. (PEP-BB: tool.straw.removerust)"
+    },
+    "Breed a Ewe and Raise a Lamb": {
+      "title": "Ein Mutterschaf züchten und ein Lamm aufziehen",
+      "desc": "Pflege ein Mutterschaf durch die Trächtigkeit und ziehe sein Lamm über die erste Lebenswoche hinaus auf, mit Dokumentation jeder Etappe. (PEP-BB: animal.straw.raiselamb)"
+    },
+    "Breed a Cow and Raise a Calf": {
+      "title": "Eine Kuh züchten und ein Kalb aufziehen",
+      "desc": "Pflege eine Kuh durch die Trächtigkeit und ziehe ihr Kalb über die erste Lebenswoche hinaus auf, mit Dokumentation jeder Etappe. (PEP-BB: animal.straw.calf)"
+    },
+    "Turn a Plastic Jug into a Scoop": {
+      "title": "Einen Plastikkanister in eine Schaufel verwandeln",
+      "desc": "Verwandle einen Plastikkanister in eine robuste, funktionale Schaufel — zeige den Ausgangskanister und die fertige Schaufel. (PEM-BB: wastestreams.sand.scoop)"
     },
   }
 }
