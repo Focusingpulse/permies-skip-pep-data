@@ -55,6 +55,14 @@ RESOURCE_POOL = [
      "Bird guides, calls, and citizen-science projects for nature study."),
     ("Permaculture", "Permies.com — PEP forums", "https://permies.com/forums",
      "The source community for PEP/SKIP badges and permaculture practice."),
+    ("Permaculture", "ATTRA — Sustainable Agriculture (NCAT)", "https://attra.ncat.org/",
+     "Free publications and guides on sustainable agriculture, soils, livestock, and market farming."),
+    ("Gardening", "SARE — Sustainable Agriculture Research & Education", "https://www.sare.org/",
+     "Free books and bulletins on cover crops, soil health, grazing, and ecological farming."),
+    ("Nature Study", "iNaturalist", "https://www.inaturalist.org/",
+     "Identify plants and animals with a global citizen-science community — feeds real biodiversity research."),
+    ("Food Preservation", "OSU Extension Service", "https://extension.oregonstate.edu/",
+     "Research-based guides on gardening, forestry, food preservation, and small farms."),
 ]
 
 # --- Bounded resource addition: how many new resources per run ---
