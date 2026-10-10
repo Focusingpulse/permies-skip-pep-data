@@ -51,7 +51,7 @@ const CULTURE_ELEMENTS = {
   },
 
   "1.2": {
-    science: "Purposeful solo tasks build perceived competence and autonomy (self-determination theory, Deci & Ryan) and exercise executive function under real stakes rather than simulated ones.",
+    science: "Mastery experience — succeeding at a real task rather than a simulated one — is the strongest of the four sources of self-efficacy (Bandura, 1977, Psychological Review 84(2):191–215; 1997, Self-Efficacy: The Exercise of Control). Self-determination theory holds that competence and autonomy are basic psychological needs whose satisfaction drives intrinsic motivation (Deci & Ryan, 1985; Ryan & Deci, 2000, American Psychologist 55(1):68–78). A real errand supplies both at once: a mastery experience (a real outcome) delivered with autonomy (no supervision). The earlier wording's 'exercises executive function under real stakes' is a plausible inference, not an established effect — the self-efficacy and SDT findings are the solid ground.",
     evClass: "moderate",
     useCases: [
       { domain: "family", how: "Send a child on a real errand with a real outcome and no supervision. The stakes are what make it work." },
