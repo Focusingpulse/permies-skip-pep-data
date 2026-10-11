@@ -1346,6 +1346,38 @@ const LANG = {
       "title": "Hacer un lingote de metal de 170 g",
       "desc": "Funde y vierte un lingote de metal de al menos 6 onzas (sin plomo) — fotos del material, del proceso y del lingote terminado. (BB de PEP: metalworking.straw.ingot)"
     },
+    "Make Paper from Plants": {
+      "title": "Hacer papel a partir de plantas",
+      "desc": "Haz 6 hojas de papel de al menos 20 x 28 cm a partir de material vegetal o madera (sin reciclar papel), usando solo materiales que existían hace 200 años — fotos del material, las herramientas, el proceso y las hojas terminadas. (BB de PEM: traditional.straw.paper)"
+    },
+    "Lay 200 Feet of Living Fence": {
+      "title": "Plegar 60 metros de seto vivo",
+      "desc": "Pliega 200 pies (unos 60 m) de seto vivo con la técnica tradicional de hedge-laying — fotos del antes, la acción y el resultado con el seto de al menos 200 pies terminado. (BB de PEP: woodland.iron.livingfence)"
+    },
+    "Forge a Set of Tongs": {
+      "title": "Forjar un juego de tenazas",
+      "desc": "Forja un juego de tenazas con remache y mangos estirados (nada de lámina plana retorcida). (Insignia Straw de metalistería de PEP, lista de forja — 2 puntos)"
+    },
+    "Weld a Door Latch": {
+      "title": "Soldar un cerrojo de puerta",
+      "desc": "Haz un cerrojo de puerta, principalmente con soldadura de gas o arco. (Insignia Straw de metalistería de PEP, lista de soldadura — 1 punto)"
+    },
+    "Build a Welding Table": {
+      "title": "Construir una mesa de soldadura",
+      "desc": "Diseña y construye una mesa de soldadura robusta. (Insignia Wood de metalistería de PEP, lista de soldadura — 8-16 puntos)"
+    },
+    "Fix a Leak in a Supply Pipe": {
+      "title": "Reparar una fuga en una tubería de suministro",
+      "desc": "Encuentra y repara una fuga en una tubería de suministro a presión. (Insignia Straw de fontanería de PEP, lista de reparaciones — 1 punto)"
+    },
+    "Replace a Toilet": {
+      "title": "Sustituir un inodoro",
+      "desc": "Retira un inodoro viejo e instala un repuesto que funcione. (Insignia Straw de fontanería de PEP, lista de reparaciones — 2 puntos)"
+    },
+    "Set Up a Wood-Fired Hot Water System": {
+      "title": "Instalar un sistema de agua caliente a leña",
+      "desc": "Instala un sistema presurizado de agua caliente alimentado con leña. (Insignia Wood de fontanería de PEP — 8 puntos)"
+    },
     "Build a Community Garden": {
       "title": "Crear un huerto comunitario",
       "desc": "Crea un huerto comunitario: 8+ parcelas rotuladas en al menos media hectárea, valla a prueba de ciervos, agua fiable (380 L/día), regaderas, caminos, normas publicadas, una caseta de herramientas y zona de enjuague — documentado en un hilo de permies. (BB de PEP: community.wood.buildgarden)"
@@ -2733,6 +2765,38 @@ const LANG = {
       "title": "Fabriquer un lingot de métal de 170 g",
       "desc": "Fais fondre et coule un lingot de métal d'au moins 6 onces (pas de plomb) — photos du matériel, de l'avancement et du lingot fini. (BB PEP : metalworking.straw.ingot)"
     },
+    "Make Paper from Plants": {
+      "title": "Fabriquer du papier à partir de plantes",
+      "desc": "Fabrique 6 feuilles de papier d'au moins 20 x 28 cm à partir de matière végétale ou de bois (sans recycler de papier), en n'utilisant que des matériaux qui existaient il y a 200 ans — photos du matériau, des outils, du processus et des feuilles finies. (BB de PEM : traditional.straw.paper)"
+    },
+    "Lay 200 Feet of Living Fence": {
+      "title": "Ployer 60 mètres de haie vive",
+      "desc": "Ploie 200 pieds (environ 60 m) de haie vive selon la technique traditionnelle du ployage — photos avant, pendant et après montrant la haie d'au moins 200 pieds terminée. (BB de PEP : woodland.iron.livingfence)"
+    },
+    "Forge a Set of Tongs": {
+      "title": "Forger une paire de tenailles",
+      "desc": "Forge une paire de tenailles avec rivet et poignées étirées (pas de fer plat simplement tordu). (Badge Straw de métallerie PEP, liste de forge — 2 points)"
+    },
+    "Weld a Door Latch": {
+      "title": "Souder un loquet de porte",
+      "desc": "Fabrique un loquet de porte, principalement par soudure au gaz ou à l'arc. (Badge Straw de métallerie PEP, liste de soudure — 1 point)"
+    },
+    "Build a Welding Table": {
+      "title": "Construire une table de soudure",
+      "desc": "Conçois et construis une table de soudure robuste. (Badge Wood de métallerie PEP, liste de soudure — 8 à 16 points)"
+    },
+    "Fix a Leak in a Supply Pipe": {
+      "title": "Réparer une fuite dans un tuyau d'alimentation",
+      "desc": "Trouve et répare une fuite dans un tuyau d'alimentation sous pression. (Badge Straw de plomberie PEP, liste de réparations — 1 point)"
+    },
+    "Replace a Toilet": {
+      "title": "Remplacer des toilettes",
+      "desc": "Retire de vieilles toilettes et installe un remplacement fonctionnel. (Badge Straw de plomberie PEP, liste de réparations — 2 points)"
+    },
+    "Set Up a Wood-Fired Hot Water System": {
+      "title": "Installer un système d'eau chaude au bois",
+      "desc": "Installe un système d'eau chaude pressurisé chauffé au bois. (Badge Wood de plomberie PEP — 8 points)"
+    },
     "Build a Community Garden": {
       "title": "Créer un jardin communautaire",
       "desc": "Crée un jardin communautaire : 8+ parcelles étiquetées sur au moins un demi-acre, clôture anti-cerfs, eau fiable (380 L/jour), arrosoirs, allées, règles affichées, un abri à outils et une zone de rinçage — documenté dans un fil permies. (BB PEP : community.wood.buildgarden)"
@@ -4119,6 +4183,38 @@ const LANG = {
     "Make a 6oz Metal Ingot": {
       "title": "Ein 170-g-Metallbarren gießen",
       "desc": "Schmelze und gieße einen Metallbarren von mindestens 6 Unzen (kein Blei) — Fotos vom Material, vom Fortschritt und vom fertigen Barren. (PEP-BB: metalworking.straw.ingot)"
+    },
+    "Make Paper from Plants": {
+      "title": "Papier aus Pflanzen herstellen",
+      "desc": "Stelle 6 Blatt Papier von mindestens 20 x 28 cm aus Pflanzenmaterial oder Holz her (kein Recyclingpapier), nur mit Materialien, die es vor 200 Jahren gab — Fotos vom Material, den Werkzeugen, dem Prozess und den fertigen Blättern. (PEM-BB: traditional.straw.paper)"
+    },
+    "Lay 200 Feet of Living Fence": {
+      "title": "60 Meter lebende Hecke legen",
+      "desc": "Lege 200 Fuß (ca. 60 m) lebende Hecke mit der traditionellen Flechttechnik — Vorher-, Aktions- und Nachher-Fotos der mindestens 200 Fuß langen fertigen Hecke. (PEP-BB: woodland.iron.livingfence)"
+    },
+    "Forge a Set of Tongs": {
+      "title": "Eine Zange schmieden",
+      "desc": "Schmiede eine Zange mit Niet und ausgezogenen Griffen (kein Flachmaterial mit Verdrehung). (PEP-Metallbau-Stroh-Abzeichen, Schmiedeliste — 2 Punkte)"
+    },
+    "Weld a Door Latch": {
+      "title": "Einen Türriegel schweißen",
+      "desc": "Baue einen Türriegel, hauptsächlich durch Gas- oder Lichtbogenschweißen. (PEP-Metallbau-Stroh-Abzeichen, Schweißliste — 1 Punkt)"
+    },
+    "Build a Welding Table": {
+      "title": "Einen Schweißtisch bauen",
+      "desc": "Entwirf und baue einen stabilen Schweißtisch. (PEP-Metallbau-Holz-Abzeichen, Schweißliste — 8-16 Punkte)"
+    },
+    "Fix a Leak in a Supply Pipe": {
+      "title": "Ein Leck in einer Zuleitung reparieren",
+      "desc": "Finde und repariere ein Leck in einer druckführenden Zuleitung. (PEP-Sanitär-Stroh-Abzeichen, Reparaturliste — 1 Punkt)"
+    },
+    "Replace a Toilet": {
+      "title": "Eine Toilette austauschen",
+      "desc": "Baue eine alte Toilette aus und installiere einen funktionierenden Ersatz. (PEP-Sanitär-Stroh-Abzeichen, Reparaturliste — 2 Punkte)"
+    },
+    "Set Up a Wood-Fired Hot Water System": {
+      "title": "Ein holzbefeuertes Warmwassersystem einrichten",
+      "desc": "Richte ein druckbeaufschlagtes, holzbefeuertes Warmwassersystem ein. (PEP-Sanitär-Holz-Abzeichen — 8 Punkte)"
     },
     "Build a Community Garden": {
       "title": "Einen Gemeinschaftsgarten bauen",

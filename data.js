@@ -115,7 +115,8 @@ const VILLAGE_QUESTS = [
       ["Berm Shed: 3 Cells, 12x12x12 Each, 5 Foot Eaves","Build a multi-cell berm shed on a large scale.",["Math","Science"],"🏗️"],
       ["Build Two Skiddable Structures","Create two structures that can move on skids.",["Math","Science"],"🛷"],
       ["Gin Pole: Lift a 20 Foot Log 20 Feet Off the Ground","Lift a large log with a gin pole system.",["Science","Math"],"🏗️"],
-      ["Produce 10 lbs Each Oyster and Shiitake Mushrooms","Grow a major harvest of outdoor mushrooms.",["Science","Health"],"🍄"]
+      ["Produce 10 lbs Each Oyster and Shiitake Mushrooms","Grow a major harvest of outdoor mushrooms.",["Science","Health"],"🍄"],
+      ["Lay 200 Feet of Living Fence","Lay (hedge-lay) 200 feet of living fence — before, action, and after photos showing the completed 200-foot hedge. (PEP BB: woodland.iron.livingfence)",["Science","Geography"],"🌿"]
     ]
   },
   {
@@ -339,8 +340,13 @@ const VILLAGE_QUESTS = [
       ["Make a Small Bracket or Hanger","Create a useful bracket, hanger, or holder from metal.",["Science","Art"],"🧲"],
       ["Make a 6oz Metal Ingot","Melt and pour a metal ingot of at least 6oz (no lead) — pics of the supplies, partway through, and the finished ingot. (PEP BB: metalworking.straw.ingot)",["Science","History"],"🧱"],
     ],
-    straw: [],
-    wood: [],
+    straw: [
+      ["Forge a Set of Tongs","Forge a set of tongs with a rivet and drawn-out handles (no flat stock with a twist). (PEP Metalworking Straw Badge, forging list — 2 points)",["Science","Art"],"🔥"],
+      ["Weld a Door Latch","Make a door latch, mainly by gas or arc welding. (PEP Metalworking Straw Badge, welding list — 1 point)",["Science","Math"],"🚪"],
+    ],
+    wood: [
+      ["Build a Welding Table","Design and build a sturdy welding table. (PEP Metalworking Wood Badge, welding list — 8-16 points)",["Science","Art"],"🧰"],
+    ],
     iron: []
   },
   {
@@ -354,8 +360,13 @@ const VILLAGE_QUESTS = [
       ["Fix a Dripping Hose Connection","Stop a leak in a hose or outside water connection.",["Science","Math"],"💦"],
       ["Insulate a Hot Water Pipe","Wrap a hot water pipe or line for heat retention.",["Science","Math"],"♨️"]
     ],
-    straw: [],
-    wood: [],
+    straw: [
+      ["Fix a Leak in a Supply Pipe","Find and fix a leak in a pressurized supply pipe. (PEP Plumbing Straw Badge, fix-it list — 1 point)",["Science","Math"],"🔧"],
+      ["Replace a Toilet","Remove an old toilet and install a working replacement. (PEP Plumbing Straw Badge, fix-it list — 2 points)",["Science","Math"],"🚽"],
+    ],
+    wood: [
+      ["Set Up a Wood-Fired Hot Water System","Set up a pressurized wood-fired hot water system. (PEP Plumbing Wood Badge — 8 points)",["Science","History"],"♨️"],
+    ],
     iron: []
   },
   {
@@ -458,7 +469,8 @@ const VILLAGE_QUESTS = [
       ["Weave a Fish Net","Make a woven fish net with 1-inch or smaller mesh, at least 8 square feet — only materials that existed 200 years ago. (PEM BB: traditional.straw.net)",["Art","PE"],"🕸️"]
       ,["Make Leather Cordage","Make 20 feet of leather cordage with a deliberate, consistent width or roughly consistent strength — only materials that existed 200 years ago. (PEM BB: traditional.sand.leather)",["Art","History"],"👢"],
       ["Weave a Pine Needle Basket","Coil and stitch a pine needle basket at least 4 inches across with natural thread — only materials that existed 200 years ago. (PEM BB: traditional.straw.weavepine)",["Art","History"],"🌲"],
-      ["Make Shell Buttons","Shape and drill 4 smooth, round shell buttons with at least 2 holes each — only materials that existed 200 years ago. (PEM BB: traditional.straw.buttons)",["Art","History"],"🐚"]
+      ["Make Shell Buttons","Shape and drill 4 smooth, round shell buttons with at least 2 holes each — only materials that existed 200 years ago. (PEM BB: traditional.straw.buttons)",["Art","History"],"🐚"],
+      ["Make Paper from Plants","Make 6 sheets of paper at least 8x11 inches from plant material or wood (not recycled paper), using only materials that existed 200 years ago — pics of the material, tools, midway, and finished sheets. (PEM BB: traditional.straw.paper)",["Art","History"],"📜"]
     ],
     straw: [],
     wood: [],

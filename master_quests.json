@@ -13840,298 +13840,3822 @@
     ]
   },
   {
-    "title": "PEP Badge: Metal Working",
+    "title": "PEP Badge: Metalworking",
     "framework": "PEP",
     "url": "https://permies.com/wiki/108547/PEP-Badge-Metal-Working",
-    "total_tasks": 104,
+    "total_tasks": 440,
     "tasks": [
       {
-        "tier": "General",
-        "text": "Pete Podurgiel"
+        "tier": "Sand",
+        "text": "5 points required, no duplication"
       },
       {
-        "tier": "General",
-        "text": "wikipeppep metalworking"
+        "tier": "Sand",
+        "text": "build a kindling cracker 4.5 points"
       },
       {
-        "tier": "General",
-        "text": "peppep metalworking"
+        "tier": "Sand",
+        "text": "poker ½ point"
       },
       {
-        "tier": "General",
+        "tier": "Sand",
+        "text": "tongs ½ point"
+      },
+      {
+        "tier": "Sand",
+        "text": "rmh scoop ½ point"
+      },
+      {
+        "tier": "Sand",
+        "text": "metal rack to hold a poker, a set of tongs and an rmh scoop ½ point"
+      },
+      {
+        "tier": "Sand",
+        "text": "make a twisting wrench ½ point"
+      },
+      {
+        "tier": "Sand",
+        "text": "weld two hooks or chain clevises to a tractor bucket ½ point"
+      },
+      {
+        "tier": "Sand",
+        "text": "weld a trailer ball to a tractor implement ½ point"
+      },
+      {
+        "tier": "Sand",
+        "text": "beefy set of shelf brackets 1 point"
+      },
+      {
+        "tier": "Sand",
+        "text": "fix a crack in a tool ½ point"
+      },
+      {
+        "tier": "Sand",
+        "text": "marshmallow or hot dog fork for campfire 1 point (2 if SS)"
+      },
+      {
+        "tier": "Sand",
+        "text": "Dress up a mushroomed chisel or splitting wedge ½ point"
+      },
+      {
+        "tier": "Sand",
+        "text": "make a center punch ½ point"
+      },
+      {
+        "tier": "Sand",
+        "text": "chicken funnel ½ point"
+      },
+      {
+        "tier": "Sand",
+        "text": "solar oven reflectors ½ point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Welding list"
+      },
+      {
+        "tier": "Straw",
+        "text": "(complete at least seven points and at least 4 different items):"
+      },
+      {
+        "tier": "Straw",
+        "text": "Projects should mainly be constructed by gas or arc welding"
+      },
+      {
+        "tier": "Straw",
+        "text": "Make a guillotine fuller 3 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Make a spring fuller 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Make four matching angle braces (broader than 90 degrees) to attach legs to a platform"
+      },
+      {
+        "tier": "Straw",
+        "text": "(deer stand, water tower, etc) - 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Welded digging fork 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Sawhorse brackets for two wooden sawhorses 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Door latch 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Make a gouge for making log bee houses 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Forging list"
+      },
+      {
+        "tier": "Straw",
+        "text": "(complete at least seven points and at least 5 different items):"
+      },
+      {
+        "tier": "Straw",
+        "text": "Projects should mainly be constructed by forging"
+      },
+      {
+        "tier": "Straw",
+        "text": "Set of tongs with rivet and drawn out handles (no flat stock with twist) 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Forge and heat treat two punches or hot chisels or one of each (show they aren’t brittle) 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Nice fire poker 1 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Nice gate handle 1 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Drawknife 3 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Hardy hole tool 1 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Forged digging fork 3 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Forge a spring fuller 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Log peeling spud 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Tomahawk head from railroad spike (ready for handle) 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Decent knife from railroad spike or file 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Heat treat a homemade knife and prove it 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Hand trowel 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Hinge 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Holdfast 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "2 wingnuts or other hand tightened nuts 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Repoint and harden/temper a pointy tool (pick, mattock, etc) without removing any metal 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "20 nails 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Branding iron (for leather or wood) 3 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Utility grade broad axe 3 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Utility grade adze 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Utility grade froe 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Utility grade gouge 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Shop list"
+      },
+      {
+        "tier": "Straw",
+        "text": "(complete at least seven points and at least 4 different items):"
+      },
+      {
+        "tier": "Straw",
+        "text": "Crude forge 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Prep coil spring to use for 6 punches/chisels 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Crude anvil on a stump 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Sturdy metal work table 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Make a sheet metal hand brake 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Rebar drawer/door handle (flattened ends) 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Nail heading plate 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Stamp with initials to mark metal 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Sheet metal list"
+      },
+      {
+        "tier": "Straw",
+        "text": "(complete at least seven points and at least 5 different items):"
+      },
+      {
+        "tier": "Straw",
+        "text": "Water trough or pan 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Nice RMH ash scoop 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Nice dustpan 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Grain scoop 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Squirrel/raccoon guard for a post 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Pinwheel or spiral wind spinner to scare birds from growies 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Copper flower 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Sink a small bowl or spoon 2-6 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Gravity powered fan 2 points for Sheet Metal, 4 points for Other"
+      },
+      {
+        "tier": "Straw",
+        "text": "Lamp shade 3 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Reflector style camp stove (redirects heat from campfire to cook) 4 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Chicken feeder 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Storage box without lid 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Storage box with lid 4 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Chimney cap 4 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Berry picker hand scoop 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Berry picker standing scoop 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Mailbox 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Other list"
+      },
+      {
+        "tier": "Straw",
+        "text": "(complete at least seven points and at least 5 different items):"
+      },
+      {
+        "tier": "Straw",
+        "text": "Make, grind, polish and stamp a name tag or key fob 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Solder some garden art (flowers, etc) from copper ½-4 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Sand cast anything from aluminum (bigger than a golf ball) 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Cut a sign from metal, torch or plasma (8” by 18” min) 1 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Copper tongs 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Copper shishi odoshi 3 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Campfire tripod and hanging grill (buy grill and bulk chain, make/assemble the rest) 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Assemble firearm from purchased components 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Draw down the diameter of a piece of wire with a draw plate 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Make a 6 oz ingot of metal other than lead 2 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "180 points required"
+      },
+      {
+        "tier": "Wood",
+        "text": "Oddball points"
+      },
+      {
+        "tier": "Wood",
+        "text": "allowed"
+      },
+      {
+        "tier": "Wood",
+        "text": "Welding list:"
+      },
+      {
+        "tier": "Wood",
+        "text": "Projects should mainly be constructed by gas or arc welding, one project needs to be from metal other than steel"
+      },
+      {
+        "tier": "Wood",
+        "text": "At least 30 points required:"
+      },
+      {
+        "tier": "Wood",
+        "text": "At least 3 new items from Straw list"
+      },
+      {
+        "tier": "Wood",
+        "text": "At least 4 items from this list:"
+      },
+      {
+        "tier": "Wood",
+        "text": "Build a trailer (4x6 or bigger) 8-24 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Make a welding table 8-16 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Two matching metal sawhorses 4 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Work stand (vertically adjustable “T” that screws down into tripod legs) 4 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Exhaust system for a vehicle 3-6 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Make a length of chain with 10 links 3 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "J tube rocket engine (twofer with Rocket badge) 4 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Decorative arbor or entry for a gate 8-16 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Functional gate 4 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Pretty gate 8-16 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Bicycle frame 8 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Forging list:"
+      },
+      {
+        "tier": "Wood",
+        "text": "Projects should mainly be constructed by forging"
+      },
+      {
+        "tier": "Wood",
+        "text": "At least 30 points required:"
+      },
+      {
+        "tier": "Wood",
+        "text": "At least 3 new items from Straw list"
+      },
+      {
+        "tier": "Wood",
+        "text": "At least 4 items from this list:"
+      },
+      {
+        "tier": "Wood",
+        "text": "All the hardware for a door (hinges, latch, knob), no lock 6-18 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Custom hammer (hardened) 2 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Beautiful door knocker 3-9 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Beautiful door handle 3-9 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "10 punches/drifts/chisels 3 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Beautiful axe 4-12 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "C-clamp 4 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Shovel 6 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Decorative and functional spindles for 10’ of railing 6-18 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Make a length of chain with 10 links (forge welding) 5 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Soup ladle from one piece of metal (food safe) 3 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "1 place setting of tableware fork/knife/spoon (food safe) 4-8 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "High quality broad axe 4 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "High quality adze 3 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "High quality froe 3 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "High quality gouge 3 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Two person log tong (swivel or pinching) 4 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Sheet metal list:"
+      },
+      {
+        "tier": "Wood",
+        "text": "At least 30 points required:"
+      },
+      {
+        "tier": "Wood",
+        "text": "At least 3 new items from Straw list"
+      },
+      {
+        "tier": "Wood",
+        "text": "At least 3 items from this list:"
+      },
+      {
+        "tier": "Wood",
+        "text": "Custom bike fender 4 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Custom ductwork for hvac system (20') 8 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Raise a small bowl 4-12 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Watering can 8-16 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Copper pot/kettle/pan 8-16 points (counts for Other or Forging)"
+      },
+      {
+        "tier": "Wood",
+        "text": "Urine diverter for willow feeder 5 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Other list:"
+      },
+      {
+        "tier": "Wood",
+        "text": "At least 30 points required:"
+      },
+      {
+        "tier": "Wood",
+        "text": "At least 1 new items from Straw Shop list"
+      },
+      {
+        "tier": "Wood",
+        "text": "At least 1 new items from Straw Other list"
+      },
+      {
+        "tier": "Wood",
+        "text": "At least 4 items from this list:"
+      },
+      {
+        "tier": "Wood",
+        "text": "Keyed lock 8-24 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Safe box that is pretty 4-12 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Make a gun barrel 10 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Make a firearm 30-90 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Smelt iron from ore 50 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Make a heat powered wood stove fan 20 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Veggie oil foundry 4 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Japanese box bellows 8 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Treadle hammer 20 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Build a welder 8 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Build a plasma cutter 16 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Nice cutting table 8 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Turn down a brake rotor 2 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Stamp with artistic touchmark to mark metal 3 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Timber tool 16 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Log arch 12 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "1030 points required"
+      },
+      {
+        "tier": "Iron",
+        "text": "Oddball points"
+      },
+      {
+        "tier": "Iron",
+        "text": "allowed"
+      },
+      {
+        "tier": "Iron",
+        "text": "Welding list:"
+      },
+      {
+        "tier": "Iron",
+        "text": "Projects should be primarily but not necessarily entirely constructed by welding."
+      },
+      {
+        "tier": "Iron",
+        "text": "At least 100 points required:"
+      },
+      {
+        "tier": "Iron",
+        "text": "At least 3 new items from Wood level"
+      },
+      {
+        "tier": "Iron",
+        "text": "1 project must be with aluminum and one with stainless steel."
+      },
+      {
+        "tier": "Iron",
+        "text": "Remaining points can come from additional items done from Straw and Wood lists, plus these items if you'd like:"
+      },
+      {
+        "tier": "Iron",
+        "text": "Hammer patch and weld a hole in a truck 8 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "Large smoker 30 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "Large trailer 40 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "Convert a vehicle to wood or charcoal gasification 80 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "- Street legal, capable of 60mph and 40 mile range"
+      },
+      {
+        "tier": "Iron",
+        "text": "Convert a tractor or garden tractor to charcoal gasification 40 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "- Capable of 6 hrs run time"
+      },
+      {
+        "tier": "Iron",
+        "text": "Small trailer with walking suspension 40 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "Large trailer with walking suspension 60 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "Large solar panel mounting system (braces, not just clips) 60+ square feet 20 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "Forging list:"
+      },
+      {
+        "tier": "Iron",
+        "text": "Projects should be primarily but not necessarily entirely constructed by forging."
+      },
+      {
+        "tier": "Iron",
+        "text": "At least 100 points required:"
+      },
+      {
+        "tier": "Iron",
+        "text": "At least 3 new items from Wood level"
+      },
+      {
+        "tier": "Iron",
+        "text": "Remaining points can come from additional items done from Straw and Wood lists, plus these items if you'd like:"
+      },
+      {
+        "tier": "Iron",
+        "text": "Beautiful fire tool set 16-48 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "Iron/steel gate (think 1700’s Europe) 80-240 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "Elegant spindles for 10’ railing 12-36 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "Chandelier 40-120 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "Nice Candelabra or pair of candlesticks 16 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "Coach light 8 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "Sheet metal list:"
+      },
+      {
+        "tier": "Iron",
+        "text": "At least 100 points required.  They can come from additional items done from Straw and Wood lists, plus these items if you'd like:"
+      },
+      {
+        "tier": "Iron",
+        "text": "Beautiful hammered copper sink (food safe) 40 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "Steel wok 40 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "Other list:"
+      },
+      {
+        "tier": "Iron",
+        "text": "At least 100 points required.  They can come from additional items done from Straw and Wood lists, plus these items if you'd like:"
+      },
+      {
+        "tier": "Iron",
+        "text": "Make a mid size lathe 100 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "Convert a vehicle to electric"
+      },
+      {
+        "tier": "Iron",
+        "text": "(joint project with Electricity) - 65 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "- Street legal, capable of 60mph and 40 mile range"
+      },
+      {
+        "tier": "Iron",
+        "text": "- also earns 40 points of Electricity"
+      },
+      {
+        "tier": "Iron",
+        "text": "Convert a motorcycle or dirt bike to electric"
+      },
+      {
+        "tier": "Iron",
+        "text": "(joint project with Electricity) - 12 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "- Street legal, capable of 20 mile range"
+      },
+      {
+        "tier": "Iron",
+        "text": "- also earns 20 points of Electricity"
+      },
+      {
+        "tier": "Iron",
+        "text": "Convert a tractor to electric"
+      },
+      {
+        "tier": "Iron",
+        "text": "(joint project with Electricity) - 65 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "- Capable of 6 hrs run time"
+      },
+      {
+        "tier": "Iron",
+        "text": "- also earns 40 points of Electricity"
+      },
+      {
+        "tier": "Iron",
+        "text": "Large articulating solar panel system"
+      },
+      {
+        "tier": "Iron",
+        "text": "ala"
+      },
+      {
+        "tier": "Iron",
+        "text": "Solar Leviathan"
+      },
+      {
+        "tier": "Iron",
+        "text": "(joint project with Electricity)- 40 points 40+ square feet of panels"
+      },
+      {
+        "tier": "Iron",
+        "text": "- also earns 40 points of Electricity"
+      },
+      {
+        "tier": "Iron",
+        "text": "COMMENTS:"
+      },
+      {
+        "tier": "Iron",
+        "text": "Burl Smith"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 576"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: Richwood, West Virginia"
+      },
+      {
+        "tier": "Iron",
+        "text": "12"
+      },
+      {
+        "tier": "Iron",
+        "text": "I turned up what I believe to be a utensil used in trade by early settlers with the indigenous peoples. It was a small bit of iron in the shape of an ax head that would be useful for splitting vines or scraping hides or fitted to a handle to fashion a tomahawk. Perhaps the Iron Badge could entail the gathering of enough Magnetite (did they use magnets?) for the purpose of smelting enough iron to make a 'Trade Ax', or would a hammer-head come first?"
+      },
+      {
+        "tier": "Iron",
         "text": "Litter As An Edible Forest"
       },
       {
-        "tier": "General",
-        "text": "~Permies FAQ~Dragons, Fairies and even a Mini-Paul!~You Know You're a Permie When...~All About Permies, including tutorials~Herbal Hugel Spiral of Randomness!~Tricks to Keep the Dirt from Sliding off a Hugel~List of Cascadia Bloggers and Facebook Pages!~"
+        "tier": "Iron",
+        "text": "Mike Haasl"
       },
       {
-        "tier": "Sand",
+        "tier": "Iron",
+        "text": "steward"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 16253"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: Northern WI (zone 4)"
+      },
+      {
+        "tier": "Iron",
+        "text": "5354"
+      },
+      {
+        "tier": "Iron",
+        "text": "9"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "1"
+      },
+      {
+        "tier": "Iron",
+        "text": "The Straw, Wood and Iron level badges have just been added."
+      },
+      {
+        "tier": "Iron",
+        "text": "I make a Maple Syrup instructional movie! Check it out"
+      },
+      {
+        "tier": "Iron",
+        "text": "HERE"
+      },
+      {
+        "tier": "Iron",
+        "text": "SKIP books, get 'em while they're hot!!!"
+      },
+      {
+        "tier": "Iron",
+        "text": "Skills to Inherit Property"
+      },
+      {
+        "tier": "Iron",
+        "text": "See me in a movie building a massive wood staircase:"
+      },
+      {
+        "tier": "Iron",
+        "text": "Low Tech Lab Movie"
+      },
+      {
+        "tier": "Iron",
+        "text": "Nicole Alderman"
+      },
+      {
+        "tier": "Iron",
+        "text": "steward"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 22890"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: Pacific Northwest"
+      },
+      {
+        "tier": "Iron",
+        "text": "13734"
+      },
+      {
+        "tier": "Iron",
+        "text": "13"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "Take a look at Jordan's thread here:"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/t/145609/Making-Japanese-style-Weeding-Sickle"
+      },
+      {
+        "tier": "Iron",
+        "text": "He made his own hand weeding sickle from \"leaf spring from an old truck, copper wire from water heater I just replaced, and wood from a tree that blew down\"!"
+      },
+      {
+        "tier": "Iron",
+        "text": "I feel like he needs a badge bit for this, or something!"
+      },
+      {
+        "tier": "Iron",
+        "text": "~"
+      },
+      {
+        "tier": "Iron",
+        "text": "Permies FAQ"
+      },
+      {
+        "tier": "Iron",
+        "text": "~"
+      },
+      {
+        "tier": "Iron",
+        "text": "Dragons, Fairies and even a Mini-Paul!"
+      },
+      {
+        "tier": "Iron",
+        "text": "~"
+      },
+      {
+        "tier": "Iron",
+        "text": "You Know You're a Permie When..."
+      },
+      {
+        "tier": "Iron",
+        "text": "~"
+      },
+      {
+        "tier": "Iron",
+        "text": "All About Permies, including tutorials"
+      },
+      {
+        "tier": "Iron",
+        "text": "~"
+      },
+      {
+        "tier": "Iron",
+        "text": "Herbal Hugel Spiral of Randomness!"
+      },
+      {
+        "tier": "Iron",
+        "text": "~"
+      },
+      {
+        "tier": "Iron",
+        "text": "Tricks to Keep the Dirt from Sliding off a Hugel"
+      },
+      {
+        "tier": "Iron",
+        "text": "~"
+      },
+      {
+        "tier": "Iron",
+        "text": "List of Cascadia Bloggers and Facebook Pages!"
+      },
+      {
+        "tier": "Iron",
+        "text": "~"
+      },
+      {
+        "tier": "Iron",
+        "text": "Randy Fox"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 25"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: Joint Base MDL, New Jersey"
+      },
+      {
+        "tier": "Iron",
+        "text": "15"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "1"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/134110/pep-metalworking/Dress-mushroomed-chisel-splitting-wedge"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/112272/pep-metalworking/Build-kindling-cracker-PEP-BB"
+      },
+      {
+        "tier": "Iron",
+        "text": "Staff note"
+      },
+      {
+        "tier": "Iron",
+        "text": "("
+      },
+      {
+        "tier": "Iron",
+        "text": "Mike Barkley"
+      },
+      {
+        "tier": "Iron",
+        "text": ")"
+      },
+      {
+        "tier": "Iron",
+        "text": ":"
+      },
+      {
+        "tier": "Iron",
         "text": "Congrats on your metalworking sand badge!"
       },
       {
-        "tier": "Sand",
-        "text": "You are welcome to check out my blog at http://www.theartisthomestead.com or my artwork at http://www.davidhuang.org"
+        "tier": "Iron",
+        "text": "David Huang"
       },
       {
-        "tier": "Sand",
+        "tier": "Iron",
+        "text": "gardener"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 1339"
+      },
+      {
+        "tier": "Iron",
+        "text": "773"
+      },
+      {
+        "tier": "Iron",
+        "text": "10"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "2"
+      },
+      {
+        "tier": "Iron",
+        "text": "I do believe I now have the 5 points required for the Metalworking sand badge.  :)"
+      },
+      {
+        "tier": "Iron",
+        "text": "I built a"
+      },
+      {
+        "tier": "Iron",
+        "text": "Kindling cracker"
+      },
+      {
+        "tier": "Iron",
+        "text": "for 4.5 points."
+      },
+      {
+        "tier": "Iron",
+        "text": "I"
+      },
+      {
+        "tier": "Iron",
+        "text": "fixed the mushroom heads"
+      },
+      {
+        "tier": "Iron",
+        "text": "] on some of my chasing tools for the final 1/2 point."
+      },
+      {
+        "tier": "Iron",
+        "text": "You are welcome to check out my blog at"
+      },
+      {
+        "tier": "Iron",
+        "text": "http://www.theartisthomestead.com"
+      },
+      {
+        "tier": "Iron",
+        "text": "or my artwork at"
+      },
+      {
+        "tier": "Iron",
+        "text": "http://www.davidhuang.org"
+      },
+      {
+        "tier": "Iron",
+        "text": "Staff note"
+      },
+      {
+        "tier": "Iron",
+        "text": "("
+      },
+      {
+        "tier": "Iron",
+        "text": "jordan barton"
+      },
+      {
+        "tier": "Iron",
+        "text": ")"
+      },
+      {
+        "tier": "Iron",
+        "text": ":"
+      },
+      {
+        "tier": "Iron",
         "text": "Congrats on your metalworking sand badge!"
       },
       {
-        "tier": "Sand",
+        "tier": "Iron",
+        "text": "Mike Haasl"
+      },
+      {
+        "tier": "Iron",
+        "text": "steward"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 16253"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: Northern WI (zone 4)"
+      },
+      {
+        "tier": "Iron",
+        "text": "5354"
+      },
+      {
+        "tier": "Iron",
+        "text": "9"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "1"
+      },
+      {
+        "tier": "Iron",
+        "text": "I just completed the metalworking sand badge!"
+      },
+      {
+        "tier": "Iron",
+        "text": "Build  kindling cracker"
+      },
+      {
+        "tier": "Iron",
+        "text": "Make a chicken funnel"
+      },
+      {
+        "tier": "Iron",
+        "text": "I make a Maple Syrup instructional movie! Check it out"
+      },
+      {
+        "tier": "Iron",
+        "text": "HERE"
+      },
+      {
+        "tier": "Iron",
+        "text": "SKIP books, get 'em while they're hot!!!"
+      },
+      {
+        "tier": "Iron",
+        "text": "Skills to Inherit Property"
+      },
+      {
+        "tier": "Iron",
+        "text": "See me in a movie building a massive wood staircase:"
+      },
+      {
+        "tier": "Iron",
+        "text": "Low Tech Lab Movie"
+      },
+      {
+        "tier": "Iron",
+        "text": "Staff note"
+      },
+      {
+        "tier": "Iron",
+        "text": "("
+      },
+      {
+        "tier": "Iron",
+        "text": "Ash Jackson"
+      },
+      {
+        "tier": "Iron",
+        "text": ")"
+      },
+      {
+        "tier": "Iron",
+        "text": ":"
+      },
+      {
+        "tier": "Iron",
         "text": "Sand Metalworking badge granted!"
       },
       {
-        "tier": "Sand",
-        "text": "Check out the plans tobuild your own charka-style spinning wheel from bicycle partsExplore the intersection of permaculture, community, and the cycle of life atHerland Forest Natural Burial Cemeteryand theWindward Education and Research Center"
+        "tier": "Iron",
+        "text": "Beau M. Davidson"
       },
       {
-        "tier": "Sand",
+        "tier": "Iron",
+        "text": "steward"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 11284"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: South Central Kansas"
+      },
+      {
+        "tier": "Iron",
+        "text": "3358"
+      },
+      {
+        "tier": "Iron",
+        "text": "11"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "3"
+      },
+      {
+        "tier": "Iron",
+        "text": "Badge me up!!!"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/p/1180381"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/p/1173950"
+      },
+      {
+        "tier": "Iron",
+        "text": "How Permies Works"
+      },
+      {
+        "tier": "Iron",
+        "text": "Herbal Tea CSA"
+      },
+      {
+        "tier": "Iron",
+        "text": "Opalyn Rose"
+      },
+      {
+        "tier": "Iron",
+        "text": "gardener"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 1605"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: Washington State"
+      },
+      {
+        "tier": "Iron",
+        "text": "1023"
+      },
+      {
+        "tier": "Iron",
+        "text": "8"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "1"
+      },
+      {
+        "tier": "Iron",
+        "text": "Here are my five points for the Metal Working Sand Badge."
+      },
+      {
+        "tier": "Iron",
+        "text": "Build a Kindling Cracker"
+      },
+      {
+        "tier": "Iron",
+        "text": "(4.5 points)"
+      },
+      {
+        "tier": "Iron",
+        "text": "Dress a Mushroomed Chisel"
+      },
+      {
+        "tier": "Iron",
+        "text": "(1/2 point)"
+      },
+      {
+        "tier": "Iron",
+        "text": "Check out the plans to"
+      },
+      {
+        "tier": "Iron",
+        "text": "build your own charka-style spinning wheel from bicycle parts"
+      },
+      {
+        "tier": "Iron",
+        "text": "Explore the intersection of permaculture, community, and the cycle of life at"
+      },
+      {
+        "tier": "Iron",
+        "text": "Herland Forest Natural Burial Cemetery"
+      },
+      {
+        "tier": "Iron",
+        "text": "and the"
+      },
+      {
+        "tier": "Iron",
+        "text": "Windward Education and Research Center"
+      },
+      {
+        "tier": "Iron",
+        "text": "Staff note"
+      },
+      {
+        "tier": "Iron",
+        "text": "("
+      },
+      {
+        "tier": "Iron",
+        "text": "Mike Haasl"
+      },
+      {
+        "tier": "Iron",
+        "text": ")"
+      },
+      {
+        "tier": "Iron",
+        "text": ":"
+      },
+      {
+        "tier": "Iron",
         "text": "Congratulations on your Metalworking Sand badge!!!"
       },
       {
-        "tier": "Sand",
+        "tier": "Iron",
+        "text": "Luke Mitchell"
+      },
+      {
+        "tier": "Iron",
+        "text": "gardener"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 586"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: Pembrokeshire, UK"
+      },
+      {
+        "tier": "Iron",
+        "text": "442"
+      },
+      {
+        "tier": "Iron",
+        "text": "2"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "2"
+      },
+      {
+        "tier": "Iron",
+        "text": "I've found a minor bug. In the Merit Badge section of the user profile the \"Metal Working\" badge is written as \"Metwalworking\". I wasn't sure where to report this so I've done so here. Hope that's OK."
+      },
+      {
+        "tier": "Iron",
+        "text": "metwalworking.PNG"
+      },
+      {
+        "tier": "Iron",
         "text": "Small-holding, coppice and grassland management on a 16-acre site."
       },
       {
-        "tier": "Sand",
+        "tier": "Iron",
+        "text": "Pierre Michael"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 146"
+      },
+      {
+        "tier": "Iron",
+        "text": "159"
+      },
+      {
+        "tier": "Iron",
+        "text": "6"
+      },
+      {
+        "tier": "Iron",
+        "text": "1"
+      },
+      {
+        "tier": "Iron",
+        "text": "Applying for my Metalworking Badge."
+      },
+      {
+        "tier": "Iron",
+        "text": "Kindling Cracker - 4.5 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/30/112272/pep-metalworking/Build-kindling-cracker-PEP-BB#1283735"
+      },
+      {
+        "tier": "Iron",
+        "text": "Rocket Mass Heater Scoop - 0.5 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/112278/pep-metalworking/PEP-BB-metalworking-sand-scoop#1283040"
+      },
+      {
+        "tier": "Iron",
+        "text": "Staff note"
+      },
+      {
+        "tier": "Iron",
+        "text": ":"
+      },
+      {
+        "tier": "Iron",
         "text": "Congrats on yet another badge!"
       },
       {
-        "tier": "Sand",
-        "text": "PEM badge: MetalworkingBroken links to tutorials on BB threadsPEP Badge: HomesteadingPEP Badge: ElectricityPEP Badge: Tool Care12 Better World books +12 SKIP books +12 Cob Style DVDsOctober Rocket Mass Heater days! Wheaton Labs October 11-17"
-      },
-      {
-        "tier": "Sand",
-        "text": "Broken links to tutorials on BB threadsPEP Badge: HomesteadingPEP Badge: ElectricityPEP Badge: Tool Care12 Better World books +12 SKIP books +12 Cob Style DVDsOctober Rocket Mass Heater days! Wheaton Labs October 11-17"
-      },
-      {
-        "tier": "Sand",
-        "text": "PEP Badge: HomesteadingPEP Badge: ElectricityPEP Badge: Tool Care12 Better World books +12 SKIP books +12 Cob Style DVDsOctober Rocket Mass Heater days! Wheaton Labs October 11-17"
-      },
-      {
-        "tier": "Sand",
-        "text": "PEP Badge: ElectricityPEP Badge: Tool Care12 Better World books +12 SKIP books +12 Cob Style DVDsOctober Rocket Mass Heater days! Wheaton Labs October 11-17"
-      },
-      {
-        "tier": "Sand",
-        "text": "PEP Badge: Tool Care12 Better World books +12 SKIP books +12 Cob Style DVDsOctober Rocket Mass Heater days! Wheaton Labs October 11-17"
-      },
-      {
-        "tier": "Sand",
-        "text": "12 Better World books +12 SKIP books +12 Cob Style DVDsOctober Rocket Mass Heater days! Wheaton Labs October 11-17"
-      },
-      {
-        "tier": "Sand",
-        "text": "October Rocket Mass Heater days! Wheaton Labs October 11-17"
-      },
-      {
-        "tier": "Sand",
-        "text": "build a kindling cracker - 4.5 points"
-      },
-      {
-        "tier": "Sand",
-        "text": "poker - 1/2 point"
-      },
-      {
-        "tier": "Sand",
-        "text": "tongs - 1/2 point"
-      },
-      {
-        "tier": "Sand",
-        "text": "rmh scoop - 1/2 point"
-      },
-      {
-        "tier": "Sand",
-        "text": "metal rack to hold a poker, a set of tongs and an rmh scoop - 1/2 point"
-      },
-      {
-        "tier": "Sand",
-        "text": "make a twisting wrench - 1/2 point"
-      },
-      {
-        "tier": "Sand",
-        "text": "weld two hooks or chain clevises to a tractor bucket - 1/2 point"
-      },
-      {
-        "tier": "Sand",
-        "text": "weld a trailer ball to a tractor implement - 1/2 point"
-      },
-      {
-        "tier": "Sand",
-        "text": "beefy set of shelf brackets - 1 point"
-      },
-      {
-        "tier": "Sand",
-        "text": "fix a crack in a tool - 1/2 point"
-      },
-      {
-        "tier": "Sand",
-        "text": "marshmallow or hot dog fork for campfire - 1 point (2 if SS)"
-      },
-      {
-        "tier": "Sand",
-        "text": "Dress up a mushroomed chisel or splitting wedge - 1/2 point"
-      },
-      {
-        "tier": "Sand",
-        "text": "make a center punch - 1/2 point"
-      },
-      {
-        "tier": "Sand",
-        "text": "chicken funnel - 1/2 point"
-      },
-      {
-        "tier": "Sand",
-        "text": "solar oven reflectors - 1/2 point"
-      },
-      {
-        "tier": "Sand",
-        "text": "(Sand badge: 5 points required, no duplication)"
-      },
-      {
-        "tier": "Straw",
-        "text": "Welding list (complete at least seven points and at least 4 different items): Make a guillotine fuller- 3 points; Make a spring fuller- 1 point; Make four matching angle braces to attach legs to a platform- 2 points; Welded digging fork- 1 point; Sawhorse brackets for two wooden sawhorses- 2 points; Door latch- 1 point; Make a gouge for making log bee houses- 1 point"
-      },
-      {
-        "tier": "Straw",
-        "text": "Forging list (complete at least seven points and at least 5 different items): Set of tongs with rivet and drawn out handles- 2 points; Forge and heat treat two punches or hot chisels- 1 point; Nice fire poker- 1 point; Nice gate handle- 1 point; Drawknife- 3 points; Hardy hole tool- 1 point; Forged digging fork- 3 points; Log peeling spud- 2 points; Tomahawk head from railroad spike- 2 points; Decent knife from railroad spike or file- 2 points; Hand trowel- 2 points; Hinge- 2 points; Holdfast- 1 point; 20 nails- 2 points; Branding iron- 3 points; Utility grade broad axe- 3 points; Utility grade adze- 2 points; Utility grade froe- 2 points; Utility grade gouge- 2 points"
-      },
-      {
-        "tier": "Straw",
-        "text": "Shop list (complete at least seven points and at least 4 different items): Crude forge- 1 point; Prep coil spring for 6 punches/chisels- 1 point; Crude anvil on a stump- 1 point; Sturdy metal work table- 2 points; Sheet metal hand brake- 1 point; Rebar drawer/door handle- 1 point; Nail heading plate- 2 points; Stamp with initials to mark metal- 2 points"
-      },
-      {
-        "tier": "Straw",
-        "text": "Sheet metal list (complete at least seven points and at least 5 different items): Water trough or pan- 2 points; RMH ash scoop- 1 point; Dustpan- 1 point; Grain scoop- 1 point; Squirrel/raccoon guard for a post- 1 point; Pinwheel wind spinner- 1 point; Copper flower- 1 point; Sink a small bowl or spoon- 2-6 points; Gravity powered fan- 2-4 points; Lamp shade- 3 points; Reflector style camp stove- 4 points; Chicken feeder- 2 points; Storage box with lid- 4 points; Chimney cap- 4 points; Berry picker hand scoop- 1 point; Mailbox- 2 points"
-      },
-      {
-        "tier": "Straw",
-        "text": "Other list (complete at least seven points and at least 5 different items): Make, grind, polish and stamp a name tag or key fob- 1 point; Solder garden art from copper- 1/2-4 points; Sand cast aluminum (bigger than a golf ball)- 2 points; Cut a sign from metal (8 by 18 min)- 1 point; Copper tongs- 2 points; Copper shishi odoshi- 3 points; Campfire tripod and hanging grill- 2 points; Draw down wire diameter with a draw plate- 1 point; Make a 6 oz ingot of metal other than lead- 2 points"
-      },
-      {
-        "tier": "Wood",
-        "text": "(Wood badge: 180 points required, oddball points allowed)"
-      },
-      {
-        "tier": "Wood",
-        "text": "Wood Welding list (at least 30 points): Build a trailer (4x6 or bigger)- 8-24 points; Make a welding table- 8-16 points; Two matching metal sawhorses- 4 points; Work stand- 4 points; Exhaust system for a vehicle- 3-6 points; Make a length of chain with 10 links- 3 points; J tube rocket engine (twofer with Rocket badge)- 4 points; Decorative arbor or entry for a gate- 8-16 points; Functional gate- 4 points; Pretty gate- 8-16 points; Bicycle frame- 8 points"
-      },
-      {
-        "tier": "Wood",
-        "text": "Wood Forging list (at least 30 points): All the hardware for a door (hinges, latch, knob)- 6-18 points; Custom hammer (hardened)- 2 points; Beautiful door knocker- 3-9 points; Beautiful door handle- 3-9 points; 10 punches/drifts/chisels- 3 points; Beautiful axe- 4-12 points; C-clamp- 4 points; Shovel- 6 points; Decorative spindles for 10 of railing- 6-18 points; Chain with 10 links (forge welding)- 5 points; Soup ladle from one piece of metal- 3 points; 1 place setting of tableware- 4-8 points; High quality broad axe- 4 points; High quality adze- 3 points; High quality froe- 3 points; High quality gouge- 3 points; Two person log tong- 4 points"
-      },
-      {
-        "tier": "Wood",
-        "text": "Wood Sheet metal list (at least 30 points): Custom bike fender- 4 points; Custom ductwork for hvac system (20)- 8 points; Raise a small bowl- 4-12 points; Watering can- 8-16 points; Copper pot/kettle/pan- 8-16 points; Urine diverter for willow feeder- 5 points"
-      },
-      {
-        "tier": "Wood",
-        "text": "Wood Other list (at least 30 points): Keyed lock- 8-24 points; Safe box that is pretty- 4-12 points; Make a gun barrel- 10 points; Smelt iron from ore- 50 points; Heat powered wood stove fan- 20 points; Veggie oil foundry- 4 points; Japanese box bellows- 8 points; Treadle hammer- 20 points; Build a welder- 8 points; Build a plasma cutter- 16 points; Nice cutting table- 8 points; Timber tool- 16 points; Log arch- 12 points"
+        "tier": "Iron",
+        "text": "Mike Haasl"
       },
       {
         "tier": "Iron",
-        "text": "(Iron badge: 1030 points required, oddball points allowed)"
+        "text": "steward"
       },
       {
         "tier": "Iron",
-        "text": "Iron Welding list (at least 100 points): Hammer patch and weld a hole in a truck- 8 points; Large smoker- 30 points; Large trailer- 40 points; Convert a vehicle to wood or charcoal gasification- 80 points (street legal, 60mph, 40 mile range); Convert a tractor to charcoal gasification- 40 points; Small trailer with walking suspension- 40 points; Large trailer with walking suspension- 60 points; Large solar panel mounting system 60+ square feet- 20 points"
+        "text": "Posts: 16253"
       },
       {
         "tier": "Iron",
-        "text": "Iron Forging list (at least 100 points): Beautiful fire tool set- 16-48 points; Iron/steel gate (think 1700s Europe)- 80-240 points; Elegant spindles for 10 railing- 12-36 points; Chandelier- 40-120 points; Nice Candelabra or pair of candlesticks- 16 points; Coach light- 8 points"
+        "text": "Location: Northern WI (zone 4)"
       },
       {
         "tier": "Iron",
-        "text": "Iron Sheet metal list (at least 100 points): Beautiful hammered copper sink (food safe)- 40 points; Steel wok- 40 points"
+        "text": "5354"
       },
       {
         "tier": "Iron",
-        "text": "Iron Other list (at least 100 points): Make a mid size lathe- 100 points; Convert a vehicle to electric (joint project with Electricity)- 65 points; Convert a motorcycle or dirt bike to electric- 12 points; Convert a tractor to electric- 65 points; Large articulating solar panel system (joint project with Electricity)- 40 points"
+        "text": "9"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "Update:  All the requests for badges have been moved to individual threads.  Please request your badges by clicking on the badge headers in the top post and following those links.  Please continue to request individual BBs by following the BB links.  Thanks!"
+      },
+      {
+        "tier": "Iron",
+        "text": "badge-link.jpg"
+      },
+      {
+        "tier": "Iron",
+        "text": "I make a Maple Syrup instructional movie! Check it out"
+      },
+      {
+        "tier": "Iron",
+        "text": "HERE"
+      },
+      {
+        "tier": "Iron",
+        "text": "SKIP books, get 'em while they're hot!!!"
+      },
+      {
+        "tier": "Iron",
+        "text": "Skills to Inherit Property"
+      },
+      {
+        "tier": "Iron",
+        "text": "See me in a movie building a massive wood staircase:"
+      },
+      {
+        "tier": "Iron",
+        "text": "Low Tech Lab Movie"
+      },
+      {
+        "tier": "Iron",
+        "text": "Space seems cool in the movies, but once you get out there, it is super boring. Now for a fascinating tiny ad:"
+      },
+      {
+        "tier": "Iron",
+        "text": "Come Visit Wheaton Labs!"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/367505/Visit-Wheaton-Labs"
+      },
+      {
+        "tier": "Iron",
+        "text": "reply"
+      },
+      {
+        "tier": "Iron",
+        "text": "reply"
+      },
+      {
+        "tier": "Iron",
+        "text": "Bookmark Topic"
+      },
+      {
+        "tier": "Iron",
+        "text": "Watch Topic"
+      },
+      {
+        "tier": "Iron",
+        "text": "New Topic"
+      },
+      {
+        "tier": "Iron",
+        "text": "Boost this thread!"
+      },
+      {
+        "tier": "Iron",
+        "text": "Similar Threads"
+      },
+      {
+        "tier": "Iron",
+        "text": "PEM badge: Metalworking"
+      },
+      {
+        "tier": "Iron",
+        "text": "Broken links to tutorials on BB threads"
+      },
+      {
+        "tier": "Iron",
+        "text": "PEP Badge: Homesteading"
+      },
+      {
+        "tier": "Iron",
+        "text": "PEP Badge: Electricity"
+      },
+      {
+        "tier": "Iron",
+        "text": "PEP Badge: Tool Care"
+      },
+      {
+        "tier": "Iron",
+        "text": "Infographic to consider the best heat - all costs"
+      },
+      {
+        "tier": "Iron",
+        "text": "rocket mass heater risers: materials and design eBook"
+      },
+      {
+        "tier": "Iron",
+        "text": "Permaculture Voices 1, 2 and 3 - all 117 hours of video!"
+      },
+      {
+        "tier": "Iron",
+        "text": "Come Visit Wheaton Labs!"
+      },
+      {
+        "tier": "Iron",
+        "text": "More..."
+      },
+      {
+        "tier": "Iron",
+        "text": "current server time (not your local time) is"
+      },
+      {
+        "tier": "Iron",
+        "text": "Oct 11, 2026 02:05:59"
+      },
+      {
+        "tier": "Iron",
+        "text": "all times are in server time: GMT-6 in summer, GMT-7 in winter"
+      },
+      {
+        "tier": "Iron",
+        "text": "contact us"
+      },
+      {
+        "tier": "Iron",
+        "text": "|"
+      },
+      {
+        "tier": "Iron",
+        "text": "advertise"
+      },
+      {
+        "tier": "Iron",
+        "text": "|"
+      },
+      {
+        "tier": "Iron",
+        "text": "affiliate program"
+      },
+      {
+        "tier": "Iron",
+        "text": "|"
+      },
+      {
+        "tier": "Iron",
+        "text": "news"
+      },
+      {
+        "tier": "Iron",
+        "text": "| Powered by JForum | copyright © 2005-2026"
+      },
+      {
+        "tier": "Iron",
+        "text": "paul wheaton"
+      },
+      {
+        "tier": "Iron",
+        "text": ", missoula, MT"
       }
     ]
   },
   {
-    "title": "PEP Badge: Plumbing",
+    "title": "PEP Badge: Plumbing and Hot Water",
     "framework": "PEP",
     "url": "https://permies.com/wiki/108550/PEP-Badge-Plumbing",
-    "total_tasks": 104,
+    "total_tasks": 511,
     "tasks": [
       {
-        "tier": "General",
-        "text": "wikipeppep plumbing"
-      },
-      {
-        "tier": "General",
-        "text": "peppep plumbing"
-      },
-      {
-        "tier": "General",
-        "text": "Starting on developing a 10 acre permaculture homestead in a sub-urban area. see http://www.my10acres.info"
-      },
-      {
-        "tier": "General",
-        "text": "Jerry Ward wrote:Where would fixing a leak in a pipe come in?"
-      },
-      {
-        "tier": "General",
-        "text": "Dave's SKIP BB's/Welcome to Permies!/Permaculture Resources/Dave's Boot Adventures&Longview Projects"
-      },
-      {
-        "tier": "General",
-        "text": "Ash Jackson wrote:Forgive my ignorance. Is Check a Septic Tank Level (Tiny List) a combo with Homesteading's Check Septic Tank Status?"
-      },
-      {
-        "tier": "General",
-        "text": "how permies workshomegrown linen|crazy chicken lady grows yarn!"
+        "tier": "Sand",
+        "text": "(tiny list) complete six of:"
       },
       {
         "tier": "Sand",
+        "text": "fix a leaky faucet"
+      },
+      {
+        "tier": "Sand",
+        "text": "fix a leaky toilet"
+      },
+      {
+        "tier": "Sand",
+        "text": "install an “instant bidet” on a toilet"
+      },
+      {
+        "tier": "Sand",
+        "text": "repair a hose"
+      },
+      {
+        "tier": "Sand",
+        "text": "unclog a drain with zip tool"
+      },
+      {
+        "tier": "Sand",
+        "text": "repair a p-trap"
+      },
+      {
+        "tier": "Sand",
+        "text": "repair a toilet that is not well bolted down"
+      },
+      {
+        "tier": "Sand",
+        "text": "repair a toilet with problems with the lid/seat"
+      },
+      {
+        "tier": "Sand",
+        "text": "clean/decalcify a faucet aerator"
+      },
+      {
+        "tier": "Sand",
+        "text": "clean/decalcify a shower head"
+      },
+      {
+        "tier": "Sand",
+        "text": "perform a water quality test"
+      },
+      {
+        "tier": "Sand",
+        "text": "extract sediment from the cistern"
+      },
+      {
+        "tier": "Sand",
+        "text": "prepare an outdoor shower for winter"
+      },
+      {
+        "tier": "Sand",
+        "text": "prepare an outdoor shower for summer"
+      },
+      {
+        "tier": "Sand",
+        "text": "repair a hydrant"
+      },
+      {
+        "tier": "Sand",
+        "text": "put collected water through a berkey filter"
+      },
+      {
+        "tier": "Sand",
+        "text": "flush the water heater"
+      },
+      {
+        "tier": "Sand",
+        "text": "replace the anode in the water heater"
+      },
+      {
+        "tier": "Sand",
+        "text": "replace washing machine supply hoses"
+      },
+      {
+        "tier": "Sand",
+        "text": "replace a sump pump"
+      },
+      {
+        "tier": "Sand",
+        "text": "set up a temporary water pump in a pond or water source"
+      },
+      {
+        "tier": "Sand",
+        "text": "set up a siphon from a water source downhill to a location"
+      },
+      {
+        "tier": "Sand",
+        "text": "(big list) complete one of:"
+      },
+      {
+        "tier": "Sand",
+        "text": "install a hydrant"
+      },
+      {
+        "tier": "Sand",
+        "text": "set up a sink with a foot pump"
+      },
+      {
+        "tier": "Sand",
+        "text": "set up a solar water pump"
+      },
+      {
+        "tier": "Sand",
+        "text": "(twofer w electric badge)"
+      },
+      {
+        "tier": "Sand",
+        "text": "replace a faucet"
+      },
+      {
+        "tier": "Sand",
+        "text": "replace or install a frost free spigot"
+      },
+      {
+        "tier": "Straw",
+        "text": "35 points required"
+      },
+      {
+        "tier": "Straw",
+        "text": "10 points of duplication allowed"
+      },
+      {
+        "tier": "Straw",
+        "text": "Up to 5 new points (non duplicates) from Sand list allowed"
+      },
+      {
+        "tier": "Straw",
+        "text": "- tiny list counts as ½ point ea, big list as 1 point ea"
+      },
+      {
+        "tier": "Straw",
+        "text": "Oddball points allowed"
+      },
+      {
+        "tier": "Straw",
+        "text": "Fix-it List:"
+      },
+      {
+        "tier": "Straw",
+        "text": "Fix a leak in a supply pipe 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Fix a leak in a DWV pipe 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Replace a toilet 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Replace a pressure tank 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Replace a sink 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Replace a dishwasher 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Plumbing List:"
+      },
+      {
+        "tier": "Straw",
+        "text": "Install a water heater 4 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "- combo with electrical if it's electrically powered"
+      },
+      {
+        "tier": "Straw",
+        "text": "Install a dishwasher in a new location 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Install a sump pump and permanent exit piping 4 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Install a shallow well pump for potable pressurized water 1-2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "- Combo with Electricity"
+      },
+      {
+        "tier": "Straw",
+        "text": "Install a deep well pump for potable pressurized water 4-8 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "- Combo with Electricity"
+      },
+      {
+        "tier": "Straw",
+        "text": "Install a control system and secondary pump for a cistern (not the main well) 4-8 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "- Combo with Electricity"
+      },
+      {
+        "tier": "Straw",
+        "text": "Extend a propane piping system to a new location 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Install a valve in an existing pipe 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Extend water supply piping to a new location 1 point for hot, 1 point for cold"
+      },
+      {
+        "tier": "Straw",
+        "text": "Install a drain (with proper venting) to a new location 4-8 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Trench water to a hydrant or outbuilding 4 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Change an exterior faucet over to a frost proof style 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Make-it List:"
+      },
+      {
+        "tier": "Straw",
+        "text": "Make a water filter (like a berkey water filter) 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Make a simple sand filter 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Make a urine diverter 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "- Combo with Greywater"
+      },
+      {
+        "tier": "Straw",
+        "text": "Build a permanent sand filter 8 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "- Handles floaters and sinkers and is plumbed into your system"
+      },
+      {
+        "tier": "Straw",
+        "text": "Unpressurized rocket hot water system 6 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "- Combo with Rocket"
+      },
+      {
+        "tier": "Straw",
+        "text": "Build an outdoor shower 4 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "- including hot water with easy to do winter prep / freeze protection"
+      },
+      {
+        "tier": "Straw",
+        "text": "Create a shallow well (10’ to 35’ deep) 4-10 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Make a deep well without drilling 10-20 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Set up a simple rainwater collection system 1 point"
+      },
+      {
+        "tier": "Straw",
+        "text": "Set up a sophisticated rainwater collection system 2-8 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Set up simple solar hot water system (hand wash station, outdoor shower) 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Make a ram pump 4-8 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Make a water wheel that generates power 8 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Make a rocket powered hot tub 4 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Make a water tower (>7’ high) 2 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Set up an uphill, frost proof cistern 8 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "Set up a micro hydro power plant 4-16 points"
+      },
+      {
+        "tier": "Straw",
+        "text": "- Combo with electricity"
+      },
+      {
+        "tier": "Straw",
+        "text": "Build a mobile water system on a trailer (fillable and emptyable) 8 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "180 points required"
+      },
+      {
+        "tier": "Wood",
+        "text": "At least 30 new points (non duplicates) from Sand/Straw"
+      },
+      {
+        "tier": "Wood",
+        "text": "Up to 80 points of duplication allowed (from sand/straw/wood)"
+      },
+      {
+        "tier": "Wood",
+        "text": "Oddball points allowed"
+      },
+      {
+        "tier": "Wood",
+        "text": "Set up a pressurized wood fired hot water system 8 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Drill a deep well (>40’ deep) 8-32 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Set up an elegant solar hot water system 16-32 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Rough plumb a small structure 8 or more points"
+      },
+      {
+        "tier": "Wood",
+        "text": "- Need to get at least 8 points to get this BB.  Points determined by number of fixtures, vents, length of piping and built in appliances or fixtures"
+      },
+      {
+        "tier": "Wood",
+        "text": "Rough plumb a house 32 or more points"
+      },
+      {
+        "tier": "Wood",
+        "text": "- Need to get at least 32 points to get this BB.  Points determined by number of fixtures, vents, length of piping and built in appliances or fixtures"
+      },
+      {
+        "tier": "Wood",
+        "text": "Install septic tank and drain field 40 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Develop a first class cistern and pump house that is winter capable 32 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "Develop an elegant large winter capable cistern for a community 32 points"
+      },
+      {
+        "tier": "Wood",
+        "text": "- the cistern improves the water quality with time"
+      },
+      {
+        "tier": "Wood",
+        "text": "Develop a community scale sand filter 24 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "No Iron badge at this time"
+      },
+      {
+        "tier": "Iron",
+        "text": "COMMENTS:"
+      },
+      {
+        "tier": "Iron",
+        "text": "Jerry Ward"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 280"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: S.E. Michigan - Zone 6a"
+      },
+      {
+        "tier": "Iron",
+        "text": "24"
+      },
+      {
+        "tier": "Iron",
+        "text": "6"
+      },
+      {
+        "tier": "Iron",
+        "text": "Where would fixing a leak in a pipe come in?"
+      },
+      {
+        "tier": "Iron",
+        "text": "Starting on developing a 10 acre permaculture homestead in a sub-urban area. see"
+      },
+      {
+        "tier": "Iron",
+        "text": "http://www.my10acres.info"
+      },
+      {
+        "tier": "Iron",
+        "text": "paul wheaton"
+      },
+      {
+        "tier": "Iron",
+        "text": "author and steward"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 108192"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: missoula, montana (zone 4)"
+      },
+      {
+        "tier": "Iron",
+        "text": "∞"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "Jerry Ward wrote:"
+      },
+      {
+        "tier": "Iron",
+        "text": "Where would fixing a leak in a pipe come in?"
+      },
+      {
+        "tier": "Iron",
+        "text": "probably straw badge."
+      },
+      {
+        "tier": "Iron",
+        "text": "Dave Burton"
+      },
+      {
+        "tier": "Iron",
+        "text": "steward"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 6440"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: United States"
+      },
+      {
+        "tier": "Iron",
+        "text": "3155"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "Would"
+      },
+      {
+        "tier": "Iron",
+        "text": "refilling a berkey water filter"
+      },
+      {
+        "tier": "Iron",
+        "text": "count for putting collected water through a berkey filter? I would like to lean towards yes."
+      },
+      {
+        "tier": "Iron",
+        "text": "Dave's SKIP BB's"
+      },
+      {
+        "tier": "Iron",
+        "text": "/"
+      },
+      {
+        "tier": "Iron",
+        "text": "Welcome to Permies!"
+      },
+      {
+        "tier": "Iron",
+        "text": "/"
+      },
+      {
+        "tier": "Iron",
+        "text": "Permaculture Resources"
+      },
+      {
+        "tier": "Iron",
+        "text": "/"
+      },
+      {
+        "tier": "Iron",
+        "text": "Dave's Boot Adventures"
+      },
+      {
+        "tier": "Iron",
+        "text": "&"
+      },
+      {
+        "tier": "Iron",
+        "text": "Longview Projects"
+      },
+      {
+        "tier": "Iron",
+        "text": "Ash Jackson"
+      },
+      {
+        "tier": "Iron",
+        "text": "gardener"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 1439"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: Miami, 11a, Am, apartment dweller"
+      },
+      {
+        "tier": "Iron",
+        "text": "975"
+      },
+      {
+        "tier": "Iron",
+        "text": "10"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "Forgive my ignorance. Is Check a Septic Tank Level (Tiny List) a combo with Homesteading's Check Septic Tank Status?"
+      },
+      {
+        "tier": "Iron",
+        "text": "My PEP Badge Tracker - An easier way to track your PEP Badge Progress."
+      },
+      {
+        "tier": "Iron",
+        "text": "|"
+      },
+      {
+        "tier": "Iron",
+        "text": "Wait, wait, wait; What is PEP?"
+      },
+      {
+        "tier": "Iron",
+        "text": "|"
+      },
+      {
+        "tier": "Iron",
+        "text": "How Permies.com works."
+      },
+      {
+        "tier": "Iron",
+        "text": "paul wheaton"
+      },
+      {
+        "tier": "Iron",
+        "text": "author and steward"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 108192"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: missoula, montana (zone 4)"
+      },
+      {
+        "tier": "Iron",
+        "text": "∞"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "1"
+      },
+      {
+        "tier": "Iron",
+        "text": "Ash Jackson wrote:"
+      },
+      {
+        "tier": "Iron",
+        "text": "Forgive my ignorance. Is Check a Septic Tank Level (Tiny List) a combo with Homesteading's Check Septic Tank Status?"
+      },
+      {
+        "tier": "Iron",
+        "text": "I think that should be a strictly homesteading thing, and not a plumbing thing.  Making the change now."
+      },
+      {
+        "tier": "Iron",
+        "text": "Mike Haasl"
+      },
+      {
+        "tier": "Iron",
+        "text": "steward"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 16253"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: Northern WI (zone 4)"
+      },
+      {
+        "tier": "Iron",
+        "text": "5354"
+      },
+      {
+        "tier": "Iron",
+        "text": "9"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "This badge has been updated with Straw and Wood levels.  Let's get out there and complete some BBs!"
+      },
+      {
+        "tier": "Iron",
+        "text": "I make a Maple Syrup instructional movie! Check it out"
+      },
+      {
+        "tier": "Iron",
+        "text": "HERE"
+      },
+      {
+        "tier": "Iron",
+        "text": "SKIP books, get 'em while they're hot!!!"
+      },
+      {
+        "tier": "Iron",
+        "text": "Skills to Inherit Property"
+      },
+      {
+        "tier": "Iron",
+        "text": "See me in a movie building a massive wood staircase:"
+      },
+      {
+        "tier": "Iron",
+        "text": "Low Tech Lab Movie"
+      },
+      {
+        "tier": "Iron",
+        "text": "r ransom"
+      },
+      {
+        "tier": "Iron",
+        "text": "steward & author"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 48487"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: Left Coast Canada"
+      },
+      {
+        "tier": "Iron",
+        "text": "20331"
+      },
+      {
+        "tier": "Iron",
+        "text": "10"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "I want to get my sand badge."
+      },
+      {
+        "tier": "Iron",
+        "text": "This weekend I removed a pedestal sink, replaced it with a vanity, repaired a broken P-trap, removed the new P-trap, cut the pipe, and built a new P-trap and pipe out of black pipe stuff and stinky glue so that it fit the new sink drain (1.5\" further from wall and 3\" higher - I thought these things were supposed to be standard!!!).  Put it all together.  Added a faucet.  tested for leeks."
+      },
+      {
+        "tier": "Iron",
+        "text": "Am I right in thinking these badges might apply?"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/112870/PEP-BB-plumbing-sand-replacefaucet"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/112757/PEP-BB-plumbing-sand-tiny"
+      },
+      {
+        "tier": "Iron",
+        "text": "Anything else this qualifies for?"
+      },
+      {
+        "tier": "Iron",
+        "text": "how permies works"
+      },
+      {
+        "tier": "Iron",
+        "text": "homegrown linen"
+      },
+      {
+        "tier": "Iron",
+        "text": "|"
+      },
+      {
+        "tier": "Iron",
+        "text": "crazy chicken lady grows yarn!"
+      },
+      {
+        "tier": "Iron",
+        "text": "Mike Haasl"
+      },
+      {
+        "tier": "Iron",
+        "text": "steward"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 16253"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: Northern WI (zone 4)"
+      },
+      {
+        "tier": "Iron",
+        "text": "5354"
+      },
+      {
+        "tier": "Iron",
+        "text": "9"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "Hi R, I think it sounds like you did the \"Repair a P trap\" BB twice, the \"Replace a faucet\" BB and also likely the Straw BB for \"Replace a sink\".  Doing Sand badges more than once can give you credit for Straw and Wood badges but it doesn't look like that's how the plumbing badge works."
+      },
+      {
+        "tier": "Iron",
+        "text": "I make a Maple Syrup instructional movie! Check it out"
+      },
+      {
+        "tier": "Iron",
+        "text": "HERE"
+      },
+      {
+        "tier": "Iron",
+        "text": "SKIP books, get 'em while they're hot!!!"
+      },
+      {
+        "tier": "Iron",
+        "text": "Skills to Inherit Property"
+      },
+      {
+        "tier": "Iron",
+        "text": "See me in a movie building a massive wood staircase:"
+      },
+      {
+        "tier": "Iron",
+        "text": "Low Tech Lab Movie"
+      },
+      {
+        "tier": "Iron",
+        "text": "Mike Haasl"
+      },
+      {
+        "tier": "Iron",
+        "text": "steward"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 16253"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: Northern WI (zone 4)"
+      },
+      {
+        "tier": "Iron",
+        "text": "5354"
+      },
+      {
+        "tier": "Iron",
+        "text": "9"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "3"
+      },
+      {
+        "tier": "Iron",
+        "text": "I believe I just got enough BBs certified to get the Plumbing badge!"
+      },
+      {
+        "tier": "Iron",
+        "text": "6 from the \"tiny\" list:"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/113194/pep-plumbing-hot-water/PEP-BB-plumbing-sand-tiny#1098610"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/138313/pep-plumbing-hot-water/PEP-BB-plumbing-sand-tiny#1084944"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/112761/pep-plumbing-hot-water/PEP-BB-plumbing-sand-tiny#1102587"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/112762/pep-plumbing-hot-water/PEP-BB-plumbing-sand-tiny#1102637"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/111644/pep-plumbing-hot-water/PEP-BB-plumbing-sand-tiny#959062"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/113218/pep-plumbing-hot-water/PEP-BB-plumbing-sand-tiny#1070274"
+      },
+      {
+        "tier": "Iron",
+        "text": "1 from the \"big\" list:"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/140129/pep-plumbing-hot-water/Replace-install-frost-free-spigot#1098623"
+      },
+      {
+        "tier": "Iron",
+        "text": "I make a Maple Syrup instructional movie! Check it out"
+      },
+      {
+        "tier": "Iron",
+        "text": "HERE"
+      },
+      {
+        "tier": "Iron",
+        "text": "SKIP books, get 'em while they're hot!!!"
+      },
+      {
+        "tier": "Iron",
+        "text": "Skills to Inherit Property"
+      },
+      {
+        "tier": "Iron",
+        "text": "See me in a movie building a massive wood staircase:"
+      },
+      {
+        "tier": "Iron",
+        "text": "Low Tech Lab Movie"
+      },
+      {
+        "tier": "Iron",
+        "text": "Staff note"
+      },
+      {
+        "tier": "Iron",
+        "text": "("
+      },
+      {
+        "tier": "Iron",
+        "text": "Nicole Alderman"
+      },
+      {
+        "tier": "Iron",
+        "text": ")"
+      },
+      {
+        "tier": "Iron",
+        "text": ":"
+      },
+      {
+        "tier": "Iron",
         "text": "I hereby certify that you are the proud owner of the Plumbing sand badge! Congratulations on your 12th badge!!!"
       },
       {
-        "tier": "Sand",
-        "text": "Kevin's offshoot of PEX: http://uhspr.ca/merit-badges/"
+        "tier": "Iron",
+        "text": "Kevin Wilson"
       },
       {
-        "tier": "Sand",
+        "tier": "Iron",
+        "text": "pollinator"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 203"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: Powell River, BC"
+      },
+      {
+        "tier": "Iron",
+        "text": "135"
+      },
+      {
+        "tier": "Iron",
+        "text": "5"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "1"
+      },
+      {
+        "tier": "Iron",
+        "text": "I came looking for a BB because I have to fix a toilet that won't flush properly, but darn, it's not on the list. Surely that's a pretty common thing to need to do? Am I missing something?"
+      },
+      {
+        "tier": "Iron",
+        "text": "Kevin's offshoot of PEX:"
+      },
+      {
+        "tier": "Iron",
+        "text": "http://uhspr.ca/merit-badges/"
+      },
+      {
+        "tier": "Iron",
+        "text": "Mike Haasl"
+      },
+      {
+        "tier": "Iron",
+        "text": "steward"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 16253"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: Northern WI (zone 4)"
+      },
+      {
+        "tier": "Iron",
+        "text": "5354"
+      },
+      {
+        "tier": "Iron",
+        "text": "9"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "1"
+      },
+      {
+        "tier": "Iron",
+        "text": "Hmm, I'd take pictures as you go regardless.  Once you figure out how it's not flushing properly, maybe it will fit under the \"fix a leaking toilet\" one.  Maybe not..."
+      },
+      {
+        "tier": "Iron",
+        "text": "Luckily there's the \"plumbing oddball\" BB in the Straw level that you can submit it in.  Then you'll get points but they won't help you get your Sand badge.  But by posting your awesome work over there we might decide we need to make a new BB."
+      },
+      {
+        "tier": "Iron",
+        "text": "I make a Maple Syrup instructional movie! Check it out"
+      },
+      {
+        "tier": "Iron",
+        "text": "HERE"
+      },
+      {
+        "tier": "Iron",
+        "text": "SKIP books, get 'em while they're hot!!!"
+      },
+      {
+        "tier": "Iron",
+        "text": "Skills to Inherit Property"
+      },
+      {
+        "tier": "Iron",
+        "text": "See me in a movie building a massive wood staircase:"
+      },
+      {
+        "tier": "Iron",
+        "text": "Low Tech Lab Movie"
+      },
+      {
+        "tier": "Iron",
+        "text": "Ash Jackson"
+      },
+      {
+        "tier": "Iron",
+        "text": "gardener"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 1439"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: Miami, 11a, Am, apartment dweller"
+      },
+      {
+        "tier": "Iron",
+        "text": "975"
+      },
+      {
+        "tier": "Iron",
+        "text": "10"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "1"
+      },
+      {
+        "tier": "Iron",
+        "text": "I think I have my Plumbing Sand Badge:"
+      },
+      {
+        "tier": "Iron",
+        "text": "###My BB Links:"
+      },
+      {
+        "tier": "Iron",
+        "text": "Big List (1)"
+      },
+      {
+        "tier": "Iron",
+        "text": "- Sink with foot pump:"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/p/1166273"
+      },
+      {
+        "tier": "Iron",
+        "text": "Tiny List (6)"
+      },
+      {
+        "tier": "Iron",
+        "text": "- Bidet:"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/p/1148244"
+      },
+      {
+        "tier": "Iron",
+        "text": "- Decalcify Faucet:"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/p/1166094"
+      },
+      {
+        "tier": "Iron",
+        "text": "- Decalcify Shower head:"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/p/1166091"
+      },
+      {
+        "tier": "Iron",
+        "text": "- Water Quality Test:"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/p/1166093"
+      },
+      {
+        "tier": "Iron",
+        "text": "- Flush Hot Water Heater:"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/p/1147330"
+      },
+      {
+        "tier": "Iron",
+        "text": "- Siphon:"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/p/1146361"
+      },
+      {
+        "tier": "Iron",
+        "text": "You could say I'm ..."
+      },
+      {
+        "tier": "Iron",
+        "text": "flushed"
+      },
+      {
+        "tier": "Iron",
+        "text": "... with excitement! :D"
+      },
+      {
+        "tier": "Iron",
+        "text": "My PEP Badge Tracker - An easier way to track your PEP Badge Progress."
+      },
+      {
+        "tier": "Iron",
+        "text": "|"
+      },
+      {
+        "tier": "Iron",
+        "text": "Wait, wait, wait; What is PEP?"
+      },
+      {
+        "tier": "Iron",
+        "text": "|"
+      },
+      {
+        "tier": "Iron",
+        "text": "How Permies.com works."
+      },
+      {
+        "tier": "Iron",
+        "text": "Staff note"
+      },
+      {
+        "tier": "Iron",
+        "text": "("
+      },
+      {
+        "tier": "Iron",
+        "text": "Mike Haasl"
+      },
+      {
+        "tier": "Iron",
+        "text": ")"
+      },
+      {
+        "tier": "Iron",
+        "text": ":"
+      },
+      {
+        "tier": "Iron",
         "text": "Congratulations on your 8th sand badge!!!"
       },
       {
-        "tier": "Sand",
-        "text": "Check out the plans tobuild your own charka-style spinning wheel from bicycle partsExplore the intersection of permaculture, community, and the cycle of life atHerland Forest Natural Burial Cemeteryand theWindward Education and Research Center"
+        "tier": "Iron",
+        "text": "Opalyn Rose"
       },
       {
-        "tier": "Sand",
+        "tier": "Iron",
+        "text": "gardener"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 1605"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: Washington State"
+      },
+      {
+        "tier": "Iron",
+        "text": "1023"
+      },
+      {
+        "tier": "Iron",
+        "text": "8"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "3"
+      },
+      {
+        "tier": "Iron",
+        "text": "I'd like to apply for my sand badge in Plumbing & Hot Water"
+      },
+      {
+        "tier": "Iron",
+        "text": "Complete 1 BB from the Big List and 6 BB from the Tiny List to Earn this Badge"
+      },
+      {
+        "tier": "Iron",
+        "text": "Big List - Replace a Faucet"
+      },
+      {
+        "tier": "Iron",
+        "text": "Tiny List - Install an Instant Bidet"
+      },
+      {
+        "tier": "Iron",
+        "text": "Tiny List - Clean/Decalcify a Faucet Aerator"
+      },
+      {
+        "tier": "Iron",
+        "text": "Tiny List - Clean/Decalcify a Shower Head"
+      },
+      {
+        "tier": "Iron",
+        "text": "Tiny List - Repair a Problem with the Lid/Seat on a Toilet"
+      },
+      {
+        "tier": "Iron",
+        "text": "Tiny List - Fix a Leaky Toilet"
+      },
+      {
+        "tier": "Iron",
+        "text": "Tiny List - Unclog a Drain with a Zip Tool"
+      },
+      {
+        "tier": "Iron",
+        "text": "Check out the plans to"
+      },
+      {
+        "tier": "Iron",
+        "text": "build your own charka-style spinning wheel from bicycle parts"
+      },
+      {
+        "tier": "Iron",
+        "text": "Explore the intersection of permaculture, community, and the cycle of life at"
+      },
+      {
+        "tier": "Iron",
+        "text": "Herland Forest Natural Burial Cemetery"
+      },
+      {
+        "tier": "Iron",
+        "text": "and the"
+      },
+      {
+        "tier": "Iron",
+        "text": "Windward Education and Research Center"
+      },
+      {
+        "tier": "Iron",
+        "text": "Staff note"
+      },
+      {
+        "tier": "Iron",
+        "text": "("
+      },
+      {
+        "tier": "Iron",
+        "text": "Mike Haasl"
+      },
+      {
+        "tier": "Iron",
+        "text": ")"
+      },
+      {
+        "tier": "Iron",
+        "text": ":"
+      },
+      {
+        "tier": "Iron",
         "text": "Congratulations on your 4th sand badge!!!"
       },
       {
-        "tier": "Sand",
-        "text": "Outdoor and Ecological articles (sporadic Mondays) at http://blog.dxlogan.com/and my main site is found at http://www.dxlogan.com/"
+        "tier": "Iron",
+        "text": "D. Logan"
       },
       {
-        "tier": "Sand",
+        "tier": "Iron",
+        "text": "gardener"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 1179"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: Eastern Tennessee"
+      },
+      {
+        "tier": "Iron",
+        "text": "532"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "1"
+      },
+      {
+        "tier": "Iron",
+        "text": "The time has come for me to apply for the Sand badge in Plumbing. I would like to do so please. Thank you."
+      },
+      {
+        "tier": "Iron",
+        "text": "The Big List (1)"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/112870/pep-plumbing-hot-water/Replace-Faucet-PEP-BB-plumbing#1258183"
+      },
+      {
+        "tier": "Iron",
+        "text": "Tiny List (6)"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/111644/pep-plumbing-hot-water/Fix-Leaky-Faucet-PEP-BB#1147913"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/113194/pep-plumbing-hot-water/Fix-Leaky-Toilet-PEP-BB#1148777"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/118913/pep-plumbing-hot-water/PEP-BB-Plumbing-Sand-Tiny#1146219"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/112761/pep-plumbing-hot-water/Repair-Toilet-Seat-Lid-PEP#1186859"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/113218/pep-plumbing-hot-water/Clean-Decalcify-Faucet-Aerator-PEP#1148343"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/112762/pep-plumbing-hot-water/Clean-Decalcify-Shower-Head-PEP#1192366"
+      },
+      {
+        "tier": "Iron",
+        "text": "Outdoor and Ecological articles (sporadic Mondays) at"
+      },
+      {
+        "tier": "Iron",
+        "text": "http://blog.dxlogan.com/"
+      },
+      {
+        "tier": "Iron",
+        "text": "and my main site is found at"
+      },
+      {
+        "tier": "Iron",
+        "text": "http://www.dxlogan.com/"
+      },
+      {
+        "tier": "Iron",
+        "text": "Staff note"
+      },
+      {
+        "tier": "Iron",
+        "text": "("
+      },
+      {
+        "tier": "Iron",
+        "text": "Mike Haasl"
+      },
+      {
+        "tier": "Iron",
+        "text": ")"
+      },
+      {
+        "tier": "Iron",
+        "text": ":"
+      },
+      {
+        "tier": "Iron",
         "text": "I hereby certify your Sand badge in Plumbing.  Congratulations!"
       },
       {
-        "tier": "Sand",
+        "tier": "Iron",
+        "text": "Kevin Harbin"
+      },
+      {
+        "tier": "Iron",
+        "text": "gardener"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 391"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: Zone 7a"
+      },
+      {
+        "tier": "Iron",
+        "text": "265"
+      },
+      {
+        "tier": "Iron",
+        "text": "7"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "2"
+      },
+      {
+        "tier": "Iron",
+        "text": "Here is my submission for Plumbing Sand:"
+      },
+      {
+        "tier": "Iron",
+        "text": "Tiny List"
+      },
+      {
+        "tier": "Iron",
+        "text": "1."
+      },
+      {
+        "tier": "Iron",
+        "text": "fix a leaky faucet"
+      },
+      {
+        "tier": "Iron",
+        "text": "2."
+      },
+      {
+        "tier": "Iron",
+        "text": "Repair a hose"
+      },
+      {
+        "tier": "Iron",
+        "text": "3."
+      },
+      {
+        "tier": "Iron",
+        "text": "unclog a drain with zip tool"
+      },
+      {
+        "tier": "Iron",
+        "text": "4."
+      },
+      {
+        "tier": "Iron",
+        "text": "clean/decalcify a shower head"
+      },
+      {
+        "tier": "Iron",
+        "text": "5."
+      },
+      {
+        "tier": "Iron",
+        "text": "flush the water heater"
+      },
+      {
+        "tier": "Iron",
+        "text": "6."
+      },
+      {
+        "tier": "Iron",
+        "text": "replace the anode in the water heater"
+      },
+      {
+        "tier": "Iron",
+        "text": "Big List"
+      },
+      {
+        "tier": "Iron",
+        "text": "replacing a faucet"
+      },
+      {
+        "tier": "Iron",
+        "text": "edit: Now with all the links"
+      },
+      {
+        "tier": "Iron",
         "text": "Children, Rabbits, Chickens, Bees"
       },
       {
-        "tier": "Sand",
+        "tier": "Iron",
+        "text": "Staff note"
+      },
+      {
+        "tier": "Iron",
+        "text": "("
+      },
+      {
+        "tier": "Iron",
+        "text": "Mike Haasl"
+      },
+      {
+        "tier": "Iron",
+        "text": ")"
+      },
+      {
+        "tier": "Iron",
+        "text": ":"
+      },
+      {
+        "tier": "Iron",
         "text": "Congratulations on your 4th sand badge!"
       },
       {
-        "tier": "Straw",
+        "tier": "Iron",
+        "text": "Mike Haasl"
+      },
+      {
+        "tier": "Iron",
+        "text": "steward"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 16253"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: Northern WI (zone 4)"
+      },
+      {
+        "tier": "Iron",
+        "text": "5354"
+      },
+      {
+        "tier": "Iron",
+        "text": "9"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "1"
+      },
+      {
+        "tier": "Iron",
+        "text": "I believe I just earned the Straw badge!"
+      },
+      {
+        "tier": "Iron",
+        "text": "These are posted in the order of how they appear in my"
+      },
+      {
+        "tier": "Iron",
+        "text": "BB list"
+      },
+      {
+        "tier": "Iron",
+        "text": ".  I accidentally did 7 extra points in the process so I'm saving some of my approved Sand (duplicate) and Straw BBs for a potential Wood submission in the years to come."
+      },
+      {
+        "tier": "Iron",
+        "text": "Replace a sink 1 pt"
+      },
+      {
+        "tier": "Iron",
+        "text": "Install a drain 8 pts"
+      },
+      {
+        "tier": "Iron",
+        "text": "Replace a pressure tank 1 pt"
+      },
+      {
+        "tier": "Iron",
+        "text": "Extend water to a new location"
+      },
+      {
+        "tier": "Iron",
+        "text": "(shower) - 2 pts"
+      },
+      {
+        "tier": "Iron",
+        "text": "Extend water to a new location"
+      },
+      {
+        "tier": "Iron",
+        "text": "(sink) - 2 pts"
+      },
+      {
+        "tier": "Iron",
+        "text": "Oddball for manual pump in house plumbing system 6 pts"
+      },
+      {
+        "tier": "Iron",
+        "text": "Set up sophisticated rainwater collection system 5 pts"
+      },
+      {
+        "tier": "Iron",
+        "text": "Oddball for greenhouse pump and pressure tank 10 pts"
+      },
+      {
+        "tier": "Iron",
+        "text": "Total 35 points"
+      },
+      {
+        "tier": "Iron",
+        "text": "I make a Maple Syrup instructional movie! Check it out"
+      },
+      {
+        "tier": "Iron",
+        "text": "HERE"
+      },
+      {
+        "tier": "Iron",
+        "text": "SKIP books, get 'em while they're hot!!!"
+      },
+      {
+        "tier": "Iron",
+        "text": "Skills to Inherit Property"
+      },
+      {
+        "tier": "Iron",
+        "text": "See me in a movie building a massive wood staircase:"
+      },
+      {
+        "tier": "Iron",
+        "text": "Low Tech Lab Movie"
+      },
+      {
+        "tier": "Iron",
+        "text": "Staff note"
+      },
+      {
+        "tier": "Iron",
+        "text": "("
+      },
+      {
+        "tier": "Iron",
+        "text": "Opalyn Rose"
+      },
+      {
+        "tier": "Iron",
+        "text": ")"
+      },
+      {
+        "tier": "Iron",
+        "text": ":"
+      },
+      {
+        "tier": "Iron",
         "text": "Congratulation on another Straw Badge!"
       },
       {
-        "tier": "Straw",
-        "text": "\"And we urge you, brothers and sisters, warn those who are idle and disruptive, encourage the disheartened, help the weak, be patient with everyone. Make sure that nobody pays back wrong for wrong, but always strive to do what is good for each other and for everyone else.\"1 Thessalonians 5:14-15"
+        "tier": "Iron",
+        "text": "Mike Haasl"
       },
       {
-        "tier": "Straw",
-        "text": "-Tim's Homestead Journal- Purchase a copy ofBuilding a Better World in Your Backyard- Purchase 6 Decks ofPermaculture Cards-- Purchase 12x Decks ofPermaculture Cards- Purchase a copy of theSKIP Book- Purchase 12x copies ofBuilding a Better World in your Backyard"
+        "tier": "Iron",
+        "text": "steward"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 16253"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: Northern WI (zone 4)"
+      },
+      {
+        "tier": "Iron",
+        "text": "5354"
+      },
+      {
+        "tier": "Iron",
+        "text": "9"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "Update:  All the requests for badges have been moved to individual threads.  Please request your badges by clicking on the badge headers in the top post and following those links.  Please continue to request individual BBs by following the BB links.  Thanks!"
+      },
+      {
+        "tier": "Iron",
+        "text": "badge-link.jpg"
+      },
+      {
+        "tier": "Iron",
+        "text": "I make a Maple Syrup instructional movie! Check it out"
+      },
+      {
+        "tier": "Iron",
+        "text": "HERE"
+      },
+      {
+        "tier": "Iron",
+        "text": "SKIP books, get 'em while they're hot!!!"
+      },
+      {
+        "tier": "Iron",
+        "text": "Skills to Inherit Property"
+      },
+      {
+        "tier": "Iron",
+        "text": "See me in a movie building a massive wood staircase:"
+      },
+      {
+        "tier": "Iron",
+        "text": "Low Tech Lab Movie"
+      },
+      {
+        "tier": "Iron",
+        "text": "Bethany Paschall"
+      },
+      {
+        "tier": "Iron",
+        "text": "pollinator"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 198"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: In the foothills of the Blue Ridge Mountains"
+      },
+      {
+        "tier": "Iron",
+        "text": "121"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "2"
+      },
+      {
+        "tier": "Iron",
+        "text": "I believe I have completed the Plumbing Sand Badge."
+      },
+      {
+        "tier": "Iron",
+        "text": "For the tiny list:"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/110247/pep-plumbing-hot-water/Install-Instant-Bidet-PEP-BB#2317560"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/118913/pep-plumbing-hot-water/PEP-BB-Plumbing-Sand-Tiny#2333920"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/112761/pep-plumbing-hot-water/Repair-Toilet-Seat-Lid-PEP#2206317"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/113218/pep-plumbing-hot-water/Clean-Decalcify-Faucet-Aerator-PEP#1737884"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/112762/pep-plumbing-hot-water/Clean-Decalcify-Shower-Head-PEP#1737885"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/138314/pep-plumbing-hot-water/Set-Downhill-Water-Siphon-PEP#2261948"
+      },
+      {
+        "tier": "Iron",
+        "text": "And for the big list:"
+      },
+      {
+        "tier": "Iron",
+        "text": "https://permies.com/wiki/112870/pep-plumbing-hot-water/Replace-Faucet-PEP-BB-plumbing#2203199"
+      },
+      {
+        "tier": "Iron",
+        "text": "\"And we urge you, brothers and sisters, warn those who are idle and disruptive, encourage the disheartened, help the weak, be patient with everyone. Make sure that nobody pays back wrong for wrong, but always strive to do what is good for each other and for everyone else.\""
+      },
+      {
+        "tier": "Iron",
+        "text": "1 Thessalonians 5:14-15"
+      },
+      {
+        "tier": "Iron",
+        "text": "Timothy Norton"
+      },
+      {
+        "tier": "Iron",
+        "text": "Steward of piddlers"
+      },
+      {
+        "tier": "Iron",
+        "text": "Posts: 8398"
+      },
+      {
+        "tier": "Iron",
+        "text": "Location: Upstate New York, Zone 5b, 43 inch Avg. Rainfall"
+      },
+      {
+        "tier": "Iron",
+        "text": "5076"
+      },
+      {
+        "tier": "Iron",
+        "text": "I like..."
+      },
+      {
+        "tier": "Iron",
+        "text": "3"
+      },
+      {
+        "tier": "Iron",
+        "text": "Please see the post directly above your post."
+      },
+      {
+        "tier": "Iron",
+        "text": "Submissions for badge requests are now hosted in individual threads."
+      },
+      {
+        "tier": "Iron",
+        "text": "Tim's Homestead Journal"
+      },
+      {
+        "tier": "Iron",
+        "text": "- Purchase a copy of"
+      },
+      {
+        "tier": "Iron",
+        "text": "Building a Better World in Your Backyard"
+      },
+      {
+        "tier": "Iron",
+        "text": "- Purchase 6 Decks of"
+      },
+      {
+        "tier": "Iron",
+        "text": "Permaculture Cards"
+      },
+      {
+        "tier": "Iron",
+        "text": "- Purchase 12x Decks of"
+      },
+      {
+        "tier": "Iron",
+        "text": "Permaculture Cards"
+      },
+      {
+        "tier": "Iron",
+        "text": "- Purchase a copy of the"
+      },
+      {
+        "tier": "Iron",
+        "text": "SKIP Book"
+      },
+      {
+        "tier": "Iron",
+        "text": "- Purchase 12x copies of"
+      },
+      {
+        "tier": "Iron",
+        "text": "Building a Better World in your Backyard"
+      },
+      {
+        "tier": "Iron",
+        "text": "Or we might never have existed at all. Freaky. So we should cherish everything. Even this tiny ad:"
+      },
+      {
+        "tier": "Iron",
+        "text": "A rocket mass heater is the most sustainable way to heat a conventional home"
+      },
+      {
+        "tier": "Iron",
+        "text": "http://woodheat.net"
+      },
+      {
+        "tier": "Iron",
+        "text": "reply"
+      },
+      {
+        "tier": "Iron",
+        "text": "reply"
+      },
+      {
+        "tier": "Iron",
+        "text": "Bookmark Topic"
+      },
+      {
+        "tier": "Iron",
+        "text": "Watch Topic"
+      },
+      {
+        "tier": "Iron",
+        "text": "New Topic"
+      },
+      {
+        "tier": "Iron",
+        "text": "Boost this thread!"
+      },
+      {
+        "tier": "Iron",
+        "text": "Similar Threads"
+      },
+      {
+        "tier": "Iron",
+        "text": "Install a deep well pump - electricity.straw.deeppump PEP BB"
+      },
+      {
+        "tier": "Iron",
+        "text": "Plumbing Badge - Straw/Wood Brainstorming thread"
+      },
+      {
+        "tier": "Iron",
+        "text": "Install a control system and pump for a cistern - electricity.straw.cisternpump PEP BB"
+      },
+      {
+        "tier": "Iron",
+        "text": "PEP Badge: Electricity"
+      },
+      {
+        "tier": "Iron",
+        "text": "Install a shallow well pump - electricity.straw.shallowpump PEP BB"
+      },
+      {
+        "tier": "Iron",
+        "text": "1.82 acres near Stilwell, Oklahoma — Elizabeth Jones / agent-listed $32,500"
+      },
+      {
+        "tier": "Iron",
+        "text": "Infographic to consider the best heat - all costs"
+      },
+      {
+        "tier": "Iron",
+        "text": "Permaculture Voices 1, 2 and 3 - all 117 hours of video!"
+      },
+      {
+        "tier": "Iron",
+        "text": "Come Visit Wheaton Labs!"
+      },
+      {
+        "tier": "Iron",
+        "text": "More..."
+      },
+      {
+        "tier": "Iron",
+        "text": "current server time (not your local time) is"
+      },
+      {
+        "tier": "Iron",
+        "text": "Oct 11, 2026 02:05:59"
+      },
+      {
+        "tier": "Iron",
+        "text": "all times are in server time: GMT-6 in summer, GMT-7 in winter"
+      },
+      {
+        "tier": "Iron",
+        "text": "contact us"
+      },
+      {
+        "tier": "Iron",
+        "text": "|"
+      },
+      {
+        "tier": "Iron",
+        "text": "advertise"
+      },
+      {
+        "tier": "Iron",
+        "text": "|"
+      },
+      {
+        "tier": "Iron",
+        "text": "affiliate program"
+      },
+      {
+        "tier": "Iron",
+        "text": "|"
+      },
+      {
+        "tier": "Iron",
+        "text": "news"
+      },
+      {
+        "tier": "Iron",
+        "text": "| Powered by JForum | copyright © 2005-2026"
+      },
+      {
+        "tier": "Iron",
+        "text": "paul wheaton"
+      },
+      {
+        "tier": "Iron",
+        "text": ", missoula, MT"
       }
     ]
   },
@@ -39540,6 +43064,38 @@
       {
         "tier": "General",
         "text": "Come Visit Wheaton Labs!"
+      }
+    ]
+  },
+  {
+    "title": "Make paper - PEM BB traditional.straw.paper",
+    "framework": "PEM",
+    "url": "https://permies.com/wiki/361970/paper-PEM-BB-traditional-straw",
+    "total_tasks": 2,
+    "tasks": [
+      {
+        "tier": "Straw",
+        "text": "Make 6 sheets of paper, at least 8x11 inches, starting with plant material or wood (not recycling paper), using only materials that existed 200 years ago"
+      },
+      {
+        "tier": "Straw",
+        "text": "Provide proof as pictures or video (<2 min): the material, tools and equipment, midway through making the paper, and 6 finished sheets showing their size"
+      }
+    ]
+  },
+  {
+    "title": "Lay 200 Feet of Living Fence - woodland.iron.livingfence PEP BB",
+    "framework": "PEP",
+    "url": "https://permies.com/wiki/147927/Lay-Feet-Living-Fence-woodland",
+    "total_tasks": 2,
+    "tasks": [
+      {
+        "tier": "Iron",
+        "text": "Lay 200 feet of living fence (aka laying a hedge)"
+      },
+      {
+        "tier": "Iron",
+        "text": "Provide proof as pictures or a video (<2 min): a before shot of the area, an action shot of laying the living fence, and an after shot of the completed living fence at least 200 feet long"
       }
     ]
   }
