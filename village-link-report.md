@@ -1,6 +1,12 @@
-# Village Link Report — 2026-10-10
 
-Checked **895** URLs: **875** OK, **16** HTTP errors, **0** redirects, **4** unreachable/timeouts.
+## 2026-10-11 maintenance pass
+-   added resource: Organic Seed Alliance
+-   added resource: eOrganic
+-   validators 5/5 passed
+
+# Village Link Report — 2026-10-11
+
+Checked **895** URLs: **876** OK, **15** HTTP errors, **0** redirects, **4** unreachable/timeouts.
 
 ## Unreachable / timeout (4)
 
@@ -9,7 +15,7 @@ Checked **895** URLs: **875** OK, **16** HTTP errors, **0** redirects, **4** unr
 - `https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`  (error: URLError)
 - `https://mountainherbs.net/`  (error: URLError)
 
-## HTTP errors (16)
+## HTTP errors (15)
 
 - [`http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img`](http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img)  (HTTP 404)
 - [`http://www.fws.gov/whitenosesyndrome/`](http://www.fws.gov/whitenosesyndrome/)  (HTTP 403)
@@ -24,7 +30,6 @@ Checked **895** URLs: **875** OK, **16** HTTP errors, **0** redirects, **4** unr
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
 - [`https://www.allaboutbirds.org/`](https://www.allaboutbirds.org/)  (HTTP 403)
 - [`https://www.blackdragonforge.com/products/smithing101`](https://www.blackdragonforge.com/products/smithing101)  (HTTP 429)
-- [`https://www.instagram.com/wizard.mountainman/`](https://www.instagram.com/wizard.mountainman/)  (HTTP 429)
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
 - [`https://www.patreon.com/slowfilms`](https://www.patreon.com/slowfilms)  (HTTP 403)
 
