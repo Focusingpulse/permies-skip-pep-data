@@ -81,6 +81,20 @@ RESOURCE_POOL = [
      "Post Carbon Institute's journal on energy descent, local food systems, and community resilience — long-form essays by the field's core thinkers."),
     ("Animal Care", "Savory Institute", "https://savory.global/",
      "Holistic planned grazing as grassland regeneration — Allan Savory's framework for using livestock to reverse desertification, with free case studies."),
+    ("Permaculture", "WWOOF", "https://wwoof.net/",
+     "World Wide Opportunities on Organic Farms — volunteer on working farms in 130+ countries, trading labor for room, board, and hands-on skill transfer."),
+    ("Community", "Fellowship for Intentional Community", "https://www.ic.org/",
+     "Directory and knowledge base for ecovillages, cohousing, and communes — 1,000+ community listings plus decades of Communities magazine articles on governance and conflict resolution."),
+    ("Gardening", "Baker Creek Heirloom Seeds", "https://www.rareseeds.com/",
+     "One of the largest heirloom seed catalogs anywhere — thousands of open-pollinated varieties with growing notes, plus the free Whole Seed Catalog."),
+    ("Gardening", "Southern Exposure Seed Exchange", "https://www.southernexposure.com/",
+     "Worker-owned heirloom seed company specializing in varieties for the Mid-Atlantic and Southeast — deep growing guides and seed-saving instructions."),
+    ("Gardening", "No-Till Growers", "https://www.notillgrowers.com/",
+     "The hub of the market-garden no-till movement — hundreds of farmer interviews, podcasts, and guides on profitable small-scale regenerative growing."),
+    ("Gardening", "Soil Food Web School", "https://www.soilfoodweb.com/",
+     "Dr. Elaine Ingham's school on the soil microbiome — compost microscopy, biological soil assessment, and regenerating degraded land without inputs."),
+    ("Permaculture", "Verge Permaculture", "https://vergepermaculture.ca/",
+     "Rob and Michelle Avis's Canadian permaculture school — free webinars and articles on passive solar greenhouse design, water harvesting, and cold-climate homesteading."),
 ]
 
 # --- Bounded resource addition: how many new resources per run ---
