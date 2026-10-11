@@ -1,16 +1,23 @@
+
+## 2026-10-11 maintenance pass
+-   watchdog: translator-ats idle 687.5h; steiner-roots idle 672.9h; counter-watchdog idle 5.4h; aflinks-shard-verify idle 426.9h; citation-watch idle 138.1h; cairn-clean-tech-rd idle 288.0h; cairn-clean-tech-bench idle 240.0h; duncan-laurie-watch idle 88.0h; emf-biology-watch idle 45.9h
+-   added resource: Open Source Ecology
+-   added resource: Farm Hack
+-   cross-feed: AFLinks archive grew by 447 entries since last check; Library will surface fresh docs next passes
+-   validators 5/5 passed
+
 # Village Link Report — 2026-10-11
 
-Checked **943** URLs: **921** OK, **17** HTTP errors, **0** redirects, **5** unreachable/timeouts.
+Checked **943** URLs: **921** OK, **18** HTTP errors, **0** redirects, **4** unreachable/timeouts.
 
-## Unreachable / timeout (5)
+## Unreachable / timeout (4)
 
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)
 - `https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`  (error: URLError)
-- `https://archive.org/details/fe_The_Solar_Greenhouse_Book`  (error: TimeoutError)
 - `https://mountainherbs.net/`  (error: URLError)
 
-## HTTP errors (17)
+## HTTP errors (18)
 
 - [`http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img`](http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img)  (HTTP 404)
 - [`http://www.fws.gov/whitenosesyndrome/`](http://www.fws.gov/whitenosesyndrome/)  (HTTP 403)
@@ -24,6 +31,7 @@ Checked **943** URLs: **921** OK, **17** HTTP errors, **0** redirects, **5** unr
 - [`https://holmgren.com.au/`](https://holmgren.com.au/)  (HTTP 403)
 - [`https://permacultureapprentice.com`](https://permacultureapprentice.com)  (HTTP 403)
 - [`https://skipthejourney.wordpress.com/`](https://skipthejourney.wordpress.com/)  (HTTP 404)
+- [`https://woodworkingformeremortals.com/`](https://woodworkingformeremortals.com/)  (HTTP 405)
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
 - [`https://www.allaboutbirds.org/`](https://www.allaboutbirds.org/)  (HTTP 403)
 - [`https://www.blackdragonforge.com/products/smithing101`](https://www.blackdragonforge.com/products/smithing101)  (HTTP 429)
