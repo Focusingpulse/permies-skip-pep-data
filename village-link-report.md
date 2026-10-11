@@ -1,4 +1,3 @@
-
 ## 2026-10-11 maintenance pass
 -   watchdog: translator-ats idle 687.5h; steiner-roots idle 672.9h; counter-watchdog idle 5.4h; aflinks-shard-verify idle 426.9h; citation-watch idle 138.1h; cairn-clean-tech-rd idle 288.0h; cairn-clean-tech-bench idle 240.0h; duncan-laurie-watch idle 88.0h; emf-biology-watch idle 45.9h
 -   added resource: Open Source Ecology
@@ -8,16 +7,17 @@
 
 # Village Link Report — 2026-10-11
 
-Checked **943** URLs: **921** OK, **18** HTTP errors, **0** redirects, **4** unreachable/timeouts.
+Checked **945** URLs: **921** OK, **19** HTTP errors, **0** redirects, **5** unreachable/timeouts.
 
-## Unreachable / timeout (4)
+## Unreachable / timeout (5)
 
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)
 - `https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`  (error: URLError)
+- `https://archive.org/details/fe_The_Solar_Greenhouse_Book`  (error: TimeoutError)
 - `https://mountainherbs.net/`  (error: URLError)
 
-## HTTP errors (18)
+## HTTP errors (19)
 
 - [`http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img`](http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img)  (HTTP 404)
 - [`http://www.fws.gov/whitenosesyndrome/`](http://www.fws.gov/whitenosesyndrome/)  (HTTP 403)
@@ -35,6 +35,7 @@ Checked **943** URLs: **921** OK, **18** HTTP errors, **0** redirects, **4** unr
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
 - [`https://www.allaboutbirds.org/`](https://www.allaboutbirds.org/)  (HTTP 403)
 - [`https://www.blackdragonforge.com/products/smithing101`](https://www.blackdragonforge.com/products/smithing101)  (HTTP 429)
+- [`https://www.instagram.com/wizard.mountainman/`](https://www.instagram.com/wizard.mountainman/)  (HTTP 429)
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
 - [`https://www.patreon.com/slowfilms`](https://www.patreon.com/slowfilms)  (HTTP 403)
 
