@@ -65,10 +65,11 @@ const CULTURE_ELEMENTS = {
   },
 
   "1.3": {
-    science: "Social connection is a mortality-relevant variable — the Holt-Lunstad meta-analysis (2010) found social relationships predict survival comparably to smoking. Peer support in adolescence buffers against isolation.",
+    science: "Social connection is a mortality-relevant variable with a large effect. A meta-analysis of 148 prospective studies (308,849 participants) found a 50% greater likelihood of survival for people with stronger social relationships (OR 1.50, 95% CI 1.42–1.59), consistent across age, sex, initial health status and cause of death (Holt-Lunstad, Smith & Layton 2010, PLoS Medicine 7(7):e1000316). A second meta-analysis of 70 studies (3.4 million participants) put the increased odds of death at 29% for social isolation, 26% for loneliness and 32% for living alone — magnitudes its authors call comparable with well-established mortality risk factors (Holt-Lunstad et al. 2015, Perspectives on Psychological Science 10(2):227–237). The mechanism is not only statistical: social exclusion activates the dorsal anterior cingulate and anterior insula, overlapping the circuitry of physical pain, and the activation tracks self-reported distress (Eisenberger, Lieberman & Williams 2003, Science 302(5643):290–292). Perceived isolation then compounds itself — lonely people show heightened vigilance to social threat and read ambiguous cues as hostile, a self-protective bias that is paradoxically self-defeating (Cacioppo & Hawkley 2009, Trends in Cognitive Sciences 13(10):447–454). Honest limit: the mortality evidence is drawn largely from adult samples (mean age 63.9 in the 2010 meta-analysis), so extending it to adolescents is an extrapolation, not a measured result.",
     evClass: "strong",
     useCases: [
       { domain: "family", how: "Protect unstructured peer time. It is not wasted time; it is the thing that prevents adult isolation." },
+      { domain: "family", how: "Notice who is missing, not only who is present. Exclusion is processed as pain, so an uninvited child is not a neutral outcome." },
       { domain: "fleet", how: "Keep a shared check-in ledger so agents are not working in isolation." },
       { domain: "project", how: "Build peer cohorts among families using the same material, not just a solo curriculum." }
     ],
