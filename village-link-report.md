@@ -1,3 +1,10 @@
+
+## 2026-10-12 maintenance pass
+-   watchdog: aflinks-worker-isis idle 9.8h; translator-ats idle 712.7h; steiner-roots idle 698.1h; interview-radar idle 69.0h; aflinks-shard-verify idle 452.1h; citation-watch idle 163.3h; site-watchdog idle 2.2h; cairn-pulse idle 171.2h; cairn-clean-tech-rd idle 313.2h; cairn-clean-tech-bench idle 265.2h; duncan-laurie-watch idle 113.2h; translation-finding-aid idle 24.8h; emf-biology-watch idle 71.1h
+-   added resource: Southern Exposure Seed Exchange
+-   added resource: No-Till Growers
+-   validators 5/5 passed
+
 # Village Link Report — 2026-10-12
 
 Checked **957** URLs: **933** OK, **20** HTTP errors, **0** redirects, **4** unreachable/timeouts.
