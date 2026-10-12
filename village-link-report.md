@@ -1,16 +1,23 @@
+
+## 2026-10-12 maintenance pass
+-   added resource: Fellowship for Intentional Community
+-   added resource: Baker Creek Heirloom Seeds
+-   validators 5/5 passed
+
 # Village Link Report — 2026-10-12
 
-Checked **952** URLs: **931** OK, **16** HTTP errors, **0** redirects, **5** unreachable/timeouts.
+Checked **952** URLs: **924** OK, **22** HTTP errors, **0** redirects, **6** unreachable/timeouts.
 
-## Unreachable / timeout (5)
+## Unreachable / timeout (6)
 
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)
 - `https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`  (error: URLError)
+- `https://archive.org/details/fe_The_Solar_Greenhouse_Book`  (error: TimeoutError)
 - `https://mountainherbs.net/`  (error: URLError)
-- `https://web.archive.org/web/2025/https://www.dni.gov/files/ODNI/documents/assessments/NIC-Unclassified-ICA-Updated-Assessment-AHI-December2024.pdf`  (error: URLError)
+- `https://sc.ibi.ethz.ch/studium/continuing-education/mooc-regenmat.html`  (error: TimeoutError)
 
-## HTTP errors (16)
+## HTTP errors (22)
 
 - [`http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img`](http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img)  (HTTP 404)
 - [`http://www.fws.gov/whitenosesyndrome/`](http://www.fws.gov/whitenosesyndrome/)  (HTTP 403)
@@ -20,11 +27,17 @@ Checked **952** URLs: **931** OK, **16** HTTP errors, **0** redirects, **5** unr
 - [`https://charlesdowding.co.uk`](https://charlesdowding.co.uk)  (HTTP 429)
 - [`https://culturesforhealth.com/blogs/learn`](https://culturesforhealth.com/blogs/learn)  (HTTP 429)
 - [`https://goingtoseed.org/collections/courses`](https://goingtoseed.org/collections/courses)  (HTTP 429)
+- [`https://handtoolwoodworking.com/green-woodworking-videos/`](https://handtoolwoodworking.com/green-woodworking-videos/)  (HTTP 403)
+- [`https://holmgren.com.au/`](https://holmgren.com.au/)  (HTTP 403)
+- [`https://naturalbuildingblog.com`](https://naturalbuildingblog.com)  (HTTP 429)
+- [`https://permacultureapprentice.com`](https://permacultureapprentice.com)  (HTTP 403)
 - [`https://skipthejourney.wordpress.com/`](https://skipthejourney.wordpress.com/)  (HTTP 404)
 - [`https://woodworkingformeremortals.com/`](https://woodworkingformeremortals.com/)  (HTTP 405)
+- [`https://wwoof.net/`](https://wwoof.net/)  (HTTP 403)
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
 - [`https://www.allaboutbirds.org/`](https://www.allaboutbirds.org/)  (HTTP 403)
 - [`https://www.blackdragonforge.com/products/smithing101`](https://www.blackdragonforge.com/products/smithing101)  (HTTP 429)
+- [`https://www.gutenberg.org`](https://www.gutenberg.org)  (HTTP 504)
 - [`https://www.instagram.com/wizard.mountainman/`](https://www.instagram.com/wizard.mountainman/)  (HTTP 429)
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
 - [`https://www.patreon.com/slowfilms`](https://www.patreon.com/slowfilms)  (HTTP 403)
