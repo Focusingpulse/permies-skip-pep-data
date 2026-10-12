@@ -1,23 +1,15 @@
-
-## 2026-10-12 maintenance pass
--   added resource: Fellowship for Intentional Community
--   added resource: Baker Creek Heirloom Seeds
--   validators 5/5 passed
-
 # Village Link Report — 2026-10-12
 
-Checked **952** URLs: **924** OK, **22** HTTP errors, **0** redirects, **6** unreachable/timeouts.
+Checked **957** URLs: **933** OK, **20** HTTP errors, **0** redirects, **4** unreachable/timeouts.
 
-## Unreachable / timeout (6)
+## Unreachable / timeout (4)
 
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)
 - `https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`  (error: URLError)
-- `https://archive.org/details/fe_The_Solar_Greenhouse_Book`  (error: TimeoutError)
 - `https://mountainherbs.net/`  (error: URLError)
-- `https://sc.ibi.ethz.ch/studium/continuing-education/mooc-regenmat.html`  (error: TimeoutError)
 
-## HTTP errors (22)
+## HTTP errors (20)
 
 - [`http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img`](http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img)  (HTTP 404)
 - [`http://www.fws.gov/whitenosesyndrome/`](http://www.fws.gov/whitenosesyndrome/)  (HTTP 403)
@@ -37,8 +29,6 @@ Checked **952** URLs: **924** OK, **22** HTTP errors, **0** redirects, **6** unr
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
 - [`https://www.allaboutbirds.org/`](https://www.allaboutbirds.org/)  (HTTP 403)
 - [`https://www.blackdragonforge.com/products/smithing101`](https://www.blackdragonforge.com/products/smithing101)  (HTTP 429)
-- [`https://www.gutenberg.org`](https://www.gutenberg.org)  (HTTP 504)
-- [`https://www.instagram.com/wizard.mountainman/`](https://www.instagram.com/wizard.mountainman/)  (HTTP 429)
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
 - [`https://www.patreon.com/slowfilms`](https://www.patreon.com/slowfilms)  (HTTP 403)
 
