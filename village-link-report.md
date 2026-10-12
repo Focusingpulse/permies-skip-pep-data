@@ -1,6 +1,6 @@
 # Village Link Report — 2026-10-12
 
-Checked **949** URLs: **926** OK, **18** HTTP errors, **0** redirects, **5** unreachable/timeouts.
+Checked **952** URLs: **931** OK, **16** HTTP errors, **0** redirects, **5** unreachable/timeouts.
 
 ## Unreachable / timeout (5)
 
@@ -8,9 +8,9 @@ Checked **949** URLs: **926** OK, **18** HTTP errors, **0** redirects, **5** unr
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)
 - `https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`  (error: URLError)
 - `https://mountainherbs.net/`  (error: URLError)
-- `https://web.archive.org/web/20240101000000/https://8shields.org`  (error: URLError)
+- `https://web.archive.org/web/2025/https://www.dni.gov/files/ODNI/documents/assessments/NIC-Unclassified-ICA-Updated-Assessment-AHI-December2024.pdf`  (error: URLError)
 
-## HTTP errors (18)
+## HTTP errors (16)
 
 - [`http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img`](http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img)  (HTTP 404)
 - [`http://www.fws.gov/whitenosesyndrome/`](http://www.fws.gov/whitenosesyndrome/)  (HTTP 403)
@@ -19,15 +19,13 @@ Checked **949** URLs: **926** OK, **18** HTTP errors, **0** redirects, **5** unr
 - [`https://calearth.org`](https://calearth.org)  (HTTP 429)
 - [`https://charlesdowding.co.uk`](https://charlesdowding.co.uk)  (HTTP 429)
 - [`https://culturesforhealth.com/blogs/learn`](https://culturesforhealth.com/blogs/learn)  (HTTP 429)
-- [`https://handtoolwoodworking.com/green-woodworking-videos/`](https://handtoolwoodworking.com/green-woodworking-videos/)  (HTTP 403)
-- [`https://holmgren.com.au/`](https://holmgren.com.au/)  (HTTP 403)
-- [`https://permacultureapprentice.com`](https://permacultureapprentice.com)  (HTTP 403)
+- [`https://goingtoseed.org/collections/courses`](https://goingtoseed.org/collections/courses)  (HTTP 429)
 - [`https://skipthejourney.wordpress.com/`](https://skipthejourney.wordpress.com/)  (HTTP 404)
 - [`https://woodworkingformeremortals.com/`](https://woodworkingformeremortals.com/)  (HTTP 405)
-- [`https://wwoof.net/`](https://wwoof.net/)  (HTTP 403)
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
 - [`https://www.allaboutbirds.org/`](https://www.allaboutbirds.org/)  (HTTP 403)
 - [`https://www.blackdragonforge.com/products/smithing101`](https://www.blackdragonforge.com/products/smithing101)  (HTTP 429)
+- [`https://www.instagram.com/wizard.mountainman/`](https://www.instagram.com/wizard.mountainman/)  (HTTP 429)
 - [`https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope`](https://www.kickstarter.com/projects/positiverealfutures/an-actually-fun-tv-show-about-a-future-with-real-hope)  (HTTP 403)
 - [`https://www.patreon.com/slowfilms`](https://www.patreon.com/slowfilms)  (HTTP 403)
 
