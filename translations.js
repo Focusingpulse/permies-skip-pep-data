@@ -1423,6 +1423,18 @@ const LANG = {
       "title": "Convertir un bidón de plástico en una pala",
       "desc": "Reutiliza un bidón de plástico para hacer una pala resistente y funcional — muestra el bidón inicial y la pala terminada. (BB de PEM: wastestreams.sand.scoop)"
     },
+    "Perform Internet Labor and Get Paid $50": {
+      "title": "Realizar trabajo por internet y cobrar $50",
+      "desc": "Haz algún tipo de trabajo por internet y cobra al menos $50 — publica una descripción del trabajo, una imagen que pruebe que se hizo por internet y una imagen que pruebe que ganaste al menos $50. (BB de PEP: commerce.sand.internet)"
+    },
+    "Perform Internet Labor and Get Paid $500": {
+      "title": "Realizar trabajo por internet y cobrar $500",
+      "desc": "Haz un trabajo por internet y cobra al menos $500 — vender tus productos en línea no cuenta, pero un trabajo regular hecho a distancia sí. Publica una descripción, prueba del trabajo por internet y prueba de los $500. (BB de PEP: community.straw.internet)"
+    },
+    "Build a Traditional Smoker": {
+      "title": "Construir un ahumadero tradicional",
+      "desc": "Construye un ahumadero tradicional — caliente, frío o mixto — con al menos 2' × 2' × 4' de espacio de ahumado, usando solo materiales que existieran hace 200 años. Muestra el sitio, el trabajo a medio camino, las dimensiones interiores terminadas y el ahumadero en funcionamiento. (BB de PEM: traditional.straw.smoker)"
+    },
   }
 },
   "fr": {
@@ -2843,6 +2855,18 @@ const LANG = {
       "title": "Transformer un bidon en plastique en pelle",
       "desc": "Recycle un bidon en plastique en une pelle robuste et fonctionnelle — montre le bidon de départ et la pelle terminée. (BB PEM : wastestreams.sand.scoop)"
     },
+    "Perform Internet Labor and Get Paid $50": {
+      "title": "Effectuer un travail sur internet et être payé 50 $",
+      "desc": "Fais un travail quelconque sur internet et sois payé au moins 50 $ — publie une description du travail, une image prouvant qu'il a été fait sur internet et une image prouvant qu'il t'a rapporté au moins 50 $. (BB PEP : commerce.sand.internet)"
+    },
+    "Perform Internet Labor and Get Paid $500": {
+      "title": "Effectuer un travail sur internet et être payé 500 $",
+      "desc": "Fais un travail sur internet et sois payé au moins 500 $ — vendre tes produits en ligne ne compte pas, mais un emploi régulier fait à distance compte. Publie une description, une preuve du travail sur internet et une preuve des 500 $. (BB PEP : community.straw.internet)"
+    },
+    "Build a Traditional Smoker": {
+      "title": "Construire un fumoir traditionnel",
+      "desc": "Construis un fumoir traditionnel — à chaud, à froid ou mixte — avec au moins 2' × 2' × 4' d'espace de fumage, en utilisant uniquement des matériaux qui existaient il y a 200 ans. Montre l'emplacement, le travail à mi-parcours, les dimensions intérieures du fumoir terminé et le fumoir en fonctionnement. (BB PEM : traditional.straw.smoker)"
+    },
   }
 },
   "de": {
@@ -4262,6 +4286,18 @@ const LANG = {
     "Turn a Plastic Jug into a Scoop": {
       "title": "Einen Plastikkanister in eine Schaufel verwandeln",
       "desc": "Verwandle einen Plastikkanister in eine robuste, funktionale Schaufel — zeige den Ausgangskanister und die fertige Schaufel. (PEM-BB: wastestreams.sand.scoop)"
+    },
+    "Perform Internet Labor and Get Paid $50": {
+      "title": "Internet-Arbeit verrichten und 50 $ verdienen",
+      "desc": "Verrichte irgendeine Arbeit über das Internet und werde mit mindestens 50 $ bezahlt — veröffentliche eine Beschreibung der Arbeit, ein Bild als Nachweis, dass die Arbeit über das Internet erledigt wurde, und ein Bild als Nachweis, dass sie dir mindestens 50 $ eingebracht hat. (PEP-BB: commerce.sand.internet)"
+    },
+    "Perform Internet Labor and Get Paid $500": {
+      "title": "Internet-Arbeit verrichten und 500 $ verdienen",
+      "desc": "Verrichte Arbeit über das Internet und werde mit mindestens 500 $ bezahlt — der Online-Verkauf deiner Waren zählt nicht, aber ein regulärer Job aus der Ferne zählt. Veröffentliche eine Beschreibung, einen Nachweis der Internet-Arbeit und einen Nachweis der 500 $. (PEP-BB: community.straw.internet)"
+    },
+    "Build a Traditional Smoker": {
+      "title": "Einen traditionellen Räucherofen bauen",
+      "desc": "Baue einen traditionellen Räucherofen oder ein Räucherhaus — heiß, kalt oder kombiniert — mit mindestens 2' × 2' × 4' Räucherraum, ausschließlich aus Materialien, die es vor 200 Jahren gab. Zeige den Standort, die Arbeit auf halbem Weg, die fertigen Innenmaße und den Ofen in Betrieb. (PEM-BB: traditional.straw.smoker)"
     },
   }
 }

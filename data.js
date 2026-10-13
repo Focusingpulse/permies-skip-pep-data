@@ -395,12 +395,14 @@ const VILLAGE_QUESTS = [
       ["Offer a Service and Track the Earnings","Do a paid or traded job and record what you earned.",["Economics","Math"],"🪙"],
       ["Create a Mini Online Listing","Write a simple listing for something you made or offer.",["Writing","Economics"],"🖥️"],
       ["Meet a Foreign Currency","Discover one currency, its symbol, and the countries that use it.",["Geography","Economics"],"🌍"]
+      ,["Perform Internet Labor and Get Paid $50","Do some sort of labor over the internet and get paid at least $50 — post a description of the labor, a picture of proof the labor was done over the internet, and a picture of proof it made at least $50. (PEP BB: commerce.sand.internet)",["Economics","Writing"],"💻"]
     ],
     straw: [
       ["Run a Family Currency Exchange","Trade a little pretend money between two currencies and find the total together.",["Math","Economics"],"🔄"],
       ["Start a Paper-Trading Journal","Write down one pretend trade: what you expected vs what actually happened.",["Writing","Math"],"📓"],
       ["Compare Buying Power","Ask what one common item costs in dollars, euros, and francs.",["Math","Economics"],"⚖️"],
       ["Save Toward a Tiny Goal","Tuck a little pocket money toward one small goal for a month and track it.",["Math","Economics"],"🐢"]
+      ,["Perform Internet Labor and Get Paid $500","Do labor over the internet and get paid at least $500 — selling your goods online doesn't count, but a regular job done remotely does. Post a description, proof of internet labor, and proof of the $500. (PEP BB: community.straw.internet)",["Economics","Writing"],"🌐"]
     ],
     wood: [
       ["Track Exchange Rates for a Week","Watch one currency pair for a week and note up, down, or sideways.",["Math","Economics"],"📈"],
@@ -471,6 +473,7 @@ const VILLAGE_QUESTS = [
       ["Weave a Pine Needle Basket","Coil and stitch a pine needle basket at least 4 inches across with natural thread — only materials that existed 200 years ago. (PEM BB: traditional.straw.weavepine)",["Art","History"],"🌲"],
       ["Make Shell Buttons","Shape and drill 4 smooth, round shell buttons with at least 2 holes each — only materials that existed 200 years ago. (PEM BB: traditional.straw.buttons)",["Art","History"],"🐚"],
       ["Make Paper from Plants","Make 6 sheets of paper at least 8x11 inches from plant material or wood (not recycled paper), using only materials that existed 200 years ago — pics of the material, tools, midway, and finished sheets. (PEM BB: traditional.straw.paper)",["Art","History"],"📜"]
+      ,["Build a Traditional Smoker","Build a traditional smoker or smokehouse — hot, cold, or dual — with at least 2' by 2' by 4' of smoking space, using only materials that existed 200 years ago. Show the site, midway, the finished smoker's interior dimensions, and it running. (PEM BB: traditional.straw.smoker)",["History","Science"],"🥓"]
     ],
     straw: [],
     wood: [],
