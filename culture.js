@@ -78,7 +78,7 @@ const CULTURE_ELEMENTS = {
   },
 
   "1.4": {
-    science: "Attention Restoration Theory (Kaplan & Kaplan): natural environments restore directed attention through 'soft fascination.' Repeated contact with one place builds place attachment.",
+    science: "Attention Restoration Theory: natural environments restore directed attention because they engage it gently — 'soft fascination' — rather than demanding it, letting effortful focus replenish (Kaplan & Kaplan 1989, The Experience of Nature: A Psychological Perspective; Kaplan 1995, Journal of Environmental Psychology 15(3):169–182). The measured test: walking in nature or viewing nature images improved directed-attention performance on a backwards digit-span task and the Attention Network Task, while matched urban settings did not (Berman, Jonides & Kaplan 2008, Psychological Science 19(12):1207–1212). Returning to one place adds a second, more weakly evidenced layer: place attachment — the bond between a person and a place — is a well-defined construct (Scannell & Gifford 2010, Journal of Environmental Psychology 30(1):1–10), and in recreation and tourism research it strengthens with accumulated visits; but that link is correlational (experienced visitors report stronger attachment), not a controlled test of the sitspot practice. Honest limit: the restoration evidence is about nature exposure generally — the specific claim that returning to the SAME spot does more than varied nature contact is not directly tested.",
     evClass: "moderate",
     useCases: [
       { domain: "family", how: "Pick one spot outdoors and return to it regularly. Same spot, different days — that is the whole practice." },
