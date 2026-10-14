@@ -1435,6 +1435,22 @@ const LANG = {
       "title": "Construir un ahumadero tradicional",
       "desc": "Construye un ahumadero tradicional — caliente, frío o mixto — con al menos 2' × 2' × 4' de espacio de ahumado, usando solo materiales que existieran hace 200 años. Muestra el sitio, el trabajo a medio camino, las dimensiones interiores terminadas y el ahumadero en funcionamiento. (BB de PEM: traditional.straw.smoker)"
     },
+    "Clean the Exterior Walls of a House": {
+      "title": "Limpiar las paredes exteriores de una casa",
+      "desc": "Limpia las paredes exteriores de una casa — fotos del antes, durante y después (o un video de menos de 2 minutos) que demuestren que las paredes quedaron limpias. (BB de PEP: nest.straw.cleanexthouse)"
+    },
+    "Make a Cot-Sized Mattress": {
+      "title": "Hacer un colchón tamaño catre",
+      "desc": "Haz un colchón (funda rellena) tamaño catre de unas 74 × 26 pulgadas y de 3 a 5 pulgadas de grosor — tela natural (algodón, lana, lino) y relleno natural (paja, plumas, cáscaras de semillas o vellón de lana). Muestra los materiales, la confección de la funda, el relleno y el colchón terminado. (BB de PEP: textiles.wood.mattress)"
+    },
+    "Dip Beeswax Candles": {
+      "title": "Hacer velas de cera de abeja por inmersión",
+      "desc": "Haz 12 velas de cera de abeja sumergiendo repetidamente — al menos 1/2 pulgada de diámetro en la base y 8 pulgadas de largo, usando solo materiales que existieran hace 200 años. Muestra tu método para derretir la cera, las mechas listas, el proceso a mitad de camino y las velas terminadas. (BB de PEM: traditional.sand.dipcandles)"
+    },
+    "Make a Writing Quill": {
+      "title": "Hacer una pluma de escritura",
+      "desc": "Haz una pluma de ave casera para escribir o dibujar y úsala para escribir unas palabras en papel blanco — solo materiales que existieran hace 200 años. Muestra la pluma inicial, el tallado a mitad de camino, la pluma terminada y tus palabras escritas. (BB de PEM: traditional.sand.quill)"
+    },
   }
 },
   "fr": {
@@ -2867,6 +2883,22 @@ const LANG = {
       "title": "Construire un fumoir traditionnel",
       "desc": "Construis un fumoir traditionnel — à chaud, à froid ou mixte — avec au moins 2' × 2' × 4' d'espace de fumage, en utilisant uniquement des matériaux qui existaient il y a 200 ans. Montre l'emplacement, le travail à mi-parcours, les dimensions intérieures du fumoir terminé et le fumoir en fonctionnement. (BB PEM : traditional.straw.smoker)"
     },
+    "Clean the Exterior Walls of a House": {
+      "title": "Nettoyer les murs extérieurs d'une maison",
+      "desc": "Nettoie les murs extérieurs d'une maison — photos avant, pendant et après (ou une vidéo de moins de 2 minutes) démontrant que les murs sont nettoyés. (BB PEP : nest.straw.cleanexthouse)"
+    },
+    "Make a Cot-Sized Mattress": {
+      "title": "Fabriquer un matelas de camp",
+      "desc": "Fabrique un matelas (enveloppe garnie) taille lit de camp d'environ 74 × 26 pouces et de 3 à 5 pouces d'épaisseur — tissu naturel (coton, laine, lin) et garnissage naturel (paille, plumes, balles de graines ou toison de laine). Montre les matériaux, la confection de l'enveloppe, le garnissage et le matelas terminé. (BB PEP : textiles.wood.mattress)"
+    },
+    "Dip Beeswax Candles": {
+      "title": "Fabriquer des bougies trempées en cire d'abeille",
+      "desc": "Fabrique 12 bougies en cire d'abeille par trempages répétés — au moins 1/2 pouce de diamètre à la base et 8 pouces de long, en utilisant uniquement des matériaux qui existaient il y a 200 ans. Montre ta méthode de fonte de la cire, les mèches prêtes à tremper, le travail à mi-parcours et les bougies terminées. (BB PEM : traditional.sand.dipcandles)"
+    },
+    "Make a Writing Quill": {
+      "title": "Fabriquer une plume d'écriture",
+      "desc": "Fabrique une plume d'oiseau artisanale pour écrire ou dessiner, puis utilise-la pour écrire quelques mots sur du papier blanc — uniquement des matériaux qui existaient il y a 200 ans. Montre la plume de départ, la taille à mi-parcours, la plume terminée et tes mots écrits. (BB PEM : traditional.sand.quill)"
+    },
   }
 },
   "de": {
@@ -4298,6 +4330,22 @@ const LANG = {
     "Build a Traditional Smoker": {
       "title": "Einen traditionellen Räucherofen bauen",
       "desc": "Baue einen traditionellen Räucherofen oder ein Räucherhaus — heiß, kalt oder kombiniert — mit mindestens 2' × 2' × 4' Räucherraum, ausschließlich aus Materialien, die es vor 200 Jahren gab. Zeige den Standort, die Arbeit auf halbem Weg, die fertigen Innenmaße und den Ofen in Betrieb. (PEM-BB: traditional.straw.smoker)"
+    },
+    "Clean the Exterior Walls of a House": {
+      "title": "Außenwände eines Hauses reinigen",
+      "desc": "Reinige die Außenwände eines Hauses — Vorher-, Währenddessen- und Nachher-Fotos (oder ein Video unter 2 Minuten), die zeigen, dass die Wände gereinigt sind. (PEP-BB: nest.straw.cleanexthouse)"
+    },
+    "Make a Cot-Sized Mattress": {
+      "title": "Eine Matratze in Campingbett-Größe herstellen",
+      "desc": "Stelle eine Matratze (Stoffhülle mit Füllung) in Campingbett-Größe her, etwa 74 × 26 Zoll und 3 bis 5 Zoll dick — Naturstoff (Baumwolle, Wolle, Leinen) und natürliche Füllung (Stroh, Federn, Samenspelzen oder Wollvlies). Zeige die Materialien, das Nähen der Hülle, das Füllen und die fertige Matratze. (PEP-BB: textiles.wood.mattress)"
+    },
+    "Dip Beeswax Candles": {
+      "title": "Bienenwachskerzen ziehen",
+      "desc": "Stelle 12 Bienenwachskerzen durch wiederholtes Eintauchen her — mindestens 1/2 Zoll Durchmesser am Fuß und 8 Zoll lang, ausschließlich aus Materialien, die es vor 200 Jahren gab. Zeige deine Schmelzmethode, die tauchbereiten Dochte, die Arbeit auf halbem Weg und die fertigen Kerzen. (PEM-BB: traditional.sand.dipcandles)"
+    },
+    "Make a Writing Quill": {
+      "title": "Einen Schreibkiel herstellen",
+      "desc": "Stelle einen selbstgemachten Federkiel zum Schreiben oder Zeichnen her und schreibe damit ein paar Worte auf weißes Papier — ausschließlich aus Materialien, die es vor 200 Jahren gab. Zeige die Ausgangsfeder, das Schnitzen auf halbem Weg, den fertigen Kiel und deine geschriebenen Worte. (PEM-BB: traditional.sand.quill)"
     },
   }
 }

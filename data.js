@@ -308,7 +308,9 @@ const VILLAGE_QUESTS = [
     straw: [
       ["Spin and Ply Yarn","Spin and ply 8 ounces of natural plant or animal fiber into at least 200 yards of finished yarn with 2 or more plies. (PEP BB: textile.straw.spin.plyyarn)",["Art","Math"],"🌀"]
     ],
-    wood: [],
+    wood: [
+      ["Make a Cot-Sized Mattress","Make a camping cot-size mattress (tick) about 74 by 26 inches and 3 to 5 inches thick — natural fabric (cotton, wool, linen) and natural stuffing (bedstraw, straw, feathers, seed husks, or wool fleece). Show the materials, making the tick, stuffing it, and the finished mattress. (PEP BB: textiles.wood.mattress)",["Art","Science"],"🛏️"]
+    ],
     iron: []
   },
   {
@@ -451,7 +453,9 @@ const VILLAGE_QUESTS = [
       ["Beat and Sun a Area Rug","Beat an area rug and give it at least 2 hours of sunlight: before, action shot, and after pictures. (PEP BB: nest.sand.cleanrug)",["Health","PE"],"🧹"],
       ["Sweep a Floor","Before, action, and after pictures of sweeping a floor — or a 2-minute video. (PEP BB: nest.sand.sweepfloor)",["Health","PE"],"🧹"]
     ],
-    straw: [],
+    straw: [
+      ["Clean the Exterior Walls of a House","Clean the exterior walls of a house — before, during, and after pictures (or a video under 2 minutes) demonstrating the walls are cleaned. (PEP BB: nest.straw.cleanexthouse)",["Health","PE"],"🏡"]
+    ],
     wood: [],
     iron: []
   },
@@ -474,6 +478,8 @@ const VILLAGE_QUESTS = [
       ["Make Shell Buttons","Shape and drill 4 smooth, round shell buttons with at least 2 holes each — only materials that existed 200 years ago. (PEM BB: traditional.straw.buttons)",["Art","History"],"🐚"],
       ["Make Paper from Plants","Make 6 sheets of paper at least 8x11 inches from plant material or wood (not recycled paper), using only materials that existed 200 years ago — pics of the material, tools, midway, and finished sheets. (PEM BB: traditional.straw.paper)",["Art","History"],"📜"]
       ,["Build a Traditional Smoker","Build a traditional smoker or smokehouse — hot, cold, or dual — with at least 2' by 2' by 4' of smoking space, using only materials that existed 200 years ago. Show the site, midway, the finished smoker's interior dimensions, and it running. (PEM BB: traditional.straw.smoker)",["History","Science"],"🥓"]
+      ,["Dip Beeswax Candles","Make 12 beeswax candles by repeatedly dipping — at least 1/2 inch diameter at the butt end and 8 inches long, using only materials that existed 200 years ago. Show your melting method, wicks ready to dip, midway, and the finished candles. (PEM BB: traditional.sand.dipcandles)",["Art","History"],"🏮"]
+      ,["Make a Writing Quill","Make a homemade feather quill for writing or artwork, then use it to write a few words on white paper — only materials that existed 200 years ago. Show the feather, midway through carving, the finished quill, and your written words. (PEM BB: traditional.sand.quill)",["Art","History"],"🪶"]
     ],
     straw: [],
     wood: [],
