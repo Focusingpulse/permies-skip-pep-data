@@ -90,10 +90,11 @@ const CULTURE_ELEMENTS = {
   },
 
   "1.5": {
-    science: "Autonomy support predicts intrinsic motivation and wellbeing (SDT). Conditional regard — love contingent on performance — is associated with poorer outcomes.",
+    science: "Self-determination theory holds that three basic psychological needs — autonomy, competence and relatedness — when satisfied yield enhanced intrinsic motivation, self-regulation and well-being, and when thwarted yield diminished motivation and well-being (Deci & Ryan 1985, Intrinsic Motivation and Self-Determination in Human Behavior; Ryan & Deci 2000, American Psychologist 55(1):68–78). The negative face is measured too: parental conditional regard — approval made contingent on meeting a standard — predicted introjected internalization (acting from internal compulsion rather than genuine interest), resentment toward the parent, perceived disapproval and self-esteem fluctuation, across four domains and three generations; it can produce the wanted behaviour, at an emotional cost (Assor, Roth & Deci 2004, Journal of Personality 72(1):47–88). Honest limit: this is evidence about human parenting and motivation, not about a machine fleet — 'allowance to emit nothing' is an analogy to autonomy support, and no study tests whether an agent's freedom to decline a task improves its output.",
     evClass: "moderate",
     useCases: [
       { domain: "family", how: "Let each person unfold at their own pace. Do not run a developmental clock against them." },
+      { domain: "family", how: "Watch the condition, not only the praise: approval withdrawn when a child does not perform teaches them to act from internal compulsion rather than genuine interest (Assor, Roth & Deci 2004). Praise the person; let the performance stand on its own." },
       { domain: "fleet", how: "Under-promise rather than pad. A job that emits nothing because the material is weak is doing its work correctly." },
       { domain: "project", how: "Let families skip quests without penalty." }
     ],
