@@ -1,24 +1,24 @@
 
 ## 2026-10-14 maintenance pass
--   added resource: Greenhorns
--   added resource: National Young Farmers Coalition
+-   added resource: richsoil — Permaculture Articles
+-   added resource: Seed Savers Exchange
 -   validators 5/5 passed
 
 # Village Link Report — 2026-10-14
 
-Checked **980** URLs: **958** OK, **15** HTTP errors, **0** redirects, **7** unreachable/timeouts.
+Checked **989** URLs: **961** OK, **21** HTTP errors, **0** redirects, **7** unreachable/timeouts.
 
 ## Unreachable / timeout (7)
 
 - `http://uhspr.ca/merit-badges/`  (error: URLError)
 - `http://www.dlive.tv/mavisfarmacy`  (error: URLError)
 - `http://www.dlive.tv/mavisfarmacyThe`  (error: URLError)
+- `https://acteco.eu/free-courses/`  (error: URLError)
 - `https://ambassadors.fast-growing-trees.com/FGTHUSTLENJARS20`  (error: URLError)
 - `https://mountainherbs.net/`  (error: URLError)
 - `https://reviver-project.eu/2024/02/12/digitalized-vocational-curriculum/`  (error: TimeoutError)
-- `https://www.getyoureducation.net/course/food-preservation-technology`  (error: TimeoutError)
 
-## HTTP errors (15)
+## HTTP errors (21)
 
 - [`http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img`](http://i109.photobucket.com/albums/n52/havlik1/permie%20pics2/permiepotrait3pdd.jpg[/img)  (HTTP 404)
 - [`http://www.fws.gov/whitenosesyndrome/`](http://www.fws.gov/whitenosesyndrome/)  (HTTP 403)
@@ -28,7 +28,13 @@ Checked **980** URLs: **958** OK, **15** HTTP errors, **0** redirects, **7** unr
 - [`https://charlesdowding.co.uk`](https://charlesdowding.co.uk)  (HTTP 429)
 - [`https://culturesforhealth.com/blogs/learn`](https://culturesforhealth.com/blogs/learn)  (HTTP 429)
 - [`https://goingtoseed.org/collections/courses`](https://goingtoseed.org/collections/courses)  (HTTP 429)
+- [`https://handtoolwoodworking.com/green-woodworking-videos/`](https://handtoolwoodworking.com/green-woodworking-videos/)  (HTTP 403)
+- [`https://holmgren.com.au/`](https://holmgren.com.au/)  (HTTP 403)
+- [`https://permacultureapprentice.com`](https://permacultureapprentice.com)  (HTTP 403)
+- [`https://schoolofpermaculture.com/`](https://schoolofpermaculture.com/)  (HTTP 403)
 - [`https://skipthejourney.wordpress.com/`](https://skipthejourney.wordpress.com/)  (HTTP 404)
+- [`https://woodworkingformeremortals.com/`](https://woodworkingformeremortals.com/)  (HTTP 405)
+- [`https://wwoof.net/`](https://wwoof.net/)  (HTTP 403)
 - [`https://www.aku.si`](https://www.aku.si)  (HTTP 502)
 - [`https://www.allaboutbirds.org/`](https://www.allaboutbirds.org/)  (HTTP 403)
 - [`https://www.blackdragonforge.com/products/smithing101`](https://www.blackdragonforge.com/products/smithing101)  (HTTP 429)
