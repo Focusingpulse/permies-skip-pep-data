@@ -464,6 +464,78 @@ const MEDITATION_SYSTEMS = [
     verify: "The one honest test in this entry: take the siddhi with a measurable neighbour — knowing the minds of others — and test the neighbour, not the siddhi. Use a validated empathic-accuracy task (the Reading the Mind in the Eyes test) before and after eight weeks of any practice in this section. If the score moves, you have measured inference from cues, not direct access — and saying which one you measured is the whole discipline of this lane.",
     village: "This is the lane's ability-correlate leg: the target set the other entries point at. It is also the entry that carries the section's deepest lesson — the tradition that produced the catalog is the tradition that warns against wanting it. That is the same discipline the fleet applies to its own status reports, and the same discipline a family needs when a child asks whether meditation gives you powers. The honest answer is: here is the list, here is what could be tested, and here is what the tradition itself said about chasing it.",
     quest: ["Sort the Claims", "Read the traditional list of siddhis — the abilities said to come from long practice. For each one, write two things: whether any instrument could ever reach it, and what the nearest measurable thing is. Then read what the tradition itself says about wanting them. Most of the list cannot be tested; the exercise is learning to say so without either dismissing it or pretending.", ["Science", "Writing", "Constitution"], "✨"]
+  },
+
+  {
+    id: "measurable-channels",
+    icon: "📈",
+    name: "The Measurable Channels — HRV, EEG, and CO₂ Tolerance",
+    esName: "Los Canales Medibles — VFC, EEG y Tolerancia al CO₂",
+    tagline: "Three instruments, three timescales — and in every one of them the artifact looks exactly like the signal.",
+    lineage: "The instruments come from three separate research lines rather than from a contemplative tradition. Heart-rate variability descends from the observation of respiratory sinus arrhythmia (Hales, 1733; Ludwig, 1847) and was standardised for clinical use by the Task Force of the European Society of Cardiology and the North American Society of Pacing and Electrophysiology in 1996. The electroencephalogram was recorded by Hans Berger in 1924 and entered meditation research through the alpha and theta literature from the 1960s. Breath-hold tolerance descends from the Buteyko method and its control-pause measure, popularised as the BOLT score. This entry is the section's instrument set: the other entries borrow these channels, and this is where the channels themselves are described — including what each one gets wrong.",
+    what: "This entry is the lane's toolkit rather than one more practice. Three channels carry almost all of the measurable claims in this section, and each answers a different question on a different timescale. Heart-rate variability (HRV) reads autonomic state during the practice — seconds to minutes. The electroencephalogram (EEG) reads cortical rhythms during the practice — milliseconds to seconds. Breath-hold tolerance reads a slower adaptation that moves over weeks. So \"did it work?\" has three different answers depending on which channel you ask, and the most-cited channel is the one with the worst signal-to-noise at home. The entry's job is to make each instrument's characteristic failure visible, because in all three of them the artifact mimics the signal.",
+    esWhat: "Esta entrada es la caja de herramientas del carril, no una práctica más. Tres canales sostienen casi todas las afirmaciones medibles de esta sección, y cada uno responde a una pregunta distinta en una escala de tiempo distinta. La variabilidad de la frecuencia cardíaca (VFC) lee el estado autonómico durante la práctica — segundos a minutos. El electroencefalograma (EEG) lee los ritmos corticales durante la práctica — milisegundos a segundos. La tolerancia a la retención de la respiración lee una adaptación más lenta, que se mueve en semanas. Así que «¿funcionó?» tiene tres respuestas distintas según el canal que preguntes, y el canal más citado es el que peor relación señal-ruido tiene en casa. El trabajo de la entrada es hacer visible el fallo característico de cada instrumento, porque en los tres el artefacto imita a la señal.",
+    chain: {
+      practice: "Measurement itself: take a baseline, change exactly one thing, re-measure. Fully verifiable — you either recorded the numbers or you did not.",
+      energyBody: "None of the three channels measures the energy body. This is the entry's central honesty: HRV reads autonomic tone, EEG reads cortical electrical activity, and breath-hold tolerance reads respiratory chemistry. The tradition's subtle-body claims are not what these instruments see — and saying so is what stops a measurable change being smuggled in as proof of an unmeasurable one.",
+      ability: "What the instruments can actually detect: HRV detects autonomic state and its reactivity; EEG detects cortical rhythms with heavy caveats; breath-hold tolerance detects chemoreflex adaptation over weeks. Together they can tell you whether a practice changed the body. They cannot tell you what the change means.",
+      meaning: "The tradition's meaning claim — that practice shapes something that outlasts the body — is the one link no instrument reaches. The instruments are the honest floor of the chain: they can confirm the lower links, and they must never be presented as reaching the upper one."
+    },
+    claimed: "The claim is modest and strong: these three channels are validated instruments, and each answers a different question on a different timescale. The overclaim this entry exists to prevent is the reverse one — treating a change in a single channel as evidence for the whole chain, or treating a device's readout as the thing it measures.",
+    measurable: "These ARE the measurable channels — that is the entry. HRV (RMSSD, high-frequency power) is research-grade with a chest strap and a standard protocol; EEG (alpha power, frontal asymmetry, gamma) is research-grade only with research equipment and artifact rejection; breath-hold tolerance (BOLT score) is a cheap proxy that responds over weeks. The honest limit is the entry's own subject: each channel has a characteristic artifact, and the most-cited meditation result in the EEG channel is the least robust one.",
+    correlate: "This entry is the instrument set the other entries borrow from. Every `measurable` field in this section names one of these channels or a task derived from one. It maps onto the Siddhis only at the bottom of the list: the classical abilities have no instrument, and this entry is the honest inventory of what we have instead.",
+    label: "documented",
+    practice: [
+      "Pick one channel, not three — measuring everything at once is how a person ends up with numbers they cannot interpret.",
+      "HRV — use a chest strap; a wrist optical sensor is not research-grade for HRV. Record seated, first thing in the morning, at the same time daily, for two weeks before you change anything.",
+      "EEG — do not buy a consumer headband and call it EEG. Research-grade alpha and gamma need research-grade equipment and artifact rejection; at home the honest substitute is a behavioural attention task.",
+      "CO₂ tolerance — the BOLT score: exhale normally, hold your nose, and time to the first definite urge to breathe. **Never in water, and never to failure.**",
+      "Change one thing — one practice, one channel, one baseline. Change two things and you will not know which one moved the number.",
+      "Record the artifact — note your breathing rate, your caffeine, your sleep, and how hard you tried. In every one of these channels the artifact looks like the signal, and the note is what lets you tell them apart later."
+    ],
+    reps: "The dose is the baseline, not the practice: record for two weeks before changing anything, then change one practice and re-measure weekly for eight weeks. HRV daily — it is noisy, so read the trend and never a single day; BOLT weekly; a behavioural attention task at week 0 and week 8.",
+    evidence: "Strong benchmark evidence (for the instruments themselves); the interpretation of each channel is where the evidence thins",
+    evClass: "strong",
+    research: [
+      {
+        source: "Task Force of the European Society of Cardiology and the North American Society of Pacing and Electrophysiology, 'Heart rate variability: standards of measurement, physiological interpretation, and clinical use', Circulation 93(5):1043–1065 (1996)",
+        claim: "The consensus standard that defines how HRV is measured and what its indices mean. It is the reason HRV counts as a validated instrument at all — and it is also the reason a single reading means almost nothing: the standard requires controlled conditions (time of day, posture, breathing rate) precisely because HRV moves with all of them.",
+        medium: "consensus standard",
+        confidence: "High (as the measurement standard)",
+        year: "1996"
+      },
+      {
+        source: "Lehrer & Gevirtz, 'Heart rate variability biofeedback: how and why does it work?', Frontiers in Psychology 5:756 (2014)",
+        claim: "Slow breathing at an individual 'resonance frequency' — usually around six breaths per minute, but varying between people — produces the largest oscillations in heart rate, by stimulating the baroreflex at its own resonant frequency. This is the entry's most actionable finding and its sharpest artifact warning at the same time: the single biggest driver of an HRV reading is the breathing rate you used while taking it.",
+        medium: "review of the biofeedback literature",
+        confidence: "Moderate–Strong",
+        year: "2014"
+      },
+      {
+        source: "Whitham, Pope, Fitzgibbon, Lewis, Clark, Loveless, Broberg, Wallace, DeLosAngeles, Lillie, Hardy, Fransen, Pulbrook & Willoughby, 'Scalp electrical recording during paralysis: quantitative evidence that EEG frequencies above 20 Hz are contaminated by EMG', Clinical Neurophysiology 118(9):1972–1980 (2007)",
+        claim: "Recording scalp electrical activity in paralysed subjects showed that frequencies above roughly 20 Hz — the whole gamma band — are contaminated by muscle activity. This is the artifact that mimics the signal in the EEG channel: a high-gamma reading may be a tight jaw, and the paper is the reason the section treats the famous meditation gamma result with caution rather than reverence.",
+        medium: "experimental study",
+        confidence: "Strong (for the artifact)",
+        year: "2007"
+      },
+      {
+        source: "Lutz, Greischar, Rawlings, Ricard & Davidson, 'Long-term meditators self-induce high-amplitude gamma synchrony during mental practice', PNAS 101(46):16369–16373 (2004)",
+        claim: "The most-cited EEG finding in meditation research: eight long-term practitioners showed high-amplitude gamma-band synchrony during compassion practice, and the effect was larger than in a novice control group. It is presented here with its limits attached — a small sample, a single study, and a frequency band that the artifact literature above shows is contaminated by muscle. The famous result is the least robust instrument reading in the section, which is itself the entry's lesson.",
+        medium: "small-N experimental study",
+        confidence: "Moderate (single small study; the gamma band is artifact-prone)",
+        year: "2004"
+      },
+      {
+        source: "McKeown, 'The Oxygen Advantage' (2015) — the BOLT score as a home measure",
+        claim: "A practitioner source, not a peer-reviewed one: the control-pause measure (exhale normally, hold, time to the first definite urge) is offered as a cheap at-home proxy for CO₂ tolerance and breathing-pattern adaptation. It is included because it is the most accessible instrument in the section — a stopwatch is the whole kit — and labelled honestly as a proxy with limited formal validation rather than as a validated test.",
+        medium: "practitioner book — not peer-reviewed",
+        confidence: "Low (a proxy measure; limited formal validation)",
+        year: "2015"
+      }
+    ],
+    verify: "The verification is the baseline itself. Record every channel for two weeks before you change anything, then change exactly one practice and watch which number moves. If nothing moves, that is a result and it is worth writing down. If everything moves at once, suspect the artifact — in all three channels the artifact mimics the signal, so a change that appears everywhere at once is more likely to be your measurement than your practice.",
+    village: "This is the entry that makes the rest of the section checkable. Every other entry's `measurable` field names one of these channels; this is where the channels themselves are described, with their limits attached. It is also the entry a family should read before buying a device. The honest answer to \"should we get a meditation gadget\" is that a chest strap and a stopwatch cover most of what a home can actually measure, and a consumer EEG headband mostly measures the buyer's enthusiasm. The same discipline the fleet applies to its own status reports — a reading is a claim until you know what the instrument says when nothing is there — is the discipline this entry teaches a child.",
+    quest: ["Build the Baseline", "Choose one thing to measure — morning heart rate, a breath-hold time, or a simple attention count. Record it every day for two weeks before you change anything. Then change exactly one practice and keep recording for four more weeks. Plot the line. Say honestly whether it moved, and whether you can think of anything else that changed at the same time.", ["Science", "Math", "Health"], "📈"]
   }
 ];
 
@@ -543,7 +615,12 @@ const MEDITATION_DEPOT = [
   { t: "Slagter et al. — three months of Vipassana, and the attentional blink", u: "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0050138", d: "The positive case for open monitoring, open access: the practice changed how a limited attentional resource was distributed." },
   { t: "Lippelt, Hommel & Colzato — the two styles push in opposite directions", u: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4171985/", d: "The dissociation evidence behind the lane's thesis: focused attention narrows, open monitoring widens." },
   { t: "Lindahl et al. — the varieties of contemplative experience", u: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0176239", d: "The adverse-effects taxonomy, open access. Read it before teaching insight practice to a child." },
-  { t: "PubMed — empathic accuracy and the Reading the Mind in the Eyes test", u: "https://pubmed.ncbi.nlm.nih.gov/?term=reading+the+mind+in+the+eyes+test", d: "The instrument behind the one measurable neighbour of the siddhi catalog — the test the target-set entry actually uses." }
+  { t: "PubMed — empathic accuracy and the Reading the Mind in the Eyes test", u: "https://pubmed.ncbi.nlm.nih.gov/?term=reading+the+mind+in+the+eyes+test", d: "The instrument behind the one measurable neighbour of the siddhi catalog — the test the target-set entry actually uses." },
+  { t: "PubMed — heart-rate variability: standards of measurement (Task Force, 1996)", u: "https://pubmed.ncbi.nlm.nih.gov/?term=heart+rate+variability+standards+of+measurement+physiological+interpretation", d: "The consensus standard behind the HRV channel. Read it to see why a single reading means almost nothing — the standard itself requires controlled conditions." },
+  { t: "Lehrer & Gevirtz — HRV biofeedback and the resonance frequency", u: "https://www.frontiersin.org/articles/10.3389/fpsyg.2014.00756/full", d: "Open access. The reason slow breathing at your own resonance frequency produces the largest heart-rate oscillations — and the reason breathing rate is the biggest artifact in an HRV reading." },
+  { t: "PubMed — muscle artifact in the EEG gamma band", u: "https://pubmed.ncbi.nlm.nih.gov/?term=scalp+EEG+gamma+EMG+muscle+artifact", d: "The literature showing that scalp frequencies above about 20 Hz are contaminated by muscle. Read it before believing any high-gamma meditation result." },
+  { t: "PubMed — long-term meditators and high-amplitude gamma synchrony", u: "https://pubmed.ncbi.nlm.nih.gov/?term=long-term+meditators+high-amplitude+gamma+synchrony", d: "The most-cited EEG finding in meditation research, and the one this section treats with the most caution — small sample, single study, artifact-prone band." },
+  { t: "PubMed — breath-hold time and CO₂ tolerance", u: "https://pubmed.ncbi.nlm.nih.gov/?term=breath+hold+time+carbon+dioxide+tolerance", d: "The literature behind the cheapest channel in the section. A stopwatch is the whole kit — which is exactly why it is a proxy and not a validated test." }
 ];
 
 /* Cross-links to practices that already live elsewhere in the Library —
