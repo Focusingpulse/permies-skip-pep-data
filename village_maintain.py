@@ -164,6 +164,45 @@ def _norm_title(t):
     """Normalise a resource title for dedupe (case/space/punctuation-insensitive)."""
     return re.sub(r'[^a-z0-9]', '', (t or '').lower())
 
+# Pool topic -> Library h4 category. Topics without a dedicated category fold
+# into Homesteading (the general practical shelf); education/archive topics go
+# to the library's Open Source & Offline Archive shelf.
+TOPIC_TO_CATEGORY = {
+    "Gardening": "Homesteading",
+    "Permaculture": "Homesteading",
+    "Homesteading": "Homesteading",
+    "Animal Care": "Homesteading",
+    "Community": "Homesteading",
+    "Nature Study": "Foraging & Herbalism",
+    "Food Preservation": "Food Preservation",
+    "Woodworking": "Woodworking & Hand Tools",
+    "Kids Movement": "Open Source & Offline Archive",
+    "Physics": "Open Source & Offline Archive",
+    "Economics": "Open Source & Offline Archive",
+    "Open Source": "Open Source & Offline Archive",
+}
+
+def _category_insert_marker(html, topic, title, url):
+    """Return the offset just before the closing </div> of the Library
+    category for this resource, or None to fall back to the legacy marker."""
+    cat = TOPIC_TO_CATEGORY.get(topic, "Homesteading")
+    # Bee resources are filed under Beekeeping regardless of a coarser topic.
+    if re.search(r'bee|hive|apia', (title + ' ' + url), re.I):
+        cat = "Beekeeping"
+    lib_end = html.find('id="screen-learning"')
+    region = html[:lib_end if lib_end != -1 else len(html)]
+    h4 = None
+    for m in re.finditer(r'<h4[^>]*>(.*?)</h4>', region, re.DOTALL):
+        heading = m.group(1).replace('&amp;', '&')
+        if heading.strip() == cat:
+            h4 = m
+    if h4 is None:
+        return None
+    close = re.search(r'^\s*</div>', region[h4.end():], re.MULTILINE)
+    if not close:
+        return None
+    return h4.end() + close.start()
+
 # Family ledger integration (coordinated crons) — path-independent
 FAMILY_DIR = ""
 for cand in (
@@ -291,8 +330,11 @@ def main():
                     if _norm_url(r[2]) not in already and _norm_title(r[1]) not in already_titles]
             for topic, title, url, blurb in pool[:RESOURCES_PER_RUN]:
                 new_block = f'\n      <a href="{url}" target="_blank" class="lib-link"><strong>{title}:</strong> {blurb}</a>'
-                html = html[:lib_marker] + new_block + html[lib_marker:]
-                lib_marker += len(new_block)
+                # Route to the matching Library category instead of the file's
+                # last lib-link (which lives in the Learning Lab offline div).
+                marker = _category_insert_marker(html, topic, title, url) or lib_marker
+                html = html[:marker] + new_block + html[marker:]
+                lib_marker = marker + len(new_block)
                 already.add(_norm_url(url))
                 already_titles.add(_norm_title(title))
                 log.append(f"  added resource: {title}")
