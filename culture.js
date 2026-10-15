@@ -105,14 +105,15 @@ const CULTURE_ELEMENTS = {
   },
 
   "1.6": {
-    science: "Affect labeling: naming an emotional state reduces amygdala reactivity and speeds recovery (Lieberman et al., 2007, Psychological Science).",
+    science: "Affect labeling — putting a feeling into words — is measured to reduce reactivity, though the effect is narrower than the folk claim. In an fMRI study, labeling the emotion in a negative image (rather than matching a shape) diminished amygdala and other limbic response and increased activity in the right ventrolateral prefrontal cortex, with the RVLPFC–amygdala inverse relationship mediated by medial prefrontal cortex (Lieberman, Eisenberger, Crockett, Tom, Pfeifer & Way 2007, Psychological Science 18(5):421–428). The recovery claim has its own measured support in a clinical context: spider-fearful participants who labeled their feelings during exposure showed a significantly greater drop in skin-conductance response at a one-week posttest than the reappraisal (d = 0.85), distraction (d = 0.74) or exposure-alone (d = 0.64) groups (Kircanski, Lieberman & Craske 2012, Psychological Science 23(10):1086–1091). Honest limit: the 2007 study is a small fMRI study of reactivity to images — it does not measure recovery over time, and its RVLPFC–amygdala relationship is a correlation, not a causal test; and in the 2012 trial the physiological measure moved while self-reported fear did not differ between groups. Naming a feeling is not a cure; it is a small, measurable shift in reactivity.",
     evClass: "moderate",
     useCases: [
       { domain: "family", how: "Build a five-minute arrival ritual where each person names what they are carrying before the evening starts." },
+      { domain: "family", how: "Name the feeling while you are still in it rather than steering away from it — in the exposure-therapy study, labeling during the experience beat distraction on the physiological measure (Kircanski, Lieberman & Craske 2012)." },
       { domain: "fleet", how: "Write a session handoff that names what was hard, not just what was done." },
       { domain: "project", how: "Open a meeting by naming what everyone arrived with." }
     ],
-    fleet: "The session handoff docs (SESSION-HANDOFF, FLEET-HANDOFF) — they record what was hard, not only what shipped.",
+    fleet: "The handoff practice — SANDRA-TEAM-HANDOFF.md states the rule ('write what changed, what's open, and the next step. A handoff that isn't written didn't happen'), and cron-coordination/FINDINGS.md is the cross-lane version: 'what one lane learned that the others need', one line per finding, written at the near-miss rather than only the successful re-push.",
     expressions: [
       { date: "2026-09-07", source: "fleet", what: "SESSION-HANDOFF-2026-09-07.md exists so the next session inherits the state of the work, including its unresolved parts." },
       { date: "2026-09-23", source: "fleet", what: "The AFLinks sync run recorded its own near-miss, not just its recovery. A tagging stamp had been written before the push; the remote then moved, and the lane's sanctioned recovery (git reset --hard origin/main) would have discarded the freshly tagged shards while the stamp still matched the live total — so the next cycle would have skipped tagging against untagged data and pushed it silently. The hazard and the rule it produced ('reset --hard in this lane must invalidate the tagging stamp in the same step') went into FINDINGS.md, not only the successful re-push." }
