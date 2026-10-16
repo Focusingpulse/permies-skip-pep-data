@@ -121,10 +121,11 @@ const CULTURE_ELEMENTS = {
   },
 
   "1.7": {
-    science: "Psychological safety predicts team learning and performance (Edmondson). Explicit norms reduce the cost of speaking up.",
+    science: "Psychological safety — a shared belief that the team is safe for interpersonal risk taking — is measured to predict team learning and performance. In Edmondson's field study of 51 work teams in a manufacturing company, psychological safety was associated with learning behavior, and learning behavior mediated the relationship between psychological safety and team performance (Edmondson 1999, *Administrative Science Quarterly* 44(2):350–383). A meta-analysis of 136 independent samples (over 22,000 individuals, nearly 5,000 groups) confirms that psychological safety predicts task performance and organizational citizenship behavior beyond related constructs such as positive leader relations and work engagement, and ranks its antecedents: the strongest measured correlates are role clarity (ρ̂ = .63 at the individual level — though that figure rests on only 6 samples and 1,017 individuals) and a supportive work context (ρ̂ = .49, 24 samples, 5,045 individuals), ahead of positive leader relations (ρ̂ = .39) and autonomy (ρ̂ = .35) (Frazier, Fainshmidt, Klinger, Pezeshkan & Vracheva 2017, *Personnel Psychology* 70(1):113–165). Honest limit: none of this measures a written agreement. The construct measured is a shared belief, and the closest measured antecedent is clarity of expectations — knowing what is expected of you — not the act of writing a document. Two of the three expressions recorded below are written agreements that did not bind; the fleet's own record is the demonstration that a document is an input to the climate, not the climate.",
     evClass: "moderate",
     useCases: [
       { domain: "family", how: "Write down the household agreements. Unwritten rules get enforced unevenly." },
+      { domain: "family", how: "Say what is expected of each person in plain terms. The strongest measured antecedent of psychological safety is role clarity — knowing what is expected of you — not the existence of a written rule (Frazier et al. 2017)." },
       { domain: "fleet", how: "Keep the security doctrine and constitution as explicit, readable documents." },
       { domain: "project", how: "Publish conduct rules where participants can read them." }
     ],
